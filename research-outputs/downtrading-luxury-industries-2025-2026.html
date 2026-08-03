@@ -19,20 +19,10 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:          #131210;
-    --bg-alt:      #1B1916;
-    --surface:     #201E1B;
-    --text:        #ECE8DF;
-    --text-muted:  #978D82;
-    --border:      #2D2B27;
-    --red:         #DD4238;
-    --red-muted:   #371A18;
-    --navy:        #5080C4;
-    --navy-muted:  #192338;
-    --green:       #48A86E;
-    --green-muted: #182C20;
-    --amber:       #CA8C3A;
-    --amber-muted: #2C1E0C;
+    --bg:#131210; --bg-alt:#1B1916; --surface:#201E1B; --text:#ECE8DF;
+    --text-muted:#978D82; --border:#2D2B27; --red:#DD4238; --red-muted:#371A18;
+    --navy:#5080C4; --navy-muted:#192338; --green:#48A86E; --green-muted:#182C20;
+    --amber:#CA8C3A; --amber-muted:#2C1E0C;
   }
 }
 :root[data-theme="dark"] {
@@ -48,99 +38,50 @@
   --amber:#AA6E28; --amber-muted:#EFE1C8;
 }
 
-*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  font-size: 15px;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
+  background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  font-size:15px; line-height:1.7; -webkit-font-smoothing:antialiased;
 }
-.serif { font-family: Georgia, 'Times New Roman', serif; }
-.mono  { font-family: 'Courier New', Courier, monospace; }
-h1,h2,h3,h4 { font-family: Georgia,'Times New Roman',serif; text-wrap: balance; line-height: 1.2; }
-a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+h1,h2,h3,h4 { font-family:Georgia,'Times New Roman',serif; text-wrap:balance; line-height:1.2; }
+a:focus-visible { outline:2px solid var(--red); outline-offset:2px; }
 
-/* LAYOUT */
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+.wrap { max-width:1080px; margin:0 auto; padding:0 28px; }
 
 /* HEADER */
-header {
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
-  position: sticky; top: 0; z-index: 100;
-  backdrop-filter: blur(10px);
-}
-.hdr-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 16px; padding: 14px 0;
-}
-.brand {
-  font-family: Georgia, serif;
-  font-size: 12px; font-weight: 700;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--red);
-}
-.hdr-meta {
-  font-family: 'Courier New', monospace;
-  font-size: 11px; letter-spacing: 0.07em;
-  color: var(--text-muted); text-align: right;
-}
+header { border-bottom:1px solid var(--border); background:var(--bg); position:sticky; top:0; z-index:100; backdrop-filter:blur(10px); }
+.hdr-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0; }
+.brand { font-family:Georgia,serif; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--red); }
+.hdr-right { display:flex; align-items:center; gap:14px; }
+.hdr-meta { font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.07em; color:var(--text-muted); }
+.theme-toggle { display:flex; background:var(--bg-alt); border:1px solid var(--border); overflow:hidden; flex-shrink:0; }
+.theme-btn { padding:6px 11px; font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; background:none; border:none; cursor:pointer; color:var(--text-muted); transition:background 0.15s,color 0.15s; line-height:1; }
+.theme-btn.active { background:var(--text); color:var(--bg); }
+.theme-btn:hover:not(.active) { background:var(--border); color:var(--text); }
 
 /* HERO */
-.hero { padding: 72px 0 56px; border-bottom: 1px solid var(--border); }
-.hero-eyebrow {
-  display: flex; align-items: center; gap: 10px;
-  margin-bottom: 24px;
-  font-family: 'Courier New', monospace;
-  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red);
-}
+.hero { padding:72px 0 56px; border-bottom:1px solid var(--border); }
+.hero-eyebrow { display:flex; align-items:center; gap:10px; margin-bottom:24px; font-family:'Courier New',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--red); }
 .hero-eyebrow::before { content:''; display:block; width:28px; height:2px; background:var(--red); }
-.hero-hl {
-  font-family: Georgia,'Times New Roman',serif;
-  font-size: clamp(40px,5.5vw,76px);
-  font-weight: 700; letter-spacing: -0.025em; line-height: 1.05;
-  max-width: 780px; margin-bottom: 24px;
-}
+.hero-hl { font-family:Georgia,'Times New Roman',serif; font-size:clamp(40px,5.5vw,76px); font-weight:700; letter-spacing:-0.025em; line-height:1.05; max-width:780px; margin-bottom:24px; }
 .hero-hl em { font-style:normal; color:var(--red); }
-.hero-sub {
-  font-size: 16px; color: var(--text-muted); max-width: 580px; line-height: 1.7; margin-bottom: 52px;
-}
-.hero-stats {
-  display: grid; grid-template-columns: repeat(3,1fr);
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border);
-}
-.hstat {
-  background: var(--bg); padding: 28px 22px;
-}
-.hstat-num {
-  font-family: Georgia,serif;
-  font-size: clamp(34px,4vw,52px); font-weight: 700;
-  line-height: 1; letter-spacing: -0.03em;
-  font-variant-numeric: tabular-nums;
-  color: var(--red); margin-bottom: 8px;
-}
+.hero-sub { font-size:16px; color:var(--text-muted); max-width:580px; line-height:1.7; margin-bottom:52px; }
+.hero-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); }
+.hstat { background:var(--bg); padding:28px 22px; }
+.hstat-num { font-family:Georgia,serif; font-size:clamp(32px,4vw,50px); font-weight:700; line-height:1; letter-spacing:-0.03em; font-variant-numeric:tabular-nums; color:var(--red); margin-bottom:8px; }
 .hstat-num.green { color:var(--green); }
 .hstat-num.navy  { color:var(--navy); }
 .hstat-label { font-size:13px; color:var(--text-muted); line-height:1.5; }
+.data-tag { display:inline-block; font-family:'Courier New',monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; background:var(--amber-muted); color:var(--amber); border:1px solid var(--amber); padding:2px 7px; margin-top:6px; }
 
 /* INTRO */
-.intro { padding: 60px 0; border-bottom: 1px solid var(--border); }
+.intro { padding:60px 0; border-bottom:1px solid var(--border); }
 .intro-grid { display:grid; grid-template-columns:180px 1fr; gap:48px; align-items:start; }
-.intro-sidetag {
-  font-family:'Courier New',monospace;
-  font-size:10px; letter-spacing:0.16em; text-transform:uppercase;
-  color:var(--text-muted); padding-top:5px;
-}
+.intro-sidetag { font-family:'Courier New',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--text-muted); padding-top:5px; }
 .intro-body { font-size:17px; line-height:1.78; max-width:640px; }
-.intro-body strong { font-weight:600; }
-.intro-sub {
-  margin-top:20px; font-size:14px; color:var(--text-muted);
-  line-height:1.7; max-width:640px;
-}
+.intro-sub { margin-top:20px; font-size:14px; color:var(--text-muted); line-height:1.7; max-width:640px; }
 .two-def { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:32px; }
 .def-box { border:1px solid var(--border); padding:20px 22px; background:var(--surface); }
 .def-term { font-family:Georgia,serif; font-size:15px; font-weight:700; margin-bottom:8px; }
@@ -149,14 +90,9 @@ header {
 .def-box.highlight .def-term { color:var(--red); }
 
 /* SECTION */
-.section { padding: 68px 0; border-bottom: 1px solid var(--border); }
-.section:last-of-type { border-bottom:none; }
+.section { padding:68px 0; border-bottom:1px solid var(--border); }
 .sec-eyebrow { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
-.sec-flag {
-  font-family:'Courier New',monospace; font-size:10px;
-  letter-spacing:0.16em; text-transform:uppercase;
-  background:var(--red); color:white; padding:4px 10px; font-weight:700;
-}
+.sec-flag { font-family:'Courier New',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; background:var(--red); color:white; padding:4px 10px; font-weight:700; }
 .sec-flag.green { background:var(--green); }
 .sec-flag.navy  { background:var(--navy); }
 .sec-flag.amber { background:var(--amber); }
@@ -165,7 +101,7 @@ header {
 .sec-sub { font-size:15px; color:var(--text-muted); max-width:580px; line-height:1.65; margin-bottom:44px; }
 
 /* DRIVER CARDS */
-.drivers { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:8px; }
+.drivers { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:var(--border); border:1px solid var(--border); }
 .drvr { background:var(--bg); padding:26px 22px; }
 .drvr-icon { font-size:22px; margin-bottom:14px; display:block; }
 .drvr-title { font-family:Georgia,serif; font-size:15px; font-weight:700; margin-bottom:7px; }
@@ -173,40 +109,18 @@ header {
 
 /* INDUSTRY BLOCK */
 .ind-block { margin-bottom:28px; border:1px solid var(--border); overflow:hidden; }
-.ind-hdr {
-  padding:22px 26px 18px;
-  border-bottom:1px solid var(--border);
-  display:flex; align-items:baseline; justify-content:space-between; gap:16px;
-}
+.ind-hdr { padding:22px 26px 18px; border-bottom:1px solid var(--border); display:flex; align-items:baseline; justify-content:space-between; gap:16px; }
 .ind-title { font-family:Georgia,serif; font-size:20px; font-weight:700; letter-spacing:-0.01em; }
-.ind-badge {
-  font-family:'Courier New',monospace; font-size:10px; letter-spacing:0.12em;
-  text-transform:uppercase; color:var(--text-muted);
-  border:1px solid var(--border); padding:4px 9px; white-space:nowrap; flex-shrink:0;
-}
-.ind-body { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+.ind-badge { font-family:'Courier New',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); border:1px solid var(--border); padding:4px 9px; white-space:nowrap; flex-shrink:0; }
+.ind-body { display:grid; grid-template-columns:1fr 1fr; }
 .ind-panel { padding:22px 26px; background:var(--surface); }
 .ind-panel + .ind-panel { border-left:1px solid var(--border); }
-.panel-lbl {
-  font-family:'Courier New',monospace; font-size:10px; letter-spacing:0.14em;
-  text-transform:uppercase; color:var(--text-muted); margin-bottom:14px;
-}
-.brand-pill {
-  display:inline-block; padding:5px 12px; font-size:13px; font-weight:600;
-  margin: 0 4px 6px 0; border:1px solid currentColor;
-}
+.panel-lbl { font-family:'Courier New',monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-muted); margin-bottom:14px; }
+.brand-pill { display:inline-block; padding:5px 12px; font-size:13px; font-weight:600; margin:0 4px 6px 0; border:1px solid currentColor; }
 .bp-from { color:var(--navy); background:var(--navy-muted); border-color:var(--navy); }
 .bp-to   { color:var(--green); background:var(--green-muted); border-color:var(--green); }
-.arrow-dn {
-  display:flex; align-items:center; gap:6px;
-  font-family:'Courier New',monospace; font-size:11px; font-weight:700;
-  color:var(--red); letter-spacing:0.06em; margin:10px 0 6px;
-}
-.callout {
-  margin-top:14px; padding:12px 15px;
-  border-left:3px solid var(--red); background:var(--red-muted);
-  font-size:13px; line-height:1.6;
-}
+.arrow-dn { display:flex; align-items:center; gap:6px; font-family:'Courier New',monospace; font-size:11px; font-weight:700; color:var(--red); letter-spacing:0.06em; margin:10px 0 6px; }
+.callout { margin-top:14px; padding:12px 15px; border-left:3px solid var(--red); background:var(--red-muted); font-size:13px; line-height:1.6; }
 .callout.g { border-color:var(--green); background:var(--green-muted); }
 .callout.n { border-color:var(--navy); background:var(--navy-muted); }
 .callout.a { border-color:var(--amber); background:var(--amber-muted); }
@@ -233,22 +147,28 @@ header {
 .chinese-word { font-size:36px; font-weight:700; color:var(--red); line-height:1; display:block; margin-bottom:2px; }
 .chinese-caption { font-size:11px; font-family:'Courier New',monospace; color:var(--text-muted); letter-spacing:0.07em; }
 
+/* STAT STRIP */
+.stat-strip { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1px; background:var(--border); border:1px solid var(--border); margin-bottom:28px; }
+.sstrip-item { background:var(--bg); padding:20px 18px; }
+.sstrip-num { font-family:Georgia,serif; font-size:26px; font-weight:700; line-height:1; font-variant-numeric:tabular-nums; margin-bottom:4px; }
+.sstrip-label { font-size:11px; color:var(--text-muted); font-family:'Courier New',monospace; letter-spacing:0.06em; text-transform:uppercase; line-height:1.4; }
+
 /* MATRIX TABLE */
 .tbl-wrap { overflow-x:auto; border:1px solid var(--border); margin-top:28px; }
-table { width:100%; border-collapse:collapse; font-size:13px; min-width:640px; }
-th {
-  background:var(--bg-alt); padding:11px 16px; text-align:left;
-  font-family:'Courier New',monospace; font-size:10px; letter-spacing:0.13em;
-  text-transform:uppercase; color:var(--text-muted); font-weight:700;
-  border-bottom:1px solid var(--border); white-space:nowrap;
-}
+table { width:100%; border-collapse:collapse; font-size:13px; min-width:700px; }
+th { background:var(--bg-alt); padding:11px 16px; text-align:left; font-family:'Courier New',monospace; font-size:10px; letter-spacing:0.13em; text-transform:uppercase; color:var(--text-muted); font-weight:700; border-bottom:1px solid var(--border); white-space:nowrap; }
 td { padding:13px 16px; border-bottom:1px solid var(--border); vertical-align:top; line-height:1.5; }
 tr:last-child td { border-bottom:none; }
-tr:hover td { background:var(--bg-alt); transition:background 0.1s; }
+tr:hover td { background:var(--bg-alt); }
 .td-from { color:var(--navy); font-weight:600; }
 .td-to   { color:var(--green); font-weight:600; }
 .td-drop { color:var(--red); font-weight:700; font-family:'Courier New',monospace; }
 .td-gain { color:var(--green); font-weight:700; font-family:'Courier New',monospace; }
+.td-cat  { font-family:Georgia,serif; font-weight:700; }
+.td-tag  { display:inline-block; font-family:'Courier New',monospace; font-size:9px; letter-spacing:0.1em; text-transform:uppercase; padding:2px 6px; margin-bottom:2px; }
+.tag-id  { background:var(--green-muted); color:var(--green); border:1px solid var(--green); }
+.tag-cn  { background:var(--red-muted); color:var(--red); border:1px solid var(--red); }
+.tag-gl  { background:var(--navy-muted); color:var(--navy); border:1px solid var(--navy); }
 
 /* IMPLICATIONS */
 .impl-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin-top:32px; }
@@ -282,60 +202,87 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
   .china-grid { grid-template-columns:1fr; }
   .ftr-inner { grid-template-columns:1fr; }
   .ftr-date { text-align:left; }
+  .hdr-meta { display:none; }
 }
 @media (max-width:480px) {
   .wrap { padding:0 16px; }
   .hero { padding:48px 0 36px; }
   .section { padding:48px 0; }
   .drivers { grid-template-columns:1fr 1fr; }
+  .stat-strip { grid-template-columns:1fr 1fr; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 </style>
 
 <!-- HEADER -->
 <header>
   <div class="wrap hdr-inner">
     <div class="brand">Market Intelligence Brief</div>
-    <div class="hdr-meta">Riset Perilaku Konsumen · Agustus 2026</div>
+    <div class="hdr-right">
+      <div class="hdr-meta">Riset Perilaku Konsumen · Data s/d Agustus 2026</div>
+      <div class="theme-toggle" role="group" aria-label="Pilih tema tampilan">
+        <button class="theme-btn" id="btn-light" onclick="setTheme('light')" aria-pressed="false">☀ Light</button>
+        <button class="theme-btn" id="btn-dark" onclick="setTheme('dark')" aria-pressed="false">☾ Dark</button>
+      </div>
+    </div>
   </div>
 </header>
 
+<script>
+(function(){
+  function setTheme(t){
+    document.documentElement.setAttribute('data-theme',t);
+    localStorage.setItem('dt-theme',t);
+    document.getElementById('btn-light').classList.toggle('active',t==='light');
+    document.getElementById('btn-dark').classList.toggle('active',t==='dark');
+    document.getElementById('btn-light').setAttribute('aria-pressed',t==='light');
+    document.getElementById('btn-dark').setAttribute('aria-pressed',t==='dark');
+  }
+  window.setTheme=setTheme;
+  var saved=localStorage.getItem('dt-theme');
+  var pref=(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':(saved||'light');
+  setTheme(pref);
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(e){
+    if(!localStorage.getItem('dt-theme')) setTheme(e.matches?'dark':'light');
+  });
+})();
+</script>
+
 <main>
-<!-- ── HERO ──────────────────────────────────────────────── -->
+<!-- HERO -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-eyebrow">Laporan Riset Mendalam</div>
     <h1 class="hero-hl">Ketika Konsumen<br>Memilih <em>ke Bawah</em></h1>
-    <p class="hero-sub">Fenomena downtrading dan value-for-money yang sedang mengubah lanskap kompetisi di industri kopi, kecantikan, otomotif, kuliner, fashion, dan hospitality — di Indonesia, China, dan pasar global.</p>
+    <p class="hero-sub">Fenomena downtrading dan value-for-money yang mengubah industri kopi, kecantikan, otomotif, kuliner, fashion, hospitality, renovasi rumah, dan furniture — Indonesia, China, dan pasar global. Data diperbarui hingga pertengahan 2026.</p>
     <div class="hero-stats">
       <div class="hstat">
         <div class="hstat-num">−17.5%</div>
-        <div class="hstat-label">Basis konsumen luxury global: dari 400 juta (2022) menjadi 330 juta pelanggan aktif (2025)</div>
+        <div class="hstat-label">Basis konsumen luxury global: dari 400 juta (2022) menjadi 330 juta aktif (2025)</div>
+        <span class="data-tag">Bain &amp; Co · 2025</span>
       </div>
       <div class="hstat">
-        <div class="hstat-num green">1.9M</div>
-        <div class="hstat-label">Diskusi tentang "平替" (affordable dupes) di media sosial China — naik 3× lipat sejak 2022</div>
+        <div class="hstat-num green">1,324</div>
+        <div class="hstat-label">Gerai Kopi Kenangan per 2026 — melampaui jauh jumlah outlet Starbucks di Indonesia</div>
+        <span class="data-tag">World Coffee Portal · 2026</span>
       </div>
       <div class="hstat">
-        <div class="hstat-num navy">+45%</div>
-        <div class="hstat-label">Lonjakan revenue Kopi Kenangan di 2025, melampaui jumlah gerai Starbucks di Indonesia</div>
+        <div class="hstat-num navy">2.26 juta</div>
+        <div class="hstat-label">Unit BEV BYD terjual di 2025 — mengalahkan Tesla (1.64 juta) untuk pertama kalinya secara global</div>
+        <span class="data-tag">Carbon Credits · 2026</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── INTRO ──────────────────────────────────────────────── -->
+<!-- INTRO -->
 <section class="intro">
   <div class="wrap">
     <div class="intro-grid">
       <div class="intro-sidetag">Tentang Fenomena Ini</div>
       <div>
-        <p class="intro-body">
-          Downtrading bukan sekadar konsumen yang "tak mampu beli." Ini adalah <strong>keputusan sadar</strong> — konsumen yang sebenarnya masih mampu membeli produk premium, namun secara aktif memilih alternatif yang lebih terjangkau karena merasa selisih harga tidak lagi sepadan dengan selisih nilai yang diterima.
-        </p>
-        <p class="intro-sub">
-          Dipicu oleh inflasi pasca-pandemi, kenaikan harga produk premium yang agresif, dan munculnya merek lokal berkualitas tinggi, fenomena ini kini terjadi di hampir semua segmen — dari kopi pagi hari hingga mobil listrik.
-        </p>
+        <p class="intro-body">Downtrading bukan sekadar konsumen yang "tak mampu beli." Ini adalah <strong>keputusan sadar</strong> — konsumen yang sebenarnya masih mampu membeli produk premium, namun secara aktif memilih alternatif terjangkau karena merasa selisih harga tidak lagi sepadan dengan selisih nilai yang diterima.</p>
+        <p class="intro-sub">Dipicu oleh inflasi pasca-pandemi, kenaikan harga produk premium yang agresif, dan munculnya merek lokal berkualitas tinggi, fenomena ini kini terjadi di hampir semua segmen — dari kopi pagi hari hingga sofa ruang tamu.</p>
         <div class="two-def">
           <div class="def-box highlight">
             <div class="def-term">Downtrading</div>
@@ -343,7 +290,7 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
           </div>
           <div class="def-box">
             <div class="def-term">Value for Money</div>
-            <div class="def-desc">Pergeseran tolok ukur pembelian dari <em>merek apa</em> menjadi <em>seberapa besar manfaat per rupiah yang saya dapatkan</em>. Konsumen semakin jeli membandingkan ingredient, spesifikasi, dan pengalaman nyata — bukan hanya nama merek.</div>
+            <div class="def-desc">Pergeseran tolok ukur dari <em>merek apa</em> menjadi <em>seberapa besar manfaat per rupiah yang saya dapatkan</em>. Konsumen semakin jeli membandingkan ingredient, spesifikasi, dan pengalaman nyata — bukan sekadar nama merek.</div>
           </div>
         </div>
       </div>
@@ -351,90 +298,76 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
   </div>
 </section>
 
-<!-- ── SECTION 1: DRIVERS ─────────────────────────────────── -->
+<!-- SECTION 1: DRIVERS -->
 <section class="section">
   <div class="wrap">
-    <div class="sec-eyebrow">
-      <span class="sec-flag amber">Konteks</span>
-      <span class="sec-count">01</span>
-    </div>
+    <div class="sec-eyebrow"><span class="sec-flag amber">Konteks</span><span class="sec-count">01</span></div>
     <h2 class="sec-title">Mengapa Ini Terjadi Sekarang?</h2>
     <p class="sec-sub">Empat tekanan yang datang bersamaan dan mempercepat downtrading di seluruh industri.</p>
     <div class="drivers">
       <div class="drvr">
         <span class="drvr-icon">📈</span>
         <div class="drvr-title">Harga Premium Melambung Tanpa Sebanding</div>
-        <div class="drvr-desc">Merek luxury menaikkan harga agresif (rata-rata +30–50% sejak 2019), namun konsumen tidak merasakan peningkatan kualitas atau kreativitas yang sepadan. Aspirational buyers — segmen yang "memaksakan" diri beli premium — adalah yang pertama pergi.</div>
+        <div class="drvr-desc">Merek luxury menaikkan harga agresif rata-rata 30–50% sejak 2019, namun konsumen tidak merasakan peningkatan kualitas yang sepadan. Aspirational buyers — segmen yang "memaksakan" diri membeli premium — adalah yang pertama keluar dari market.</div>
       </div>
       <div class="drvr">
         <span class="drvr-icon">🧠</span>
         <div class="drvr-title">Konsumen Semakin Literate</div>
-        <div class="drvr-desc">Generasi yang tumbuh dengan ulasan YouTube, ingredient checker, dan komunitas Reddit kini bisa memverifikasi sendiri apakah $200 moisturizer benar-benar lebih baik dari $15 drugstore. Transparansi informasi menghapus "mystique" yang selama ini menopang premium pricing.</div>
+        <div class="drvr-desc">Generasi yang tumbuh dengan ulasan YouTube, ingredient checker, dan komunitas Reddit kini bisa memverifikasi sendiri apakah $200 moisturizer benar-benar lebih baik dari $15 drugstore. Transparansi informasi menghapus "mystique" yang menopang premium pricing.</div>
       </div>
       <div class="drvr">
         <span class="drvr-icon">🌐</span>
-        <div class="drvr-title">Dupe Culture & Social Proof</div>
-        <div class="drvr-desc">TikTok, Xiaohongshu, dan Instagram menjadi inkubator "dupe hunting." Memamerkan temuan produk setara dengan harga jauh lebih murah kini justru menjadi status sosial baru — bukan tanda kemiskinan, melainkan tanda kepintaran konsumsi.</div>
+        <div class="drvr-title">Dupe Culture &amp; Social Proof</div>
+        <div class="drvr-desc">TikTok, Xiaohongshu, dan Instagram menjadi inkubator "dupe hunting." Memamerkan produk setara dengan harga jauh lebih murah kini justru menjadi status sosial baru — tanda kepintaran, bukan kemiskinan. Di China, diskusi 平替 meledak 3× lipat dalam 3 tahun.</div>
       </div>
       <div class="drvr">
         <span class="drvr-icon">🏭</span>
         <div class="drvr-title">Merek Lokal Naik Kelas</div>
-        <div class="drvr-desc">Di Indonesia, China, maupun global, merek lokal sudah tidak lagi inferior. Kopi Kenangan mengalahkan Starbucks dalam jumlah gerai. BYD mengalahkan Tesla dalam volume global. Wardah bersaing head-to-head dengan Laneige. Gap kualitas telah menyempit drastis.</div>
+        <div class="drvr-desc">Di Indonesia, China, maupun global, merek lokal sudah tidak lagi inferior. Kopi Kenangan mengalahkan Starbucks dalam jumlah gerai. BYD mengalahkan Tesla dalam volume global. Wardah bersaing head-to-head dengan Laneige. Gap kualitas menyempit drastis.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── SECTION 2: INDONESIA ───────────────────────────────── -->
+<!-- SECTION 2: INDONESIA -->
 <section class="section" style="background:var(--bg-alt);">
   <div class="wrap">
-    <div class="sec-eyebrow">
-      <span class="sec-flag green">Indonesia</span>
-      <span class="sec-count">02</span>
-    </div>
+    <div class="sec-eyebrow"><span class="sec-flag green">Indonesia</span><span class="sec-count">02</span></div>
     <h2 class="sec-title">Medan Perang di Depan Mata</h2>
-    <p class="sec-sub">Tiga industri di Indonesia tempat downtrading paling terasa dan paling bisa diamati langsung.</p>
+    <p class="sec-sub">Empat industri di Indonesia tempat downtrading paling terasa dan paling bisa diamati langsung — dengan data kuantitatif terbaru 2025–2026.</p>
 
     <!-- KOPI -->
     <div class="ind-block">
       <div class="ind-hdr">
-        <div class="ind-title">Industri Kopi &amp; Minuman</div>
-        <div class="ind-badge">F&amp;B / Beverages</div>
+        <div class="ind-title">Kopi &amp; Minuman</div>
+        <div class="ind-badge">F&amp;B · Data 2025–2026</div>
       </div>
       <div class="ind-body">
         <div class="ind-panel">
-          <div class="panel-lbl">Brand Lama (Incumbent)</div>
-          <div style="margin-bottom:10px;">
-            <span class="brand-pill bp-from">Starbucks</span>
-          </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            Harga per cangkir: <strong>Rp 55.000–85.000</strong>. Selama bertahun-tahun menjadi simbol gaya hidup modern perkotaan. Gerai sebagai "third place" — kantor ketiga setelah rumah dan kantor. Tumbuh pesat di mal dan kawasan bisnis premium.
-          </p>
+          <div class="panel-lbl">Incumbent</div>
+          <div style="margin-bottom:10px;"><span class="brand-pill bp-from">Starbucks</span></div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Harga per cangkir: <strong>Rp 55.000–85.000</strong>. Selama bertahun-tahun menjadi simbol gaya hidup modern perkotaan. Model "third place" dengan suasana premium dan brand prestige global. Kurang dari ~500 gerai di Indonesia per 2025.</p>
           <div class="callout n">
             <div class="big-num n">~500</div>
-            <div class="callout-label">Gerai Starbucks di Indonesia (2024)</div>
+            <div class="callout-label">Estimasi gerai Starbucks di Indonesia (2025)</div>
           </div>
         </div>
         <div class="ind-panel">
-          <div class="panel-lbl">Pendatang Baru (New Winners)</div>
+          <div class="panel-lbl">New Winners — Data 2025–2026</div>
           <div style="margin-bottom:10px;">
             <span class="brand-pill bp-to">Kopi Kenangan</span>
             <span class="brand-pill bp-to">Kopi Tuku</span>
             <span class="brand-pill bp-to">Janji Jiwa</span>
             <span class="brand-pill bp-to">Fore Coffee</span>
-            <span class="brand-pill bp-to">Dum Dum</span>
           </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            Harga per cangkir: <strong>Rp 18.000–35.000</strong>. Menawarkan kopi berkualitas dengan rasa lokal, antrian cepat (model grab &amp; go), dan pengalaman yang cukup menyenangkan — tanpa harga premium Starbucks.
-          </p>
-          <div class="arrow-dn">&#8659; TERJADI SEKARANG</div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Harga: <strong>Rp 18.000–35.000</strong>. Model grab-and-go berbasis aplikasi, rasa yang disesuaikan lidah lokal, dan pengalaman cukup memuaskan tanpa harga premium Starbucks.</p>
           <div class="callout g">
-            <div class="big-num g">872</div>
-            <div class="callout-label">Gerai Kopi Kenangan (2024) — melampaui Starbucks</div>
+            <div class="big-num g">1,324</div>
+            <div class="callout-label">Gerai Kopi Kenangan di 6 negara (awal 2026) — vs Starbucks ~500 di Indonesia</div>
           </div>
           <div class="callout g" style="margin-top:10px;">
-            <div class="big-num g">$184M</div>
-            <div class="callout-label">Revenue Kopi Kenangan 2025 (+45% YoY), net profit $17 juta — pertama kali profitable setelah 5 tahun</div>
+            <div class="big-num g">$184 juta</div>
+            <div class="callout-label">Revenue Kopi Kenangan FY 2025 (+45% YoY), net profit $17 juta — pertama kali profitable. Proyeksi 2026: revenue +36%, profit +40% ke Rp 529 miliar</div>
           </div>
         </div>
       </div>
@@ -444,81 +377,107 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
     <div class="ind-block">
       <div class="ind-hdr">
         <div class="ind-title">Skincare &amp; Kecantikan Lokal</div>
-        <div class="ind-badge">Beauty / Personal Care</div>
+        <div class="ind-badge">Beauty · Data 2025</div>
       </div>
       <div class="ind-body">
         <div class="ind-panel">
-          <div class="panel-lbl">Brand Impor (Incumbent)</div>
+          <div class="panel-lbl">Incumbent</div>
           <div style="margin-bottom:10px;">
             <span class="brand-pill bp-from">SK-II</span>
             <span class="brand-pill bp-from">Laneige</span>
             <span class="brand-pill bp-from">Sulwhasoo</span>
             <span class="brand-pill bp-from">La Mer</span>
           </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            Harga serumnya berkisar <strong>Rp 600.000–3.000.000+</strong>. Diposisikan sebagai aspirasi, dengan kampanye prestisius dan packaging mewah. Selama ini menjadi ukuran "naik kelas" bagi perempuan urban Indonesia.
-          </p>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Harga serumnya berkisar <strong>Rp 600.000–3.000.000+</strong>. Diposisikan sebagai aspirasi dengan kampanye prestisius dan packaging mewah. Selama ini menjadi ukuran "naik kelas" bagi perempuan urban Indonesia.</p>
           <div class="callout">
-            <div style="font-size:13px;">Konsumen Indonesia mulai mempertanyakan: <em>"Apakah hasilnya benar-benar 10× lebih baik dari produk lokal seharga Rp 100.000?"</em></div>
+            <div style="font-size:13px;">Konsumen Indonesia mulai mempertanyakan: <em>"Apakah hasilnya benar-benar 10× lebih baik dari produk lokal seharga Rp 100.000?"</em> Komunitas skincare di TikTok mempercepat pembuktian ini.</div>
           </div>
         </div>
         <div class="ind-panel">
-          <div class="panel-lbl">Merek Lokal (New Winners)</div>
+          <div class="panel-lbl">New Winners</div>
           <div style="margin-bottom:10px;">
             <span class="brand-pill bp-to">Wardah</span>
-            <span class="brand-pill bp-to">Emina</span>
             <span class="brand-pill bp-to">Somethinc</span>
             <span class="brand-pill bp-to">Scarlett</span>
             <span class="brand-pill bp-to">Azarine</span>
             <span class="brand-pill bp-to">Y.O.U</span>
           </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            Harga: <strong>Rp 30.000–200.000</strong>. Diperkuat dengan konten edukasi skincare di TikTok dan Instagram, konsumen kini mengenal ingredient seperti niacinamide, retinol, hyaluronic acid — dan menemukan bahwa merek lokal menggunakannya dengan konsentrasi yang sama.
-          </p>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Harga: <strong>Rp 30.000–200.000</strong>. Diperkuat konten edukasi skincare di TikTok, konsumen kini mengenal ingredient seperti niacinamide, retinol, hyaluronic acid — dan menemukan bahwa merek lokal menggunakannya dengan konsentrasi setara.</p>
           <div class="callout g">
-            <div style="font-size:13px;"><strong>Wardah</strong> kini dimiliki Paragon Technology — salah satu perusahaan kosmetik terbesar Asia Tenggara. Tumbuh menjadi pilihan utama perempuan muslim Indonesia dengan klaim halal-certified yang juga menarik non-muslim yang sadar nilai.</div>
-          </div>
-          <div class="callout g" style="margin-top:10px;">
-            <div style="font-size:13px;"><strong>Somethinc</strong> berhasil membangun komunitas berbasis edukasi ingredient — bukan sekedar branding — sehingga konsumen merasa "berpengetahuan" saat memilih merek ini dibanding membeli karena gengsi.</div>
+            <div style="font-size:13px;"><strong>Paragon Technology</strong> (induk Wardah, Emina, Make Over) adalah salah satu perusahaan kosmetik terbesar Asia Tenggara. <strong>Wardah</strong> tumbuh menjadi pilihan utama lewat positioning halal-certified + harga terjangkau — dual value proposition yang sulit dilawan merek impor.</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- FASHION LOKAL -->
+    <!-- HOME IMPROVEMENT INDONESIA -->
     <div class="ind-block">
       <div class="ind-hdr">
-        <div class="ind-title">Fashion &amp; Lifestyle Lokal</div>
-        <div class="ind-badge">Apparel / Lifestyle</div>
+        <div class="ind-title">Renovasi Rumah &amp; Hardware Lokal</div>
+        <div class="ind-badge">Home Improvement · Data 2025</div>
       </div>
       <div class="ind-body">
         <div class="ind-panel">
-          <div class="panel-lbl">Brand Internasional (Incumbent)</div>
-          <div style="margin-bottom:10px;">
-            <span class="brand-pill bp-from">Zara</span>
-            <span class="brand-pill bp-from">H&M</span>
-            <span class="brand-pill bp-from">Uniqlo Premium Line</span>
-          </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            Dengan melemahnya rupiah dan kenaikan harga impor, produk fashion dari merek internasional semakin mahal. Baju Zara yang dulu Rp 300.000 kini Rp 450.000–600.000. Konsumen mulai menghitung ulang.
-          </p>
-          <div class="callout n">
-            <div style="font-size:13px;">Kelas menengah Indonesia sedang <strong>spending smarter</strong>: 65.7% kini prioritaskan kualitas tahan lama di atas harga murah, tapi 52.7% juga sangat mempertimbangkan manfaat tambahan per rupiah.</div>
+          <div class="panel-lbl">Peristiwa Kunci 2025</div>
+          <div style="margin-bottom:10px;"><span class="brand-pill bp-from">Ace Hardware Indonesia</span></div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Setelah <strong>29 tahun beroperasi</strong> di Indonesia, lisensi Ace Hardware dari Amerika Serikat berakhir pada 31 Desember 2024. Pada 1 Januari 2025, seluruh toko Ace Hardware di Indonesia berubah nama menjadi <strong>Azko</strong> — merek lokal milik grup Kawan Lama, yang justru memanfaatkan momentum ini untuk merdeka dari royalti franchisee.</p>
+          <div class="callout">
+            <div style="font-size:13px;">Ini bukan downtrading biasa — ini adalah <em>operator lokal</em> yang "downgrade" dari franchise global premium, dan justru berkembang lebih mandiri. Strategi serupa dengan apa yang sedang terjadi di level konsumen.</div>
           </div>
         </div>
         <div class="ind-panel">
-          <div class="panel-lbl">Merek &amp; Saluran Baru</div>
+          <div class="panel-lbl">Pemain Lokal &amp; Market</div>
           <div style="margin-bottom:10px;">
-            <span class="brand-pill bp-to">Brand Lokal Niche</span>
-            <span class="brand-pill bp-to">Thrift / Preloved</span>
-            <span class="brand-pill bp-to">Tokopedia / Shopee Fashion</span>
+            <span class="brand-pill bp-to">Azko (eks-Ace Hardware)</span>
+            <span class="brand-pill bp-to">Mitra10</span>
+            <span class="brand-pill bp-to">Depo Bangunan</span>
+            <span class="brand-pill bp-to">Atria</span>
           </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            Pasar preloved fashion di Indonesia tumbuh pesat. Platform seperti Prelo, Tinkerlust (fashion preloved mewah), dan komunitas jual-beli di Instagram memudahkan konsumen mengakses "tampilan premium" dengan harga jauh lebih murah.
-          </p>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Konsumen Indonesia saat ini memilih toko hardware dan material bangunan lokal yang menawarkan harga lebih bersaing dibanding toko bermerek internasional. Market terus tumbuh didorong urbanisasi dan kelas menengah yang aktif merenovasi rumah.</p>
           <div class="callout g">
-            <div class="big-num g">3×</div>
-            <div class="callout-label">Pertumbuhan pasar fashion preloved Indonesia 2022–2025, didorong Gen Z dan inflasi</div>
+            <div class="big-num g">$4.5M</div>
+            <div class="callout-label">Nilai pasar hardware Indonesia (2023) — tumbuh stabil didorong urbanisasi dan infrastruktur</div>
+          </div>
+          <div class="callout g" style="margin-top:10px;">
+            <div style="font-size:13px;">Toko home improvement lokal seperti Mitra10 mencatat pertumbuhan <strong>14%</strong> dalam 12 bulan terakhir yang dilaporkan, mengalahkan rata-rata pertumbuhan industri ritel nasional.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FURNITURE INDONESIA -->
+    <div class="ind-block">
+      <div class="ind-hdr">
+        <div class="ind-title">Furniture — Dari IKEA ke Lokal &amp; Preloved</div>
+        <div class="ind-badge">Furniture · Data 2025–2026</div>
+      </div>
+      <div class="ind-body">
+        <div class="ind-panel">
+          <div class="panel-lbl">Incumbent</div>
+          <div style="margin-bottom:10px;">
+            <span class="brand-pill bp-from">IKEA Indonesia</span>
+            <span class="brand-pill bp-from">JYSK</span>
+          </div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">IKEA sudah relatif terjangkau di skala global, namun di Indonesia produknya masih dipersepsikan sebagai "mahal untuk kelas menengah bawah." Harga rata-rata lemari IKEA: <strong>Rp 2.000.000–6.000.000</strong>. Tren tarif impor 2025 memaksa IKEA menaikkan harga setelah 2 tahun konsisten memotong harga 10%.</p>
+          <div class="callout n">
+            <div style="font-size:13px;">IKEA global: penjualan total turun <strong>dua tahun berturut-turut</strong> di FY25, meski volume pelanggan naik 3%. Paradoks ini menunjukkan konsumen memilih produk lebih murah dalam katalog yang sama.</div>
+          </div>
+        </div>
+        <div class="ind-panel">
+          <div class="panel-lbl">New Winners</div>
+          <div style="margin-bottom:10px;">
+            <span class="brand-pill bp-to">Olympic Furniture</span>
+            <span class="brand-pill bp-to">Informa</span>
+            <span class="brand-pill bp-to">Dekoruma</span>
+            <span class="brand-pill bp-to">Preloved Marketplace</span>
+          </div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;"><strong>Olympic Furniture</strong> (berdiri 1983, Bogor) adalah pemimpin segmen knock-down furniture lokal. Harga: <strong>Rp 300.000–1.500.000</strong> untuk lemari setara fungsi produk IKEA. <strong>Dekoruma</strong> menghubungkan konsumen dengan desainer interior dan produk lokal berkualitas.</p>
+          <div class="callout g">
+            <div class="big-num g">$8.24M</div>
+            <div class="callout-label">Nilai pasar furniture Indonesia (2025), tumbuh ke $11.08 miliar by 2030 (CAGR 6.1%)</div>
+          </div>
+          <div class="callout g" style="margin-top:10px;">
+            <div style="font-size:13px;">Pasar furniture preloved/secondhand Indonesia tumbuh seiring platform seperti <strong>OLX, Facebook Marketplace, dan Carousell</strong>. Secara global: 48% konsumen sudah pernah beli furniture bekas, dan 78% di antaranya kemungkinan beli lagi.</div>
           </div>
         </div>
       </div>
@@ -527,114 +486,100 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
   </div>
 </section>
 
-<!-- ── SECTION 3: CHINA ───────────────────────────────────── -->
+<!-- SECTION 3: CHINA -->
 <section class="section">
   <div class="wrap">
-    <div class="sec-eyebrow">
-      <span class="sec-flag navy">China</span>
-      <span class="sec-count">03</span>
-    </div>
+    <div class="sec-eyebrow"><span class="sec-flag navy">China</span><span class="sec-count">03</span></div>
     <h2 class="sec-title">The "Rational Consumer" Revolution</h2>
-    <p class="sec-sub">China menjadi laboratorium downtrading terbesar di dunia — dari fenomena 平替 hingga BYD yang menggulingkan BMW. Ini bukan krisis; ini transformasi nilai.</p>
+    <p class="sec-sub">China menjadi laboratorium downtrading terbesar di dunia — dari fenomena 平替 hingga BYD yang menggulingkan BMW dan Tesla. Data terbaru Q1–Q2 2026.</p>
 
     <div class="china-grid">
-      <!-- PINGLEI -->
       <div class="ch-card">
         <div class="ch-lbl">Budaya Konsumsi</div>
         <div class="ch-title">平替 — "Affordable Replacement" Culture</div>
-        <p class="ch-body">Istilah 平替 (píngtì) secara harfiah berarti "pengganti harga biasa." Di media sosial China — terutama Xiaohongshu dan Douyin — mencari dan memamerkan 平替 dari produk luxury adalah tren dominan yang menunjukkan kecerdasan konsumsi, bukan kelemahan finansial.</p>
+        <p class="ch-body">Istilah 平替 (píngtì) berarti "pengganti harga biasa." Di Xiaohongshu dan Douyin, mencari dan memamerkan 平替 dari produk luxury adalah tren dominan — menunjukkan kecerdasan, bukan kelemahan finansial.</p>
         <div style="display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;">
-          <div>
-            <span class="chinese-word">平替</span>
-            <span class="chinese-caption">Píngtì · "Affordable Replacement"</span>
-          </div>
-          <div>
-            <div class="callout" style="margin-top:0;">
-              <div class="big-num">1.9M</div>
-              <div class="callout-label">Views diskusi 平替 di Xiaohongshu</div>
-            </div>
+          <div><span class="chinese-word">平替</span><span class="chinese-caption">Píngtì · "Affordable Replacement"</span></div>
+          <div class="callout" style="margin-top:0;flex:1;min-width:140px;">
+            <div class="big-num">1.9M</div>
+            <div class="callout-label">Views diskusi 平替 di Xiaohongshu — naik 3× dari 2022 ke 2025</div>
           </div>
         </div>
         <div class="callout" style="margin-top:14px;">
-          <div style="font-size:13px;">64% konsumen China menyatakan terbuka pada alternatif terjangkau. Pencarian "dupes" di media sosial naik <strong>3× lipat</strong> dari 2022 ke 2024. Yang paling mencengangkan: konsumen yang berganti ke produk 平替 justru <em>bangga</em> menceritakannya.</div>
+          <div style="font-size:13px;">64% konsumen China menyatakan terbuka pada alternatif terjangkau. China luxury personal goods: <strong>−18% s/d −20% di 2024</strong>, lalu mulai recovery ke <strong>−3% s/d −5% di 2025</strong>. Proyeksi Bain 2026: pertumbuhan tipis positif pertama kali.</div>
         </div>
       </div>
 
-      <!-- AUTOMOTIVE -->
       <div class="ch-card">
-        <div class="ch-lbl">Otomotif</div>
-        <div class="ch-title">BYD Menggulingkan Mercedes, BMW, dan Tesla</div>
-        <p class="ch-body">Merek otomotif Jerman (BMW, Mercedes, VW) yang dulu menguasai 2/3 pasar EV China kini tinggal memiliki sepertiga pasar. Konsumen China yang rasional lebih memilih BYD yang menawarkan teknologi setara — bahkan lebih canggih di area tertentu — dengan harga 20–40% lebih murah.</p>
+        <div class="ch-lbl">Otomotif — Data s/d Q2 2026</div>
+        <div class="ch-title">BYD Menggulingkan Tesla, BMW, dan Mercedes</div>
+        <p class="ch-body">Merek otomotif Jerman yang dulu kuasai 2/3 pasar EV China kini tinggal sepertiga. BYD menawarkan teknologi setara atau lebih canggih dengan harga 30–54% lebih murah.</p>
         <div class="flow-row">
-          <div class="fl-brand fl-from">BMW i4 ($53.000)</div>
+          <div class="fl-brand fl-from">BMW i4 (~$53.000)</div>
           <div class="fl-arr">→</div>
           <div class="fl-brand fl-to">BYD Seal ($24.190)</div>
           <div class="fl-savings">Hemat ~54%</div>
         </div>
         <div class="flow-row">
-          <div class="fl-brand fl-from">Tesla Model 3 (€41.000)</div>
+          <div class="fl-brand fl-from">Tesla Model 3 (~€41.000)</div>
           <div class="fl-arr">→</div>
           <div class="fl-brand fl-to">BYD Dolphin Surf (€22.990)</div>
           <div class="fl-savings">Hemat ~44%</div>
         </div>
         <div class="callout n" style="margin-top:14px;">
-          <div class="big-num n">#1</div>
-          <div class="callout-label">BYD melampaui Tesla sebagai penjual EV terbesar di dunia (2025), 4.6 juta unit BEV+PHEV</div>
+          <div class="big-num n">2.26 juta</div>
+          <div class="callout-label">BEV BYD terjual 2025 vs Tesla 1.64 juta (−10% YoY). Q2 2026: BYD 557.090 vs Tesla 480.126 unit. BYD China NEV share: 22.3% (Jun 2026)</div>
         </div>
       </div>
 
-      <!-- LUXURY BRANDS -->
       <div class="ch-card">
-        <div class="ch-lbl">Luxury Goods</div>
-        <div class="ch-title">Louis Vuitton, Hermès, Chanel — Kehilangan Momentum</div>
-        <p class="ch-body">Pasar luxury personal goods China berkontraksi 6–8% di 2025, meski mulai membaik di Q3. Bukan hanya karena daya beli melemah — tapi karena <em>makna</em> barang luxury bergeser. Memiliki Louis Vuitton tidak lagi membuat Anda terlihat sukses; membeli 平替 cerdas membuat Anda terlihat bijak.</p>
+        <div class="ch-lbl">Luxury Goods — Data 2025</div>
+        <div class="ch-title">Louis Vuitton, Hermès, Chanel: Dua Tahun Sulit</div>
+        <p class="ch-body">Pasar luxury personal goods China kontraksi tajam. Namun berbeda dari yang diperkirakan banyak analis: bukan hanya karena daya beli melemah, tapi karena <em>makna</em> barang luxury bergeser. Merek domestik premium seperti Laopu Gold dan Shang Xia mulai mengisi kekosongan ini.</p>
         <div class="callout">
-          <div class="big-num">−6% s/d −8%</div>
-          <div class="callout-label">Penurunan pasar luxury China 2025 vs tahun sebelumnya</div>
+          <div class="big-num">−18 s/d −20%</div>
+          <div class="callout-label">Kontraksi pasar luxury China 2024 (terbesar dalam sejarah modern)</div>
         </div>
         <div class="callout" style="margin-top:10px;">
-          <div style="font-size:13px;">56% konsumen luxury China berencana <strong>membeli lebih banyak merek domestik</strong> di 2025, tertarik pada relevansi budaya dan value-for-money yang lebih baik.</div>
+          <div class="big-num">−3 s/d −5%</div>
+          <div class="callout-label">Kontraksi pasar luxury China 2025 — mulai recovery di Q3 2025. Total market ~$46 miliar</div>
+        </div>
+        <div class="callout" style="margin-top:10px;">
+          <div style="font-size:13px;">65% pembelian luxury China kini terjadi di dalam mainland (vs 35% di luar negeri) — pembelian di luar negeri anjlok akibat kebijakan pajak dan penguatan identitas domestik.</div>
         </div>
       </div>
 
-      <!-- FOOD & COFFEE CHINA -->
       <div class="ch-card">
-        <div class="ch-lbl">F&amp;B / Kopi</div>
-        <div class="ch-title">Luckin Coffee: Menghancurkan Starbucks dengan Harga Separuhnya</div>
-        <p class="ch-body">Luckin Coffee, yang sempat tersandung skandal akuntansi pada 2020, bangkit menjadi ancaman terbesar Starbucks di China. Model grab-and-go berbasis aplikasi, harga rata-rata 15–20 yuan (vs Starbucks 30–45 yuan), dan promosi agresif berhasil memenangkan konsumen perkotaan yang rasional.</p>
+        <div class="ch-lbl">F&amp;B · Data 2025–2026</div>
+        <div class="ch-title">Luckin Coffee: 22.000+ Gerai vs Starbucks 7.000</div>
+        <p class="ch-body">Luckin Coffee, yang sempat tersandung skandal akuntansi di 2020, bangkit menjadi ancaman terbesar Starbucks di China. Model grab-and-go berbasis app, harga rata-rata 15–20 yuan vs Starbucks 30–45 yuan, dan promosi voucher agresif menang di kalangan urban rasional.</p>
         <div class="flow-row">
-          <div class="fl-brand fl-from">Starbucks China (¥35–45)</div>
+          <div class="fl-brand fl-from">Starbucks China (¥30–45)</div>
           <div class="fl-arr">→</div>
           <div class="fl-brand fl-to">Luckin Coffee (¥15–20)</div>
           <div class="fl-savings">Hemat ~50%</div>
         </div>
         <div class="callout g" style="margin-top:14px;">
           <div class="big-num g">22.000+</div>
-          <div class="callout-label">Gerai Luckin di China (2024), jauh melampaui Starbucks yang ~7.000 gerai di sana</div>
-        </div>
-        <div class="callout g" style="margin-top:10px;">
-          <div style="font-size:13px;">Starbucks China terus mencatat penurunan same-store sales selama beberapa kuartal berturut-turut. CEO baru ditugaskan khusus untuk memperbaiki situasi ini.</div>
+          <div class="callout-label">Gerai Luckin Coffee di China (2024) vs Starbucks ~7.000 — selisih 3× lipat. Starbucks China terus catat penurunan same-store sales.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── SECTION 4: GLOBAL ───────────────────────────────────── -->
+<!-- SECTION 4: GLOBAL -->
 <section class="section" style="background:var(--bg-alt);">
   <div class="wrap">
-    <div class="sec-eyebrow">
-      <span class="sec-flag">Global</span>
-      <span class="sec-count">04</span>
-    </div>
+    <div class="sec-eyebrow"><span class="sec-flag">Global</span><span class="sec-count">04</span></div>
     <h2 class="sec-title">Peta Downtrading Dunia</h2>
-    <p class="sec-sub">Empat industri global dimana downtrading paling terukur datanya dan paling jelas pergeserannya.</p>
+    <p class="sec-sub">Enam industri global dengan data kuantitatif terbaru 2025–2026 yang menunjukkan pergeseran paling terukur.</p>
 
     <!-- BEAUTY GLOBAL -->
     <div class="ind-block">
       <div class="ind-hdr">
-        <div class="ind-title">Skincare &amp; Beauty — Dupe Era</div>
-        <div class="ind-badge">Global · Beauty</div>
+        <div class="ind-title">Skincare &amp; Beauty — Era Dupe Global</div>
+        <div class="ind-badge">Global · Beauty · Data 2025</div>
       </div>
       <div class="ind-body">
         <div class="ind-panel">
@@ -645,29 +590,27 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
             <span class="brand-pill bp-from">Estée Lauder</span>
             <span class="brand-pill bp-from">Tatcha</span>
           </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            La Mer Crème: $200–400 per 60ml. SK-II Facial Treatment Essence: $185+ per 230ml. Harga yang sudah mahal ini terus naik rata-rata 8–15% per tahun sejak 2020.
-          </p>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">La Mer Crème: $200–400 per 60ml. SK-II Facial Treatment Essence: $185+ per 230ml. Harga sudah mahal ini terus naik 8–15% per tahun sejak 2020, sementara klaim manfaatnya tidak berubah signifikan.</p>
           <div class="callout">
-            <div class="big-num">−7%</div>
-            <div class="callout-label">Proporsi konsumen yang belanja skincare &gt;$76, turun dari 50% (2023) ke 43% (2025)</div>
+            <div class="big-num">−7 poin</div>
+            <div class="callout-label">Proporsi konsumen belanja skincare &gt;$76 turun dari 50% (2023) ke 43% (2025). Sumber: McKinsey Beauty Report 2025</div>
           </div>
         </div>
         <div class="ind-panel">
-          <div class="panel-lbl">Ke — Drugstore &amp; "Dupe" Brands</div>
+          <div class="panel-lbl">Ke — Drugstore &amp; Dupe Brands</div>
           <div style="margin-bottom:10px;">
             <span class="brand-pill bp-to">The Ordinary</span>
             <span class="brand-pill bp-to">CeraVe</span>
             <span class="brand-pill bp-to">Neutrogena</span>
             <span class="brand-pill bp-to">Brandefy</span>
           </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            The Ordinary Niacinamide: $8–10. CeraVe Moisturizing Cream: $12–18. Platform seperti <strong>Brandefy</strong> dan <strong>DUPE</strong> membantu konsumen menemukan exact match ingredient dari setiap produk luxury.
-          </p>
-          <div class="arrow-dn">&#8659; PERGESERAN TERUKUR</div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">The Ordinary Niacinamide: $8–10. CeraVe Moisturizing Cream: $12–18. Platform <strong>Brandefy</strong> dan <strong>DUPE</strong> membantu konsumen menemukan exact ingredient match dari setiap produk luxury — dengan harga 80–95% lebih murah.</p>
           <div class="callout g">
-            <div class="big-num g">+11%</div>
-            <div class="callout-label">Proporsi konsumen belanja skincare &lt;$35, naik dari 26% (2023) ke 37% (2025)</div>
+            <div class="big-num g">+11 poin</div>
+            <div class="callout-label">Proporsi konsumen belanja skincare &lt;$35 naik dari 26% (2023) ke 37% (2025) — perpindahan terbesar dalam sejarah segmentasi harga beauty</div>
+          </div>
+          <div class="callout g" style="margin-top:10px;">
+            <div style="font-size:13px;">Global beauty market tumbuh 7% (2022–2024) tapi proyeksi melambat ke <strong>3–5% per tahun</strong> hingga 2030 — sinyal struktural bahwa premium segment tidak lagi bisa berharap pertumbuhan di atas rata-rata.</div>
           </div>
         </div>
       </div>
@@ -676,36 +619,116 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
     <!-- RESTAURANT GLOBAL -->
     <div class="ind-block">
       <div class="ind-hdr">
-        <div class="ind-title">Kuliner — Fine Dining ke Casual</div>
-        <div class="ind-badge">Global · F&amp;B</div>
+        <div class="ind-title">Kuliner — Fine Dining vs "Value Era"</div>
+        <div class="ind-badge">Global · F&amp;B · Data 2025–2026</div>
       </div>
       <div class="ind-body">
         <div class="ind-panel">
           <div class="panel-lbl">Yang Ditinggalkan</div>
           <div style="margin-bottom:10px;">
             <span class="brand-pill bp-from">Fine Dining</span>
-            <span class="brand-pill bp-from">Full-Service Restaurant</span>
+            <span class="brand-pill bp-from">Full-Service Casual</span>
           </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            Restoran fine dining mencatat penurunan same-store sales selama <strong>5 bulan berturut-turut</strong> (2025) — menjadi segmen paling merugi di seluruh industri restoran. Konsumen berpenghasilan tinggi pun mulai berpikir dua kali sebelum makan di restoran $80–200 per orang.
-          </p>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Fine dining mencatat penurunan same-store sales selama <strong>5 bulan berturut-turut</strong> di sepanjang 2025 — segmen paling merugi di seluruh industri restoran. Bahkan konsumen berpenghasilan tinggi mulai berpikir dua kali sebelum makan di restoran $80–200 per orang.</p>
           <div class="callout">
-            <div style="font-size:13px;">Konsumen bahkan "downsize" dalam satu kunjungan: tidak memesan minuman, melewatkan appetizer, atau memilih menu paling murah — strategi disebut <em>"check management."</em></div>
+            <div style="font-size:13px;">Strategi baru konsumen: <em>"check management"</em> — tidak pesan minuman, lewatkan appetizer, pilih menu paling murah, atau minta split bill untuk kontrol total tagihan.</div>
           </div>
         </div>
         <div class="ind-panel">
-          <div class="panel-lbl">Yang Menang</div>
+          <div class="panel-lbl">Yang Menang — 2025</div>
           <div style="margin-bottom:10px;">
             <span class="brand-pill bp-to">Chili's</span>
             <span class="brand-pill bp-to">McDonald's</span>
             <span class="brand-pill bp-to">Taco Bell</span>
             <span class="brand-pill bp-to">Fast Casual</span>
           </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            <strong>Chili's</strong> menjadi kisah sukses terbesar 2025: berhasil menarik konsumen berpenghasilan tinggi yang "trading down" dari fine dining, sekaligus merebut konsumen bawah dari McDonald's. Same-store sales tumbuh double digit. Menu "value" menjadi produk terlaris di seluruh industri QSR.
-          </p>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;"><strong>Chili's</strong> menjadi fenomena 2025: menarik konsumen berpenghasilan tinggi yang trading down dari fine dining, sekaligus merebut pelanggan dari McDonald's. Same-store sales tumbuh double digit selama beberapa kuartal.</p>
           <div class="callout g">
-            <div style="font-size:13px;">McDonald's luncurkan kembali "Extra Value Meals," Taco Bell tawarkan menu retro di bawah $3. <strong>"Value" adalah menu terpanas 2025</strong> — bukan inovasi rasa, bukan keberlanjutan, tapi harga.</div>
+            <div class="big-num g">"Value"</div>
+            <div class="callout-label">Menu item terpanas industri restoran 2025 — McDonald's Extra Value Meals, Taco Bell menu &lt;$3, Chili's bundle plates. Bukan inovasi rasa — harga.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOME IMPROVEMENT GLOBAL -->
+    <div class="ind-block">
+      <div class="ind-hdr">
+        <div class="ind-title">Renovasi Rumah — DIY Boom Global</div>
+        <div class="ind-badge">Global · Home Improvement · Data 2025–2026</div>
+      </div>
+      <div class="ind-body">
+        <div class="ind-panel">
+          <div class="panel-lbl">Dari — Kontraktor Profesional</div>
+          <div style="margin-bottom:10px;">
+            <span class="brand-pill bp-from">Kontraktor Pro</span>
+            <span class="brand-pill bp-from">Jasa Renovasi Premium</span>
+          </div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Biaya jasa kontraktor profesional terus naik akibat kelangkaan tenaga kerja terampil dan inflasi material. Proyek renovasi menengah ($5.000–$25.000) ditunda besar-besaran — konsumen memilih proyek kecil yang bisa dikerjakan sendiri atau bertahap.</p>
+          <div class="callout">
+            <div class="big-num">$518M</div>
+            <div class="callout-label">Proyeksi total spending home improvement AS di 2026 — tapi mayoritas untuk proyek kecil &lt;$5.000, bukan renovasi besar</div>
+          </div>
+          <div class="callout" style="margin-top:10px;">
+            <div style="font-size:13px;">91% pemilik rumah berencana renovasi di 2026, tapi ambisi dipangkas: fokus ke <strong>maintenance dasar dan refresh kecil</strong>, bukan remodel besar yang discretionary.</div>
+          </div>
+        </div>
+        <div class="ind-panel">
+          <div class="panel-lbl">Ke — DIY &amp; Hybrid</div>
+          <div style="margin-bottom:10px;">
+            <span class="brand-pill bp-to">Home Depot</span>
+            <span class="brand-pill bp-to">YouTube DIY</span>
+            <span class="brand-pill bp-to">Mode Hybrid</span>
+          </div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Model hybrid — beli material sendiri, sewa kontraktor hanya untuk bagian teknis — kini mendominasi. Ini adalah bentuk downtrading yang paling murni: konsumen membeli material berkualitas sama tapi menghemat biaya jasa.</p>
+          <div class="callout g">
+            <div class="big-num g">46%</div>
+            <div class="callout-label">Pemilik rumah AS gunakan model hybrid DIY + kontraktor di Q1 2026 — naik drastis dari hanya 20–26% di 2025</div>
+          </div>
+          <div class="callout g" style="margin-top:10px;">
+            <div class="big-num g">70%</div>
+            <div class="callout-label">Proporsi pemilik rumah yang memilih DIY karena <em>terbukti lebih murah</em> (Q1 2026). DIY market global: $870M (2025) → $930M (2026)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FURNITURE GLOBAL -->
+    <div class="ind-block">
+      <div class="ind-hdr">
+        <div class="ind-title">Furniture — Luxury Sofa ke Secondhand Market</div>
+        <div class="ind-badge">Global · Furniture · Data 2025–2026</div>
+      </div>
+      <div class="ind-body">
+        <div class="ind-panel">
+          <div class="panel-lbl">Dari — Luxury &amp; Designer Furniture</div>
+          <div style="margin-bottom:10px;">
+            <span class="brand-pill bp-from">Restoration Hardware (RH)</span>
+            <span class="brand-pill bp-from">Arhaus</span>
+            <span class="brand-pill bp-from">Design brand premium</span>
+          </div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Pasar luxury furniture global: $25.28 miliar (2025). Tapi segmen ini tumbuh lambat — penjualan furniture secara keseluruhan berkontraksi <strong>mid-single digit</strong> di 2025, dengan semua segmen penghasilan mengurangi belanja furniture di Q4 2025 vs setahun lalu.</p>
+          <div class="callout">
+            <div class="big-num">2.3%</div>
+            <div class="callout-label">Pertumbuhan sektor ritel furniture AS 2025 — jauh di bawah core retail yang tumbuh 4%, dan sebagian besar didorong kenaikan harga, bukan volume</div>
+          </div>
+        </div>
+        <div class="ind-panel">
+          <div class="panel-lbl">Ke — IKEA, Wayfair &amp; Pasar Secondhand</div>
+          <div style="margin-bottom:10px;">
+            <span class="brand-pill bp-to">IKEA / Wayfair</span>
+            <span class="brand-pill bp-to">Bob's Discount Furniture</span>
+            <span class="brand-pill bp-to">Facebook Marketplace</span>
+            <span class="brand-pill bp-to">Craigslist / OLX</span>
+          </div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;"><strong>Bob's Discount Furniture</strong> dan <strong>IKEA</strong> menjadi dua brand yang bertumbuh di tengah stagnasi industri — keduanya agresif ekspansi toko fisik di AS (2025–2026). Pasar secondhand furniture meledak didorong inflasi dan kesadaran sustainability.</p>
+          <div class="callout g">
+            <div class="big-num g">$40.97M</div>
+            <div class="callout-label">Pasar furniture secondhand global 2025 → proyeksi $84.44 miliar by 2035 (CAGR 7.5%)</div>
+          </div>
+          <div class="callout g" style="margin-top:10px;">
+            <div class="big-num g">48%</div>
+            <div class="callout-label">Proporsi konsumen AS yang sudah pernah beli furniture bekas. 78% di antaranya kemungkinan beli lagi — loyalitas secondhand lebih tinggi dari yang diperkirakan.</div>
           </div>
         </div>
       </div>
@@ -715,7 +738,7 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
     <div class="ind-block">
       <div class="ind-hdr">
         <div class="ind-title">Fashion Mewah — Resale &amp; Thrift Economy</div>
-        <div class="ind-badge">Global · Fashion</div>
+        <div class="ind-badge">Global · Fashion · Data 2024–2025</div>
       </div>
       <div class="ind-body">
         <div class="ind-panel">
@@ -726,75 +749,27 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
             <span class="brand-pill bp-from">Prada</span>
             <span class="brand-pill bp-from">Louis Vuitton</span>
           </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            Luxury fashion global turun <strong>12% di 2023</strong> dan <strong>9% lagi di 2024</strong>. Generasi muda — yang seharusnya menjadi konsumen masa depan luxury — justru paling aktif mencari alternatif. 94% Gen Z mengaku peduli sustainability, tapi 90% masih rutin membeli fashion murah.
-          </p>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Luxury fashion global: <strong>−12% di 2023</strong> dan <strong>−9% di 2024</strong>. Generasi muda — yang seharusnya menjadi konsumen masa depan luxury — justru paling aktif mencari alternatif. Visible brand symbol mulai kehilangan kekuatannya di semua demografi.</p>
           <div class="callout">
-            <div style="font-size:13px;">88% konsumen berpenghasilan tinggi kini mendefinisikan status lewat <em>pengalaman, nilai personal, dan autentisitas</em> — bukan logo di tas mereka. Visible brand symbol mulai kehilangan kekuatannya.</div>
+            <div style="font-size:13px;">88% konsumen berpenghasilan tinggi kini mendefinisikan status lewat <em>pengalaman, nilai personal, dan autentisitas</em> — bukan logo di tas mereka. Sumber: Bain Global Luxury 2025.</div>
           </div>
         </div>
         <div class="ind-panel">
           <div class="panel-lbl">Yang Tumbuh</div>
           <div style="margin-bottom:10px;">
             <span class="brand-pill bp-to">ThredUp</span>
-            <span class="brand-pill bp-to">Vestiaire</span>
+            <span class="brand-pill bp-to">Vestiaire Collective</span>
             <span class="brand-pill bp-to">Depop</span>
             <span class="brand-pill bp-to">Vinted</span>
           </div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">
-            Platform resale menjadi solusi "luxury without guilt." Konsumen mendapatkan tas Hermès asli seharga 40–60% dari harga retail baru. Sekaligus ada narasi sustainability yang membuatnya terasa lebih bermakna.
-          </p>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:12px;">Konsumen mendapatkan tas Hermès asli seharga 40–60% dari harga retail baru. Platform resale menjadi solusi "luxury without full price" — sekaligus ada narasi sustainability yang memperkuat keputusan ini.</p>
           <div class="callout g">
-            <div class="big-num g">$350B</div>
-            <div class="callout-label">Proyeksi nilai pasar secondhand apparel global di 2028 — tumbuh 3× lebih cepat dari pasar fashion keseluruhan</div>
+            <div class="big-num g">$350M</div>
+            <div class="callout-label">Proyeksi nilai pasar secondhand apparel global di 2028 — tumbuh 3× lebih cepat dari pasar fashion baru keseluruhan</div>
           </div>
           <div class="callout g" style="margin-top:10px;">
             <div class="big-num g">60%</div>
-            <div class="callout-label">Konsumen AS dan Eropa yang menggunakan platform resale untuk membeli luxury secondhand</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- HOSPITALITY GLOBAL -->
-    <div class="ind-block">
-      <div class="ind-hdr">
-        <div class="ind-title">Hospitality &amp; Travel — "Same Trip, Less Spend"</div>
-        <div class="ind-badge">Global · Hospitality</div>
-      </div>
-      <div class="ind-body">
-        <div class="ind-panel">
-          <div class="panel-lbl">Perilaku Konsumen</div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:14px;">
-            Lebih dari <strong>50% konsumen AS</strong> mengurangi jumlah perjalanan di 2025. Namun yang menarik: mereka yang tetap bepergian memilih untuk <em>pergi ke destinasi yang sama tapi menginap di tempat yang lebih murah</em>. "Same experience, lower price point."
-          </p>
-          <div class="callout n">
-            <div style="font-size:13px;">Tren yang muncul: <strong>flight shaming vs flight pragmatism</strong> — memilih penerbangan ekonomi demi menabung untuk pengalaman di destinasi, bukan menghabiskannya di airport lounge.</div>
-          </div>
-          <div class="callout n" style="margin-top:10px;">
-            <div class="big-num n">30%</div>
-            <div class="callout-label">Traveler kaya yang berencana belanja &gt;$50.000 untuk liburan — tapi sisanya 70% memilih lebih hemat</div>
-          </div>
-        </div>
-        <div class="ind-panel">
-          <div class="panel-lbl">Pergeseran Pilihan</div>
-          <div class="flow-row">
-            <div class="fl-brand fl-from">Hotel Bintang 5</div>
-            <div class="fl-arr">→</div>
-            <div class="fl-brand fl-to">Boutique Hotel</div>
-          </div>
-          <div class="flow-row">
-            <div class="fl-brand fl-from">Business Class</div>
-            <div class="fl-arr">→</div>
-            <div class="fl-brand fl-to">Premium Economy</div>
-          </div>
-          <div class="flow-row">
-            <div class="fl-brand fl-from">Resort All-Inclusive</div>
-            <div class="fl-arr">→</div>
-            <div class="fl-brand fl-to">Airbnb Lokal</div>
-          </div>
-          <div class="callout g" style="margin-top:12px;">
-            <div style="font-size:13px;">Outlet hotels dan "affordable luxury" properties (AC Hotels by Marriott, Moxy, Aloft) adalah segmen dengan pertumbuhan paling konsisten — menangkap konsumen yang tidak mau bayar full premium tapi juga tidak mau bersaing rebutan fasilitas di hotel budget.</div>
+            <div class="callout-label">Konsumen AS dan Eropa yang sudah gunakan platform resale untuk membeli luxury secondhand (Bain, 2025)</div>
           </div>
         </div>
       </div>
@@ -803,99 +778,107 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
   </div>
 </section>
 
-<!-- ── SECTION 5: MATRIX TABLE ────────────────────────────── -->
+<!-- SECTION 5: MATRIX TABLE -->
 <section class="section">
   <div class="wrap">
-    <div class="sec-eyebrow">
-      <span class="sec-flag amber">Ringkasan</span>
-      <span class="sec-count">05</span>
-    </div>
-    <h2 class="sec-title">Peta Downtrading Lintas Industri</h2>
-    <p class="sec-sub">Referensi cepat: siapa yang ditinggalkan, siapa yang menang, dan berapa besar pergeserannya.</p>
+    <div class="sec-eyebrow"><span class="sec-flag amber">Ringkasan</span><span class="sec-count">05</span></div>
+    <h2 class="sec-title">Matriks Downtrading Lintas Industri</h2>
+    <p class="sec-sub">Referensi cepat: siapa yang ditinggalkan, siapa yang menang, dan berapa besar pergeserannya. Data diperbarui hingga pertengahan 2026.</p>
     <div class="tbl-wrap">
       <table>
         <thead>
           <tr>
-            <th>Industri</th>
-            <th>Wilayah</th>
+            <th>Industri &amp; Wilayah</th>
             <th>Dari (Incumbent)</th>
             <th>Ke (Pemenang Baru)</th>
             <th>Selisih Harga</th>
-            <th>Indikator Kunci</th>
+            <th>Indikator Kuantitatif Terbaru</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Kopi &amp; Minuman</strong></td>
-            <td>Indonesia</td>
+            <td><div class="td-cat">Kopi &amp; Minuman</div><span class="td-tag tag-id">Indonesia</span></td>
             <td class="td-from">Starbucks (Rp 55–85rb)</td>
             <td class="td-to">Kopi Kenangan, Tuku, Janji Jiwa (Rp 18–35rb)</td>
             <td class="td-drop">~60% lebih murah</td>
-            <td>Kopi Kenangan: 872 gerai, revenue +45%, profitable 2025</td>
+            <td>Kopi Kenangan: 1.324 gerai (2026), revenue $184M (+45%), profit pertama $17M. Proyeksi 2026: +36% revenue</td>
           </tr>
           <tr>
-            <td><strong>Kopi &amp; Minuman</strong></td>
-            <td>China</td>
-            <td class="td-from">Starbucks China (¥35–45)</td>
+            <td><div class="td-cat">Kopi &amp; Minuman</div><span class="td-tag tag-cn">China</span></td>
+            <td class="td-from">Starbucks China (¥30–45)</td>
             <td class="td-to">Luckin Coffee (¥15–20)</td>
             <td class="td-drop">~50% lebih murah</td>
-            <td>Luckin 22.000+ gerai vs Starbucks 7.000 di China</td>
+            <td>Luckin 22.000+ gerai (2024) vs Starbucks 7.000 di China. Starbucks China: SSS terus turun multi-kuartal</td>
           </tr>
           <tr>
-            <td><strong>Skincare</strong></td>
-            <td>Global</td>
+            <td><div class="td-cat">Skincare</div><span class="td-tag tag-gl">Global</span></td>
             <td class="td-from">La Mer, SK-II, Estée Lauder</td>
             <td class="td-to">The Ordinary, CeraVe, Brandefy dupes</td>
             <td class="td-drop">80–95% lebih murah</td>
-            <td>Spending &gt;$76 turun dari 50% → 43%; &lt;$35 naik dari 26% → 37%</td>
+            <td>Spending &gt;$76 turun dari 50%→43%; &lt;$35 naik dari 26%→37% (2023 vs 2025). Beauty growth melambat ke 3–5%</td>
           </tr>
           <tr>
-            <td><strong>Skincare</strong></td>
-            <td>Indonesia</td>
+            <td><div class="td-cat">Skincare</div><span class="td-tag tag-id">Indonesia</span></td>
             <td class="td-from">Laneige, Sulwhasoo, SK-II</td>
             <td class="td-to">Wardah, Somethinc, Scarlett, Y.O.U</td>
             <td class="td-drop">70–90% lebih murah</td>
-            <td>Wardah jadi merek kosmetik lokal terbesar; Somethinc memimpin skincare berbasis edukasi</td>
+            <td>Paragon Technology (Wardah) — salah satu kosmetik terbesar Asia Tenggara. Didorong edukasi ingredient di TikTok</td>
           </tr>
           <tr>
-            <td><strong>Otomotif / EV</strong></td>
-            <td>China / Global</td>
+            <td><div class="td-cat">Otomotif / EV</div><span class="td-tag tag-cn">China</span> <span class="td-tag tag-gl">Global</span></td>
             <td class="td-from">BMW, Mercedes, Tesla</td>
             <td class="td-to">BYD, Geely, NIO</td>
             <td class="td-drop">30–54% lebih murah</td>
-            <td>BYD #1 global EV, German brands turun dari 2/3 ke 1/3 pasar China</td>
+            <td>BYD 2025: 2.26 juta BEV (vs Tesla 1.64 juta, −10%). Q2 2026: BYD 557k vs Tesla 480k. China NEV share BYD: 22.3%</td>
           </tr>
           <tr>
-            <td><strong>Kuliner</strong></td>
-            <td>Global</td>
-            <td class="td-from">Fine Dining, Full Service Restaurant</td>
+            <td><div class="td-cat">Kuliner</div><span class="td-tag tag-gl">Global</span></td>
+            <td class="td-from">Fine Dining, Full Service</td>
             <td class="td-to">Chili's, McDonald's, Taco Bell, Fast Casual</td>
             <td class="td-drop">60–80% lebih murah</td>
-            <td>Fine dining terburuk 5 bulan berturut; Chili's same-store sales double digit</td>
+            <td>Fine dining: SSS turun 5 bulan berturut (2025). Chili's: SSS double digit. McDonald's Value Meals #1 best seller</td>
           </tr>
           <tr>
-            <td><strong>Fashion</strong></td>
-            <td>Global</td>
-            <td class="td-from">Gucci, Prada, Louis Vuitton</td>
-            <td class="td-to">ThredUp, Vestiaire Collective, Depop (Resale)</td>
-            <td class="td-drop">40–70% lebih murah</td>
-            <td>Luxury fashion −12% (2023), −9% (2024); resale market → $350B by 2028</td>
+            <td><div class="td-cat">Renovasi Rumah</div><span class="td-tag tag-id">Indonesia</span></td>
+            <td class="td-from">Ace Hardware (29 tahun)</td>
+            <td class="td-to">Azko (brand lokal), Mitra10, Depo Bangunan</td>
+            <td class="td-drop">10–30% lebih murah</td>
+            <td>Ace Hardware tutup di Indonesia Jan 2025 → seluruhnya berganti Azko. Mitra10: +14% pertumbuhan. Market: $4.5B</td>
           </tr>
           <tr>
-            <td><strong>Luxury Goods</strong></td>
-            <td>China</td>
-            <td class="td-from">LV, Hermès, Chanel, Dior</td>
-            <td class="td-to">Merek domestik premium &amp; "平替"</td>
-            <td class="td-drop">Sampai 90% lebih murah</td>
-            <td>Luxury China −6 s/d −8%; 56% konsumen prefer merek domestik; 1.9M views 平替</td>
-          </tr>
-          <tr>
-            <td><strong>Hospitality</strong></td>
-            <td>Global</td>
-            <td class="td-from">Hotel Bintang 5, Resort Premium</td>
-            <td class="td-to">Boutique Hotel, Airbnb, Affordable Luxury (Moxy, Aloft)</td>
+            <td><div class="td-cat">Renovasi Rumah</div><span class="td-tag tag-gl">Global</span></td>
+            <td class="td-from">Kontraktor Pro (jasa penuh)</td>
+            <td class="td-to">DIY + Model Hybrid (beli material sendiri)</td>
             <td class="td-drop">30–60% lebih murah</td>
-            <td>&gt;50% konsumen AS kurangi jumlah perjalanan; budget travel regain momentum</td>
+            <td>Hybrid approach naik 20–26% (2025) → 46% (Q1 2026). 70% pilih DIY karena lebih murah. Market: $870M→$930M (2026)</td>
+          </tr>
+          <tr>
+            <td><div class="td-cat">Furniture</div><span class="td-tag tag-id">Indonesia</span></td>
+            <td class="td-from">IKEA Indonesia, JYSK</td>
+            <td class="td-to">Olympic Furniture, Informa, Dekoruma, Preloved</td>
+            <td class="td-drop">40–75% lebih murah</td>
+            <td>Market furniture Indonesia: $8.24M (2025) → $11.08M by 2030. Preloved tumbuh via OLX, FB Marketplace</td>
+          </tr>
+          <tr>
+            <td><div class="td-cat">Furniture</div><span class="td-tag tag-gl">Global</span></td>
+            <td class="td-from">Luxury/Designer Furniture</td>
+            <td class="td-to">IKEA, Bob's, Facebook Marketplace, Secondhand</td>
+            <td class="td-drop">50–90% lebih murah</td>
+            <td>Secondhand furniture: $40.97M (2025) → $84.44M by 2035 (CAGR 7.5%). 48% AS sudah beli furniture bekas</td>
+          </tr>
+          <tr>
+            <td><div class="td-cat">Fashion Mewah</div><span class="td-tag tag-gl">Global</span></td>
+            <td class="td-from">Gucci, LV, Prada, Balenciaga</td>
+            <td class="td-to">ThredUp, Vestiaire, Depop (Resale Market)</td>
+            <td class="td-drop">40–70% lebih murah</td>
+            <td>Luxury fashion −12% (2023), −9% (2024). Resale market → $350M by 2028, tumbuh 3× lebih cepat dari fashion baru</td>
+          </tr>
+          <tr>
+            <td><div class="td-cat">Luxury Goods</div><span class="td-tag tag-cn">China</span></td>
+            <td class="td-from">LV, Hermès, Chanel, Dior</td>
+            <td class="td-to">Merek domestik premium: Laopu Gold, Shang Xia</td>
+            <td class="td-drop">Sampai 70% lebih murah</td>
+            <td>Kontraksi −18-20% (2024), −3-5% (2025), recovery tipis 2026. Market ~$46B. 65% konsumsi kini di mainland</td>
           </tr>
         </tbody>
       </table>
@@ -903,35 +886,32 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
   </div>
 </section>
 
-<!-- ── SECTION 6: IMPLICATIONS ────────────────────────────── -->
+<!-- SECTION 6: IMPLICATIONS -->
 <section class="section" style="background:var(--bg-alt);">
   <div class="wrap">
-    <div class="sec-eyebrow">
-      <span class="sec-flag green">Implikasi</span>
-      <span class="sec-count">06</span>
-    </div>
+    <div class="sec-eyebrow"><span class="sec-flag green">Implikasi</span><span class="sec-count">06</span></div>
     <h2 class="sec-title">Apa Artinya Bagi Merek &amp; Bisnis?</h2>
     <p class="sec-sub">Downtrading bukan berarti pasar mati. Ini peluang bagi mereka yang bisa memosisikan diri dengan benar.</p>
     <div class="impl-grid">
       <div class="impl-card">
         <div class="impl-bar"></div>
         <div class="impl-title">Ancaman bagi Merek Premium Tanpa Differensiasi Jelas</div>
-        <div class="impl-body">Jika premium pricing Anda tidak diikuti dengan pengalaman, kualitas, atau inovasi yang jelas berbeda, konsumen akan pergi. Harga tinggi tanpa "why" yang kuat adalah undangan untuk di-dupe. Audit ulang: apa yang benar-benar tidak bisa konsumen dapatkan di harga setengahnya?</div>
+        <div class="impl-body">Jika premium pricing tidak diikuti dengan pengalaman, kualitas, atau inovasi yang jelas berbeda, konsumen akan pergi. Harga tinggi tanpa "why" yang kuat adalah undangan untuk di-dupe. Audit ulang: apa yang benar-benar tidak bisa konsumen dapatkan di harga setengahnya?</div>
       </div>
       <div class="impl-card green">
         <div class="impl-bar g"></div>
-        <div class="impl-title">Peluang Emas untuk Merek "Accessible Premium"</div>
-        <div class="impl-body">Segmen yang menang adalah merek yang bermain di "sweet spot" — bukan murah, bukan luxury, tapi cukup berkualitas dengan harga yang masuk akal. Kopi Kenangan, The Ordinary, Luckin, BYD — semuanya bermain di zona ini dengan sangat berhasil.</div>
+        <div class="impl-title">Peluang Emas untuk "Accessible Premium"</div>
+        <div class="impl-body">Segmen yang menang adalah merek yang bermain di sweet spot — bukan murah, bukan luxury, tapi cukup berkualitas dengan harga yang masuk akal. Kopi Kenangan, The Ordinary, BYD, IKEA (di tengah pasar), Bob's Discount Furniture — semuanya bermain di zona ini.</div>
       </div>
       <div class="impl-card blue">
         <div class="impl-bar n"></div>
         <div class="impl-title">Value Communication Lebih Penting dari Value Itself</div>
-        <div class="impl-body">Konsumen yang literate tidak hanya peduli harga — mereka peduli narasi. "Ingredient sama, harga 1/10" adalah pesan yang ampuh. Merek lokal yang berhasil adalah yang berani mengedukasi konsumen tentang apa yang mereka bayar dan mengapa itu cukup — bahkan lebih baik.</div>
+        <div class="impl-body">Konsumen yang literate tidak hanya peduli harga — mereka peduli narasi. "Ingredient sama, harga 1/10" adalah pesan yang ampuh. Merek lokal yang berhasil adalah yang berani mengedukasi konsumen tentang apa yang mereka bayar — dan mengapa itu cukup, bahkan lebih baik.</div>
       </div>
       <div class="impl-card amber">
         <div class="impl-bar a"></div>
         <div class="impl-title">Jangan Anggap Ini Sementara</div>
-        <div class="impl-body">Downtrading bukan respons sementara terhadap resesi. Ini adalah pergeseran struktural dalam cara konsumen mendefinisikan nilai. Gen Z yang tumbuh dalam budaya dupe, preloved, dan "ingredient-check" tidak akan tiba-tiba kembali ke pola konsumsi generasi sebelumnya.</div>
+        <div class="impl-body">Downtrading bukan respons temporer terhadap resesi. Ini pergeseran struktural dalam cara konsumen mendefinisikan nilai. Gen Z yang tumbuh dalam budaya dupe, preloved, dan ingredient-check tidak akan kembali ke pola konsumsi generasi sebelumnya. Pergeseran ini permanen.</div>
       </div>
     </div>
   </div>
@@ -944,28 +924,33 @@ footer { padding:44px 0; border-top:1px solid var(--border); }
   <div class="wrap">
     <div class="ftr-inner">
       <div>
-        <div class="src-title">Sumber &amp; Referensi</div>
+        <div class="src-title">Sumber &amp; Referensi Data (2025–2026)</div>
         <ul class="src-list">
-          <li><a href="https://www.forbes.com/sites/gloriaharaito/2026/04/15/inside-the-indonesian-starbucks-challenger-thats-betting-on-affordable-premium-coffee/">Forbes: Inside The Indonesian Starbucks Challenger That's Betting On Affordable Premium Coffee (2026)</a></li>
-          <li><a href="https://databoks.katadata.co.id/en/consumer-services/statistics/6965ffd28d7a6/kopi-kenangans-outlet-count-surpassed-starbucks-in-indonesia-in-2024">Databoks Katadata: Kopi Kenangan's Outlet Count Surpassed Starbucks in Indonesia (2024)</a></li>
-          <li><a href="https://www.bain.com/about/media-center/press-releases/20252/global-luxury-stays-resilient-despite-economic-headwinds-and-shifting-consumer-trends-that-reshape-marketbain--company-and-altagamma/">Bain &amp; Company / Altagamma: Global Luxury Market Report 2025</a></li>
-          <li><a href="https://www.bain.com/insights/the-2025-chinese-personal-luxury-goods-market/">Bain &amp; Company: The 2025 Chinese Personal Luxury Goods Market</a></li>
-          <li><a href="https://daxueconsulting.com/the-rise-of-dupe-confidence-in-china-smart-spending-as-a-new-badge-of-honor/">Daxue Consulting: The Rise of Dupe Confidence in China (2025)</a></li>
-          <li><a href="https://www.cnn.com/2024/09/23/business/china-dupe-economy-hnk-intl/index.html">CNN Business: China's Gen Z Leans into Dupe Economy</a></li>
-          <li><a href="https://www.euronews.com/business/2026/01/02/byd-overtakes-tesla-as-china-reshapes-the-global-ev-race">Euronews: BYD Overtakes Tesla as China Reshapes the Global EV Race (2026)</a></li>
+          <li><a href="https://www.worldcoffeeportal.com/news/can-indonesias-kopi-kenangan-balance-ambitious-growth-with-profitability-in-2026/">World Coffee Portal: Can Kopi Kenangan Balance Ambitious Growth? (2026)</a></li>
+          <li><a href="https://www.dealstreetasia.com/stories/kopi-kenangan-earnings-490520">DealStreet Asia: Kopi Kenangan Reaches Profitability in 2025 (2025)</a></li>
+          <li><a href="https://www.bain.com/about/media-center/press-releases/2026/chinas-personal-luxury-market-contracts-35-in-2025-but-shows-signs-of-recovery/">Bain &amp; Company: China's Personal Luxury Market Contracts 3–5% in 2025 (2026)</a></li>
+          <li><a href="https://www.bain.com/about/media-center/press-releases/20252/global-luxury-stays-resilient-despite-economic-headwinds-and-shifting-consumer-trends-that-reshape-marketbain--company-and-altagamma/">Bain &amp; Altagamma: Global Luxury Market Report 2025</a></li>
+          <li><a href="https://carboncredits.com/byd-overtakes-tesla-as-worlds-biggest-ev-seller-in-2025/">Carbon Credits: BYD Overtakes Tesla as World's Biggest EV Seller in 2025</a></li>
+          <li><a href="https://electrek.co/2026/07/01/byd-tesla-q2-2026-bev-sales/">Electrek: BYD Crushes Tesla Q2 2026 BEV Sales (2026)</a></li>
+          <li><a href="https://daxueconsulting.com/the-rise-of-dupe-confidence-in-china-smart-spending-as-a-new-badge-of-honor/">Daxue Consulting: Rise of Dupe Confidence in China (2025)</a></li>
           <li><a href="https://www.beautyindependent.com/beauty-growth-forecast-q1-consumers-trade-down-select-categories/">Beauty Independent: Beauty Growth Forecast — Consumers Trade Down (2025)</a></li>
           <li><a href="https://www.cnbc.com/2025/12/28/value-meals-restaurants-mcdonalds-chilis-taco-bell.html">CNBC: Restaurants' Hottest Menu Item in 2025 Was 'Value' (2025)</a></li>
-          <li><a href="https://www.nrn.com/restaurant-insights/consumers-are-either-trading-down-for-discounts-or-trading-up-for-experiences">Nation's Restaurant News: Consumers Are Trading Down for Deals (2025)</a></li>
-          <li><a href="https://viettonkinconsulting.com/industry-insights/indonesia-consumer-trends/">Viettonkin Consulting: Indonesia Consumer Trends 2025</a></li>
-          <li><a href="https://moderndiplomacy.eu/2024/12/04/from-local-brews-to-global-buzz-kopi-kenangan-and-kopi-tuku-redefining-indonesian-coffee/">Modern Diplomacy: Kopi Kenangan and Kopi Tuku — Redefining Indonesian Coffee (2024)</a></li>
+          <li><a href="https://www.diyinternational.com/content/news/2025/03/18/free/ace-hardware-disappears-from-indonesia.html">DIY International: Ace Hardware Disappears from Indonesia (2025)</a></li>
+          <li><a href="https://www.diyinternational.com/content/diyplus/2025/03/18/in-indonesia-azko-is-the-new-ace.html">DIY International: In Indonesia, Azko is the New Ace (2025)</a></li>
+          <li><a href="https://www.thefarnsworthgroup.com/blog/diy-difm-pro-home-improvement-trends">Farnsworth Group: DIY, DIFM, and PRO Home Improvement Trends Q1 2026</a></li>
+          <li><a href="https://www.hiri.org/blog/homeowner-readiness-to-spend">HIRI: 10 Top Trends in Homeowner Readiness to Spend (2025–2026)</a></li>
+          <li><a href="https://www.forbes.com/sites/pamdanziger/2026/02/24/wayfair-and-ikea-plan-us-store-expansion-even-as-home-furnishings-retail-remains-challenged/">Forbes: Wayfair and IKEA Plan US Store Expansion (2026)</a></li>
+          <li><a href="https://www.retaildive.com/news/bobs-discount-furniture-ikea-growth-home-retail-stagnation/750196/">Retail Dive: How Bob's, IKEA Are Bucking Furniture Retail Stagnation (2025)</a></li>
+          <li><a href="https://www.mordorintelligence.com/industry-reports/indonesia-furniture-market">Mordor Intelligence: Indonesia Furniture Market 2025–2030</a></li>
         </ul>
       </div>
       <div>
         <div class="ftr-brand">Market Intel Brief</div>
         <div class="ftr-date">
-          Disusun: Agustus 2026<br>
+          Data diperbarui: Agustus 2026<br>
           Cakupan: Indonesia · China · Global<br>
-          Kategori: Consumer Behavior Research
+          Industri: 8 kategori<br>
+          Sumber: 16 referensi
         </div>
       </div>
     </div>
