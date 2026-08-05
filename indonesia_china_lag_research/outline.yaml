@@ -1,0 +1,219 @@
+topic: "Indonesia Laggard vs China: Tren dari China yang Akan Datang ke Indonesia"
+description: >
+  Riset komparatif tren China 2020-2025 dan estimasi kapan/apakah tren tersebut
+  akan tiba di Indonesia. Mencakup industri, kehidupan sosial, pendidikan, dan
+  pekerjaan. Termasuk analisis fenomena "laggard" dan kemungkinan "leapfrog".
+
+items:
+  # === GELOMBANG 1: Tren yang sudah sebagian tiba di Indonesia ===
+  - name: "E-Commerce & Social Commerce"
+    category: "Digital Economy"
+    description: >
+      Livestream shopping, group buying (Pinduoduo model), social commerce terintegrasi.
+      China: GMV ~USD 807 miliar (2024), 75% pengguna internet aktif di livestream.
+      Indonesia: TikTok Shop meledak 2022-2023, lag estimasi 6-7 tahun.
+
+  - name: "Electric Vehicles (EV)"
+    category: "Industri & Energi"
+    description: >
+      Kendaraan listrik roda dua & empat, infrastruktur charging, ekosistem baterai.
+      China: NEV 51% pangsa kendaraan baru (2025), 16,49 juta unit.
+      Indonesia: masih ~0.6-1% untuk motor listrik, 10 besar merek EV terlaris semua China.
+
+  - name: "Gig Economy & Informal Labor"
+    category: "Ketenagakerjaan"
+    description: >
+      Sarjana bekerja sebagai kurir, ojol, food delivery. Pekerjaan informal menjadi
+      pilihan utama bagi berpendidikan tinggi. China: ~200 juta pekerja fleksibel,
+      >20% kurir berpendidikan tinggi. Indonesia: >1 juta sarjana menganggur (2025).
+
+  - name: "Short Video & Creator Economy"
+    category: "Digital Economy"
+    description: >
+      Douyin/TikTok sebagai platform utama, MCN industry, monetisasi konten.
+      China: >30.000 MCN (2024), pasar MCN ¥63,6 miliar. Lag Indonesia: sangat pendek,
+      TikTok sudah dominan.
+
+  - name: "Fintech & Digital Payment"
+    category: "Keuangan"
+    description: >
+      QR payment, paylater/BNPL, neobank, super-app keuangan.
+      China: ekosistem Alipay/WeChat Pay matang. Indonesia: BNPL tumbuh 71% YoY (2026),
+      outstanding pinjol Rp 101 T. Indonesia justru leapfrog dalam risiko BNPL.
+
+  - name: "Platform Food & Beverage (Kopi & Teh Murah)"
+    category: "Konsumsi & Ritel"
+    description: >
+      Jaringan kopi/teh murah masif, model franchise low-cost, central kitchen.
+      Mixue: 59.823 gerai global (2025), Indonesia adalah pasar luar negeri terbesar.
+      Lag hampir nol - pemain China langsung masuk Indonesia.
+
+  - name: "Consumer Downgrade / Trading Down"
+    category: "Konsumsi & Ritel"
+    description: >
+      Generasi hemat, merek murah naik daun, peralihan konsumsi dari premium ke value.
+      Nuansa: terjadi bersamaan dengan consumer upgrade emosional. Ritel China tumbuh
+      hanya 1,3% YoY (Nov 2025). Indonesia: daya beli kelas menengah tertekan.
+
+  - name: "Cross-border E-Commerce & Ekspansi Merek China (出海)"
+    category: "Digital Economy"
+    description: >
+      Ekspansi merek China ke ASEAN/Indonesia: Temu, Shein, Mixue, BYD, Wuling, TikTok.
+      Bukan sekadar ekspor produk tapi ekspor sistem: rantai pasok + budaya + gaya hidup.
+      Ini adalah VEKTOR TRANSMISI utama tren China ke Indonesia.
+
+  # === GELOMBANG 2: Tren yang baru mulai / belum masif di Indonesia ===
+  - name: "AI & Otomasi Tenaga Kerja"
+    category: "Ketenagakerjaan"
+    description: >
+      PHK massal akibat AI, white-collar displacement, lowongan fresh graduate turun 22%
+      di China (H1 2025). Target AI+ China: penetrasi AI agent 70% (2027), 90% (2030).
+      China mulai menyiapkan regulasi ketenagakerjaan khusus AI (Jan 2026).
+
+  - name: "Real Estate & Housing Crisis"
+    category: "Properti & Demografi"
+    description: >
+      Properti bubble, krisis developer (Evergrande, Country Garden, Vanke), generasi
+      tidak mampu beli rumah, negative-equity mortgage. Harga rumah second turun 7,6%
+      YoY (Okt 2025), turun >40% dari puncak di beberapa kota.
+
+  - name: "Youth Unemployment & Anti-Hustle Culture"
+    category: "Ketenagakerjaan"
+    description: >
+      Pengangguran muda 17,6% (Sep 2024). Evolusi: 内卷 involution → 躺平 tang ping
+      (2021) → 摆烂 bai lan (2022) → 鼠鼠文学 (2023) → 老鼠人 rat people (2025,
+      >2 miliar views). Penarikan diri total dari masyarakat, nokturnal, anti-produktivitas.
+
+  - name: "Restrukturisasi Pendidikan Tinggi"
+    category: "Pendidikan"
+    description: >
+      12.200 program dicabut vs 10.200 dibuka (2021-2025). Target: ~20% prodi dihapus.
+      Jurusan dihapus: manajemen bisnis generik, desain, humaniora, bahasa asing.
+      Jurusan baru: AI, robotika, low-altitude engineering, carbon neutrality.
+
+  - name: "Smart Manufacturing & Industry 4.0"
+    category: "Industri & Energi"
+    description: >
+      Robot menggantikan buruh pabrik, otomasi manufaktur, lights-out factories.
+      China bergerak ke embodied AI dan robot humanoid. Indonesia: mulai ada di
+      industri otomotif dan elektronik, tapi skala masih jauh.
+
+  - name: "New Energy & Solar"
+    category: "Industri & Energi"
+    description: >
+      PLTS, baterai litium, ekosistem energi baru. China kini menghadapi overcapacity
+      (polysilicon, panel surya, baterai). Pelajaran untuk Indonesia: hilirisasi nikel/
+      baterai bisa menghadapi siklus overcapacity yang sama.
+
+  - name: "Silver Economy"
+    category: "Demografi & Sosial"
+    description: >
+      >300 juta penduduk China ≥60 tahun. Bisnis kesehatan lansia, wisata lansia,
+      produk khusus elderly. Relevant karena Indonesia akan mengikuti pola aging
+      population, dipercepat oleh penurunan TFR.
+
+  - name: "Gaming & Esports Industry"
+    category: "Digital Economy"
+    description: >
+      Regulasi game ketat di China (waktu main dibatasi untuk anak), tren industri
+      esports, mobile gaming. Indonesia: salah satu pasar gaming mobile terbesar dunia.
+      Kemungkinan lag dalam regulasi protektif.
+
+  - name: "Health Tech & Telemedicine"
+    category: "Kesehatan"
+    description: >
+      Konsultasi dokter online, AI diagnosis, wearable health monitor, digital hospital.
+      China: ekosistem healthtech matang pasca-COVID. Indonesia: Halodoc, Alodokter
+      sudah ada tapi skalanya berbeda.
+
+  - name: "Rural Revitalization & Sinking Market (下沉市场)"
+    category: "Konsumsi & Ritel"
+    description: >
+      Ekonomi kabupaten/kota tier rendah sebagai mesin konsumsi. Konsumen kota besar
+      mengetat tapi kota tier rendah stabil. Inilah mesin Mixue/Pinduoduo.
+      Indonesia: ekspansi Alfamart/Indomaret + warung digital adalah padanannya.
+
+  # === GELOMBANG 3: Tren yang belum / hampir belum ada di Indonesia ===
+  - name: "Emotional Economy & Guzi/IP Economy"
+    category: "Konsumsi & Ritel"
+    description: >
+      Pop Mart/Labubu, blind box, merchandise anime-game-musik, konsumsi emosional.
+      Pasar guzi China: 168,9 miliar yuan (2024, +40% YoY). Labubu sudah viral
+      Indonesia 2024-2025. Bersamaan dengan consumer downgrade - "trading down + trading up".
+
+  - name: "Anti-Involution & Platform Backlash Regulation (反内卷)"
+    category: "Regulasi & Kebijakan"
+    description: >
+      Pemerintah China melawan perang harga: food delivery, EV, solar, logistik.
+      Price floor pengiriman, aturan jam kerja kurir, anti-algoritma penalti.
+      Penting: Indonesia bisa melompat langsung ke regulasi preemptif tanpa harus
+      mengalami fase destructive competition dulu.
+
+  - name: "Embodied AI & Robot Humanoid"
+    category: "Teknologi"
+    description: >
+      China: ~90% unit robot humanoid dunia di 2025 (AgiBot, Unitree, UBTech),
+      >150 perusahaan, masuk Rencana Lima Tahun ke-15. Lag Indonesia sangat besar
+      (10+ tahun) tapi implikasi pendidikan langsung sudah relevan sekarang.
+
+  - name: "Low-Altitude Economy (Drone & eVTOL)"
+    category: "Teknologi"
+    description: >
+      CAAC proyeksi 1,5 triliun yuan (2025) → 3,5 triliun yuan (2035).
+      China sudah buka jurusan baru: 低空技术与工程 (Low-Altitude Technology & Engineering).
+      Indonesia: regulasi drone komersial baru mulai berkembang.
+
+  - name: "Demographic Crisis (Pernikahan & Kelahiran)"
+    category: "Demografi & Sosial"
+    description: >
+      China: 6,1 juta pasangan menikah (2024, -20,5% YoY, terendah sejak 1986),
+      populasi turun 4 tahun berturut. Prekursor silver economy dan one-person economy.
+      Indonesia: TFR mulai turun di bawah replacement rate di kota besar.
+
+  - name: "Instant Retail & Quick Commerce (即时零售)"
+    category: "Digital Economy"
+    description: >
+      Pengiriman 30 menit non-makanan, dark store, micro-fulfillment. Medan perang
+      Meituan-JD-Alibaba 2025. Indonesia: Astro sudah gagal/pivot, Alfamart+GoMart
+      dalam tahap awal. Prasyarat infrastruktur belum matang.
+
+  - name: "Consumer Debt Crisis & BNPL Risk"
+    category: "Keuangan"
+    description: >
+      Beban utang rumah tangga, negative-equity mortgage, sistem blacklist debitur.
+      Indonesia justru MENDAHULUI China: TWP90 pinjol naik 2,78% → 4,54%, 48,65%
+      kredit macet dari usia 19-34 tahun. Ini kasus "reverse lag".
+
+  - name: "Robotaxi & Kendaraan Otonom"
+    category: "Teknologi"
+    description: >
+      Regulasi kendaraan otonom nasional China berlaku April 2025. Baidu Apollo Go,
+      Pony.ai komersial di kota tier-1. Lag Indonesia sangat besar tapi relevan sebagai
+      ancaman jangka menengah untuk ojol/gig economy.
+
+  - name: "Pet Economy & Single-Person Household Economy (一人经济)"
+    category: "Demografi & Sosial"
+    description: >
+      300 juta hewan peliharaan China (proyeksi 2035). Konsekuensi tidak menikah/
+      tidak punya anak. Indonesia: tren pet sudah terlihat di kota besar tapi belum
+      terstruktur. Terkait satu orang household economy.
+
+  - name: "Vocational Education Reform (职业本科)"
+    category: "Pendidikan"
+    description: >
+      >100 vocational bachelor schools (Jan 2026), enrollment naik 7x lipat.
+      Program upskilling 30 juta pekerja (2025-2027) prioritas: IT, CNC & robot.
+      Master profesional ditargetkan 2/3 dari seluruh program master.
+      Indonesia: sistem vokasi masih tertinggal jauh.
+
+  - name: "AI+ National Policy & Difusi AI Masif"
+    category: "Regulasi & Kebijakan"
+    description: >
+      State Council China target penetrasi AI agent 70% (2027), 90% (2030).
+      DeepSeek 143 juta MAU, Doubao 157 juta MAU (Agu 2025). Indonesia belum punya
+      padanan kebijakan difusi AI nasional sekomprehensif ini.
+
+execution:
+  batch_size: 3
+  items_per_agent: 1
+  output_dir: ./results

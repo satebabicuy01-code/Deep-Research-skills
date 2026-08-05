@@ -1,0 +1,220 @@
+topic: "Indonesia Laggard vs China"
+description: >
+  Definisi field untuk riset tren China yang akan datang ke Indonesia.
+  Setiap item diteliti dari 20 dimensi untuk menghasilkan analisis mendalam
+  tentang lag, kemungkinan transfer, dan dampaknya.
+
+fields:
+  basic_info:
+    name: "Basic Info"
+    fields:
+      - name: nama_domain
+        description: "Nama domain/sektor/tren yang diteliti"
+        detail_level: brief
+      - name: kategori
+        description: "Kategori utama (Digital Economy / Ketenagakerjaan / Pendidikan / dll)"
+        detail_level: brief
+      - name: tahun_mulai_china
+        description: "Tahun tren ini mulai signifikan di China"
+        detail_level: brief
+      - name: pemain_kunci_china
+        description: "Perusahaan/platform/aktor utama yang memimpin tren ini di China"
+        detail_level: moderate
+
+  china_trend_detail:
+    name: "China Trend Detail"
+    fields:
+      - name: apa_yang_terjadi_di_china
+        description: "Deskripsi lengkap fenomena/tren di China: mekanisme, skala, dampak"
+        detail_level: detailed
+      - name: data_skala_china
+        description: "Angka konkret: ukuran pasar, jumlah pengguna, pertumbuhan, statistik kunci"
+        detail_level: detailed
+      - name: fase_tren_di_china
+        description: "Fase saat ini: emerging / booming / mature / backlash / regulated / declining"
+        detail_level: moderate
+      - name: puncak_tren_china
+        description: "Kapan/di mana tren ini mencapai puncak di China (tahun + kota/sektor)"
+        detail_level: moderate
+
+  indonesia_status:
+    name: "Status Indonesia Saat Ini"
+    fields:
+      - name: status_di_indonesia
+        description: "Sudah masuk masif / baru mulai / pilot / belum ada / leapfrog"
+        detail_level: brief
+      - name: contoh_konkret_indonesia
+        description: "Nama perusahaan, platform, fenomena, atau kebijakan nyata di Indonesia"
+        detail_level: moderate
+      - name: data_skala_indonesia
+        description: "Angka konkret kondisi Indonesia saat ini untuk topik ini"
+        detail_level: moderate
+
+  lag_analysis:
+    name: "Analisis Lag"
+    fields:
+      - name: estimasi_lag_tahun
+        description: "Perkiraan berapa tahun Indonesia tertinggal dari China untuk tren ini"
+        detail_level: moderate
+      - name: bukti_historical_lag
+        description: "Bukti konkret dari tren sebelumnya yang mendukung estimasi lag ini"
+        detail_level: moderate
+      - name: tipe_lag
+        description: "Laggard (tertinggal) / Leapfrog (melompat) / Simultaneous / Reverse (Indonesia duluan)"
+        detail_level: brief
+
+  transfer_probability:
+    name: "Probabilitas Transfer ke Indonesia"
+    fields:
+      - name: probabilitas_transfer
+        description: "Tinggi / Sedang / Rendah — kemungkinan tren ini masuk Indonesia"
+        detail_level: brief
+      - name: alasan_probabilitas
+        description: "Penjelasan mengapa probabilitas transfer tersebut"
+        detail_level: moderate
+      - name: vektor_transmisi
+        description: >
+          Bagaimana tren ini fisik berpindah ke Indonesia:
+          (a) pemain China masuk langsung, (b) tiruan lokal/copycat,
+          (c) difusi konten algoritmik, (d) modal ventura China, (e) diaspora/alumni
+        detail_level: detailed
+
+  enabling_factors:
+    name: "Faktor Pendorong"
+    fields:
+      - name: prasyarat_struktural
+        description: >
+          Kondisi yang perlu ada agar tren ini bisa tiba di Indonesia.
+          Sertakan threshold indicator: PDB per kapita, penetrasi internet,
+          urbanisasi, dll. + posisi Indonesia vs China saat tren meledak
+        detail_level: detailed
+      - name: indikator_pemantauan
+        description: >
+          Leading indicators yang menandakan tren mulai masuk Indonesia:
+          pendaftaran merek, izin usaha, lowongan kerja, volume pencarian,
+          pembukaan prodi baru, masuknya pemain China
+        detail_level: moderate
+
+  barriers:
+    name: "Hambatan & Faktor Pembatal"
+    fields:
+      - name: hambatan_transfer
+        description: "Hambatan budaya, regulasi, ekonomi, infrastruktur yang memperlambat transfer"
+        detail_level: moderate
+      - name: faktor_pembatal_transfer
+        description: >
+          Kondisi struktural yang membuat tren ini TIDAK AKAN datang ke Indonesia
+          dalam bentuk yang sama seperti di China. Contoh: skala populasi,
+          geografi kepulauan, biaya logistik, basis manufaktur
+        detail_level: detailed
+
+  timeline_prediction:
+    name: "Prediksi Timeline di Indonesia"
+    fields:
+      - name: tahun_masuk_indonesia
+        description: "Perkiraan tahun tren ini mulai masuk Indonesia (atau sudah masuk)"
+        detail_level: moderate
+      - name: tahun_mainstream_indonesia
+        description: "Perkiraan tahun tren ini menjadi mainstream di Indonesia"
+        detail_level: moderate
+      - name: tahun_puncak_indonesia
+        description: "Perkiraan tahun tren ini mencapai puncak di Indonesia"
+        detail_level: moderate
+      - name: skenario_percepatan
+        description: "Apa yang bisa mempercepat datangnya tren ini ke Indonesia"
+        detail_level: brief
+
+  socioeconomic_impact:
+    name: "Dampak Sosial-Ekonomi"
+    fields:
+      - name: dampak_lapangan_kerja
+        description: "Pekerjaan apa yang hilang, berubah, atau tercipta akibat tren ini"
+        detail_level: detailed
+      - name: dampak_kelas_menengah
+        description: "Dampak spesifik pada kelas menengah Indonesia"
+        detail_level: moderate
+      - name: dampak_daerah_non_jawa
+        description: "Apakah tren ini hanya relevan untuk Jawa/kota besar atau juga daerah?"
+        detail_level: moderate
+
+  education_connection:
+    name: "Kaitan Pendidikan"
+    fields:
+      - name: jurusan_terancam
+        description: "Program studi/jurusan yang relevansinya berkurang akibat tren ini"
+        detail_level: detailed
+      - name: jurusan_dibutuhkan
+        description: "Skill/jurusan baru yang makin dibutuhkan akibat tren ini"
+        detail_level: detailed
+      - name: china_education_response
+        description: >
+          Respons konkret sistem pendidikan China terhadap tren ini:
+          jurusan apa yang dibuka/ditutup, kurikulum apa yang berubah
+        detail_level: detailed
+
+  policy_lessons:
+    name: "Pelajaran Kebijakan dari China"
+    fields:
+      - name: respons_kebijakan_china
+        description: >
+          Regulasi yang diberlakukan China SETELAH tren ini matang dan menimbulkan
+          masalah. Apa yang bisa Indonesia adopsi sebagai preemptive policy?
+        detail_level: detailed
+      - name: rekomendasi_kebijakan_indonesia
+        description: "Rekomendasi kebijakan konkret untuk Indonesia berdasarkan pengalaman China"
+        detail_level: moderate
+
+  opportunities:
+    name: "Peluang & Rekomendasi Aksi"
+    fields:
+      - name: peluang_bisnis
+        description: "Celah bisnis yang terbuka dari tren ini untuk pelaku usaha Indonesia"
+        detail_level: detailed
+      - name: rekomendasi_individu_mahasiswa
+        description: "Skill apa yang harus dibangun sekarang untuk menghadapi tren ini"
+        detail_level: moderate
+      - name: rekomendasi_perguruan_tinggi
+        description: "Prodi/kurikulum apa yang perlu dibuka/ditutup/diubah di PT Indonesia"
+        detail_level: moderate
+
+  risk_dark_side:
+    name: "Faktor Risiko & Sisi Gelap"
+    fields:
+      - name: dampak_negatif_china
+        description: "Kerusakan sosial/ekonomi yang sudah terjadi di China akibat tren ini"
+        detail_level: detailed
+      - name: risiko_sosial_indonesia
+        description: "Risiko spesifik jika tren ini masuk Indonesia tanpa regulasi preemptif"
+        detail_level: detailed
+      - name: unintended_consequences
+        description: "Efek samping yang tidak terduga dari tren ini (di China maupun prediksi Indonesia)"
+        detail_level: moderate
+      - name: kelompok_rentan
+        description: "Kelompok masyarakat Indonesia yang paling terdampak negatif"
+        detail_level: moderate
+
+  case_examples:
+    name: "Contoh Kasus Konkret"
+    fields:
+      - name: kasus_china
+        description: "Perusahaan/fenomena/angka spesifik yang merepresentasikan tren di China"
+        detail_level: detailed
+      - name: padanan_indonesia
+        description: "Padanan atau awal mulai tren ini di Indonesia (jika ada)"
+        detail_level: moderate
+      - name: sumber_data_kunci
+        description: "URL atau referensi sumber data terpercaya yang digunakan"
+        detail_level: moderate
+
+  confidence:
+    name: "Tingkat Keyakinan & Kualitas Sumber"
+    fields:
+      - name: confidence_level
+        description: "Tingkat keyakinan data: Tinggi / Sedang / Rendah"
+        detail_level: brief
+      - name: catatan_kontradiksi_data
+        description: "Konflik atau ketidakkonsistenan data yang ditemukan"
+        detail_level: moderate
+      - name: uncertain
+        description: "Daftar field yang nilainya tidak pasti (diisi otomatis oleh agen)"
+        detail_level: brief
