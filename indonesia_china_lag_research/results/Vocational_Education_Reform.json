@@ -1,0 +1,62 @@
+{
+  "nama_domain": "Vocational Education Reform (职业本科)",
+  "kategori": "Pendidikan",
+  "tahun_mulai_china": 2019,
+  "pemain_kunci_china": "Kementerian Pendidikan China (教育部). Lembaga: Shenzhen Polytechnic University (深圳职业技术大学), Guangzhou Polytechnic (广州番禺职业技术学院). Program: vocational bachelor degree (职业本科). Perusahaan mitra: Huawei, BYD, CATL dalam dual-system apprenticeship.",
+
+  "apa_yang_terjadi_di_china": "China melakukan reformasi masif sistem pendidikan vokasi 2019-2026: mengubah stigma 'sekolah kejuruan = gagal' menjadi jalur karir bergensi. Kebijakan utama: (1) Konversi sekolah vokasi terbaik menjadi universitas sarjana vokasi (职业本科) — menciptakan jalur setara S1 berbasis keterampilan teknis. (2) Program upskilling 30 juta pekerja 2025-2027, prioritas IT, CNC/robot, green energy. (3) Master profesional ditargetkan 2/3 dari seluruh program master (sebelumnya 50%). (4) Dual-system apprenticeship ala Jerman: siswa belajar di kampus + praktik di perusahaan mitra. (5) Penghapusan 12.200+ program studi tidak relevan (2021-2025) dan pembukaan 10.200+ prodi baru (AI, robotika, low-altitude, carbon neutrality). Konteks: pengangguran fresh graduate tinggi + mismatch skills pasar kerja memaksa reforma sistemik.",
+  "data_skala_china": ">100 vocational bachelor universities berdiri (Jan 2026, naik dari hanya beberapa). Enrollment vokasi sarjana naik 7x lipat (2021-2026). Target upskilling: 30 juta pekerja (2025-2027). 12.200 program dihapus vs 10.200 dibuka (2021-2025). Alokasi anggaran vokasi: target ¥500 miliar/tahun (Rencana Lima Tahun ke-14). >8.000 sekolah vokasi tingkat menengah di China (2024). Tingkat penempatan kerja lulusan vokasi: >95% dalam 6 bulan (klaim resmi).",
+  "fase_tren_di_china": "Booming — reformasi masif sedang berjalan, didorong krisis pengangguran fresh graduate dan kebutuhan industri manufaktur lanjutan",
+  "puncak_tren_china": "2025-2030: fase implementasi paling intensif seiring ekspansi robotik dan AI manufaktur",
+
+  "status_di_indonesia": "Belum — Indonesia masih jauh tertinggal dalam transformasi sistemik vokasi",
+  "contoh_konkret_indonesia": "Politeknik Negeri: masih terbatas dan kurang bergengsi sosial. Program SMK: 14.000+ sekolah tapi kualitas tidak merata, banyak peralatan usang. Kemendikbud: program Kampus Merdeka ada komponen vokasi tapi belum transformatif. Program D4 (Sarjana Terapan) ada tapi enrollment rendah. Link-and-match program Kemendikbud dengan industri: baru pilot, belum sistemik. Tidak ada padanan '职业本科 university' setara China.",
+  "data_skala_indonesia": "Jumlah SMK: >14.000 (terbesar di dunia tapi kualitas rendah). Lulusan SMK yang menganggur: 8,49% (2024, tertinggi antar jenjang). Politeknik negeri: 45 institusi. D4 enrollment: <10% dari total mahasiswa. Tingkat kecocokan keterampilan lulusan vokasi dengan industri: rendah (survei APINDO: 60%+ perusahaan keluhkan mismatch).",
+
+  "estimasi_lag_tahun": "8-12 tahun — reformasi vokasi sistemik di Indonesia kemungkinan baru terjadi 2030-2035",
+  "bukti_historical_lag": "China mulai reformasi vokasi serius 2019; Indonesia baru diskusi 2024-2025. Jerman (model dual-system) sudah dicontek China; Indonesia belum. Program SMK-DUDI link-and-match sudah dicanangkan >10 tahun lalu tapi implementasi masih parsial.",
+  "tipe_lag": "Laggard (tertinggal) — dengan risiko leapfrog jika reformasi radikal dipilih",
+
+  "probabilitas_transfer": "Tinggi",
+  "alasan_probabilitas": "Tekanan pengangguran sarjana dan mismatch keterampilan di Indonesia identik dengan China. Reformasi hampir pasti terjadi — pertanyaannya hanya kecepatan dan kedalamannya.",
+  "vektor_transmisi": "Kebijakan pemerintah (Kemendikbud/Kemenperin). Studi banding ke China dan Jerman. Tekanan industri (Hyundai, BYD, CATL yang masuk Indonesia membutuhkan tenaga teknis terlatih). Program beasiswa vokasi China untuk Indonesia.",
+
+  "prasyarat_struktural": "Dukungan politik untuk de-stigmatisasi pendidikan vokasi. Anggaran pendidikan yang memadai (Indonesia: 20% APBN tapi vokasi dapat porsi kecil). Kemitraan industri yang nyata (bukan ceremonial). Instruktur berstandar industri. Threshold: Indonesia sudah memiliki skala (14.000+ SMK) tapi kualitas dan sistem ekosistem industri belum ada.",
+  "indikator_pemantauan": "Pengesahan UU Pendidikan Vokasi (jika ada). Anggaran khusus vokasi di APBN. Jumlah MoU industri-politeknik yang benar-benar operasional. Enrollment D4/Sarjana Terapan vs S1 umum. Tingkat penyerapan lulusan vokasi.",
+
+  "hambatan_transfer": "Stigma sosial: 'kuliah vokasi = tidak mampu masuk universitas'. Orang tua mendorong anak ke S1 umum. Kualitas instruktur vokasi rendah (banyak guru SMK tidak punya pengalaman industri). Peralatan bengkel/lab usang. Kurangnya insentif industri untuk jadi mitra aktif.",
+  "faktor_pembatal_transfer": "Reformasi setengah-hati yang hanya ganti nama tanpa ubah substansi. Korupsi dalam pengadaan peralatan sekolah vokasi. Geografi kepulauan membuat standarisasi sulit. Konsentrasi industri di Jawa membuat vokasi daerah sulit mendapat partner industri.",
+
+  "tahun_masuk_indonesia": "2019-2023: Inisiasi (link-and-match, Kampus Merdeka). 2024-2026: akselerasi terbatas.",
+  "tahun_mainstream_indonesia": "2030-2033 (jika ada political will kuat)",
+  "tahun_puncak_indonesia": "2035-2040",
+  "skenario_percepatan": "Investasi manufaktur China besar-besaran di Indonesia (BYD, CATL, Xiaomi) memaksa pemerintah melatih tenaga teknis in-situ. PHK massal sektor padat karya mendorong retraining masif.",
+
+  "dampak_lapangan_kerja": "Positif: teknisi robot/CNC, operator mesin canggih, programmer PLC, teknisi baterai EV, operator drone industri — semua butuh vokasi berstandar tinggi. Negatif: pekerja dengan vokasi rendah kualitas makin sulit bersaing. Transisi: puluhan ribu instruktur SMK perlu upgrade kompetensi.",
+  "dampak_kelas_menengah": "Akses ke vokasi berkualitas bisa jadi elevator sosial baru bagi kelas menengah bawah — alternatif S1 mahal yang tidak menjamin pekerjaan. Tapi stigma sosial masih hambatan bagi keluarga kelas menengah yang aspirasi anaknya masuk universitas.",
+  "dampak_daerah_non_jawa": "Vokasi bisa lebih relevan di luar Jawa (pertanian presisi, perikanan teknologi, pertambangan modern). Tapi tanpa industri mitra di daerah, dual-system apprenticeship tidak bisa jalan. Ketimpangan kualitas SMK Jawa vs luar Jawa sangat besar.",
+
+  "jurusan_terancam": "D3 teknik umum tanpa spesialisasi. Guru/instruktur vokasi tidak berstandar industri. Program SMK yang tidak link dengan industri nyata. Pendidikan umum S1 yang menghasilkan fresh graduate tanpa keterampilan teknis spesifik.",
+  "jurusan_dibutuhkan": "Teknik robotika dan otomasi industri. Teknik baterai dan energi terbarukan. Teknisi kendaraan listrik. Operator CNC dan machining presisi. Programmer embedded systems dan IoT industri. Teknisi drone komersial. Manajemen rantai pasok (supply chain) berbasis teknologi.",
+  "china_education_response": "Pembukaan 职业本科 (vocational bachelor) universities >100 institusi (2026). Penghapusan 12.200 prodi tidak relevan. Prodi baru: 低空技术与工程 (Low-Altitude Tech), 智能机器人 (Intelligent Robotics), 碳中和 (Carbon Neutrality), 新能源汽车 (New Energy Vehicles). Sistem '1+X' sertifikasi: siswa dapat sertifikasi industri tambahan di luar ijazah. Dual-system dengan Huawei, CATL, BYD sebagai mitra wajib.",
+
+  "respons_kebijakan_china": "UU Vokasi 2022 (Vocational Education Law revisi): setarakan pendidikan vokasi dengan akademik secara hukum. Larangan universitas umum merendahkan lulusan vokasi dalam rekrutmen. Subsidi perusahaan mitra apprenticeship. Rekrutmen PNS tidak boleh diskriminasi latar vokasi. Sertifikasi instruktur: wajib pengalaman industri 2 tahun sebelum mengajar.",
+  "rekomendasi_kebijakan_indonesia": "1) UU Pendidikan Vokasi yang setarakan D4/sarjana terapan dengan S1. 2) Insentif pajak bagi perusahaan yang jadi mitra apprenticeship aktif. 3) Larangan diskriminasi rekrutmen berbasis jalur pendidikan (vokasi vs akademik). 4) Standarisasi kompetensi instruktur SMK/politeknik dengan pengalaman industri wajib. 5) Dana BOS Vokasi khusus untuk pengadaan peralatan berstandar industri.",
+
+  "peluang_bisnis": "Lembaga pelatihan/kursus vokasi berstandar industri (coding, CNC, robotika). Vendor peralatan bengkel SMK (pasar besar jika ada program modernisasi). Platform e-learning vokasi berbahasa Indonesia. Konsultasi kurikulum vokasi untuk Kemendikbud. Jasa sertifikasi kompetensi industri.",
+  "rekomendasi_individu_mahasiswa": "Ambil sertifikasi teknis industri di luar gelar formal (Google, AWS, Huawei certification). Cari program magang di industri manufaktur lanjutan. Kuasai bahasa Mandarin — banyak instruktur teknis dari perusahaan China. Jangan remehkan D4/Politeknik jika spesialisasinya relevan dengan industri.",
+  "rekomendasi_perguruan_tinggi": "Politeknik: transform ke dual-system dengan industri nyata, bukan MoU seremonial. Buka program Teknik Robotika, Teknisi EV, Energi Terbarukan. Rekrut instruktur dari industri (bukan hanya akademisi). Universitas umum: buka minor vokasi teknis untuk mahasiswa S1 non-teknik.",
+
+  "dampak_negatif_china": "Stigma sosial yang sulit hilang: keluarga tetap mendorong anak ke universitas umum meski susah dapat kerja. Kesenjangan kualitas antara vokasi kota tier-1 vs daerah pedalaman. Komersialisasi sertifikasi '1+X' — banyak sertifikat yang tidak diakui industri nyata. Overpromise: tingkat penempatan kerja yang diklaim tinggi tidak selalu mencerminkan kualitas pekerjaan.",
+  "risiko_sosial_indonesia": "Reformasi setengah-hati menciptakan lulusan vokasi yang tetap tidak terserap industri. Investasi keluarga miskin di SMK/politeknik berakhir sia-sia jika link industri tidak nyata. Konsentrasi industri di Jawa membuat lulusan vokasi luar Jawa harus migrasi atau menganggur.",
+  "unintended_consequences": "Kompetisi sertifikasi yang tidak terstandar dapat menciptakan 'sertifikat sampah'. Ekspansi vokasi tanpa instruktur berkualitas menurunkan standar keseluruhan. Dual-system bisa jadi eksploitasi tenaga magang murah oleh perusahaan.",
+  "kelompok_rentan": "Siswa SMK dari keluarga miskin yang tidak bisa memilih sekolah vokasi berkualitas. Lulusan SMK jurusan tidak relevan (tata busana, teknik lama) yang tidak ter-upgrade. Instruktur SMK lama yang tidak punya keterampilan industri terkini.",
+
+  "kasus_china": "Shenzhen Polytechnic University (深圳职业技术大学): upgraded menjadi universitas penuh 2023, kini benchmark vokasi modern China. Program CATL-Vocational: >20 sekolah vokasi menjadi mitra resmi pabrik baterai terbesar dunia. Revolusi '1+X': >500 jenis sertifikasi industri terintegrasi ke kurikulum vokasi. Tencent, Alibaba membuka 'vocational college' digital sendiri.",
+  "padanan_indonesia": "Politeknik Elektronika Negeri Surabaya (PENS): benchmark politeknik Indonesia tapi masih jauh dari standar China. SMK-DUDI Program Kemendikbud: sudah jalan tapi MoU lebih banyak di atas kertas. Program vokasi LPDP: baru mulai. Huawei ICT Academy: model kemitraan industri yang cukup nyata di Indonesia.",
+  "sumber_data_kunci": "Kemendikbud Statistik Pendidikan Vokasi. 教育部 China Ministry of Education annual reports. World Bank Indonesia vocational education assessment 2023. APINDO survey mismatch keterampilan.",
+
+  "confidence_level": "Sedang",
+  "catatan_kontradiksi_data": "Data tingkat penempatan kerja vokasi China sangat optimistis dari sumber resmi; sumber independen menunjukkan realitas lebih kompleks. Data Indonesia untuk vokasi tersebar di berbagai kementerian (Kemendikbud, Kemenperin, Kemenaker) dan tidak terintegrasi.",
+  "uncertain": ["tahun_puncak_indonesia", "data_skala_china enrollment vokasi sarjana 7x"]
+}
