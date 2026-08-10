@@ -1,0 +1,1003 @@
+<title>Flying Goose & Reshoring: Production Ladder Framework — Indonesia Investment Research</title>
+<style>
+  /* ─── Token System ─── */
+  :root {
+    --bg:           #F0EDE8;
+    --bg-card:      #FAFAF7;
+    --bg-card-alt:  #E8E4DC;
+    --border:       #C8C2B8;
+    --border-accent:#0D7A6E;
+    --text-primary: #0C1E3B;
+    --text-secondary:#3D4F6A;
+    --text-muted:   #7D91AB;
+    --accent:       #0D7A6E;
+    --accent-light: #E2F2F0;
+    --amber:        #C9830A;
+    --amber-light:  #FDF3E2;
+    --crimson:      #B83C2B;
+    --crimson-light:#FDECEA;
+    --navy:         #0C1E3B;
+    --shadow:       0 1px 4px rgba(12,30,59,0.10);
+    --shadow-md:    0 3px 12px rgba(12,30,59,0.12);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:           #0A1628;
+      --bg-card:      #111D32;
+      --bg-card-alt:  #162038;
+      --border:       #1E2E48;
+      --border-accent:#1AB8A4;
+      --text-primary: #E8ECF4;
+      --text-secondary:#9BADC8;
+      --text-muted:   #5A7094;
+      --accent:       #1AB8A4;
+      --accent-light: #0D2E2B;
+      --amber:        #DFA436;
+      --amber-light:  #271C07;
+      --crimson:      #E05040;
+      --crimson-light:#280C0A;
+      --navy:         #E8ECF4;
+      --shadow:       0 1px 4px rgba(0,0,0,0.30);
+      --shadow-md:    0 3px 12px rgba(0,0,0,0.40);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg:           #0A1628;
+    --bg-card:      #111D32;
+    --bg-card-alt:  #162038;
+    --border:       #1E2E48;
+    --border-accent:#1AB8A4;
+    --text-primary: #E8ECF4;
+    --text-secondary:#9BADC8;
+    --text-muted:   #5A7094;
+    --accent:       #1AB8A4;
+    --accent-light: #0D2E2B;
+    --amber:        #DFA436;
+    --amber-light:  #271C07;
+    --crimson:      #E05040;
+    --crimson-light:#280C0A;
+    --navy:         #E8ECF4;
+    --shadow:       0 1px 4px rgba(0,0,0,0.30);
+    --shadow-md:    0 3px 12px rgba(0,0,0,0.40);
+  }
+
+  /* ─── Reset & Base ─── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── Layout ─── */
+  .wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ─── Report Header ─── */
+  .report-header {
+    padding: 48px 0 40px;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 40px;
+  }
+
+  .report-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .report-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 700;
+    line-height: 1.18;
+    color: var(--text-primary);
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+
+  .report-subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    max-width: 620px;
+    margin-bottom: 28px;
+  }
+
+  .report-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: 'Courier New', Courier, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .report-meta span::before {
+    content: '— ';
+  }
+
+  /* ─── Stat Tiles ─── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+
+  .stat-tile {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 18px 20px 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .stat-tile.amber { border-top-color: var(--amber); }
+  .stat-tile.navy  { border-top-color: var(--text-primary); }
+
+  .stat-value {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .stat-note {
+    font-size: 11px;
+    color: var(--accent);
+    margin-top: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ─── Section Structure ─── */
+  .section {
+    margin-bottom: 52px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-num {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+    padding-top: 3px;
+  }
+
+  .section-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(18px, 2.5vw, 22px);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.25;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  /* ─── Body Copy ─── */
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    max-width: 72ch;
+  }
+
+  p strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  /* ─── Callout / Pull Quote ─── */
+  .callout {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+
+  .callout strong {
+    color: var(--text-primary);
+  }
+
+  .callout.amber {
+    background: var(--amber-light);
+    border-left-color: var(--amber);
+  }
+
+  .callout.crimson {
+    background: var(--crimson-light);
+    border-left-color: var(--crimson);
+  }
+
+  /* ─── Wave Timeline ─── */
+  .wave-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+
+  .wave-item {
+    background: var(--bg-card);
+    padding: 18px 16px;
+  }
+
+  .wave-period {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+
+  .wave-country {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .wave-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+
+  .wave-arrow {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 18px;
+    padding: 0 8px;
+  }
+
+  /* ─── Pattern Cards ─── */
+  .pattern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  .pattern-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .pattern-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .pattern-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .pattern-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ─── Data Tables ─── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: var(--bg-card);
+  }
+
+  thead {
+    background: var(--bg-card-alt);
+  }
+
+  th {
+    text-align: left;
+    padding: 10px 14px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    vertical-align: top;
+    font-variant-numeric: tabular-nums;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  tr:hover td {
+    background: var(--bg-card-alt);
+  }
+
+  td strong {
+    color: var(--text-primary);
+  }
+
+  td.mono {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+  }
+
+  /* ─── Verdict Pills ─── */
+  .pill {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 100px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .pill-go {
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+
+  .pill-caution {
+    background: var(--amber-light);
+    color: var(--amber);
+    border: 1px solid var(--amber);
+  }
+
+  .pill-watch {
+    background: var(--crimson-light);
+    color: var(--crimson);
+    border: 1px solid var(--crimson);
+  }
+
+  /* ─── Weakness / Strength Grid ─── */
+  .swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  @media (max-width: 560px) {
+    .swot-grid { grid-template-columns: 1fr; }
+  }
+
+  .swot-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 18px;
+  }
+
+  .swot-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .swot-card.strength .swot-label { color: var(--accent); }
+  .swot-card.weakness .swot-label { color: var(--crimson); }
+
+  .swot-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .swot-list li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.4;
+  }
+
+  .swot-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--border);
+  }
+
+  .swot-card.strength .swot-list li::before { background: var(--accent); }
+  .swot-card.weakness .swot-list li::before { background: var(--crimson); }
+
+  /* ─── Opportunity Matrix ─── */
+  .opp-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .opp-rank {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--border);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 32px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .opp-body { flex: 1; }
+
+  .opp-name {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+  }
+
+  .opp-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0 0 10px;
+  }
+
+  .opp-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .opp-horizon {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  /* ─── Footer ─── */
+  .report-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    margin-top: 60px;
+    font-size: 11px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  /* ─── Data highlight inline ─── */
+  .data-hi {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .data-amber {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: var(--amber);
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 600px) {
+    .wave-arrow { display: none; }
+    .opp-rank { font-size: 22px; }
+  }
+</style>
+
+<div class="wrapper">
+
+  <!-- ─── Header ─── -->
+  <header class="report-header">
+    <div class="report-eyebrow">Market Research Report · August 2026</div>
+    <h1 class="report-title">Flying Goose Theory &amp; Reshoring:<br>Kerangka Production Ladder untuk Investor</h1>
+    <p class="report-subtitle">Sintesis riset 4 agen tentang teori angsa terbang, tren reshoring global, dan implikasinya bagi peluang investasi di Indonesia dalam rantai produksi internasional.</p>
+    <div class="report-meta">
+      <span>Fokus Geografi: Global + Indonesia</span>
+      <span>Konteks: Investasi &amp; Bisnis</span>
+      <span>Sumber: Data aktual 2022–2026</span>
+    </div>
+  </header>
+
+  <!-- ─── Key Stats ─── -->
+  <div class="stat-grid">
+    <div class="stat-tile">
+      <div class="stat-value">$226B</div>
+      <div class="stat-label">FDI ASEAN 2024</div>
+      <div class="stat-note">↑ 8% saat global ↓ 11%</div>
+    </div>
+    <div class="stat-tile amber">
+      <div class="stat-value">32%</div>
+      <div class="stat-label">Tarif AS ke Indonesia</div>
+      <div class="stat-note">vs Vietnam 46%</div>
+    </div>
+    <div class="stat-tile">
+      <div class="stat-value">26×</div>
+      <div class="stat-label">Lonjakan ekspor nikel</div>
+      <div class="stat-note">$1.5B → $38.5B (2014–25)</div>
+    </div>
+    <div class="stat-tile amber">
+      <div class="stat-value">25%</div>
+      <div class="stat-label">Produsen RI proyeksikan order naik</div>
+      <div class="stat-note">Tertinggi di ASEAN</div>
+    </div>
+    <div class="stat-tile navy">
+      <div class="stat-value">$640B+</div>
+      <div class="stat-label">Komitmen investasi chip AS</div>
+      <div class="stat-note">CHIPS Act + IRA</div>
+    </div>
+  </div>
+
+  <!-- ─── Section 1: Flying Goose Theory ─── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Flying Goose Theory — Teori &amp; Evolusinya</h2>
+    </div>
+
+    <p>Dikembangkan oleh ekonom Jepang <strong>Kaname Akamatsu</strong> sejak tahun 1930-an, Teori Angsa Terbang menjelaskan pola industrialisasi Asia dalam tiga kurva berurutan: suatu negara pertama mengimpor produk manufaktur, kemudian membangun produksi domestik saat upah lebih kompetitif, lalu akhirnya mengekspor ke pasar global. Ketika upah di negara "lead goose" naik, industri padat karya bermigrasi ke "follower goose" berikutnya.</p>
+
+    <p>Selama 70 tahun terakhir, empat gelombang nyata terbukti terjadi dengan pola yang konsisten:</p>
+
+    <div class="wave-timeline">
+      <div class="wave-item">
+        <div class="wave-period">1950-an</div>
+        <div class="wave-country">Jepang</div>
+        <div class="wave-desc">Lead goose awal: tekstil, baja, elektronik</div>
+      </div>
+      <div class="wave-item">
+        <div class="wave-period">1970-an</div>
+        <div class="wave-country">NIEs</div>
+        <div class="wave-desc">Korea, Taiwan, Singapura, Hong Kong</div>
+      </div>
+      <div class="wave-item">
+        <div class="wave-period">1980-an</div>
+        <div class="wave-country">ASEAN-4 + China</div>
+        <div class="wave-desc">Thailand, Malaysia, Indonesia, Filipina; China bergabung</div>
+      </div>
+      <div class="wave-item">
+        <div class="wave-period">2010-an</div>
+        <div class="wave-country">Vietnam · India · Bangladesh</div>
+        <div class="wave-desc">Gelombang terbaru — menerima industri dari China</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Kritik utama di era 2024–2026:</strong> Robotisasi mengeliminasi insentif relokasi berbasis upah, sementara geopolitik — bukan efisiensi biaya — kini menjadi penentu utama lokasi industri. Teori ini tidak otomatis gugur, tetapi mekanismenya berubah fundamental.
+    </div>
+
+    <p>Reshoring tidak membatalkan Flying Goose — ia <strong>memfragmentasinya menjadi tiga pola paralel</strong> yang beroperasi serentak:</p>
+
+    <div class="pattern-grid">
+      <div class="pattern-card">
+        <div class="pattern-tag">Pola 1</div>
+        <div class="pattern-title">Classic Flying Geese</div>
+        <p class="pattern-desc">Tetap berjalan untuk industri padat karya. China kini menjadi <em>lead goose baru</em> yang memindahkan kapasitas ke ASEAN — bukan untuk upgrading, melainkan untuk menghindari tarif AS.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-tag">Pola 2</div>
+        <div class="pattern-title">Reverse Flying Geese</div>
+        <p class="pattern-desc">Reshoring industri strategis kembali ke negara maju via subsidi besar (CHIPS Act, IRA). Aliran produksi berbalik arah dari Asia ke AS dan Eropa untuk sektor semikonduktor dan EV.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-tag">Pola 3</div>
+        <div class="pattern-title">China+1 Lateral</div>
+        <p class="pattern-desc">Diversifikasi horizontal non-hierarkis. Bukan relokasi penuh, melainkan duplikasi kapasitas di ASEAN untuk mitigasi risiko — terutama akibat perang tarif dan gangguan supply chain.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Section 2: Reshoring Global ─── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Tren Reshoring Global — Data 2022–2026</h2>
+    </div>
+
+    <p>Reshoring bukan sekadar wacana; investasi nyata dalam jumlah masif sudah bergerak. <strong>Amerika Serikat memimpin</strong> dengan lebih dari 2 juta pekerjaan manufaktur kembali sejak 2010, didorong CHIPS Act senilai <span class="data-hi">$52,7 miliar</span> dan Inflation Reduction Act <span class="data-hi">$369 miliar</span>. Konstruksi fasilitas manufaktur AS naik <span class="data-amber">+197%</span> dalam tiga tahun.</p>
+
+    <div class="callout amber">
+      <strong>Paradoks bagi ASEAN:</strong> Reshoring ke AS justru merangsang FDI ke ASEAN. Perusahaan membangun kapasitas cadangan di ASEAN sebagai bagian dari strategi China+1 — sehingga FDI manufaktur ASEAN naik <strong>+150% ke $44 miliar</strong> saat FDI global turun 11%.
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Kebijakan / Peristiwa</th>
+            <th>Negara/Kawasan</th>
+            <th>Nilai</th>
+            <th>Dampak ke ASEAN</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CHIPS Act</strong></td>
+            <td>Amerika Serikat</td>
+            <td class="mono">$52.7 miliar</td>
+            <td>Memacu ekspansi OSAT/packaging ke Malaysia &amp; Vietnam</td>
+          </tr>
+          <tr>
+            <td><strong>Inflation Reduction Act (IRA)</strong></td>
+            <td>Amerika Serikat</td>
+            <td class="mono">$369 miliar</td>
+            <td>Dorong investasi EV battery ke Indonesia (nikel)</td>
+          </tr>
+          <tr>
+            <td><strong>Tarif AS — China</strong></td>
+            <td>Global</td>
+            <td class="mono">54–145%</td>
+            <td>China+1 strategy mengalir ke Vietnam, Thailand, Indonesia</td>
+          </tr>
+          <tr>
+            <td><strong>ASEAN FDI Record</strong></td>
+            <td>ASEAN</td>
+            <td class="mono">$230 miliar (2023)</td>
+            <td>Manufaktur naik 150% — puncak tertinggi sepanjang masa</td>
+          </tr>
+          <tr>
+            <td><strong>Made in China 2025</strong></td>
+            <td>China</td>
+            <td class="mono">—</td>
+            <td>Industri rendah nilai dipindah ke ASEAN secara terencana</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Faktor pendorong reshoring bukan hanya biaya. Survei investor 2025 menunjukkan kata "tarif" disebut <span class="data-amber">454% lebih sering</span> dibanding 2024 — <strong>geopolitik mengalahkan efisiensi</strong> sebagai pertimbangan utama pemilihan lokasi produksi.</p>
+  </section>
+
+  <!-- ─── Section 3: Production Ladder Framework ─── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Production Ladder Framework</h2>
+    </div>
+
+    <p>Production Ladder atau <em>Industrial Ladder</em> menggambarkan bagaimana negara "naik tangga" dari manufaktur padat karya bernilai rendah menuju industri berteknologi tinggi. Konsep ini berkaitan erat dengan <strong>Global Value Chain (GVC)</strong> dan <em>industrial upgrading</em>.</p>
+
+    <p>Studi GVC terkini mengungkap hubungan <strong>N-shaped</strong> antara kedalaman partisipasi dan manfaat ekonomi: ada "jebakan tengah" (<em>middle trap</em>) di mana negara sudah masuk GVC tetapi belum menginternalisasi teknologi. Tiga model sukses melampaui jebakan ini:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Negara</th>
+            <th>Strategi Kunci</th>
+            <th>Capaian</th>
+            <th>Pelajaran untuk RI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Taiwan</strong></td>
+            <td>Ekosistem horizontal TSMC-sentris; SME terkoneksi</td>
+            <td class="mono">GDP/kapita $42,103 — melampaui Jepang &amp; Korea</td>
+            <td>Ekosistem, bukan satu perusahaan besar</td>
+          </tr>
+          <tr>
+            <td><strong>Korea Selatan</strong></td>
+            <td>Chaebol + proteksi selektif industri strategis</td>
+            <td class="mono">Samsung: 16% GDP ekspor Korea</td>
+            <td>State-backed champion dengan disiplin ekspor</td>
+          </tr>
+          <tr>
+            <td><strong>China</strong></td>
+            <td>Made in China 2025; DVA ekspor ditingkatkan</td>
+            <td class="mono">DVA 66% → 76% dalam 13 tahun</td>
+            <td>Domestic value-added harus naik, bukan hanya volume</td>
+          </tr>
+          <tr>
+            <td><strong>Vietnam</strong></td>
+            <td>17 FTA; keterbukaan FDI penuh; zona khusus</td>
+            <td class="mono">Ekspor elektronik $126.5B (2024)</td>
+            <td>FTA adalah infrastruktur perdagangan, bukan sekadar dokumen</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <strong>Tesis Production Ladder 2026:</strong> "Menaiki tangga" kini tidak linear. Negara bisa melompat langsung ke sektor strategis berbasis sumber daya alami (resource-based leapfrog) seperti yang dilakukan Indonesia dengan nikel → EV battery — tanpa harus melalui semua anak tangga tekstil dan elektronik sederhana terlebih dahulu.
+    </div>
+  </section>
+
+  <!-- ─── Section 4: Posisi Indonesia ─── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Posisi Indonesia dalam Rantai Produksi Global</h2>
+    </div>
+
+    <p>Indonesia berada di <strong>anak tangga menengah-bawah</strong> production ladder — kuat di resource-based manufacturing dan industri padat karya, belum menjangkau advanced manufacturing. Manufaktur berkontribusi <span class="data-hi">18.98% PDB</span> dengan output <span class="data-hi">USD 265 miliar</span> (2024). Dalam Emerging Asia Manufacturing Index 2024, Indonesia menempati peringkat 5 dari 8 negara.</p>
+
+    <div class="swot-grid">
+      <div class="swot-card strength">
+        <div class="swot-label">Kekuatan</div>
+        <ul class="swot-list">
+          <li>Cadangan nikel 21% dunia — moat alamiah di EV battery</li>
+          <li>Realisasi investasi 103.9% target (IDR 1,714 T, 2024)</li>
+          <li>Tarif AS 32% — lebih rendah dari Vietnam 46%</li>
+          <li>Pasar domestik 270+ juta jiwa, terbesar di ASEAN</li>
+          <li>25% produsen proyeksikan order naik — tertinggi ASEAN</li>
+          <li>Produsen sel baterai EV pertama ASEAN (10 GWh, Karawang)</li>
+        </ul>
+      </div>
+      <div class="swot-card weakness">
+        <div class="swot-label">Kelemahan Struktural</div>
+        <ul class="swot-list">
+          <li>Logistik 24% PDB vs Thailand 14% — kompetitor kritis</li>
+          <li>Tidak memiliki EVFTA maupun CPTPP — kalah akses pasar</li>
+          <li>Skill gap Industry 4.0 belum terjembatani</li>
+          <li>68% FDI nikel dari China → ketergantungan tinggi</li>
+          <li>94% ekspor nikel olahan kembali ke China</li>
+          <li>Peringkat #5 Emerging Asia Manufacturing Index (dari 8)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Kompetitor</th>
+            <th>Keunggulan Utama</th>
+            <th>FDI Manufaktur</th>
+            <th>FTA</th>
+            <th>Ancaman ke RI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Vietnam</strong></td>
+            <td>Elektronik &amp; garmen ekspor</td>
+            <td class="mono">$27.62B (2025)</td>
+            <td class="mono">17 FTA</td>
+            <td>Tinggi — di semua sektor</td>
+          </tr>
+          <tr>
+            <td><strong>Thailand</strong></td>
+            <td>Otomotif (40+ tahun supply chain)</td>
+            <td class="mono">—</td>
+            <td class="mono">14 FTA</td>
+            <td>Sedang — spesifik otomotif</td>
+          </tr>
+          <tr>
+            <td><strong>Malaysia</strong></td>
+            <td>Semiconductor packaging (Penang)</td>
+            <td class="mono">—</td>
+            <td class="mono">16 FTA</td>
+            <td>Sedang — di tech manufacturing</td>
+          </tr>
+          <tr>
+            <td><strong>India</strong></td>
+            <td>Skala besar, "China alternative"</td>
+            <td class="mono">$76B greenfield (2024)</td>
+            <td class="mono">13 FTA</td>
+            <td>Tinggi — jangka menengah</td>
+          </tr>
+          <tr>
+            <td><strong>Bangladesh</strong></td>
+            <td>Garmen upah rendah</td>
+            <td class="mono">—</td>
+            <td class="mono">—</td>
+            <td>Rendah — lemah karena instabilitas politik 2024–25</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ─── Section 5: Peluang Investasi ─── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2 class="section-title">Matriks Peluang Investasi</h2>
+    </div>
+
+    <p><strong>Tesis investasi inti:</strong> Indonesia bukan "China alternatif" yang generik. Indonesia paling kompetitif di mana sumber daya alam menjadi <em>moat</em> — dan kurang kompetitif di industri padat karya generik yang bersaing murni di upah. Investor yang memahami perbedaan ini akan menemukan posisi unik yang tidak bisa direplikasi kompetitor regional.</p>
+
+    <div class="opp-card">
+      <div class="opp-rank">1</div>
+      <div class="opp-body">
+        <div class="opp-name">EV Battery Recycling</div>
+        <p class="opp-desc">Belum ada pemain skala komersial di Indonesia. CATL, LG, dan Hyundai sudah membangun pabrik sel — limbah dan daur ulang battery akan menjadi masalah nyata dalam 3–5 tahun. <em>White space</em> yang lebar sebelum kompetitor masuk.</p>
+        <div class="opp-meta">
+          <span class="pill pill-go">GO</span>
+          <span class="opp-horizon">Horizon: 3–5 tahun</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-rank">2</div>
+      <div class="opp-body">
+        <div class="opp-name">Local EV Component Supply (Tier-2 / Tier-3)</div>
+        <p class="opp-desc">Target domestic content EV 80% — realisasi baru 40%. Gap 40% ini adalah pasar yang dijamin ada permintaannya. Komponen: BMS (battery management systems), thermal management, connector, casing.</p>
+        <div class="opp-meta">
+          <span class="pill pill-go">GO</span>
+          <span class="opp-horizon">Horizon: 2–4 tahun</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-rank">3</div>
+      <div class="opp-body">
+        <div class="opp-name">MBMA, INCO, Antam, Harita — Public Market Exposure</div>
+        <p class="opp-desc">Perusahaan nikel dan EV battery terintegrasi yang sudah listing. Cara paling likuid untuk mengambil exposure ke tema nikel-EV Indonesia tanpa risiko eksekusi greenfield.</p>
+        <div class="opp-meta">
+          <span class="pill pill-go">GO</span>
+          <span class="opp-horizon">Horizon: 3–7 tahun (equity)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-rank">4</div>
+      <div class="opp-body">
+        <div class="opp-name">Garmen Premium &amp; Technical Textiles</div>
+        <p class="opp-desc">FDI tekstil naik 107% YoY (2024); 15 perusahaan Taiwan konfirmasi relokasi. Indonesia tidak bisa bersaing di garmen komoditas (upah rata-rata $195/bulan vs Kamboja $105). Tapi <em>performance textiles, sportswear premium, sustainable fabrics</em> — segmen ini viable. Kawasan Kendal dan Batang SEZ adalah lokasi prioritas.</p>
+        <div class="opp-meta">
+          <span class="pill pill-caution">CAUTION</span>
+          <span class="opp-horizon">Horizon: 2–3 tahun · Selektif per segmen</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="opp-card">
+      <div class="opp-rank">5</div>
+      <div class="opp-body">
+        <div class="opp-name">EMS &amp; Semiconductor Packaging di Batam</div>
+        <p class="opp-desc">Batam FTZ + rencana hub semikonduktor $26.7B. Realistis untuk OSAT (packaging &amp; testing), bukan wafer fabrication. RPJMN 2025–2029 menempatkan ini sebagai sektor strategis. Timeline panjang dan bergantung keberhasilan investasi infrastruktur.</p>
+        <div class="opp-meta">
+          <span class="pill pill-caution">CAUTION</span>
+          <span class="opp-horizon">Horizon: 5+ tahun · Tunggu sinyal infrastruktur</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Section 6: Rekomendasi ─── -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2 class="section-title">Rekomendasi &amp; Lever Kebijakan Kritis</h2>
+    </div>
+
+    <div class="callout">
+      <strong>Assessment: ATTRACTIVE</strong> — untuk investor yang masuk di segmen yang tepat. Indonesia memiliki moat berbasis SDA yang tidak bisa direplikasi kompetitor. Risiko terbesar bukan kompetisi, melainkan <em>jendela peluang yang sempit</em> sebelum LFP battery (tidak butuh nikel) mendominasi pasar, dan sebelum otomasi menutup keunggulan upah di industri padat karya.
+    </div>
+
+    <p><strong>Dua lever kebijakan paling kritis</strong> yang langsung meningkatkan daya tarik FDI manufaktur umum Indonesia:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Lever</th>
+            <th>Status Saat Ini</th>
+            <th>Target</th>
+            <th>Dampak Estimasi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bergabung CPTPP</strong></td>
+            <td>Belum anggota (Vietnam sudah)</td>
+            <td>Ratifikasi 2026–2027</td>
+            <td>Akses ke pasar Kanada, Meksiko, Australia, Jepang tanpa tarif — setara dengan 17 FTA Vietnam</td>
+          </tr>
+          <tr>
+            <td><strong>Pangkas Biaya Logistik</strong></td>
+            <td>24% PDB (vs Thailand 14%)</td>
+            <td>Turun ke ~16% PDB</td>
+            <td>Setiap 1% penurunan biaya logistik ≈ $2.65B penghematan tahunan bagi sektor ekspor</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Di luar dua lever ini, <strong>keunggulan jangka panjang Indonesia</strong> terletak pada kombinasi unik yang tidak bisa direplikasi kompetitor manapun: pasar domestik terbesar ASEAN (270+ juta jiwa) + cadangan sumber daya strategis (nikel, bauksit, tembaga) + posisi geografis di jalur perdagangan global. Strategi investasi terbaik bukan menyaingi Vietnam di elektronik atau Thailand di otomotif — melainkan membangun di atas moat yang Indonesia sudah punya.</p>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer class="report-footer">
+    <span>Flying Goose &amp; Reshoring Research · Production Ladder Framework</span>
+    <span>Sintesis dari 4 agen riset · Agustus 2026</span>
+  </footer>
+
+</div>
