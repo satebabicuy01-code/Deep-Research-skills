@@ -1,7 +1,14 @@
 # Store Format & Supply Chain Strategy
-## Kawan Lama Group — Memenangkan Ekspansi 250 Toko/Tahun di Tier 2-3 Indonesia
+## Kawan Lama Group — Akselerasi Ekspansi AZKO & Multi-Brand di Tier 2-3 Indonesia
 
-> **Konteks:** KLG memiliki target ~250 toko baru per tahun. AZKO butuh >1.000 m², sulit ditemukan di tier 2-3. Owner juga menyewa hampir semua lokasi — ini adalah capital yang keluar terus tanpa aset yang dibangun. Dokumen ini menjawab: bagaimana ekspansi bisa lebih cepat, lebih hemat, dan lebih menguntungkan owner secara jangka panjang.
+> **Konteks & Klarifikasi Data Penting:**
+>
+> | Angka | Arti Sebenarnya |
+> |-------|----------------|
+> | **~50 toko/tahun** | Jumlah toko **AZKO baru** yang dibuka per tahun |
+> | **~250 proyek/tahun** | Total pekerjaan tim **Site Development KLG** — mencakup semua brand (AZKO, INFORMA, Chatime, NEKA, dll.) ditambah proyek **rejuvenasi/renovasi** toko existing |
+>
+> Dokumen ini fokus pada ekspansi AZKO (~50 toko/tahun saat ini) dan bagaimana multi-format strategy dapat mengakselerasinya secara signifikan — sementara tim Site Dev tetap mengelola portofolio lebih luas 250 proyek/tahun untuk seluruh ekosistem KLG. AZKO butuh >1.000 m², sulit ditemukan di tier 2-3. Owner juga menyewa hampir semua lokasi — capital keluar terus tanpa aset yang dibangun. Dokumen ini menjawab: bagaimana ekspansi AZKO bisa lebih cepat, lebih hemat, dan lebih menguntungkan owner secara jangka panjang.
 
 ---
 
@@ -28,9 +35,11 @@ AZKO = 1.000–3.000 m² + stok penuh + lokasi mall premium
        ↓
 Susah buka di tier 2-3 (tidak ada ruang sebesar itu)
        ↓
-Ekspansi terhambat, target 250 toko/tahun berat
+Ekspansi terhambat — AZKO hanya buka ~50 toko baru/tahun
        ↓
 Kompetitor Mr. DIY sudah >1.000 toko di Indonesia
+       ↓
+Gap kecepatan: Mr. DIY 10–15 toko/bulan vs AZKO ~4 toko/bulan
 ```
 
 **Permasalahan berlapis:**
@@ -42,17 +51,19 @@ Kompetitor Mr. DIY sudah >1.000 toko di Indonesia
 | **Sewa = beban** | Owner bayar sewa selamanya, tidak ada aset yang dibangun |
 | **Renewal threat** | Mall minta konsep baru, AZKO lama dianggap tidak relevan |
 | **Lead time** | Stok dikirim dari pusat → toko jauh = lead time panjang, biaya tinggi |
-| **Kecepatan** | Untuk 250 toko/tahun, harus buka 20+ toko per bulan secara konsisten |
+| **Kecepatan** | Untuk naik ke 100+ toko/tahun, format tunggal 1.000 m² bukan jawabannya |
+
+> **Catatan angka:** ~250 proyek/tahun yang dikerjakan tim Site Development mencakup seluruh ekosistem KLG — AZKO, INFORMA, Chatime, NEKA, dan rejuvenasi toko existing. **Angka spesifik toko AZKO baru adalah ~50/tahun.** Pemisahan ini penting agar analisis tidak misleading soal kecepatan ekspansi AZKO vs. kapasitas tim Site Dev secara keseluruhan.
 
 ### Benchmark Kompetitor
 
 | Pemain | Format Dominan | Luas Tipikal | Toko di Indonesia | Kecepatan Buka |
 |--------|---------------|-------------|------------------|---------------|
-| Mr. DIY | Value DIY | 200–500 m² | >1.000 | 10–15/bulan |
-| Ace Hardware (MAP) | Premium hardware | 500–1.000 m² | Baru masuk 2026 | - |
-| AZKO | Home improvement | 1.000–3.000 m² | ~270 | 2–3/bulan |
+| Mr. DIY | Value DIY | 200–500 m² | >1.000 | 10–15/bulan (~120–180/thn) |
+| Ace Hardware (MAP) | Premium hardware | 500–1.000 m² | Baru masuk 2026 | — |
+| AZKO | Home improvement | 1.000–3.000 m² | ~270 | ~4/bulan (~50/thn) |
 
-**Kesimpulan:** Mr. DIY bisa buka secepat itu justru karena format kecilnya. Ukuran adalah kunci kecepatan.
+**Kesimpulan:** Mr. DIY bisa buka 3–4× lebih cepat dari AZKO justru karena format kecilnya (200–500 m²). Ukuran adalah kunci kecepatan. Selama AZKO hanya memiliki satu format >1.000 m², kecepatan ekspansi akan selalu terbatas oleh ketersediaan ruang dan capex.
 
 ---
 
@@ -419,23 +430,41 @@ Buka 3 regional hub di luar Jawa yang pertumbuhannya paling cepat:
 | Owner asset built? | Tidak | Tidak | Tidak | Tidak | Tidak (royalti) |
 | Jumlah bisa dibuka dengan Rp 100M | 5 | 20 | **50** | **200+** | **80–100** |
 
-### Rekomendasi Mix Ekspansi (Target 250/tahun)
+> ⚠️ *Catatan perbandingan:* AZKO saat ini membuka ~50 toko baru/tahun (semua format gabungan). Dengan budget Rp 100M yang dialokasikan khusus untuk Studio, bisa dibuka 50 toko Studio saja — setara dengan total AZKO baru setahun penuh, tapi tersebar ke 50 kota berbeda dengan payback 10–18 bulan.
+
+### Rekomendasi Mix Ekspansi AZKO — Akselerasi Bertahap
+
+> **Koreksi penting:** Target 250/tahun adalah kapasitas total tim Site Development KLG (semua brand + rejuvenasi). Ekspansi **toko AZKO baru** saat ini ~50/tahun. Tabel berikut menunjukkan bagaimana multi-format strategy dapat mengakselerasi angka ini secara realistis — bukan melompat langsung ke 250 AZKO, tapi menuju 80–120 AZKO/tahun dalam 2–3 tahun ke depan.
 
 ```
-Per Tahun:
-┌────────────────────────────────────────────────────┐
-│  5   AZKO Flagship   (kota besar, mall premium)    │
-│  50  AZKO Express    (kota menengah, mall tier 2)  │
-│  100 AZKO Studio     (kota kecil, ruko/standalone) │
-│  80  AZKO Kiosk      (dalam supermarket/hypermart) │
-│  15  Krisbow Pro     (kawasan industri)            │
-│ ─────────────────────────────────────────────────  │
-│  250 total per tahun                               │
-└────────────────────────────────────────────────────┘
+Kondisi Saat Ini vs Target dengan Multi-Format:
 
-CAPEX total: ~Rp 350–450 miliar/tahun
-vs. Semua AZKO Flagship: Rp 4–5 triliun/tahun (tidak realistis)
+KONDISI SAAT INI (format tunggal Flagship):
+┌──────────────────────────────────────────────────────────┐
+│  ~50  AZKO (semua Flagship/Express, 1.000+ m²)          │
+│       = Rp 850 miliar – 1,25 triliun capex/tahun        │
+└──────────────────────────────────────────────────────────┘
+
+TARGET REALISTIS DENGAN MULTI-FORMAT (Tahun 2–3):
+┌──────────────────────────────────────────────────────────┐
+│  5–8  AZKO Flagship  (kota besar, mall premium)         │
+│  20–30 AZKO Express  (kota menengah, mall tier 2)       │
+│  40–60 AZKO Studio   (kota kecil, ruko/standalone)      │
+│  20–30 AZKO Kiosk    (dalam supermarket/hypermart)      │
+│  8–12 Krisbow Pro    (kawasan industri)                 │
+│ ──────────────────────────────────────────────────────── │
+│  93–140 total toko AZKO-ekosistem per tahun             │
+│  (≈ 2–3× lipat dari angka saat ini)                    │
+└──────────────────────────────────────────────────────────┘
+
+CAPEX total (mix optimal): ~Rp 250–400 miliar/tahun
+vs. Semua Flagship untuk 100+ toko: Rp 1,7–2,5 triliun/tahun (tidak realistis)
 ```
+
+**Implikasi pada tim Site Development:**
+- Saat ini 250 proyek/tahun = ~50 AZKO baru + rejuvenasi + brand lain
+- Dengan multi-format, volume proyek AZKO baru bisa naik signifikan tanpa membebani Site Dev karena Studio/Kiosk jauh lebih sederhana secara konstruksi (4–6 minggu vs. 4–6 bulan untuk Flagship)
+- Kapasitas tim Site Dev yang sama bisa menangani lebih banyak AZKO baru karena effort per proyek lebih kecil
 
 ---
 
@@ -443,9 +472,9 @@ vs. Semua AZKO Flagship: Rp 4–5 triliun/tahun (tidak realistis)
 
 ### Masalah Fundamental: Sewa = Uang Keluar, Bukan Aset
 
-Dengan 1.500 toko yang mayoritas sewa, KLG membayar sekitar:
-- Rata-rata sewa Rp 100 juta/toko/bulan (blended semua ukuran)
-- Total: **Rp 1,8 triliun/tahun** keluar sebagai biaya sewa
+Dengan estimasi ~1.500 titik retail KLG secara total (AZKO ~270 toko + INFORMA + Chatime + NEKA + brand lain yang mayoritas sewa), KLG membayar sekitar:
+- Rata-rata sewa Rp 100 juta/titik/bulan (blended semua ukuran dan format)
+- Total estimasi: **Rp 1,8 triliun/tahun** keluar sebagai biaya sewa seluruh ekosistem
 - Uang ini membangun aset untuk landlord, bukan untuk owner KLG
 
 **Ini adalah transfer kekayaan yang masif dari owner ke property owner lain.**
@@ -530,7 +559,7 @@ Mr. DIY membuka >1.000 toko di Indonesia sangat cepat karena **franchise model**
 
 ### Mitigasi #4: Data sebagai Aset Jangka Panjang
 
-Dengan 1.500+ toko, KLG mengumpulkan data pembelian jutaan transaksi per bulan. Ini adalah aset yang nilainya terus tumbuh:
+Dengan estimasi 1.500+ titik retail di seluruh ekosistem KLG (AZKO, INFORMA, Chatime, NEKA, dll.), KLG mengumpulkan data pembelian jutaan transaksi per bulan. Ini adalah aset yang nilainya terus tumbuh:
 
 - **Supplier analytics:** Unilever, Philips, Bosch bayar untuk tau performa produk mereka di toko KLG
 - **Demand forecasting sell-back:** Prediksi demand per area yang dijual ke brand sebagai market intelligence
@@ -598,22 +627,31 @@ Develop strip mall kecil, jadikan AZKO Studio/Express sebagai anchor. Rekrut 4�
 ## Penutup: Prinsip "Faster Better Cheaper" untuk KLG
 
 ```
-FASTER: Portfolio multi-format → buka 250 toko/tahun bukan 50
-         Studio bisa ready dalam 4-6 minggu, bukan 4-6 bulan
+FASTER: Multi-format → dari ~50 AZKO/tahun menuju 100–140/tahun
+         Studio bisa ready dalam 4–6 minggu, bukan 4–6 bulan Flagship
+         Kiosk & Studio bisa dijalankan paralel tanpa mengorbankan Flagship
 
-BETTER: Hub & Spoke → produk sampai ke toko dalam 24-48 jam
+BETTER: Hub & Spoke → produk sampai ke toko dalam 24–48 jam
          Konsumen di tier 2-3 dapat experience seperti kota besar
+         Studio + Hub = AZKO bisa compete dengan e-commerce di delivery speed
 
-CHEAPER: Studio capex 87% lebih murah dari Flagship
-          Regional hub kurangi biaya logistik 30-60% per km
-          Franchise model: ekspansi tanpa modal sendiri
+CHEAPER: Studio capex 87% lebih murah dari Flagship (Rp 2M vs Rp 17–25M)
+          Regional hub kurangi biaya logistik 30–60% per km
+          Franchise NEKA: ekspansi brand tanpa modal sendiri
+          → Budget sama, reach 10× lebih banyak kota
 
-OWNER WEALTH: Beli properti tier 2-3 yang masih murah
-              Develop strip mall sendiri = landlord income
-              Data monetization = revenue margin tinggi
+OWNER WEALTH: Beli properti tier 2-3 yang masih murah (sebelum AZKO masuk)
+              Develop strip mall sendiri = landlord income pasif
+              Data monetization = revenue margin 50–70% vs retail 3–8%
 ```
 
-> **Intinya:** Model satu ukuran untuk semua (AZKO besar di mana-mana) adalah model masa lalu. Model masa depan adalah jaringan format beragam yang bekerja sebagai satu ekosistem — dari kiosk kecil yang membangun awareness, studio yang melayani konsultasi dan order, express yang menjadi tujuan belanja, hingga flagship yang menjadi brand statement. Semua terhubung oleh supply chain regional yang cepat dan murah.
+**Angka yang perlu diluruskan dalam komunikasi internal:**
+- "250" = total proyek Site Dev per tahun (semua brand + rejuvenasi) — **bukan** target AZKO baru
+- "~50" = AZKO toko baru per tahun (kondisi saat ini, format tunggal Flagship/Express)
+- "100–140" = target realistis AZKO per tahun jika multi-format diimplementasikan (Tahun 2–3)
+- Membedakan ketiga angka ini penting agar analisis ekspansi tidak salah arah
+
+> **Intinya:** Model satu ukuran untuk semua (AZKO besar di mana-mana) adalah model masa lalu yang membatasi AZKO di ~50 toko baru/tahun. Model masa depan adalah jaringan format beragam yang bekerja sebagai satu ekosistem — dari kiosk kecil yang membangun awareness, studio yang melayani konsultasi dan order, express yang menjadi tujuan belanja, hingga flagship yang menjadi brand statement. Semua terhubung oleh supply chain regional yang cepat dan murah. Dengan pendekatan ini, AZKO bisa realistis mencapai 100–140 toko baru/tahun dalam 2–3 tahun — tanpa perlu capex yang proporsional lebih besar, dan tanpa membebani kapasitas tim Site Development yang sudah mengerjakan ~250 proyek/tahun untuk seluruh ekosistem KLG.
 
 ---
 
