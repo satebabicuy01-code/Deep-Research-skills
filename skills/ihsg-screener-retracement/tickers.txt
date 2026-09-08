@@ -1,0 +1,99 @@
+# =====================================================================
+# Universe emiten IHSG / Bursa Efek Indonesia (IDX)
+# ---------------------------------------------------------------------
+# - Satu kode per baris (boleh beberapa dipisah spasi/koma). '#' = komentar.
+# - Akhiran .JK ditambahkan otomatis oleh screener; cukup tulis kodenya.
+# - Nama perusahaan diambil otomatis dari Yahoo saat run (tidak perlu ditulis).
+# - Kode yang sudah delisting/keliru akan otomatis dilewati (404).
+# - Daftar ini luas tapi TIDAK memuat seluruh ~900 emiten. Tambahkan sendiri
+#   kode yang belum ada; makin lengkap universe, makin baik hasil screening.
+# =====================================================================
+
+# --- Perbankan -------------------------------------------------------
+BBCA BBRI BMRI BBNI BRIS BBTN BJBR BJTM BNGA BNII PNBN MEGA BTPS BTPN
+NISP BBKP AGRO BANK ARTO BBHI BBYB AMAR BABP BGTG BINA MCOR BSIM BVIC
+MASB BCIC PNBS BKSW NOBU DNAR SDRA BEKS BNBA BSWD BMAS BABP BBMD BEKS
+
+# --- Telekomunikasi / Menara / Data ---------------------------------
+TLKM ISAT EXCL FREN TOWR TBIG MTEL SUPR IBST CENT DCII EDGE LINK CASH
+
+# --- Teknologi / Internet / Startup ---------------------------------
+GOTO BUKA EMTK BELI MTDL WIRG DMMX MLPT ELIT KREN NFCX WGSH AWAN TFAS
+MSTI DATA IOTF HDIT UVCR AXIO PTSN LUCK ENVY DIVA MCAS ZYRX WIFI
+
+# --- Konsumer (Staples) ---------------------------------------------
+UNVR ICBP INDF MYOR GGRM HMSP KLBF SIDO KAEF ULTJ CLEO ROTI GOOD CMRY
+KEJU AISA CAMP FOOD DLTA MLBI STTP SKLT SKBM ADES TCID MRAT KINO WIIM
+ITIC PCAR COCO PMMP DMND BEEF WMUU SIPD PANI GOLL PSGO WINE BOBA
+
+# --- Poultry / Agri pangan ------------------------------------------
+CPIN JPFA MAIN
+
+# --- Farmasi / Kesehatan / RS ---------------------------------------
+INAF PYFA SDPC MERK TSPC PEHA DVLA PRDA MIKA SILO SAME HEAL SRAJ CARE
+PRAY OMED BMHS RSGK RSCH IRRA SCPI KLIN OASA
+
+# --- Otomotif / Komponen --------------------------------------------
+ASII AUTO GJTL IMAS DRMA SMSM BRAM MASA GDYR IMJS BOLT INDS PRAS NIPS
+LPIN GDST
+
+# --- Alat berat / Distribusi ----------------------------------------
+UNTR HEXA KOBX ASGR
+
+# --- Batu bara / Energi ---------------------------------------------
+ADRO ADMR AADI PTBA ITMG HRUM INDY BUMI BYAN DSSA MEDC DOID PTRO GEMS
+BSSR TOBA BOSS FIRE RMKE CUAN KKGI MYOH SGER PKPK ITMA BIPI ELSA RAJA
+PGAS AKRA ENRG DEWA ARKO SMMT SURE ABMM DWGL TCPI
+
+# --- Energi baru / Gas / Listrik ------------------------------------
+PGEO BREN KEEN POWR TGRA MPOW RATU KEEN
+
+# --- Mineral / Logam / Nikel / EV -----------------------------------
+ANTM INCO TINS MDKA PSAB BRMS DKFT ZINC IFSH ARCI NICL CITA MBMA NCKL
+AMMN DAAZ HILL VKTR TRIM NIKL KRAS ISSP KRAS TBMS BAJA CTBN GGRP
+
+# --- Semen -----------------------------------------------------------
+SMGR INTP SMCB SMBR
+
+# --- Konstruksi BUMN & Swasta ---------------------------------------
+WIKA WSKT PTPP ADHI WTON WSBP PPRE NRCA TOTL DGIK IDPR ACST JKON SSIA
+CBDK
+
+# --- Properti --------------------------------------------------------
+BSDE CTRA SMRA PWON ASRI LPKR DMAS BKSL APLN JRPT PPRO SMDM RDTX MTLA
+DILD GWSA KIJA BEST DUTI URBN NIRO POLL GAMA RODA MMLP LPCK PANI CBDK
+POLI KOTA MPRO NASA BAPI RISE ROCK ATAP
+
+# --- Perkebunan / CPO -----------------------------------------------
+AALI LSIP SIMP SGRO DSNG TBLA BWPT SSMS PALM ANJT SMAR JAWA GZCO TAPG
+CSRA UNSP MGRO ANDI FAPA
+
+# --- Kimia / Basic material -----------------------------------------
+TPIA BRPT INCI EKAD SRSN AGII MOLI ETWA CPRO INKP TKIM FASW SPMA KDSI
+ALDO TALF PICO INAI JPRS BTON LMSH GDST TRST FPNI IMPC AKPI SIMA IGAR
+APLI IPOL PBID ESIP SULI SAMF
+
+# --- Ritel -----------------------------------------------------------
+ACES MAPI RALS LPPF MPPA AMRT MIDI ERAA HERO RANC ECII TRIO CSAP SONA
+MAPA MAPB CSMI DAYA KIOS RUNS MDIY
+
+# --- Media / Hiburan ------------------------------------------------
+SCMA MNCN MSIN VIVA BMTR TMPO ABBA LPLI FILM MARI IPTV
+
+# --- Tekstil / Garmen / Sepatu --------------------------------------
+PBRX SRIL RICY MYTX ARGO CNTX ESTI HDTX SSTM UNIT TFCO ZONE POLU BELL
+BATA TRIS SLIS BIMA
+
+# --- Infrastruktur / Tol / Transportasi -----------------------------
+JSMR META CMNP NELY WEHA BIRD ASSA BLTA SMDR TMAS HITS SOCI PSSI TPMA
+LEAD WINS RIGS BULL PTIS TRUK GIAA IPCC IPCM CASS BPTR DEAL JAYA HELI
+PURA MIRA SAPX TAXI AKSI DEAL
+
+# --- Keuangan non-bank / Multifinance / Asuransi --------------------
+BFIN ADMF CFIN WOMF BBLD MFIN TIFA VRNA CASA DEFI POOL ASBI ABDA LPGI
+AMAG ASDM ASJT ASRM AHAP MREI TUGU PNIN PNLF LIFE JMAS BPFI STAR AMOR
+SRTG BHIT BNBR TRIM PANS RELI PEGE YULE POLA OCAP VICO
+
+# --- Aneka industri / lain-lain -------------------------------------
+KREN SPTO GLVA ARKA VOKS JECC KBLI KBLM SCCO IKBI PBSA TOPS BLES CINT
+LMPI KICI LION KDSI WOOD SLIS HRTA CTRA ZINC
