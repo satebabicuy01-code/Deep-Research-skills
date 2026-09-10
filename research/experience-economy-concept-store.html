@@ -1,0 +1,1129 @@
+<title>Toko Sebagai Panggung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&display=swap">
+<style>
+  :root{
+    color-scheme: light;
+
+    --paper:#EDF0F0;
+    --surface:#FBFCFC;
+    --inset:#E2E8E8;
+    --ink:#0E1A1D;
+    --ink-2:#3A4B50;
+    --ink-3:#5D6E73;
+    --rule:#C7D0D1;
+    --rule-strong:#A3B1B3;
+    --deep:#14464F;
+    --deep-mid:#2C6C75;
+    --deep-wash:#DCE8E9;
+    --brass:#A9711C;
+    --brass-ink:#7E5410;
+    --brass-wash:#F2E7D3;
+    --alert:#9C3B22;
+    --alert-wash:#F5E2DC;
+    --good:#2C6B4F;
+
+    --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+    --measure:66ch;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:17px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .shell{
+    max-width:1200px;
+    margin:0 auto;
+    padding-inline:clamp(16px,4vw,52px);
+    padding-block:clamp(28px,5vw,64px) 80px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:clamp(28px,4vw,52px);
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead{grid-column:1/-1;border-bottom:2px solid var(--ink);padding-bottom:26px;}
+  .stamp{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--brass-ink);display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:22px;
+  }
+  .stamp span{white-space:nowrap;}
+  .stamp .div{color:var(--rule-strong);}
+  h1{
+    font-family:var(--display);
+    font-variation-settings:"wdth" 112,"wght" 800;
+    font-size:clamp(2.5rem,7.5vw,4.6rem);
+    line-height:.96;
+    letter-spacing:-.022em;
+    margin:0 0 18px;
+    text-wrap:balance;
+    color:var(--ink);
+  }
+  h1 em{font-style:normal;color:var(--deep);}
+  .lede{
+    font-size:clamp(1.08rem,2.2vw,1.32rem);
+    line-height:1.5;
+    color:var(--ink-2);
+    max-width:58ch;
+    margin:0;
+  }
+  .lede strong{color:var(--ink);font-weight:600;}
+
+  /* ---------- rail ---------- */
+  .rail{font-family:var(--display);}
+  .rail-title{
+    font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-3);padding-bottom:10px;border-bottom:1px solid var(--rule);margin-bottom:12px;
+  }
+  .rail ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;}
+  .rail a{
+    display:grid;grid-template-columns:2.3em 1fr;gap:4px;
+    padding:7px 8px 7px 0;text-decoration:none;color:var(--ink-2);
+    font-size:13.5px;line-height:1.3;font-variation-settings:"wdth" 96,"wght" 500;
+    border-radius:2px;
+  }
+  .rail a .n{font-family:var(--mono);font-size:11px;color:var(--brass-ink);padding-top:2px;}
+  .rail a:hover{color:var(--deep);background:var(--deep-wash);}
+  .rail a:focus-visible{outline:2px solid var(--deep);outline-offset:1px;}
+
+  /* ---------- document ---------- */
+  .doc{min-width:0;}
+  section{margin-bottom:clamp(48px,7vw,86px);scroll-margin-top:24px;}
+  .sec-head{border-top:1px solid var(--rule-strong);padding-top:14px;margin-bottom:26px;}
+  .sec-num{
+    font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--brass-ink);
+    display:block;margin-bottom:8px;
+  }
+  h2{
+    font-family:var(--display);
+    font-variation-settings:"wdth" 106,"wght" 700;
+    font-size:clamp(1.6rem,3.4vw,2.2rem);
+    line-height:1.08;letter-spacing:-.015em;
+    margin:0;color:var(--ink);text-wrap:balance;
+  }
+  h3{
+    font-family:var(--display);
+    font-variation-settings:"wdth" 100,"wght" 650;
+    font-size:1.08rem;letter-spacing:.005em;
+    margin:34px 0 10px;color:var(--deep);text-wrap:balance;
+  }
+  h4{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-3);margin:0 0 10px;font-weight:500;
+  }
+  p{margin:0 0 16px;max-width:var(--measure);}
+  .doc > section > p,.doc > section > ul,.doc > section > ol{max-width:var(--measure);}
+  a{color:var(--deep);text-decoration-thickness:1px;text-underline-offset:2px;}
+  a:hover{color:var(--brass-ink);}
+  strong{font-weight:600;}
+  ul,ol{margin:0 0 16px;padding-left:1.15em;}
+  li{margin-bottom:7px;}
+  li::marker{color:var(--rule-strong);}
+  .src{font-family:var(--mono);font-size:.72em;color:var(--ink-3);}
+
+  /* ---------- components ---------- */
+  .panel{
+    background:var(--surface);border:1px solid var(--rule);
+    padding:clamp(18px,3vw,26px);margin:24px 0;
+  }
+  .panel p:last-child,.panel ul:last-child,.panel ol:last-child{margin-bottom:0;}
+
+  .callout{
+    border-left:3px solid var(--brass);background:var(--brass-wash);
+    padding:16px clamp(16px,2.5vw,22px);margin:24px 0;
+  }
+  .callout.warn{border-left-color:var(--alert);background:var(--alert-wash);}
+  .callout.deep{border-left-color:var(--deep);background:var(--deep-wash);}
+  .callout p:last-child{margin-bottom:0;}
+  .callout p{max-width:none;}
+
+  .stats{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0;
+  }
+  .stat{background:var(--surface);padding:18px 16px;}
+  .stat .fig{
+    font-family:var(--display);font-variation-settings:"wdth" 92,"wght" 750;
+    font-size:clamp(1.7rem,4vw,2.15rem);line-height:1;color:var(--deep);
+    font-variant-numeric:tabular-nums;display:block;margin-bottom:7px;
+  }
+  .stat .cap{font-size:13.5px;line-height:1.38;color:var(--ink-2);display:block;}
+  .stat .src{display:block;margin-top:7px;font-size:10.5px;}
+
+  .scroller{overflow-x:auto;margin:24px 0;border:1px solid var(--rule);background:var(--surface);}
+  table{border-collapse:collapse;width:100%;min-width:640px;font-size:14.5px;}
+  caption{
+    caption-side:top;text-align:left;font-family:var(--mono);font-size:10.5px;
+    letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);
+    padding:12px 14px 0;
+  }
+  th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule);}
+  thead th{
+    font-family:var(--display);font-variation-settings:"wdth" 94,"wght" 650;
+    font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);
+    border-bottom:1.5px solid var(--rule-strong);background:var(--inset);
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  td.k{font-family:var(--display);font-variation-settings:"wdth" 96,"wght" 600;color:var(--deep);white-space:nowrap;}
+  td .f{font-family:var(--mono);font-size:12.5px;color:var(--ink-2);}
+  .num{font-variant-numeric:tabular-nums;}
+
+  .tag{
+    display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;padding:3px 7px;border:1px solid var(--rule-strong);
+    color:var(--ink-3);background:var(--paper);white-space:nowrap;
+  }
+  .tag.b{border-color:var(--brass);color:var(--brass-ink);background:var(--brass-wash);}
+  .tag.d{border-color:var(--deep-mid);color:var(--deep);background:var(--deep-wash);}
+
+  /* ---------- ladder ---------- */
+  .ladder{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:10px;
+    margin:28px 0 10px;
+  }
+  .rung{display:grid;grid-template-rows:200px auto;gap:12px;}
+  .rung-bar{
+    align-self:end;height:var(--h);width:100%;background:var(--deep-wash);
+    border:1px solid var(--deep-mid);border-bottom:3px solid var(--deep);
+    display:flex;align-items:flex-start;justify-content:flex-end;padding:6px;
+  }
+  .rung:last-child .rung-bar{background:var(--brass-wash);border-color:var(--brass);border-bottom-color:var(--brass-ink);}
+  .rung-bar .idx{font-family:var(--mono);font-size:10px;color:var(--deep);}
+  .rung:last-child .rung-bar .idx{color:var(--brass-ink);}
+  .rung-name{
+    font-family:var(--display);font-variation-settings:"wdth" 100,"wght" 700;
+    font-size:15px;line-height:1.15;color:var(--ink);
+  }
+  .rung-verb{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);display:block;margin-top:3px;letter-spacing:.04em;}
+  .rung-ex{font-size:13px;line-height:1.42;color:var(--ink-2);margin:0;max-width:none;}
+  .ladder-axis{
+    display:flex;justify-content:space-between;gap:12px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-3);border-top:1px solid var(--rule);padding-top:9px;margin-bottom:20px;
+  }
+
+  /* ---------- realms 2x2 ---------- */
+  .realms{
+    display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:auto 1fr 1fr;
+    gap:1px;margin:26px 0 8px;background:var(--rule);border:1px solid var(--rule);
+  }
+  .rx-corner,.rx-col,.rx-row{background:var(--inset);display:flex;align-items:center;justify-content:center;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);padding:8px;}
+  .rx-row{writing-mode:vertical-rl;transform:rotate(180deg);padding:12px 8px;}
+  .quad{background:var(--surface);padding:18px 16px;display:flex;flex-direction:column;gap:8px;}
+  .quad-name{
+    font-family:var(--display);font-variation-settings:"wdth" 104,"wght" 750;
+    font-size:1.12rem;color:var(--deep);line-height:1.1;
+  }
+  .quad-axis{display:none;}
+  .quad p{font-size:13.5px;line-height:1.45;margin:0;max-width:none;color:var(--ink-2);}
+  .quad .ex{font-size:13px;color:var(--ink);border-top:1px dashed var(--rule-strong);padding-top:8px;}
+  .quad .ex b{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-ink);display:block;margin-bottom:3px;font-weight:500;}
+
+  /* ---------- timeline ---------- */
+  .tl{list-style:none;margin:26px 0;padding:0;border-left:2px solid var(--rule-strong);}
+  .tl li{position:relative;padding:0 0 24px 22px;margin:0;}
+  .tl li::before{
+    content:"";position:absolute;left:-6px;top:8px;width:10px;height:10px;
+    background:var(--paper);border:2px solid var(--deep);border-radius:50%;
+  }
+  .tl li.peak::before{background:var(--brass);border-color:var(--brass-ink);}
+  .tl .yr{
+    font-family:var(--mono);font-size:12px;font-weight:600;color:var(--brass-ink);
+    letter-spacing:.04em;display:block;margin-bottom:3px;
+  }
+  .tl .ev{
+    font-family:var(--display);font-variation-settings:"wdth" 100,"wght" 650;
+    font-size:15.5px;color:var(--ink);display:block;margin-bottom:4px;line-height:1.25;
+  }
+  .tl p{font-size:14.5px;margin:0;color:var(--ink-2);max-width:62ch;}
+
+  /* ---------- bridge ---------- */
+  .bridge{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0;align-items:stretch;}
+  .tier{background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--deep);padding:16px;}
+  .tier:nth-child(2){border-top-color:var(--deep-mid);}
+  .tier:nth-child(3){border-top-color:var(--brass);}
+  .tier h5{
+    font-family:var(--display);font-variation-settings:"wdth" 98,"wght" 700;
+    font-size:14px;margin:0 0 4px;color:var(--ink);
+  }
+  .tier .when{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:10px;}
+  .tier ul{margin:0;padding-left:1.05em;font-size:13.5px;line-height:1.45;}
+  .tier li{margin-bottom:5px;}
+
+  /* ---------- scorecard ---------- */
+  .card-tool{border:1px solid var(--rule-strong);background:var(--surface);margin:26px 0;}
+  .card-tool-head{padding:16px clamp(14px,2.5vw,20px);border-bottom:1px solid var(--rule);background:var(--inset);}
+  .card-tool-head h4{margin-bottom:6px;}
+  .card-tool-head p{font-size:13.5px;margin:0;color:var(--ink-2);max-width:none;}
+  .sc-grid{padding:clamp(14px,2.5vw,20px);display:flex;flex-direction:column;gap:16px;}
+  .sc-row{display:grid;grid-template-columns:1fr auto auto;gap:10px 18px;align-items:center;padding-bottom:14px;border-bottom:1px dashed var(--rule);}
+  .sc-row:last-of-type{border-bottom:none;padding-bottom:0;}
+  .sc-label{font-family:var(--display);font-variation-settings:"wdth" 98,"wght" 620;font-size:14.5px;color:var(--ink);}
+  .sc-label small{display:block;font-family:var(--body);font-weight:400;font-size:12.5px;color:var(--ink-3);line-height:1.35;margin-top:2px;}
+  .dots{display:flex;gap:5px;align-items:center;}
+  .dots .who{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);width:52px;flex:none;}
+  .dot{
+    width:19px;height:19px;padding:0;border-radius:50%;cursor:pointer;
+    border:1.5px solid var(--rule-strong);background:var(--paper);
+    font-family:var(--mono);font-size:9px;color:var(--ink-3);line-height:1;
+  }
+  .dot:hover{border-color:var(--deep-mid);}
+  .dot:focus-visible{outline:2px solid var(--deep);outline-offset:2px;}
+  .dot[aria-pressed="true"]{background:var(--deep);border-color:var(--deep);color:#fff;}
+  .dots.alt .dot[aria-pressed="true"]{background:var(--brass);border-color:var(--brass-ink);color:#fff;}
+  .sc-foot{
+    display:flex;flex-wrap:wrap;gap:12px 28px;align-items:baseline;
+    padding:14px clamp(14px,2.5vw,20px);border-top:1px solid var(--rule);background:var(--inset);
+  }
+  .sc-foot .t{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);}
+  .sc-foot .v{font-family:var(--display);font-variation-settings:"wdth" 92,"wght" 750;font-size:1.5rem;color:var(--deep);font-variant-numeric:tabular-nums;margin-left:8px;}
+  .sc-foot .v.alt{color:var(--brass-ink);}
+  .sc-verdict{font-size:13.5px;color:var(--ink-2);flex-basis:100%;margin:0;max-width:none;}
+  .sc-reset{
+    margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+    background:none;border:1px solid var(--rule-strong);color:var(--ink-3);
+    padding:5px 10px;cursor:pointer;
+  }
+  .sc-reset:hover{border-color:var(--deep);color:var(--deep);}
+
+  /* ---------- two-col compare ---------- */
+  .flip{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:24px 0;}
+  .flip > div{background:var(--surface);padding:16px;}
+  .flip .from{background:var(--inset);}
+  .flip h5{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 12px;color:var(--ink-3);font-weight:500;}
+  .flip .to h5{color:var(--brass-ink);}
+  .flip ul{margin:0;padding-left:1.05em;font-size:14px;line-height:1.5;}
+
+  /* ---------- sources ---------- */
+  .sources{font-size:13.5px;line-height:1.5;}
+  .sources ol{padding-left:1.6em;}
+  .sources li{margin-bottom:9px;color:var(--ink-2);}
+
+  .footnote{
+    font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--ink-3);
+    border-top:1px solid var(--rule);padding-top:16px;margin-top:40px;max-width:var(--measure);
+  }
+
+  /* ---------- responsive ---------- */
+  @media (min-width:1040px){
+    .shell{grid-template-columns:212px minmax(0,1fr);}
+    .rail{position:sticky;top:28px;align-self:start;max-height:calc(100vh - 56px);overflow-y:auto;}
+  }
+  @media (max-width:1039px){
+    .rail{background:var(--surface);border:1px solid var(--rule);padding:16px;}
+    .rail ol{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0 14px;}
+  }
+  @media (max-width:760px){
+    body{font-size:16px;}
+    .ladder{grid-template-columns:1fr;gap:16px;}
+    .rung{grid-template-rows:auto auto;grid-template-columns:1fr;gap:7px;}
+    .rung-bar{align-self:start;height:14px;width:var(--w);min-width:44px;align-items:center;padding:0 5px;}
+    .bridge{grid-template-columns:1fr;}
+    .flip{grid-template-columns:1fr;}
+    .sc-row{grid-template-columns:1fr;}
+  }
+  @media (max-width:600px){
+    .realms{grid-template-columns:1fr;grid-template-rows:none;}
+    .rx-corner,.rx-col,.rx-row{display:none;}
+    .quad-axis{display:block;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
+  }
+</style>
+
+<div class="shell">
+
+  <header class="masthead">
+    <div class="stamp">
+      <span>Riset Strategi Ritel</span><span class="div">/</span>
+      <span>Experience Economy</span><span class="div">/</span>
+      <span>Home Improvement &amp; Home Furnishing</span><span class="div">/</span>
+      <span>September 2026</span>
+    </div>
+    <h1>Toko Sebagai <em>Panggung</em></h1>
+    <p class="lede">Ekonomi pengalaman bukan tren dekorasi. Ia adalah <strong>tangga nilai ekonomi</strong> — cara memindahkan penawaran dari komoditas yang dibanding-bandingkan harganya, ke pengalaman yang dibayar premium. Dokumen ini merangkum teorinya, kapan ia jadi arus utama, siapa yang berhasil memakainya di kategori rumah, dan — bagian paling penting — <strong>bagaimana membuktikan dampaknya dengan angka</strong> yang dibaca pemilik bisnis.</p>
+  </header>
+
+  <nav class="rail" aria-label="Daftar isi">
+    <div class="rail-title">Isi Dokumen</div>
+    <ol>
+      <li><a href="#s0"><span class="n">00</span><span>Ringkasan Eksekutif</span></a></li>
+      <li><a href="#s1"><span class="n">01</span><span>Konsep Dasar</span></a></li>
+      <li><a href="#s2"><span class="n">02</span><span>Kapan Mulai Boom</span></a></li>
+      <li><a href="#s3"><span class="n">03</span><span>Aplikasi di Ritel</span></a></li>
+      <li><a href="#s4"><span class="n">04</span><span>Studi Kasus</span></a></li>
+      <li><a href="#s5"><span class="n">05</span><span>Psikologi Konsumen</span></a></li>
+      <li><a href="#s6"><span class="n">06</span><span>Cara Mengukur Dampak</span></a></li>
+      <li><a href="#s7"><span class="n">07</span><span>Tren Terkini</span></a></li>
+      <li><a href="#s8"><span class="n">08</span><span>Implikasi Organisasi</span></a></li>
+      <li><a href="#s9"><span class="n">A</span><span>Alat Audit &amp; Sumber</span></a></li>
+    </ol>
+  </nav>
+
+  <main class="doc">
+
+    <!-- ============ 00 ============ -->
+    <section id="s0">
+      <div class="sec-head"><span class="sec-num">00</span><h2>Ringkasan eksekutif</h2></div>
+
+      <p>Lima hal yang perlu dipegang sebelum masuk detail:</p>
+      <ol>
+        <li><strong>Teorinya berumur 28 tahun, boom-nya berumur ~12 tahun.</strong> Pine &amp; Gilmore menerbitkan kerangkanya di <em>Harvard Business Review</em> Juli–Agustus 1998. Tapi ia baru jadi bahasa arus utama ritel sekitar 2014–2019, ketika belanja generasi milenial bergeser ke pengalaman dan narasi "retail apocalypse" memaksa toko fisik mencari alasan hidup baru.</li>
+        <li><strong>Yang dijual bukan "suasana", tapi posisi di tangga nilai.</strong> Komoditas → barang → jasa → pengalaman → transformasi. Setiap anak tangga menaikkan diferensiasi dan menurunkan sensitivitas harga. Kopi yang sama naik dari ~2–3 sen jadi &gt;$10 secangkir hanya karena berpindah anak tangga.</li>
+        <li><strong>Kategori rumah adalah kategori transformasi</strong> — anak tangga tertinggi. Pelanggan tidak membeli cat; mereka membeli rumah yang berubah. Ini keunggulan struktural yang tidak dimiliki kategori lain, dan sebagian besar peritel material bangunan belum mengambilnya.</li>
+        <li><strong>Pengalaman menjual, tapi tidak otomatis mengonversi.</strong> IKEA Indonesia masih rugi pada Jan–Sep 2025 dan manajemen HERO menyebut mayoritas pengunjung tidak membeli furnitur. AZKO mencatat SSSG −4,2% sepanjang 2025 saat masa transisi rebranding, lalu pulih ke +2,2% pada semester I/2026. Pengalaman punya kurva-J: biaya di depan, hasil di belakang.</li>
+        <li><strong>Masalah "belum ternotice owner" adalah masalah metrik, bukan masalah desain.</strong> Selama kerja tim Concept Store dilaporkan sebagai "renovasi selesai", ia akan dibaca sebagai biaya. Begitu dilaporkan sebagai dwell time → attach rate → repeat visit → SSSG, ia dibaca sebagai mesin pertumbuhan. Bagian 06 dan 08 menyediakan kerangka lengkapnya.</li>
+      </ol>
+
+      <div class="callout deep">
+        <p><strong>Satu kalimat untuk dibawa ke rapat:</strong> di kategori rumah, toko fisik bukan biaya distribusi — ia adalah media dengan biaya per kunjungan yang bisa dihitung, dan satu-satunya kanal tempat keputusan proyek bernilai besar benar-benar diambil.</p>
+      </div>
+    </section>
+
+    <!-- ============ 01 ============ -->
+    <section id="s1">
+      <div class="sec-head"><span class="sec-num">01</span><h2>Konsep dasar: tangga nilai ekonomi</h2></div>
+
+      <h3>Asal teori</h3>
+      <p>Kerangka ini diperkenalkan B. Joseph Pine II dan James H. Gilmore lewat artikel <em>"Welcome to the Experience Economy"</em> di <em>Harvard Business Review</em> edisi Juli–Agustus 1998 (hal. 97–105), lalu dibukukan tahun 1999 dengan judul yang sama, direvisi 2011, dan diterbitkan ulang dengan pengantar baru menjelang peringatan 20 tahun.</p>
+
+      <p>Tesis intinya sederhana dan tajam: ekonomi bergerak melalui tahapan, dan <strong>setiap tahapan adalah cara produsen kabur dari komoditisasi</strong>. Pertanian (komoditas) → manufaktur (barang) → jasa. Ketika jasa pun mulai terkomoditisasi, nilai berikutnya ada pada <em>mementaskan pengalaman</em>. Definisi mereka layak dihafal:</p>
+
+      <div class="callout">
+        <p>"An experience occurs when a company uses <strong>services as the stage</strong> — and <strong>goods as props</strong> — for engaging individuals in a way that creates a <strong>memorable event</strong>."</p>
+        <p class="src">Pine &amp; Gilmore, HBR, 1998</p>
+      </div>
+
+      <p>Kata kuncinya <em>memorable</em>. Barang bersifat <em>tangible</em>, jasa bersifat <em>intangible</em>, pengalaman bersifat <em>memorable</em>. Itu sebabnya pengalaman tidak bisa disalin lewat katalog: yang dijual adalah jejak di ingatan, bukan objek di rak.</p>
+
+      <h3>Progresi nilai ekonomi — dan padanannya di toko material</h3>
+
+      <div class="ladder">
+        <div class="rung" style="--h:44px;--w:20%">
+          <div class="rung-bar"><span class="idx">01</span></div>
+          <div>
+            <span class="rung-name">Komoditas<span class="rung-verb">diekstraksi</span></span>
+            <p class="rung-ex">Pasir, semen curah, kayu gelondongan. Dibeli per kubik, dibandingkan per rupiah.</p>
+          </div>
+        </div>
+        <div class="rung" style="--h:74px;--w:40%">
+          <div class="rung-bar"><span class="idx">02</span></div>
+          <div>
+            <span class="rung-name">Barang<span class="rung-verb">dibuat</span></span>
+            <p class="rung-ex">Cat kalengan bermerek, keramik ukuran standar, perkakas. Ada merek, tetap dibanding harga.</p>
+          </div>
+        </div>
+        <div class="rung" style="--h:110px;--w:60%">
+          <div class="rung-bar"><span class="idx">03</span></div>
+          <div>
+            <span class="rung-name">Jasa<span class="rung-verb">diantar</span></span>
+            <p class="rung-ex">Potong kayu, pencampuran warna, antar, pasang, garansi. Ini posisi mayoritas peritel hari ini.</p>
+          </div>
+        </div>
+        <div class="rung" style="--h:150px;--w:80%">
+          <div class="rung-bar"><span class="idx">04</span></div>
+          <div>
+            <span class="rung-name">Pengalaman<span class="rung-verb">dipentaskan</span></span>
+            <p class="rung-ex">Room set yang bisa dimasuki, kelas DIY, klinik warna, area uji coba alat. Pelanggan ikut hadir di dalamnya.</p>
+          </div>
+        </div>
+        <div class="rung" style="--h:196px;--w:100%">
+          <div class="rung-bar"><span class="idx">05</span></div>
+          <div>
+            <span class="rung-name">Transformasi<span class="rung-verb">dipandu</span></span>
+            <p class="rung-ex">"Rumah Anda selesai." Pendampingan proyek dari ide, anggaran, material, sampai hasil jadi — dan bukti sebelum/sesudah.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ladder-axis">
+        <span>Diferensiasi rendah · sensitif harga</span>
+        <span>Diferensiasi tinggi · harga premium</span>
+      </div>
+
+      <div class="panel">
+        <h4>Contoh kanonik: secangkir kopi</h4>
+        <p>Biji kopi mentah bernilai sekitar <span class="num">2–3 sen</span> per cangkir sebagai komoditas. Disangrai, digiling, dikemas: naik ke <span class="num">10–20 sen</span>. Diseduh dan disajikan sebagai jasa: <span class="num">$1</span> ke atas. Diminum di Caffè Florian, Piazza San Marco, Venesia: <span class="num">lebih dari $10</span>. Input fisiknya identik. Yang berubah cuma posisi di tangga.</p>
+        <p><strong>Padanan lokalnya:</strong> kopi curah di pasar → kopi bubuk kemasan → kopi seduh warung → kopi di kedai spesialti dengan barista, pilihan single origin, dan sesi <em>cupping</em>. Rentang harganya belasan sampai puluhan kali lipat di kota yang sama.</p>
+      </div>
+
+      <h3>Model "4 Realms of Experience"</h3>
+      <p>Ini kerangka operasional yang bisa langsung dipakai menilai desain toko. Pine &amp; Gilmore memetakan pengalaman di dua sumbu: <strong>partisipasi pelanggan</strong> (pasif ↔ aktif) dan <strong>jenis koneksi</strong> (absorpsi — pengalaman masuk ke pelanggan ↔ imersi — pelanggan masuk ke dalam pengalaman).</p>
+
+      <div class="realms">
+        <div class="rx-corner" aria-hidden="true"></div>
+        <div class="rx-col">Partisipasi Pasif</div>
+        <div class="rx-col">Partisipasi Aktif</div>
+
+        <div class="rx-row">Absorpsi</div>
+        <div class="quad">
+          <span class="quad-name">Entertainment</span>
+          <span class="tag quad-axis">Pasif · Absorpsi</span>
+          <p>Pelanggan menyerap sesuatu yang disajikan. Menonton, mendengar, menikmati.</p>
+          <p class="ex"><b>Di toko material</b>Demo alat oleh teknisi, layar besar berisi transformasi rumah, live music akhir pekan di area kafe.</p>
+        </div>
+        <div class="quad">
+          <span class="quad-name">Educational</span>
+          <span class="tag quad-axis">Aktif · Absorpsi</span>
+          <p>Pelanggan aktif terlibat dan pulang membawa kemampuan baru. Realm dengan biaya paling murah dan efek loyalitas paling tinggi.</p>
+          <p class="ex"><b>Di toko material</b>Kelas pasang wallpaper, klinik "hitung kebutuhan cat", workshop anak, sertifikat kecil untuk tukang binaan.</p>
+        </div>
+
+        <div class="rx-row">Imersi</div>
+        <div class="quad">
+          <span class="quad-name">Esthetic</span>
+          <span class="tag quad-axis">Pasif · Imersi</span>
+          <p>Pelanggan berada <em>di dalam</em> sebuah lingkungan dan hanya ingin menikmatinya. Ini realm yang paling sering dikira "dekorasi" — padahal ini fondasi dwell time.</p>
+          <p class="ex"><b>Di toko material</b>Room set lengkap yang boleh diduduki, pencahayaan yang menyerupai rumah nyata, jalur berjalan yang enak, aroma dan akustik yang ditata.</p>
+        </div>
+        <div class="quad">
+          <span class="quad-name">Escapist</span>
+          <span class="tag quad-axis">Aktif · Imersi</span>
+          <p>Pelanggan masuk dan <em>mengubah</em> lingkungan itu. Realm paling dalam, dan paling jarang dieksekusi peritel.</p>
+          <p class="ex"><b>Di toko material</b>Konfigurator dapur yang bisa disusun sendiri, bilik uji cat berukuran nyata, meja kerja tempat pelanggan memotong dan merakit sendiri.</p>
+        </div>
+      </div>
+      <p class="src">Kerangka: Pine &amp; Gilmore (1998, 1999). Contoh penerapan: penulis.</p>
+
+      <p><strong>"Sweet spot"</strong> ada di tengah — pengalaman terkaya menyentuh keempat realm sekaligus. Sebuah kelas DIY yang baik, misalnya, sekaligus mendidik (educational), berlangsung di ruang yang tertata (esthetic), dipandu instruktur yang menghibur (entertainment), dan berakhir dengan peserta membawa pulang benda buatannya sendiri (escapist). Satu program, empat realm. Itu ukuran kualitas desain pengalaman — bukan seberapa mahal materialnya.</p>
+
+      <h3>Mengapa pengalaman bisa dijual lebih mahal: "experience premium"</h3>
+      <p>Argumen teoretisnya: penawaran yang terdiferensiasi dan relevan dengan kebutuhan pelanggan bergerak dari <em>market price</em> ke <em>premium pricing</em>. Angka empirisnya datang dari riset PwC <em>"Experience is Everything"</em> atas 15.000 responden global:</p>
+
+      <div class="stats">
+        <div class="stat"><span class="fig">16%</span><span class="cap">premium harga yang bersedia dibayar untuk pengalaman yang baik</span><span class="src">PwC, Consumer Intelligence Series</span></div>
+        <div class="stat"><span class="fig">73%</span><span class="cap">menyebut pengalaman sebagai faktor penting dalam keputusan beli — di bawah harga dan kualitas produk</span><span class="src">PwC</span></div>
+        <div class="stat"><span class="fig">43%</span><span class="cap">bersedia bayar lebih untuk kenyamanan; 42% untuk pelayanan yang ramah dan menyambut</span><span class="src">PwC</span></div>
+        <div class="stat"><span class="fig">65%</span><span class="cap">konsumen AS menilai pengalaman positif lebih berpengaruh daripada iklan yang bagus</span><span class="src">PwC</span></div>
+      </div>
+
+      <p>Perhatikan baris kedua: pengalaman <strong>tidak menggantikan</strong> harga dan kualitas produk — ia menempel di atasnya. Ini penting untuk pasar Indonesia dan akan kita bahas lagi di bagian 05. Premium 16% juga bukan izin menaikkan harga 16% di semua SKU; ia adalah ruang margin yang muncul pada kategori yang tepat (barang bermerek, proyek, jasa pemasangan) ketika pengalamannya benar-benar dirasakan.</p>
+
+      <h3>Anak tangga kelima: transformasi</h3>
+      <p>Pine &amp; Gilmore menambahkan tahap kelima: <strong>transformasi</strong>, di mana pengalaman menjadi bahan mentah untuk memandu pelanggan mencapai aspirasinya — membantu mereka <em>menjadi</em> sesuatu. Nilainya, menurut mereka, jauh melampaui tahap mana pun sebelumnya, karena yang berubah adalah pelanggannya sendiri, bukan produknya.</p>
+
+      <div class="callout">
+        <p><strong>Ini peluang paling besar dan paling terlewat di kategori Bapak.</strong> Gym menjual transformasi tubuh. Universitas menjual transformasi karier. Toko home improvement duduk persis di atas transformasi rumah — dan hampir semuanya masih berhenti di anak tangga ketiga (jasa potong dan antar). Pergeseran narasinya: dari "kami menjual cat, keramik, dan perkakas" menjadi "kami memandu rumah Anda selesai" — dengan konsultasi, perencanaan anggaran, jadwal proyek, dan dokumentasi sebelum–sesudah sebagai buktinya.</p>
+      </div>
+    </section>
+
+    <!-- ============ 02 ============ -->
+    <section id="s2">
+      <div class="sec-head"><span class="sec-num">02</span><h2>Kapan mulai boom</h2></div>
+
+      <p>Ada jarak panjang antara <em>kapan teorinya lahir</em> dan <em>kapan ia jadi arus utama</em>. Memahami jarak ini berguna: sebagian keberatan yang muncul di internal ("ini kan wacana lama") justru terjawab oleh fakta bahwa adopsi praktisnya baru satu dekade terakhir.</p>
+
+      <ol class="tl">
+        <li>
+          <span class="yr">1998–1999</span>
+          <span class="ev">Kelahiran istilah</span>
+          <p>Artikel HBR terbit Juli–Agustus 1998, disusul buku <em>The Experience Economy</em> (1999). Awalnya diserap dunia manajemen dan pariwisata, belum ritel.</p>
+        </li>
+        <li>
+          <span class="yr">2000-an</span>
+          <span class="ev">Fase akademik</span>
+          <p>Kerangka 4 realms diuji secara empiris, terutama di riset pariwisata dan perhotelan. Istilah "retailtainment" — perpaduan ritel dan hiburan — mulai beredar di literatur sosiologi konsumsi akhir 1990-an dan menyebar pada dekade ini.</p>
+        </li>
+        <li class="peak">
+          <span class="yr">2011–2016</span>
+          <span class="ev">Boom konsumen: generasi memilih pengalaman</span>
+          <p>Ini titik balik sesungguhnya. Riset Eventbrite bersama Harris Poll menemukan <strong>78% milenial memilih membelanjakan uang untuk pengalaman ketimbang barang</strong>, 72% ingin menambah porsi belanja pengalaman, dan penjualan tiket festival, konser, serta lomba lari berwarna <strong>naik empat kali lipat sejak 2011</strong>. Dengan daya belanja tahunan yang diperkirakan ~US$1,3 triliun, kelompok ini memindahkan "experience economy" dari jurnal ke <em>brief</em> pemasaran.</p>
+        </li>
+        <li class="peak">
+          <span class="yr">2014–2019</span>
+          <span class="ev">Boom ritel: toko mencari alasan untuk ada</span>
+          <p>Narasi "retail apocalypse" memaksa peritel menjawab satu pertanyaan: kenapa orang harus datang? Jawabannya jadi arus utama. Apple meluncurkan <em>Today at Apple</em> pada 2017 dengan visi toko sebagai "modern-day town square" — dan dalam 18 bulan menjalankan lebih dari 18.000 sesi per minggu. Nike membuka House of Innovation 000 di Fifth Avenue New York pada 2018: enam lantai, 68.000 kaki persegi.</p>
+        </li>
+        <li>
+          <span class="yr">2020–2021</span>
+          <span class="ev">Jeda pandemi</span>
+          <p>Pengalaman fisik runtuh, pengalaman digital melonjak. Banyak investasi experiential retail ditunda — dan sebagian keraguan internal yang masih hidup sampai hari ini lahir di periode ini.</p>
+        </li>
+        <li>
+          <span class="yr">2022–2024</span>
+          <span class="ev">Rebound</span>
+          <p>Belanja pengalaman kembali dengan intensitas lebih tinggi: konser, perjalanan, makan di luar. Toko fisik kembali dibuka dengan format yang lebih sadar-pengalaman.</p>
+        </li>
+        <li class="peak">
+          <span class="yr">2025–2026</span>
+          <span class="ev">Fase institusional</span>
+          <p>Experiential retail berhenti jadi eksperimen dan mulai jadi anggaran tetap. Estimasi pasarnya bervariasi tajam tergantung definisi — salah satu proyeksi menempatkannya di <strong>US$130,6 miliar pada 2026 menuju US$315,4 miliar pada 2034</strong> (CAGR ~11,7%), dengan pertumbuhan tahunan 2026 sekitar 13%. Di sisi lain, "experience economy" dalam arti luas diperkirakan bergerak dari ~US$810 miliar (2025) ke ~US$1,2 triliun (2035). Di Jakarta, CBRE mendeskripsikan transformasi ritel yang <em>experience-led</em>: mal bergeser dari model transaksional ke ekosistem berbasis pengalaman, dengan retailtainment dan F&amp;B sebagai penggerak utama lalu lintas pengunjung.</p>
+        </li>
+      </ol>
+
+      <div class="callout warn">
+        <p><strong>Catatan kehati-hatian atas angka pasar.</strong> Estimasi ukuran "experiential retail" dari berbagai penyedia riset berbeda sampai lebih dari dua kali lipat untuk tahun dasar yang sama (mis. ~US$131–132 miliar pada 2025–2026, tetapi proyeksi 2034/2035 berkisar US$315 miliar sampai US$543 miliar). Perbedaannya bersumber dari definisi ruang lingkup, bukan dari data yang lebih baik. Gunakan angka-angka ini untuk menunjukkan <em>arah dan momentum</em>, jangan untuk menyusun proyeksi pendapatan internal.</p>
+      </div>
+
+      <p><strong>Jawaban ringkas atas pertanyaan "kapan mulai boom":</strong> teorinya 1998; boom perilaku konsumen sekitar 2011–2016; boom penerapan di ritel 2014–2019; jeda 2020–2021; dan fase pelembagaan — termasuk di Indonesia — sejak 2023 sampai sekarang. Artinya kategori home improvement Indonesia bukan sedang terlambat mengejar tren lama, melainkan sedang berada tepat di gelombang penerapannya.</p>
+    </section>
+
+    <!-- ============ 03 ============ -->
+    <section id="s3">
+      <div class="sec-head"><span class="sec-num">03</span><h2>Aplikasi di ritel: dari titik transaksi ke ruang pengalaman</h2></div>
+
+      <h3>Perubahan peran toko fisik</h3>
+      <p>Ketika stok, harga, dan pengiriman bisa disamai marketplace, tiga fungsi klasik toko — memajang, menyimpan, menagih — kehilangan daya tawar. Yang tersisa dan tidak bisa disalin adalah tiga hal: <strong>mencoba</strong>, <strong>bertanya</strong>, dan <strong>membayangkan</strong>. Ketiganya hanya terjadi kalau toko dirancang sebagai ruang pengalaman.</p>
+
+      <p>Angka-angka berikut adalah amunisi terkuat untuk argumen ini, karena berbicara dalam bahasa alokasi anggaran:</p>
+
+      <div class="stats">
+        <div class="stat"><span class="fig">&gt;80%</span><span class="cap">penjualan ritel masih terjadi di toko fisik — tetapi toko hanya menerima <strong>3,3%</strong> dari anggaran retail media</span><span class="src">Eightx, pasar AS 2026</span></div>
+        <div class="stat"><span class="fig">48%</span><span class="cap">konsumen menemukan merek baru di toko fisik, vs 41% di situs e-commerce</span><span class="src">Eightx</span></div>
+        <div class="stat"><span class="fig">31,5%</span><span class="cap">langsung membeli saat menemukan produk di toko, vs 19,1% di situs ritel</span><span class="src">Eightx</span></div>
+        <div class="stat"><span class="fig">+37%</span><span class="cap">kenaikan trafik situs yang dilaporkan peritel setelah membuka toko fisik</span><span class="src">Shopify Commerce Trends 2023</span></div>
+      </div>
+
+      <p>Kesenjangan 80% berbanding 3,3% itu adalah inti argumennya: toko fisik adalah aset media yang paling produktif sekaligus yang paling kurang didanai sebagai media. Selama toko dianggap sekadar saluran distribusi, investasi di dalamnya akan selalu tampak sebagai biaya. Begitu ia diperlakukan sebagai media, investasi yang sama bisa dibandingkan langsung dengan belanja iklan digital — dan biasanya menang.</p>
+
+      <h3>Showrooming vs webrooming</h3>
+      <div class="scroller">
+        <table>
+          <caption>Dua perilaku lintas kanal dan implikasinya bagi desain toko</caption>
+          <thead>
+            <tr><th style="width:16%">Perilaku</th><th style="width:26%">Pola</th><th style="width:24%">Data</th><th>Implikasi untuk toko</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="k">Showrooming</td>
+              <td>Melihat dan mencoba di toko, lalu membeli online karena lebih murah.</td>
+              <td>Ancaman klasik peritel fisik; paling tajam pada barang terstandar dengan harga transparan.</td>
+              <td>Lawan dengan hal yang tidak bisa dikirim: jasa pemasangan, garansi, potong/ukur di tempat, ketersediaan hari ini, dan keanggotaan yang membuat harga di toko setara atau lebih baik.</td>
+            </tr>
+            <tr>
+              <td class="k">Webrooming</td>
+              <td>Riset online, membeli di toko. Perilaku dominan pada pembelian pertimbangan tinggi.</td>
+              <td>~69% pengguna ponsel usia 18–36 dan ~71% usia 37–48 melakukan webrooming; sekitar tiga perempat pembelanja meriset produk secara online sebelum membeli; 24% berinteraksi dengan produk di toko sebelum membeli. <span class="src">ReadyCloud; Shopify</span></td>
+              <td>Ini pola yang berlaku untuk material bangunan dan furnitur. Tugas toko bukan memperkenalkan produk, tetapi <strong>menutup keraguan terakhir</strong>: tekstur asli, warna di bawah cahaya nyata, skala di ruang nyata, dan orang yang bisa ditanya.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Konsekuensi desainnya besar. Kalau mayoritas pelanggan datang <em>sesudah</em> riset online, maka toko yang disusun seperti gudang berlabel harga sedang menjawab pertanyaan yang sudah terjawab. Yang belum terjawab justru: "kalau dipasang di rumah saya, hasilnya seperti apa?" Itu pertanyaan yang hanya bisa dijawab oleh room set, sampel besar, simulasi cahaya, dan konsultan — yakni oleh pengalaman.</p>
+
+      <div class="callout deep">
+        <p><strong>Definisi ulang KPI toko yang layak diperjuangkan:</strong> toko bukan hanya tempat menutup transaksi, tapi tempat menutup <em>keputusan</em>. Sebagian transaksi hasil keputusan itu akan mendarat di kanal lain — dan itu tetap harus dihitung sebagai kontribusi toko. Tanpa atribusi lintas kanal, tim Concept Store akan selamanya dinilai dari struk yang kebetulan tercetak di gerainya.</p>
+      </div>
+    </section>
+
+    <!-- ============ 04 ============ -->
+    <section id="s4">
+      <div class="sec-head"><span class="sec-num">04</span><h2>Studi kasus</h2></div>
+
+      <h3>Global: siapa memainkan realm mana</h3>
+      <div class="scroller">
+        <table>
+          <caption>Enam model yang sudah terbukti — dan apa yang bisa dipindahkan</caption>
+          <thead>
+            <tr><th style="width:13%">Pemain</th><th style="width:14%">Realm dominan</th><th style="width:29%">Mekanisme</th><th style="width:22%">Bukti</th><th>Pelajaran</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="k">IKEA</td>
+              <td><span class="tag d">Esthetic</span> <span class="tag d">Escapist</span></td>
+              <td>Room set lengkap yang bisa dimasuki, jalur satu arah berkelok, gudang tanpa jendela sehingga persepsi waktu memudar. Pelanggan "berjalan masuk ke dalam iklan majalah" dan bisa duduk di sofanya.</td>
+              <td>Efek Gruen: pengunjung tenggelam dalam pengalaman dan lupa tujuan awal, sehingga keranjang berisi barang yang tak direncanakan.</td>
+              <td>Merchandising berbasis ruangan memicu pembelian lintas kategori dan rasa "lengkap". Ini mekanisme paling langsung bisa ditiru di kategori rumah.</td>
+            </tr>
+            <tr>
+              <td class="k">Nike<br><span class="src">House of Innovation</span></td>
+              <td><span class="tag d">Escapist</span> <span class="tag d">Educational</span></td>
+              <td>Flagship di New York (2018), Shanghai, dan Paris. Arena dengan ubin yang bisa dikonfigurasi ulang, Sneaker Lab, dan area kustomisasi "Nike by You". Seluruh alur dirancang mengubah pengunjung jadi anggota.</td>
+              <td>Anggota NikePlus berbelanja <strong>3× lebih banyak</strong> di Nike.com; di Shanghai ada satu anggota baru mengunduh aplikasi <strong>tiap dua menit</strong>; pengunjung toko fisik berbelanja <strong>30% lebih banyak secara online</strong> setelahnya.</td>
+              <td><strong>Model ROI terbaik yang ada.</strong> Pengalaman → keanggotaan → belanja lintas kanal yang terukur. Ini persis jembatan bukti yang dibutuhkan tim Concept Store.</td>
+            </tr>
+            <tr>
+              <td class="k">Apple</td>
+              <td><span class="tag d">Educational</span> <span class="tag d">Entertainment</span></td>
+              <td><em>Today at Apple</em>: sesi gratis rutin — foto, musik, kode, kelas anak, kelas guru — di toko yang diposisikan sebagai "alun-alun kota modern".</td>
+              <td>Lebih dari <strong>18.000 sesi per minggu</strong> dalam 18 bulan pertama sejak peluncuran 2017.</td>
+              <td>Program adalah produk, bukan hiasan. Kalender acara yang berjalan tiap minggu jauh lebih kuat daripada satu instalasi mahal sekali setahun.</td>
+            </tr>
+            <tr>
+              <td class="k">Eataly</td>
+              <td><span class="tag d">Educational</span> <span class="tag d">Entertainment</span></td>
+              <td>Model "Eat, Shop, Learn" (Oscar Farinetti, Turin, 2007): satu lokasi berisi konter spesialis, area ritel, restoran, dan kelas.</td>
+              <td>Mampu menetapkan harga premium di industri bermargin tipis, dengan pendapatan dari tiga sumber di meter persegi yang sama.</td>
+              <td>Edukasi bisa dimonetisasi langsung, bukan hanya jadi biaya pemasaran. Satu meter persegi bisa menghasilkan tiga jenis pendapatan.</td>
+            </tr>
+            <tr>
+              <td class="k">MUJI</td>
+              <td><span class="tag d">Esthetic</span></td>
+              <td>Filosofi "tanpa merek" diwujudkan lewat toko sebagai simpul budaya, bukan sekadar ruang jual: acara dan kuliah di dalam toko menggantikan iklan. Flagship Ginza (2019) menggabungkan ritel, pasar bahan pangan, restoran, galeri, bar, dan hotel.</td>
+              <td>Konsistensi filosofi yang berfungsi sebagai parit kompetitif; merek dibangun lewat demonstrasi, bukan belanja iklan.</td>
+              <td>Realm esthetic adalah yang <strong>paling murah</strong> untuk dikuasai — ia soal disiplin, bukan anggaran. Pilihan material, cahaya, dan keheningan sudah membentuk pengalaman.</td>
+            </tr>
+            <tr>
+              <td class="k">Home Depot<br>&amp; Leroy Merlin</td>
+              <td><span class="tag d">Educational</span> <span class="tag b">Transformasi</span></td>
+              <td>Home Depot menjalankan program workshop DIY gratis — termasuk kelas anak dan versi daring sesuai permintaan. Leroy Merlin (Grup Adeo) memakai pendekatan <em>project-based retailing</em>: solusi ujung-ke-ujung dari perencanaan, material, sampai dukungan pemasangan.</td>
+              <td>Keduanya adalah pemain terbesar di pasarnya masing-masing (Amerika Utara dan Eropa).</td>
+              <td><strong>Ini benchmark paling relevan.</strong> Leroy Merlin praktis sudah beroperasi di anak tangga kelima: yang dijual proyek, bukan produk.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Indonesia: dua arah yang berlawanan di kategori yang sama</h3>
+
+      <div class="panel">
+        <h4>AZKO (eks Ace Hardware Indonesia · PT Aspirasi Hidup Indonesia, ACES)</h4>
+        <p>Lisensi Ace Hardware yang berjalan sejak 1996 berakhir 31 Desember 2024. Sepanjang 2025, sekitar <strong>254 gerai di 75 kota</strong> berganti identitas menjadi AZKO. Strategi barunya dinyatakan secara eksplisit sebagai upaya menciptakan <em>inspiration-driven demand</em> melalui konsep <strong>experience store</strong> — gerai pengalaman pertama dibuka di Living World Alam Sutera, dengan rencana empat experience store hasil renovasi pada 2025 dan penyesuaian desain di 20 gerai lain.</p>
+        <p><strong>Angkanya:</strong> Indo Premier mencatat SSSG sepanjang 2025 di level <strong>−4,2%</strong>, dengan semester II/2025 sekitar <strong>−6%</strong>. Lalu pada semester I/2026, SSSG kembali positif di <strong>+2,2%</strong>, dan rebranding dinilai tuntas dengan produktivitas gerai kembali ke level 2024.</p>
+        <p class="src">Sumber: Bareksa, Bisnis, IDNFinancials, receh.in</p>
+      </div>
+
+      <div class="callout">
+        <p><strong>Ini kasus paling berguna untuk situasi Bapak.</strong> Kompetitor terdekat di kategori yang sama menjalani transformasi berbasis pengalaman, dan angkanya <em>turun dulu selama empat sampai enam kuartal</em> sebelum pulih. Artinya dua hal: (1) kurva-J itu nyata dan bisa diantisipasi, jadi jangan menjanjikan hasil sekuartal; (2) jika manajemen menuntut bukti cepat, tunjukkan bahwa pemain sebesar ACES pun menerima penurunan SSSG sebagai biaya transisi — dan tetap melanjutkan, karena metrik pemulihannya terbaca.</p>
+      </div>
+
+      <div class="panel">
+        <h4>MR.DIY Indonesia (MDIY) — model tandingannya</h4>
+        <p>IPO 19 Desember 2024. Kuartal I/2025 pendapatan naik 57% YoY jadi Rp1,8 triliun dengan laba bersih melonjak 160% YoY jadi Rp226 miliar; semester I/2025 pendapatan Rp3,7 triliun (+16,5% YoY) dengan 47,6 juta transaksi (+11,6%). Gerai ke-1.200 diresmikan Desember 2025. Strategi utamanya dinyatakan sebagai <strong>price-to-value</strong> plus ekspansi jaringan.</p>
+        <p><strong>Pelajarannya justru penting:</strong> pengalaman bukan satu-satunya jalan menang. MR.DIY membuktikan bahwa harga, ketersediaan, dan kepadatan gerai adalah strategi yang sah dan sangat efektif. Kesimpulan strategisnya bukan "semua orang harus jadi experiential", melainkan: <em>Anda tidak bisa mengalahkan MR.DIY di lajur harga</em>. Kalau lajur harga sudah dikuasai pemain lain, lajur pengalaman bukan kemewahan — ia satu-satunya lajur yang tersisa untuk mempertahankan margin.</p>
+        <p class="src">Sumber: IDXChannel, Bisnis, Liputan6, siaran pers MR.DIY</p>
+      </div>
+
+      <div class="panel">
+        <h4>IKEA Indonesia (via DFI Retail Nusantara / HERO) — peringatan yang perlu didengar</h4>
+        <p>Pada Januari–September 2025 IKEA masih membukukan kerugian di Indonesia, meski manajemen menyatakan nilai kerugian berhasil ditekan lebih dari 50% secara tahunan. Pendapatan ritel HERO tumbuh 7,06% menjadi Rp3,93 triliun pada periode yang sama. Manajemen menyebut secara terbuka bahwa <strong>mayoritas konsumen yang berkunjung tidak membeli furnitur</strong>, dan bahwa toko fisik tetap menjadi fondasi membangun pengalaman pelanggan sekaligus mendorong kunjungan — dengan penguatan kanal digital (termasuk toko resmi di Shopee sejak September 2025) dan pengembangan format toko yang lebih fleksibel.</p>
+        <p class="src">Sumber: Kontan, Katadata, Bisnis</p>
+      </div>
+
+      <div class="callout warn">
+        <p><strong>Ini risiko utama dari pekerjaan tim Concept Store, dan sebaiknya diakui lebih dulu sebelum orang lain yang mengangkatnya.</strong> Pengalaman yang bagus menghasilkan kunjungan; kunjungan tidak otomatis menghasilkan transaksi. Setiap zona pengalaman wajib punya <em>jalur konversi</em> yang dirancang sengaja: sampel yang bisa dibawa pulang, QR ke keranjang, konsultan yang menutup, penawaran khusus peserta kelas, atau pendaftaran keanggotaan. Tanpa itu, Concept Store akan benar-benar menjadi pusat biaya — persis seperti yang ditakutkan.</p>
+      </div>
+
+      <h3>Catatan soal JSWB</h3>
+      <div class="callout deep">
+        <p>Saya tidak menemukan sumber publik yang dapat diverifikasi mengenai "JSWB" pada riset ini — penelusuran hanya memunculkan entitas lain dengan akronim mirip. Karena itu saya tidak menuliskan klaim apa pun tentangnya, agar dokumen ini tetap bisa dipakai di forum resmi tanpa risiko. Sebagai gantinya, tersedia <a href="#s9">alat audit 4 Realms</a> di bagian akhir: gunakan untuk menilai gerai kita dan gerai JSWB secara berdampingan dari kunjungan lapangan. Kalau Bapak kirimkan catatan pembahasan JSWB sebelumnya, saya bisa lanjutkan jadi analisis kompetitor penuh.</p>
+      </div>
+
+      <p><strong>Protokol kunjungan pembanding</strong> — hal yang perlu diamati dan dicatat dalam satu jam di gerai kompetitor: (1) berapa lama pengunjung rata-rata berhenti di zona non-transaksi; (2) berapa banyak titik "boleh disentuh/dicoba" per 100 m²; (3) apakah ada jadwal acara yang terlihat dan diumumkan; (4) berapa staf yang berperan sebagai konsultan versus penjaga rak; (5) berapa banyak orang memotret sesuatu; (6) apakah ada jalur konversi jelas dari zona pengalaman ke kasir atau ke keanggotaan.</p>
+    </section>
+
+    <!-- ============ 05 ============ -->
+    <section id="s5">
+      <div class="sec-head"><span class="sec-num">05</span><h2>Psikologi konsumen</h2></div>
+
+      <h3>Mengapa pengalaman mengikat lebih kuat daripada diskon</h3>
+      <p>Landasan risetnya kokoh dan sudah dua dekade diuji ulang. Van Boven &amp; Gilovich (<em>"To Do or to Have? That Is the Question"</em>, 2003) menemukan pembelian yang bersifat pengalaman membuat orang lebih bahagia dibanding pembelian material: <strong>57% responden</strong> menyatakan memperoleh kebahagiaan lebih besar dari pembelian pengalaman, berbanding <strong>34%</strong> dari pembelian material, dan <strong>83%</strong> lebih sering "mengunjungi ulang" pengalaman itu di dalam pikiran mereka.</p>
+
+      <p>Tinjauan Gilovich dkk. (2020) merangkum tiga mekanismenya, dan ketiganya punya terjemahan ritel yang langsung:</p>
+      <ol>
+        <li><strong>Pengalaman lebih berkontribusi pada identitas</strong> daripada barang. → Pelanggan yang ikut kelas di toko Anda tidak sekadar membeli dari Anda; ia menjadi "orang yang bisa memasang sendiri". Toko Anda jadi bagian dari cerita dirinya.</li>
+        <li><strong>Pengalaman lebih kebal terhadap perbandingan sosial yang menjatuhkan.</strong> → Riset lanjutan (Carter &amp; Gilovich, 2010) menunjukkan pembelian pengalaman lebih sedikit dibanding-bandingkan dengan alternatif lain. Inilah dasar ilmiah dari argumen anti-diskon: <em>pengalaman menggeser perhatian menjauh dari perbandingan harga</em>.</li>
+        <li><strong>Pengalaman menumbuhkan rasa keterhubungan sosial.</strong> → Alasan mengapa kelas, komunitas tukang, dan acara akhir pekan menghasilkan kunjungan berulang yang tidak bisa dibeli dengan potongan harga.</li>
+      </ol>
+
+      <div class="callout">
+        <p><strong>Efek IKEA</strong> (Norton, Mochon &amp; Ariely) menutup rangkaian ini: orang menilai lebih tinggi benda yang sebagian dirakitnya sendiri. Usaha melahirkan keterikatan. Di kategori home improvement ini bukan analogi — ini deskripsi harfiah dari apa yang pelanggan lakukan. Sebuah meja kerja tempat pelanggan memotong, mengamplas, atau merakit sendiri di dalam toko bukan atraksi; ia adalah mesin pembangkit rasa memiliki <em>sebelum</em> transaksi terjadi.</p>
+      </div>
+
+      <p><strong>Perbandingan mekanismenya:</strong></p>
+      <div class="flip">
+        <div class="from">
+          <h5>Diskon membeli</h5>
+          <ul>
+            <li>Satu transaksi, saat itu juga</li>
+            <li>Jangkar harga baru yang lebih rendah — pelanggan belajar menunggu promo berikutnya</li>
+            <li>Loyalitas yang berpindah begitu ada yang lebih murah</li>
+            <li>Margin tergerus permanen</li>
+            <li>Mudah ditiru dalam hitungan hari</li>
+          </ul>
+        </div>
+        <div class="to">
+          <h5>Pengalaman membeli</h5>
+          <ul>
+            <li>Memori, identitas, dan kebiasaan</li>
+            <li>Jangkar nilai — perbandingan bergeser dari "berapa harganya" ke "apa hasilnya"</li>
+            <li>Kunjungan berulang yang tidak bergantung pada kalender promo</li>
+            <li>Ruang untuk premium pada kategori yang tepat</li>
+            <li>Butuh berbulan-bulan untuk ditiru — karena yang ditiru adalah kapabilitas, bukan harga</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Kelas menengah aspirasional Indonesia: pengalaman atau harga?</h3>
+      <p>Jawaban jujurnya: <strong>keduanya, tapi pada momen yang berbeda</strong> — dan justru di situ peluangnya.</p>
+
+      <p>Kondisi lapangannya berat. Jumlah kelas menengah menyusut dari 57,33 juta (2019) ke 47,85 juta (2024) dan turun lagi ke sekitar 46,7 juta (2025). Bank Dunia mencatat hampir separuh penduduk Indonesia berada di kelompok <em>aspiring middle class</em>: berpenghasilan tetap tetapi dengan tabungan rapuh — satu guncangan dari kembali turun. Rentang pengeluaran kelas menengah 2025 berkisar Rp2,2 juta–Rp10,9 juta per kapita per bulan. Untuk pos gaya hidup (fesyen, rekreasi, dan sejenisnya), mayoritas membelanjakan Rp500 ribu–Rp1,5 juta per bulan. Keyakinan konsumen masih tinggi (indeks 126,4 pada Februari 2025), tetapi tabungan menurun sejak 2020 dan biaya hidup naik, sehingga sensitivitas harga meningkat.</p>
+
+      <p>Yang sering terlewat adalah satu data lain: <strong>preferensi terhadap merek domestik turun dari 57% (2024) ke 33% (2025), sementara keterbukaan terhadap merek baru naik dari 35% ke 45%</strong>. Loyalitas sedang cair. Itu buruk bagi merek mapan yang diam, tetapi sangat baik bagi merek yang memberi alasan baru untuk dicoba.</p>
+
+      <div class="callout deep">
+        <p><strong>Sintesisnya — dan ini posisi yang saya rekomendasikan dibawa ke manajemen:</strong></p>
+        <p>Kelas menengah aspirasional Indonesia bukan "sensitif harga" dalam arti mencari yang termurah. Mereka <em>value-seeking</em>: mereka berhitung ketat, tapi bersedia mengeluarkan uang lebih untuk keputusan yang terasa benar. Karena jumlah kunjungan berkurang dan setiap keputusan belanja jadi lebih dipertimbangkan, pengalaman justru <strong>naik</strong> nilainya — perannya bergeser dari hiburan menjadi <em>pengurang risiko</em>. Bagi orang yang menabung enam bulan untuk merenovasi satu ruangan, salah pilih warna atau salah ukur bukan kekecewaan kecil; itu kerugian besar. Toko yang membuat mereka yakin sebelum membayar sedang menjual sesuatu yang jauh lebih berharga daripada potongan 10%.</p>
+        <p>Tambahan: pada segmen aspirasional, rumah adalah penanda status yang paling terlihat dan paling layak dibagikan. Pengalaman yang menghasilkan hasil yang pantas difoto berlipat ganda nilainya. Dan bagi segmen yang memangkas belanja tetapi tidak memangkas aspirasi, toko yang nyaman dan gratis untuk dikunjungi memenangkan <em>pangsa waktu</em> lebih dulu — pangsa dompet menyusul.</p>
+      </div>
+
+      <p><strong>Cara membaginya secara operasional:</strong> pertahankan kredibilitas harga pada SKU staple yang sering dibandingkan (semen, cat dasar, perkakas umum) — di sini bertarung harga adalah keharusan. Tempatkan investasi pengalaman pada kategori pertimbangan tinggi dan bermargin lebih baik (keramik, lantai, pencahayaan, dapur, wallpaper, jasa pemasangan). Pengalaman tidak dipakai untuk menaikkan harga di seluruh toko; ia dipakai untuk memenangkan keranjang besar dan proyek.</p>
+    </section>
+
+    <!-- ============ 06 ============ -->
+    <section id="s6">
+      <div class="sec-head"><span class="sec-num">06</span><h2>Cara mengukur dampaknya</h2></div>
+
+      <p>Bagian ini menjawab masalah yang Bapak sebut: pekerjaan Concept Store belum terlihat oleh pemilik. Diagnosisnya hampir selalu sama — pekerjaannya dilaporkan dalam satuan <em>aktivitas</em> (gerai direnovasi, zona dibuat, acara digelar), sementara pemilik membaca dalam satuan <em>hasil</em> (SSSG, margin, trafik, produktivitas per meter). Selama dua bahasa ini tidak dijembatani, hasil sebagus apa pun akan tetap tak terbaca.</p>
+
+      <h3>Jembatan ROI: tiga lapis metrik</h3>
+      <div class="bridge">
+        <div class="tier">
+          <h5>Lapis 1 · Sinyal keterlibatan</h5>
+          <span class="when">Mingguan · milik tim</span>
+          <ul>
+            <li>Dwell time zona pengalaman</li>
+            <li>Tingkat partisipasi program (peserta ÷ kapasitas)</li>
+            <li>Jumlah interaksi sentuh/coba</li>
+            <li>UGC: unggahan, tag lokasi, ulasan</li>
+            <li>Peta panas lintasan pengunjung</li>
+          </ul>
+        </div>
+        <div class="tier">
+          <h5>Lapis 2 · Perubahan perilaku</h5>
+          <span class="when">Bulanan · dibagi dengan operasi</span>
+          <ul>
+            <li>Conversion rate pengunjung zona</li>
+            <li>Attach rate produk terkait</li>
+            <li>Nilai keranjang rata-rata</li>
+            <li>Repeat visit rate 30/90 hari</li>
+            <li>Konversi jadi anggota</li>
+            <li>NPS dan CSAT khusus gerai</li>
+          </ul>
+        </div>
+        <div class="tier">
+          <h5>Lapis 3 · Hasil finansial</h5>
+          <span class="when">Kuartalan · bahasa pemilik</span>
+          <ul>
+            <li>SSSG gerai pengalaman vs gerai pembanding</li>
+            <li>Penjualan per meter persegi</li>
+            <li>Bauran margin (pergeseran ke kategori premium)</li>
+            <li>Customer lifetime value per kohor</li>
+            <li>Biaya per kunjungan berkualitas vs CPM digital</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Aturannya: <strong>jangan pernah melaporkan Lapis 1 sendirian.</strong> Dwell time tanpa attach rate terdengar seperti pembelaan diri. Dwell time yang naik 22%, diikuti attach rate naik 9%, diikuti SSSG gerai itu unggul 3 poin atas gerai pembanding — itu argumen yang tidak bisa dibantah.</p>
+
+      <h3>Bukti bahwa rantai ini bekerja</h3>
+      <div class="stats">
+        <div class="stat"><span class="fig">1 : 1,3</span><span class="cap">setiap kenaikan dwell time 1% berasosiasi dengan kenaikan penjualan sekitar 1,3%</span><span class="src">Retail Sensing</span></div>
+        <div class="stat"><span class="fig">+40%</span><span class="cap">durasi kunjungan pada toko dengan pengalaman imersif, disertai penjualan ~30% lebih tinggi dibanding format konvensional</span><span class="src">Data industri</span></div>
+        <div class="stat"><span class="fig">6–10%</span><span class="cap">pertumbuhan pendapatan lebih tinggi pada concept store dengan elemen eksperiensial dibanding format tradisional</span><span class="src">Data industri</span></div>
+        <div class="stat"><span class="fig">3×</span><span class="cap">belanja daring anggota NikePlus dibanding pembelanja biasa — hasil hilir dari pengalaman di toko</span><span class="src">Nike</span></div>
+      </div>
+
+      <div class="callout warn">
+        <p><strong>Gunakan angka ini dengan jujur.</strong> Sebagian besar berasal dari penyedia teknologi ritel dan laporan industri, bukan dari studi peer-review, dan semuanya bersifat korelasional: toko yang berinvestasi pada pengalaman biasanya juga toko dengan lokasi, stok, dan staf yang lebih baik. Pakai sebagai <em>hipotesis yang akan diuji di gerai sendiri</em>, bukan sebagai janji. Kredibilitas tim di hadapan pemilik justru naik kalau batasan ini disebut lebih dulu — dan itu yang membedakan laporan strategi dari brosur.</p>
+      </div>
+
+      <h3>Kamus metrik</h3>
+      <div class="scroller">
+        <table>
+          <caption>Definisi yang perlu disepakati sebelum pengukuran dimulai</caption>
+          <thead>
+            <tr><th style="width:19%">Metrik</th><th style="width:26%">Rumus</th><th style="width:19%">Sumber data</th><th style="width:11%">Kadens</th><th>Yang dibuktikan</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="k">Dwell time zona</td><td class="f">Σ menit di zona ÷ jumlah pengunjung zona</td><td>Penghitung orang, Wi-Fi/kamera, atau pencatatan manual bersampel</td><td>Mingguan</td><td>Desain berhasil menahan perhatian</td></tr>
+            <tr><td class="k">Participation rate</td><td class="f">Peserta program ÷ kapasitas sesi</td><td>Pendaftaran, QR check-in</td><td>Per sesi</td><td>Program relevan, bukan sekadar ada</td></tr>
+            <tr><td class="k">Zone conversion</td><td class="f">Pembeli kategori terkait ÷ pengunjung zona</td><td>POS + penghitung zona</td><td>Bulanan</td><td>Pengalaman menghasilkan transaksi, bukan hanya kunjungan</td></tr>
+            <tr><td class="k">Attach rate</td><td class="f">Struk berisi ≥2 SKU dari zona ÷ total struk zona</td><td>POS, level struk</td><td>Bulanan</td><td>Merchandising berbasis ruangan bekerja</td></tr>
+            <tr><td class="k">Repeat visit rate</td><td class="f">Anggota berkunjung ≥2× dalam 90 hari ÷ total anggota aktif</td><td>Program keanggotaan</td><td>Bulanan</td><td>Loyalitas terbentuk tanpa diskon</td></tr>
+            <tr><td class="k">UGC volume</td><td class="f">Unggahan bertag lokasi + ulasan + penyebutan per bulan</td><td>Pencarian tag lokasi, Google Review</td><td>Bulanan</td><td>Toko layak dibagikan; media gratis</td></tr>
+            <tr><td class="k">NPS gerai</td><td class="f">% Promotor (9–10) − % Detraktor (0–6)</td><td>Survei satu pertanyaan via QR di kasir</td><td>Bulanan</td><td>Kualitas pengalaman yang dirasakan</td></tr>
+            <tr><td class="k">Selisih SSSG</td><td class="f">SSSG gerai konsep − SSSG gerai pembanding</td><td>Keuangan</td><td>Kuartalan</td><td>Dampak inkremental, bukan pasang surut pasar</td></tr>
+            <tr><td class="k">Biaya per kunjungan berkualitas</td><td class="f">(Capex disusutkan + biaya program) ÷ pengunjung yang terlibat</td><td>Keuangan + penghitung</td><td>Kuartalan</td><td>Toko sebagai media, dibandingkan CPM digital</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Desain pembuktian yang bisa dijalankan tanpa teknologi mahal</h3>
+      <ol>
+        <li><strong>Uji berpasangan.</strong> Pilih 2–3 gerai konsep dan pasangkan masing-masing dengan gerai pembanding yang mirip format, luas, dan kelas lokasinya. Yang dilaporkan adalah <em>selisih</em>-nya, bukan angka mentah. Ini satu-satunya cara menjawab keberatan "itu kan karena lokasinya bagus".</li>
+        <li><strong>Jendela sebelum–sesudah.</strong> Ambil baseline 8 minggu sebelum renovasi dan 8 minggu setelahnya, dengan periode musiman yang setara. Ukur baseline <em>sebelum</em> palu pertama diayunkan — ini kesalahan paling mahal dan paling sering terjadi.</li>
+        <li><strong>Kohor keanggotaan.</strong> Tandai anggota yang pernah ikut program, lalu lacak belanja 90 hari berikutnya di semua kanal dibanding kohor yang tidak ikut. Inilah replikasi model Nike dalam skala kecil, dan hasilnya paling meyakinkan.</li>
+        <li><strong>Hitung manual dulu.</strong> Pencatatan bersampel — dua jam, tiga hari dalam seminggu, oleh satu orang dengan tally counter — sudah cukup menghasilkan angka dwell time dan konversi zona yang layak dilaporkan. Jangan tunda pengukuran sambil menunggu anggaran sensor.</li>
+        <li><strong>Satu halaman, tiap bulan, format tetap.</strong> Bentuk yang konsisten membuat tren terbaca. Laporan yang berganti format tiap bulan tidak akan pernah dipercaya.</li>
+      </ol>
+    </section>
+
+    <!-- ============ 07 ============ -->
+    <section id="s7">
+      <div class="sec-head"><span class="sec-num">07</span><h2>Tren terkini</h2></div>
+
+      <h3>Phygital: integrasi fisik–digital</h3>
+      <p>Pada 2026 model phygital tidak lagi dianggap strategi pilihan melainkan keharusan operasional: peritel terdepan berinvestasi pada orkestrasi perjalanan pelanggan yang menyatukan seluler, AR/VR, kios pintar di toko, dan format fisik yang adaptif. Angka adopsinya:</p>
+      <ul>
+        <li><strong>65% konsumen</strong> kini lebih memilih pengalaman belanja phygital dibanding metode tradisional.</li>
+        <li><strong>91,75% pembelanja Gen Z</strong> secara aktif mencari pengalaman berbasis AR.</li>
+        <li><strong>40% konsumen</strong> bersedia membayar harga premium untuk produk yang bisa mereka alami lewat AR.</li>
+        <li>Pasar AR shopping diproyeksikan tumbuh dari US$4,0 miliar (2023) ke <strong>US$54,7 miliar (2033)</strong>, CAGR ~29,9%.</li>
+      </ul>
+
+      <p><strong>Penerapan yang masuk akal untuk kategori rumah</strong> — dan urutannya penting, karena yang di atas jauh lebih murah dan lebih berdampak daripada yang di bawah:</p>
+      <ol>
+        <li><strong>Visualisasi ruang berbasis AR</strong> untuk cat, wallpaper, keramik, dan lantai. Ini kasus penggunaan AR paling terbukti di ritel: mengurangi keraguan pada keputusan yang tidak bisa dikembalikan.</li>
+        <li><strong>Konfigurator dapur/lemari di kios toko</strong> yang menghasilkan daftar material dan estimasi biaya yang bisa langsung dibawa ke kasir.</li>
+        <li><strong>Rak dengan konten</strong>: QR pada display room set yang membuka video pemasangan, daftar belanja lengkap satu ruangan, dan ketersediaan stok.</li>
+        <li><strong>Jembatan keanggotaan</strong>: satu identitas yang mengikat aktivitas di toko dengan riwayat belanja daring. Tanpa ini, seluruh pengukuran di bagian 06 kehilangan tulang punggungnya.</li>
+      </ol>
+
+      <div class="callout warn">
+        <p><strong>Uji satu pertanyaan sebelum menyetujui teknologi apa pun di toko:</strong> "apa pekerjaan yang diselesaikannya untuk pelanggan, dan angka mana yang akan bergerak?" Layar besar yang memutar video merek tidak menjawab keduanya. Simulator warna di dinding yang mengurangi salah pilih menjawab keduanya. Sebagian besar kegagalan phygital adalah kegagalan menjawab pertanyaan ini, bukan kegagalan teknologi.</p>
+      </div>
+
+      <h3>"Third place": toko sebagai tempat ketiga</h3>
+      <p>Konsep ini berasal dari sosiolog Ray Oldenburg lewat <em>The Great Good Place</em> (1989): tempat pertama adalah rumah, tempat kedua adalah tempat kerja, dan tempat ketiga adalah ruang sosial di antara keduanya — kafe, taman, perpustakaan — yang menumbuhkan interaksi komunitas. Starbucks membangun seluruh mereknya di atas gagasan ini.</p>
+      <p>Penerapannya di ritel hari ini: dengan merancang toko sebagai simpul komunitas, peritel menumbuhkan loyalitas yang lebih dalam, menaikkan dwell time, dan menciptakan nilai yang tidak bisa direplikasi belanja daring. Di Jakarta, pergeseran ini sudah terbaca di tingkat properti — CBRE mendeskripsikan mal yang berevolusi menjadi destinasi gaya hidup dengan desain imersif, program yang dikurasi, serta lingkungan yang mendorong interaksi sosial dan pengalaman yang layak dibagikan; retailtainment dan F&amp;B menjadi pendorong utama trafik.</p>
+
+      <p><strong>Versi paling praktis untuk toko home improvement:</strong> kafe kecil dengan meja panjang yang benar-benar bisa dipakai membentangkan denah rumah; komunitas tukang dan kontraktor kecil dengan pertemuan bulanan dan harga anggota; sudut anak agar orang tua bisa berbelanja lebih lama; kalender kelas tetap setiap akhir pekan. Ini bukan biaya hiburan — ini instrumen pangsa waktu, dan pangsa waktu mendahului pangsa dompet.</p>
+    </section>
+
+    <!-- ============ 08 ============ -->
+    <section id="s8">
+      <div class="sec-head"><span class="sec-num">08</span><h2>Implikasi organisasi: dari cost center ke value creator</h2></div>
+
+      <p>Kerangka ekonomi pengalaman memberi tim Concept Store sesuatu yang selama ini tidak dimiliki: <strong>klaim atas hasil bisnis, bukan sekadar atas estetika</strong>. Reposisinya bertumpu pada satu kalimat: tim ini tidak mendekorasi toko — tim ini <em>memproduksi alasan orang datang, dan memindahkan penawaran perusahaan ke anak tangga nilai yang lebih tinggi</em>.</p>
+
+      <h3>Empat pergeseran framing</h3>
+      <div class="flip">
+        <div class="from">
+          <h5>Dibaca sekarang</h5>
+          <ul>
+            <li><strong>Dekorasi.</strong> "Bikin toko bagus." Bagus itu selera, dan selera tidak punya KPI.</li>
+            <li><strong>Capex.</strong> Renovasi masuk sebagai biaya modal yang harus disusutkan — murni beban.</li>
+            <li><strong>Proyek.</strong> Ada awal dan akhir; setelah gunting pita, tim menganggur di mata manajemen.</li>
+            <li><strong>Fungsi pendukung.</strong> Menerima brief dari merchandising dan marketing, tidak punya target sendiri.</li>
+          </ul>
+        </div>
+        <div class="to">
+          <h5>Diposisikan ulang</h5>
+          <ul>
+            <li><strong>Mesin trafik.</strong> Pemilik alasan-untuk-datang, diukur dengan trafik inkremental dan repeat visit rate.</li>
+            <li><strong>Belanja media.</strong> Aset media dengan biaya per kunjungan berkualitas yang bisa diadu dengan CPM digital — ingat: &gt;80% penjualan terjadi di toko, tetapi hanya 3,3% anggaran retail media mendarat di sana.</li>
+            <li><strong>Produk berjalan.</strong> Kalender program mingguan, seperti <em>Today at Apple</em> dengan 18.000 sesi per minggu. Program tidak pernah selesai; ia dirilis, diukur, diperbaiki.</li>
+            <li><strong>Pemilik P&amp;L pengalaman.</strong> Punya target sendiri atas zone conversion, attach rate, dan selisih SSSG gerai konsep.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Klaim strategis yang bisa diambil tim ini</h3>
+      <div class="callout deep">
+        <p>Di kategori home improvement, tim Concept Store adalah kandidat paling alami untuk memiliki <strong>janji transformasi</strong> — anak tangga kelima Pine &amp; Gilmore. Merchandising memiliki barang. Operasi memiliki jasa. Tidak ada yang memiliki pengalaman dan transformasi. Itu wilayah kosong, dan wilayah dengan nilai ekonomi tertinggi. Mengklaimnya bukan perluasan jabatan yang dibuat-buat; ia mengisi celah nyata dalam struktur.</p>
+      </div>
+
+      <h3>Rencana 90 hari agar terbaca oleh pemilik</h3>
+      <ol>
+        <li><strong>Minggu 1–2 · Sepakati definisi.</strong> Kunci kamus metrik di bagian 06 bersama keuangan dan operasi. Metrik yang definisinya masih diperdebatkan tidak akan pernah dipakai mengambil keputusan.</li>
+        <li><strong>Minggu 1–4 · Ambil baseline.</strong> Pencatatan manual bersampel di gerai konsep dan gerai pembanding. Lakukan sebelum perubahan apa pun. Tanpa baseline, tidak ada bukti — hanya pendapat.</li>
+        <li><strong>Minggu 3–10 · Jalankan satu uji berpasangan.</strong> Satu intervensi, satu kategori, dua gerai. Contoh: zona uji warna dengan pencahayaan nyata pada kategori cat. Kecil, terisolasi, terukur.</li>
+        <li><strong>Minggu 4–12 · Luncurkan satu seri program mingguan.</strong> Satu kelas, jam yang sama tiap minggu, kapasitas terbatas, dengan pendaftaran. Konsistensi lebih penting daripada skala. Catat participation rate sejak sesi pertama.</li>
+        <li><strong>Bulan 2 dan 3 · Kirim laporan satu halaman.</strong> Format tetap: tiga lapis metrik, tren terhadap baseline, satu rekomendasi. Tetap kirim meski angkanya belum bagus — kredibilitas dibangun dari konsistensi, bukan dari kabar baik.</li>
+        <li><strong>Akhir bulan 3 · Presentasi jembatan ROI.</strong> Satu halaman berisi rantai sebab-akibat, satu halaman perbandingan biaya per kunjungan versus CPM digital, dan permintaan yang spesifik: perluas ke <em>n</em> gerai dengan anggaran sekian, dengan gerbang keputusan yang jelas.</li>
+      </ol>
+
+      <div class="callout">
+        <p><strong>Soal ekspektasi waktu — sebutkan ini di depan.</strong> AZKO menjalani SSSG −4,2% sepanjang tahun transisinya sebelum kembali ke +2,2%. Kurva-J itu normal dan bisa diperkirakan. Menyampaikannya sejak awal mengubah penurunan sementara dari "bukti kegagalan" menjadi "tahapan yang sudah diperingatkan" — dan itu satu-satunya cara melindungi program dari pembatalan di kuartal kedua.</p>
+      </div>
+
+      <h3>Tiga kalimat penerjemah</h3>
+      <p>Kosakata yang dipakai menentukan bagaimana pekerjaan ini dibaca. Ketika berbicara dengan pemilik:</p>
+      <ul>
+        <li>Alih-alih <em>"kita bikin zona baru yang lebih menarik"</em> → <strong>"kita uji intervensi yang menaikkan attach rate kategori keramik; baseline-nya sudah ada, hasilnya kita baca 8 minggu lagi."</strong></li>
+        <li>Alih-alih <em>"traffic-nya ramai, banyak yang foto-foto"</em> → <strong>"dwell time zona naik 22%, dan konversi zona naik dari 11% ke 14% — selisih SSSG terhadap gerai pembanding 2,8 poin."</strong></li>
+        <li>Alih-alih <em>"butuh budget renovasi"</em> → <strong>"biaya per kunjungan berkualitas di gerai ini Rp X, dibanding biaya akuisisi kunjungan lewat digital Rp Y — dan kunjungan fisik mengonversi lebih cepat."</strong></li>
+      </ul>
+    </section>
+
+    <!-- ============ 09 ============ -->
+    <section id="s9">
+      <div class="sec-head"><span class="sec-num">A</span><h2>Alat audit &amp; sumber</h2></div>
+
+      <h3>Skor 4 Realms: gerai kita vs pembanding</h3>
+      <p>Pakai saat kunjungan lapangan. Nilai 0 (tidak ada sama sekali) sampai 5 (kuat dan konsisten di seluruh gerai) untuk masing-masing realm. Yang paling informatif biasanya bukan totalnya, melainkan <em>realm mana yang kosong di kedua sisi</em> — itu ruang kompetitif yang belum diambil siapa pun.</p>
+
+      <div class="card-tool">
+        <div class="card-tool-head">
+          <h4>Lembar Audit Pengalaman</h4>
+          <p>Angka awal di bawah adalah <strong>contoh pengisian</strong>, bukan data nyata. Klik titik mana pun untuk menggantinya. Penilaian tersimpan di peramban ini saja.</p>
+        </div>
+        <div class="sc-grid" id="scGrid"></div>
+        <div class="sc-foot">
+          <span><span class="t">Total gerai kita</span><span class="v" id="totA">0</span><span class="t">/20</span></span>
+          <span><span class="t">Total pembanding</span><span class="v alt" id="totB">0</span><span class="t">/20</span></span>
+          <button type="button" class="sc-reset" id="scReset">Kosongkan</button>
+          <p class="sc-verdict" id="verdict"></p>
+        </div>
+      </div>
+
+      <h3>Batasan riset ini</h3>
+      <ul>
+        <li>Angka ukuran pasar experiential retail berbeda tajam antarpenyedia riset karena perbedaan definisi ruang lingkup; dipakai untuk arah, bukan untuk proyeksi.</li>
+        <li>Statistik dwell time, uplift penjualan, dan pertumbuhan concept store berasal dari penyedia teknologi dan laporan industri, bukan studi peer-review, dan bersifat korelasional.</li>
+        <li>Data SSSG AZKO bersumber dari catatan riset sekuritas yang dikutip media, bukan dari laporan keuangan perusahaan secara langsung — verifikasi ke laporan resmi ACES sebelum dikutip di forum formal.</li>
+        <li>"JSWB" tidak dapat diverifikasi dari sumber publik dalam riset ini; tidak ada klaim yang dibuat tentangnya.</li>
+        <li>Data kelas menengah Indonesia berasal dari beberapa sumber dengan tahun dasar dan definisi berbeda (BPS, Bank Dunia, survei swasta); tren penyusutannya konsisten, angka absolutnya tidak sepenuhnya setara.</li>
+      </ul>
+
+      <h3>Sumber utama</h3>
+      <div class="sources">
+        <ol>
+          <li>Pine, B. J. II &amp; Gilmore, J. H. (1998). <em>Welcome to the Experience Economy.</em> Harvard Business Review, Juli–Agustus, 97–105. — <a href="https://hbr.org/1998/07/welcome-to-the-experience-economy">hbr.org</a></li>
+          <li>Pine &amp; Gilmore — 4 realms dan tahap transformasi. — <a href="https://srdc.msstate.edu/ecommerce/curricula/exp_economy/module1_4.htm">Southern Rural Development Center</a>; <a href="https://voicesofvr.com/1718-primer-on-the-transformation-economy-with-joe-pine-when-experiences-fulfill-aspirations-meaning-flourishing/">Voices of VR: Primer on the Transformation Economy</a></li>
+          <li>PwC, <em>Experience is Everything</em> (Consumer Intelligence Series, 15.000 responden). — <a href="https://www.pwc.com/us/en/services/consulting/library/consumer-intelligence-series/future-of-customer-experience.html">pwc.com</a></li>
+          <li>Eventbrite &amp; Harris Poll, <em>Millennials Fueling the Experience Economy.</em> — <a href="https://www.eventbrite.com/blog/academy/millennials-fueling-experience-economy/">eventbrite.com</a></li>
+          <li>Van Boven, L. &amp; Gilovich, T. (2003). <em>To Do or to Have? That Is the Question.</em> — <a href="https://www.semanticscholar.org/paper/To-do-or-to-have-That-is-the-question.-Boven-Gilovich/85844562e67d74f1b134ce9ad86f7650d55e5436">Semantic Scholar</a>; tinjauan Gilovich dkk. (2020) — <a href="https://myscp.onlinelibrary.wiley.com/doi/abs/10.1002/arcp.1053">Consumer Psychology Review</a></li>
+          <li>Efek Gruen dan desain toko IKEA. — <a href="https://www.choicehacking.com/2021/01/02/gruen-effect-ikea/">Choice Hacking</a></li>
+          <li>Nike House of Innovation. — <a href="https://about.nike.com/en/newsroom/releases/nike-nyc-house-of-innovation-000">about.nike.com</a>; <a href="https://theonecentre.com/case-studies/nikes-house-of-innovation-stores/">The One Centre</a></li>
+          <li><em>Today at Apple</em> dan konsep town square. — <a href="https://www.macworld.com/article/229945/today-at-apple-sessions-aim-to-make-apple-stores-the-modern-day-town-square.html">Macworld</a>; <a href="https://appleinsider.com/articles/19/01/29/apples-experimental-retail-success-lies-in-improving-a-customers-life-claims-angela-ahrendts">AppleInsider</a></li>
+          <li>Eataly — model "Eat, Shop, Learn". — <a href="https://d3.harvard.edu/platform-rctom/submission/eat-shop-and-learn-how-eataly-became-a-cash-cow/">Harvard Digital Initiative</a></li>
+          <li>MUJI sebagai simpul budaya. — <a href="https://martinroll.com/resources/articles/strategy/muji-the-global-strategy-behind-the-japanese-no-brand-brand/">Martin Roll</a>; <a href="https://globis.eu/the-muji-way/">GLOBIS</a></li>
+          <li>Home Depot DIY Workshops. — <a href="https://www.homedepot.com/c/alp/diy-workshops/sdki">homedepot.com</a>. Leroy Merlin / Adeo dan Kingfisher / B&amp;Q. — <a href="https://equalocean.com/analysis/2023082420101-diy-home-improvement-industry-research">EqualOcean</a></li>
+          <li>AZKO / ACES: rebranding dan SSSG. — <a href="https://www.bareksa.com/berita/saham/2025-01-17/tahun-baru-merek-baru-ace-hardware-rebranding-jadi-azko-segini-target-harga-saham-aces">Bareksa</a>; <a href="https://market.bisnis.com/read/20260723/192/1990464/transformasi-azko-aces-diuji-comeback-ace-hardware">Bisnis</a>; <a href="https://www.idnfinancials.com/news/51893/rebranding-to-azko-take-a-look-at-acess-next-move">IDNFinancials</a></li>
+          <li>MR.DIY Indonesia (MDIY). — <a href="https://www.idxchannel.com/market-news/mr-diy-mdiy-targetkan-jumlah-gerai-tembus-1000-di-2025">IDXChannel</a>; <a href="https://market.bisnis.com/read/20251216/192/1937381/intip-prospek-mr-diy-mdiy-yang-baru-resmikan-toko-ke-1200">Bisnis</a></li>
+          <li>IKEA Indonesia / DFI Retail Nusantara (HERO). — <a href="https://industri.kontan.co.id/news/ikea-jadi-motor-pemulihan-kinerja-dfi-retail-nusantara-hero-pada-2025">Kontan</a>; <a href="https://katadata.co.id/finansial/bursa/6938c79fc5b66/dfi-retail-hero-sebut-ikea-masih-dilanda-rugi-intip-strategi-kebut-kinerja">Katadata</a></li>
+          <li>Toko fisik sebagai media yang kurang didanai. — <a href="https://eightx.co/blog/in-store-retail-media-budget-allocation-blind-spot-dtc">Eightx</a></li>
+          <li>Showrooming dan webrooming. — <a href="https://www.readycloud.com/info/webrooming-statistics-all-retailers-need-to-know">ReadyCloud</a>; <a href="https://fitsmallbusiness.com/showrooming-and-webrooming/">Fit Small Business</a></li>
+          <li>Dwell time dan penjualan. — <a href="https://www.retailsensing.com/people-counting/retail-dwell-time-metric/">Retail Sensing</a>; <a href="https://mapsted.com/blog/how-dwell-time-insights-can-improve-your-business-strategy">Mapsted</a></li>
+          <li>Phygital, AR/VR, dan tren ritel 2026. — <a href="https://www.brainvire.com/blog/phygital-retail-strategy/">Brainvire</a>; <a href="https://www.mappedin.com/resources/blog/retail-technology-trends/">Mappedin</a></li>
+          <li>Konsep <em>third place</em> (Ray Oldenburg, 1989) di ritel. — <a href="https://groups.wharton.upenn.edu/WRC/the-new-third-place/">Wharton Retail Club</a></li>
+          <li>Transformasi ritel Jakarta yang <em>experience-led</em>. — <a href="https://indonesia.cbre.com/insights/reports/indonesia-viewpoint-jakarta-s-experience-led-transformation">CBRE Indonesia</a>; <a href="https://realestateasia.com/commercial-retail/news/how-experiential-retail-transforming-jakarta-malls">Real Estate Asia</a></li>
+          <li>Kelas menengah Indonesia. — <a href="https://jakartaglobe.id/business/indonesias-shrinking-middle-class-threatens-growth-consumption">Jakarta Globe</a>; <a href="https://databoks.katadata.co.id/en/consumer-durables-apparel/statistics/6902dfe698a57/lifestyle-spending-range-for-indonesias-middle-class-in-2025">Databoks</a>; <a href="https://kadence.com/knowledge/indonesia-market-research-key-consumer-trends-you-must-know/">Kadence</a></li>
+          <li>Ukuran pasar experiential retail. — <a href="https://www.fortunebusinessinsights.com/experiential-retail-market-118303">Fortune Business Insights</a>; <a href="https://www.metatechinsights.com/industry-insights/experiential-retail-market-3063">MetaTech Insights</a>; <a href="https://www.wiseguyreports.com/reports/experience-economy-market">WiseGuy Reports</a></li>
+        </ol>
+      </div>
+
+      <p class="footnote">Disusun sebagai bahan internal tim Concept Store. Seluruh angka berasal dari sumber sekunder yang ditautkan di atas dan berlaku per September 2026; verifikasi ulang sebelum dikutip di dokumen resmi perusahaan. Contoh penerapan di kategori home improvement adalah interpretasi penulis atas kerangka Pine &amp; Gilmore, bukan klaim dari sumber aslinya.</p>
+    </section>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  var REALMS = [
+    {k:"ent", n:"Entertainment", d:"Ada yang disajikan untuk dinikmati: demo, pertunjukan, layar bercerita.", a:2, b:1},
+    {k:"edu", n:"Educational",   d:"Pengunjung pulang membawa kemampuan baru: kelas, klinik, panduan langsung.", a:1, b:2},
+    {k:"esc", n:"Escapist",      d:"Pengunjung ikut mengubah sesuatu: konfigurator, meja rakit, bilik uji.", a:1, b:0},
+    {k:"est", n:"Esthetic",      d:"Ruangnya sendiri layak dinikmati: cahaya, material, alur jalan, ketenangan.", a:3, b:2}
+  ];
+  var KEY = "ee-audit-v1";
+  var state = {};
+  REALMS.forEach(function(r){ state[r.k] = {a:r.a, b:r.b}; });
+
+  try {
+    var saved = localStorage.getItem(KEY);
+    if (saved) {
+      var p = JSON.parse(saved);
+      REALMS.forEach(function(r){
+        if (p && p[r.k]) {
+          state[r.k] = {a: clamp(p[r.k].a), b: clamp(p[r.k].b)};
+        }
+      });
+    }
+  } catch (e) { /* penyimpanan tidak tersedia — pakai contoh bawaan */ }
+
+  function clamp(v){ v = parseInt(v,10); return (isNaN(v) || v<0 || v>5) ? 0 : v; }
+
+  function save(){
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+
+  var grid = document.getElementById("scGrid");
+
+  function buildDots(realm, side, label, alt){
+    var wrap = document.createElement("div");
+    wrap.className = "dots" + (alt ? " alt" : "");
+    var who = document.createElement("span");
+    who.className = "who";
+    who.textContent = label;
+    wrap.appendChild(who);
+    for (var i = 0; i <= 5; i++) {
+      (function(val){
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "dot";
+        b.id = "dot-" + realm.k + "-" + side + "-" + val;
+        b.textContent = val;
+        b.setAttribute("aria-label", realm.n + " · " + label + " · nilai " + val);
+        b.setAttribute("aria-pressed", state[realm.k][side] === val ? "true" : "false");
+        b.addEventListener("click", function(){
+          state[realm.k][side] = val;
+          save();
+          render();
+        });
+        wrap.appendChild(b);
+      })(i);
+    }
+    return wrap;
+  }
+
+  REALMS.forEach(function(r){
+    var row = document.createElement("div");
+    row.className = "sc-row";
+    var lab = document.createElement("div");
+    lab.className = "sc-label";
+    lab.innerHTML = r.n + "<small>" + r.d + "</small>";
+    row.appendChild(lab);
+    row.appendChild(buildDots(r, "a", "Kita", false));
+    row.appendChild(buildDots(r, "b", "Banding", true));
+    grid.appendChild(row);
+  });
+
+  function render(){
+    var ta = 0, tb = 0;
+    REALMS.forEach(function(r){
+      ta += state[r.k].a;
+      tb += state[r.k].b;
+      ["a","b"].forEach(function(side){
+        for (var i = 0; i <= 5; i++) {
+          var el = document.getElementById("dot-" + r.k + "-" + side + "-" + i);
+          if (el) el.setAttribute("aria-pressed", state[r.k][side] === i ? "true" : "false");
+        }
+      });
+    });
+    document.getElementById("totA").textContent = ta;
+    document.getElementById("totB").textContent = tb;
+
+    var gaps = REALMS.filter(function(r){ return state[r.k].a <= 1 && state[r.k].b <= 1; })
+                     .map(function(r){ return r.n; });
+    var lead = REALMS.filter(function(r){ return state[r.k].b - state[r.k].a >= 2; })
+                     .map(function(r){ return r.n; });
+
+    var msg;
+    if (gaps.length) {
+      msg = "Ruang kompetitif terbuka — belum digarap kedua pihak: " + gaps.join(", ") + ". Ini tempat termurah untuk berdiferensiasi.";
+    } else if (lead.length) {
+      msg = "Pembanding unggul jelas pada: " + lead.join(", ") + ". Prioritaskan realm ini sebelum menambah realm baru.";
+    } else if (ta >= tb + 2) {
+      msg = "Gerai kita unggul secara keseluruhan. Alihkan fokus dari menambah zona ke membuktikan konversinya (bagian 06).";
+    } else {
+      msg = "Kedua gerai berimbang. Kemenangan akan ditentukan oleh konsistensi program mingguan, bukan oleh satu instalasi besar.";
+    }
+    document.getElementById("verdict").textContent = msg;
+  }
+
+  document.getElementById("scReset").addEventListener("click", function(){
+    REALMS.forEach(function(r){ state[r.k] = {a:0, b:0}; });
+    save();
+    render();
+  });
+
+  render();
+})();
+</script>
