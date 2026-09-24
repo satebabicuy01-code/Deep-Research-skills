@@ -1,0 +1,18 @@
+{
+  "name": "On-Premise Signage",
+  "lever_type": "Identitas & visibilitas",
+  "funnel_stage": "Ditemukan (visibilitas) -> kunjungan, terutama pembelian impulsif",
+  "key_evidence": "Studi Signage Foundation (dilaporkan Sign Media Canada, 2013): pada toko Pier 1 Imports, sign gedung/pylon/sign multi-tenant baru menambah 5-15% penjualan lokasi; kenaikan terbesar pada toko berkinerja rendah dan saat sign ditambahkan pada sisi bangunan yang sebelumnya tanpa sign. Taylor, Sarkees & Bang (2012, J. Public Policy & Marketing): 85% pengguna sign di sampel AS menyatakan akan kehilangan penjualan tanpa sign on-premise (rata-rata estimasi kehilangan 34,5%, dikutip Taylor/SRF). SBA (2003, dikutip SRF): kunjungan impulsif 15-45% penjualan tergantung jenis usaha.",
+  "effect_size": "+5% s.d. +15% penjualan (kasus Pier 1, sign baru); estimasi kehilangan tanpa sign 34,5% (self-report).",
+  "evidence_type": "Studi kasus & survei yang didanai industri",
+  "evidence_strength": "Lemah-sedang (didanai industri, sebagian self-report)",
+  "productivity_metric": "Pejalan/kendaraan yang 'melihat' toko (visibility audit), capture rate, penjualan per lokasi sebelum-sesudah.",
+  "design_guidelines": "Audit visibilitas dari arah datang utama (pejalan, kendaraan, eskalator mal). Prioritaskan sisi/arah tanpa sign dan toko berkinerja rendah, tempat efek terbesar dilaporkan.",
+  "risks_limitations": "Bias pendana; hasil per-kasus; tunduk pada aturan reklame lokal.",
+  "sources": [
+    "https://www.signmedia.ca/studies-show-benefits-of-on-premise-signage/",
+    "https://doi.org/10.1509/jppm.10.054",
+    "https://www.signresearch.org/wp-content/uploads/Illuminated-vs-Non-Illuminated-Signage-Economic-Impact-of-Illumination.pdf"
+  ],
+  "uncertain": []
+}

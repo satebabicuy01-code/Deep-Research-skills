@@ -1,0 +1,52 @@
+field_categories:
+  - category: "basic_info"
+    fields:
+      - name: "name"
+        description: "Nama tuas desain fasad"
+        detail_level: "brief"
+        required: true
+      - name: "lever_type"
+        description: "Kelompok tuas (konten, arsitektur, identitas, selubung, geometri, teknologi, program)"
+        detail_level: "brief"
+        required: true
+      - name: "funnel_stage"
+        description: "Tahap funnel produktivitas yang dipengaruhi (perhatian, masuk/capture, konversi, ticket, throughput, nilai sewa)"
+        detail_level: "brief"
+        required: true
+  - category: "performance_metrics"
+    fields:
+      - name: "key_evidence"
+        description: "Ringkasan bukti utama (studi, desain studi, sampel)"
+        detail_level: "detailed"
+        required: true
+      - name: "effect_size"
+        description: "Besaran efek yang dilaporkan dan satuannya"
+        detail_level: "moderate"
+        required: true
+      - name: "evidence_type"
+        description: "Jenis bukti (eksperimen lab/VR, eksperimen lapangan, observasi, regresi, laporan manajemen, survei industri, konvensi pasar)"
+        detail_level: "brief"
+        required: true
+      - name: "evidence_strength"
+        description: "Kekuatan bukti terhadap penjualan/produktivitas: kuat / sedang / lemah"
+        detail_level: "brief"
+        required: true
+  - category: "implications"
+    fields:
+      - name: "productivity_metric"
+        description: "KPI produktivitas yang tepat untuk mengukur tuas ini"
+        detail_level: "moderate"
+        required: true
+      - name: "design_guidelines"
+        description: "Pedoman desain yang dapat ditindaklanjuti"
+        detail_level: "detailed"
+        required: true
+      - name: "risks_limitations"
+        description: "Keterbatasan bukti dan risiko penerapan"
+        detail_level: "moderate"
+        required: true
+      - name: "sources"
+        description: "Daftar sumber (URL/DOI)"
+        detail_level: "brief"
+        required: true
+uncertain: []

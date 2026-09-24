@@ -1,0 +1,17 @@
+{
+  "name": "Exterior Landscaping",
+  "lever_type": "Eksterior",
+  "funnel_stage": "Kesukaan terhadap eksterior -> niat berkunjung",
+  "key_evidence": "Mower, Kim & Childs (2012, J. Fashion Marketing and Management): eksperimen dengan mahasiswa untuk butik apparel. Window display dan lanskap tidak berpengaruh langsung pada rasa senang/arousal, tetapi keberadaannya meningkatkan kesukaan terhadap eksterior dan niat berkunjung. Mereka mencatat Turley & Milliman (2000) menyebut variabel eksterior paling sedikit diteliti.",
+  "effect_size": "Kesukaan eksterior & niat berkunjung naik (signifikan); besaran tidak di abstrak.",
+  "evidence_type": "Eksperimen (sampel mahasiswa)",
+  "evidence_strength": "Lemah-sedang (niat, bukan perilaku)",
+  "productivity_metric": "Capture rate, kunjungan ulang.",
+  "design_guidelines": "Untuk toko jalan/ruko: tanaman, peneduh, dan tempat berhenti di depan toko sebagai sinyal peduli.",
+  "risks_limitations": "Sampel mahasiswa; niat belum tentu perilaku.",
+  "sources": [
+    "https://doi.org/10.1108/13612021211265836",
+    "https://doi.org/10.1016/s0148-2963(99)00010-7"
+  ],
+  "uncertain": []
+}

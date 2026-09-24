@@ -1,0 +1,17 @@
+{
+  "name": "Interactive Digital Storefront",
+  "lever_type": "Teknologi fasad",
+  "funnel_stage": "Keterlibatan -> niat masuk & word of mouth",
+  "key_evidence": "Pantano, Priporas & Foroudi (2019, IJRDM): survei 341 konsumen yang mendekati etalase berteknologi interaktif di dua toko apparel di New York. Konsumen yang merasakan teknologi interaktif di etalase bersedia masuk toko dan menyebarkan word of mouth positif. Pantano (2016, JRCS) memodelkan keterlibatan konsumen di storefront interaktif.",
+  "effect_size": "Hubungan positif pada niat masuk & WOM (model struktural); tanpa angka penjualan.",
+  "evidence_type": "Survei di lokasi (niat)",
+  "evidence_strength": "Lemah-sedang",
+  "productivity_metric": "Interaksi per jam, capture rate, biaya konten per kunjungan tambahan.",
+  "design_guidelines": "Gunakan untuk flagship/lokasi berlalu-lintas tinggi; ukur biaya konten & perawatan terhadap kunjungan tambahan.",
+  "risks_limitations": "Efek novelty; biaya operasional layar; bukti niat, bukan transaksi.",
+  "sources": [
+    "https://doi.org/10.1108/ijrdm-07-2018-0120",
+    "https://doi.org/10.1016/j.jretconser.2015.09.007"
+  ],
+  "uncertain": []
+}

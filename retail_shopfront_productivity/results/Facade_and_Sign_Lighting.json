@@ -1,0 +1,17 @@
+{
+  "name": "Facade and Sign Lighting",
+  "lever_type": "Identitas & visibilitas",
+  "funnel_stage": "Visibilitas malam -> perlambatan & kunjungan",
+  "key_evidence": "Taylor (Villanova, untuk Sign Research Foundation): survei 333 pengguna sign (response rate 47,4%). Lebih dari separuh responden memperkirakan kehilangan penjualan bila sign tidak boleh dinyalakan; kelompok ini memperkirakan kehilangan 21%, rata-rata seluruh sampel 11%. 81% menyalakan sign di luar jam buka. Gehl dkk. (2006): pada studi malam hari, pejalan melewati fasad A yang terang lebih lambat daripada fasad E yang gelap.",
+  "effect_size": "Estimasi kehilangan penjualan 11% (rata-rata) bila sign tidak diterangi (self-report).",
+  "evidence_type": "Survei industri + observasi",
+  "evidence_strength": "Lemah (self-report) - sedang (arah perilaku)",
+  "productivity_metric": "Capture rate & penjualan per jam setelah gelap; konsumsi energi per penjualan.",
+  "design_guidelines": "Rancang skenario cahaya siang/malam; terangi etalase dan interior dekat kaca, bukan hanya logo.",
+  "risks_limitations": "Self-report pemilik usaha; regulasi cahaya & energi.",
+  "sources": [
+    "https://www.signresearch.org/wp-content/uploads/Illuminated-vs-Non-Illuminated-Signage-Economic-Impact-of-Illumination.pdf",
+    "https://doi.org/10.1057/palgrave.udi.9000162"
+  ],
+  "uncertain": []
+}

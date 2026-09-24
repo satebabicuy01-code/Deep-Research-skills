@@ -1,0 +1,19 @@
+{
+  "name": "Full Remodel Programs",
+  "lever_type": "Program renovasi (termasuk fasad)",
+  "funnel_stage": "Seluruh funnel (traffic, konversi, ticket)",
+  "key_evidence": "Target (manajemen, Q1 FY2025, via Zacks/Globe and Mail): comp lift 2-4% pada tahun pertama setelah remodel, ditambah hampir 3% di tahun kedua. Dollar General (manajemen, via Zacks): Project Renovate (remodel penuh toko >= 7 tahun) sekitar +6% comp tahunan; Project Elevate (perbaikan lebih ringan) sekitar +3%; rencana FY2026 ~2.000 Renovate & ~2.250 Elevate (8-K Des 2025). Starbucks 'coffeehouse uplift': 1.000+ remodel Amerika Utara (FY2026), manajemen melaporkan kenaikan transaksi tanpa angka per toko.",
+  "effect_size": "+2% s.d. +4% (Target th.1) + ~3% (th.2); ~+6% / ~+3% (Dollar General).",
+  "evidence_type": "Laporan manajemen (bukan uji terkontrol publik)",
+  "evidence_strength": "Sedang (skala besar, tetapi paket intervensi & dilaporkan sendiri)",
+  "productivity_metric": "Comp sales toko remodel vs kontrol berpasangan; payback capex.",
+  "design_guidelines": "Gunakan angka remodel penuh sebagai BATAS ATAS untuk intervensi fasad saja. Pisahkan komponen fasad dalam desain uji (fasad saja vs fasad + interior) agar kontribusinya dapat diukur.",
+  "risks_limitations": "Remodel mencakup interior, merchandising, operasi; pemilihan toko tidak acak.",
+  "sources": [
+    "https://www.theglobeandmail.com/investing/markets/stocks/DG/pressreleases/33275312/can-remodeling-efforts-revive-targets-in-store-traffic-trends/",
+    "https://www.tradingview.com/news/zacks:cdcb092b0094b:0-dollar-general-s-project-renovate-and-elevate-drive-comp-sales-lift/",
+    "https://www.sec.gov/Archives/edgar/data/29534/000110465925118286/tm2532496d1_ex99.htm",
+    "https://www.restaurantdive.com/news/starbucks-q3-turnaround-gains-sales-momentum/826543/"
+  ],
+  "uncertain": []
+}

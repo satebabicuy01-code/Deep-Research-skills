@@ -1,0 +1,17 @@
+{
+  "name": "Frontage Width and Zone A",
+  "lever_type": "Geometri & properti",
+  "funnel_stage": "Nilai sewa & produktivitas ruang dekat muka toko",
+  "key_evidence": "Konvensi penilaian ritel Inggris (zoning/ITZA, dirujuk RICS): unit high street dibagi zona sedalam 6,1 m (20 kaki) dari muka toko; Zona A paling bernilai, Zona B dinilai A/2, Zona C A/4 ('halving back'). Pasar sewa secara eksplisit menilai ruang dekat fasad jauh lebih produktif daripada ruang belakang.",
+  "effect_size": "Nilai sewa per m2 ruang Zona B = 1/2 Zona A; Zona C = 1/4 (konvensi).",
+  "evidence_type": "Konvensi pasar properti",
+  "evidence_strength": "Kuat sebagai sinyal pasar (bukan eksperimen)",
+  "productivity_metric": "Penjualan per m2 per zona kedalaman; penjualan per meter frontage; sewa ITZA.",
+  "design_guidelines": "Utamakan lebar frontage dibanding kedalaman saat memilih unit; tempatkan penawaran bermargin tinggi dan pemicu kunjungan di 6 m pertama; hindari fungsi mati (gudang, kasir tertutup) di Zona A.",
+  "risks_limitations": "Konvensi Inggris; tidak dipakai untuk department store/supermarket besar.",
+  "sources": [
+    "https://www.ricsfirms.com/glossary/zoning/",
+    "https://www.kirkbydiamond.co.uk/news-and-insights/time-to-get-in-the-zone-a/"
+  ],
+  "uncertain": []
+}

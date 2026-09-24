@@ -1,0 +1,16 @@
+{
+  "name": "Daylighting and Glazing",
+  "lever_type": "Selubung bangunan",
+  "funnel_stage": "Pengalaman di dalam toko -> penjualan",
+  "key_evidence": "Heschong Mahone Group (1999, untuk PG&E): toko dengan skylight tercatat penjualan 40% lebih tinggi. Studi replikasi (Peet, Heschong, Wright & Aumann, ACEEE 2004): 73 toko rantai lain (24 dengan daylight signifikan), 3 tahun data bulanan, regresi dengan banyak kontrol. Angka 40% dinilai 'improbably high' dan paling jauh batas atas; efek rata-rata daylight se-rantai hanya +1% s.d. +6%, tidak cukup besar untuk kepastian statistik tinggi; efek bergantung pada faktor lain (mis. parkir: -8,7% s.d. +19,7%).",
+  "effect_size": "Klaim awal +40%; replikasi +1% s.d. +6% (rata-rata rantai).",
+  "evidence_type": "Regresi observasional antar-toko (dengan replikasi)",
+  "evidence_strength": "Sedang (efek kecil setelah replikasi)",
+  "productivity_metric": "Penjualan per m2 dengan kontrol lokasi; energi per penjualan.",
+  "design_guidelines": "Manfaatkan cahaya alami untuk kualitas ruang dan energi, tetapi jangan membenarkan capex dengan angka 40%.",
+  "risks_limitations": "Studi AS/California, format big-box; di iklim tropis panas & silau perlu dikelola.",
+  "sources": [
+    "https://www.aceee.org/files/proceedings/2004/data/papers/SS04_Panel7_Paper24.pdf"
+  ],
+  "uncertain": []
+}

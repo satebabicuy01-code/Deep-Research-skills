@@ -1,0 +1,17 @@
+{
+  "name": "Active Frontage and Rhythm",
+  "lever_type": "Arsitektur fasad / urban design",
+  "funnel_stage": "Perlambatan & berhenti pejalan -> peluang masuk",
+  "key_evidence": "Gehl, Kaefer & Reigstad (2006, Urban Design International): observasi segmen fasad 10 m di tujuh area Kopenhagen. Di depan fasad aktif (kelas A) pejalan 13% lebih lambat; 75% menoleh ke fasad vs 21% di fasad tertutup (kelas E); 25% berhenti vs 1%; total aktivitas & waktu tinggal 7x lebih banyak. Jalan belanja yang hidup memiliki 15-20 unit dan 20-25 pintu per 100 m. Studi Gil Lopez (Madrid) menyarankan pintu setiap 7-9 m, kaca ~63% panjang fasad, ceruk/bukaan yang menambah panjang fasad 30%, dan zona tepi 0,7-2,0 m untuk berhenti.",
+  "effect_size": "Berhenti 25% vs 1%; menoleh 75% vs 21%; kecepatan -13%; aktivitas 7x (fasad A vs E).",
+  "evidence_type": "Observasi lapangan (perilaku pejalan)",
+  "evidence_strength": "Kuat untuk perilaku pejalan; tidak mengukur penjualan",
+  "productivity_metric": "Laju berhenti & menoleh per 100 pejalan, capture rate, penjualan per meter frontage.",
+  "design_guidelines": "Pecah fasad panjang menjadi ritme unit/pintu; beri ceruk dan zona tepi untuk berhenti tanpa menghalangi arus; hindari dinding buta di lantai dasar. Untuk mal: prinsip ritme yang sama berlaku di koridor.",
+  "risks_limitations": "Konteks jalan kota Eropa; berhenti belum tentu masuk/membeli.",
+  "sources": [
+    "https://doi.org/10.1057/palgrave.udi.9000162",
+    "https://www.urbaplan.ch/wp-content/uploads/2015/02/jangehl_urbandesign_article-1.pdf"
+  ],
+  "uncertain": []
+}
