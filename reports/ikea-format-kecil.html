@@ -1,0 +1,283 @@
+<title>IKEA Format Kecil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=Libre+Franklin:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#f6f7f4; --surface:#ffffff; --ink:#18222e; --ink-2:#435060; --muted:#6a7580;
+  --line:#dde2dc; --accent:#2e6a58; --accent-soft:#e3eee9; --warn:#9a5b12; --warn-soft:#f6ecdf;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#11171d; --surface:#18212a; --ink:#e7ece9; --ink-2:#b7c1c6; --muted:#8c979e;
+    --line:#2b3640; --accent:#7cc2aa; --accent-soft:#1d3a31; --warn:#e2ab62; --warn-soft:#3a2c19;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#11171d; --surface:#18212a; --ink:#e7ece9; --ink-2:#b7c1c6; --muted:#8c979e;
+  --line:#2b3640; --accent:#7cc2aa; --accent-soft:#1d3a31; --warn:#e2ab62; --warn-soft:#3a2c19;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:900px;margin:0 auto}
+.prose{max-width:68ch}
+header.cover{padding-block:48px 28px;border-bottom:1px solid var(--line);display:grid;gap:14px}
+.meta{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px}
+h1,h2,h3{font-family:var(--serif);font-weight:650;text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(30px,5vw,44px)}
+.dek{font-size:18px;color:var(--ink-2);max-width:62ch;margin:0}
+section{padding-block:36px 8px;display:grid;gap:14px}
+h2{font-size:26px}
+h2 .n{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--accent);display:block;letter-spacing:.08em;margin-bottom:6px}
+h3{font-size:19px;margin-top:8px}
+p{margin:0}
+ul,ol{margin:0;padding-left:1.2em;display:grid;gap:6px}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lede-box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px 22px;display:grid;gap:12px}
+.lede-box li b{color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.kpi{border-top:2px solid var(--accent);padding-top:10px;display:grid;gap:2px}
+.kpi .v{font-family:var(--serif);font-size:28px;font-weight:650;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:13.5px;color:var(--ink-2);line-height:1.4}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14.5px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--paper)}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--mono);font-size:13.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+td b{font-weight:600}
+.figure{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 16px 10px;display:grid;gap:8px}
+.figure .cap{font-size:13.5px;color:var(--muted)}
+.chart{overflow-x:auto}
+.chart svg{display:block;width:100%;min-width:560px;height:auto}
+.chart .lab{fill:var(--ink);font-family:var(--sans);font-size:13px}
+.chart .tick{fill:var(--muted);font-family:var(--mono);font-size:11px}
+.chart .grid{stroke:var(--line);stroke-width:1}
+.chart .bar{fill:var(--accent)}
+.chart .bar:hover,.chart .pt:hover{opacity:.8}
+.chart .pt{fill:var(--accent);stroke:var(--surface);stroke-width:2}
+.chart .val{fill:var(--ink-2);font-family:var(--mono);font-size:11px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:8px;align-content:start}
+.card h3{margin:0;font-size:17px}
+.card p,.card li{font-size:15px}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:3px;background:var(--accent-soft);color:var(--accent);justify-self:start}
+.tag.warn{background:var(--warn-soft);color:var(--warn)}
+.note{border-left:3px solid var(--warn);background:var(--warn-soft);padding:12px 16px;font-size:14.5px;border-radius:0 4px 4px 0}
+.src{font-size:13.5px;color:var(--ink-2)}
+.src ol{gap:4px}
+.src a{word-break:break-word}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media (max-width:520px){ h2{font-size:22px} .kpi .v{font-size:24px} }
+</style>
+
+<div class="wrap">
+
+<header class="cover">
+  <div class="meta"><span>Laporan riset</span><span>Untuk: Director Design &amp; Corporate Strategy</span><span>Per 24 September 2026</span></div>
+  <h1>IKEA format kecil: konsep, lokasi, dan pelajaran untuk strategi ritel</h1>
+  <p class="dek">IKEA sedang bergeser dari model "satu gudang besar di pinggir kota" ke jaringan berlapis: toko besar sebagai hub, lalu city store, small store, Plan &amp; Order Point, dan titik pick-up sebagai spoke yang lebih dekat ke rumah pelanggan. Laporan ini merangkum konsepnya, sebaran lokasinya, apa yang berhasil dan tidak, serta implikasinya bagi desain toko dan strategi korporat.</p>
+</header>
+
+<section>
+  <h2><span class="n">RINGKASAN EKSEKUTIF</span>Lima hal yang perlu diketahui</h2>
+  <div class="lede-box">
+    <ol>
+      <li><b>Ini strategi jaringan, bukan eksperimen sampingan.</b> Ingka Group (operator terbesar IKEA) tumbuh dari sekitar 375 toko yang mayoritas di luar kota lima tahun lalu menjadi lebih dari 640 lokasi di 32 negara. Pada FY25 dibuka 54 lokasi baru, naik dari 41 di FY24.</li>
+      <li><b>Format "small store" generasi baru lahir 2025.</b> Dipilotkan di UK, AS, dan Polandia; ukurannya sekitar 1.500–4.000 m² (kira-kira sepersepuluh toko klasik), memajang ±2.000–5.000 produk dengan 2.000–3.000 di antaranya bisa langsung dibawa pulang. Pada Maret 2026 IKEA mengumumkan 20 small store lagi di Eropa dan Amerika Utara.</li>
+      <li><b>Lokasinya di jalur belanja mingguan.</b> Retail park di sebelah supermarket dan gym, sering menempati bangunan eks-ritel (Homebase, Bed Bath &amp; Beyond, supermarket kosong) sehingga cepat dibuka dan murah.</li>
+      <li><b>IKEA juga memangkas format yang tidak bekerja.</b> Harajuku dan Shinjuku (Tokyo) ditutup Februari 2026; dua Plan &amp; Order Point with Pick-up di AS ditutup 30 Agustus 2026; di China tujuh toko besar ditutup sementara ±10 toko kecil dibuka.</li>
+      <li><b>Keputusan skala besar menunggu evaluasi setelah FY26.</b> IKEA sendiri menyebut perlunya "menetapkan ekspektasi yang tepat" tentang apa yang bisa ditawarkan format kecil. Data kinerja per format belum dipublikasikan.</li>
+    </ol>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><span class="v">640+</span><span class="l">lokasi Ingka di 32 negara (vs ±375 lima tahun lalu)</span></div>
+    <div class="kpi"><span class="v">€39 mld</span><span class="l">penjualan IKEA Retail (Ingka) FY25, −1,6% YoY</span></div>
+    <div class="kpi"><span class="v">30%</span><span class="l">porsi penjualan online FY25 (28% di FY24)</span></div>
+    <div class="kpi"><span class="v">€5 mld</span><span class="l">investasi 3 tahun di 32 pasar, termasuk format baru</span></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">01 · KONTEKS</span>Mengapa IKEA mengecil</h2>
+  <div class="prose" style="display:grid;gap:12px">
+    <p>Model klasik IKEA bergantung pada pelanggan yang merencanakan kunjungan jauh ke toko 25.000–40.000 m² di pinggir kota. Tiga tekanan membuat model ini tidak cukup lagi:</p>
+    <ul>
+      <li><b>Perilaku belanja berubah.</b> Penjualan online naik ke 30%, dan kunjungan toko tetap tumbuh (736 juta, +1,3%). Pelanggan ingin toko yang masuk ke rutinitas harian, bukan agenda akhir pekan. CEO IKEA Korea, Isabel Puig: <i>"Customers often have to plan visits to our large stores. We want to be part of their daily routines instead."</i></li>
+      <li><b>Tekanan margin.</b> Penjualan Ingka FY25 turun 1,6% karena IKEA menurunkan harga (investasi harga €2,1 miliar di FY24). Toko kecil yang cepat dibuka dengan biaya jauh lebih rendah menjadi cara tumbuh yang lebih hemat modal.</li>
+      <li><b>Kota menengah dan pinggiran belum terlayani.</b> Toko besar hanya layak di area metropolitan. Tolga Öncü (Head of Retail Ingka) menyebut pilot small store <i>"has already proven successful in smaller cities."</i></li>
+    </ul>
+    <p>Semua format kecil bergantung pada infrastruktur omnichannel yang sama: katalog penuh ±10.000 produk bisa dipesan online dari toko mana pun, lalu dikirim atau diambil di titik terdekat.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">02 · KONSEP</span>Tangga format IKEA</h2>
+  <p class="prose">IKEA kini mengoperasikan beberapa format yang saling melengkapi. Tabel berikut menyusunnya dari yang terbesar ke yang terkecil. Konversi ukuran AS memakai 1 m² ≈ 10,76 sq ft.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Format</th><th>Ukuran</th><th>Isi &amp; peran</th><th>Contoh</th></tr></thead>
+      <tbody>
+        <tr><td><b>Toko besar (klasik)</b></td><td class="num">±25.000–40.000 m²</td><td>Showroom penuh, market hall, gudang self-serve, restoran. Menjadi hub fulfilment bagi format kecil di sekitarnya.</td><td>Mayoritas jaringan global; China ±30.000 m²; AS 300–450 rb sq ft</td></tr>
+        <tr><td><b>City store</b></td><td class="num">±2.500–9.400 m²</td><td>Pengalaman IKEA lengkap versi padat, sering bertingkat, di pusat kota atau mal, bisa diakses tanpa mobil. Full range bisa dipesan dengan pengiriman.</td><td>London Oxford Street (5.800 m², 3 lantai), Wien Westbahnhof (7 lantai), Tokyo Shibuya (7 lantai), Jakarta Mal Taman Anggrek (9.400 m²)</td></tr>
+        <tr><td><b>Small store (format baru 2025)</b></td><td class="num">±1.500–4.000 m²</td><td>Roomset ringkas, mini market hall, layanan perencanaan, click &amp; collect, retur, makanan Swedia terbatas, kadang produk second-hand. ±2.000–5.000 produk dipajang, 2.000–3.000 bisa dibawa pulang.</td><td>Harlow, Norwich, Chester (UK); San Marcos TX (±35.000 sq ft); Bielsko-Biała PL (±1.500 m²); Limoges FR (2.000 m²); Coimbra PT (4.000+ m²); Beijing Tongzhou (1.500 m²)</td></tr>
+        <tr><td><b>City format mikro (Korea)</b></td><td class="num">&lt;1.000 m²</td><td>Di pusat perbelanjaan mixed-use, ±400 item untuk dibawa langsung, sisanya dikirim atau diambil.</td><td>Gwangju; rencana Incheon, Daegu, Daejeon hingga 2027; Gangnam &amp; Sindorim (Seoul)</td></tr>
+        <tr><td><b>Planning Studio</b></td><td class="num">±750–850 m²</td><td>Fokus konsultasi dapur, kamar mandi, kamar tidur dengan desainer; kurasi produk per kota.</td><td>New York, Paris, Toronto; Arcadia &amp; Long Beach (2022)</td></tr>
+        <tr><td><b>Plan &amp; Order Point</b></td><td class="num">±200–1.400 m²</td><td>Tanpa stok. Perencanaan dapur/lemari/ruang tamu, pesanan dikirim ke rumah. Varian UK menjual ±100 aksesori dan menerima pengambilan serta retur.</td><td>Hull, Dundee, York (UK); Fairfax, Arlington, Pleasanton (AS); ±32 lokasi "with Pick-up" di 14 negara bagian AS</td></tr>
+        <tr><td><b>Pick-up point &amp; mitra</b></td><td class="num">minimal</td><td>Titik ambil pesanan online, kadang di lokasi mitra. Di AS, perencanaan dan pengambilan juga tersedia di 10 toko Best Buy.</td><td>Selandia Baru (29 pick-up point saat peluncuran); Best Buy (AS)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="figure">
+    <strong style="font-size:15px">Luas lantai per format (m², skala logaritmik)</strong>
+    <div class="chart" role="img" aria-label="Rentang luas lantai per format IKEA pada skala logaritmik, dari Plan and Order Point sekitar 200 m² hingga toko besar sekitar 40.000 m²">
+      <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <line class="grid" x1="170" y1="14" x2="170" y2="258"/>
+          <line class="grid" x1="263.7" y1="14" x2="263.7" y2="258"/>
+          <line class="grid" x1="366.4" y1="14" x2="366.4" y2="258"/>
+          <line class="grid" x1="460.1" y1="14" x2="460.1" y2="258"/>
+          <line class="grid" x1="562.7" y1="14" x2="562.7" y2="258"/>
+          <line class="grid" x1="656.4" y1="14" x2="656.4" y2="258"/>
+          <text class="tick" x="170" y="278" text-anchor="middle">100</text>
+          <text class="tick" x="263.7" y="278" text-anchor="middle">300</text>
+          <text class="tick" x="366.4" y="278" text-anchor="middle">1.000</text>
+          <text class="tick" x="460.1" y="278" text-anchor="middle">3.000</text>
+          <text class="tick" x="562.7" y="278" text-anchor="middle">10.000</text>
+          <text class="tick" x="656.4" y="278" text-anchor="middle">30.000</text>
+        </g>
+        <g>
+          <text class="lab" x="0" y="35">Toko besar</text>
+          <rect class="bar" x="640.9" y="24" width="40.1" height="14" rx="4"><title>Toko besar: ±25.000–40.000 m²</title></rect>
+
+          <text class="lab" x="0" y="75">City store</text>
+          <rect class="bar" x="444.5" y="64" width="112.9" height="14" rx="4"><title>City store: ±2.500–9.400 m²</title></rect>
+
+          <text class="lab" x="0" y="115">Small store (2025)</text>
+          <rect class="bar" x="400.9" y="104" width="83.7" height="14" rx="4"><title>Small store: ±1.500–4.000 m²</title></rect>
+
+          <text class="lab" x="0" y="155">City format Korea</text>
+          <circle class="pt" cx="366.4" cy="151" r="6"><title>City format Korea: di bawah 1.000 m²</title></circle>
+          <text class="val" x="378" y="155">&lt;1.000</text>
+
+          <text class="lab" x="0" y="195">Planning Studio</text>
+          <rect class="bar" x="341.8" y="184" width="9.6" height="14" rx="4"><title>Planning Studio: ±750–850 m²</title></rect>
+
+          <text class="lab" x="0" y="235">Plan &amp; Order Point</text>
+          <rect class="bar" x="226.9" y="224" width="168.1" height="14" rx="4"><title>Plan &amp; Order Point: ±200–1.400 m²</title></rect>
+        </g>
+      </svg>
+    </div>
+    <span class="cap">Rentang dari contoh toko yang dilaporkan, bukan standar resmi IKEA. Arahkan kursor ke batang untuk angka.</span>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">03 · LOKASI</span>Di mana saja</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Wilayah</th><th>Format &amp; lokasi</th><th>Status per Sep 2026</th></tr></thead>
+      <tbody>
+        <tr><td><b>Inggris</b></td><td>Small store: Harlow (Jul 2025), Norwich (28 Agu 2025), Chester, semuanya di eks-Homebase di retail park. Plan &amp; Order Point: Hull (19 Jun 2025, eks-supermarket Jack's), Dundee, York. City store: Oxford Street (1 Mei 2025), Hammersmith (2022); city store Brighton direncanakan.</td><td>Beroperasi; bagian dari pilot awal</td></tr>
+        <tr><td><b>Amerika Serikat</b></td><td>Small format: Arcadia CA, San Marcos TX (16 Jul 2025, San Mar Plaza). Rencana 2026: 10 toko baru termasuk Chicago, Tulsa, Fort Collins, dan city store pertama di Los Angeles, sebagian konversi properti ritel lama (a.l. eks-Bed Bath &amp; Beyond). ±32 Plan &amp; Order Point with Pick-up; 10 lokasi di Best Buy.</td><td>Ekspansi, disertai penutupan PoP Charlotte Selatan &amp; Austin Domain (30 Agu 2026)</td></tr>
+        <tr><td><b>Eropa kontinental</b></td><td>Polandia: Bielsko-Biała (±1.500 m², toko ke-12), Białystok (akhir 2026). Prancis: Limoges (2.000 m²). Portugal: Coimbra (4.000+ m²). Juga direncanakan di Jerman, Italia, Spanyol. Austria: city store Wien Westbahnhof (2021).</td><td>Gelombang 20 small store diumumkan Mar 2026</td></tr>
+        <tr><td><b>Kanada</b></td><td>Termasuk dalam gelombang 20 small store; Planning Studio Toronto sudah ada sebelumnya.</td><td>Dalam rencana</td></tr>
+        <tr><td><b>China</b></td><td>±10 toko kecil dalam 2 tahun, uji di Beijing dan Shenzhen. Dongguan (Feb 2026), Beijing Tongzhou (30 Apr 2026, 1.500 m², ±3.000 produk, 20 area display), Beijing Chaoyang. Toko ke-5 di Beijing.</td><td>Ekspansi kecil, sambil menutup 7 toko besar (Feb 2026)</td></tr>
+        <tr><td><b>Korea Selatan</b></td><td>City format &lt;1.000 m²: Gwangju sudah buka; Gangnam, Sindorim; Incheon, Daegu, Daejeon hingga 2027. Ditambah 13 pop-up store.</td><td>Ekspansi</td></tr>
+        <tr><td><b>Jepang</b></td><td>Harajuku (2020, 2.500 m²) dan Shinjuku (2021) ditutup 8 Feb 2026. Shibuya (7 lantai) menjadi city store utama Tokyo.</td><td>Konsolidasi</td></tr>
+        <tr><td><b>Indonesia</b></td><td>City store pertama di dalam mal: Mal Taman Anggrek, Jakarta (Apr 2022, 9.400 m²). IKEA Bali di Kuta (2021) dilaporkan sebagai format ±1.200 m² di bekas hipermarket. Toko besar: Alam Sutera, Jakarta Garden City, Kota Baru Parahyangan, Sentul City.</td><td>Belum ditemukan pengumuman small store generasi 2025 untuk Indonesia</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">04 · UNTUK DIRECTOR DESIGN</span>Anatomi small store</h2>
+  <p class="prose">Dari toko-toko pilot, pola desainnya cukup konsisten. Poin-poin di bawah adalah hal yang bisa langsung diterjemahkan ke brief desain.</p>
+  <div class="cols">
+    <div class="card"><span class="tag">Tata letak</span><h3>Jalur terarah tetap dipakai</h3><p>Desain awal memakai free-flow tanpa panah. Setelah umpan balik pelanggan, IKEA mengembalikan jalur terarah dengan panah seperti toko klasik. Artinya, navigasi terarah khas IKEA tetap dibutuhkan pelanggan untuk orientasi, bahkan di toko kecil.</p></div>
+    <div class="card"><span class="tag">Program ruang</span><h3>Semua fungsi inti, versi ringkas</h3><ul><li>Roomset inspiratif (Beijing: 20 area display)</li><li>Mini market hall untuk bawa pulang hari itu</li><li>Meja perencanaan dapur &amp; lemari (METOD, PAX)</li><li>Area click &amp; collect dan retur</li><li>Makanan Swedia terbatas (bistro/deli)</li><li>Sudut second-hand / buy-back (Harlow)</li></ul></div>
+    <div class="card"><span class="tag">Rak tak terbatas</span><h3>Fisik sebagai etalase, digital sebagai gudang</h3><p>Produk kunci diberi QR code yang terhubung ke range penuh ±10.000 item. Staf membantu pemesanan untuk pengiriman atau pengambilan. Desain harus memberi ruang untuk titik digital dan konsultasi, bukan hanya rak.</p></div>
+    <div class="card"><span class="tag">Kurasi lokal</span><h3>Range disesuaikan dengan tempat tinggal</h3><p>San Marcos menampilkan solusi "local living"; Harajuku fokus pada penyimpanan untuk apartemen satu orang; Beijing menyasar pasangan muda dan keluarga dengan anak. Kurasi dimulai dari tipologi hunian setempat.</p></div>
+    <div class="card"><span class="tag">Kecepatan</span><h3>Adaptive reuse</h3><p>Harlow disebut "quick-to-market format" karena memakai struktur yang sudah ada. Kit interior modular yang bisa dipasang di box ritel eks-tenant menjadi kapabilitas desain yang menentukan kecepatan ekspansi.</p></div>
+    <div class="card"><span class="tag warn">Risiko</span><h3>Ekspektasi pengunjung</h3><p>Pengunjung datang membawa bayangan toko IKEA penuh. IKEA menyebut pelajaran utamanya adalah menetapkan ekspektasi yang tepat. Komunikasi di fasad, signage, dan pintu masuk perlu menjelaskan apa yang tersedia di toko dan apa yang bisa dipesan.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">05 · UNTUK CORPORATE STRATEGY</span>Logika bisnis dan pelajaran portofolio</h2>
+  <div class="cols">
+    <div class="card"><h3>Hub-and-spoke, bukan kanibalisasi</h3><p>Small store dan PoP dirancang sebagai pelengkap toko besar. Di Austin, setelah PoP Domain ditutup, pelanggan tetap dilayani toko besar Round Rock, small store San Marcos, dan titik Best Buy. Nilai format kecil diukur di tingkat jaringan (jangkauan, penjualan online yang terpicu, pengambilan), bukan hanya P&amp;L per toko.</p></div>
+    <div class="card"><h3>Modal ringan, eksekusi cepat</h3><p>IKEA menyebut small store lebih hemat biaya dan jauh lebih cepat dibuka dibanding toko tradisional atau metropolitan. Konversi eks-ritel (Homebase, Bed Bath &amp; Beyond, supermarket) memanfaatkan pasokan ruang kosong di retail park.</p></div>
+    <div class="card"><h3>Kriteria lokasi</h3><ul><li>Kota kecil/menengah di luar jangkauan toko besar</li><li>Retail park atau mal dengan kunjungan mingguan (grocery, gym)</li><li>Akses mobil dan parkir untuk bawa pulang barang</li><li>Masih dalam radius pengiriman dari hub</li></ul></div>
+    <div class="card"><h3>Uji, ukur, pangkas</h3><p>Format di pusat kota dengan sewa tinggi paling rentan: Harajuku dan Shinjuku ditutup dan dikonsolidasikan ke Shibuya. PoP with Pick-up ditutup selektif. Portofolio format diperlakukan sebagai eksperimen yang terus dikoreksi, dengan evaluasi formal setelah FY26.</p></div>
+  </div>
+
+  <h3>Metrik yang layak dipantau jika mengadopsi pendekatan serupa</h3>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Dimensi</th><th>Metrik</th><th>Mengapa penting</th></tr></thead>
+      <tbody>
+        <tr><td>Jangkauan</td><td>Pelanggan baru di catchment; porsi populasi dalam 20–30 menit dari titik IKEA</td><td>Tujuan utama format kecil adalah menjadi toko IKEA pertama bagi kota yang belum terlayani</td></tr>
+        <tr><td>Omnichannel</td><td>Penjualan online yang diatribusikan ke catchment toko; volume click &amp; collect dan retur</td><td>Toko kecil memicu penjualan yang tercatat di kanal lain</td></tr>
+        <tr><td>Produktivitas</td><td>Penjualan per m², frekuensi kunjungan, nilai keranjang layanan perencanaan</td><td>Membandingkan format secara adil di tingkat ruang, bukan total</td></tr>
+        <tr><td>Ekonomi unit</td><td>Capex per pembukaan, waktu sampai buka, periode payback</td><td>Klaim utama format ini adalah biaya lebih rendah dan pembukaan lebih cepat</td></tr>
+        <tr><td>Ekspektasi</td><td>Kepuasan pelanggan dan tingkat "tidak menemukan yang dicari"</td><td>Risiko terbesar format kecil menurut IKEA sendiri</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">06 · RELEVANSI</span>Catatan untuk konteks Indonesia</h2>
+  <div class="prose" style="display:grid;gap:12px">
+    <p>Bagian ini adalah interpretasi kami, bukan pernyataan IKEA.</p>
+    <ul>
+      <li><b>Kota lapis dua dengan mal kuat.</b> Model Korea (&lt;1.000 m² di mal mixed-use) dan model China (1.500 m² di pusat belanja baru) lebih dekat dengan kondisi kota-kota Indonesia dibanding model retail park UK/AS, karena pola belanja di Indonesia berpusat di mal.</li>
+      <li><b>Preseden lokal sudah ada.</b> Mal Taman Anggrek membuktikan IKEA bisa beroperasi di dalam mal, dan format Bali menunjukkan adaptive reuse bekas hipermarket. Pasokan unit hipermarket/department store kosong di mal Indonesia mirip dengan pasokan eks-Homebase di UK.</li>
+      <li><b>Syaratnya logistik.</b> Format kecil hanya bekerja jika pengiriman dari hub andal dan terjangkau. Di luar Jabodetabek, jarak ke toko besar dan biaya last-mile menentukan kelayakan.</li>
+      <li><b>Bagi pesaing dan pengembang properti.</b> Jika IKEA atau franchisee-nya di Indonesia (di bawah DFI Retail) mengadopsi format ini, pemain home furnishing lokal akan menghadapi IKEA di kota yang sebelumnya bukan pasarnya, dan pengelola mal mendapat calon anchor baru berukuran sedang.</li>
+    </ul>
+  </div>
+  <p class="note"><b>Batas data.</b> IKEA belum mempublikasikan angka kinerja per format (penjualan per m², payback). Evaluasi resmi small store dijadwalkan setelah FY26. Beberapa ukuran toko berasal dari media, bukan rilis resmi, dan ditandai "±" atau "dilaporkan". Angka keuangan mengacu pada Ingka Group, operator terbesar IKEA, bukan seluruh sistem IKEA.</p>
+</section>
+
+<section class="src">
+  <h2><span class="n">SUMBER</span>Referensi</h2>
+  <ol>
+    <li><a href="https://www.ingka.com/newsroom/ikea-to-open-20-small-stores-across-europe-and-north-america/" target="_blank" rel="noopener">Ingka Group: IKEA to open 20 small stores across Europe and North America (Mar 2026)</a></li>
+    <li><a href="https://www.ingka.com/newsroom/why-your-next-ikea-visit-might-be-between-the-gym-and-the-groceries/" target="_blank" rel="noopener">Ingka Group: Why your next IKEA visit might be between the gym and the groceries</a></li>
+    <li><a href="https://www.ingka.com/newsroom/ikea-eyes-expansion-push-while-adapting-store-network-to-better-meet-customer-needs/" target="_blank" rel="noopener">Ingka Group: IKEA eyes expansion push while adapting store network</a></li>
+    <li><a href="https://www.ingka.com/newsroom/ikea-serves-more-customers-and-increases-volumes-in-a-challenging-year/" target="_blank" rel="noopener">Ingka Group: FY25 results</a></li>
+    <li><a href="https://www.ingka.com/newsroom/ikea-expands-in-eastern-beijing-with-first-small-store-marks-more-than-20-openings-globally-so-far-this-year/" target="_blank" rel="noopener">Ingka Group: First small store in eastern Beijing</a></li>
+    <li><a href="https://www.ikea.com/gb/en/newsroom/corporate-news/ikea-opens-the-first-of-three-new-format-small-stores-in-harlow-pubb4c53e70/" target="_blank" rel="noopener">IKEA UK: New-format small store in Harlow</a></li>
+    <li><a href="https://www.ikea.com/gb/en/newsroom/corporate-news/hej-norwich-ikeas-newest-home-is-now-open-pube1bcd800/" target="_blank" rel="noopener">IKEA UK: Norwich opening</a></li>
+    <li><a href="https://www.theretailbulletin.com/home-and-diy/ikea-to-open-new-small-format-plan-and-order-point-in-hull-10-06-2025/" target="_blank" rel="noopener">Retail Bulletin: Plan and Order Point Hull</a></li>
+    <li><a href="https://www.ingka.com/newsroom/ikea-opens-oxford-street-store-on-1st-may/" target="_blank" rel="noopener">Ingka Group: Oxford Street store</a></li>
+    <li><a href="https://www.ikea.com/us/en/newsroom/corporate-news/ikea-u-s-releases-fy25-annual-summary-and-announces-four-new-stores-planned-for-2026-pubf0e047b0/" target="_blank" rel="noopener">IKEA U.S.: FY25 Annual Summary &amp; 2026 stores</a></li>
+    <li><a href="https://www.ikea.com/us/en/newsroom/corporate-news/hej-texas-neighbors-ikea-u-s-is-opening-a-new-small-store-in-san-marcos-pubee1ff280/" target="_blank" rel="noopener">IKEA U.S.: San Marcos small store</a></li>
+    <li><a href="https://www.modernretail.co/operations/how-ikea-got-closer-to-its-shoppers-with-new-small-format-stores-best-buy-partnership/" target="_blank" rel="noopener">Modern Retail: Small-format stores &amp; Best Buy partnership</a></li>
+    <li><a href="https://www.modernretail.co/operations/inside-ikeas-small-format-store-strategy-the-retail-environment-is-changing/" target="_blank" rel="noopener">Modern Retail: Inside IKEA's small-format store strategy (Planning Studio)</a></li>
+    <li><a href="https://www.homepagenews.com/retail-articles/ikea-expanding-small-format-plan-and-order-point-locations/" target="_blank" rel="noopener">HomePage News: Plan-and-Order-Point expansion</a></li>
+    <li><a href="https://www.foxbusiness.com/retail/ikea-close-locations-2-states" target="_blank" rel="noopener">Fox Business: Closure of Charlotte &amp; Austin pick-up locations</a></li>
+    <li><a href="https://insideretail.asia/2026/02/02/ikea-japan-to-close-stores-in-harajuku-and-shinjuku/" target="_blank" rel="noopener">Inside Retail Asia: IKEA Japan closes Harajuku and Shinjuku</a></li>
+    <li><a href="https://insideretail.asia/2026/05/04/ikea-leans-into-china-with-smaller-stores-as-expansion-accelerates/" target="_blank" rel="noopener">Inside Retail Asia: IKEA leans into China with smaller stores</a></li>
+    <li><a href="https://www.scmp.com/business/china-business/article/3351870/ikea-open-first-small-format-beijing-store-tap-chinas-changing-consumer-trends" target="_blank" rel="noopener">SCMP: First small-format Beijing store</a></li>
+    <li><a href="https://en.sedaily.com/international/2026/05/01/ikea-shrinks-stores-95-percent-moves-into-city-neighborhoods" target="_blank" rel="noopener">Seoul Economic Daily: IKEA shrinks stores, moves into city neighborhoods</a></li>
+    <li><a href="https://www.koreaherald.com/article/10721237" target="_blank" rel="noopener">Korea Herald: Ikea goes small to grow in Korea</a></li>
+    <li><a href="https://resources.realestate.co.jp/living/ikea-harajuku-ikeas-first-city-center-location/" target="_blank" rel="noopener">Real Estate Japan: IKEA Harajuku</a></li>
+    <li><a href="https://en.tempo.co/read/1579547/ikea-opens-6th-store-in-indonesia-at-jakartas-mall-taman-anggrek" target="_blank" rel="noopener">Tempo: IKEA opens 6th store in Indonesia at Mall Taman Anggrek</a></li>
+    <li><a href="https://www.ikea.com/at/en/stores/wien-westbahnhof/" target="_blank" rel="noopener">IKEA Austria: Wien Westbahnhof</a></li>
+    <li><a href="https://www.interiordaily.com/article/9722866/ikea-expands-with-the-opening-of-their-12th-store-in-poland/" target="_blank" rel="noopener">Interior Daily: 12th store in Poland (Bielsko-Biała)</a></li>
+  </ol>
+</section>
+
+<footer>Disusun dari sumber publik per 24 September 2026. Laporan ini bukan dokumen resmi IKEA dan tidak berafiliasi dengan IKEA atau Ingka Group.</footer>
+</div>
