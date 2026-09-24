@@ -1,0 +1,11 @@
+fiscal_year,revenue_usd_m,company_operated_stores_end,total_stores_end,stores_opened,stores_closed,comp_sales_pct,comp_transactions_pct,comp_ticket_pct,notes,source
+2016,,1272,2382,253,7,,,,"Pendapatan China belum dilaporkan terpisah (segmen CAP); total = 1.272 company-operated + 1.110 licensed",Starbucks 10-K FY2016 store data
+2017,,1540,2936,285,17,7,5,,"Pendapatan China belum dilaporkan terpisah; total = 1.540 company-operated + 1.396 licensed",Starbucks 10-K FY2017; press release Q4 FY2017
+2018,2355.8,3521,3521,528,24,2,,,"Akuisisi JV East China (1.477 gerai licensed menjadi company-operated, Q1 FY2018) - pendapatan tidak sebanding",Starbucks 10-K FY2018 & FY2020; press release Q4 FY2018
+2019,2872.0,4123,4123,629,27,4,0,,,Starbucks 10-K FY2019-FY2021; press release Q4 FY2019
+2020,2582.8,4704,4704,613,32,-17,-21,5,COVID-19,Starbucks 10-K FY2020-FY2022; press release Q4 FY2020
+2021,3674.8,5358,5358,697,43,17,19,-2,"Tahun fiskal 53 minggu",Starbucks 10-K FY2021-FY2023; press release Q4 FY2021
+2022,3008.3,6019,6019,724,63,-24,-22,-3,"Lockdown COVID-19 di beberapa kota",Starbucks 10-K FY2022-FY2024; press release Q4 FY2022
+2023,3081.5,6804,6806,857,72,2,4,-2,,Starbucks 10-K FY2023-FY2025; press release Q4 FY2023
+2024,3008.2,7594,7596,855,65,-8,0,-8,"Perang harga (Luckin/Cotti)",Starbucks 10-K FY2024-FY2025; press release Q4 FY2024
+2025,3160.8,8009,8011,569,154,-1,4,-5,"Termasuk penutupan gerai restrukturisasi 'Back to Starbucks'",Starbucks 10-K FY2025; press release Q4 FY2025

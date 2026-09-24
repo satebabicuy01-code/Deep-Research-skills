@@ -1,0 +1,20 @@
+{
+  "name": "Window Display",
+  "lever_type": "Konten fasad",
+  "funnel_stage": "Perhatian -> masuk toko (capture rate); citra toko",
+  "key_evidence": "Lange, Rosengren & Blom (2016, J. Business Research): studi lapangan kuasi-eksperimen di jalan belanja fashion (n = 1.834 pejalan) + eksperimen online (n = 480). Etalase yang lebih kreatif lebih berhasil mengubah pejalan menjadi pengunjung toko; efeknya dimediasi sikap terhadap etalase, keyakinan tentang produk, dan persepsi usaha peritel, serta dimoderasi frekuensi belanja. Oh & Petrie (2012, JRCS): efektivitas display produk vs artistik bergantung pada motif belanja (membeli vs rekreasi) dan beban kognitif. Cornelius, Natter & Faure (2010, JRCS): display yang lebih inovatif menghasilkan penilaian citra lebih baik, dan citra toko ikut terangkat oleh keberadaan display. Sen, Block & Chandran (2002, JRCS): informasi di etalase dipakai konsumen dalam keputusan masuk dan membeli.",
+  "effect_size": "Arah positif dan signifikan untuk masuk toko (Lange dkk.); besaran persen tidak tersedia di abstrak.",
+  "evidence_type": "Eksperimen lapangan + eksperimen online/lab",
+  "evidence_strength": "Sedang-kuat (untuk capture rate); tidak mengukur penjualan langsung",
+  "productivity_metric": "Capture rate (masuk / pejalan lewat) per jam; dwell di depan etalase; konversi pengunjung baru.",
+  "design_guidelines": "Perlakukan etalase sebagai media yang dirotasi (kreatif, bukan sekadar tumpukan produk). Sesuaikan jenis display dengan motif lokasi: display produk di lokasi 'misi' (kantor, transit), display artistik di lokasi rekreasi (mal akhir pekan, high street). Uji setiap konsep dengan kontrol.",
+  "risks_limitations": "Studi mayoritas fashion/apparel; efek kreativitas bisa memudar (novelty); pengunjung tambahan belum tentu membeli.",
+  "sources": [
+    "https://doi.org/10.1016/j.jbusres.2015.08.013",
+    "https://ideas.repec.org/a/eee/jbrese/v69y2016i3p1014-1021.html",
+    "https://doi.org/10.1016/j.jretconser.2011.08.003",
+    "https://doi.org/10.1016/j.jretconser.2009.11.004",
+    "https://doi.org/10.1016/S0969-6989(01)00037-6"
+  ],
+  "uncertain": []
+}

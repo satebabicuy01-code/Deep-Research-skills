@@ -1,0 +1,21 @@
+{
+  "name": "Shanghai Reserve Roastery",
+  "format_type": "Flagship imersif (Roastery)",
+  "launch_period": "Desember 2017",
+  "scale": "1 lokasi (HKRI Taikoo Hui, Shanghai); ~30.000 sq ft (~2.700 m2), Roastery pertama di Asia",
+  "size_and_layout": "~30.000 sq ft; area roasting terbuka, beberapa bar, bakery, retail merchandise; alur pengunjung dirancang sebagai 'teater kopi'.",
+  "storefront_treatment": "Fasad dan interior mengekspos proses roasting (cask tembaga besar, dinding ukir); bangunan menjadi landmark yang dikunjungi, bukan sekadar dilewati.",
+  "localization_elements": "Referensi kerajinan tembaga dan motif tradisional Tiongkok dipadukan dengan estetika industrial.",
+  "performance_evidence": "CNBC (Jan 2018): setelah 8 minggu, penjualan harian Roastery ~2x rata-rata penjualan MINGGUAN gerai AS (~US$32 ribu/minggu); ticket rata-rata hari pertama ~US$29. Howard Schultz: 'We shattered every sales record in the history of the company.' Namun comp sales China turun menjadi -2% di Q3 FY2018 (dua kuartal setelah pembukaan), menunjukkan efek halo tidak otomatis mengangkat jaringan.",
+  "evidence_strength": "Kuat untuk unit tunggal; lemah untuk efek ke jaringan",
+  "strategic_role": "Brand halo & legitimasi premium ('coffee authority') di pasar yang sedang mengedukasi budaya kopi.",
+  "revenue_mechanism": "Ticket sangat tinggi + volume turis/destinasi; nilai utamanya adalah media & persepsi premium, bukan kontribusi pendapatan jaringan.",
+  "design_implication": "Perlakukan flagship sebagai capex pemasaran: ukur dengan brand lift, share of voice sosial (Xiaohongshu/Douyin), dan ticket premium di gerai Reserve sekitarnya, bukan dengan P&L gerai semata.",
+  "risks_limitations": "Data penjualan unit tunggal hanya dari pernyataan manajemen ke media; tidak ada data per-gerai resmi. Efek novelty memudar.",
+  "sources": [
+    "https://www.cnbc.com/2018/01/25/eight-weeks-in-starbucks-shanghai-roastery-is-raking-in-insane-sales.html",
+    "https://stories.starbucks.com/asia/press/2017/starbucks-opens-state-of-the-art-premium-reserve-roastery-in-shanghai/",
+    "https://www.sec.gov/Archives/edgar/data/829224/000082922418000033/sbux-07012018xexhibit991.htm"
+  ],
+  "uncertain": []
+}

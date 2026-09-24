@@ -1,0 +1,19 @@
+{
+  "name": "Service Facade for Omnichannel",
+  "lever_type": "Fasad fungsional",
+  "funnel_stage": "Throughput (transaksi per jam per m2 / per jam kerja)",
+  "key_evidence": "Starbucks Now (Beijing, Jul 2019): format express dengan 'pickup portal' di dinding yang diakses pelanggan & kurir. Luckin Coffee: 99,1% gerai self-operated adalah pickup store 20-60 m2 (20-F FY2025). Bukti publik yang memisahkan efek fasad fungsional terhadap produktivitas belum tersedia [uncertain besaran efek].",
+  "effect_size": "[uncertain] belum ada angka publik",
+  "evidence_type": "Kasus format",
+  "evidence_strength": "Lemah (kasus, tanpa angka efek)",
+  "productivity_metric": "Waktu serah pesanan, pesanan per jam per m2, antrean rider, penjualan per jam kerja.",
+  "design_guidelines": "Pisahkan jalur pickup/kurir dari pintu tamu; tampilkan status pesanan di muka toko.",
+  "risks_limitations": "Dapat mengurangi suasana bila tidak dirancang; efek bergantung porsi order digital.",
+  "sources": [
+    "https://www.nrn.com/news/starbucks-opens-first-express-store-format-china",
+    "https://www.sec.gov/Archives/edgar/data/1767582/000110465926035712/lk-20251231x20f.htm"
+  ],
+  "uncertain": [
+    "effect_size"
+  ]
+}

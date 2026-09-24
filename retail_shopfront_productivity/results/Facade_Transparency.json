@@ -1,0 +1,18 @@
+{
+  "name": "Facade Transparency",
+  "lever_type": "Arsitektur fasad",
+  "funnel_stage": "Perhatian & daya tarik -> niat mendekat",
+  "key_evidence": "Kalantari, Xu, Govani & Mostafavi (2022, JRCS): eksperimen virtual reality yang hanya mengubah transparansi etalase. Etalase sangat transparan dinilai lebih menarik dan diamati lebih lama, dimediasi oleh kompleksitas visual yang lebih rendah dan rasa senang yang lebih tinggi. TIDAK ada perbedaan signifikan pada perilaku mendekat (peserta tahu mereka tidak bisa masuk toko VR). Gehl dkk. (2006) mengutip studi Gil Lopez (Madrid): kaca pada ~63% panjang fasad sebagai pedoman fasad yang hidup.",
+  "effect_size": "Daya tarik & durasi observasi naik (signifikan); perilaku mendekat tidak berbeda signifikan.",
+  "evidence_type": "Eksperimen VR (lab) + pedoman urban design",
+  "evidence_strength": "Sedang (lab; belum ada bukti penjualan)",
+  "productivity_metric": "Waktu tatap/berhenti di depan toko, capture rate, konversi.",
+  "design_guidelines": "Jaga garis pandang ke interior dari jalur pejalan (hindari etalase tertutup penuh/film gelap). Targetkan porsi kaca tinggi pada lantai dasar; tata display agar tidak menambah kerumitan visual.",
+  "risks_limitations": "Hasil VR; transparansi menuntut interior yang rapi (back-of-house terlihat = negatif); isu panas/silau di iklim tropis.",
+  "sources": [
+    "https://doi.org/10.1016/j.jretconser.2022.103080",
+    "https://ideas.repec.org/a/eee/joreco/v69y2022ics0969698922001734.html",
+    "https://doi.org/10.1057/palgrave.udi.9000162"
+  ],
+  "uncertain": []
+}

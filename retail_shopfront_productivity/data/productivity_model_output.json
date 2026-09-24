@@ -1,0 +1,61 @@
+{
+  "assumptions_EXAMPLE": {
+    "passersby_per_day": 3000,
+    "capture_rate": 0.1,
+    "conversion": 0.3,
+    "atv_idr": 120000,
+    "area_m2": 100,
+    "open_days": 360,
+    "gross_margin": 0.55,
+    "facade_capex_idr": 350000000
+  },
+  "baseline_sales_idr": 3888000000,
+  "baseline_sales_per_m2_idr": 38880000,
+  "scenarios": [
+    {
+      "scenario": "Konservatif (setara efek daylight replikasi)",
+      "capture_change_pct": 3.0,
+      "conversion_change_pct": 0.0,
+      "atv_change_pct": 0.0,
+      "sales_change_pct": 3.0,
+      "sales_per_m2_idr": 40046400,
+      "incremental_gross_profit_idr": 64152000,
+      "payback_months": 65.5
+    },
+    {
+      "scenario": "Etalase & transparansi lebih baik",
+      "capture_change_pct": 8.0,
+      "conversion_change_pct": -2.0,
+      "atv_change_pct": 0.0,
+      "sales_change_pct": 5.84,
+      "sales_per_m2_idr": 41150592,
+      "incremental_gross_profit_idr": 124882560,
+      "payback_months": 33.6
+    },
+    {
+      "scenario": "Perbaiki defisit visibilitas (sign/sisi buta)",
+      "capture_change_pct": 15.0,
+      "conversion_change_pct": -3.0,
+      "atv_change_pct": 0.0,
+      "sales_change_pct": 11.55,
+      "sales_per_m2_idr": 43370640,
+      "incremental_gross_profit_idr": 246985200,
+      "payback_months": 17.0
+    },
+    {
+      "scenario": "Fasad + citra premium (ticket naik)",
+      "capture_change_pct": 8.0,
+      "conversion_change_pct": -2.0,
+      "atv_change_pct": 3.0,
+      "sales_change_pct": 9.02,
+      "sales_per_m2_idr": 42385110,
+      "incremental_gross_profit_idr": 192781037,
+      "payback_months": 21.8
+    }
+  ],
+  "capture_uplift_needed_pct_for_payback_months": {
+    "12": 16.37,
+    "24": 8.18,
+    "36": 5.46
+  }
+}

@@ -1,0 +1,68 @@
+field_categories:
+  - category: "basic_info"
+    fields:
+      - name: "name"
+        description: "Nama format/kasus desain"
+        detail_level: "brief"
+        required: true
+      - name: "format_type"
+        description: "Jenis format (flagship, premium, lokal-budaya, inti, konvenien, tematik, kompetitor)"
+        detail_level: "brief"
+        required: true
+      - name: "launch_period"
+        description: "Tahun/periode peluncuran atau dominasi format"
+        detail_level: "brief"
+        required: true
+      - name: "scale"
+        description: "Jumlah gerai/lokasi atau skala penerapan (dengan tanggal data)"
+        detail_level: "brief"
+        required: false
+  - category: "design_attributes"
+    fields:
+      - name: "size_and_layout"
+        description: "Ukuran (m2/sq ft) dan tata ruang (kursi, bar, pickup)"
+        detail_level: "moderate"
+        required: false
+      - name: "storefront_treatment"
+        description: "Perlakuan fasad/shopfront: material, transparansi, signage, integrasi dengan bangunan"
+        detail_level: "moderate"
+        required: true
+      - name: "localization_elements"
+        description: "Elemen lokal/budaya yang dipakai"
+        detail_level: "moderate"
+        required: false
+  - category: "performance_metrics"
+    fields:
+      - name: "performance_evidence"
+        description: "Bukti publik terkait penjualan, traffic, ticket, atau imbal hasil"
+        detail_level: "detailed"
+        required: true
+      - name: "evidence_strength"
+        description: "Kekuatan bukti hubungan desain-pendapatan: kuat / sedang / lemah / tidak ada data publik"
+        detail_level: "brief"
+        required: true
+  - category: "market_positioning"
+    fields:
+      - name: "strategic_role"
+        description: "Peran format dalam portofolio (brand halo, frekuensi, konvenien, penetrasi)"
+        detail_level: "moderate"
+        required: true
+      - name: "revenue_mechanism"
+        description: "Mekanisme ekonomi yang digerakkan desain (traffic, ticket, dwell, capex, sewa)"
+        detail_level: "moderate"
+        required: true
+  - category: "implications"
+    fields:
+      - name: "design_implication"
+        description: "Implikasi untuk Director Design / Corporate Strategy"
+        detail_level: "detailed"
+        required: true
+      - name: "risks_limitations"
+        description: "Risiko, keterbatasan data, faktor pengganggu"
+        detail_level: "moderate"
+        required: true
+      - name: "sources"
+        description: "Daftar sumber (URL)"
+        detail_level: "brief"
+        required: true
+uncertain: []
