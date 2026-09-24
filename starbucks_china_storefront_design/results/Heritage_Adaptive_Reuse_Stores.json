@@ -1,0 +1,24 @@
+{
+  "name": "Heritage Adaptive Reuse Stores",
+  "format_type": "Lokalisasi arsitektur",
+  "launch_period": "2000-an-sekarang; contoh unggulan 2019",
+  "scale": "Puluhan gerai di bangunan/kawasan bersejarah [uncertain]; contoh: Starbucks Reserve Tianjin Riverside 66 (2019)",
+  "size_and_layout": "Mengikuti struktur bangunan lama; tata ruang menyesuaikan kolom, void, dan fasad cagar budaya.",
+  "storefront_treatment": "Fasad bersejarah dipertahankan; signage Starbucks minimal dan tunduk pada karakter bangunan. Tianjin: bangunan bergaya Renaisans tahun 1921 di Riverside 66.",
+  "localization_elements": "Material, ornamen, dan narasi sejarah lokal; memenangi Gold, Hong Kong Design Awards 2020 (Tianjin).",
+  "performance_evidence": "Tidak ada data penjualan yang dipublikasikan. Bukti tidak langsung: statement Starbucks FY2016-2017 bahwa gerai China menghasilkan 'record AUVs' dan 'world-leading returns on investment' pada periode gerai berdesain lokal dan third place mendominasi portofolio.",
+  "evidence_strength": "Lemah (anekdot & pernyataan manajemen)",
+  "strategic_role": "Legitimasi lokal (izin kawasan, goodwill pemerintah/komunitas) dan konten sosial media ('打卡' destinasi).",
+  "revenue_mechanism": "Traffic destinasi & wisata; nilai PR dan akses lokasi premium yang sulit ditiru pesaing.",
+  "design_implication": "Cocok sebagai 'anchor' kota, bukan template. Dokumentasikan biaya & waktu perizinan vs uplift traffic untuk keputusan investasi berikutnya.",
+  "risks_limitations": "Capex & waktu pembangunan tinggi; tidak dapat diskalakan ke ribuan gerai.",
+  "sources": [
+    "https://stories.starbucks.com/asia/stories/2019/starbucks-preserves-heritage-site-in-china-to-open-flagship-location-in-tianjin/",
+    "https://betterfutureawards.com/HKG20/project.asp?ID=20512",
+    "https://www.sec.gov/Archives/edgar/data/829224/000082922416000078/sbux-1022016xexhibit991.htm",
+    "https://www.sec.gov/Archives/edgar/data/829224/000082922417000033/sbux-722017xexhibit991.htm"
+  ],
+  "uncertain": [
+    "scale"
+  ]
+}

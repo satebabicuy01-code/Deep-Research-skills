@@ -1,0 +1,23 @@
+{
+  "name": "Starbucks Now Express Format",
+  "format_type": "Konvenien / digital-first",
+  "launch_period": "Juli 2019 (gerai pertama, Beijing)",
+  "scale": "Jumlah gerai format ini tidak diungkap [uncertain]; layanan mobile order 'Starbucks Now' di 1.300+ gerai empat kota (Juli 2019)",
+  "size_and_layout": "Kecil, 1-2 barista, beberapa stool; berfungsi juga sebagai pusat dispatch delivery dalam radius tertentu.",
+  "storefront_treatment": "Minimalis; 'pickup portal' di dinding yang dapat diakses pelanggan & kurir; concierge counter.",
+  "localization_elements": "Minim; fokus fungsi.",
+  "performance_evidence": "Tidak ada data per gerai. Konteks: comp transactions China -2% (Q1 FY2019) dan -1% (Q2 FY2019) sebelum peluncuran; 10-K FY2023 menyebut format ini untuk 'seamless integration of physical and digital'.",
+  "evidence_strength": "Lemah",
+  "strategic_role": "Respons defensif terhadap model pickup Luckin; menangkap okasi on-the-go & delivery.",
+  "revenue_mechanism": "Throughput tinggi, capex & sewa rendah; ticket cenderung lebih rendah.",
+  "design_implication": "Format konvenien menurunkan pendapatan per gerai rata-rata tetapi dapat menaikkan ROI; jangan dinilai dengan KPI gerai third place. Shopfront harus dirancang untuk kecepatan (antrian, visibilitas status pesanan, akses rider).",
+  "risks_limitations": "Mengaburkan diferensiasi Starbucks bila terlalu dominan; bersaing langsung di arena harga.",
+  "sources": [
+    "https://www.nrn.com/news/starbucks-opens-first-express-store-format-china",
+    "https://www.retail-insight-network.com/news/starbucks-now-store-beijing-china/",
+    "https://www.sec.gov/Archives/edgar/data/829224/000082922423000058/sbux-20231001.htm"
+  ],
+  "uncertain": [
+    "scale"
+  ]
+}

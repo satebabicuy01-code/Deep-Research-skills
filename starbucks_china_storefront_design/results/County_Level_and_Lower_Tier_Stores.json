@@ -1,0 +1,24 @@
+{
+  "name": "County Level and Lower Tier Stores",
+  "format_type": "Ekspansi geografis (tier 3 ke bawah)",
+  "launch_period": "FY2023-sekarang (akselerasi FY2024)",
+  "scale": "166 pasar county baru di FY2024 (~1.000 total); 1.103 county-level city (Q1 FY2026); target 1.500+ dalam 3 tahun (~170/tahun); ~setengah gerai baru di tier bawah",
+  "size_and_layout": "Umumnya format inti yang lebih ramping [uncertain]; strategi 2026 memakai kombinasi format fleksibel.",
+  "storefront_treatment": "Shopfront standar Starbucks sebagai penanda 'merek internasional' di kota kecil.",
+  "localization_elements": "Menu & kampanye lokal; sedikit kustomisasi arsitektur.",
+  "performance_evidence": "China Daily (Okt 2024) mengutip analis: sewa & biaya tenaga kerja lebih rendah memberi margin relatif lebih besar; tidak ada angka resmi. Secara agregat, pertumbuhan gerai +94% (FY2019-FY2025) hanya menghasilkan pendapatan RMB +15,5%.",
+  "evidence_strength": "Sedang (agregat) / lemah (per gerai)",
+  "strategic_role": "Mesin pertumbuhan jumlah gerai menuju aspirasi 20.000 gerai JV.",
+  "revenue_mechanism": "Pendapatan tumbuh via footprint; produktivitas per gerai lebih rendah namun biaya lebih rendah.",
+  "design_implication": "Butuh 'kit desain' modular berbiaya rendah dengan lapisan lokal, serta disiplin site selection (visibilitas shopfront, frontage) karena di kota kecil shopfront adalah media iklan utama.",
+  "risks_limitations": "Kanibalisasi & penurunan AUV; data per tier tidak diungkap.",
+  "sources": [
+    "https://www.chinadaily.com.cn/a/202410/31/WS67231b00a310f1265a1caab8.html",
+    "https://global.chinadaily.com.cn/a/202601/30/WS697c02a0a310d6866eb368ab.html",
+    "https://www.chinadaily.com.cn/a/202604/08/WS69d647e6a310d6866eb424b0.html",
+    "https://www.sec.gov/Archives/edgar/data/829224/000082922425000074/sbux-09282025xexhibit991.htm"
+  ],
+  "uncertain": [
+    "size_and_layout"
+  ]
+}

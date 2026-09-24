@@ -1,0 +1,22 @@
+{
+  "name": "Luckin Pickup Store Benchmark",
+  "format_type": "Kompetitor (pickup-first)",
+  "launch_period": "2017-sekarang",
+  "scale": "31.048 gerai (31 Des 2025; 20.234 self-operated, 10.814 partnership); 99,1% self-operated adalah pickup store",
+  "size_and_layout": "Pickup store umumnya 20-60 m2 dengan kursi terbatas; 'relax store' >120 m2 untuk branding (2,4% gerai pada 2022). Feb 2026: gerai high-end pertama (dilaporkan ~420 m2).",
+  "storefront_treatment": "Fasad sempit, brand biru, fokus pada titik pickup; desain sebagai alat efisiensi, bukan pengalaman.",
+  "localization_elements": "Minim.",
+  "performance_evidence": "Pendapatan 2025 RMB 49,3 miliar (+43%), 2,16x pendapatan Starbucks China FY2025 (~RMB 22,8 miliar). Pendapatan per gerai rata-rata ~RMB 1,85 juta (understated karena pendapatan partnership) vs Starbucks ~RMB 2,92 juta. Margin level gerai self-operated 17,8% (2025). Pangsa pasar Starbucks China turun dari 34% (2019) ke 14% (2024) menurut Euromonitor.",
+  "evidence_strength": "Kuat (data resmi 20-F)",
+  "strategic_role": "Pemimpin volume & harga; menggeser ekspektasi konsumen ke kopi sebagai komoditas harian.",
+  "revenue_mechanism": "Volume tinggi, sewa & dekorasi rendah, ekspansi cepat.",
+  "design_implication": "Starbucks tidak dapat menang dengan meniru format Luckin secara penuh; nilai desain Starbucks adalah justifikasi harga. Namun pergerakan Luckin ke gerai high-end (2026) menandakan konvergensi: keduanya membangun portofolio format.",
+  "risks_limitations": "Definisi pendapatan berbeda (Luckin mencatat penjualan material ke mitra); ukuran gerai Starbucks China tidak diungkap sehingga perbandingan per m2 hanya ilustratif.",
+  "sources": [
+    "https://www.sec.gov/Archives/edgar/data/1767582/000110465926035712/lk-20251231x20f.htm",
+    "https://www.sec.gov/Archives/edgar/data/1767582/000110465923042448/lk-20221231x20f.htm",
+    "https://www.cnbc.com/2026/02/08/chinas-luckin-coffee-opens-its-first-high-end-store.html",
+    "https://finance.yahoo.com/news/analysis-starbuckss-china-comeback-relies-000443589.html"
+  ],
+  "uncertain": []
+}

@@ -1,0 +1,314 @@
+{
+  "generated": "2026-09-24",
+  "notes": [
+    "Pendapatan China = 'Net revenues: China' pada catatan geografis 10-K (berdasarkan lokasi pelanggan).",
+    "Jumlah gerai = gerai company-operated akhir tahun fiskal; rata-rata = (awal + akhir)/2.",
+    "FY2018 dikecualikan dari seri produktivitas karena konsolidasi JV East China di tengah tahun.",
+    "Kurs = rata-rata harian FRED DEXCHUS per tahun fiskal (Okt-Sep).",
+    "Pendapatan Luckin mencakup penjualan ke mitra (partnership stores), bukan GMV penuh; per-gerai Luckin karenanya understated.",
+    "Korelasi dengan n=7 (tahunan) / n=10 (kuartalan) bersifat deskriptif, bukan bukti kausal."
+  ],
+  "annual": [
+    {
+      "fiscal_year": 2019,
+      "revenue_usd_m": 2872.0,
+      "usdcny_avg": 6.8753,
+      "revenue_rmb_m": 19746.0,
+      "stores_end": 4123,
+      "avg_stores": 3822.0,
+      "revenue_per_store_usd_k": 751.4,
+      "revenue_per_store_rmb_m": 5.166,
+      "net_new_pct_of_base": 17.1,
+      "stores_opened": 629,
+      "comp_sales_pct": 4.0,
+      "comp_transactions_pct": 0.0,
+      "comp_ticket_pct": null
+    },
+    {
+      "fiscal_year": 2020,
+      "revenue_usd_m": 2582.8,
+      "usdcny_avg": 7.0056,
+      "revenue_rmb_m": 18094.1,
+      "stores_end": 4704,
+      "avg_stores": 4413.5,
+      "revenue_per_store_usd_k": 585.2,
+      "revenue_per_store_rmb_m": 4.1,
+      "net_new_pct_of_base": 14.1,
+      "stores_opened": 613,
+      "comp_sales_pct": -17.0,
+      "comp_transactions_pct": -21.0,
+      "comp_ticket_pct": 5.0
+    },
+    {
+      "fiscal_year": 2021,
+      "revenue_usd_m": 3674.8,
+      "usdcny_avg": 6.5072,
+      "revenue_rmb_m": 23912.7,
+      "stores_end": 5358,
+      "avg_stores": 5031.0,
+      "revenue_per_store_usd_k": 730.4,
+      "revenue_per_store_rmb_m": 4.753,
+      "net_new_pct_of_base": 13.9,
+      "stores_opened": 697,
+      "comp_sales_pct": 17.0,
+      "comp_transactions_pct": 19.0,
+      "comp_ticket_pct": -2.0
+    },
+    {
+      "fiscal_year": 2022,
+      "revenue_usd_m": 3008.3,
+      "usdcny_avg": 6.5532,
+      "revenue_rmb_m": 19714.0,
+      "stores_end": 6019,
+      "avg_stores": 5688.5,
+      "revenue_per_store_usd_k": 528.8,
+      "revenue_per_store_rmb_m": 3.466,
+      "net_new_pct_of_base": 12.3,
+      "stores_opened": 724,
+      "comp_sales_pct": -24.0,
+      "comp_transactions_pct": -22.0,
+      "comp_ticket_pct": -3.0
+    },
+    {
+      "fiscal_year": 2023,
+      "revenue_usd_m": 3081.5,
+      "usdcny_avg": 7.0533,
+      "revenue_rmb_m": 21734.8,
+      "stores_end": 6804,
+      "avg_stores": 6411.5,
+      "revenue_per_store_usd_k": 480.6,
+      "revenue_per_store_rmb_m": 3.39,
+      "net_new_pct_of_base": 13.0,
+      "stores_opened": 857,
+      "comp_sales_pct": 2.0,
+      "comp_transactions_pct": 4.0,
+      "comp_ticket_pct": -2.0
+    },
+    {
+      "fiscal_year": 2024,
+      "revenue_usd_m": 3008.2,
+      "usdcny_avg": 7.2043,
+      "revenue_rmb_m": 21672.0,
+      "stores_end": 7594,
+      "avg_stores": 7199.0,
+      "revenue_per_store_usd_k": 417.9,
+      "revenue_per_store_rmb_m": 3.01,
+      "net_new_pct_of_base": 11.6,
+      "stores_opened": 855,
+      "comp_sales_pct": -8.0,
+      "comp_transactions_pct": 0.0,
+      "comp_ticket_pct": -8.0
+    },
+    {
+      "fiscal_year": 2025,
+      "revenue_usd_m": 3160.8,
+      "usdcny_avg": 7.2125,
+      "revenue_rmb_m": 22797.3,
+      "stores_end": 8009,
+      "avg_stores": 7801.5,
+      "revenue_per_store_usd_k": 405.2,
+      "revenue_per_store_rmb_m": 2.922,
+      "net_new_pct_of_base": 5.5,
+      "stores_opened": 569,
+      "comp_sales_pct": -1.0,
+      "comp_transactions_pct": 4.0,
+      "comp_ticket_pct": -5.0
+    }
+  ],
+  "quarterly": [
+    {
+      "fiscal_quarter": "Q1 FY24",
+      "revenue_usd_m": 735.0,
+      "store_count_end": 6975,
+      "revenue_per_store_usd_k_annualized": 426.7,
+      "comp_sales_pct": 10.0,
+      "comp_transactions_pct": 21.0,
+      "comp_ticket_pct": -9.0
+    },
+    {
+      "fiscal_quarter": "Q2 FY24",
+      "revenue_usd_m": 705.8,
+      "store_count_end": 7093,
+      "revenue_per_store_usd_k_annualized": 401.4,
+      "comp_sales_pct": -11.0,
+      "comp_transactions_pct": -4.0,
+      "comp_ticket_pct": -8.0
+    },
+    {
+      "fiscal_quarter": "Q3 FY24",
+      "revenue_usd_m": 733.8,
+      "store_count_end": 7306,
+      "revenue_per_store_usd_k_annualized": 407.7,
+      "comp_sales_pct": -14.0,
+      "comp_transactions_pct": -7.0,
+      "comp_ticket_pct": -7.0
+    },
+    {
+      "fiscal_quarter": "Q4 FY24",
+      "revenue_usd_m": 783.7,
+      "store_count_end": 7596,
+      "revenue_per_store_usd_k_annualized": 420.7,
+      "comp_sales_pct": -14.0,
+      "comp_transactions_pct": -6.0,
+      "comp_ticket_pct": -8.0
+    },
+    {
+      "fiscal_quarter": "Q1 FY25",
+      "revenue_usd_m": 743.6,
+      "store_count_end": 7685,
+      "revenue_per_store_usd_k_annualized": 389.3,
+      "comp_sales_pct": -6.0,
+      "comp_transactions_pct": -2.0,
+      "comp_ticket_pct": -4.0
+    },
+    {
+      "fiscal_quarter": "Q2 FY25",
+      "revenue_usd_m": 739.7,
+      "store_count_end": 7758,
+      "revenue_per_store_usd_k_annualized": 383.2,
+      "comp_sales_pct": -0.1,
+      "comp_transactions_pct": 4.4,
+      "comp_ticket_pct": -4.2
+    },
+    {
+      "fiscal_quarter": "Q3 FY25",
+      "revenue_usd_m": 790.0,
+      "store_count_end": 7828,
+      "revenue_per_store_usd_k_annualized": 405.5,
+      "comp_sales_pct": 2.0,
+      "comp_transactions_pct": 6.0,
+      "comp_ticket_pct": -4.0
+    },
+    {
+      "fiscal_quarter": "Q4 FY25",
+      "revenue_usd_m": 831.6,
+      "store_count_end": 8011,
+      "revenue_per_store_usd_k_annualized": 420.0,
+      "comp_sales_pct": 2.0,
+      "comp_transactions_pct": 9.0,
+      "comp_ticket_pct": -7.0
+    },
+    {
+      "fiscal_quarter": "Q1 FY26",
+      "revenue_usd_m": 823.4,
+      "store_count_end": 8011,
+      "revenue_per_store_usd_k_annualized": 411.1,
+      "comp_sales_pct": 7.0,
+      "comp_transactions_pct": 5.0,
+      "comp_ticket_pct": 2.0
+    },
+    {
+      "fiscal_quarter": "Q2 FY26",
+      "revenue_usd_m": 799.8,
+      "store_count_end": 7991,
+      "revenue_per_store_usd_k_annualized": 399.9,
+      "comp_sales_pct": 0.5,
+      "comp_transactions_pct": 2.1,
+      "comp_ticket_pct": -1.6
+    }
+  ],
+  "luckin": [
+    {
+      "year": 2021,
+      "net_revenue_rmb_m": 7965.3,
+      "stores_end": 6024,
+      "revenue_per_store_rmb_m": 1.471,
+      "store_level_op_margin_pct": 20.2
+    },
+    {
+      "year": 2022,
+      "net_revenue_rmb_m": 13293.0,
+      "stores_end": 8214,
+      "revenue_per_store_rmb_m": 1.867,
+      "store_level_op_margin_pct": 26.4
+    },
+    {
+      "year": 2023,
+      "net_revenue_rmb_m": 24903.2,
+      "stores_end": 16248,
+      "revenue_per_store_rmb_m": 2.036,
+      "store_level_op_margin_pct": 22.2
+    },
+    {
+      "year": 2024,
+      "net_revenue_rmb_m": 34474.8,
+      "stores_end": 22340,
+      "revenue_per_store_rmb_m": 1.787,
+      "store_level_op_margin_pct": 19.0
+    },
+    {
+      "year": 2025,
+      "net_revenue_rmb_m": 49288.1,
+      "stores_end": 31048,
+      "revenue_per_store_rmb_m": 1.846,
+      "store_level_op_margin_pct": 17.8
+    }
+  ],
+  "correlations": {
+    "annual_store_count_vs_revenue_per_store_rmb": {
+      "r": -0.912,
+      "n": 7
+    },
+    "annual_store_count_vs_revenue_per_store_rmb_ex_covid": {
+      "r": -0.995,
+      "n": 4
+    },
+    "annual_net_new_pct_vs_comp_sales": {
+      "r": 0.119,
+      "n": 7
+    },
+    "annual_comp_sales_vs_transactions": {
+      "r": 0.954,
+      "n": 7
+    },
+    "quarterly_transactions_vs_ticket": {
+      "r": -0.024,
+      "n": 10
+    },
+    "quarterly_comp_sales_vs_ticket": {
+      "r": 0.397,
+      "n": 10
+    },
+    "quarterly_comp_sales_vs_transactions": {
+      "r": 0.907,
+      "n": 10
+    }
+  },
+  "summary": {
+    "revenue_rmb_growth_fy19_fy25_pct": 15.5,
+    "revenue_usd_growth_fy19_fy25_pct": 10.1,
+    "revenue_rmb_cagr_fy19_fy25_pct": 2.42,
+    "store_growth_fy19_fy25_pct": 94.3,
+    "revenue_per_store_rmb_change_fy19_fy25_pct": -43.4,
+    "revenue_per_store_usd_change_fy19_fy25_pct": -46.1,
+    "log_decomposition_fy19_fy25": {
+      "total_log_change": 0.144,
+      "store_count_effect": 0.714,
+      "productivity_effect": -0.57
+    },
+    "starbucks_china_fy25_revenue_rmb_m": 22797.3,
+    "luckin_2025_revenue_rmb_m": 49288.1,
+    "luckin_to_starbucks_revenue_ratio_2025": 2.16,
+    "starbucks_vs_luckin_revenue_per_store_ratio_2025": 1.58
+  },
+  "revenue_per_sqm_sensitivity_ASSUMPTION": [
+    {
+      "starbucks_avg_sqm_assumed": 120,
+      "luckin_avg_sqm_assumed": 40,
+      "starbucks_rev_per_sqm_rmb_k": 24.4,
+      "luckin_rev_per_sqm_rmb_k": 46.1
+    },
+    {
+      "starbucks_avg_sqm_assumed": 180,
+      "luckin_avg_sqm_assumed": 40,
+      "starbucks_rev_per_sqm_rmb_k": 16.2,
+      "luckin_rev_per_sqm_rmb_k": 46.1
+    },
+    {
+      "starbucks_avg_sqm_assumed": 250,
+      "luckin_avg_sqm_assumed": 40,
+      "starbucks_rev_per_sqm_rmb_k": 11.7,
+      "luckin_rev_per_sqm_rmb_k": 46.1
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Core Third Place Coffeehouse",
+  "format_type": "Format inti (third place)",
+  "launch_period": "1999-2019 (dominan), masih mayoritas portofolio",
+  "scale": "Mayoritas dari 8.011 gerai (akhir FY2025) [uncertain proporsi pasti]",
+  "size_and_layout": "Relatif besar dengan banyak kursi untuk pelanggan yang berlama-lama; luas rata-rata gerai China tidak diungkap Starbucks.",
+  "storefront_treatment": "Fasad kaca lebar, siren logo menonjol, visibilitas interior (orang duduk) sebagai sinyal sosial.",
+  "localization_elements": "Terbatas; standar global dengan penyesuaian interior per kota.",
+  "performance_evidence": "FY2016: Starbucks menyebut China mencetak 'Record AUV's, ROI and Profitability'. Sejak itu pendapatan per gerai rata-rata turun dari RMB 5,17 juta (FY2019) ke RMB 2,92 juta (FY2025), -43%. Isu 2025: keluhan 'third place' (kursi dipakai non-pembeli) sementara pesanan delivery menumpuk di counter.",
+  "evidence_strength": "Sedang (data agregat resmi; atribusi ke desain tidak langsung)",
+  "strategic_role": "Dasar premium harga Starbucks China ('menyewakan sofa', Quartz 2013); laporan CCTV Okt 2013: latte di Beijing 27 yuan, ~1/3 lebih mahal dari Chicago.",
+  "revenue_mechanism": "Harga premium dibenarkan oleh ruang; tetapi sewa & luas per gerai tinggi sehingga pendapatan per m2 rendah dibanding format pickup.",
+  "design_implication": "Re-desain third place untuk era hibrida: zona duduk + jalur pickup/rider terpisah di shopfront, sehingga ruang tidak dikorbankan oleh delivery. Ini paralel dengan program 'coffeehouse uplift' Starbucks AS (1.000+ remodel FY2026).",
+  "risks_limitations": "Tidak ada data luas gerai rata-rata China; penurunan per gerai juga dipengaruhi COVID, perang harga, dan ekspansi tier bawah.",
+  "sources": [
+    "https://qz.com/125138/in-china-starbucks-doesnt-sell-coffee-to-make-its-millions-it-rents-couches",
+    "https://www.cnbc.com/2013/10/21/starbucks-under-fire-in-china-over-high-prices.html",
+    "https://www.sec.gov/Archives/edgar/data/829224/000082922416000078/sbux-1022016xexhibit991.htm",
+    "https://finance.biggo.com/news/f1823dac-b7c7-4061-8fd2-ce52ee7fe763",
+    "https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm"
+  ],
+  "uncertain": []
+}
