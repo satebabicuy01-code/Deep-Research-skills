@@ -1,0 +1,966 @@
+<title>Brand X Value Furniture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: one reading column of white "store panels" floating over a live, bright pasar-colored canvas; sticky chip nav on top. Single bright theme by choice. */
+:root {
+  --sun: #FFC93C;        /* kuning flexi */
+  --tangerine: #FF7A2F;  /* oranye promo */
+  --tosca: #10B5A6;      /* tosca pasar */
+  --pink: #FF4F8B;       /* pink harga coret */
+  --lime: #9BDB3A;
+  --sky: #3DA5FF;
+  --ink: #1D1A2B;
+  --ink-soft: #4A4560;
+  --muted: #6E6882;
+  --paper: #FFFFFF;
+  --paper-tint: #FFF8E6;
+  --line: #EFE6D2;
+  --bg: #FFF4D6;
+  --display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --body: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r: 18px;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 16px; line-height: 1.65;
+  overflow-x: hidden;
+}
+#bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; }
+.wrap { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding-inline: 16px; padding-block: 0 64px; }
+
+/* nav */
+nav.chips {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  margin-inline: -16px; padding: 10px 16px;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+nav.chips ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+nav.chips ul::-webkit-scrollbar { display: none; }
+nav.chips a {
+  display: inline-block; white-space: nowrap; text-decoration: none;
+  font: 600 13px/1 var(--body); color: var(--ink);
+  padding: 9px 14px; border-radius: 999px; background: var(--paper);
+  border: 1.5px solid var(--ink); transition: background .15s, transform .15s;
+}
+nav.chips a:hover { background: var(--sun); transform: translateY(-1px); }
+nav.chips a.on { background: var(--ink); color: var(--paper); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; }
+
+/* hero */
+header.hero { padding-block: 48px 24px; display: grid; gap: 22px; }
+.eyebrow { font: 600 12px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.hero h1 {
+  font-family: var(--display); font-weight: 800; margin: 0;
+  font-size: clamp(34px, 6.4vw, 72px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance;
+}
+.hero h1 .hl { background: var(--sun); padding: 0 .12em; border-radius: 10px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.hero h1 .hl2 { background: var(--tosca); color: var(--paper); padding: 0 .12em; border-radius: 10px; }
+.hero p.lede { font-size: clamp(17px, 2vw, 20px); max-width: 62ch; margin: 0; color: var(--ink-soft); }
+.verdict {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 14px;
+  background: var(--ink); color: var(--paper); border-radius: var(--r); padding: 18px 20px;
+}
+.verdict .stamp {
+  font: 800 22px/1 var(--display); background: var(--lime); color: var(--ink);
+  padding: 10px 16px; border-radius: 12px; transform: rotate(-3deg);
+}
+.verdict p { margin: 0; flex: 1 1 280px; min-width: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 18px; font: 500 12.5px/1.4 var(--mono); color: var(--muted); }
+.hint { font: 500 12px/1.4 var(--mono); color: var(--muted); }
+
+/* price-tag stats */
+.tags { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.tag {
+  position: relative; background: var(--paper); border: 2px solid var(--ink); border-radius: 14px;
+  padding: 16px 18px 16px 30px; min-width: 0;
+}
+.tag::before { content: ""; position: absolute; left: 11px; top: 50%; width: 9px; height: 9px; margin-top: -4.5px; border-radius: 50%; border: 2px solid var(--ink); background: var(--bg); }
+.tag .n { font: 800 clamp(24px, 3.2vw, 32px)/1.05 var(--display); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+.tag .l { font-size: 13.5px; color: var(--ink-soft); margin-top: 6px; line-height: 1.45; }
+.tag.y { background: var(--sun); } .tag.o { background: var(--tangerine); } .tag.t { background: var(--tosca); color: var(--paper); } .tag.p { background: var(--pink); color: var(--paper); }
+.tag.t .l, .tag.p .l { color: rgba(255,255,255,.92); }
+.tag.o .l, .tag.y .l { color: var(--ink); }
+
+/* panels */
+section.panel {
+  background: var(--paper); border-radius: 26px; margin-top: 22px;
+  padding: clamp(22px, 4vw, 44px); box-shadow: 0 1px 0 var(--line), 0 18px 40px -28px rgba(29,26,43,.35);
+  scroll-margin-top: 70px;
+}
+.panel > h2 {
+  font-family: var(--display); font-weight: 700; font-size: clamp(22px, 3.2vw, 34px); line-height: 1.12;
+  margin: 6px 0 18px; letter-spacing: -0.01em; text-wrap: balance;
+}
+.panel h3 { font: 700 18px/1.3 var(--body); margin: 28px 0 10px; }
+.panel p, .panel li { max-width: 72ch; }
+.panel p { margin: 0 0 12px; }
+.panel ul, .panel ol { padding-left: 1.2em; margin: 0 0 12px; }
+.panel li { margin-bottom: 6px; }
+.sec-no { font: 600 12px/1 var(--mono); letter-spacing: .08em; color: var(--paper); background: var(--ink); padding: 6px 10px; border-radius: 999px; display: inline-block; }
+.est { font: 600 11px/1 var(--mono); background: var(--paper-tint); color: #8A5A00; border: 1px dashed #D9A62A; padding: 3px 7px; border-radius: 6px; white-space: nowrap; vertical-align: 2px; }
+.note { background: var(--paper-tint); border-left: 4px solid var(--sun); padding: 12px 16px; border-radius: 0 12px 12px 0; font-size: 14.5px; color: var(--ink-soft); }
+.quote {
+  font: 700 clamp(18px, 2.4vw, 24px)/1.35 var(--display); letter-spacing: -0.01em;
+  background: var(--sun); padding: 18px 22px; border-radius: 16px; margin: 16px 0; max-width: none; text-wrap: balance;
+}
+
+/* tables */
+.tw { overflow-x: auto; margin: 10px 0 16px; border: 1.5px solid var(--line); border-radius: 14px; }
+table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: 14.5px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { font: 600 12px/1.3 var(--mono); letter-spacing: .04em; text-transform: uppercase; background: var(--paper-tint); color: var(--ink-soft); }
+tr:last-child td { border-bottom: 0; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.total td { font-weight: 700; background: #FFFBEF; }
+
+/* grids */
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+.box { border: 1.5px solid var(--line); border-radius: 16px; padding: 16px 18px; min-width: 0; background: var(--paper); }
+.box h4 { margin: 0 0 6px; font: 700 16px/1.3 var(--body); }
+.box p { font-size: 14.5px; margin: 0 0 6px; color: var(--ink-soft); }
+.box .k { font: 600 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+
+/* key findings list */
+ol.findings { list-style: none; padding: 0; counter-reset: f; display: grid; gap: 12px; }
+ol.findings li { counter-increment: f; position: relative; padding: 14px 16px 14px 58px; border-radius: 14px; background: var(--paper-tint); max-width: none; margin: 0; }
+ol.findings li::before { content: counter(f); position: absolute; left: 14px; top: 12px; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font: 700 14px/1 var(--display); background: var(--tangerine); color: var(--ink); }
+
+/* promise board */
+.promise { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 14px 0; }
+.promise div { border-radius: 14px; padding: 16px; font: 700 17px/1.2 var(--display); min-height: 92px; display: flex; flex-direction: column; justify-content: space-between; gap: 8px; }
+.promise small { font: 500 12.5px/1.4 var(--body); opacity: .9; }
+.promise div:nth-child(1) { background: var(--sun); }
+.promise div:nth-child(2) { background: var(--tosca); color: var(--paper); }
+.promise div:nth-child(3) { background: var(--tangerine); }
+.promise div:nth-child(4) { background: var(--pink); color: var(--paper); }
+
+/* position map */
+.map { display: grid; grid-template-columns: 34px 1fr 1fr; grid-template-rows: 1fr 1fr 34px; gap: 8px; margin: 12px 0 16px; max-width: 760px; }
+.map .q { border-radius: 14px; padding: 14px; min-height: 130px; font-size: 14px; display: flex; flex-direction: column; gap: 6px; }
+.map .q b { font: 700 12px/1.2 var(--mono); letter-spacing: .05em; text-transform: uppercase; opacity: .75; }
+.map .q1 { background: #F3EFFA; } .map .q2 { background: #E7F6FF; } .map .q3 { background: #FFF1E3; }
+.map .q4 { background: var(--sun); border: 2.5px dashed var(--ink); }
+.map .q4 strong { font: 800 20px/1.1 var(--display); }
+.map .ax { font: 600 11px/1.2 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); display: grid; place-items: center; text-align: center; }
+.map .axy { writing-mode: vertical-rl; transform: rotate(180deg); }
+.map .axx { grid-column: 2 / 4; display: flex; justify-content: space-between; padding-inline: 6px; }
+
+/* benchmark tabs */
+.btabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
+.btabs button {
+  font: 600 13.5px/1 var(--body); padding: 10px 14px; border-radius: 999px; cursor: pointer;
+  border: 1.5px solid var(--ink); background: var(--paper); color: var(--ink);
+}
+.btabs button[aria-selected="true"] { background: var(--tosca); color: var(--paper); border-color: var(--tosca); }
+.bpanel { border-radius: 18px; padding: 20px; background: var(--paper-tint); border: 1.5px solid var(--line); }
+.bpanel h4 { margin: 0 0 4px; font: 700 20px/1.25 var(--display); }
+.bpanel .flag { font: 600 12px/1 var(--mono); color: var(--muted); letter-spacing: .05em; text-transform: uppercase; }
+.bpanel .lesson { margin-top: 12px; background: var(--paper); border-radius: 12px; padding: 12px 14px; border-left: 4px solid var(--tosca); }
+
+/* calculator */
+.calc { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; margin-top: 10px; }
+.ctrls { display: grid; gap: 16px; min-width: 0; }
+.ctrl label { display: flex; justify-content: space-between; gap: 10px; font-weight: 600; font-size: 14.5px; }
+.ctrl output { font: 600 14px/1.4 var(--mono); font-variant-numeric: tabular-nums; }
+input[type=range] { width: 100%; accent-color: var(--tangerine); margin-top: 6px; }
+select { width: 100%; font: 500 15px/1.3 var(--body); padding: 10px 12px; border-radius: 10px; border: 1.5px solid var(--ink); background: var(--paper); color: var(--ink); margin-top: 6px; }
+.res { border-radius: 18px; padding: 20px; background: var(--ink); color: var(--paper); display: grid; gap: 12px; min-width: 0; }
+.res .big { font: 800 clamp(28px, 4vw, 40px)/1 var(--display); font-variant-numeric: tabular-nums; }
+.res .row { display: flex; justify-content: space-between; gap: 12px; font-size: 14.5px; border-top: 1px solid rgba(255,255,255,.14); padding-top: 10px; }
+.res .row span:last-child { font: 600 14px/1.4 var(--mono); font-variant-numeric: tabular-nums; }
+.pill { display: inline-block; font: 700 12px/1 var(--mono); padding: 6px 10px; border-radius: 999px; letter-spacing: .04em; }
+.pill.good { background: var(--lime); color: var(--ink); }
+.pill.warn { background: var(--sun); color: var(--ink); }
+.pill.bad { background: var(--pink); color: var(--paper); }
+.bar { height: 10px; border-radius: 99px; background: rgba(255,255,255,.14); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--lime); border-radius: 99px; transition: width .25s; }
+
+/* roadmap */
+.road { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.stage { border-radius: 16px; padding: 16px; border: 2px solid var(--ink); background: var(--paper); min-width: 0; }
+.stage .when { font: 600 12px/1 var(--mono); color: var(--muted); letter-spacing: .05em; text-transform: uppercase; }
+.stage h4 { margin: 6px 0 8px; font: 700 18px/1.2 var(--display); }
+.stage p { font-size: 14px; margin: 0 0 8px; color: var(--ink-soft); }
+.stage .gate { font-size: 13px; background: var(--paper-tint); border-radius: 10px; padding: 8px 10px; }
+.stage:nth-child(1) { border-color: var(--sky); } .stage:nth-child(2) { border-color: var(--tangerine); } .stage:nth-child(3) { border-color: var(--tosca); } .stage:nth-child(4) { border-color: var(--pink); }
+
+details.src { margin-top: 8px; }
+details.src summary { cursor: pointer; font-weight: 700; padding: 8px 0; }
+.src ul { columns: 2 320px; column-gap: 28px; font-size: 13.5px; }
+.src li { break-inside: avoid; max-width: none; }
+.src a { color: #0B6E66; word-break: break-word; }
+footer { text-align: center; margin-top: 28px; font: 500 12.5px/1.6 var(--mono); color: var(--ink-soft); }
+footer span { background: var(--paper); padding: 6px 12px; border-radius: 999px; }
+
+@media (max-width: 560px) {
+  .map { grid-template-columns: 22px 1fr 1fr; }
+  .map .q { min-height: 110px; padding: 10px; font-size: 13px; }
+  .map .q4 strong { font-size: 16px; }
+}
+</style>
+
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<div class="wrap">
+  <nav class="chips" aria-label="Bagian laporan">
+    <ul>
+      <li><a href="#ringkasan">Ringkasan</a></li>
+      <li><a href="#pasar">Pasar</a></li>
+      <li><a href="#konsumen">Konsumen</a></li>
+      <li><a href="#kompetisi">Kompetisi</a></li>
+      <li><a href="#benchmark">Benchmark</a></li>
+      <li><a href="#positioning">Positioning</a></li>
+      <li><a href="#assortment">Assortment</a></li>
+      <li><a href="#format">Format Toko</a></li>
+      <li><a href="#operasional">Operasional</a></li>
+      <li><a href="#unit">Unit Ekonomi</a></li>
+      <li><a href="#lokasi">Lokasi</a></li>
+      <li><a href="#komunikasi">Komunikasi</a></li>
+      <li><a href="#risiko">Risiko</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#sumber">Sumber</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="eyebrow">Feasibility study · Kawan Lama Group · Draft v1 · 29 Sep 2026</div>
+    <h1>Furnitur <span class="hl">harga pasar</span>, dengan kepastian <span class="hl2">toko modern</span>.</h1>
+    <p class="lede">Riset kelayakan Brand X: format ritel furnitur dan kasur <em>value</em> untuk 137,5 juta orang <em>aspiring middle class</em> Indonesia, lengkap dengan pembanding dari Vietnam, China, Jepang, Filipina, India, dan Amerika Latin.</p>
+    <div class="verdict">
+      <span class="stamp">GO*</span>
+      <p><strong>*Lewat pilot terkendali 6–9 toko, bukan roll-out langsung.</strong> Peluangnya nyata dan besar. Margin format ini tipis, jadi keberhasilannya ditentukan oleh sourcing, logistik, pembiayaan konsumen, dan lokasi, bukan oleh desain toko.</p>
+    </div>
+    <div class="tags">
+      <div class="tag y"><div class="n">137,5 jt</div><div class="l">orang aspiring middle class (49,2% penduduk, BPS 2024), naik 8,7 juta sejak 2019</div></div>
+      <div class="tag t"><div class="n">300 toko</div><div class="l">Erablue dalam &lt;4 tahun dengan janji “Harga Pabrik” di ruko tier 2–3</div></div>
+      <div class="tag o"><div class="n">Rp210–240 jt</div><div class="l">perkiraan penjualan per bulan agar satu toko impas <span class="est">Estimasi</span></div></div>
+      <div class="tag p"><div class="n">3–4 staf</div><div class="l">per toko di Điện Máy Xanh Supermini Vietnam, yang mencapai 1.000 toko</div></div>
+    </div>
+    <div class="meta"><span>Metode: desk research + brief &amp; store visit tim</span><span>Label <span class="est">Estimasi</span> = angka asumsi kami, wajib divalidasi</span></div>
+    <div class="hint">Latar belakang bisa disentuh: gerakkan kursor atau jari, klik untuk memunculkan “promo”.</div>
+  </header>
+
+  <!-- 0 -->
+  <section class="panel" id="ringkasan">
+    <span class="sec-no">00 · Ringkasan Eksekutif</span>
+    <h2>Tujuh temuan kunci</h2>
+    <ol class="findings">
+      <li><strong>Pasar sasaran adalah segmen konsumen terbesar di Indonesia.</strong> Kelompok AMC naik ke 137,5 juta orang, sementara kelas menengah turun dari 57,3 juta ke 47,9 juta. Pasar Informa/Selma menyempit, pasar Brand X membesar. Brand X adalah langkah defensif sekaligus ofensif bagi grup.</li>
+      <li><strong>Belum ada chain furnitur modern berformat value yang besar di tier 2–3.</strong> Pasar terbagi antara toko mebel tradisional/independen dan chain modern di mal. Posisi “modern, terpercaya, harga pasar” masih kosong secara nasional.</li>
+      <li><strong>Model ini sudah terbukti di Indonesia, di kategori tetangga.</strong> Erablue membuka toko ke-300 pada Agustus 2026 dan melampaui Electronic City (62 toko). MR.DIY punya 1.400 toko di 445 kota/kabupaten, 80% stand-alone. Brand X adalah “Erablue-nya furnitur”.</li>
+      <li><strong>Model Vietnam bisa langsung ditiru.</strong> Điện Máy Xanh Supermini: 80–120 m², 3–4 karyawan, sewa hanya ¼ format mini, 1.000 toko dalam ±2 tahun. Rencana 4 orang per toko dalam brief sejalan dengan benchmark ini.</li>
+      <li><strong>Nilai tambah datang dari kepastian, bukan dari toko yang lebih bagus.</strong> Bangunan boleh sederhana. Janjinya yang harus kuat: harga pas, stok pasti, antar cepat, garansi, cicilan resmi.</li>
+      <li><strong>Pembiayaan konsumen adalah mesin penjualan.</strong> Pengeluaran rumah tangga AMC sekitar Rp3,3–7,8 juta per bulan <span class="est">Estimasi</span>, jadi sofa Rp2 juta setara 25–60% belanja bulanan. Pelajaran Coppel dan Casas Bahia: cicilan wajib ada, risiko kredit dilepas ke mitra multifinance.</li>
+      <li><strong>Titik rawan terbesar adalah unit economics.</strong> Toko impas di sekitar Rp210–240 juta per bulan dengan margin kotor ±32% <span class="est">Estimasi</span>. Tuasnya: private label, termin/konsinyasi pemasok, dan biaya pengiriman.</li>
+    </ol>
+    <p class="quote">Brand X = Harga Pasar + Stok Pasti + Antar Cepat + Cicilan Mudah, dalam toko yang terang, bersih, dan jujur harganya.</p>
+    <p><strong>Rencana tindak:</strong> riset primer 3 bulan → pilot 6–9 toko di 2–3 klaster (koridor industri Jawa Barat dan Pantura/Jawa Tengah) selama 9–12 bulan → stage gate dengan KPI jelas → scale-up hub-and-spoke, dengan skenario 150–300 toko dalam 5 tahun.</p>
+  </section>
+
+  <!-- 2 -->
+  <section class="panel" id="pasar">
+    <span class="sec-no">01 · Pasar</span>
+    <h2>Besar, tumbuh secara jumlah, tertekan secara daya beli</h2>
+    <h3>Separuh Indonesia adalah aspiring middle class</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Kelompok (BPS 2024)</th><th class="num">Jumlah orang</th><th class="num">% populasi</th><th>Pengeluaran per kapita / bulan</th></tr></thead>
+      <tbody>
+        <tr><td>Kelas menengah</td><td class="num">47,85 juta</td><td class="num">17,1%</td><td>Rp2,04 – 9,91 juta</td></tr>
+        <tr class="total"><td>Menuju kelas menengah (AMC)</td><td class="num">137,50 juta</td><td class="num">49,2%</td><td>Rp0,87 – 2,04 juta</td></tr>
+        <tr><td>Tren 2019 → 2024</td><td colspan="3">Kelas menengah −9,5 juta; AMC +8,7 juta</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li>Banyak rumah tangga yang dulu belanja di Informa atau ACE kini masuk kelompok AMC. <strong>Ekspektasinya tetap modern, dompetnya AMC.</strong> Inilah arti “punya aspirasi tapi nggak mahal” dalam brief.</li>
+      <li>Dengan rata-rata 3,8 orang per rumah tangga, pengeluaran rumah tangga AMC sekitar <strong>Rp3,3–7,8 juta per bulan</strong> <span class="est">Estimasi</span>. Belanja furnitur di atas Rp1 juta hampir selalu memerlukan THR, tabungan, atau cicilan.</li>
+    </ul>
+    <h3>Ukuran pasar</h3>
+    <div class="grid2">
+      <div class="box"><span class="k">Pasar furnitur Indonesia 2025</span><h4>USD 8,2–9,6 miliar</h4><p>CAGR ±3–6% (Mordor Intelligence, IMARC; definisinya berbeda-beda).</p></div>
+      <div class="box"><span class="k">Pasar yang bisa dilayani Brand X <span class="est">Estimasi</span></span><h4>Rp18–36 triliun / tahun</h4><p>±36 juta rumah tangga AMC × belanja furnitur &amp; bedding Rp0,5–1 juta per tahun. Pangsa 1% ≈ Rp180–360 miliar, setara 50–100 toko. Validasi dengan Susenas.</p></div>
+    </div>
+    <h3>Pemicu permintaan</h3>
+    <div class="grid3">
+      <div class="box"><h4>Rumah subsidi baru</h4><p>KPR FLPP 2026 sudah 160.070 unit per 28 Sep, target 350.000. Rumah kosong, dana terbatas, butuh kasur, lemari, sofa sekaligus.</p></div>
+      <div class="box"><h4>Nikah &amp; keluarga baru</h4><p>Pemicu klasik pembelian starter set.</p></div>
+      <div class="box"><h4>Lebaran / THR</h4><p>Puncak musim terbesar. Kampanye dimulai 4–6 minggu sebelumnya.</p></div>
+      <div class="box"><h4>Ajaran baru &amp; anak kos</h4><p>Kasur lipat, lemari plastik, meja belajar.</p></div>
+      <div class="box"><h4>Penggantian mendesak</h4><p>Kasur rusak, banjir. Di sini stok siap bawa menentukan.</p></div>
+    </div>
+    <h3>Sinyal kehati-hatian 2026</h3>
+    <ul>
+      <li><strong>Mandiri Spending Index Q2-2026:</strong> pertumbuhan belanja melambat ke 6,1% YoY. Indeks daya beli kelas bawah turun ke −1,0 (April 2026). Persepsi membeli barang tahan lama di kelas menengah turun 9,2% MoM pada Mei 2026.</li>
+      <li><strong>AZKO (ACES):</strong> SSSG −3,6% selama 9 bulan pertama 2025, mulai pulih +1% pada Januari 2026. Luar Jawa masih negatif, antara lain karena dilusi traffic akibat ekspansi agresif.</li>
+      <li><strong>Implikasi:</strong> permintaan ada tetapi sangat sensitif terhadap harga dan cicilan. Konsumen sedang <em>trade down</em> dari modern ke value, dan itu menguntungkan Brand X. Ekspansi tetap harus bertahap dan berbasis data per toko.</li>
+    </ul>
+  </section>
+
+  <!-- 3 -->
+  <section class="panel" id="konsumen">
+    <span class="sec-no">02 · Target Customer</span>
+    <h2>Siapa mereka, dan bagaimana mereka membeli</h2>
+    <p class="note">Persona di bawah adalah hipotesis dari brief dan store visit. Validasi lewat FGD di Fase 0.</p>
+    <div class="grid2">
+      <div class="box"><span class="k">Persona A · inti</span><h4>“Bu Rina”, ibu rumah tangga kampung kota</h4><p>30–45 tahun, suami buruh atau pedagang, pengeluaran rumah tangga Rp3–6 juta. Butuh kasur busa, lemari, sofa ruang tamu untuk “gengsi” Lebaran. Bayar dari THR, arisan, atau cicilan; membandingkan harga di 2–3 toko pasar.</p></div>
+      <div class="box"><span class="k">Persona B</span><h4>“Dimas &amp; Sari”, pasangan muda di rumah subsidi</h4><p>23–32 tahun, buruh pabrik atau karyawan, baru terima kunci FLPP. Butuh starter set lengkap. Cicilan 6–12 bulan dan paket bundling; riset di TikTok/IG lalu datang ke toko.</p></div>
+      <div class="box"><span class="k">Persona C</span><h4>Perantau / anak kos</h4><p>18–28 tahun. Kasur lipat, lemari plastik, kursi, bantal. Tunai atau QRIS, pembelian kecil dan cepat.</p></div>
+      <div class="box"><span class="k">Persona D</span><h4>Pedagang / UMKM / warung</h4><p>Kursi plastik per lusin, rak, meja. Tunai dalam jumlah besar, minta harga grosir.</p></div>
+    </div>
+    <h3>Perilaku belanja</h3>
+    <ol>
+      <li><strong>Harga filter pertama, kepercayaan filter kedua.</strong> Mereka takut barang display beda dengan yang dikirim, “busa KW”, atau harga dinaikkan dulu baru didiskon.</li>
+      <li><strong>Ingin melihat, memegang, menduduki.</strong> Barang besar tetap diputuskan offline meski riset awal di TikTok, Shopee, atau Facebook Marketplace.</li>
+      <li><strong>“Bisa dibawa hari ini” sangat bernilai.</strong> Karena itu toko pasar selalu menonjolkan ready stock.</li>
+      <li><strong>Menawar adalah budaya.</strong> Harga pas harus disertai alasan yang meyakinkan: “sudah paling murah, dijamin”.</li>
+      <li><strong>Cicilan dianggap harga.</strong> Konsumen menghitung “berapa per bulan”, bukan totalnya.</li>
+      <li><strong>Belanja keluarga.</strong> Toko harus terasa mengundang: bersih, terang, tidak mengintimidasi.</li>
+    </ol>
+    <h3>Apakah mereka juga ke MINISO dan MR.DIY?</h3>
+    <p><strong>Ya.</strong> MR.DIY dan MINISO sudah mengajarkan konsumen AMC bahwa toko modern tidak harus mahal: terang, rak rapi, harga jelas, tidak ditawar, kasir QRIS. Keduanya tidak menjual furnitur besar, jadi bukan pesaing langsung. Mereka justru <strong>penanda lokasi yang sangat baik</strong>.</p>
+  </section>
+
+  <!-- 4 -->
+  <section class="panel" id="kompetisi">
+    <span class="sec-no">03 · Kompetisi</span>
+    <h2>Kuadran “harga rendah × pengalaman modern” masih kosong</h2>
+    <div class="map" role="img" aria-label="Peta posisi: sumbu harga dan pengalaman. Brand X di kuadran harga rendah dan pengalaman modern.">
+      <div class="ax axy">Harga tinggi ↑</div>
+      <div class="q q1"><b>Tradisional · harga tinggi</b><span>Toko mebel “showroom” lokal</span></div>
+      <div class="q q2"><b>Modern · harga tinggi</b><span>INFORMA, SELMA, IKEA, Nitori</span></div>
+      <div class="ax axy">Harga rendah ↓</div>
+      <div class="q q3"><b>Tradisional · harga rendah</b><span>Laris, Maggio, King House, Simpati, toko pasar</span></div>
+      <div class="q q4"><b>Modern · harga rendah</b><strong>★ Brand X</strong><span>MR.DIY &amp; Erablue ada di sini, tapi di kategori lain</span></div>
+      <div></div>
+      <div class="ax axx"><span>← Pengalaman tradisional</span><span>Pengalaman modern →</span></div>
+    </div>
+    <div class="tw"><table>
+      <thead><tr><th>Kelompok</th><th>Contoh</th><th>Kekuatan</th><th>Kelemahan = peluang Brand X</th></tr></thead>
+      <tbody>
+        <tr><td>Toko mebel tradisional / pasar</td><td>Ribuan toko di pasar dan sentra mebel</td><td>Dekat, murah, fleksibel, kredit informal</td><td>Harga tidak transparan, kualitas tidak konsisten, stok dan pengiriman tidak pasti, tanpa garansi</td></tr>
+        <tr><td>Chain independen regional</td><td>Laris (Jateng, Bekasi), Maggio (Depok, plus bahan bangunan), King House (Tangerang), Simpati</td><td>Promo bombastis, cicilan, ready stock, toko 2–3 lantai</td><td>Brand lemah di luar kota asal, kurang nyaman, sistem manual, sulit di-scale</td></tr>
+        <tr><td>Modern menengah-atas</td><td>INFORMA, IKEA (tanpa toko baru 2026), Nitori (5 toko, di mal)</td><td>Brand, desain, sistem</td><td>Jauh dari AMC, harga di luar jangkauan, citra “bukan untuk saya”</td></tr>
+        <tr><td>Value retail non-furnitur</td><td>MR.DIY, MINISO, AZKO</td><td>Standar pengalaman modern, jaringan luas</td><td>Tidak menjual furnitur besar</td></tr>
+        <tr><td>Value elektronik</td><td>Erablue (300 toko)</td><td>“Harga Pabrik”, antar-pasang gratis, ruko tier 2–3</td><td>Tidak menjual furnitur, tapi bisa jadi pesaing kalau menambah kategori</td></tr>
+        <tr><td>Online</td><td>Shopee, TikTok Shop, Tokopedia</td><td>Harga, kemudahan</td><td>Ongkir barang besar mahal, tidak bisa dicoba, risiko rusak. Fabelio pailit 2022.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- 5 -->
+  <section class="panel" id="benchmark">
+    <span class="sec-no">04 · Benchmark</span>
+    <h2>Pelajaran dari negara dengan karakter serupa</h2>
+    <div class="btabs" role="tablist" aria-label="Pilih benchmark" id="btabs"></div>
+    <div class="bpanel" role="tabpanel" id="bpanel" aria-live="polite"></div>
+    <h3>Formula value furniture yang terbukti</h3>
+    <ol>
+      <li>Janji harga ekstrem tapi kredibel (Erablue “Harga Pabrik”, Nitori “Okaidoku”).</li>
+      <li>Kontrol rantai pasok dan private label untuk menjaga margin (Nitori, Mandaue Foam, Wakefit).</li>
+      <li>Kasur dan bedding sebagai profit engine (Wakefit, Mandaue Foam).</li>
+      <li>Format kecil seragam yang cepat dibuka, dengan pilot sebelum scale (Điện Máy Xanh Supermini, MR.DIY).</li>
+      <li>Cicilan sebagai alat jual utama, risiko kredit dilepas ke mitra (Coppel, Casas Bahia).</li>
+      <li>Kemitraan atau waralaba sebagai akselerator fase kedua (Quanyou, Wakefit FOCO).</li>
+    </ol>
+  </section>
+
+  <!-- 6 -->
+  <section class="panel" id="positioning">
+    <span class="sec-no">05 · Positioning</span>
+    <h2>Cangkang boleh sederhana. Janjinya harus kuat.</h2>
+    <div class="promise">
+      <div>Harga Pasar<small>Harga pas tertulis, dijamin termurah di radius 5 km</small></div>
+      <div>Stok Pasti<small>Yang dipajang = yang tersedia, bisa dibawa hari ini</small></div>
+      <div>Antar Cepat<small>Gratis hari ini atau besok, rakit gratis</small></div>
+      <div>Cicilan Mudah<small>Mitra resmi, DP ringan, persetujuan cepat</small></div>
+    </div>
+    <h3>“Kalau kita jelekin, apa nilai tambah kita?”</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Dibuat sederhana (cangkang)</th><th>Dibuat kuat (janji)</th></tr></thead>
+      <tbody>
+        <tr><td>Fasad cat + logo flexi</td><td>Harga pas dan transparan, satu harga di semua toko</td></tr>
+        <tr><td>Kipas, bukan AC</td><td>Stok pasti ada</td></tr>
+        <tr><td>Lantai keramik standar, rolling door</td><td>Antar gratis hari ini atau besok</td></tr>
+        <tr><td>Fixture dasar, tanpa drop ceiling</td><td>Garansi tertulis dan retur 7 hari</td></tr>
+        <tr><td>Display sederhana</td><td>Cicilan resmi dan sistem: POS, nota resmi, CS WhatsApp, status pengiriman</td></tr>
+      </tbody>
+    </table></div>
+    <p>Toko tradisional mudah menyaingi cangkangnya. Mereka tidak bisa menyaingi konsistensi janjinya tanpa sistem dan skala seperti Kawan Lama.</p>
+    <h3>Di mana posisi Brand X?</h3>
+    <p class="quote">Lebih murah dan lebih pasti dibanding INFORMA. Lebih jujur, terang, dan terjamin dibanding toko pasar.</p>
+    <ul>
+      <li><strong>Kerangka acuan:</strong> toko furnitur dan kasur untuk keluarga Indonesia.</li>
+      <li><strong>Alasan untuk percaya:</strong> skala dan sourcing Kawan Lama, harga tertulis, garansi tertulis, armada pengiriman sendiri.</li>
+      <li><strong>Kepribadian:</strong> ramah, lugas, bangga lokal, sedikit playful. Nadanya seperti MR.DIY, bukan seperti toko pasar.</li>
+    </ul>
+    <h3>Tujuh kepastian yang menaikkan value</h3>
+    <ol>
+      <li>Harga pas dan label harga besar di setiap item, termasuk harga cicilan per bulan.</li>
+      <li>Garansi Harga Termurah: selisih diganti jika ada yang lebih murah di radius 5 km. Janji bombastis jadi kredibel.</li>
+      <li>Indikator stok di label (hijau = bisa dibawa hari ini).</li>
+      <li>Antar gratis dalam radius tertentu, rakit gratis untuk lemari.</li>
+      <li>Garansi tertulis: rangka sofa 1 tahun, busa tidak kempes 1–3 tahun sesuai grade.</li>
+      <li>Paket starter set untuk rumah baru, pengantin, dan anak kos.</li>
+      <li>Member digital yang terhubung ke ekosistem Kawan Lama.</li>
+    </ol>
+    <h3>Arsitektur brand</h3>
+    <div class="tw"><table>
+      <thead><tr><th></th><th>SELMA</th><th>INFORMA</th><th>Brand X</th></tr></thead>
+      <tbody>
+        <tr><td>SES</td><td>A–B+</td><td>B</td><td><strong>C–B− (AMC)</strong></td></tr>
+        <tr><td>Lokasi</td><td>Mal premium, flagship</td><td>Mal, big box, tier 1–2</td><td><strong>Ruko, pasar, koridor tier 2–3 &amp; kabupaten</strong></td></tr>
+        <tr><td>Kategori</td><td>Furnitur desain</td><td>Home furnishing lengkap</td><td><strong>Furnitur &amp; bedding fungsional, cepat laku</strong></td></tr>
+        <tr><td>Janji</td><td>Gaya</td><td>Solusi rumah lengkap</td><td><strong>Harga pasar + kepastian</strong></td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>Rekomendasi:</strong> brand terpisah, bukan “INFORMA Lite”, untuk mencegah dilusi dan kanibalisasi. Endorsement halus (“bagian dari Kawan Lama Group”) cukup di nota, website, dan papan kecil di kasir. Uji dalam FGD.</p>
+  </section>
+
+  <!-- 7 -->
+  <section class="panel" id="assortment">
+    <span class="sec-no">06 · Assortment &amp; Harga</span>
+    <h2>Fokus, bukan lengkap</h2>
+    <ul>
+      <li>250–450 SKU aktif per toko <span class="est">Estimasi</span>. Setiap SKU punya peran: traffic builder, margin maker, atau basket builder.</li>
+      <li>Modul <strong>core</strong> (semua toko), <strong>regional</strong> (selera lokal), dan <strong>opsional</strong> (elektronik kecil di lokasi tertentu).</li>
+      <li>Good–Better–Best di tiap kategori inti. Harga “Good” menjadi senjata komunikasi.</li>
+    </ul>
+    <div class="tw"><table>
+      <thead><tr><th>Kategori</th><th>Peran</th><th>Harga indikatif <span class="est">Estimasi</span></th><th>Catatan</th></tr></thead>
+      <tbody>
+        <tr><td>Kursi plastik</td><td>Traffic builder</td><td>Rp45–120 rb</td><td>Selalu termurah di area; jual satuan dan per lusin</td></tr>
+        <tr><td>Bantal &amp; guling</td><td>Traffic / basket</td><td>Rp25–100 rb</td><td>Area kasir; private label mudah</td></tr>
+        <tr><td>Kasur busa / lipat</td><td><strong>Profit engine</strong></td><td>Rp300 rb – 2,3 jt</td><td>Waspadai kenaikan harga busa 2026; kontrak volume, private label</td></tr>
+        <tr><td>Lemari plastik</td><td>Traffic / volume</td><td>Rp400 rb – 1 jt</td><td>Napolly, Shinpo, dsb.; mudah dikirim</td></tr>
+        <tr><td>Lemari particle board / kayu</td><td>Margin maker</td><td>Rp700 rb – 2,5 jt</td><td>Pabrikan lokal (Olympic, Graver, Activ) + private label</td></tr>
+        <tr><td>Sofa</td><td>Margin + hero display</td><td>Rp1,5 – 4 jt</td><td>Sentra lokal (Jepara, Bekasi, Solo, Pasuruan); sofa bed dan sofa L untuk rumah subsidi</td></tr>
+        <tr><td>Spring bed set</td><td>Margin maker</td><td>Rp1,5 – 4 jt</td><td>Kategori besar di pasar tradisional</td></tr>
+        <tr><td>Elektronik (opsional)</td><td>Basket builder</td><td>—</td><td>Hati-hati tumpang tindih dengan INFORMA Electronics dan Erablue</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Sourcing adalah sumber margin</h3>
+    <ol>
+      <li>Private label sejak awal: target 30–40% penjualan di tahun ke-2 dan lebih dari 50% di tahun ke-4.</li>
+      <li>Ikut kontrak pabrikan INFORMA/AZKO untuk spesifikasi yang lebih sederhana.</li>
+      <li>Klaster pemasok lokal per region untuk sofa dan lemari (menekan ongkir).</li>
+      <li>Termin 45–60 hari dan konsinyasi untuk SKU lambat: tuas modal kerja terbesar.</li>
+    </ol>
+  </section>
+
+  <!-- 8 -->
+  <section class="panel" id="format">
+    <span class="sec-no">07 · Format &amp; Store Concept</span>
+    <h2>Ruko 300–400 m², terang, tanpa AC</h2>
+    <div class="grid3">
+      <div class="box"><span class="k">Format S</span><h4>150–200 m²</h4><p>Kabupaten kecil, ala DMX Supermini.</p></div>
+      <div class="box"><span class="k">Format M · standar</span><h4>300–400 m²</h4><p>2–3 ruko 2 lantai digabung. Lantai 1: kasur, plastik, hero sofa, kasir. Lantai 2: sofa, lemari kayu, spring bed. 20–30% luas untuk stok.</p></div>
+      <div class="box"><span class="k">Format L</span><h4>600–800 m² / hanggar</h4><p>Kota lebih besar, mengikuti tren toko besar di county town China.</p></div>
+    </div>
+    <p style="margin-top:14px">Kipas di setiap kolom, ventilasi silang, glass block atau skylight. Pencahayaan LED rata ±500–750 lux. Lantai keramik terang. Rolling door atau pintu lipat besi.</p>
+    <h3>Kit of Parts: guideline dua lapis</h3>
+    <div class="grid2">
+      <div class="box"><span class="k">Lapis 1 · wajib</span><h4>10 elemen non-negotiable</h4>
+        <ol>
+          <li>Warna brand dominan di fasad (cat color-block)</li>
+          <li>Logo flexi besar + lampu sorot</li>
+          <li>Papan Janji di fasad</li>
+          <li>Price tag standar A5/A4/A3: tunai, per bulan, indikator stok</li>
+          <li>Banner promo dengan template per kampanye</li>
+          <li>Standar lux minimum</li>
+          <li>Area kasir &amp; cicilan ber-identitas</li>
+          <li>Seragam kaos staf</li>
+          <li>Wayfinding kategori</li>
+          <li>Checklist kebersihan harian</li>
+        </ol>
+      </div>
+      <div class="box"><span class="k">Lapis 2 · fleksibel</span><h4>Menyesuaikan bangunan</h4><p>Tata letak detail, jumlah lantai, finishing plafon, jenis rak, material lantai, fasad sekunder.</p></div>
+    </div>
+    <h3>Look toko dari brief</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Temuan referensi</th><th>Rekomendasi Brand X</th></tr></thead>
+      <tbody>
+        <tr><td>Kipas di setiap kolom</td><td>Adopsi, dengan jenis dan warna seragam sebagai identitas</td></tr>
+        <tr><td>Lampu outbow</td><td>Adopsi, dengan lux lebih tinggi dari pesaing</td></tr>
+        <tr><td>Setting simple</td><td>Adopsi, plus 2–3 vignette “Rumah Subsidi 36 m²” sebagai sumber aspirasi</td></tr>
+        <tr><td>Lantai keramik</td><td>Adopsi</td></tr>
+        <tr><td>Rolling door</td><td>Adopsi, dicat warna brand sehingga saat tutup tetap jadi media iklan</td></tr>
+        <tr><td>2 lantai</td><td>Adopsi, barang cepat laku di lantai 1</td></tr>
+        <tr><td>Promise bombastis</td><td>Adopsi, dibuat kredibel dengan Garansi Harga Termurah</td></tr>
+        <tr><td>Hanggar</td><td>Opsi format L</td></tr>
+      </tbody>
+    </table></div>
+    <p>Yang membuatnya terasa berbeda: terang, bersih, rapi; harga tertulis di semua barang; vignette skala rumah subsidi; kasir QRIS dan nota di WhatsApp; staf berseragam dengan skrip layanan sederhana.</p>
+    <h3>Capex per toko (format M, ruko sewa) <span class="est">Estimasi</span></h3>
+    <div class="tw"><table>
+      <thead><tr><th>Komponen</th><th class="num">Kisaran</th></tr></thead>
+      <tbody>
+        <tr><td>Renovasi ringan (cat, listrik, lantai, toilet)</td><td class="num">Rp150–300 jt</td></tr>
+        <tr><td>Signage (flexi, papan janji, rolling door)</td><td class="num">Rp30–60 jt</td></tr>
+        <tr><td>Lighting + kipas</td><td class="num">Rp40–80 jt</td></tr>
+        <tr><td>Fixture, rak gudang, display</td><td class="num">Rp80–150 jt</td></tr>
+        <tr><td>IT (POS, CCTV, jaringan)</td><td class="num">Rp30–50 jt</td></tr>
+        <tr><td>Pra-operasional</td><td class="num">Rp30–60 jt</td></tr>
+        <tr class="total"><td>Total fit-out</td><td class="num">±Rp360–700 jt</td></tr>
+        <tr><td>Persediaan awal (sebagian konsinyasi/termin)</td><td class="num">Rp0,8–1,5 M</td></tr>
+        <tr><td>Deposit sewa ruko (umumnya 2–5 tahun di muka)</td><td class="num">Rp0,4–1,2 M</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- 9 -->
+  <section class="panel" id="operasional">
+    <span class="sec-no">08 · Operating Model</span>
+    <h2>Empat orang per toko, hub regional di belakangnya</h2>
+    <div class="grid2">
+      <div class="box"><span class="k">1 orang</span><h4>Kepala toko</h4><p>Operasional, kas, laporan, cicilan, eskalasi.</p></div>
+      <div class="box"><span class="k">2 orang</span><h4>Sales advisor</h4><p>Penjualan, display, WhatsApp pelanggan, live TikTok lokal.</p></div>
+      <div class="box"><span class="k">1 orang</span><h4>Stok &amp; pengiriman</h4><p>Terima barang, stok, siapkan pengiriman, rakit ringan.</p></div>
+      <div class="box"><span class="k">Mitra, bukan karyawan</span><h4>Petugas multifinance</h4><p>FIF Spektra, Home Credit, Adira, dan sejenisnya.</p></div>
+    </div>
+    <p style="margin-top:14px"><strong>Agar 4 orang cukup:</strong> assortment standar dengan planogram dari pusat, harga pas tanpa tawar-menawar, pengiriman dipusatkan di hub, tenaga part-time di akhir pekan dan musim Lebaran.</p>
+    <h3>Logistik hub-and-spoke</h3>
+    <ul>
+      <li>1 hub per 15–25 toko dalam radius 60–90 menit.</li>
+      <li>Hub memegang barang besar (sofa, lemari kayu, spring bed). Toko memegang barang cepat laku (kasur busa, plastik, bantal).</li>
+      <li>Armada bersama dengan rute harian. POS dan WMS terintegrasi (bisa memakai sistem AZKO/INFORMA) untuk stok real-time.</li>
+    </ul>
+    <h3>Pembiayaan konsumen</h3>
+    <ul>
+      <li>Minimal 2 multifinance + 1–2 paylater berizin OJK agar tingkat persetujuan tinggi.</li>
+      <li>Cicilan 0% hanya untuk kampanye, biayanya ditanggung bersama pemasok.</li>
+      <li>Tanpa kredit in-house di fase awal (pelajaran Casas Bahia).</li>
+      <li>Pantau POJK 32/2025 dan rencana pembatasan multi-akun paylater. Multifinance tradisional lebih stabil.</li>
+    </ul>
+  </section>
+
+  <!-- 10 -->
+  <section class="panel" id="unit">
+    <span class="sec-no">09 · Unit Economics</span>
+    <h2>Simulasi untung-rugi satu toko</h2>
+    <p>Geser angka di bawah untuk melihat kontribusi toko per bulan. Model memakai asumsi laporan: biaya variabel ±10,7% dari penjualan (pengiriman 3%, pemasaran 2%, MDR/subsidi cicilan 1,7%, susut 1%, alokasi hub &amp; HQ 3%) ditambah biaya tetap sewa, SDM, utilitas, dan lain-lain. <span class="est">Estimasi</span></p>
+    <div class="calc">
+      <div class="ctrls">
+        <div class="ctrl">
+          <label for="region">Klaster lokasi</label>
+          <select id="region">
+            <option value="jateng">Jawa Tengah / Pantura (UMK ±Rp2,5–2,8 jt)</option>
+            <option value="jabar">Koridor industri Jabar (UMK ±Rp5,9 jt)</option>
+          </select>
+        </div>
+        <div class="ctrl">
+          <label for="sales">Penjualan per bulan <output id="salesOut" for="sales"></output></label>
+          <input type="range" id="sales" min="150" max="550" step="10" value="300">
+        </div>
+        <div class="ctrl">
+          <label for="gm">Margin kotor <output id="gmOut" for="gm"></output></label>
+          <input type="range" id="gm" min="28" max="40" step="0.5" value="33">
+        </div>
+        <p class="hint">Titik awal = skenario dasar laporan: Rp300 jt, margin 33%, Jawa Tengah.</p>
+      </div>
+      <div class="res" aria-live="polite">
+        <div><span class="pill" id="status"></span></div>
+        <div class="big" id="ebitda"></div>
+        <div class="bar"><i id="barFill"></i></div>
+        <div class="row"><span>Margin EBITDA toko</span><span id="margin"></span></div>
+        <div class="row"><span>Laba kotor</span><span id="gp"></span></div>
+        <div class="row"><span>Total opex</span><span id="opex"></span></div>
+        <div class="row"><span>Titik impas penjualan</span><span id="be"></span></div>
+        <div class="row"><span>Payback capex fit-out (±Rp500 jt)</span><span id="pb"></span></div>
+      </div>
+    </div>
+    <h3>Tiga skenario (Jawa Tengah)</h3>
+    <div class="tw"><table>
+      <thead><tr><th>Item (Rp juta / bulan)</th><th class="num">Rendah</th><th class="num">Dasar</th><th class="num">Tinggi</th></tr></thead>
+      <tbody>
+        <tr><td>Penjualan</td><td class="num">200</td><td class="num">300</td><td class="num">450</td></tr>
+        <tr><td>Laba kotor</td><td class="num">64 (32%)</td><td class="num">99 (33%)</td><td class="num">158 (35%)</td></tr>
+        <tr><td>Total opex</td><td class="num">65</td><td class="num">76,5</td><td class="num">95,5</td></tr>
+        <tr class="total"><td>Kontribusi toko</td><td class="num">−1 (0%)</td><td class="num">22,5 (7,5%)</td><td class="num">62,5 (13,9%)</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li><strong>Titik impas ±Rp210–240 jt per bulan</strong>, kira-kira 10–15 transaksi per hari dengan keranjang rata-rata Rp600 ribu.</li>
+      <li><strong>Tuas terbesar:</strong> margin kotor lewat private label (+3 poin ≈ +Rp9 jt/bulan), sewa, dan biaya pengiriman.</li>
+      <li><strong>Payback:</strong> fit-out saja ±20–24 bulan (dasar) dan ±8–10 bulan (tinggi). Termasuk modal kerja bersih dan deposit: ±36–48 bulan (dasar), ±16–24 bulan (tinggi). Skenario dasar belum cukup menarik, jadi <strong>target pilot ≥Rp350–400 jt per bulan dalam 6–9 bulan</strong>.</li>
+      <li>Di koridor Jabar biaya SDM hampir 2 kali lipat dan sewa lebih mahal, tetapi daya beli juga lebih tinggi. Pilot harus mencakup kedua klaster.</li>
+    </ul>
+  </section>
+
+  <!-- 11 -->
+  <section class="panel" id="lokasi">
+    <span class="sec-no">10 · Lokasi</span>
+    <h2>Dekat pasar, dekat rumah subsidi, dekat MR.DIY</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Kriteria</th><th class="num">Bobot</th><th>Indikator</th></tr></thead>
+      <tbody>
+        <tr><td>Kepadatan AMC</td><td class="num">25</td><td>Kepadatan kecamatan, pekerja pabrik/informal, rumah subsidi dalam 5–10 km</td></tr>
+        <tr><td>Pusat aktivitas</td><td class="num">20</td><td>≤300 m dari pasar/terminal/alun-alun, traffic motor</td></tr>
+        <tr><td>Penanda value retail</td><td class="num">15</td><td>MR.DIY, Erablue, Alfamart/Indomaret padat, toko emas, dealer motor</td></tr>
+        <tr><td>Akses &amp; visibilitas</td><td class="num">15</td><td>Muka ≥8–12 m, parkir motor, akses truk</td></tr>
+        <tr><td>Biaya</td><td class="num">15</td><td>Sewa per m² dibanding estimasi penjualan; ruko 2–3 unit berdampingan</td></tr>
+        <tr><td>Klaster toko mebel</td><td class="num">10</td><td>3+ toko mebel dalam 1 km (“destination street”)</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Klaster prioritas (hipotesis)</h3>
+    <div class="grid3">
+      <div class="box"><span class="k">Pilot A · wajib</span><h4>Koridor industri Jabar</h4><p>Kab. Bekasi (Cikarang, Cibitung), Karawang, Purwakarta. Buruh ber-UMK tinggi, rumah subsidi masif, dekat DC Kawan Lama.</p></div>
+      <div class="box"><span class="k">Pilot B · wajib</span><h4>Pantura / Jawa Tengah</h4><p>Tegal, Brebes, Pekalongan, Cirebon, atau Banyumas–Cilacap. Opex rendah, konsumen sangat price-sensitive, Laris kuat di sini.</p></div>
+      <div class="box"><span class="k">Pilot C · opsional</span><h4>Jawa Timur</h4><p>Sidoarjo, Gresik, Mojokerto, atau Jember/Kediri. Dekat pemasok Pasuruan.</p></div>
+      <div class="box"><span class="k">Gelombang 2</span><h4>Jawa lainnya</h4><p>Serang–Cilegon, Bogor–Sukabumi, Solo Raya, Semarang pinggiran, Malang.</p></div>
+      <div class="box"><span class="k">Gelombang 3</span><h4>Luar Jawa</h4><p>Lampung, Palembang, Medan pinggiran, Makassar, setelah hub siap. Pelajaran AZKO: SSSG luar Jawa lebih volatil.</p></div>
+    </div>
+    <p style="margin-top:14px"><strong>Prinsip klaster:</strong> 5–8 toko per hub secara berdekatan, bukan tersebar. Jarak antar-toko minimal 5–7 km di kota tier 2 untuk mencegah kanibalisasi.</p>
+  </section>
+
+  <!-- 12 -->
+  <section class="panel" id="komunikasi">
+    <span class="sec-no">11 · Komunikasi</span>
+    <h2>Harga dulu, besar, dan jelas</h2>
+    <ol>
+      <li>Harga ditulis besar dan lugas, seperti toko lokal, tapi rapi dan konsisten.</li>
+      <li>Cicilan per bulan sama besarnya dengan harga tunai: <strong>“Sofa L Rp2.499.000, atau Rp229 ribu/bln”</strong>.</li>
+      <li>Janji bombastis + bukti: “Harga Pasar, DIJAMIN” beserta mekanisme ganti selisih.</li>
+      <li>Aspirasi terjangkau: <strong>“Rumah baru, isi lengkap mulai Rp4,9 juta”</strong>.</li>
+    </ol>
+    <div class="tw"><table>
+      <thead><tr><th>Kanal</th><th>Taktik</th></tr></thead>
+      <tbody>
+        <tr><td>Fasad &amp; sekitar toko</td><td>Flexi besar, spanduk jalan, rolling door ber-branding, “kursi plastik Rp49 ribu” sebagai hook</td></tr>
+        <tr><td>Media lokal</td><td>Baliho kecil di pasar/terminal, radio lokal, brosur di perumahan subsidi</td></tr>
+        <tr><td>Digital lokal</td><td>TikTok &amp; Facebook per kota (live dari toko), katalog WhatsApp Business, Google Maps</td></tr>
+        <tr><td>Kemitraan</td><td>Pengembang rumah subsidi dan bank penyalur FLPP (voucher starter set saat akad), program karyawan pabrik, koperasi</td></tr>
+        <tr><td>Grand opening</td><td>7 hari harga pembukaan ala Erablue, hadiah kecil, door prize</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- 13 -->
+  <section class="panel" id="risiko">
+    <span class="sec-no">12 · Risiko</span>
+    <h2>Risiko utama dan mitigasinya</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Risiko</th><th>Dampak</th><th>Mitigasi</th></tr></thead>
+      <tbody>
+        <tr><td>Daya beli AMC melemah lebih jauh</td><td>Penjualan di bawah impas</td><td>Pilot bertahap, titik harga rendah, cicilan, stage gate ketat</td></tr>
+        <tr><td>Margin tertekan (perang harga, kenaikan busa/plastik)</td><td>EBITDA negatif</td><td>Private label, kontrak volume, murah di 30–50 SKU kunci dan margin di sisanya</td></tr>
+        <tr><td>Logistik barang besar mahal dan rawan rusak</td><td>Opex dan komplain naik</td><td>Hub-and-spoke, packaging standar, SLA mitra, zona antar gratis terbatas</td></tr>
+        <tr><td>Kanibalisasi atau dilusi INFORMA</td><td>Rugi di tingkat grup</td><td>Brand, lokasi, dan assortment terpisah</td></tr>
+        <tr><td>Risiko kredit dan regulasi paylater</td><td>Tingkat persetujuan turun</td><td>Multi-mitra, tanpa kredit in-house, pantau aturan turunan POJK 32/2025</td></tr>
+        <tr><td>“Murah” jadi “murahan”</td><td>Aspirasi gagal</td><td>Kit of parts wajib, audit bulanan, mystery shopper</td></tr>
+        <tr><td>Pesaing meniru (Laris/Maggio berbenah, Erablue masuk furnitur)</td><td>Diferensiasi hilang</td><td>Kecepatan ekspansi, skala sourcing, loyalitas member</td></tr>
+        <tr><td>Ekspansi terlalu cepat (pelajaran AZKO luar Jawa, Fabelio)</td><td>Dilusi traffic, beban tetap</td><td>Ekspansi per klaster, SSSG sebagai syarat buka toko berikutnya</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- 14 -->
+  <section class="panel" id="roadmap">
+    <span class="sec-no">13 · Roadmap</span>
+    <h2>Validasi, pilot, lalu scale</h2>
+    <div class="road">
+      <div class="stage"><span class="when">Bulan 0–3</span><h4>Validasi</h4><p>Audit 30–50 toko pesaing, 6–8 FGD, exit interview di pasar, price benchmarking, screening lokasi, negosiasi pemasok &amp; multifinance, nama dan identitas brand.</p><div class="gate"><strong>Gate:</strong> proposisi dan harga tervalidasi, shortlist 15–20 lokasi.</div></div>
+      <div class="stage"><span class="when">Bulan 4–15</span><h4>Pilot</h4><p>6–9 toko di 2–3 klaster + 1–2 hub. Uji ruko vs hanggar dan 2 varian komunikasi.</p><div class="gate"><strong>Gate:</strong> rata-rata ≥Rp350 jt/bulan dalam 6–9 bulan, margin kotor ≥32%, NPS ≥50, persetujuan cicilan ≥60%, biaya kirim ≤3,5%.</div></div>
+      <div class="stage"><span class="when">Tahun 2–3</span><h4>Scale 1</h4><p>Playbook baku, 40–80 toko di Jawa, private label ≥30%.</p><div class="gate"><strong>Gate:</strong> SSSG positif, EBITDA toko ≥8%, payback ≤30 bulan.</div></div>
+      <div class="stage"><span class="when">Tahun 3–5</span><h4>Scale 2</h4><p>Luar Jawa, format S untuk kabupaten, opsi kemitraan/FOCO.</p><div class="gate"><strong>Target:</strong> 150–300 toko. Skenario dasar 200 toko ≈ Rp720 M penjualan per tahun <span class="est">Estimasi</span>.</div></div>
+    </div>
+    <h3>Data yang masih harus dikumpulkan</h3>
+    <ol>
+      <li>Penjualan per toko dan per m² chain independen (Laris, Maggio, King House, Simpati).</li>
+      <li>Struktur belanja furnitur rumah tangga AMC dari data mikro Susenas.</li>
+      <li>Harga sewa ruko per kota target.</li>
+      <li>Tingkat persetujuan cicilan per multifinance untuk segmen ini.</li>
+      <li>Persepsi terhadap endorsement Kawan Lama (FGD).</li>
+      <li>Detail format Erablue (luas, SKU, staf) lewat store visit.</li>
+    </ol>
+    <p class="note">Informasi publik tentang King House, Simpati, dan Laris sangat terbatas. Gambarannya di sini memakai temuan store visit tim dan jejak marketplace/media sosial.</p>
+    <h3>Checklist store audit pesaing</h3>
+    <ul>
+      <li>Lokasi, luas, lantai, jumlah staf, jam buka</li>
+      <li>Jumlah SKU per kategori dan 10 SKU terlaris</li>
+      <li>Harga 30 SKU pembanding (kursi plastik, kasur busa 160×200, lemari plastik 4 susun, lemari 2 pintu, sofa 3-seat, bantal)</li>
+      <li>Cara bayar, mitra cicilan, DP dan tenor</li>
+      <li>Kebijakan pengiriman, garansi, retur</li>
+      <li>Foto komunikasi fasad dan dalam toko</li>
+      <li>Traffic per jam (2 jam akhir pekan dan hari kerja) dan konversi</li>
+    </ul>
+    <h3>Arah nama brand (untuk diuji)</h3>
+    <p>RUMAKITA · ISI RUMAH · PAS Furniture · MEBELKU · RUMAH HEMAT. Hanya contoh arah; perlu cek merek di DJKI dan uji konsumen.</p>
+  </section>
+
+  <!-- sources -->
+  <section class="panel" id="sumber">
+    <span class="sec-no">14 · Sumber</span>
+    <h2>Daftar sumber</h2>
+    <details class="src" open>
+      <summary>Makro, konsumen, dan regulasi</summary>
+      <ul>
+        <li><a href="https://www.cnnindonesia.com/ekonomi/20240830193700-532-1139543/bps-bukaan-bukaan-penyebab-jumlah-kelas-menengah-turun">CNN Indonesia: BPS, penyebab kelas menengah turun</a></li>
+        <li><a href="https://www.fortuneidn.com/news/bps-catat-kelas-menengah-susut-9-48-juta-sejak-2019-00-29s55-xy90bk">Fortune Indonesia: kelas menengah susut 9,48 juta</a></li>
+        <li><a href="https://investortrust.id/macro/39187/bps-kelas-menengah-indonesia-47-85-juta-orang-ini-profilnya">Investortrust: profil kelas menengah 47,85 juta</a></li>
+        <li><a href="https://nasional.kontan.co.id/news/mandiri-spending-index-pertumbuhan-konsumsi-masyarakat-melambat-pada-kuartal-ii-2026">Kontan: Mandiri Spending Index Q2-2026</a></li>
+        <li><a href="https://investortrust.id/macro/112075/ekonomi-indonesia-ditopang-kelas-atas-daya-beli-menengah-bawah-kian-tertekan">Investortrust: daya beli menengah-bawah tertekan</a></li>
+        <li><a href="https://www.antaranews.com/berita/5762109/bp-tapera-realisasi-flpp-hingga-28-september-2026-capai-160070-unit">ANTARA: realisasi FLPP 28 Sep 2026</a></li>
+        <li><a href="https://kumparan.com/kumparanbisnis/daftar-umk-jabar-2026-tertinggi-kota-bekasi-rp-5-9-juta-karawang-rp-5-8-juta-26VaczcomVH">Kumparan: UMK Jawa Barat 2026</a></li>
+        <li><a href="https://www.tempo.co/ekonomi/daftar-wilayah-umk-tertinggi-dan-terendah-2026-2102678">Tempo: UMK tertinggi dan terendah 2026</a></li>
+        <li><a href="https://ojk.go.id/id/berita-dan-kegiatan/siaran-pers/Pages/OJK-Terbitkan-Aturan-Penyelenggaraan-Buy-Now-Pay-Later.aspx">OJK: aturan Buy Now Pay Later</a></li>
+        <li><a href="https://www.cnnindonesia.com/ekonomi/20260522154621-78-1361286/ojk-bakal-batasi-penggunaan-paylater-gegara-tren-kredit-macet-naik">CNN Indonesia: OJK akan batasi paylater</a></li>
+        <li><a href="https://www.mordorintelligence.com/industry-reports/indonesia-furniture-market">Mordor Intelligence: Indonesia Furniture Market</a></li>
+        <li><a href="https://www.imarcgroup.com/indonesia-home-furniture-market">IMARC: Indonesia Home Furniture Market</a></li>
+      </ul>
+    </details>
+    <details class="src">
+      <summary>Kawan Lama dan pesaing lokal</summary>
+      <ul>
+        <li><a href="https://www.fortuneidn.com/business/buka-100-gerai-di-2025-kawan-lama-group-ungkap-strategi-ekspansi-tahu-00-4pj81-q5p1md">Fortune Indonesia: Kawan Lama buka 100 gerai 2025</a></li>
+        <li><a href="https://ahi.id/en/news/achievements2025">AHI: AZKO menutup 2025</a></li>
+        <li><a href="https://market.bisnis.com/read/20260225/192/1955682/sinyal-pemulihan-kinerja-penjualan-azko-aces-mulai-terlihat">Bisnis.com: pemulihan penjualan AZKO</a></li>
+        <li><a href="https://selular.id/2026/09/erablue-buka-toko-ke-300-di-cempaka-putih/">Selular.id: Erablue toko ke-300</a></li>
+        <li><a href="https://selular.id/2026/09/electronic-city-vs-erablue-duel-dua-peritel-electronic-modern-pasca-tumbangnya-agis-electronic-solution-dan-best-denki/">Selular.id: Electronic City vs Erablue</a></li>
+        <li><a href="https://futureloka.com/erablue-ekspansi-makin-masif-resmikan-toko-ke-300-di-cempaka-putih-dengan-promo-harga-pabrik/">Futureloka: Erablue “Harga Pabrik”</a></li>
+        <li><a href="https://industri.kontan.co.id/news/operasikan-126-toko-erablue-electronics-geber-penjualan-2025-lewat-ekspansi-toko">Kontan: Erablue 126 toko (Juli 2025)</a></li>
+        <li><a href="https://www.cnbcindonesia.com/market/20260903153912-17-764714/ekspansi-2026-sesuai-target-mdiy-resmi-punya-1400-toko">CNBC Indonesia: MR.DIY 1.400 toko</a></li>
+        <li><a href="https://www.kompas.com/homey/read/2026/08/10/155259176/makin-ekspansif-mrdiy-indonesia-targetkan-270-gerai-baru-tahun-ini">Kompas: MR.DIY targetkan 270 gerai baru</a></li>
+        <li><a href="https://industri.kontan.co.id/news/ikea-indonesia-bidik-pertumbuhan-berkelanjutan-dan-profitabilitas-pada-2026">Kontan: IKEA Indonesia 2026</a></li>
+        <li><a href="https://www.nitorihd.co.jp/en/news/items/9d7bf29a190dbd8b7042a328d7e29fed.pdf">Nitori Holdings: toko ke-5 di Indonesia</a></li>
+        <li><a href="https://www.maggiohomecentre.online/">Maggio Home Centre</a></li>
+        <li><a href="https://activfurniture.com/toko-activ/laris/">Laris Furniture (listing Activ)</a></li>
+        <li><a href="https://activfurniture.com/toko-activ/king-house-furniture/">King House Furniture (listing Activ)</a></li>
+        <li><a href="https://www.cnbcindonesia.com/tech/20221006135438-37-377718/resmi-startup-furniture-fabelio-dinyatakan-pailit">CNBC Indonesia: Fabelio pailit</a></li>
+        <li><a href="https://www.techverse.asia/startup/699/12102022/alasan-perusahaan-startup-fabelio-dinyatakan-pailit-hingga-tutup-14-gerai-offline-mereka">Techverse: Fabelio tutup 14 gerai</a></li>
+      </ul>
+    </details>
+    <details class="src">
+      <summary>Benchmark internasional</summary>
+      <ul>
+        <li><a href="https://vietnaminsiders.com/1000-dien-may-xanh-supermarkets-were-opened-expected-to-collect-vnd-12500-billion-in-revenue/">Vietnam Insider: 1.000 Điện Máy Xanh Supermini</a></li>
+        <li><a href="https://thanhnien.vn/dien-may-xanh-supermini-cham-moc-1000-cua-hang-1851490639.htm">Thanh Niên: DMX Supermini 1.000 toko</a></li>
+        <li><a href="https://www.nitorihd.co.jp/en/division/business_model.html">Nitori: business model</a></li>
+        <li><a href="https://insideretail.asia/2024/10/14/nitori-speeds-up-broader-asia-expansion-as-china-spending-wanes/">Inside Retail Asia: ekspansi Nitori</a></li>
+        <li><a href="https://www.yicai.com/news/2280736.html">Yicai: ekspansi Quanyou</a></li>
+        <li><a href="https://baike.baidu.com/item/%E5%85%A8%E5%8F%8B%E5%AE%B6%E5%B1%85/7227044">Baidu Baike: 全友家居</a></li>
+        <li><a href="https://www.bbtnews.com.cn/2025/0604/558913.shtml">BBT News: Lin's Home 2025</a></li>
+        <li><a href="https://www.bbtnews.com.cn/2023/0706/481190.shtml">BBT News: waralaba Lin's Home 2023</a></li>
+        <li><a href="https://business.inquirer.net/168675/why-mandaue-foam-buys-rather-than-rents-space">Inquirer: Mandaue Foam membeli properti</a></li>
+        <li><a href="https://brandwiki.lazada.com.ph/mandaue-foam/">Mandaue Foam brand wiki</a></li>
+        <li><a href="https://valueforstartups.in/27-wakefit">Value for Startups: Wakefit 2026</a></li>
+        <li><a href="https://www.indianretailer.com/news/wakefit-marks-100-offline-stores-across-india">Indian Retailer: Wakefit 100 toko</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Coppel">Wikipedia: Coppel</a></li>
+        <li><a href="https://disclosures.ifc.org/project-detail/SPI/10809/coppel-s-a-de-c-v">IFC: Coppel</a></li>
+        <li><a href="https://www.infomoney.com.br/business/a-casas-bahia-popularizou-o-carne-e-hoje-ele-esta-no-centro-do-seu-pedido-de-rj/">InfoMoney: Casas Bahia, carnê, dan RJ</a></li>
+      </ul>
+    </details>
+    <details class="src">
+      <summary>Harga indikatif produk</summary>
+      <ul>
+        <li><a href="https://sumateraekspres.bacakoran.co/lifestyle/read/121438/kasur-lipat-terbaru-2026-inoac-royal-foam-hingga-dunlopillo-ini-harganya">Sumatera Ekspres: harga kasur lipat 2026</a></li>
+        <li><a href="https://www.blibli.com/jual/lemari-plastik-napolly">Blibli: lemari plastik Napolly</a></li>
+        <li><a href="https://www.blibli.com/jual/kursi-plastik-napolly">Blibli: kursi plastik Napolly</a></li>
+        <li><a href="http://globalinoac.blogspot.com/">Blog distributor Inoac (keandalan rendah)</a></li>
+      </ul>
+    </details>
+  </section>
+
+  <footer><span>Brand X · Draft v1 · 29 September 2026 · Angka bertanda Estimasi wajib divalidasi</span></footer>
+</div>
+
+<script>
+(function () {
+  /* ---------- Interactive background ---------- */
+  var cv = document.getElementById('bg');
+  var ctx = cv.getContext('2d');
+  var colors = ['#FFC93C', '#FF7A2F', '#10B5A6', '#FF4F8B', '#9BDB3A', '#3DA5FF'];
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W = 0, H = 0, dpr = 1, shapes = [], bursts = [];
+  var ptr = { x: -9999, y: -9999, active: false };
+
+  function rand(a, b) { return a + Math.random() * (b - a); }
+  function makeShape(x, y) {
+    var kinds = ['circle', 'pill', 'tag', 'ring', 'tri'];
+    return {
+      x: x != null ? x : rand(0, W), y: y != null ? y : rand(0, H),
+      vx: rand(-0.25, 0.25), vy: rand(-0.25, 0.25),
+      r: rand(14, 46), rot: rand(0, Math.PI * 2), vr: rand(-0.004, 0.004),
+      c: colors[(Math.random() * colors.length) | 0],
+      k: kinds[(Math.random() * kinds.length) | 0], a: rand(0.35, 0.7)
+    };
+  }
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = window.innerWidth; H = window.innerHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var target = Math.round(Math.min(46, Math.max(18, (W * H) / 26000)));
+    while (shapes.length < target) shapes.push(makeShape());
+    if (shapes.length > target) shapes.length = target;
+    if (reduce) draw();
+  }
+  function roundRect(x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y); ctx.lineTo(x + w - r, y); ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+    ctx.lineTo(x + w, y + h - r); ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    ctx.lineTo(x + r, y + h); ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+    ctx.lineTo(x, y + r); ctx.quadraticCurveTo(x, y, x + r, y); ctx.closePath();
+  }
+  function drawShape(s) {
+    ctx.save(); ctx.translate(s.x, s.y); ctx.rotate(s.rot); ctx.globalAlpha = s.a;
+    ctx.fillStyle = s.c; ctx.strokeStyle = s.c;
+    var r = s.r;
+    if (s.k === 'circle') { ctx.beginPath(); ctx.arc(0, 0, r * 0.7, 0, Math.PI * 2); ctx.fill(); }
+    else if (s.k === 'pill') { roundRect(-r, -r * 0.38, r * 2, r * 0.76, r * 0.38); ctx.fill(); }
+    else if (s.k === 'ring') { ctx.lineWidth = r * 0.22; ctx.beginPath(); ctx.arc(0, 0, r * 0.6, 0, Math.PI * 2); ctx.stroke(); }
+    else if (s.k === 'tri') { ctx.beginPath(); ctx.moveTo(0, -r * 0.75); ctx.lineTo(r * 0.7, r * 0.5); ctx.lineTo(-r * 0.7, r * 0.5); ctx.closePath(); ctx.fill(); }
+    else { /* price tag */
+      ctx.beginPath(); ctx.moveTo(-r, -r * 0.45); ctx.lineTo(r * 0.55, -r * 0.45); ctx.lineTo(r, 0);
+      ctx.lineTo(r * 0.55, r * 0.45); ctx.lineTo(-r, r * 0.45); ctx.closePath(); ctx.fill();
+      ctx.globalAlpha = 1; ctx.fillStyle = '#FFF4D6'; ctx.beginPath(); ctx.arc(r * 0.45, 0, r * 0.1, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.restore();
+  }
+  function draw() {
+    ctx.fillStyle = '#FFF4D6'; ctx.fillRect(0, 0, W, H);
+    var g = ctx.createRadialGradient(W * 0.85, H * 0.1, 0, W * 0.85, H * 0.1, Math.max(W, H) * 0.7);
+    g.addColorStop(0, 'rgba(255,201,60,0.55)'); g.addColorStop(1, 'rgba(255,201,60,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    var g2 = ctx.createRadialGradient(W * 0.1, H * 0.95, 0, W * 0.1, H * 0.95, Math.max(W, H) * 0.6);
+    g2.addColorStop(0, 'rgba(16,181,166,0.28)'); g2.addColorStop(1, 'rgba(16,181,166,0)');
+    ctx.fillStyle = g2; ctx.fillRect(0, 0, W, H);
+    for (var i = 0; i < shapes.length; i++) drawShape(shapes[i]);
+    for (var j = 0; j < bursts.length; j++) {
+      var b = bursts[j];
+      ctx.save(); ctx.globalAlpha = Math.max(0, b.life);
+      ctx.translate(b.x, b.y); ctx.rotate(-0.08);
+      ctx.fillStyle = b.c; roundRect(-b.w / 2, -18, b.w, 36, 10); ctx.fill();
+      ctx.fillStyle = b.t; ctx.font = '700 15px Unbounded, Arial Black, sans-serif';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(b.text, 0, 1);
+      ctx.restore();
+    }
+  }
+  function step() {
+    for (var i = 0; i < shapes.length; i++) {
+      var s = shapes[i];
+      if (ptr.active) {
+        var dx = s.x - ptr.x, dy = s.y - ptr.y, d2 = dx * dx + dy * dy, R = 150;
+        if (d2 < R * R && d2 > 1) {
+          var d = Math.sqrt(d2), f = (1 - d / R) * 0.9;
+          s.vx += (dx / d) * f; s.vy += (dy / d) * f; s.vr += (Math.random() - 0.5) * 0.004;
+        }
+      }
+      s.vx *= 0.97; s.vy *= 0.97;
+      s.vx += (Math.random() - 0.5) * 0.02; s.vy += (Math.random() - 0.5) * 0.02 - 0.003;
+      s.x += s.vx; s.y += s.vy; s.rot += s.vr;
+      var m = s.r + 10;
+      if (s.x < -m) s.x = W + m; if (s.x > W + m) s.x = -m;
+      if (s.y < -m) s.y = H + m; if (s.y > H + m) s.y = -m;
+    }
+    for (var j = bursts.length - 1; j >= 0; j--) {
+      bursts[j].y -= 0.7; bursts[j].life -= 0.012;
+      if (bursts[j].life <= 0) bursts.splice(j, 1);
+    }
+    draw();
+    requestAnimationFrame(step);
+  }
+  var promos = ['Harga Pasar!', 'Stok Ready', 'Antar Gratis', 'Cicilan 0%', 'Rp49rb', 'Promo!', 'Harga Pas', 'Dijamin Murah'];
+  function onMove(e) { ptr.x = e.clientX; ptr.y = e.clientY; ptr.active = true; }
+  window.addEventListener('pointermove', onMove, { passive: true });
+  window.addEventListener('pointerdown', function (e) {
+    onMove(e);
+    if (e.target.closest && e.target.closest('a,button,input,select,summary,table,.panel,nav')) return;
+    var c = colors[(Math.random() * colors.length) | 0];
+    var text = promos[(Math.random() * promos.length) | 0];
+    ctx.font = '700 15px Unbounded, Arial Black, sans-serif';
+    bursts.push({ x: e.clientX, y: e.clientY, life: 1.4, c: c, t: (c === '#10B5A6' || c === '#FF4F8B' || c === '#3DA5FF') ? '#FFFFFF' : '#1D1A2B', text: text, w: ctx.measureText(text).width + 28 });
+    for (var k = 0; k < 5; k++) { var s = makeShape(e.clientX, e.clientY); s.vx = rand(-3, 3); s.vy = rand(-3, 3); shapes.push(s); }
+    if (shapes.length > 70) shapes.splice(0, shapes.length - 70);
+    if (reduce) draw();
+  });
+  document.addEventListener('pointerleave', function () { ptr.active = false; });
+  window.addEventListener('resize', resize);
+  resize();
+  if (reduce) draw(); else requestAnimationFrame(step);
+
+  /* ---------- Benchmark tabs ---------- */
+  var B = [
+    { id: 'dmx', name: 'Điện Máy Xanh Supermini', flag: 'Vietnam · Mobile World Group', body: 'Format kecil untuk desa dan kecamatan: 80–120 m², 3–4 karyawan. Luasnya separuh format mini, tetapi sewanya hanya ¼, dan lokasinya mudah dicari. Demo 2 bulan menghasilkan VND 1–1,2 miliar per toko per bulan, lalu dipercepat menjadi 300 toko dalam 6 bulan dan 1.000 toko di 63 provinsi.', lesson: 'Pilot dulu, lalu scale sangat cepat setelah terbukti.' },
+    { id: 'erablue', name: 'Erablue', flag: 'Indonesia · Erajaya × MWG', body: 'Toko pertama akhir 2022, toko ke-300 di Cempaka Putih pada 28 Agustus 2026, melampaui Electronic City (62 toko). Konsep "Harga Pabrik", antar dan pasang gratis di hari yang sama, tukar unit dalam 15 hari, fokus tier 2–3.', lesson: 'Pola janji ini bisa diadaptasi langsung untuk furnitur.' },
+    { id: 'mrdiy', name: 'MR.DIY', flag: 'Malaysia → Indonesia', body: '1.400 toko per Agustus 2026 di 445 dari 514 kota/kabupaten dan 37 dari 38 provinsi. 80% toko stand-alone. Target 270 toko baru di 2026, termasuk kabupaten tier 3 seperti Sorong Selatan dan Buton Tengah.', lesson: 'Format sederhana yang seragam bisa menjangkau sampai kabupaten terluar.' },
+    { id: 'nitori', name: 'Nitori', flag: 'Jepang · pabrik di Indonesia & Vietnam', body: 'Model SPA: manufaktur, logistik, dan ritel terintegrasi, dengan ±90% private label. Lebih dari 1.000 toko di Asia dan AS. Masuk Indonesia 2024; toko ke-5 dibuka Agustus 2025, semuanya di mal.', lesson: 'Margin furnitur value datang dari kontrol rantai pasok, bukan dari mark-up.' },
+    { id: 'china', name: 'Quanyou & Lin\'s Home', flag: 'China · pasar tier bawah', body: 'Quanyou punya lebih dari 3.000 toko dan menjangkau lebih dari 80% kota dan county, berbasis dealer/waralaba. Lin\'s Home: 49% waralaba baru di 1H-2023 berada di pasar tier bawah; format toko besar-nya menguntungkan di semua 32 lokasi. Tren di China bergerak ke toko yang lebih besar di county town.', lesson: 'Siapkan model kemitraan untuk fase scale, dan format L untuk kota yang lebih besar.' },
+    { id: 'mandaue', name: 'Mandaue Foam', flag: 'Filipina · pasar B–C', body: 'Berawal dari pabrik busa (1971), lalu menjadi ritel furnitur di kota-kota provinsi Visayas dan Mindanao sebelum masuk Luzon. Membeli, bukan menyewa, properti toko.', lesson: 'Kasur/busa bisa menjadi jangkar margin dan traffic; kepemilikan properti mengunci biaya jangka panjang.' },
+    { id: 'wakefit', name: 'Wakefit', flag: 'India · D2C lalu offline', body: 'Kasur menyumbang 57,5% pendapatan dengan margin tinggi. Lebih dari 100 toko offline, sebagian memakai model FOCO (franchise-owned, company-operated). IPO Desember 2025.', lesson: 'Bedding adalah profit engine; FOCO mempercepat ekspansi dengan modal mitra.' },
+    { id: 'latam', name: 'Coppel & Casas Bahia', flag: 'Meksiko & Brasil', body: 'Coppel membangun bisnis furnitur dan elektronik untuk kelompok berpendapatan rendah di atas cicilan mingguan. Casas Bahia mempopulerkan carnê untuk konsumen yang belum punya rekening bank; belakangan beban kredit dan utang ikut mendorong restrukturisasi (RJ).', lesson: 'Cicilan wajib ada, tapi risiko kreditnya jangan ditaruh di neraca sendiri.' },
+    { id: 'fabelio', name: 'Fabelio', flag: 'Indonesia · kisah peringatan', body: 'Startup furnitur O2O yang menghimpun ±USD 20 juta, lalu pailit Oktober 2022: masalah pasokan, core value tidak jelas, biaya operasional tinggi, menutup 14 dari 15 toko.', lesson: 'Jangan mulai dari cerita desain; mulai dari unit economics.' }
+  ];
+  var tabs = document.getElementById('btabs'), panel = document.getElementById('bpanel');
+  function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+  function show(i) {
+    var b = B[i];
+    Array.prototype.forEach.call(tabs.children, function (el, k) { el.setAttribute('aria-selected', k === i ? 'true' : 'false'); el.tabIndex = k === i ? 0 : -1; });
+    panel.innerHTML = '<span class="flag">' + esc(b.flag) + '</span><h4>' + esc(b.name) + '</h4><p>' + esc(b.body) + '</p><div class="lesson"><strong>Pelajaran untuk Brand X:</strong> ' + esc(b.lesson) + '</div>';
+  }
+  B.forEach(function (b, i) {
+    var bt = document.createElement('button');
+    bt.type = 'button'; bt.setAttribute('role', 'tab'); bt.id = 'tab-' + b.id; bt.textContent = b.name;
+    bt.addEventListener('click', function () { show(i); });
+    bt.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        var n = (i + (e.key === 'ArrowRight' ? 1 : -1) + B.length) % B.length;
+        show(n); tabs.children[n].focus();
+      }
+    });
+    tabs.appendChild(bt);
+  });
+  show(0);
+
+  /* ---------- Unit economics calculator ---------- */
+  var R = { jateng: { rent: 21, staff: 17 }, jabar: { rent: 30, staff: 32 } };
+  var VAR = 0.107, UTIL = 3.5, MISC = 3, FIT = 500;
+  var $ = function (id) { return document.getElementById(id); };
+  function rp(v) { var s = Math.abs(v).toFixed(1).replace('.', ',').replace(',0', ''); return (v < 0 ? '−' : '') + 'Rp' + s + ' jt'; }
+  function calc() {
+    var sales = +$('sales').value, gm = +$('gm').value / 100, r = R[$('region').value];
+    var fixed = r.rent + r.staff + UTIL + MISC;
+    var gp = sales * gm, opex = fixed + sales * VAR, e = gp - opex, m = e / sales;
+    var be = gm > VAR ? fixed / (gm - VAR) : Infinity;
+    $('salesOut').textContent = 'Rp' + sales + ' jt';
+    $('gmOut').textContent = String($('gm').value).replace('.', ',') + '%';
+    $('ebitda').textContent = rp(e) + ' / bln';
+    $('margin').textContent = (m * 100).toFixed(1).replace('.', ',') + '%';
+    $('gp').textContent = rp(gp);
+    $('opex').textContent = rp(opex);
+    $('be').textContent = isFinite(be) ? 'Rp' + Math.round(be) + ' jt / bln' : '—';
+    $('pb').textContent = e > 0 ? Math.round(FIT / e) + ' bulan' : 'tidak kembali';
+    var st = $('status');
+    if (e <= 0) { st.className = 'pill bad'; st.textContent = 'RUGI · di bawah impas'; }
+    else if (m < 0.1) { st.className = 'pill warn'; st.textContent = 'TIPIS · belum menarik'; }
+    else { st.className = 'pill good'; st.textContent = 'SEHAT · layak scale'; }
+    $('barFill').style.width = Math.max(0, Math.min(100, (m / 0.18) * 100)) + '%';
+  }
+  ['sales', 'gm', 'region'].forEach(function (id) { $(id).addEventListener('input', calc); $(id).addEventListener('change', calc); });
+  calc();
+
+  /* ---------- Active nav chip ---------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav.chips a'));
+  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  function onScroll() {
+    var y = window.scrollY + 120, idx = -1;
+    secs.forEach(function (s, i) { if (s && s.offsetTop <= y) idx = i; });
+    links.forEach(function (a, i) { a.classList.toggle('on', i === idx); });
+    if (idx >= 0 && links[idx].scrollIntoView && window.__lastIdx !== idx) {
+      window.__lastIdx = idx;
+      var nav = links[idx].closest('ul'), el = links[idx];
+      nav.scrollTo({ left: el.offsetLeft - nav.clientWidth / 2 + el.clientWidth / 2, behavior: reduce ? 'auto' : 'smooth' });
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
