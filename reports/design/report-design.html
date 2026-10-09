@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Rekomendasi Desain Toko</title>
+<style>
+  @page { size: 297mm 210mm; margin: 0; }
+  :root {
+    --navy: #051C2C; --blue: #2251FF; --cyan: #00A9F4; --teal: #1F7A8C;
+    --ink: #1A1A1A; --muted: #5F6B76; --line: #D5DBE1; --soft: #F2F5F8;
+    --red: #C8102E; --green: #2E8540;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.38; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 297mm; height: 210mm; padding: 14mm 16mm 12mm; position: relative; page-break-after: always; overflow: hidden; }
+  .page:last-child { page-break-after: auto; }
+  .serif { font-family: 'Bitstream Charter', 'Liberation Serif', serif; }
+  .kicker { font-size: 8.5pt; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); font-weight: 600; margin-bottom: 3mm; }
+  h1.title { font-family: 'Bitstream Charter', serif; font-weight: 400; font-size: 22pt; line-height: 1.18; color: var(--navy); max-width: 245mm; }
+  .rule { height: 1.2px; background: var(--navy); margin: 5mm 0 6mm; }
+  .footer { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; justify-content: space-between; font-size: 7.5pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 2mm; }
+  .source { position: absolute; left: 16mm; right: 16mm; bottom: 15mm; font-size: 7.5pt; color: var(--muted); line-height: 1.35; }
+  .exhibit-label { font-size: 8.5pt; font-weight: 700; color: var(--navy); margin-bottom: 1mm; }
+  .exhibit-sub { font-size: 9pt; color: var(--muted); margin-bottom: 4mm; }
+
+  /* cover */
+  .cover { background: var(--navy); color: #fff; padding: 0; }
+  .cover .band { position: absolute; left: 0; top: 0; bottom: 0; width: 9mm; background: var(--blue); }
+  .cover .inner { padding: 30mm 26mm 0 30mm; }
+  .cover .kicker { color: var(--cyan); }
+  .cover h1 { font-family: 'Bitstream Charter', serif; font-weight: 400; font-size: 34pt; line-height: 1.12; max-width: 210mm; margin-top: 6mm; }
+  .cover .lede { font-size: 13pt; color: #C9D6E3; max-width: 190mm; margin-top: 8mm; font-weight: 300; }
+  .cover .meta { position: absolute; left: 30mm; bottom: 20mm; font-size: 9.5pt; color: #9FB3C8; line-height: 1.6; }
+  .cover .swatches { position: absolute; right: 26mm; bottom: 20mm; display: flex; gap: 2.5mm; }
+  .cover .swatches div { width: 13mm; height: 34mm; }
+
+  /* exec summary */
+  .grid2 { display: grid; grid-template-columns: 1fr 1.15fr; gap: 12mm; }
+  .insight { display: grid; grid-template-columns: 30mm 1fr; gap: 5mm; padding: 4mm 0; border-bottom: 1px solid var(--line); }
+  .insight:first-child { border-top: 1px solid var(--line); }
+  .big { font-family: 'Bitstream Charter', serif; font-size: 26pt; color: var(--blue); line-height: 1; }
+  .big small { font-size: 11pt; }
+  .insight h3 { font-size: 10.5pt; font-weight: 700; color: var(--navy); margin-bottom: 1mm; }
+  .insight p { font-size: 9.5pt; color: #333; }
+  .recs { background: var(--soft); padding: 6mm 7mm; height: 100%; }
+  .recs h2 { font-size: 11pt; color: var(--navy); margin-bottom: 4mm; font-weight: 700; }
+  .rec { display: grid; grid-template-columns: 8mm 1fr; gap: 3mm; margin-bottom: 3.4mm; }
+  .rec .n { width: 7mm; height: 7mm; border-radius: 50%; background: var(--navy); color: #fff; font-weight: 700; font-size: 9pt; display: flex; align-items: center; justify-content: center; }
+  .rec b { color: var(--navy); }
+  .rec p { font-size: 9.5pt; }
+
+  /* tables */
+  table { width: 100%; border-collapse: collapse; font-size: 9pt; }
+  th { text-align: left; font-size: 8pt; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; padding: 2mm 3mm; border-bottom: 1.5px solid var(--navy); }
+  td { padding: 2.6mm 3mm; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.factor { font-weight: 700; color: var(--navy); width: 52mm; }
+  .harvey { display: inline-block; width: 5mm; height: 5mm; border-radius: 50%; border: 1.3px solid var(--navy); vertical-align: middle; }
+  .h0 { background: #fff; }
+  .h1 { background: conic-gradient(var(--navy) 0 25%, #fff 0); }
+  .h2 { background: conic-gradient(var(--navy) 0 50%, #fff 0); }
+  .h3 { background: conic-gradient(var(--navy) 0 75%, #fff 0); }
+  .h4 { background: var(--navy); }
+  .tag { display: inline-block; font-size: 7.5pt; font-weight: 600; padding: .6mm 2mm; border-radius: 1mm; margin-left: 2mm; vertical-align: middle; }
+  .tag.ok { background: #E3EBFF; color: var(--blue); }
+  .tag.no { background: #FBE5E8; color: var(--red); }
+  .legend { font-size: 7.5pt; color: var(--muted); margin-top: 3mm; display: flex; gap: 5mm; align-items: center; }
+  .legend .harvey { width: 3.5mm; height: 3.5mm; margin-right: 1mm; }
+
+  /* flow */
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 2mm; }
+  .step { position: relative; padding: 5mm 9mm 5mm 5mm; background: var(--soft); min-height: 56mm; clip-path: polygon(0 0, calc(100% - 7mm) 0, 100% 50%, calc(100% - 7mm) 100%, 0 100%, 7mm 50%); }
+  .step:first-child { clip-path: polygon(0 0, calc(100% - 7mm) 0, 100% 50%, calc(100% - 7mm) 100%, 0 100%); }
+  .step.dark { background: var(--navy); color: #fff; }
+  .step.dark h4, .step.dark .src { color: #fff; }
+  .step .num { font-size: 8pt; font-weight: 700; color: var(--blue); margin-bottom: 1.5mm; padding-left: 4mm; }
+  .step.dark .num { color: var(--cyan); }
+  .step h4 { font-size: 10.5pt; color: var(--navy); margin-bottom: 2mm; padding-left: 4mm; }
+  .step p { font-size: 9pt; padding-left: 4mm; }
+  .step .src { font-size: 7.5pt; color: var(--muted); margin-top: 2mm; padding-left: 4mm; font-style: italic; }
+  .statrow { display: grid; grid-template-columns: 70mm 1fr; gap: 10mm; align-items: center; margin-bottom: 7mm; }
+  .stat { border-left: 3px solid var(--blue); padding-left: 5mm; }
+  .stat .big { font-size: 40pt; }
+  .callout { border: 1px solid var(--line); padding: 4mm 5mm; font-size: 9.5pt; }
+  .callout b { color: var(--navy); }
+
+  /* color map */
+  .cmap { display: grid; grid-template-columns: 150mm 1fr; gap: 10mm; }
+  .side h4 { font-size: 10pt; color: var(--navy); margin: 0 0 1.5mm; }
+  .side p { font-size: 9pt; margin-bottom: 4mm; color: #333; }
+  .side .box { border-top: 2px solid var(--navy); padding-top: 3mm; margin-bottom: 4mm; }
+
+  /* benchmark */
+  .bench { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4mm; margin-top: 2mm; }
+  .card { border-top: 3px solid var(--navy); padding-top: 3mm; }
+  .card .sw { height: 26mm; display: flex; }
+  .card .sw div { flex: 1; }
+  .card h4 { font-size: 10.5pt; color: var(--navy); margin-top: 3mm; }
+  .card .c { font-size: 8pt; color: var(--muted); margin-bottom: 2mm; }
+  .card p { font-size: 8.5pt; }
+  .takeaway { margin-top: 7mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; }
+  .takeaway div { background: var(--soft); padding: 4mm 5mm; font-size: 9.5pt; }
+  .takeaway b { display: block; color: var(--navy); margin-bottom: 1mm; }
+
+  /* rec table */
+  .rt td.do { color: #12304A; }
+  .rt td.dont { color: #6B1B26; }
+  .rt th.do { color: var(--blue); }
+  .rt th.dont { color: var(--red); }
+  .rt td.ev { font-size: 8pt; color: var(--muted); width: 58mm; }
+
+  /* test plan */
+  .gantt { margin-top: 2mm; }
+  .grow { display: grid; grid-template-columns: 52mm 1fr; align-items: center; height: 11mm; border-bottom: 1px solid var(--line); }
+  .grow .lbl { font-size: 9pt; font-weight: 600; color: var(--navy); }
+  .track { position: relative; height: 100%; }
+  .bar { position: absolute; top: 2.6mm; height: 5.8mm; border-radius: 1mm; font-size: 7.5pt; color: #fff; display: flex; align-items: center; padding-left: 2mm; font-weight: 600; }
+  .weeks { display: grid; grid-template-columns: 52mm 1fr; font-size: 7.5pt; color: var(--muted); }
+  .weeks .ticks { display: grid; grid-template-columns: repeat(14, 1fr); }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5mm; margin-top: 7mm; }
+  .kpi { border-top: 2px solid var(--navy); padding-top: 2.5mm; }
+  .kpi b { display: block; color: var(--navy); font-size: 10pt; margin-bottom: 1mm; }
+  .kpi p { font-size: 8.8pt; }
+  .decision { margin-top: 6mm; background: var(--navy); color: #fff; padding: 4mm 6mm; font-size: 10pt; }
+  .decision b { color: var(--cyan); }
+
+  .refs { columns: 2; column-gap: 10mm; font-size: 8.3pt; }
+  .refs li { margin: 0 0 2mm 4mm; break-inside: avoid; }
+  .refs a { color: var(--ink); text-decoration: none; }
+  .refs .u { color: var(--blue); word-break: break-all; }
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="page cover">
+  <div class="band"></div>
+  <div class="inner">
+    <div class="kicker">Laporan untuk Tim Design · Oktober 2026</div>
+    <h1>Desain yang terlihat terjangkau, bukan sekadar hijau</h1>
+    <p class="lede">Rekomendasi desain fasad, warna, dan interior toko kebutuhan rumah tangga untuk segmen <i>aspiring middle class</i> Indonesia, berdasarkan tinjauan riset global dan lokal.</p>
+  </div>
+  <div class="meta">Ringkasan riset untuk tim desain<br>Dokumen internal · 8 halaman</div>
+  <div class="swatches"><div style="background:#2251FF"></div><div style="background:#00A9F4"></div><div style="background:#FFC20E"></div><div style="background:#00953A"></div><div style="background:#E5007E"></div></div>
+</section>
+
+<!-- 2 EXEC SUMMARY -->
+<section class="page">
+  <div class="kicker">Ringkasan eksekutif</div>
+  <h1 class="title">Warna hijau tidak terbukti menarik pengunjung; yang menentukan adalah apakah toko <em>terlihat terjangkau</em></h1>
+  <div class="rule"></div>
+  <div class="grid2">
+    <div>
+      <div class="insight"><div class="big">0</div><div><h3>Studi yang membuktikan fasad hijau menaikkan traffic</h3><p>Tidak ada studi global maupun Indonesia yang menguji klaim "toko hijau selalu ramai". Kesan itu kemungkinan besar muncul dari bias ingatan dan faktor lokasi.</p></div></div>
+      <div class="insight"><div class="big">1.834</div><div><h3>Responden studi lapangan: etalase kreatif menaikkan kunjungan</h3><p>Faktor fasad dengan bukti lapangan terkuat adalah kualitas tampilan: etalase yang kreatif dan terawat (Lange dkk., 2016).</p></div></div>
+      <div class="insight"><div class="big">115<small> jt</small></div><div><h3>Orang Indonesia di segmen <i>aspiring middle class</i></h3><p>Segmen ini cenderung menghindari toko yang terlihat mewah (Jacob dkk., 2022). Desain yang terkesan premium berisiko mengusir pelanggan inti kita.</p></div></div>
+    </div>
+    <div class="recs">
+      <h2>Enam rekomendasi untuk tim desain</h2>
+      <div class="rec"><div class="n">1</div><p><b>Pilih warna jenuh dan terang,</b> bukan gelap dan kusam. Warna hijau boleh dipakai, asalkan hijau cerah.</p></div>
+      <div class="rec"><div class="n">2</div><p><b>Gunakan kontras tinggi dan 2–3 warna</b> agar papan nama terbaca dari seberang jalan.</p></div>
+      <div class="rec"><div class="n">3</div><p><b>Perlihatkan harga dari luar toko:</b> angka besar dan jelas di etalase atau fasad.</p></div>
+      <div class="rec"><div class="n">4</div><p><b>Hindari kode visual mewah:</b> permukaan luas berwarna gelap, emas, kayu gelap, dan lampu redup.</p></div>
+      <div class="rec"><div class="n">5</div><p><b>Investasikan pada etalase dan kebersihan fasad</b>, bukan cat ulang. Ganti tata etalase secara rutin.</p></div>
+      <div class="rec"><div class="n">6</div><p><b>Validasi lewat uji coba terkontrol</b> di 20 toko (12 minggu pengukuran) sebelum menerapkan di seluruh jaringan.</p></div>
+    </div>
+  </div>
+  <div class="footer"><span>Rekomendasi Desain Toko · Segmen Aspiring Middle Class</span><span>2</span></div>
+</section>
+
+<!-- 3 EVIDENCE -->
+<section class="page">
+  <div class="kicker">Bukti riset</div>
+  <h1 class="title">Kualitas tampilan dan kesan harga punya dasar riset; efek warna hijau tidak</h1>
+  <div class="rule"></div>
+  <div class="exhibit-label">Exhibit 1</div>
+  <div class="exhibit-sub">Kekuatan bukti per faktor desain dan implikasinya bagi tim desain</div>
+  <table>
+    <tr><th>Faktor desain</th><th style="width:28mm">Kekuatan bukti</th><th>Temuan kunci</th><th style="width:72mm">Implikasi desain</th></tr>
+    <tr><td class="factor">Kualitas etalase dan tampilan</td><td><span class="harvey h4"></span><span class="tag ok">Lapangan</span></td><td>Etalase yang lebih kreatif menarik lebih banyak kunjungan; studi lapangan n=1.834 + eksperimen n=480 (Lange dkk., 2016).</td><td>Prioritaskan anggaran untuk etalase dan perawatan fasad.</td></tr>
+    <tr><td class="factor">Lingkungan toko → kesan harga</td><td><span class="harvey h3"></span></td><td>Skema warna modis dan display tertata membuat toko <i>terkesan lebih mahal</i> (Baker dkk., 2002, dirangkum Hamilton &amp; Chernev, 2013).</td><td>Tampilan "terlalu cantik" bisa menggeser citra harga ke atas.</td></tr>
+    <tr><td class="factor">Kesan mewah → penghindaran segmen bawah</td><td><span class="harvey h3"></span></td><td>Konsumen berpenghasilan rendah rela membayar lebih untuk menghindari toko kelas atas; lima studi (Jacob dkk., 2022).</td><td>Desain harus terasa ramah dan "untuk saya".</td></tr>
+    <tr><td class="factor">Saturasi rendah dan warna gelap → kesan status</td><td><span class="harvey h2"></span></td><td>Saturasi rendah menaikkan kesan status merek (JCR, 2025; tujuh studi). Warna gelap di area luas terkesan mewah (studi eye-tracking).</td><td>Hindari palet kusam dan gelap di area luas.</td></tr>
+    <tr><td class="factor">Warna harga merah → kesan hemat</td><td><span class="harvey h2"></span></td><td>Pria menilai harga merah lebih hemat; efek melemah untuk pembelian yang dipikirkan matang (Puccinelli dkk., 2013).</td><td>Pakai merah untuk label promo dan harga spesial.</td></tr>
+    <tr><td class="factor">Warna fasad → keputusan masuk</td><td><span class="harvey h1"></span></td><td>Warna netral dan hangat terang paling disukai; simulasi 149 responden, mal di China (Buildings, 2024).</td><td>Warna berpengaruh lewat emosi, bukan karena satu warna tertentu.</td></tr>
+    <tr><td class="factor">Fasad hijau → traffic lebih tinggi</td><td><span class="harvey h0"></span><span class="tag no">Tidak ada</span></td><td>Tidak ditemukan studi yang menguji atau membuktikan klaim ini.</td><td>Jangan jadikan alasan untuk mengecat ulang.</td></tr>
+  </table>
+  <div class="legend"><span><span class="harvey h4"></span>Studi lapangan, kunjungan nyata</span><span><span class="harvey h3"></span>Beberapa eksperimen</span><span><span class="harvey h2"></span>Eksperimen terbatas / kontekstual</span><span><span class="harvey h1"></span>Simulasi tunggal</span><span><span class="harvey h0"></span>Tidak ada bukti</span></div>
+  <div class="footer"><span>Sumber lengkap di halaman 8</span><span>3</span></div>
+</section>
+
+<!-- 4 MECHANISM -->
+<section class="page">
+  <div class="kicker">Risiko desain premium</div>
+  <h1 class="title">Toko yang terlihat mahal berisiko kehilangan pelanggan inti sebelum mereka melihat harga</h1>
+  <div class="rule"></div>
+  <div class="statrow">
+    <div class="stat"><div class="big">115 jt</div><div style="font-size:9pt;color:var(--muted);margin-top:2mm">45% populasi Indonesia; pengeluaran Rp532 rb–Rp1,2 jt per orang per bulan (Bank Dunia, 2020)</div></div>
+    <div class="callout"><b>Pelajaran dari ritel global:</b> Walmart (awal 2000-an) dan Kmart (awal 1990-an) merusak citra harga murah mereka ketika mencoba tampil lebih upscale. Citra murah mudah rusak dan sulit dibangun kembali (Hamilton &amp; Chernev, 2013).</div>
+  </div>
+  <div class="exhibit-label">Exhibit 2</div>
+  <div class="exhibit-sub">Bagaimana isyarat desain premium membuat konsumen menengah bawah enggan masuk</div>
+  <div class="flow">
+    <div class="step"><div class="num">01</div><h4>Isyarat desain</h4><p>Permukaan luas berwarna gelap atau kusam, aksen emas, kayu gelap, lampu redup, harga tidak terlihat dari luar.</p><div class="src">JCR 2025; studi eye-tracking</div></div>
+    <div class="step"><div class="num">02</div><h4>Kesan harga mahal</h4><p>Konsumen menebak tingkat harga dari tampilan toko sebelum melihat label harga.</p><div class="src">Baker dkk. 2002; Hamilton &amp; Chernev 2013</div></div>
+    <div class="step"><div class="num">03</div><h4>Takut tidak diterima</h4><p>Konsumen berpenghasilan rendah mengantisipasi diperlakukan berbeda di tempat yang terlihat mewah.</p><div class="src">Jacob dkk. 2022, lima studi</div></div>
+    <div class="step dark"><div class="num">04</div><h4>Tidak masuk</h4><p>Mereka rela berbelanja di tempat lain, bahkan dengan harga lebih mahal (<i>psychological ghetto tax</i>).</p><div class="src">Jacob dkk. 2022</div></div>
+  </div>
+  <div class="source">Catatan: studi Jacob dkk. dilakukan dalam konteks Brasil dan belum diuji di Indonesia; tingkat ketimpangan yang serupa membuatnya relevan. Dalam studi tersebut, pernyataan anti-diskriminasi justru menjadi intervensi yang paling tidak efektif, sehingga solusinya ada pada desain, bukan pada slogan.</div>
+  <div class="footer"><span>Rekomendasi Desain Toko · Segmen Aspiring Middle Class</span><span>4</span></div>
+</section>
+
+<!-- 5 COLOR MAP -->
+<section class="page">
+  <div class="kicker">Sistem warna</div>
+  <h1 class="title">Hijau bisa terlihat murah atau mahal; gradasinya yang menentukan</h1>
+  <div class="rule"></div>
+  <div class="cmap">
+    <div>
+      <div class="exhibit-label">Exhibit 3</div>
+      <div class="exhibit-sub">Peta gradasi hijau menurut saturasi dan kecerahan (ilustrasi arah temuan riset)</div>
+      <svg viewBox="0 0 560 360" width="150mm" xmlns="http://www.w3.org/2000/svg" font-family="Inter" font-size="11">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#051C2C"/></marker>
+        </defs>
+        <!-- grid of swatches: columns = saturation low->high, rows = lightness light->dark -->
+        <g transform="translate(70,20)">
+          <!-- row 1 light -->
+          <rect x="0" y="0" width="80" height="58" fill="#C9D3CB"/><rect x="90" y="0" width="80" height="58" fill="#B5D8BD"/><rect x="180" y="0" width="80" height="58" fill="#9EE0AE"/><rect x="270" y="0" width="80" height="58" fill="#7CEB97"/>
+          <!-- row 2 -->
+          <rect x="0" y="68" width="80" height="58" fill="#8FA393"/><rect x="90" y="68" width="80" height="58" fill="#6FAE7E"/><rect x="180" y="68" width="80" height="58" fill="#45BE62"/><rect x="270" y="68" width="80" height="58" fill="#12CC42"/>
+          <!-- row 3 -->
+          <rect x="0" y="136" width="80" height="58" fill="#5A6B5E"/><rect x="90" y="136" width="80" height="58" fill="#4A7A55"/><rect x="180" y="136" width="80" height="58" fill="#2F8A45"/><rect x="270" y="136" width="80" height="58" fill="#0E9A33"/>
+          <!-- row 4 dark -->
+          <rect x="0" y="204" width="80" height="58" fill="#2E3830"/><rect x="90" y="204" width="80" height="58" fill="#27402D"/><rect x="180" y="204" width="80" height="58" fill="#1A4A26"/><rect x="270" y="204" width="80" height="58" fill="#0A521D"/>
+          <!-- target zone -->
+          <rect x="176" y="-4" width="178" height="134" fill="none" stroke="#2251FF" stroke-width="2.5"/>
+          <text x="265" y="-9" text-anchor="middle" fill="#2251FF" font-weight="700" font-size="11">Zona target: terjangkau, ramah</text>
+          <!-- avoid zone -->
+          <rect x="-4" y="132" width="178" height="134" fill="none" stroke="#C8102E" stroke-width="2.5" stroke-dasharray="6 4"/>
+          <text x="85" y="282" text-anchor="middle" fill="#C8102E" font-weight="700" font-size="11">Hindari: terkesan premium</text>
+          <!-- axes -->
+          <line x1="0" y1="300" x2="350" y2="300" stroke="#051C2C" stroke-width="1.2" marker-end="url(#ar)"/>
+          <text x="0" y="316" fill="#5F6B76">Kusam</text><text x="350" y="316" text-anchor="end" fill="#5F6B76">Jenuh</text>
+          <text x="175" y="316" text-anchor="middle" fill="#051C2C" font-weight="600">Saturasi</text>
+          <line x1="-22" y1="262" x2="-22" y2="0" stroke="#051C2C" stroke-width="1.2" marker-end="url(#ar)"/>
+          <text transform="translate(-30,131) rotate(-90)" text-anchor="middle" fill="#051C2C" font-weight="600">Kecerahan</text>
+          <!-- arrow of perceived price -->
+          <path d="M380 30 C 420 120, 420 180, 380 250" fill="none" stroke="#051C2C" stroke-width="1.4" marker-end="url(#ar)"/>
+          <text x="420" y="130" fill="#051C2C" font-weight="700">Kesan</text>
+          <text x="420" y="145" fill="#051C2C" font-weight="700">status</text>
+          <text x="420" y="160" fill="#051C2C" font-weight="700">naik</text>
+          <text x="420" y="178" fill="#5F6B76" font-size="10">makin gelap</text>
+          <text x="420" y="191" fill="#5F6B76" font-size="10">dan kusam</text>
+        </g>
+      </svg>
+    </div>
+    <div class="side">
+      <div class="box"><h4>Saturasi rendah = kesan status</h4><p>Tujuh studi eksperimen dan lapangan menunjukkan warna merek yang kurang jenuh menaikkan kesan status dan kesediaan membayar (<i>Journal of Consumer Research</i>, 2025).</p></div>
+      <div class="box"><h4>Gelap di area luas = kesan mewah</h4><p>Pada interior ritel, kombinasi warna yang sama terkesan lebih mewah jika warna gelapnya menutupi area yang luas (studi eye-tracking).</p></div>
+      <div class="box"><h4>Arahan untuk desainer</h4><p>Hijau cerah dan jenuh di zona biru cocok untuk segmen kita. Hijau botol tua atau hijau abu-abu, apalagi dipadu emas, menandakan premium.</p></div>
+    </div>
+  </div>
+  <div class="source">Catatan: swatch adalah ilustrasi arah temuan, bukan hasil pengukuran. Riset di atas tidak menguji warna hijau secara khusus.</div>
+  <div class="footer"><span>Rekomendasi Desain Toko · Segmen Aspiring Middle Class</span><span>5</span></div>
+</section>
+
+<!-- 6 BENCHMARK -->
+<section class="page">
+  <div class="kicker">Benchmark global</div>
+  <h1 class="title">Peritel murah yang sukses memakai lima warna berbeda; kesamaan mereka ada pada kontras dan kejelasan harga</h1>
+  <div class="rule"></div>
+  <div class="exhibit-label">Exhibit 4</div>
+  <div class="exhibit-sub">Warna utama tujuh peritel barang rumah tangga harga terjangkau</div>
+  <div class="bench">
+    <div class="card"><div class="sw"><div style="background:#fff;border:1px solid #D5DBE1;flex:.4"></div><div style="background:#2E9E48"></div></div><h4>Seria</h4><div class="c">Jepang · toko 100 yen</div><p>Papan putih di atas hijau. Toko terasa seperti butik, tetapi harga tetap jadi identitas utama.</p></div>
+    <div class="card"><div class="sw"><div style="background:#E5007E"></div></div><h4>Daiso</h4><div class="c">Jepang, global · 100 yen</div><p>Merah muda/fuchsia yang cerah, dipakai juga untuk maskot.</p></div>
+    <div class="card"><div class="sw"><div style="background:#00953A"></div><div style="background:#59BA29"></div><div style="background:#333;flex:.4"></div></div><h4>Dollar Tree</h4><div class="c">AS · harga tunggal</div><p>Gradasi hijau + hitam, dikaitkan dengan warna uang dolar.</p></div>
+    <div class="card"><div class="sw"><div style="background:#FFF000"></div><div style="background:#1C1B1B;flex:.5"></div></div><h4>Dollar General</h4><div class="c">AS · diskon kota kecil</div><p>Kuning terang + hitam, kontras tinggi dari jalan.</p></div>
+    <div class="card"><div class="sw"><div style="background:#00737A"></div><div style="background:#C9A646;flex:.35"></div><div style="background:#FFD200;flex:.35"></div></div><h4>Poundland</h4><div class="c">Inggris · serba £1</div><p>Teal/hijau + emas; dinilai pengamat merek terkesan usang (2025).</p></div>
+    <div class="card"><div class="sw"><div style="background:#0071BC"></div><div style="background:#7FC4EC;flex:.4"></div></div><h4>Action</h4><div class="c">Eropa · diskon rumah tangga</div><p>Biru, logo di atas tas belanja putih.</p></div>
+    <div class="card"><div class="sw"><div style="background:#FFC20E"></div><div style="background:#8C7400;flex:.35"></div></div><h4>MR.DIY</h4><div class="c">Malaysia, Indonesia</div><p>Kuning; pembanding terdekat untuk segmen kita.</p></div>
+  </div>
+  <div class="takeaway">
+    <div><b>Tidak ada warna pemenang</b>Hijau, merah muda, kuning, dan biru sama-sama dipakai peritel murah yang sukses.</div>
+    <div><b>Kesamaannya: kontras dan kejenuhan</b>Semua memakai warna jenuh dengan latar putih atau hitam, dan logo yang sederhana.</div>
+    <div><b>Harga menjadi identitas</b>"100 yen", "Dollar", dan "Pound" muncul di nama atau konsep merek, sehingga kesan murah tersampaikan sebelum orang masuk.</div>
+  </div>
+  <div class="source">Catatan: warna diambil dari katalog logo (Brandfetch, Brandpalettes, whatthelogo) dan ulasan toko; sebagian hex merupakan perkiraan visual, bukan pedoman merek resmi.</div>
+  <div class="footer"><span>Rekomendasi Desain Toko · Segmen Aspiring Middle Class</span><span>6</span></div>
+</section>
+
+<!-- 7 RECOMMENDATIONS -->
+<section class="page">
+  <div class="kicker">Rekomendasi desain</div>
+  <h1 class="title">Tujuh arahan desain untuk membuat toko terlihat terjangkau dan mengundang</h1>
+  <div class="rule"></div>
+  <div class="exhibit-label">Exhibit 5</div>
+  <div class="exhibit-sub">Arahan per elemen desain, dengan dasar riset</div>
+  <table class="rt">
+    <tr><th>Elemen</th><th class="do">Lakukan</th><th class="dont">Hindari</th><th>Dasar riset</th></tr>
+    <tr><td class="factor">Warna brand</td><td class="do">Warna jenuh dan cerah, 2–3 warna, latar putih</td><td class="dont">Warna kusam, abu-abu pastel, hitam-emas</td><td class="ev">JCR 2025; benchmark peritel murah</td></tr>
+    <tr><td class="factor">Fasad dan papan nama</td><td class="do">Kontras tinggi, huruf besar, terbaca dari seberang jalan; fasad bersih</td><td class="dont">Permukaan luas berwarna gelap, logo kecil dan minimalis</td><td class="ev">Studi eye-tracking; benchmark</td></tr>
+    <tr><td class="factor">Etalase</td><td class="do">Tata kreatif, diperbarui rutin, produk dan harga terlihat dari luar</td><td class="dont">Etalase kosong atau tertutup stiker</td><td class="ev">Lange dkk. 2016 (n=1.834)</td></tr>
+    <tr><td class="factor">Label harga</td><td class="do">Angka besar; merah untuk promo dan harga spesial</td><td class="dont">Harga kecil, disembunyikan, atau hanya di kasir</td><td class="ev">Puccinelli dkk. 2013</td></tr>
+    <tr><td class="factor">Pencahayaan</td><td class="do">Terang merata dengan sentuhan hangat</td><td class="dont">Redup dan dramatis ala butik</td><td class="ev">Babin dkk. 2003: lampu lembut memberi kesan harga paling wajar</td></tr>
+    <tr><td class="factor">Material interior</td><td class="do">Rak terang, sederhana, mudah dirawat</td><td class="dont">Kayu gelap, marmer, aksen emas</td><td class="ev">Baker dkk. 2002; Hamilton &amp; Chernev 2013</td></tr>
+    <tr><td class="factor">Akses masuk</td><td class="do">Pintu terbuka atau transparan, jalan masuk lapang</td><td class="dont">Pintu tertutup gelap, penjaga di depan pintu</td><td class="ev">Jacob dkk. 2022 (rasa takut tidak diterima)</td></tr>
+  </table>
+  <div class="source">Arahan "akses masuk" dan "fasad bersih" adalah turunan logis dari riset di atas, bukan hasil uji langsung; arahan ini perlu divalidasi lewat uji coba di beberapa toko sebelum diterapkan luas.</div>
+  <div class="footer"><span>Rekomendasi Desain Toko · Segmen Aspiring Middle Class</span><span>7</span></div>
+</section>
+
+<!-- 8 SOURCES -->
+<section class="page">
+  <div class="kicker">Sumber</div>
+  <h1 class="title">Daftar pustaka</h1>
+  <div class="rule"></div>
+  <ol class="refs">
+    <li>Lange, Rosengren &amp; Blom (2016). Store-window creativity's impact on shopper behavior. <i>Journal of Business Research</i> 69(3). <span class="u">research.hhs.se/esploro/outputs/journalArticle/991001480353106056</span></li>
+    <li>Jacob, Vieites, Goldszmidt &amp; Andrade (2022). Expected Socioeconomic-Status-Based Discrimination Reduces Price Sensitivity Among the Poor. <i>Journal of Marketing Research</i> 59(6). <span class="u">doi.org/10.1177/00222437221097100</span></li>
+    <li>American Marketing Association (2023). "Psychological Ghetto Tax": How the Poor Pay More to Escape Bias. <span class="u">ama.org/2023/04/04/psychological-ghetto-tax-the-poor-pay-more-to-avoid-discrimination</span></li>
+    <li>Hamilton &amp; Chernev (2013). Low Prices Are Just the Beginning: Price Image in Retail Management. <i>Journal of Marketing</i>. Merangkum Baker, Parasuraman, Grewal &amp; Voss (2002), <i>Journal of Marketing</i> 66(2). <span class="u">chernev.com/wp-content/uploads/2017/02/PriceImageInRetailManagement_JM_2013.pdf</span></li>
+    <li>Color of Status: Color Saturation, Brand Heritage, and Perceived Status of Luxury Brands (2025). <i>Journal of Consumer Research</i>. <span class="u">doi.org/10.1093/jcr/ucaf029</span></li>
+    <li>Spatial Color Efficacy in Perceived Luxury and Preference to Stay: An Eye-Tracking Study of Retail Interior Environment. <span class="u">pmc.ncbi.nlm.nih.gov/articles/PMC7136482</span></li>
+    <li>Puccinelli, Chandrashekaran, Grewal &amp; Suri (2013). Are Men Seduced by Red? <i>Journal of Retailing</i> 89(2). <span class="u">researchportal.bath.ac.uk</span></li>
+    <li>Babin, Hardesty &amp; Suter (2003). Color and Shopping Intentions. <i>Journal of Business Research</i> 56(7). <span class="u">aquila.usm.edu/fac_pubs/3235</span></li>
+    <li>The Influence of Emotional Response and Aesthetic Perception of Shopping Mall Facade Color on Entry Decisions (2024). <i>Buildings</i> 14(8). <span class="u">doi.org/10.3390/buildings14082302</span></li>
+    <li>World Bank (2020). Aspiring Indonesia: Expanding the Middle Class. <span class="u">worldbank.org/en/news/press-release/2020/01/30/expanding-middle-class-key-for-indonesia-future</span></li>
+    <li>Albar (2019). Analisis Pengaruh Exterior dan Interior Toko terhadap Minat Belanja Konsumen. <i>J. Ilmiah Ekonomi Global Masa Kini</i> 10(2). <span class="u">ejournal.uigm.ac.id/index.php/EGMK/article/view/846</span></li>
+    <li>Seria: Tofugu; Tokyo Cheapo; Glos Travel (2026). <span class="u">tofugu.com/travel/seria-100-yen-shop</span></li>
+    <li>Warna logo: Brandfetch (Dollar Tree, MR.DIY), Brandpalettes (Dollar General), whatthelogo (Poundland), Justia Trademarks (Action), Tokyo Weekender (Daiso).</li>
+  </ol>
+  <div class="source">Untuk beberapa jurnal hanya abstrak atau ringkasan yang dapat diakses; angka diambil dari abstrak atau halaman repositori. Laporan lengkap untuk BOD tersedia sebagai dokumen terpisah.</div>
+  <div class="footer"><span>Rekomendasi Desain Toko · Segmen Aspiring Middle Class</span><span>8</span></div>
+</section>
+
+</body>
+</html>
