@@ -43,3 +43,38 @@ Laporan untuk BOD · per 9 Oktober 2026 · Versi utama (dokumen hidup): https://
 5. Tetapkan ambang keputusan di awal (misalnya capture rate naik ≥ 10% dan signifikan).
 
 Langkah murah lebih dulu: audit warna fasad seluruh jaringan terhadap traffic/omzet, dengan kontrol lokasi dan ukuran toko.
+
+## Update: segmen aspiring middle class, toko kebutuhan rumah tangga
+
+**Warna brand berpengaruh, tetapi tidak langsung ke penjualan.** Warna membentuk *kesan harga* toko (price image), dan kesan inilah yang menentukan apakah konsumen menengah bawah berani masuk.
+
+- Bank Dunia (2020): 115 juta orang Indonesia (45%) adalah *aspiring middle class*, dengan pengeluaran Rp532 ribu–Rp1,2 juta per orang per bulan.
+- Jacob dkk. (2022, JMR, lima studi): konsumen berpenghasilan rendah rela membayar lebih mahal agar tidak masuk ke toko yang terlihat mewah (*psychological ghetto tax*).
+- Hamilton & Chernev (2013) merangkum Baker dkk. (2002): lingkungan toko yang menarik, termasuk skema warna yang modis, membuat toko terkesan lebih mahal. Walmart dan Kmart merusak citra murahnya saat tampil lebih upscale.
+- Hijau itu netral. Yang menentukan gradasinya: saturasi rendah menaikkan kesan status (JCR 2025), dan warna gelap di area luas terkesan mewah (studi eye-tracking). Hijau tua yang kusam dengan aksen emas kemungkinan terlihat mahal, sedangkan hijau cerah tidak (belum diuji langsung).
+
+### Contoh peritel murah dan warnanya
+
+| Brand | Negara | Warna utama |
+| --- | --- | --- |
+| Seria | Jepang | Hijau (tampilan seperti butik) |
+| Daiso | Jepang | Merah muda / fuchsia |
+| Dollar Tree | AS | Hijau + hitam |
+| Dollar General | AS | Kuning + hitam |
+| Poundland | Inggris | Teal/hijau + emas |
+| Action | Eropa | Biru |
+| MR.DIY | Malaysia / Indonesia | Kuning |
+
+Tidak ada satu warna pemenang. Kesamaannya: warna jenuh, kontras tinggi, logo sederhana, harga ditonjolkan.
+
+### Panduan warna untuk segmen ini
+
+| Elemen | Kesan terjangkau | Kesan mahal (hindari) |
+| --- | --- | --- |
+| Saturasi | Jenuh, cerah | Kusam |
+| Gelap-terang | Terang, latar putih | Permukaan luas gelap |
+| Kombinasi | Kontras tinggi, 2–3 warna | Hitam/hijau tua + emas, kayu gelap |
+| Label harga | Besar, jelas; merah untuk sinyal hemat (Puccinelli 2013) | Kecil/tersembunyi |
+| Pencahayaan | Terang merata, sentuhan hangat (Babin 2003) | Redup, dramatis |
+
+Tidak ada studi yang membuktikan satu warna tertentu menaikkan penjualan. Efeknya untuk toko kita perlu diuji lewat uji coba terkontrol.
