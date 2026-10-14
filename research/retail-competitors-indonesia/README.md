@@ -10,6 +10,8 @@ Pendekatan: (1) petakan **semua kategori** yang dijual tiap brand → (2) tentuk
 
 | [04-verifikasi-dan-ancaman-online.md](04-verifikasi-dan-ancaman-online.md) | Ketiganya | Metode verifikasi kategori andalan + triangulasi data eksternal | Status verifikasi per kategori andalan | Penggerus online per kategori: InTheBox/Uniland (kasur), BOLDe (pel), Xiaomi/Miyako/Taffware (elektronik kecil), POP MART LazMall (koleksi), barang impor murah |
 
+| [05-mindmap.md](05-mindmap.md) | Ketiganya | Mindmap per brand (Mermaid + PNG di `mindmap/`) | Ringkasan visual file 01–04 | — |
+
 ## Tema lintas brand
 - **MAP adalah rival utama Kawan Lama di dua front**: Ace Hardware (vs AZKO) dan Kidz Station + LEGO Store + Babyz Station (vs Toys Kingdom).
 - **MR.DIY & MINISO menekan dari harga murah** di AZKO (8 kategori) dan INFORMA (dekor/dapur/storage).
