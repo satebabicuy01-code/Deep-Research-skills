@@ -55,6 +55,8 @@
 
 ## 4. Kategori Andalan Toys Kingdom
 
+> ⚠️ **Catatan verifikasi:** kategori andalan di bagian ini disimpulkan dari kanal milik Kawan Lama sendiri (situs resmi & ruparupa). Status verifikasi eksternal dan ancaman online per kategori ada di [04-verifikasi-dan-ancaman-online.md](04-verifikasi-dan-ancaman-online.md).
+
 | Peringkat | Kategori andalan | Bukti | Brand pendorong |
 |---|---|---|---|
 | ⭐1 | **Mainan Koleksi** (diecast, figur, blind box, TCG) | SKU terbesar (2.875); 5 dari 15 brand favorit adalah brand koleksi (Blokees, Yolopark, Fondjoy, POP MART, Tomica); konsep **Toys Gen** ✅ | Hot Wheels, Tomica, POP MART, Blokees, Beast Kingdom, Yume (Jujutsu Kaisen), ZD Toys, Pokémon |

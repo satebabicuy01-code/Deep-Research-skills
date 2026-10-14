@@ -56,6 +56,8 @@
 
 ## 4. Kategori Andalan INFORMA
 
+> ⚠️ **Catatan verifikasi:** kategori andalan di bagian ini disimpulkan dari kanal milik Kawan Lama sendiri (situs resmi & ruparupa). Status verifikasi eksternal dan ancaman online per kategori ada di [04-verifikasi-dan-ancaman-online.md](04-verifikasi-dan-ancaman-online.md).
+
 ### 4a. Daftar "Produk Terlaris" INFORMA (ruparupa, 34 produk) ✅
 
 | Produk terlaris | Kategori | Ulasan |
