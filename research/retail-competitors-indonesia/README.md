@@ -1,16 +1,20 @@
-# Riset Pesaing Ritel Kawan Lama Group — Indonesia (Okt 2026)
+# Riset Kategori & Pesaing Ritel Kawan Lama Group: Indonesia (Okt 2026)
 
-| File | Brand acuan | Pesaing langsung utama | Pesaing tidak langsung utama |
-|---|---|---|---|
-| [01-home-improvement-azko.md](01-home-improvement-azko.md) | **AZKO** (276 toko, + NEKA) | Ace Hardware (MAP, comeback 2026), Mitra10, Depo Bangunan, Grand Mitra, Kokoh/Mitraruma | MR.DIY (1.200+ toko), MINISO, Daiso, IKEA, hipermarket, marketplace, toko bangunan tradisional |
-| [02-furniture-informa.md](02-furniture-informa.md) | **INFORMA** (125+ toko, 55 kota) | IKEA, JYSK, Courts, Vivere, Atria, Olympic, Dekoruma | Brand kasur, furnitur kantor (Chitose dkk.), dekor murah, ritel elektronik, marketplace, mebel lokal |
-| [03-toys-kingdom.md](03-toys-kingdom.md) | **Toys Kingdom** (77 toko, 26+ kota) | Kidz Station (MAP), Toys City, LEGO store, Mothercare/ELC | POP MART, TOP TOY, MINISO FRIENDS, MR.DIY, Gramedia, hipermarket, marketplace, Timezone/KidZania |
+Pendekatan: (1) petakan **semua kategori** yang dijual tiap brand → (2) tentukan **kategori andalan** → (3) cari **pesaing chain store per kategori** (bukan toko mom-and-pop).
 
-## Tema lintas kategori
-- **MAP vs Kawan Lama** makin head-to-head: Ace Hardware (vs AZKO) dan Kidz Station (vs Toys Kingdom).
-- **MR.DIY & MINISO** menekan dari segmen harga murah di ketiga kategori.
-- **Ekspansi ke kota tier-2/3** mengubah peta pesaing: lawan riil di daerah adalah toko lokal, hipermarket dan marketplace.
+| File | Brand | Kategori | Kategori andalan | Pesaing chain terberat |
+|---|---|---|---|---|
+| [01-home-improvement-azko.md](01-home-improvement-azko.md) | **AZKO** (276 toko + NEKA) | 10 kategori: Home Improvement (4) + Life Improvement (6), ±30 rb SKU, 52 home brands | Elektronik kecil (kipas/air purifier), storage & furnitur lipat, kebersihan, lampu LED, tangga/brankas | **MR.DIY** (8/10 kategori), **Ace Hardware/MAP** (10/10, skala kecil), IKEA, Mitra10, MINISO; spesialis: Electronic City/Erajaya, Decathlon/Eiger, Shop&Drive |
+| [02-furniture-informa.md](02-furniture-informa.md) | **INFORMA** (125+ toko, 55 kota) | 9 kategori: Furnitur, Kasur & Linen, Elektronik, Dekorasi, Dapur, Storage, Kamar Mandi, Commercial, Wearables | Furnitur ruang tamu/makan, storage, INFORMA Sleep, home office, INFORMA Electronics | **IKEA** (6/9 kategori), JYSK, SLEEP & Co/DAP, Electronic City/Erajaya, MR.DIY/MINISO |
+| [03-toys-kingdom.md](03-toys-kingdom.md) | **Toys Kingdom** (77 toko) | 8 kategori: Koleksi, Mainan, Edukasi, Sekolah & Gaya Anak, Bayi, Outdoor, Bayi & Ibu, RC | Mainan koleksi (Toys Gen), LEGO/konstruksi, mainan berlisensi | **MAP** (Kidz Station + 26 LEGO Certified Store + Babyz Station), POP MART, TOP TOY/MINISO, Gramedia, Mothercare/ELC (Kanmo) |
 
-## Catatan metodologi
-- Data dikumpulkan dari berita bisnis (Bisnis.com, Kontan, Katadata, IDX Channel), rilis Kawan Lama Group, dan sumber industri, per Oktober 2026.
-- Tiap file menandai data **✅ terverifikasi sumber** vs **⚠️ perlu verifikasi**. Jumlah gerai pesaing yang tidak terbuka (Kidz Station, JYSK, Courts, Toys City, Olympic) sebaiknya dicek ulang lewat laporan tahunan/situs resmi.
+## Tema lintas brand
+- **MAP adalah rival utama Kawan Lama di dua front**: Ace Hardware (vs AZKO) dan Kidz Station + LEGO Store + Babyz Station (vs Toys Kingdom).
+- **MR.DIY & MINISO menekan dari harga murah** di AZKO (8 kategori) dan INFORMA (dekor/dapur/storage).
+- **Private label & layanan** adalah benteng: 52 home brands AZKO; desain interior gratis, instalasi dan cicilan di INFORMA; kurasi multi-brand koleksi di Toys Kingdom.
+- **Jangkauan kota tier-2/3** adalah moat. Pesaing spesialis (IKEA, Decathlon, LEGO store, POP MART) masih terkonsentrasi di kota besar.
+
+## Metodologi & keterbatasan
+- Kategori & jumlah SKU diambil langsung dari azko.id, informa.co.id, toyskingdom.co.id dan toko resmi di ruparupa.com (Okt 2026). **Jumlah SKU mengukur kedalaman assortment online, bukan omzet.**
+- Kategori andalan disimpulkan dari daftar "Produk Terlaris", jumlah ulasan, pencarian populer dan brand favorit. Kawan Lama tidak mempublikasikan penjualan per kategori, kecuali segmen ACES (perbaikan rumah / gaya hidup / permainan).
+- Data pesaing dari berita bisnis & rilis resmi. Tanda ⚠️ = perlu verifikasi (mis. jumlah gerai Kidz Station, JYSK, MUJI, Hartono, Best Denki, Smiggle, status Courts).
