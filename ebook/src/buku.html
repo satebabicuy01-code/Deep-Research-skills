@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Membaca Dunia 2026</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================ TENTANG -->
+<section id="tentang">
+  <div class="chapter-head">
+    <div class="num">Tentang edisi ini</div>
+    <h1>Membaca Dunia 2026</h1>
+    <p class="lede">Geopolitik, utang, dan pasar untuk investor Indonesia. Edisi terverifikasi.</p>
+  </div>
+
+  <p>Buku ini lahir dari dua bahan. Yang pertama adalah <b><i>Geopolitics for Dummies Vol. 1</i></b> karya BlackQoral, sebuah pengantar yang ditulis untuk generasi muda agar bisa membaca dinamika dunia dengan tenang dan analitis. Yang kedua adalah <b>riset tatanan dunia</b> yang memeriksa ulang angka-angka buku itu ke sumber primer, lalu memperbaruinya sampai <b>26 Oktober 2026</b>.</p>
+  <p>Kerangka berpikir buku asli dipertahankan karena sebagian besar masuk akal: rantai "konflik → komoditas → inflasi → bank sentral → arus modal", berpikir dalam skenario, dan kebiasaan membaca kurs sebelum membaca indeks saham. Yang berubah adalah datanya. Setiap angka penting sudah dicek, kesalahan diperbaiki dan ditandai, dan peristiwa 2025–2026 yang belum dibahas buku asli kini dimasukkan.</p>
+
+  <div class="stats">
+    <div class="stat red"><div class="v">15</div><div class="k">kesalahan data buku asli yang dikoreksi (Lampiran A)</div></div>
+    <div class="stat amber"><div class="v">2</div><div class="k">"titik buta" model yang ditambahkan: shock minyak & risiko domestik</div></div>
+    <div class="stat teal"><div class="v">20</div><div class="k">grafik yang dibuat dari data bersumber</div></div>
+    <div class="stat"><div class="v">26 Okt</div><div class="k">2026: tanggal batas data edisi ini</div></div>
+  </div>
+
+  <h3>Cara membaca buku ini</h3>
+  <div class="legend4">
+  <div class="box rule"><span class="label">Quick Rule</span>Aturan praktis satu kalimat di akhir pembahasan, seperti di buku asli.</div>
+  <div class="box fixbox"><span class="label">Koreksi</span>Angka atau klaim buku asli yang terbukti salah, beserta nilai yang benar dan sumbernya.</div>
+  <div class="box insight"><span class="label">Insight 2026</span>Temuan baru dari data 2025–2026 yang mengubah atau mempertajam kesimpulan.</div>
+  <div class="box note"><span class="label">Catatan metode</span>Batasan data, definisi, atau penilaian subjektif penulis.</div>
+  </div>
+
+  <h3>Prinsip yang dipakai</h3>
+  <ul>
+    <li><b>Setiap angka punya sumber dan tanggal.</b> Sumber dicantumkan di bawah setiap grafik dan tabel, dan semua data grafik tersedia dalam berkas CSV di folder <span class="mono">ebook/data/</span>.</li>
+    <li><b>Fakta dipisahkan dari penilaian.</b> Probabilitas skenario dan skor dampak adalah penilaian subjektif penulis dan diberi label demikian.</li>
+    <li><b>Jika data tidak ditemukan, ditulis "tidak tersedia".</b> Tidak ada angka yang dikarang.</li>
+  </ul>
+
+  <div class="box note"><span class="label">Disclaimer</span>Seluruh isi buku ini untuk tujuan edukasi dan <b>bukan saran investasi</b>. Pasar memiliki risiko yang tidak bisa diprediksi secara pasti. Model dan skenario adalah kerangka berpikir, bukan jaminan hasil. Edisi ini disusun dengan bantuan AI (Claude) dan merujuk karya BlackQoral sebagai sumber kerangka; buku ini bukan terbitan resmi BlackQoral.</div>
+</section>
+
+<!-- ============================================================ DAFTAR ISI -->
+<section class="chapter" id="isi">
+  <div class="chapter-head"><div class="num">Daftar isi</div><h1>Isi buku</h1></div>
+  <nav class="toc"><ol>
+    <li><span class="n">00</span><a href="#pendahuluan">Pendahuluan: masalah utang dan dunia yang bergeser<span class="d">Tiga perubahan besar, metodologi, apa yang baru di edisi ini</span></a></li>
+    <li><span class="n">01</span><a href="#bab1">24 bulan yang mengubah dunia<span class="d">Kronologi 2025–2026 dan 10 peristiwa terpenting</span></a></li>
+    <li><span class="n">02</span><a href="#bab2">Data makro 2014–2026: fondasi analisis<span class="d">Pertumbuhan, inflasi, dan suku bunga lima kekuatan ekonomi</span></a></li>
+    <li><span class="n">03</span><a href="#bab3">Pasar modal & aset global<span class="d">Return tahunan, anomali 2022, dan runtuhnya IHSG 2026</span></a></li>
+    <li><span class="n">04</span><a href="#bab4">Volatilitas & risiko geopolitik<span class="d">VIX, indeks GPR, dan mengapa perang 2026 tak terlihat di VIX</span></a></li>
+    <li><span class="n">05</span><a href="#bab5">Teknologi sebagai kekuatan geopolitik<span class="d">Chip, AI, dan data investasi yang benar</span></a></li>
+    <li><span class="n">06</span><a href="#bab6">Uang & kekuasaan<span class="d">Dolar, emas bank sentral, Bitcoin, stablecoin, CBDC</span></a></li>
+    <li><span class="n">07</span><a href="#bab7">Energi, komoditas & jalur laut<span class="d">Shock minyak 2026, chokepoint, logam, pangan</span></a></li>
+    <li><span class="n">08</span><a href="#bab8">Peta konflik 2014–2026<span class="d">Dari Krimea sampai Hormuz, dan polarisasi sosial</span></a></li>
+    <li><span class="n">09</span><a href="#bab9">Negara-negara kunci<span class="d">Pendapatan, defisit, strategi bertahan, dan batasnya</span></a></li>
+    <li><span class="n">10</span><a href="#bab10">Indonesia secara mendalam<span class="d">Defisit kembar, neraca komoditas, APBN, MSCI</span></a></li>
+    <li><span class="n">11</span><a href="#bab11">Model rezim & skenario 2026–2030<span class="d">Four Quadrant, skenario, matriks dampak, uji realitas</span></a></li>
+    <li><span class="n">12</span><a href="#bab12">Kerangka praktis untuk investor Indonesia<span class="d">Jenis shock, prinsip, dashboard 14 indikator, kalender</span></a></li>
+    <li><span class="n">13</span><a href="#bab13">Kesimpulan: lima mental model<span class="d">Revisi tiga mental model buku asli, ditambah dua</span></a></li>
+    <li><span class="n">A</span><a href="#lampA">Lampiran A: daftar koreksi atas buku Vol. 1</a></li>
+    <li><span class="n">B</span><a href="#lampB">Lampiran B: glosarium</a></li>
+    <li><span class="n">C</span><a href="#lampC">Lampiran C: sumber utama</a></li>
+  </ol></nav>
+</section>
+
+<!-- ============================================================ PENDAHULUAN -->
+<section class="chapter" id="pendahuluan">
+  <div class="chapter-head"><div class="num">00 · Pendahuluan</div><h1>Masalah utang dan dunia yang bergeser</h1>
+  <p class="lede">Dunia sedang mengalami tiga perubahan besar secara bersamaan.</p><span class="asof">Data per 26 Oktober 2026</span></div>
+
+  <ol>
+    <li><b>Ledakan utang global yang mendekati titik kritis.</b> Pada tahun fiskal 2026, Amerika Serikat membayar bunga utang bersih <b>US$1,05 triliun</b>, melampaui anggaran pertahanannya. Defisitnya <b>US$1,99 triliun</b>. Prancis, Inggris, dan Jepang menghadapi pasar obligasi yang makin menuntut.</li>
+    <li><b>Pergeseran kekuasaan yang tidak linear.</b> Buku asli menyebutnya "transisi dari Amerika Serikat ke China". Data 2026 menunjukkan gambaran yang lebih rumit: China unggul dalam produksi tetapi terkekang kontrol modal dan krisis properti, porsi yuan di cadangan devisa dunia hanya <b>2,1%</b>. Yang terbentuk adalah <b>dunia multipolar</b>, dan aset netral (emas) menjadi penerima manfaat terbesar dari hilangnya kepercayaan.</li>
+    <li><b>Lonjakan teknologi.</b> Blockchain dan kecerdasan buatan mengubah cara uang bergerak, cara perang dilancarkan, dan cara masyarakat terorganisir. Chip dan mineral kritis kini menjadi alat tawar geopolitik.</li>
+  </ol>
+
+  <h3>Tiga pertanyaan yang dijawab buku ini</h3>
+  <ol>
+    <li>Bagaimana hubungan antara siklus makroekonomi, teknologi, dan konflik geopolitik sejak 2014?</li>
+    <li>Bagaimana pola ini membantu membaca volatilitas pasar ke depan?</li>
+    <li>Apa artinya bagi investor Indonesia, yang hidup dengan rupiah, IHSG, dan APBN?</li>
+  </ol>
+
+  <h3>Metodologi</h3>
+  <table>
+    <thead><tr><th>Lapisan</th><th>Isi</th><th>Sumber utama</th></tr></thead>
+    <tbody>
+      <tr><td>Data historis 2014–2024</td><td>PDB, inflasi, suku bunga, harga aset, arus modal</td><td>IMF WEO, BPS, BI, FRED, BEI, MSCI, WGC</td></tr>
+      <tr><td>Data terkini 2025–2026</td><td>Perang Iran, shock minyak, kenaikan suku bunga, krisis IHSG</td><td>Rilis resmi bank sentral & statistik, Reuters, CNBC, Kontan, Bisnis</td></tr>
+      <tr><td>Indeks terukur</td><td>Geopolitical Risk Index (GPR), VIX, DXY</td><td>Caldara & Iacoviello (Fed), CBOE, ICE</td></tr>
+      <tr><td>Kerangka teori</td><td>Siklus utang & Siklus Besar Ray Dalio, Four Quadrant, Reflexivity (Soros)</td><td>Dalio (2021, 2025); Bridgewater</td></tr>
+      <tr><td>Skenario 2026–2030</td><td>Skenario utama yang saling eksklusif, risiko ekor yang dipisahkan</td><td>Penilaian penulis (diberi label)</td></tr>
+      <tr><td><b>Lapisan verifikasi (baru)</b></td><td>Setiap angka buku asli dicek ulang ke sumber primer</td><td>Lihat Lampiran A</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box insight"><span class="label">Apa yang baru di edisi ini</span>
+    <ul>
+      <li><b>Data diperbarui sampai Oktober 2026.</b> Buku asli mengklaim memakai kondisi April 2026 tetapi tidak membahas perang Iran yang dimulai 28 Februari 2026, gangguan pasokan minyak terbesar dalam sejarah menurut IEA.</li>
+      <li><b>Dua titik buta ditambahkan ke model:</b> shock minyak dari Teluk (Indonesia adalah importir minyak) dan risiko tata kelola domestik (fiskal, independensi bank sentral, pasar modal).</li>
+      <li><b>15 kesalahan data diperbaiki</b>, termasuk return IHSG 2024 (bukan +2,7% tetapi −2,65%) dan investasi AI China 2024 (bukan US$80 miliar tetapi US$9,3 miliar).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ BAB 1 -->
+<section class="chapter" id="bab1">
+  <div class="chapter-head"><div class="num">Bab 01</div><h1>24 bulan yang mengubah dunia</h1>
+  <p class="lede">Sebelum membuat model apa pun, kita perlu tahu apa yang sudah terjadi. Bab ini merangkum peristiwa terpenting sejak awal 2025.</p><span class="asof">Data per 26 Oktober 2026</span></div>
+
+  <p class="tcap">Tabel 1.1 · Kronologi peristiwa pasar dan geopolitik, 2025–2026</p>
+  <table>
+    <thead><tr><th style="width:17%">Waktu</th><th>Peristiwa</th><th style="width:32%">Dampak pasar</th></tr></thead>
+    <tbody>
+      <tr><td>Jan 2025</td><td>Indonesia resmi menjadi anggota BRICS</td><td>Simbol posisi "bebas aktif" di antara dua blok</td></tr>
+      <tr><td>2 Apr 2025</td><td>Tarif "Liberation Day" Presiden Trump</td><td>VIX ditutup 52,33 (8 Apr); dolar melemah ±10% pada H1 2025</td></tr>
+      <tr><td>Mei 2025</td><td>Bentrokan militer India–Pakistan; Moody's mencabut peringkat Aaa AS</td><td>Gencatan senjata bertahan hingga kini</td></tr>
+      <tr><td>Jun 2025</td><td>Perang 12 hari Israel–Iran; AS menyerang situs nuklir</td><td>Pembuka konflik besar 2026</td></tr>
+      <tr><td>Jul 2025</td><td>GENIUS Act (regulasi stablecoin AS) ditandatangani</td><td>Stablecoin menjadi pembeli T-bills baru</td></tr>
+      <tr><td>6 Okt 2025</td><td>Bitcoin mencetak rekor ±US$126.210</td><td>Puncak siklus</td></tr>
+      <tr><td>Okt 2025</td><td>Gencatan dagang AS–China di Busan</td><td>Kontrol rare earth China ditangguhkan</td></tr>
+      <tr><td>Des 2025</td><td>UE membekukan aset Rusia €210 miliar tanpa batas waktu; pinjaman €90 miliar untuk Ukraina</td><td>Senjata keuangan Barat makin permanen</td></tr>
+      <tr><td>8 Des 2025</td><td>IHSG mencetak rekor ±8.710; ditutup 2025 di 8.646,94 (+22,13%)</td><td>Puncak pasar saham Indonesia</td></tr>
+      <tr><td>Jan 2026</td><td>AS menangkap Presiden Venezuela Maduro</td><td>±Separuh produksi minyak Venezuela mengalir ke AS</td></tr>
+      <tr><td>29–30 Jan 2026</td><td>Emas rekor ±US$5.595, lalu jatuh ±10% dalam sehari setelah Kevin Warsh dinominasikan sebagai Ketua Fed</td><td>Penurunan harian emas dan perak terburuk sejak 1980</td></tr>
+      <tr><td>20 Feb 2026</td><td>Mahkamah Agung AS membatalkan tarif berbasis IEEPA</td><td>±US$126–158 miliar dikembalikan ke importir</td></tr>
+      <tr><td><b>28 Feb 2026</b></td><td><b>AS dan Israel menyerang Iran; Selat Hormuz praktis tertutup</b></td><td><b>Brent dari ±$70 ke puncak ±$118–126</b></td></tr>
+      <tr><td>Mar 2026</td><td>Serangan ke fasilitas LNG Qatar (Ras Laffan)</td><td>Harga LNG spot Asia +140%</td></tr>
+      <tr><td>22 Mei 2026</td><td>Kevin Warsh dilantik sebagai Ketua Fed</td><td>Independensi Fed menjadi sorotan</td></tr>
+      <tr><td>Jun 2026</td><td>Bitcoin turun di bawah US$59.000; emas ke titik terendah ±US$3.995</td><td>Aset "safe haven" tidak kebal</td></tr>
+      <tr><td>17 Jun – 8 Jul 2026</td><td>Islamabad Memorandum AS–Iran, lalu runtuh</td><td>Brent turun ke ±$70, lalu kembali >$100</td></tr>
+      <tr><td>23–31 Jul 2026</td><td>Yen ke ¥163,99 (terlemah sejak 1986); intervensi bersama AS–Jepang</td><td>Intervensi terkoordinasi pertama sejak 2011</td></tr>
+      <tr><td>Jul–Sep 2026</td><td>Houthi mengembargo Arab Saudi dan merebut Pulau Mayyun di Bab el-Mandeb</td><td>Transit Bab el-Mandeb −47%, Suez −39%</td></tr>
+      <tr><td>16–18 Sep 2026</td><td>Fed menaikkan suku bunga ke 3,75–4,00%; BOJ ke 1,25%</td><td>Era kenaikan suku bunga kembali</td></tr>
+      <tr><td>7–8 Okt 2026</td><td>Yield UST 10 tahun 5,36% (tertinggi sejak 2002); gilt 5,53% (tertinggi sejak 2007)</td><td>Pasar obligasi negara maju tertekan</td></tr>
+      <tr><td><b>15–16 Okt 2026</b></td><td><b>MSCI mengusulkan Indonesia diturunkan ke status "Standalone"</b></td><td><b>IHSG −11,6% dalam sehari, terburuk sejak 1998</b></td></tr>
+      <tr><td>17 & 24 Okt 2026</td><td>Protes BBM di Prancis berubah menjadi kerusuhan</td><td>Spread obligasi Prancis lebih lebar dari Italia</td></tr>
+      <tr><td>23 Okt 2026</td><td>Brent settle US$116,72</td><td>Tertinggi sejak 29 April</td></tr>
+    </tbody>
+  </table>
+  <p class="tsrc">Sumber: Wikipedia (2026 Iran war; Strait of Hormuz crisis), CBS, CNBC, Reuters via Zawya, Bisnis, Investortrust, MSCI, MOF Jepang, Fed, BOJ, KuCoin, Penn Wharton Budget Model. Rincian sumber di folder riset.</p>
+
+  <h3>Mengapa 10 peristiwa ini paling menentukan</h3>
+  <ol>
+    <li><b>Perang Iran & Hormuz</b>: jalur ±20% minyak laut dunia terganggu; memicu inflasi global baru.</li>
+    <li><b>Kenaikan suku bunga global kembali</b>: Fed, ECB, BOJ, dan RBI menaikkan suku bunga di tengah ekonomi yang melemah.</li>
+    <li><b>Yield obligasi negara maju tertinggi dua dekade</b>: tanda pasar mulai mempertanyakan utang negara.</li>
+    <li><b>Pembelian emas bank sentral</b>: tetap jauh di atas rata-rata 2010–2021, termasuk rekor kuartal kedua (289 ton).</li>
+    <li><b>MSCI vs Indonesia</b>: krisis kepercayaan pada tata kelola pasar modal domestik.</li>
+    <li><b>Defisit transaksi berjalan Indonesia rekor</b>: 3,3% PDB pada Q2 2026.</li>
+    <li><b>Yen terlemah 40 tahun</b>: menunjukkan rapuhnya importir energi.</li>
+    <li><b>Kerusuhan Prancis</b>: batas politik dari pemangkasan anggaran.</li>
+    <li><b>Perang dagang AS–China yang dikelola</b>: chip vs rare earth; gencatan diperpanjang dalam potongan pendek.</li>
+    <li><b>Penangkapan Maduro & "Doktrin Monroe baru"</b>: kekuatan besar kembali ke politik lingkup pengaruh.</li>
+  </ol>
+</section>
+
+<!-- ============================================================ BAB 2 -->
+<section class="chapter" id="bab2">
+  <div class="chapter-head"><div class="num">Bab 02</div><h1>Data makro 2014–2026: fondasi analisis</h1>
+  <p class="lede">Pertumbuhan, inflasi, dan suku bunga lima kekuatan ekonomi yang paling relevan bagi investor Indonesia.</p><span class="asof">Data historis s.d. 2024 · data terkini per Okt 2026</span></div>
+
+  <h2>Pertumbuhan PDB: lima kekuatan ekonomi dunia</h2>
+  <figure><img src="../charts/c01_pdb.svg" alt="Grafik pertumbuhan PDB 2014–2024"><figcaption><b>Grafik 2.1.</b> Pertumbuhan PDB riil tahunan AS, China, Zona Euro, Indonesia, dan India.</figcaption></figure>
+
+  <p class="tcap">Tabel 2.1 · Pertumbuhan PDB riil (%)</p>
+  <table>
+    <thead><tr><th>Tahun</th><th class="num">AS</th><th class="num">China</th><th class="num">Zona Euro</th><th class="num">Indonesia</th><th class="num">India*</th></tr></thead>
+    <tbody>
+      <tr><td>2014</td><td class="num">2,5</td><td class="num">7,4</td><td class="num">1,4</td><td class="num">5,0</td><td class="num">7,4</td></tr>
+      <tr><td>2015</td><td class="num">3,1</td><td class="num">7,0</td><td class="num">2,1</td><td class="num">4,9</td><td class="num">7,9</td></tr>
+      <tr><td>2016</td><td class="num">1,7</td><td class="num">6,7</td><td class="num">1,9</td><td class="num">5,0</td><td class="num">8,3</td></tr>
+      <tr><td>2017</td><td class="num">2,3</td><td class="num">6,9</td><td class="num">2,7</td><td class="num">5,1</td><td class="num">6,8</td></tr>
+      <tr><td>2018</td><td class="num">2,9</td><td class="num">6,7</td><td class="num">1,8</td><td class="num">5,2</td><td class="num">6,5</td></tr>
+      <tr><td>2019</td><td class="num">2,3</td><td class="num">6,1</td><td class="num">1,6</td><td class="num">5,0</td><td class="num fix">4,0 <span class="strike">6,0</span></td></tr>
+      <tr><td>2020</td><td class="num">−2,8</td><td class="num">2,2</td><td class="num">−5,9</td><td class="num">−2,1</td><td class="num">−5,8</td></tr>
+      <tr><td>2021</td><td class="num">5,9</td><td class="num">8,4</td><td class="num">5,4</td><td class="num">3,7</td><td class="num">9,1</td></tr>
+      <tr><td>2022</td><td class="num">2,1</td><td class="num">3,0</td><td class="num">3,5</td><td class="num">5,3</td><td class="num">7,2</td></tr>
+      <tr><td>2023</td><td class="num">2,5</td><td class="num">5,2</td><td class="num">0,4</td><td class="num">5,1</td><td class="num">8,2</td></tr>
+      <tr><td>2024</td><td class="num">2,8</td><td class="num">5,0</td><td class="num">0,9</td><td class="num">5,0</td><td class="num">7,0</td></tr>
+    </tbody>
+  </table>
+  <p class="tsrc">Sumber: IMF World Economic Outlook (seperti dikutip buku Vol. 1). *India memakai tahun fiskal April–Maret; angka 2019 dikoreksi ke ±4,0% (FY2019-20, revisi resmi MoSPI Jan 2021). Angka vintage IMF bisa berbeda tipis dari revisi terbaru.</p>
+
+  <p>Tiga pengamatan struktural dari data ini:</p>
+  <ul>
+    <li><b>COVID-19 (2020) adalah shock simetris terbesar sejak Depresi Besar.</b> Semua kekuatan besar menyusut kecuali China (+2,2%). Indonesia mencatat −2,1%, kontraksi pertama sejak 1998.</li>
+    <li><b>China melambat secara struktural</b> dari 7,4% (2014) ke 5,0% (2024), dan 4,5% pada Q3 2026, karena penuaan penduduk, beban utang properti, dan gesekan dengan Barat.</li>
+    <li><b>India menjadi mesin pertumbuhan Asia</b>, konsisten di kisaran 6–8% (kecuali 2019–2020), dan tumbuh 7,8% pada April–Juni 2026.</li>
+  </ul>
+
+  <div class="lens">
+    <div><h4>Apa yang dilihat</h4><ul><li>Shock serentak 2020</li><li>Perlambatan China</li><li>Indonesia stabil ±5%, India berakselerasi</li></ul></div>
+    <div><h4>Pola yang diingat</h4><ul><li>Shock bisa simetris, pemulihan hampir selalu asimetris</li><li>Struktur ekonomi berbeda menghasilkan peluang berbeda</li></ul></div>
+    <div><h4>Artinya bagi investor</h4><ul><li>Jangan melihat "dunia" sebagai satu blok</li><li>Arah China tetap penting bagi permintaan komoditas Indonesia</li></ul></div>
+  </div>
+
+  <h2>Kondisi 2026: pertumbuhan terbelah, inflasi kembali</h2>
+  <figure><img src="../charts/c02_pdb_2026.svg" alt="Pertumbuhan terkini 2026"><figcaption><b>Grafik 2.2.</b> Ukuran pertumbuhan terkini 2026. Periode dan definisi berbeda per negara; dibaca sebagai gambaran arah, bukan perbandingan presisi.</figcaption></figure>
+
+  <p class="tcap">Tabel 2.2 · Inflasi dan suku bunga kebijakan, data terbaru 2026</p>
+  <table>
+    <thead><tr><th>Ekonomi</th><th class="num">Inflasi (yoy)</th><th class="num">Suku bunga kebijakan</th><th>Arah 2026</th></tr></thead>
+    <tbody>
+      <tr><td>Amerika Serikat</td><td class="num">3,7% (Sep; inti 2,6%)</td><td class="num">3,75–4,00%</td><td>Naik 25 bp (16 Sep), pertama sejak 2023</td></tr>
+      <tr><td>Zona Euro</td><td class="num">3,8% (Sep)</td><td class="num">deposit 2,50%</td><td>Naik dua kali sejak perang Iran</td></tr>
+      <tr><td>Jepang</td><td class="num">±3%</td><td class="num">1,25%</td><td>Tertinggi dalam 31 tahun (18 Sep)</td></tr>
+      <tr><td>Inggris</td><td class="num">tinggi, didorong energi</td><td class="num">3,75%</td><td>Ditahan</td></tr>
+      <tr><td>India</td><td class="num">5,54% (Sep)</td><td class="num">5,50%</td><td>Naik (7 Okt)</td></tr>
+      <tr><td>Indonesia</td><td class="num">3,28% (Sep; inti 2,84%)</td><td class="num">5,75%</td><td>Ditahan; Deposit Facility dinaikkan ke 5,00%</td></tr>
+      <tr><td>Rusia</td><td class="num">±6%</td><td class="num">14%</td><td>Turun dari puncak 21%</td></tr>
+      <tr><td>Swiss</td><td class="num">±0–1%</td><td class="num">0%</td><td>Ditahan; intervensi valas</td></tr>
+    </tbody>
+  </table>
+  <p class="tsrc">Sumber: BLS, Eurostat/ECB, BOJ, BoE, RBI, BPS, Bank Indonesia, Bank of Russia, SNB, via CNBC, Kontan, Trading Economics (Sep–Okt 2026).</p>
+
+  <div class="box rule"><span class="label">Quick Rule</span>Saat pertumbuhan global tidak sinkron, return pasar juga tidak akan sinkron. Pada 2026 tambahkan satu hal: <b>saat inflasi naik di tengah pertumbuhan yang melemah, bank sentral bisa tetap menaikkan suku bunga.</b></div>
+</section>
+
+<!-- ============================================================ BAB 3 -->
+<section class="chapter" id="bab3">
+  <div class="chapter-head"><div class="num">Bab 03</div><h1>Pasar modal & aset global</h1>
+  <p class="lede">Aset global tidak selalu bergerak bersama, terutama ketika sumber shock datang dari geopolitik atau komoditas.</p><span class="asof">Data historis s.d. 2024 · IHSG & rupiah s.d. 22 Okt 2026</span></div>
+
+  <figure><img src="../charts/c03_return_heatmap.svg" alt="Heatmap return tahunan"><figcaption><b>Grafik 3.1.</b> Return tahunan lima aset, 2014–2024. Kotak merah: return IHSG 2024 yang dikoreksi.</figcaption></figure>
+
+  <div class="box fixbox"><span class="label">Koreksi</span>Buku asli menulis IHSG 2024 <b>+2,7%</b>. Yang benar: <b>−2,65%</b> (7.272,8 → 7.079,9), kinerja terburuk di ASEAN tahun itu (Bisnis, OJK). Tabel buku asli juga memuat kolom "Emas (USD/oz)" dan "Brent" yang berisi angka pertumbuhan PDB Indonesia dan India. Kolom emas di atas sudah diganti dengan return emas yang sebenarnya.</div>
+
+  <p class="tcap">Tabel 3.1 · Harga Bitcoin akhir tahun (dikoreksi)</p>
+  <table>
+    <thead><tr><th>Tahun</th><th class="num">Buku Vol. 1</th><th class="num">Data (CoinMarketCap)</th><th>Catatan</th></tr></thead>
+    <tbody>
+      <tr><td>2017</td><td class="num">$13.880</td><td class="num">$14.156</td><td>Puncak $19.700 terjadi Desember 2017</td></tr>
+      <tr><td>2018</td><td class="num fix">$7.193</td><td class="num">±$3.743</td><td><span class="fix">Salah tahun</span>: $7.193 adalah harga akhir 2019</td></tr>
+      <tr><td>2022</td><td class="num fix">$19.425</td><td class="num">$16.547</td><td>+17% terlalu tinggi</td></tr>
+      <tr><td>2023</td><td class="num">$41.626</td><td class="num">$42.265</td><td>Selisih kecil</td></tr>
+      <tr><td>2024</td><td class="num">$97.000</td><td class="num">$93.429</td><td>Puncak tahun itu ±$108.000</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box insight"><span class="label">Insight kunci · anomali 2022</span>2022 adalah satu-satunya tahun dalam periode ini di mana IHSG naik (+4,1%) sementara S&amp;P 500 anjlok (−18,1%) dan MSCI EM jatuh (−20,1%). Penyebabnya: perang Rusia–Ukraina melambungkan harga <b>batu bara dan CPO</b>, dua ekspor utama Indonesia. Tetapi pelajaran ini <b>tidak berlaku umum</b>. Pada 2026 shock-nya adalah <b>minyak</b>, yang diimpor Indonesia, sehingga hasilnya terbalik (Bab 10).</div>
+
+  <h2>IHSG dan rupiah: hubungan terbalik yang kritis</h2>
+  <figure><img src="../charts/c04_ihsg_idr.svg" alt="IHSG dan rupiah"><figcaption><b>Grafik 3.2.</b> IHSG (batang) dan USD/IDR (garis), akhir tahun 2014–2025 dan 22 Okt 2026.</figcaption></figure>
+  <p>Untuk membaca pasar Indonesia, kurs bukan variabel sampingan melainkan variabel inti. Saat rupiah melemah, tekanan arus keluar asing biasanya meningkat dan IHSG kehilangan tenaga. Tahun 2025 menutup dengan rekor (IHSG 8.646,94, +22,13%). Tahun 2026 menghapus seluruh kenaikan itu: per 22 Oktober IHSG di <b>5.387,9</b>, ≈ −37,7% sejak awal tahun, dengan asing menjual bersih <b>±Rp88 triliun</b>.</p>
+
+  <div class="lens">
+    <div><h4>Apa yang dilihat</h4><ul><li>Tekanan kurs pada 2015, 2018, 2020, 2024, 2026</li><li>Saham sering tertekan bersamaan dengan rupiah</li></ul></div>
+    <div><h4>Pola yang diingat</h4><ul><li>Pasar saham dan valas Indonesia saling terhubung erat</li><li>Selisih suku bunga dan arus asing adalah penggerak utama</li><li><b>Baru:</b> tata kelola pasar bisa menjadi penggerak tersendiri</li></ul></div>
+    <div><h4>Artinya bagi investor</h4><ul><li>Saat USD/IDR naik tajam, prioritaskan disiplin risiko dan likuiditas</li><li>Saat rupiah stabil, peluang pasar domestik membaik</li></ul></div>
+  </div>
+  <div class="box rule"><span class="label">Quick Rule</span>Di pasar Indonesia, baca kurs dulu baru baca indeks. Lalu tanyakan: <b>komoditas mana yang naik, ekspor atau impor kita?</b></div>
+</section>
+
+<!-- ============================================================ BAB 4 -->
+<section class="chapter" id="bab4">
+  <div class="chapter-head"><div class="num">Bab 04</div><h1>Volatilitas & risiko geopolitik</h1>
+  <p class="lede">Bukan semua konflik membuat pasar crash, tetapi semua konflik menaikkan harga ketidakpastian.</p><span class="asof">Data per Okt 2026</span></div>
+
+  <p><b>VIX</b> (CBOE Volatility Index) mengukur ekspektasi pasar terhadap volatilitas saham AS 30 hari ke depan, sering disebut "indeks ketakutan". <b>GPR</b> (Geopolitical Risk Index, Caldara &amp; Iacoviello) mengukur frekuensi artikel surat kabar yang membahas ketegangan geopolitik, dinormalisasi rata-rata 100 untuk periode 1985–2019.</p>
+
+  <figure><img src="../charts/c05_vix.svg" alt="Puncak VIX per episode"><figcaption><b>Grafik 4.1.</b> Penutupan tertinggi VIX per episode krisis, dibulatkan.</figcaption></figure>
+
+  <div class="box fixbox"><span class="label">Koreksi</span>Buku asli menulis puncak VIX saat COVID-19 <b>66</b>. Yang benar: <b>82,69</b>, penutupan rekor pada 16 Maret 2020 (CNBC). Angka "GPR 1300" untuk COVID juga tidak masuk akal: GPR mengukur berita geopolitik, dan pandemi bukan peristiwa geopolitik dalam indeks ini.</div>
+
+  <p class="tcap">Tabel 4.1 · Episode krisis dan reaksi pasar Indonesia (data terverifikasi)</p>
+  <table>
+    <thead><tr><th>Episode</th><th class="num">VIX puncak</th><th>Reaksi IHSG</th><th>Reaksi rupiah</th></tr></thead>
+    <tbody>
+      <tr><td>Brexit + Pemilu AS (2016)</td><td class="num">±25,8</td><td>+15,3% setahun</td><td>Relatif stabil</td></tr>
+      <tr><td>Perang dagang AS–China (2018)</td><td class="num">±36</td><td>−2,5% setahun</td><td>Melemah ke ±15.200 (Okt 2018)</td></tr>
+      <tr><td>COVID-19 (Feb–Mar 2020)</td><td class="num">82,69</td><td>≈ −37% (puncak ke dasar)</td><td>±16.575 (23 Mar 2020)</td></tr>
+      <tr><td>Invasi Rusia ke Ukraina (2022)</td><td class="num">±36</td><td><span class="ok">+4,1% setahun</span></td><td><span class="fix">≈ −9% setahun</span> (buku: −3%)</td></tr>
+      <tr><td>Tarif "Liberation Day" (Apr 2025)</td><td class="num">52,33</td><td colspan="2">Shock global singkat; IHSG tetap ditutup 2025 di rekor</td></tr>
+      <tr><td><b>Perang Iran (2026)</b></td><td class="num"><b>±16–21 (Okt)</b></td><td><b>≈ −37,7% YTD</b> (juga karena MSCI)</td><td><b>Rekor ±18.071</b></td></tr>
+    </tbody>
+  </table>
+  <p class="tsrc">Sumber: CBOE via CNBC & Macroption; BEI/OJK; Bloomberg via media; Jakarta Post (rupiah 2022). Klaim buku "IHSG −8% saat Krimea 2014" tidak diverifikasi; IHSG justru melonjak pada Maret 2014.</p>
+
+  <div class="box insight"><span class="label">Insight 2026 · GPR rekor, VIX tenang</span>Pada 2 Maret 2026, GPR harian mencapai <b>564,93</b>, tertinggi sejak invasi Irak 2003. Tetapi pada pertengahan Oktober VIX hanya <b>±16–21</b>. Pasar saham AS digerakkan siklus AI, bukan perang. Risiko geopolitik 2026 menyebar lewat <b>minyak, kurs, dan obligasi</b>. Jadi: <b>jangan memakai VIX sendirian</b>, dan perlakukan GPR sebagai indikator <b>bersamaan</b> (naik saat konflik terjadi), bukan prediktor 3–6 bulan seperti klaim buku asli.</div>
+
+  <div class="lens">
+    <div><h4>Apa yang dilihat</h4><ul><li>Lonjakan 2018, 2020, 2022, 2025</li><li>Puncak volatilitas ekstrem saat COVID</li></ul></div>
+    <div><h4>Pola yang diingat</h4><ul><li>Pasar bereaksi lebih cepat pada ketidakpastian daripada kerusakan nyata</li><li>Likuiditas dan respons kebijakan menentukan kecepatan pulih</li></ul></div>
+    <div><h4>Artinya bagi investor</h4><ul><li>Saat volatilitas melonjak, kurangi leverage</li><li>Bedakan headline jangka pendek dari perubahan rezim</li></ul></div>
+  </div>
+  <div class="box rule"><span class="label">Quick Rule</span>Semua konflik menaikkan harga ketidakpastian, tetapi <b>tidak selalu di tempat yang sama</b>. Periksa minyak, kurs, dan obligasi, bukan hanya VIX.</div>
+</section>
+
+<!-- ============================================================ BAB 5 -->
+<section class="chapter" id="bab5">
+  <div class="chapter-head"><div class="num">Bab 05</div><h1>Teknologi sebagai kekuatan geopolitik</h1>
+  <p class="lede">Siapa menguasai chip, menguasai komputasi. Siapa menguasai komputasi, menguasai AI. Dan chip tidak netral secara geopolitik.</p><span class="asof">Data per Okt 2026</span></div>
+
+  <h2>Perang AI: Amerika Serikat vs China</h2>
+  <figure><img src="../charts/c06_ai.svg" alt="Investasi AI AS vs China"><figcaption><b>Grafik 5.1.</b> Investasi swasta di AI: klaim buku asli vs Stanford HAI AI Index.</figcaption></figure>
+  <div class="box fixbox"><span class="label">Koreksi</span>Buku asli menulis investasi AI China 2024 <b>US$80 miliar</b> (2023: $68 miliar). Stanford HAI, sumber yang dikutip buku itu sendiri, mencatat investasi swasta AI China 2024 <b>US$9,3 miliar</b> dan AS <b>US$109,1 miliar</b>, ±12 kali lipat. Kesalahan ini mengubah kesan persaingan AI secara drastis. Catatan: China juga berinvestasi besar lewat dana pemerintah dan BUMN yang tidak tercakup di angka swasta ini.</div>
+
+  <figure class="narrow"><img src="../charts/c07_chip.svg" alt="Penjualan chip global"><figcaption><b>Grafik 5.2.</b> Penjualan semikonduktor global, 2014–2024.</figcaption></figure>
+
+  <p class="tcap">Tabel 5.1 · Kronologi perang chip & AI (dikoreksi dan diperbarui)</p>
+  <table>
+    <thead><tr><th style="width:14%">Waktu</th><th>Peristiwa</th></tr></thead>
+    <tbody>
+      <tr><td>2015</td><td>China mengumumkan "Made in China 2025"</td></tr>
+      <tr><td>2016</td><td>AlphaGo mengalahkan Lee Sedol</td></tr>
+      <tr><td>2017</td><td>China menargetkan menjadi pemimpin AI dunia pada 2030</td></tr>
+      <tr><td>2018</td><td>AS mulai membatasi ekspor teknologi ke China (kasus ZTE); perang dagang dimulai</td></tr>
+      <tr><td>2019</td><td>Huawei masuk Entity List AS</td></tr>
+      <tr><td>2020</td><td>AS melarang TSMC melayani Huawei</td></tr>
+      <tr><td>2022</td><td>CHIPS Act disahkan (US$52 miliar); kontrol ekspor chip AI canggih (Okt)</td></tr>
+      <tr><td>2023</td><td>Ledakan ChatGPT/GPT-4</td></tr>
+      <tr><td>Jan 2024</td><td>ETF Bitcoin spot AS disetujui</td></tr>
+      <tr><td><span class="fix">Jan 2025</span></td><td>Model DeepSeek R1 mengguncang pasar (buku asli menempatkannya di 2023)</td></tr>
+      <tr><td>Apr–Okt 2025</td><td>China memberlakukan kontrol ekspor rare earth; gencatan Busan menangguhkannya</td></tr>
+      <tr><td>Sep 2026</td><td>Gencatan dagang diperpanjang hanya sampai 10 Januari 2027; rare earth dan chip belum selesai</td></tr>
+      <tr><td>22 Okt 2026</td><td>Aksi jual saham AI: Nasdaq −2,6%, indeks semikonduktor −6,7%</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Apa artinya untuk Indonesia?</h3>
+  <ul>
+    <li><b>Nikel</b> adalah bahan baku baterai; permintaan jangka panjang kuat. Indonesia menguasai >50% produksi dunia dan pada 2026 memangkas kuota bijih ±30% untuk menjaga harga.</li>
+    <li><b>Decoupling AS–China</b> membuka peluang relokasi manufaktur ("China+1"), meski Indonesia kalah bersaing dengan Vietnam dan Malaysia untuk elektronik.</li>
+    <li><b>Belum ada industri chip domestik</b>: Indonesia 100% bergantung pada impor.</li>
+    <li><b>Digital Rupiah (Proyek Garuda)</b> masih mandek di tahap proof-of-concept (CSIS). Harapan buku asli bahwa ia menjadi "bridge currency ASEAN" belum realistis.</li>
+  </ul>
+  <div class="box rule"><span class="label">Quick Rule</span>AI tidak berjalan tanpa chip, chip tidak berjalan tanpa mineral, dan keduanya kini menjadi <b>alat tawar geopolitik</b>.</div>
+</section>
+
+<!-- ============================================================ BAB 6 -->
+<section class="chapter" id="bab6">
+  <div class="chapter-head"><div class="num">Bab 06</div><h1>Uang & kekuasaan</h1>
+  <p class="lede">Siapa yang mengendalikan "rel" keuangan dunia? Dolar, emas, Bitcoin, stablecoin, dan CBDC.</p><span class="asof">Data per Okt 2026</span></div>
+
+  <h2>Dolar: raja yang menua</h2>
+  <figure><img src="../charts/c08_cadangan.svg" alt="Cadangan devisa dunia"><figcaption><b>Grafik 6.1.</b> Komposisi cadangan devisa dunia dan porsi dolar AS.</figcaption></figure>
+  <p>Dolar masih menguasai <b>56,7%</b> cadangan devisa dunia, ±59% pembayaran SWIFT, dan ±82% pembiayaan perdagangan. Porsinya turun perlahan dari ±71% sekitar tahun 2000. Penantangnya bukan yuan (2,1%) maupun euro (20,6%), melainkan <b>emas</b>.</p>
+
+  <h2>Emas: aset netral yang diborong bank sentral</h2>
+  <figure><img src="../charts/c09_emas_bank_sentral.svg" alt="Pembelian emas bank sentral"><figcaption><b>Grafik 6.2.</b> Pembelian bersih emas oleh bank sentral (ton).</figcaption></figure>
+  <p>Titik baliknya adalah Februari 2022, ketika Barat membekukan ±US$300 miliar cadangan devisa Rusia. Pesan bagi bank sentral lain jelas: <b>obligasi asing bisa dibekukan, emas di brankas sendiri tidak</b>. Pembelian melonjak ke >1.000 ton per tahun (2022–2024), lalu 863 ton pada 2025 karena harga sangat tinggi, tetap hampir dua kali rata-rata 2010–2021.</p>
+  <div class="box insight"><span class="label">Insight 2026</span>Emas mencetak rekor ±US$5.595 (29 Jan 2026), jatuh ±10% dalam sehari saat Kevin Warsh yang dianggap <i>hawkish</i> dinominasikan sebagai Ketua Fed, lalu turun ke ±US$3.995 (Juni). Emas sensitif terhadap suku bunga riil dan kredibilitas bank sentral dalam jangka pendek, tetapi pembelian bank sentral menciptakan "lantai" yang jauh lebih tinggi dari siklus sebelumnya. <b>Dalam rupiah</b>, emas naik lebih tinggi lagi: perhiasan emas adalah penyumbang inflasi terbesar Indonesia pada September 2026.</div>
+
+  <h2>Bitcoin: memperbesar siklus</h2>
+  <figure><img src="../charts/c10_bitcoin.svg" alt="Harga Bitcoin"><figcaption><b>Grafik 6.3.</b> Bitcoin, skala logaritmik: harga akhir tahun dan titik penting 2025–2026.</figcaption></figure>
+  <p>Bitcoin mencapai puncak ±US$126.210 (6 Okt 2025), lalu jatuh di bawah US$59.000 (Juni 2026) di tengah rekor arus keluar ETF. Saat dunia menghadapi shock geopolitik terbesar dekade ini, <b>emas yang dibeli bank sentral, Bitcoin yang dijual</b>. Bitcoin berperilaku seperti aset risiko berbasis likuiditas yang berkorelasi dengan Nasdaq, bukan safe haven.</p>
+
+  <h2>Stablecoin: dolarisasi digital</h2>
+  <figure><img src="../charts/c11_stablecoin.svg" alt="Stablecoin"><figcaption><b>Grafik 6.4.</b> Kapitalisasi stablecoin per penerbit.</figcaption></figure>
+  <p>Buku asli memandang blockchain sebagai penantang dolar. Data 2026 menunjukkan hal sebaliknya: stablecoin, yang ±99% berbasis dolar AS dan cadangannya disimpan dalam T-bills, <b>memperluas jangkauan dolar</b>. Aturan final GENIUS Act (OCC, 21 Okt 2026) berlaku 18 Januari 2027 dan mengawasi penerbit stablecoin seperti bank. Hasilnya adalah <b>dedolarisasi di tingkat negara, tetapi dolarisasi di tingkat rakyat</b>.</p>
+
+  <p class="tcap">Tabel 6.1 · Peta CBDC dan sistem pembayaran alternatif</p>
+  <table>
+    <thead><tr><th>Blok</th><th>Pendekatan</th><th>Status 2026</th></tr></thead>
+    <tbody>
+      <tr><td>AS</td><td>Menolak CBDC ritel; mendorong stablecoin swasta</td><td>Stablecoin ±US$300 miliar</td></tr>
+      <tr><td>China</td><td>e-CNY ritel + CIPS + mBridge</td><td>26 lembaga ikut layanan lintas batas e-CNY (Jun 2026); volume mBridge masih kecil</td></tr>
+      <tr><td>Zona Euro</td><td>Digital euro</td><td>Pilot pertengahan 2027, penerbitan ±2029</td></tr>
+      <tr><td>India</td><td>e-Rupee</td><td>Mencari kegunaan: penyaluran bansos</td></tr>
+      <tr><td>Indonesia</td><td>Digital Rupiah (Proyek Garuda)</td><td>Mandek di tahap proof-of-concept</td></tr>
+    </tbody>
+  </table>
+  <div class="box rule"><span class="label">Quick Rule</span>Emas melindungi, minyak memberi sinyal, Bitcoin memperbesar siklus <span class="small">(rumusan buku Vol. 1, terbukti pada 2026)</span>. Tambahan: <b>stablecoin memperluas dolar, bukan menggantikannya.</b></div>
+</section>
+
+<!-- ============================================================ BAB 7 -->
+<section class="chapter" id="bab7">
+  <div class="chapter-head"><div class="num">Bab 07</div><h1>Energi, komoditas & jalur laut</h1>
+  <p class="lede">Matriks skenario buku asli tidak memuat shock minyak dari Teluk. Itulah yang terjadi pada 2026.</p><span class="asof">Data per 26 Okt 2026</span></div>
+
+  <figure><img src="../charts/c12_brent.svg" alt="Brent 2026"><figcaption><b>Grafik 7.1.</b> Harga Brent 2026, titik-titik yang dilaporkan (bukan seri harian).</figcaption></figure>
+  <p>Sebelum perang, pasar minyak diperkirakan surplus dan Brent ±$70. Perang yang dimulai 28 Februari 2026 menutup sebagian besar Selat Hormuz, menghantam fasilitas LNG Qatar, dan memicu kenaikan harga bulanan terbesar dalam sejarah. G7 melepas 100 juta barel cadangan, Jepang 80 juta barel, dan cadangan strategis AS turun ke level terendah sejak 1982.</p>
+
+  <p class="tcap">Tabel 7.1 · Titik-titik sempit (chokepoint) energi dan perdagangan</p>
+  <table>
+    <thead><tr><th>Chokepoint</th><th>Peran normal</th><th>Kondisi Okt 2026</th></tr></thead>
+    <tbody>
+      <tr><td>Selat Hormuz</td><td>±20% minyak laut & ±20% LNG dunia; 84% ke Asia</td><td>Aliran ±14 juta b/h (±82% normal); 103 insiden kapal s.d. 13 Okt</td></tr>
+      <tr><td>Bab el-Mandeb / Laut Merah</td><td>Jalur Asia–Eropa via Suez; bypass ekspor Saudi (Yanbu)</td><td>Transit −47% (Sep); Suez −39%; Houthi menguasai Pulau Mayyun</td></tr>
+      <tr><td>Selat Malaka</td><td>Jalur utama impor energi Asia Timur</td><td>Terbuka; tekanan di Laut China Selatan</td></tr>
+    </tbody>
+  </table>
+  <p class="tsrc">Sumber: Wikipedia (2026 Strait of Hormuz crisis; Kpler), Lloyd's List via House of Saud, Al Jazeera.</p>
+
+  <figure><img src="../charts/c13_emas_2026.svg" alt="Emas 2026"><figcaption><b>Grafik 7.2.</b> Perjalanan harga emas 2026.</figcaption></figure>
+
+  <p class="tcap">Tabel 7.2 · Komoditas lain, 2026</p>
+  <table>
+    <thead><tr><th>Komoditas</th><th>Kondisi</th><th>Pendorong</th></tr></thead>
+    <tbody>
+      <tr><td>Tembaga</td><td>Rekor LME ±US$14.875/ton (Sep)</td><td>Pusat data AI, jaringan listrik, mogok tambang Chile</td></tr>
+      <tr><td>Nikel</td><td>±US$16.500–19.000/ton</td><td>Indonesia memangkas kuota RKAB ±30%</td></tr>
+      <tr><td>Perak</td><td>±US$75–85/oz setelah crash 30 Jan</td><td>Defisit pasokan tahun keenam; lisensi ekspor China</td></tr>
+      <tr><td>Pangan (FAO)</td><td>Indeks 136,0 (Sep), tertinggi sejak 2022</td><td>Energi, pupuk, angkutan</td></tr>
+      <tr><td>Urea</td><td>+80% (Feb–Apr) ke >US$850/ton</td><td>Teluk memasok ±1/3 urea dunia</td></tr>
+    </tbody>
+  </table>
+  <div class="box rule"><span class="label">Quick Rule</span>Saat minyak naik, cek tiga hal untuk Indonesia: <b>subsidi BBM, neraca transaksi berjalan, dan rupiah</b>. Batu bara yang ikut naik hanya meredam sebagian.</div>
+</section>
+
+<!-- ============================================================ BAB 8 -->
+<section class="chapter" id="bab8">
+  <div class="chapter-head"><div class="num">Bab 08</div><h1>Peta konflik 2014–2026</h1>
+  <p class="lede">Konflik kini multipolar: kekuatan besar, aktor non-negara, ruang siber, dan perang ekonomi.</p><span class="asof">Data per 26 Okt 2026</span></div>
+
+  <p class="tcap">Tabel 8.1 · Peristiwa utama dan dampak pasar (dikoreksi dan diperbarui)</p>
+  <table>
+    <thead><tr><th style="width:8%">Tahun</th><th>Peristiwa utama</th><th>Pasar global</th><th>IHSG / rupiah</th></tr></thead>
+    <tbody>
+      <tr><td>2014</td><td>Aneksasi Krimea; ISIS</td><td>S&amp;P +13,7%</td><td>IHSG +22,3%; rupiah ≈ −2%</td></tr>
+      <tr><td>2015</td><td>Krisis utang Yunani; devaluasi yuan</td><td>S&amp;P +1,4%; EM −14,9%</td><td>IHSG −12,1%; rupiah ke ±13.795</td></tr>
+      <tr><td>2016</td><td>Brexit; Trump terpilih</td><td>S&amp;P +12,0%</td><td>IHSG +15,3%; stabil</td></tr>
+      <tr><td>2017</td><td>Uji nuklir Korea Utara; krisis Rohingya</td><td>S&amp;P +21,8%; EM +37,3%</td><td>IHSG +20,0%</td></tr>
+      <tr><td>2018</td><td>Perang dagang AS–China dimulai</td><td>S&amp;P −4,4%; EM −14,6%</td><td>IHSG −2,5%; rupiah ke ±14.480</td></tr>
+      <tr><td>2019</td><td>Protes Hong Kong; eskalasi Iran–AS</td><td>S&amp;P +31,5%</td><td>IHSG +1,7%</td></tr>
+      <tr><td>2020</td><td>COVID-19</td><td>S&amp;P −34% lalu +18,4%</td><td>IHSG ≈ −37% lalu pulih; rupiah ±16.575</td></tr>
+      <tr><td>2021</td><td>Kudeta Myanmar; Taliban kembali</td><td>S&amp;P +28,7%</td><td>IHSG +10,1%</td></tr>
+      <tr><td>2022</td><td>Invasi Rusia ke Ukraina</td><td>S&amp;P −18,1%; minyak >$100</td><td>IHSG +4,1%; <span class="fix">rupiah ≈ −9%</span></td></tr>
+      <tr><td>2023</td><td>Perang Gaza; kudeta Niger</td><td>S&amp;P +26,3%</td><td>IHSG +6,2%; <span class="fix">rupiah menguat ±1%</span></td></tr>
+      <tr><td>2024</td><td>Eskalasi Timur Tengah; tarif Trump</td><td>S&amp;P +25%; emas rekor</td><td><span class="fix">IHSG −2,65%</span>; rupiah ±16.100</td></tr>
+      <tr><td>2025</td><td>Tarif "Liberation Day"; perang 12 hari; bentrok India–Pakistan</td><td>VIX 52; emas & BTC rekor</td><td>IHSG +22,1% (rekor); rupiah ±16.680</td></tr>
+      <tr><td><b>2026</b></td><td><b>Perang Iran & Hormuz; Houthi vs Saudi; Venezuela</b></td><td><b>Brent >$110; yield rekor 20 tahun</b></td><td><b>IHSG ≈ −37,7% YTD; rupiah ±18.071</b></td></tr>
+    </tbody>
+  </table>
+  <p class="tsrc">Sumber: buku Vol. 1 (2014–2023, setelah koreksi); BEI/OJK; Bloomberg via media; liputan 2025–2026 di folder riset. Merah = koreksi atas buku asli.</p>
+
+  <p class="tcap">Tabel 8.2 · Status konflik aktif, Oktober 2026</p>
+  <table>
+    <thead><tr><th>Konflik</th><th>Status</th><th>Saluran ke pasar</th></tr></thead>
+    <tbody>
+      <tr><td>Iran–AS/Israel & Hormuz</td><td>Berlanjut sejak 28 Feb; Islamabad Memorandum runtuh 8 Jul; mediator Qatar ke Teheran 26 Okt</td><td>Minyak, LNG, pupuk, inflasi global</td></tr>
+      <tr><td>Rusia–Ukraina</td><td>Garis depan nyaris beku; perundingan tiga pihak direncanakan November</td><td>Gas Eropa, pangan, emas</td></tr>
+      <tr><td>Houthi & Laut Merah</td><td>Embargo terhadap Saudi; serangan ke fasilitas Aramco</td><td>Pengapalan, minyak Saudi</td></tr>
+      <tr><td>Taiwan & Laut China Selatan</td><td>Tekanan abu-abu; latihan tembak langsung 12–17 Okt</td><td>Chip, rantai pasok</td></tr>
+      <tr><td>India–Pakistan</td><td>Gencatan Mei 2025 bertahan; sengketa Perjanjian Air Indus</td><td>Risiko regional</td></tr>
+      <tr><td>Venezuela</td><td>Pasca-Maduro, di bawah pengaruh AS</td><td>Pasokan minyak belahan barat</td></tr>
+      <tr><td>Sudan & Sahel</td><td>Perang saudara; ofensif JNIM di Mali</td><td>Emas, uranium</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Teknologi, polarisasi & konflik sosial</h2>
+  <p>Buku asli benar bahwa platform digital mempercepat polarisasi dan mobilisasi massa: Brexit dan Cambridge Analytica, protes Hong Kong lewat aplikasi terenkripsi, gerakan Gen Z di Bangladesh 2024 yang menjatuhkan PM Hasina, dan kerusuhan BBM Prancis 2026. Rantainya: <b>teknologi → polarisasi → konflik sosial → ketidakpastian pasar</b>.</p>
+  <div class="box fixbox"><span class="label">Koreksi</span>Kerusakan akibat kerusuhan BLM 2020 di AS adalah <b>US$1–2 miliar</b> kerugian tertanggung (Triple-I/PCS), bukan "US$1–2 triliun" seperti tertulis di buku asli (selisih 1.000 kali). Statistik "87% pemilih Trump dan 95% pemilih Biden tidak pernah bertemu informasi dari sisi seberang (Pew 2020)" tidak ditemukan di publikasi Pew dan dihapus dari edisi ini.</div>
+</section>
+
+<!-- ============================================================ BAB 9 -->
+<section class="chapter" id="bab9">
+  <div class="chapter-head"><div class="num">Bab 09</div><h1>Negara-negara kunci</h1>
+  <p class="lede">Pendapatan harus naik atau pengeluaran harus turun. Siapa yang masih punya ruang, dan sampai kapan?</p><span class="asof">Data per Okt 2026</span></div>
+
+  <figure><img src="../charts/c14_defisit.svg" alt="Defisit fiskal 2026"><figcaption><b>Grafik 9.1.</b> Saldo fiskal 2026 (% PDB). Definisi berbeda antarnegara; China ditampilkan dengan defisit luas (termasuk obligasi khusus).</figcaption></figure>
+  <figure><img src="../charts/c15_yield.svg" alt="Yield obligasi 10 tahun"><figcaption><b>Grafik 9.2.</b> Yield obligasi pemerintah 10 tahun, Oktober 2026.</figcaption></figure>
+
+  <p class="tcap">Tabel 9.1 · Strategi bertahan dan batasnya</p>
+  <table>
+    <thead><tr><th style="width:13%">Negara</th><th>Sumber pendapatan utama</th><th>Strategi sekarang</th><th>Batas</th><th>Solusi paling mungkin</th></tr></thead>
+    <tbody>
+      <tr><td>AS</td><td>PPh individu (±50%), pajak gaji; tarif dibatalkan MA</td><td>Stablecoin, penerbitan T-bills, berharap pada AI</td><td>Bunga utang > pertahanan</td><td>Inflasi & <i>financial repression</i></td></tr>
+      <tr><td>China</td><td>PPN, laba BUMN; penjualan lahan pemda runtuh</td><td>Obligasi khusus, teknologi, ekspor (+36% Sep)</td><td>Properti, deflasi, utang pemda</td><td>Rebalancing ke konsumsi (sulit)</td></tr>
+      <tr><td>Jepang</td><td>Pajak konsumsi, pendapatan investasi luar negeri</td><td>Stimulus, BOJ normalisasi, intervensi yen</td><td>Utang ±230–250% PDB</td><td>Inflasi menggerus utang</td></tr>
+      <tr><td>Prancis</td><td>PPN, kontribusi sosial (pajak ±46% PDB)</td><td>Pemangkasan €54 miliar → kerusuhan</td><td>Tak ada mayoritas; ruang pajak habis</td><td>Krisis yang memaksa (Pilpres 2027)</td></tr>
+      <tr><td>Inggris</td><td>PPh, NI, PPN, jasa keuangan</td><td>Kenaikan pajak berulang</td><td>Headroom ±£12 miliar</td><td>Pertumbuhan atau krisis gilt</td></tr>
+      <tr><td>Jerman</td><td>PPh, PPN, kontribusi sosial; ekspor</td><td>Ekspansi €500 miliar + pertahanan</td><td>Ruang fiskal masih ada</td><td>Investasi publik (butuh eksekusi)</td></tr>
+      <tr><td>Arab Saudi</td><td>Dividen Aramco, minyak</td><td>Berutang; memangkas NEOM</td><td>Breakeven $86,6; PDB riil −3,6%</td><td>Utang + penyesuaian Vision 2030</td></tr>
+      <tr><td>Rusia</td><td>Migas (<20% kini), pajak non-migas</td><td>PPN 22%, dana kekayaan (NWF)</td><td>NWF menipis</td><td>Membekukan perang</td></tr>
+      <tr><td>India</td><td>GST, PPh, cukai BBM</td><td>Infrastruktur; kesepakatan dagang AS</td><td>Impor energi ±90%</td><td>Pertumbuhan tinggi</td></tr>
+      <tr><td>Singapura, Swiss, Hong Kong</td><td>Pajak + hasil cadangan</td><td>Netral, disiplin</td><td>—</td><td>Tidak mendesak</td></tr>
+    </tbody>
+  </table>
+  <p class="tsrc">Sumber: CBO, Treasury, CRS, MERICS, Kemenkeu Prancis, House of Commons Library, ifo, Kemenkeu Saudi, Russia Ledger, PRS India, HKMA. Rincian di folder riset (05-negara).</p>
+
+  <div class="box insight"><span class="label">Insight · sampai kapan pemangkasan bisa berjalan?</span>Kasus Prancis menunjukkan polanya. Pemangkasan di tengah ekonomi stagnan menekan pertumbuhan dan penerimaan, sehingga rasio defisit sulit turun. Ketika yield (4,94%) melampaui pertumbuhan nominal (±2–3%), utang/PDB naik otomatis. Negara maju yang tidak bisa lagi menaikkan pajak dan tidak bisa memangkas belanja secara politik hampir selalu <b>memilih inflasi</b>, bukan gagal bayar. Ongkosnya ditanggung penabung dalam kas dan obligasi jangka panjang.</div>
+</section>
+
+<!-- ============================================================ BAB 10 -->
+<section class="chapter" id="bab10">
+  <div class="chapter-head"><div class="num">Bab 10</div><h1>Indonesia secara mendalam</h1>
+  <p class="lede">Eksportir komoditas yang juga importir minyak, dengan defisit kembar dan ujian kepercayaan pasar.</p><span class="asof">Data per 26 Okt 2026</span></div>
+
+  <div class="stats">
+    <div class="stat"><div class="v">5,29%</div><div class="k">pertumbuhan PDB Q2 2026 (Q1: 5,61%)</div></div>
+    <div class="stat red"><div class="v">−3,3%</div><div class="k">transaksi berjalan Q2 2026 (% PDB), rekor</div></div>
+    <div class="stat amber"><div class="v">2,85%</div><div class="k">proyeksi defisit APBN 2026; batas UU 3%</div></div>
+    <div class="stat"><div class="v">$146,3 M</div><div class="k">cadangan devisa (Sep 2026)</div></div>
+  </div>
+
+  <h2>Indonesia bukan "commodity winner" otomatis</h2>
+  <p class="tcap">Tabel 10.1 · Neraca komoditas Indonesia: siapa untung, siapa rugi</p>
+  <table>
+    <thead><tr><th>Indonesia sebagai…</th><th>Komoditas</th><th>Jika harganya naik</th></tr></thead>
+    <tbody>
+      <tr><td><b>Eksportir</b></td><td>Batu bara, CPO, nikel & produk olahan, emas, tembaga, timah</td><td><span class="ok">Positif</span>: devisa, penerimaan negara, laba emiten</td></tr>
+      <tr><td><b>Importir bersih</b></td><td>Minyak mentah & BBM, LPG, gandum, kedelai, bahan pupuk</td><td><span class="fix">Negatif</span>: subsidi membengkak, defisit transaksi berjalan, rupiah melemah</td></tr>
+    </tbody>
+  </table>
+  <p>Shock 2022 menaikkan batu bara dan CPO, sehingga Indonesia diuntungkan. Shock 2026 menaikkan <b>minyak, LPG, dan pupuk</b>, sehingga hasilnya terbalik: subsidi energi ±2 kali lipat, harga BBM nonsubsidi naik hingga 32%, dan defisit transaksi berjalan mencetak rekor.</p>
+
+  <figure><img src="../charts/c16_transaksi_berjalan.svg" alt="Transaksi berjalan Indonesia"><figcaption><b>Grafik 10.1.</b> Defisit transaksi berjalan Indonesia: Q2 2026 melampaui era taper tantrum 2013 secara nominal.</figcaption></figure>
+
+  <h2>Defisit kembar kembali</h2>
+  <p>Dengan defisit transaksi berjalan rekor <b>dan</b> defisit APBN mendekati 3%, Indonesia kembali bergantung pada modal asing, mirip kondisi "Fragile Five" 2013. Bedanya, kali ini modal asing <b>sedang keluar</b>.</p>
+  <ul>
+    <li><b>APBN:</b> rasio pajak hanya ±10% PDB, salah satu terendah di G20. Belanja program besar: Makan Bergizi Gratis (pagu diturunkan dari Rp335 triliun ke <b>Rp268 triliun</b>), subsidi energi dan pupuk ±2×. Skenario minyak $97 dan rupiah Rp17.300 mendorong defisit ke ±3,5% PDB (Kompas), di atas batas UU.</li>
+    <li><b>Bank Indonesia:</b> BI-Rate ditahan 5,75%, Deposit Facility dinaikkan ke 5,00%, intervensi valas dan DNDF. Selisih dengan Fed tinggal ±1,75–2 poin, sempit secara historis.</li>
+    <li><b>SBN:</b> yield 10 tahun ±7,2% vs UST ±5,0%; selisih ±2,2 poin, terendah historis. Kepemilikan asing ±13–14%.</li>
+  </ul>
+
+  <div class="box fixbox"><span class="label">Uji realitas · MSCI dan tata kelola pasar</span>Pada 15 Oktober 2026 MSCI membuka konsultasi untuk menurunkan Indonesia dari <i>Emerging Market</i> langsung ke <i>Standalone</i>, karena struktur kepemilikan yang tidak transparan dan dugaan perdagangan terkoordinasi. IHSG jatuh 11,6% sehari kemudian, terburuk sejak Januari 1998, dan perdagangan sempat dihentikan. Kapitalisasi indeks MSCI Indonesia menyusut dari US$119 miliar (akhir 2025) ke US$53 miliar (Sep 2026). Konsultasi berlangsung sampai 30 April 2027, dengan keputusan sebelum 30 Juni 2027. <b>Risiko ini tidak ada di model buku asli.</b></div>
+
+  <h2>Reflexivity: ketika narasi berbalik</h2>
+  <p>Kerangka Soros di buku asli tepat untuk membaca 2025–2026. Narasi positif (hilirisasi, pertumbuhan, rekor IHSG 2025) menarik modal, rupiah menguat, IHSG naik, dan narasi makin kuat. Pada 2026 putarannya berbalik: shock minyak, defisit transaksi berjalan, keraguan fiskal, dan MSCI mendorong asing keluar. Rupiah melemah, IHSG turun, dan narasi negatif makin kuat.</p>
+  <div class="box rule"><span class="label">Quick Rule</span>Untuk Indonesia, bedakan tiga jenis shock: <b>finansial global</b> (semua aset turun), <b>komoditas ekspor</b> (Indonesia untung), dan <b>energi impor atau kepercayaan domestik</b> (Indonesia rugi dua kali).</div>
+</section>
+
+<!-- ============================================================ BAB 11 -->
+<section class="chapter" id="bab11">
+  <div class="chapter-head"><div class="num">Bab 11</div><h1>Model rezim & skenario 2026–2030</h1>
+  <p class="lede">Portofolio yang baik bukan menebak masa depan, tetapi bertahan di beberapa masa depan.</p><span class="asof">Penilaian per Okt 2026</span></div>
+
+  <h2>Four Quadrant: di mana kita berada?</h2>
+  <p>Model ini membagi kondisi ekonomi berdasarkan arah <b>pertumbuhan</b> dan <b>inflasi</b>. Bridgewater memakai pembagian empat lingkungan ini sebagai dasar portofolio All Weather; versi "Quad 1–4" dipopulerkan oleh lembaga riset seperti Hedgeye dan 42 Macro.</p>
+  <table>
+    <thead><tr><th>Kuadran</th><th>Kondisi</th><th>Secara historis unggul</th><th>Secara historis lemah</th><th>Contoh</th></tr></thead>
+    <tbody>
+      <tr><td><b>Quad 1</b> · Goldilocks</td><td>Pertumbuhan ↑, inflasi ↓</td><td>Saham, teknologi, EM, kripto</td><td>Emas, kas</td><td>2017, 2019, 2023</td></tr>
+      <tr><td><b>Quad 2</b> · Reflasi</td><td>Pertumbuhan ↑, inflasi ↑</td><td>Komoditas, saham siklikal</td><td>Obligasi panjang</td><td>2021, awal 2022</td></tr>
+      <tr><td><b>Quad 3</b> · Stagflasi</td><td>Pertumbuhan ↓, inflasi ↑</td><td>Emas, komoditas, aset berdurasi pendek</td><td>Saham, obligasi nominal</td><td>1970-an, 2022 (AS), <b>2026 (Eropa)</b></td></tr>
+      <tr><td><b>Quad 4</b> · Deflasi/resesi</td><td>Pertumbuhan ↓, inflasi ↓</td><td>Obligasi negara, USD, kas</td><td>Saham, komoditas, kripto</td><td>2015, 2018, awal 2020</td></tr>
+    </tbody>
+  </table>
+  <figure class="narrow"><img src="../charts/c17_kuadran.svg" alt="Kuadran rezim"><figcaption><b>Grafik 11.1.</b> Posisi rezim makro per Q3 2026, penilaian penulis.</figcaption></figure>
+
+  <h2>Skenario 2026–2030</h2>
+  <div class="box note"><span class="label">Catatan metode</span>Buku asli memberi bear case 35–40% yang menggabungkan empat bencana sekaligus (perang Taiwan, krisis utang AS, resesi global −4% s.d. −8%, pengangguran AI >30%). Masing-masing adalah risiko ekor dengan peluang kecil, sehingga menjumlahkannya menjadi satu keranjang 35–40% tidak koheren. Edisi ini memakai <b>tiga skenario utama yang saling eksklusif (total 100%)</b> dan <b>daftar risiko ekor terpisah</b>. Semua probabilitas adalah penilaian subjektif penulis.</div>
+
+  <p class="tcap">Tabel 11.1 · Skenario utama</p>
+  <table>
+    <thead><tr><th style="width:18%">Skenario</th><th class="num">Peluang</th><th>Ciri</th><th>Pemicu yang bisa diamati</th><th>Ilustrasi Indonesia*</th></tr></thead>
+    <tbody>
+      <tr><td><b>A. Multipolar keruh</b></td><td class="num">±55%</td><td>Konflik regional kronis; AS–China bersaing tanpa perang; inflasi 3–4%</td><td>Brent $85–110; gencatan dagang terus diperpanjang pendek</td><td>IHSG 5.000–7.000; rupiah 17.000–19.000</td></tr>
+      <tr><td><b>B. Normalisasi & kebangkitan teknologi</b></td><td class="num">±20%</td><td>Kesepakatan Iran; AI menaikkan produktivitas; suku bunga turun</td><td>Brent <$75; Fed memangkas; MSCI batal menurunkan Indonesia</td><td>IHSG 7.000–8.700; rupiah 15.500–17.000</td></tr>
+      <tr><td><b>C. Stres berkepanjangan</b></td><td class="num">±25%</td><td>Shock energi berlanjut + krisis fiskal/kepercayaan</td><td>Brent >$120; defisit RI >3%; yield UST 30 tahun >6%</td><td>IHSG <5.500; rupiah >19.000</td></tr>
+    </tbody>
+  </table>
+  <p class="tsrc">*Rentang ilustrasi untuk menunjukkan arah dan besaran, bukan target harga.</p>
+
+  <p class="tcap">Tabel 11.2 · Risiko ekor (terpisah dari skenario utama)</p>
+  <table>
+    <thead><tr><th>Risiko</th><th class="num">Peluang 5 tahun</th><th>Sinyal dini</th></tr></thead>
+    <tbody>
+      <tr><td>Blokade atau perang Taiwan</td><td class="num">±5–10%</td><td>Latihan PLA tanpa jeda, evakuasi warga asing, sanksi pembekuan aset</td></tr>
+      <tr><td>Krisis utang AS (lelang gagal, dolar −20%)</td><td class="num">±5–10%</td><td>Yield naik bersamaan dengan dolar turun; <i>term premium</i> melonjak</td></tr>
+      <tr><td>Krisis JGB / repatriasi Jepang</td><td class="num">±10%</td><td>Lelang JGB super panjang gagal; yen menguat tajam</td></tr>
+      <tr><td>Penutupan total Hormuz + Bab el-Mandeb lama</td><td class="num">±15–20%</td><td>Serangan ke infrastruktur Abqaiq/Ras Tanura; Brent >$150</td></tr>
+    </tbody>
+  </table>
+
+  <figure><img src="../charts/c18_matriks.svg" alt="Matriks dampak"><figcaption><b>Grafik 11.2.</b> Matriks dampak: baris A dan B adalah skenario utama; C1–C4 adalah varian uji stres dari skenario C dan risiko ekor. Skor adalah penilaian penulis.</figcaption></figure>
+
+  <h2>Uji realitas: skenario buku asli vs Oktober 2026</h2>
+  <figure><img src="../charts/c20_buku_vs_realita.svg" alt="Skenario buku vs realita"><figcaption><b>Grafik 11.3.</b> IHSG dan rupiah sudah berada di wilayah bear case buku asli.</figcaption></figure>
+  <table>
+    <thead><tr><th>Variabel</th><th>Base case buku</th><th>Realita Okt 2026</th><th>Penilaian</th></tr></thead>
+    <tbody>
+      <tr><td>Inflasi global lengket 3–4%; Fed "higher for longer"</td><td>Ya</td><td>CPI AS 3,7%; Fed malah menaikkan</td><td class="ok">Tepat</td></tr>
+      <tr><td>Dedolarisasi lambat; USD >50% cadangan</td><td>Ya</td><td>56,7%</td><td class="ok">Tepat</td></tr>
+      <tr><td>"Cold peace" AS–China</td><td>Ya</td><td>Gencatan dagang pendek, tanpa perang</td><td class="ok">Tepat</td></tr>
+      <tr><td>IHSG 8.000–10.000</td><td>Ya</td><td>5.388</td><td class="fix">Meleset ke bear case</td></tr>
+      <tr><td>Rupiah 15.000–17.000</td><td>Ya</td><td>±18.071</td><td class="fix">Meleset ke bear case</td></tr>
+      <tr><td>Shock minyak Teluk</td><td>Tidak dimodelkan</td><td>Brent $116,72</td><td class="fix">Titik buta terbesar</td></tr>
+      <tr><td>Risiko tata kelola domestik</td><td>Tidak dimodelkan</td><td>MSCI; asing jual bersih ±Rp88 triliun</td><td class="fix">Titik buta kedua</td></tr>
+    </tbody>
+  </table>
+  <div class="box insight"><span class="label">Pelajaran</span>Skenario global buku asli cukup akurat. Yang meleset adalah <b>pemetaannya ke aset Indonesia</b>: aset Indonesia jatuh ke wilayah bear lewat dua saluran yang tidak ada di model, yaitu shock minyak dan kepercayaan terhadap tata kelola domestik, padahal pemicu bear yang dibayangkan (perang Taiwan, resesi global dalam) tidak terjadi.</div>
+</section>
+
+<!-- ============================================================ BAB 12 -->
+<section class="chapter" id="bab12">
+  <div class="chapter-head"><div class="num">Bab 12</div><h1>Kerangka praktis untuk investor Indonesia</h1>
+  <p class="lede">Prinsip manajemen risiko dan indikator yang perlu dipantau. Kerangka berpikir, bukan saran membeli atau menjual aset tertentu.</p><span class="asof">Nilai indikator per 22–26 Okt 2026</span></div>
+
+  <h2>Prinsip Dalio, diterapkan dengan benar</h2>
+  <table>
+    <thead><tr><th style="width:22%">Prinsip</th><th>Makna untuk Indonesia</th><th>Contoh</th></tr></thead>
+    <tbody>
+      <tr><td>Kesadaran siklus utang</td><td>Yang penting bukan hanya utang/PDB, tetapi <b>mata uang utangnya, beban bunga terhadap pendapatan, dan siapa pembelinya</b>. Ambang "60% PDB" berasal dari kriteria Maastricht, bukan dari Dalio.</td><td>Utang RI ±40% PDB dan mayoritas dalam rupiah, tetapi rasio pajak hanya ±10%</td></tr>
+      <tr><td>Defisit kembar</td><td>Defisit fiskal + defisit transaksi berjalan = bergantung pada modal asing</td><td>2013 (Fragile Five) dan 2026</td></tr>
+      <tr><td>Siklus Besar</td><td>Buku Dalio (2021) tidak membahas Indonesia secara khusus; label "fase naik" adalah interpretasi. Indonesia punya fondasi (demografi, sumber daya) tetapi institusi belum matang.</td><td>Hilirisasi nikel berhasil, tetapi tata kelola pasar dipertanyakan MSCI</td></tr>
+      <tr><td>Reflexivity (Soros)</td><td>Narasi dan arus modal saling memperkuat, ke dua arah</td><td>2025 naik, 2026 turun</td></tr>
+      <tr><td>Perencanaan skenario</td><td>Skenario saling eksklusif, risiko ekor terpisah, diperbarui setiap kuartal</td><td>Bab 11</td></tr>
+    </tbody>
+  </table>
+
+  <h2>All Weather yang sebenarnya</h2>
+  <figure><img src="../charts/c19_allweather.svg" alt="All Weather vs adaptasi"><figcaption><b>Grafik 12.1.</b> Komposisi All Weather versi populer vs "adaptasi" di buku asli.</figcaption></figure>
+  <div class="box fixbox"><span class="label">Koreksi</span>Portofolio "30% saham, 25% SBN, 20% emas, 15% USD/global, 10% komoditas" di buku asli adalah portofolio terdiversifikasi yang masuk akal, tetapi <b>bukan All Weather</b>. All Weather dibangun dengan prinsip <i>risk parity</i>: setiap aset menyumbang risiko yang setara di empat lingkungan pertumbuhan/inflasi, sehingga porsi obligasi jauh lebih besar. Klaim bahwa portofolio buku "naik +8% pada 2022" tidak disertai backtest; perkiraan kasar dengan data 2022 menghasilkan sekitar +3–5%.</div>
+
+  <h2>Dashboard 14 indikator</h2>
+  <table>
+    <thead><tr><th>#</th><th>Indikator</th><th class="num">Nilai terkini</th><th>Cara membaca</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>DXY (indeks dolar)</td><td class="num">±101,6</td><td>Naik = tekanan ke EM</td></tr>
+      <tr><td>2</td><td>Yield UST 10 tahun</td><td class="num">±4,99% (puncak 5,36%)</td><td>>5% = modal tertarik ke AS</td></tr>
+      <tr><td>3</td><td><b>Brent</b></td><td class="num"><b>$116,72</b></td><td>Indikator utama bagi Indonesia sebagai importir</td></tr>
+      <tr><td>4</td><td>VIX</td><td class="num">±16–21</td><td>>25 risk-off; jangan dipakai sendirian</td></tr>
+      <tr><td>5</td><td>GPR</td><td class="num">harian 564,93 (2 Mar)</td><td>Konfirmasi, bukan prediktor</td></tr>
+      <tr><td>6</td><td>Selisih BI-Rate vs Fed</td><td class="num">±1,75–2 poin</td><td>Menyempit = daya tarik rupiah turun</td></tr>
+      <tr><td>7</td><td>PMI manufaktur China (NBS)</td><td class="num">50,1 (Sep)</td><td>>50 = permintaan komoditas membaik</td></tr>
+      <tr><td>8</td><td><b>USD/IDR</b></td><td class="num"><b>±18.071</b></td><td>Rekor terlemah</td></tr>
+      <tr><td>9</td><td><b>Transaksi berjalan</b></td><td class="num"><b>−3,3% PDB</b></td><td>Tidak ada di dashboard buku asli; kini paling penting</td></tr>
+      <tr><td>10</td><td>Defisit APBN</td><td class="num">±2,85% PDB</td><td>Mendekati batas UU 3%</td></tr>
+      <tr><td>11</td><td>Cadangan devisa</td><td class="num">US$146,3 miliar</td><td>Daya tahan intervensi BI</td></tr>
+      <tr><td>12</td><td>IHSG & arus asing</td><td class="num">5.387,9; −Rp88 T</td><td>Sentimen asing</td></tr>
+      <tr><td>13</td><td>Inflasi Indonesia</td><td class="num">3,28%</td><td>Ruang BI menyempit</td></tr>
+      <tr><td>14</td><td>Yield SBN 10 tahun vs UST</td><td class="num">±7,2% vs ±5,0%</td><td>Selisih ±2,2 poin, terendah historis</td></tr>
+    </tbody>
+  </table>
+  <p class="tsrc">Sumber: Trading Economics, Investing, CNBC, CMC Markets/Manifold (GPR), BI, NBS, Databoks, RRI, Kabarbursa, Kontan, Bloomberg Technoz.</p>
+
+  <h2>Prinsip manajemen risiko</h2>
+  <ol>
+    <li><b>Identifikasi jenis shock</b> sebelum menyimpulkan dampaknya ke Indonesia (Bab 10).</li>
+    <li><b>Diversifikasi risiko mata uang.</b> Sejarah 1998, 2015, 2018, 2020, dan 2026 menunjukkan rupiah bisa melemah tajam saat beberapa tekanan datang bersamaan.</li>
+    <li><b>Hindari leverage saat rezim berubah.</b> Kenaikan suku bunga global dan likuidasi paksa adalah pembunuh portofolio terbesar.</li>
+    <li><b>Siapkan likuiditas.</b> Penghentian perdagangan BEI (16 Okt 2026) menunjukkan likuiditas bisa hilang dalam sehari.</li>
+    <li><b>Pantau kalender keputusan, bukan headline.</b></li>
+  </ol>
+
+  <p class="tcap">Tabel 12.1 · Kalender peristiwa penting</p>
+  <table>
+    <thead><tr><th>Tanggal</th><th>Peristiwa</th></tr></thead>
+    <tbody>
+      <tr><td>28–30 Okt 2026</td><td>Keputusan Fed, ECB, BOJ; APBN Inggris</td></tr>
+      <tr><td>3 Nov 2026</td><td>Pemilu sela AS</td></tr>
+      <tr><td>±5 Nov 2026</td><td>PDB Indonesia Q3 (BPS)</td></tr>
+      <tr><td>Nov 2026</td><td>Perundingan damai Rusia–Ukraina; KTT APEC Shenzhen</td></tr>
+      <tr><td>10 Jan 2027</td><td>Gencatan dagang AS–China berakhir (kecuali diperpanjang)</td></tr>
+      <tr><td>18 Jan 2027</td><td>Aturan GENIUS Act berlaku</td></tr>
+      <tr><td>Apr–Mei 2027</td><td>Pilpres Prancis</td></tr>
+      <tr><td>30 Apr / 30 Jun 2027</td><td>Batas konsultasi dan keputusan MSCI soal Indonesia</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============================================================ BAB 13 -->
+<section class="chapter" id="bab13">
+  <div class="chapter-head"><div class="num">Bab 13</div><h1>Kesimpulan: lima mental model</h1>
+  <p class="lede">Tiga mental model buku asli, diperbaiki dengan pelajaran 2026, ditambah dua.</p></div>
+
+  <h3>1 · Geopolitik sebagai pengganda risiko, dan kadang pengubah tren</h3>
+  <p>Setiap konflik besar menciptakan rantai: shock harga komoditas → inflasi → respons bank sentral → guncangan arus modal. Buku asli menyebut geopolitik "tidak mengubah tren jangka panjang". Itu terlalu jauh. Ketika menyentuh <b>energi, sistem pembayaran, atau rantai pasok</b>, geopolitik mengubah tren: sanksi 2022 mengubah komposisi cadangan dunia, peta energi Eropa berubah permanen, dan perang 2026 membuat PDB riil Arab Saudi diproyeksi −3,6%.</p>
+  <div class="chain"><span>Konflik</span><i>→</i><span>Minyak/komoditas</span><i>→</i><span>Inflasi</span><i>→</i><span>Suku bunga</span><i>→</i><span>Yield & kurs</span><i>→</i><span>Arus modal</span><i>→</i><span>Aset Indonesia</span></div>
+
+  <h3>2 · Teknologi mempercepat siklus, tidak menghilangkannya</h3>
+  <p>Boom dan bust kripto 2017–2018 dan 2021–2022 mengikuti pola yang sama dengan mania tulip 1637, mania kereta api 1840-an, dan dot-com 2000. Media sosial membuat siklus lebih pendek dan ekstrem. Aksi jual saham AI Oktober 2026 adalah pengingat bahwa pertanyaan "apakah belanja AI akan menghasilkan laba?" kini mulai diajukan pasar.</p>
+
+  <h3>3 · Indonesia: eksportir sekaligus importir, dan tata kelola menentukan</h3>
+  <p>Indonesia sedang bergerak dari penggali sumber daya menuju pengolah sumber daya. Tetapi edisi ini menambahkan dua hal: Indonesia juga <b>importir bersih energi dan pangan</b>, dan <b>kepercayaan pada tata kelola</b> (fiskal, bank sentral, pasar modal) bisa menentukan nasib aset Indonesia lebih dari harga komoditas.</p>
+
+  <h3>4 · Uang mencari yang netral</h3>
+  <p>Ketika kekuatan dominan memakai mata uangnya sebagai senjata, negara lain tidak lari ke mata uang penantang, tetapi ke <b>aset netral</b>. Itulah sebabnya bank sentral membeli emas, bukan yuan atau Bitcoin. Di tingkat rakyat, dolar justru menyebar lewat stablecoin.</p>
+
+  <h3>5 · Skenario yang tidak diperbarui lebih berbahaya daripada tanpa skenario</h3>
+  <p>Buku asli disusun dengan data 2024 dan dunia berubah drastis dalam 18 bulan. Perbarui data dan probabilitas setiap kuartal, dan nilai dengan jujur skenario mana yang terjadi dan mana yang meleset.</p>
+
+  <div class="box rule"><span class="label">Pemahaman terdasar</span>
+    <ul>
+      <li>USD naik → tekanan ke emerging market</li>
+      <li>Komoditas ekspor naik → Indonesia untung; <b>minyak naik → Indonesia tertekan</b></li>
+      <li>VIX naik → pasar takut; <b>VIX tenang ≠ dunia aman</b></li>
+      <li>Konflik naik → volatilitas naik, lewat minyak, kurs, dan obligasi</li>
+      <li>Kepercayaan turun → modal asing keluar, bahkan tanpa krisis global</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ LAMPIRAN A -->
+<section class="chapter" id="lampA">
+  <div class="chapter-head"><div class="num">Lampiran A</div><h1>Daftar koreksi atas buku Vol. 1</h1>
+  <p class="lede">Setiap angka di bawah sudah dicek ulang ke sumber primer atau sekunder yang kredibel.</p></div>
+  <table>
+    <thead><tr><th>#</th><th>Klaim buku</th><th>Fakta</th><th>Sumber</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>IHSG 2024 +2,7%</td><td><b>−2,65%</b>; terburuk di ASEAN</td><td>Bisnis; OJK</td></tr>
+      <tr><td>2</td><td>Investasi AI China 2024 US$80 miliar (2023: $68 miliar)</td><td><b>US$9,3 miliar</b> (2023: $7,8 miliar); AS $109,1 miliar</td><td>Stanford HAI AI Index</td></tr>
+      <tr><td>3</td><td>Bitcoin akhir 2018 $7.193; "peak $19k" di 2018</td><td><b>±$3.743</b>; puncak $19.700 terjadi Des 2017</td><td>CoinMarketCap; MetalCharts</td></tr>
+      <tr><td>4</td><td>Bitcoin akhir 2022 $19.425</td><td><b>$16.547</b></td><td>DQYDJ/CoinMarketCap</td></tr>
+      <tr><td>5</td><td>Kerusakan BLM 2020 "$1–2 T"</td><td><b>US$1–2 miliar</b></td><td>Triple-I/PCS</td></tr>
+      <tr><td>6</td><td>VIX puncak COVID 66</td><td><b>82,69</b></td><td>CBOE via CNBC</td></tr>
+      <tr><td>7</td><td>Penjualan chip 2024 $588 miliar</td><td><b>$627,6 miliar</b> (revisi $630,5 miliar)</td><td>SIA/WSTS</td></tr>
+      <tr><td>8</td><td>Pertumbuhan India 2019 6,0%</td><td><b>±4,0%</b> (FY2019-20)</td><td>MoSPI via Business Standard</td></tr>
+      <tr><td>9</td><td>Rupiah 2022 −3%</td><td><b>≈ −9%</b></td><td>Jakarta Post/Bank Mandiri</td></tr>
+      <tr><td>10</td><td>Rupiah 2023 −2%</td><td><b>Menguat ±1%</b> (ditutup 15.399)</td><td>Tempo</td></tr>
+      <tr><td>11</td><td>GPR COVID "1300"</td><td>Tidak masuk akal; GPR dinormalisasi rata-rata 100 dan tidak mengukur pandemi</td><td>Caldara & Iacoviello (Fed)</td></tr>
+      <tr><td>12</td><td>Statistik "87%/95%" (Pew 2020)</td><td>Tidak ditemukan di publikasi Pew</td><td>Pew Research 2020</td></tr>
+      <tr><td>13</td><td>Kolom "Emas" dan "Brent" di tabel return</td><td>Berisi angka PDB Indonesia/India (salin-tempel keliru)</td><td>—</td></tr>
+      <tr><td>14</td><td>Tabel tonggak kripto 2019–2024</td><td>Berisi tonggak semikonduktor (salin-tempel keliru)</td><td>—</td></tr>
+      <tr><td>15</td><td>"DeepSeek mulai mengancam" (2023)</td><td>Guncangan DeepSeek R1 terjadi Januari 2025</td><td>—</td></tr>
+    </tbody>
+  </table>
+  <h3>Misinterpretasi konsep yang diperbaiki</h3>
+  <ul>
+    <li>"Komoditas naik → Indonesia naik": dipisahkan menjadi ekspor vs impor (Bab 10).</li>
+    <li>GPR sebagai prediktor 3–6 bulan: GPR adalah indikator bersamaan (Bab 4).</li>
+    <li>Bear case 35–40% yang menggabungkan empat bencana: diganti skenario eksklusif + risiko ekor terpisah (Bab 11).</li>
+    <li>Label "All Weather": dikoreksi (Bab 12).</li>
+    <li>Ambang utang 60% PDB sebagai "prinsip Dalio": berasal dari Maastricht (Bab 12).</li>
+    <li>"Geopolitik tidak mengubah tren jangka panjang": direvisi (Bab 13).</li>
+    <li>"Oversupply nikel China": kelebihan pasokan berasal dari Indonesia sendiri; 2026 Indonesia memangkas kuota.</li>
+  </ul>
+</section>
+
+<!-- ============================================================ LAMPIRAN B -->
+<section class="chapter" id="lampB">
+  <div class="chapter-head"><div class="num">Lampiran B</div><h1>Glosarium</h1></div>
+  <table>
+    <thead><tr><th style="width:24%">Istilah</th><th>Arti dan cara berpikir</th></tr></thead>
+    <tbody>
+      <tr><td>PDB (GDP)</td><td>Nilai semua barang dan jasa yang dihasilkan suatu negara. Naik = ekonomi tumbuh.</td></tr>
+      <tr><td>Inflasi</td><td>Kenaikan harga umum. Tinggi → daya beli turun → bank sentral menaikkan suku bunga.</td></tr>
+      <tr><td>Suku bunga kebijakan</td><td>Biaya meminjam yang ditetapkan bank sentral. Naik → uang mahal → ekonomi melambat.</td></tr>
+      <tr><td>Defisit fiskal</td><td>Belanja negara melebihi pendapatannya. Indonesia dibatasi UU maksimal 3% PDB.</td></tr>
+      <tr><td>Transaksi berjalan</td><td>Selisih devisa yang masuk dan keluar dari perdagangan barang, jasa, dan pendapatan. Defisit = butuh modal asing.</td></tr>
+      <tr><td>Defisit kembar</td><td>Defisit fiskal dan defisit transaksi berjalan terjadi bersamaan.</td></tr>
+      <tr><td>IHSG</td><td>Indeks Harga Saham Gabungan, indeks utama Bursa Efek Indonesia.</td></tr>
+      <tr><td>S&amp;P 500 / MSCI EM</td><td>Indeks 500 perusahaan besar AS / indeks saham negara berkembang.</td></tr>
+      <tr><td>Free float</td><td>Porsi saham yang benar-benar beredar di publik. Rendah = mudah dimanipulasi; isu utama MSCI vs Indonesia.</td></tr>
+      <tr><td>Yield obligasi</td><td>Imbal hasil obligasi. Naik = harga obligasi turun, biaya utang negara naik.</td></tr>
+      <tr><td>Term premium</td><td>Tambahan imbal hasil yang diminta investor untuk memegang obligasi jangka panjang. Naik = investor ragu.</td></tr>
+      <tr><td>VIX</td><td>"Indeks ketakutan": ekspektasi volatilitas saham AS 30 hari.</td></tr>
+      <tr><td>GPR</td><td>Indeks risiko geopolitik berbasis frekuensi berita (Caldara & Iacoviello). Bersamaan, bukan prediktor.</td></tr>
+      <tr><td>DXY</td><td>Indeks kekuatan dolar AS terhadap mata uang utama.</td></tr>
+      <tr><td>Carry trade</td><td>Meminjam di mata uang berbunga rendah (mis. yen) untuk membeli aset berbunga tinggi.</td></tr>
+      <tr><td>Safe haven</td><td>Aset yang dianggap aman saat krisis: emas, dolar AS, franc Swiss.</td></tr>
+      <tr><td>Risk-on / risk-off</td><td>Investor mencari return / investor mencari aman.</td></tr>
+      <tr><td>Chokepoint</td><td>Selat sempit yang dilalui perdagangan penting: Hormuz, Bab el-Mandeb, Malaka.</td></tr>
+      <tr><td>Stablecoin</td><td>Token kripto yang dipatok 1:1 ke mata uang (hampir semuanya dolar AS).</td></tr>
+      <tr><td>CBDC</td><td>Mata uang digital yang diterbitkan bank sentral (mis. e-CNY, Digital Rupiah).</td></tr>
+      <tr><td>Dedolarisasi</td><td>Upaya mengurangi ketergantungan pada dolar AS.</td></tr>
+      <tr><td>Debasement</td><td>Penurunan nilai riil mata uang karena pencetakan uang atau inflasi.</td></tr>
+      <tr><td>Financial repression</td><td>Kebijakan menekan suku bunga di bawah inflasi agar beban utang negara terkikis.</td></tr>
+      <tr><td>Four Quadrant</td><td>Pembagian kondisi ekonomi berdasarkan arah pertumbuhan dan inflasi.</td></tr>
+      <tr><td>Risk parity</td><td>Penyusunan portofolio agar setiap aset menyumbang risiko yang setara; dasar All Weather.</td></tr>
+      <tr><td>Reflexivity</td><td>Teori Soros: narasi memengaruhi harga, dan harga memperkuat narasi.</td></tr>
+      <tr><td>Siklus utang (Dalio)</td><td>Utang menumpuk hingga beban bunga tak tertanggung, lalu diselesaikan lewat restrukturisasi, inflasi, atau keduanya.</td></tr>
+      <tr><td>Bull / Base / Bear case</td><td>Skenario terbaik / paling mungkin / terburuk.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============================================================ LAMPIRAN C -->
+<section class="chapter" id="lampC">
+  <div class="chapter-head"><div class="num">Lampiran C</div><h1>Sumber utama</h1>
+  <p class="lede">Daftar lengkap tautan per topik tersedia di folder <span class="mono">riset-tatanan-dunia/</span>; data grafik di <span class="mono">ebook/data/</span>.</p></div>
+  <div class="two">
+    <div>
+      <h4>Lembaga resmi</h4>
+      <ul class="small">
+        <li>IMF: World Economic Outlook; COFER (komposisi cadangan devisa)</li>
+        <li>Bank Indonesia: BI-Rate; Neraca Pembayaran Q2 2026; JISDOR</li>
+        <li>BPS: PDB Q2 2026; inflasi September 2026</li>
+        <li>Kemenkeu RI: APBN 2026–2027</li>
+        <li>BEI & OJK: IHSG</li>
+        <li>MSCI: konsultasi reklasifikasi Indonesia (Okt 2026)</li>
+        <li>Federal Reserve, CBO, US Treasury (TIC)</li>
+        <li>ECB, BOJ, BoE, RBI, SNB, MAS, HKMA, NBS China</li>
+        <li>Kemenkeu Arab Saudi: Pernyataan Pra-APBN 2027</li>
+        <li>OCC: aturan final GENIUS Act (21 Okt 2026)</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Data & riset</h4>
+      <ul class="small">
+        <li>World Gold Council: Gold Demand Trends</li>
+        <li>Stanford HAI: AI Index 2024 & 2025</li>
+        <li>SIA/WSTS: penjualan semikonduktor</li>
+        <li>CBOE: VIX; Caldara & Iacoviello: GPR</li>
+        <li>DefiLlama: stablecoin; CoinMarketCap: Bitcoin</li>
+        <li>FAO Food Price Index; Bank Dunia (urea)</li>
+        <li>IEA; Kpler; Lloyd's List</li>
+        <li>PIIE, CFR, CSIS, MERICS, ifo, IFS, Resolution Foundation</li>
+        <li>Ray Dalio, <i>Principles for Dealing with the Changing World Order</i> (2021); <i>How Countries Go Broke</i> (2025)</li>
+        <li>BlackQoral, <i>Geopolitics for Dummies Vol. 1</i> (kerangka dan data dasar)</li>
+      </ul>
+    </div>
+  </div>
+  <h4>Media</h4>
+  <p class="small">Reuters, Bloomberg, CNBC, Financial Times, Nikkei Asia, Al Jazeera, Kontan, Bisnis Indonesia, Katadata, CNBC Indonesia, Tempo, RRI, The Diplomat, Euronews.</p>
+
+  <div class="box note" style="margin-top:14pt"><span class="label">Catatan penutup & disclaimer</span>Seluruh analisis, model, dan proyeksi dalam dokumen ini untuk tujuan edukasi dan bukan saran investasi. Model probabilistik adalah kerangka berpikir, bukan jaminan hasil. Data per 26 Oktober 2026; sebagian angka berasal dari media sekunder dan dapat direvisi oleh sumber resmi. Edisi ini disusun dengan bantuan AI (Claude) dan merujuk karya BlackQoral sebagai sumber kerangka; buku ini bukan terbitan resmi BlackQoral.</div>
+</section>
+
+</body>
+</html>

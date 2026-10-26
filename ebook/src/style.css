@@ -1,0 +1,104 @@
+/* Membaca Dunia 2026 — gaya cetak A4 */
+:root {
+  --ink: #16233a;
+  --soft: #5b6878;
+  --rule: #d5dbe2;
+  --paper: #ffffff;
+  --tint: #f3f5f8;
+  --teal: #1f6f78;
+  --amber: #c8811a;
+  --red: #a63d40;
+  --green: #3c7a4a;
+  --navy: #2e4a7d;
+  --serif: "Caladea", "Liberation Serif", Georgia, serif;
+  --sans: "Inter", "Liberation Sans", Arial, sans-serif;
+  --display: "Inter Display", "Inter", Arial, sans-serif;
+  --mono: "JetBrains Mono", "DejaVu Sans Mono", monospace;
+}
+@page { size: A4; margin: 20mm 18mm 22mm 18mm; }
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { margin: 0; color: var(--ink); font-family: var(--serif); font-size: 10.6pt; line-height: 1.5; background: var(--paper); }
+h1, h2, h3, h4 { font-family: var(--display); color: var(--ink); text-wrap: balance; line-height: 1.2; }
+h2 { font-size: 15pt; margin: 18pt 0 6pt; padding-top: 4pt; border-top: 1.2pt solid var(--ink); break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 12pt 0 4pt; color: var(--navy); break-after: avoid; }
+h4 { font-size: 10pt; margin: 8pt 0 2pt; break-after: avoid; }
+p { margin: 0 0 6pt; orphans: 3; widows: 3; }
+ul, ol { margin: 0 0 6pt; padding-left: 16pt; }
+li { margin-bottom: 2pt; }
+a { color: var(--teal); text-decoration: none; }
+strong { color: #0e1828; }
+.small { font-size: 8.6pt; color: var(--soft); }
+.mono { font-family: var(--mono); }
+
+/* Bab */
+.chapter { break-before: page; }
+.chapter-head { margin: 0 0 14pt; padding: 0 0 10pt; border-bottom: 2pt solid var(--ink); }
+.chapter-head .num { font-family: var(--mono); font-size: 9pt; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); }
+.chapter-head h1 { font-size: 24pt; margin: 4pt 0 6pt; }
+.chapter-head .lede { font-size: 11.5pt; color: var(--soft); margin: 0; font-style: italic; }
+.asof { display: inline-block; font-family: var(--mono); font-size: 7.8pt; color: var(--soft); border: .6pt solid var(--rule); padding: 1pt 5pt; border-radius: 2pt; margin-top: 6pt; }
+
+/* Figure */
+figure { margin: 10pt 0 12pt; break-inside: avoid; }
+figure img { width: 100%; display: block; }
+figure.narrow img { width: 82%; margin: 0 auto; }
+figcaption { font-family: var(--sans); font-size: 8.4pt; color: var(--soft); margin-top: 3pt; }
+figcaption b { color: var(--ink); }
+
+/* Tabel */
+table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; font-family: var(--sans); font-size: 8.4pt; line-height: 1.35; break-inside: auto; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th { text-align: left; background: var(--ink); color: #fff; font-weight: 600; padding: 4pt 5pt; vertical-align: bottom; }
+td { padding: 3.5pt 5pt; border-bottom: .5pt solid var(--rule); vertical-align: top; }
+tbody tr:nth-child(even) td { background: #f8f9fb; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tcap { font-family: var(--sans); font-size: 8.4pt; font-weight: 700; margin: 10pt 0 0; color: var(--ink); break-after: avoid; }
+.legend4 { display: grid; grid-template-columns: 1fr 1fr; gap: 6pt; }
+.legend4 .box { margin: 0; }
+.tsrc { font-family: var(--sans); font-size: 7.6pt; color: var(--soft); margin: -6pt 0 10pt; }
+.fix { color: var(--red); font-weight: 700; }
+.ok { color: var(--green); font-weight: 700; }
+.warn { color: var(--amber); font-weight: 700; }
+.strike { text-decoration: line-through; color: var(--soft); }
+
+/* Kotak */
+.box { break-inside: avoid; border-radius: 3pt; padding: 8pt 10pt; margin: 8pt 0 10pt; font-family: var(--sans); font-size: 9pt; line-height: 1.45; }
+.box p:last-child, .box ul:last-child { margin-bottom: 0; }
+.box .label { display: block; font-family: var(--mono); font-size: 7.6pt; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 3pt; }
+.box.rule { background: #eaf3f3; border-left: 3pt solid var(--teal); }
+.box.rule .label { color: var(--teal); }
+.box.fixbox { background: #f8ecec; border-left: 3pt solid var(--red); }
+.box.fixbox .label { color: var(--red); }
+.box.insight { background: #fbf3e6; border-left: 3pt solid var(--amber); }
+.box.insight .label { color: #9a6211; }
+.box.note { background: var(--tint); border-left: 3pt solid var(--soft); }
+.box.note .label { color: var(--soft); }
+
+/* Grid 4 kolom "apa yang dilihat" */
+.lens { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6pt; margin: 6pt 0 10pt; break-inside: avoid; }
+.lens div { background: var(--tint); padding: 6pt 8pt; font-family: var(--sans); font-size: 8.4pt; line-height: 1.4; border-top: 2pt solid var(--navy); }
+.lens h4 { margin: 0 0 3pt; font-size: 8.4pt; text-transform: uppercase; letter-spacing: .06em; color: var(--navy); }
+.lens ul { padding-left: 11pt; margin: 0; }
+
+/* Angka kunci */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6pt; margin: 8pt 0 12pt; break-inside: avoid; }
+.stat { border: .6pt solid var(--rule); padding: 6pt 7pt; }
+.stat .v { font-family: var(--display); font-weight: 700; font-size: 15pt; line-height: 1.1; }
+.stat .k { font-family: var(--sans); font-size: 7.6pt; color: var(--soft); margin-top: 2pt; }
+.stat.red .v { color: var(--red); } .stat.teal .v { color: var(--teal); } .stat.amber .v { color: #9a6211; }
+
+/* Daftar isi */
+.toc { font-family: var(--sans); font-size: 10pt; }
+.toc ol { list-style: none; padding: 0; margin: 0; }
+.toc li { display: grid; grid-template-columns: 34pt 1fr; padding: 4pt 0; border-bottom: .5pt solid var(--rule); }
+.toc .n { font-family: var(--mono); color: var(--teal); font-size: 9pt; }
+.toc .d { font-size: 8.4pt; color: var(--soft); display: block; }
+
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 10pt; }
+.mermaidlike { font-family: var(--sans); font-size: 8.6pt; }
+.chain { display: flex; flex-wrap: wrap; gap: 4pt; align-items: center; margin: 6pt 0 10pt; font-family: var(--sans); font-size: 8.4pt; break-inside: avoid; }
+.chain span { background: var(--tint); border: .6pt solid var(--rule); padding: 3pt 6pt; border-radius: 2pt; }
+.chain i { font-style: normal; color: var(--soft); }
+.pagebreak { break-before: page; }

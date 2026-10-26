@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="617.426562pt" height="268.292293pt" viewBox="0 0 617.426562 268.292293" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T08:29:59.752731</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 268.292293 
+L 617.426562 268.292293 
+L 617.426562 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 162.778906 215.95225 
+L 564.538906 215.95225 
+L 564.538906 27.45625 
+L 162.778906 27.45625 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 162.778906 215.95225 
+L 162.778906 27.45625 
+" clip-path="url(#p35693c99b7)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mffc19629af" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5b6878; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mffc19629af" x="162.778906" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="162.778906" y="232.155375" transform="rotate(-0 162.778906 232.155375)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 250.118037 215.95225 
+L 250.118037 27.45625 
+" clip-path="url(#p35693c99b7)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mffc19629af" x="250.118037" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="250.118037" y="232.155375" transform="rotate(-0 250.118037 232.155375)">20</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 337.457167 215.95225 
+L 337.457167 27.45625 
+" clip-path="url(#p35693c99b7)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mffc19629af" x="337.457167" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="337.457167" y="232.155375" transform="rotate(-0 337.457167 232.155375)">40</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 424.796298 215.95225 
+L 424.796298 27.45625 
+" clip-path="url(#p35693c99b7)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mffc19629af" x="424.796298" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="424.796298" y="232.155375" transform="rotate(-0 424.796298 232.155375)">60</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 512.135428 215.95225 
+L 512.135428 27.45625 
+" clip-path="url(#p35693c99b7)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mffc19629af" x="512.135428" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="512.135428" y="232.155375" transform="rotate(-0 512.135428 232.155375)">80</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11">
+      <defs>
+       <path id="m3bf0f36b54" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5b6878; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m3bf0f36b54" x="162.778906" y="201.862254" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="155.778906" y="206.463817" transform="rotate(-0 155.778906 206.463817)">Perang Iran, VIX Okt 2026</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m3bf0f36b54" x="162.778906" y="184.049364" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="155.778906" y="188.650927" transform="rotate(-0 155.778906 188.650927)">Tarif 'Liberation Day' (Apr 2025)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m3bf0f36b54" x="162.778906" y="166.236475" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="155.778906" y="170.838037" transform="rotate(-0 155.778906 170.838037)">Unwind carry yen (Agu 2024)</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m3bf0f36b54" x="162.778906" y="148.423585" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="155.778906" y="153.025147" transform="rotate(-0 155.778906 153.025147)">Invasi Ukraina (Mar 2022)</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m3bf0f36b54" x="162.778906" y="130.610695" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="155.778906" y="135.212257" transform="rotate(-0 155.778906 135.212257)">COVID-19 (Mar 2020)</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m3bf0f36b54" x="162.778906" y="112.797805" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="155.778906" y="117.399368" transform="rotate(-0 155.778906 117.399368)">Perang dagang (Des 2018)</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m3bf0f36b54" x="162.778906" y="94.984915" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="155.778906" y="99.586478" transform="rotate(-0 155.778906 99.586478)">'Volmageddon' (Feb 2018)</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m3bf0f36b54" x="162.778906" y="77.172025" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="155.778906" y="81.773588" transform="rotate(-0 155.778906 81.773588)">Brexit (Jun 2016)</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m3bf0f36b54" x="162.778906" y="59.359136" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="155.778906" y="63.960698" transform="rotate(-0 155.778906 63.960698)">Devaluasi yuan (Agu 2015)</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m3bf0f36b54" x="162.778906" y="41.546246" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="155.778906" y="46.147808" transform="rotate(-0 155.778906 46.147808)">Krimea (Mar 2014)</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 162.778906 207.38425 
+L 254.484993 207.38425 
+L 254.484993 196.340258 
+L 162.778906 196.340258 
+z
+" clip-path="url(#p35693c99b7)" style="fill: #c8811a"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 162.778906 189.57136 
+L 391.301741 189.57136 
+L 391.301741 178.527369 
+L 162.778906 178.527369 
+z
+" clip-path="url(#p35693c99b7)" style="fill: #2e4a7d"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 162.778906 171.75847 
+L 331.212419 171.75847 
+L 331.212419 160.714479 
+L 162.778906 160.714479 
+z
+" clip-path="url(#p35693c99b7)" style="fill: #2e4a7d"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 162.778906 153.945581 
+L 322.172819 153.945581 
+L 322.172819 142.901589 
+L 162.778906 142.901589 
+z
+" clip-path="url(#p35693c99b7)" style="fill: #2e4a7d"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 162.778906 136.132691 
+L 523.882541 136.132691 
+L 523.882541 125.088699 
+L 162.778906 125.088699 
+z
+" clip-path="url(#p35693c99b7)" style="fill: #a63d40"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 162.778906 118.319801 
+L 320.426037 118.319801 
+L 320.426037 107.275809 
+L 162.778906 107.275809 
+z
+" clip-path="url(#p35693c99b7)" style="fill: #2e4a7d"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 162.778906 100.506911 
+L 325.666385 100.506911 
+L 325.666385 89.462919 
+L 162.778906 89.462919 
+z
+" clip-path="url(#p35693c99b7)" style="fill: #2e4a7d"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 162.778906 82.694021 
+L 275.446385 82.694021 
+L 275.446385 71.65003 
+L 162.778906 71.65003 
+z
+" clip-path="url(#p35693c99b7)" style="fill: #2e4a7d"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 162.778906 64.881131 
+L 340.514037 64.881131 
+L 340.514037 53.83714 
+L 162.778906 53.83714 
+z
+" clip-path="url(#p35693c99b7)" style="fill: #2e4a7d"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 162.778906 47.068242 
+L 241.384124 47.068242 
+L 241.384124 36.02425 
+L 162.778906 36.02425 
+z
+" clip-path="url(#p35693c99b7)" style="fill: #2e4a7d"/>
+   </g>
+   <g id="line2d_21">
+    <path d="M 293.787602 215.95225 
+L 293.787602 27.45625 
+" clip-path="url(#p35693c99b7)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #5b6878; stroke-width: 0.8"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 162.778906 215.95225 
+L 162.778906 27.45625 
+" style="fill: none; stroke: #d5dbe2; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 162.778906 215.95225 
+L 564.538906 215.95225 
+" style="fill: none; stroke: #d5dbe2; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="258.85195" y="204.77241" transform="rotate(-0 258.85195 204.77241)">21,0</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="395.668698" y="186.959521" transform="rotate(-0 395.668698 186.959521)">52,3</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="335.579376" y="169.146631" transform="rotate(-0 335.579376 169.146631)">38,6</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="326.539776" y="151.333741" transform="rotate(-0 326.539776 151.333741)">36,5</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="528.249498" y="133.520851" transform="rotate(-0 528.249498 133.520851)">82,7</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="324.792993" y="115.707961" transform="rotate(-0 324.792993 115.707961)">36,1</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="330.033341" y="97.895072" transform="rotate(-0 330.033341 97.895072)">37,3</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="279.813341" y="80.082182" transform="rotate(-0 279.813341 80.082182)">25,8</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="344.880993" y="62.269292" transform="rotate(-0 344.880993 62.269292)">40,7</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="245.75108" y="44.456402" transform="rotate(-0 245.75108 44.456402)">18,0</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 7.5px; font-family: 'Inter'; text-anchor: start; fill: #5b6878" x="295.97108" y="34.42109" transform="rotate(-0 295.97108 34.42109)">ambang 'panik' ±30</text>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="162.778906" y="21.45625" transform="rotate(-0 162.778906 21.45625)">Puncak VIX per episode: perang Iran 2026 hampir tak terlihat di VIX</text>
+   </g>
+  </g>
+  <g id="text_28">
+   <text style="font-size: 7.5px; font-family: 'Inter'; fill: #5b6878" transform="translate(97.978906 246.608504)">Sumber: CBOE (penutupan tertinggi per episode, dibulatkan); COVID 82,69: CNBC; Agu 2024 &amp; Apr 2025: Macroption; Okt 2026 ±16–21: liputan</text>
+   <text style="font-size: 7.5px; font-family: 'Inter'; fill: #5b6878" transform="translate(97.978906 255.683211)">pasar 16 Okt 2026</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p35693c99b7">
+   <rect x="162.778906" y="27.45625" width="401.76" height="188.496"/>
+  </clipPath>
+ </defs>
+</svg>

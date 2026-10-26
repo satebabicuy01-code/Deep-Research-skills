@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="476.792284pt" height="264.116207pt" viewBox="0 0 476.792284 264.116207" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T08:30:03.903809</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 264.116207 
+L 476.792284 264.116207 
+L 476.792284 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_2">
+    <path d="M 222.887916 126.264132 
+C 226.02393 116.612472 226.831276 106.354174 225.243723 96.330762 
+C 223.656171 86.30735 219.718351 76.800612 213.753297 68.59042 
+C 207.788244 60.380228 199.963653 53.697396 190.921402 49.090139 
+C 181.879151 44.482882 171.873446 42.080725 161.725091 42.080725 
+L 161.725091 67.804885 
+C 167.814104 67.804885 173.817527 69.246179 179.242877 72.010533 
+C 184.668228 74.774888 189.362983 78.784587 192.942015 83.710702 
+C 196.521047 88.636817 198.883739 94.34086 199.83627 100.354907 
+C 200.788802 106.368955 200.304394 112.523933 198.422786 118.314929 
+z
+" style="fill: #2e4a7d; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 100.562266 126.264132 
+C 104.758381 139.178445 112.938815 150.437847 123.924386 158.419332 
+C 134.909957 166.400816 148.146178 170.701525 161.725091 170.701525 
+C 175.304004 170.701525 188.540224 166.400816 199.525796 158.419332 
+C 210.511367 150.437847 218.691801 139.178445 222.887916 126.264132 
+L 198.422786 118.314929 
+C 195.905117 126.063517 190.996856 132.819158 184.405514 137.608049 
+C 177.814171 142.39694 169.872439 144.977365 161.725091 144.977365 
+C 153.577743 144.977365 145.636011 142.39694 139.044668 137.608049 
+C 132.453325 132.819158 127.545065 126.063517 125.027396 118.314929 
+z
+" style="fill: #1f6f78; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 109.696884 68.59042 
+C 103.731831 76.800612 99.794011 86.30735 98.206459 96.330762 
+C 96.618906 106.354174 97.426252 116.612472 100.562266 126.264132 
+L 125.027396 118.314929 
+C 123.145787 112.523933 122.66138 106.368955 123.613912 100.354907 
+C 124.566443 94.34086 126.929135 88.636817 130.508167 83.710702 
+z
+" style="fill: #8fbcc1; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 132.52878 49.090139 
+C 128.023173 51.385861 123.804019 54.205009 119.958827 57.489113 
+C 116.113635 60.773217 112.669174 64.499414 109.696884 68.59042 
+L 130.508167 83.710702 
+C 132.291541 81.256098 134.358218 79.02038 136.665333 77.049918 
+C 138.972448 75.079455 141.50394 73.387966 144.207305 72.010533 
+z
+" style="fill: #c8811a; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 161.725091 42.080725 
+C 156.668329 42.080725 151.629169 42.677149 146.712126 43.857626 
+C 141.795083 45.038104 137.034388 46.794417 132.52878 49.090139 
+L 144.207305 72.010533 
+C 146.910669 70.6331 149.767086 69.579312 152.717312 68.871026 
+C 155.667538 68.162739 158.691034 67.804885 161.725091 67.804885 
+z
+" style="fill: #7b7d2a; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="81.337091" y="20.003125" transform="rotate(-0 81.337091 20.003125)">All Weather (Dalio, versi populer)</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_7">
+     <path d="M 66.237341 197.018605 
+L 80.637341 197.018605 
+L 80.637341 191.978605 
+L 66.237341 191.978605 
+z
+" style="fill: #2e4a7d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_2">
+     <text style="font-size: 7.2px; font-family: 'Inter'; text-anchor: start" x="86.397341" y="197.018605" transform="rotate(-0 86.397341 197.018605)">Saham 30%</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 66.237341 209.330324 
+L 80.637341 209.330324 
+L 80.637341 204.290324 
+L 66.237341 204.290324 
+z
+" style="fill: #1f6f78; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_3">
+     <text style="font-size: 7.2px; font-family: 'Inter'; text-anchor: start" x="86.397341" y="209.330324" transform="rotate(-0 86.397341 209.330324)">Obligasi panjang 40%</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 66.237341 221.642043 
+L 80.637341 221.642043 
+L 80.637341 216.602043 
+L 66.237341 216.602043 
+z
+" style="fill: #8fbcc1; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 7.2px; font-family: 'Inter'; text-anchor: start" x="86.397341" y="221.642043" transform="rotate(-0 86.397341 221.642043)">Obligasi menengah 15%</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 182.552216 197.018605 
+L 196.952216 197.018605 
+L 196.952216 191.978605 
+L 182.552216 191.978605 
+z
+" style="fill: #c8811a; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 7.2px; font-family: 'Inter'; text-anchor: start" x="202.712216" y="197.018605" transform="rotate(-0 202.712216 197.018605)">Emas 7,5%</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 182.552216 209.330324 
+L 196.952216 209.330324 
+L 196.952216 204.290324 
+L 182.552216 204.290324 
+z
+" style="fill: #7b7d2a; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 7.2px; font-family: 'Inter'; text-anchor: start" x="202.712216" y="209.330324" transform="rotate(-0 202.712216 209.330324)">Komoditas 7,5%</text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4"/>
+   <g id="patch_12">
+    <path d="M 442.029734 126.264132 
+C 445.165748 116.612472 445.973094 106.354174 444.385541 96.330762 
+C 442.797989 86.30735 438.860169 76.800612 432.895116 68.59042 
+C 426.930062 60.380228 419.105471 53.697396 410.06322 49.090139 
+C 401.020969 44.482882 391.015265 42.080725 380.866909 42.080725 
+L 380.866909 67.804885 
+C 386.955922 67.804885 392.959345 69.246179 398.384695 72.010533 
+C 403.810046 74.774888 408.504801 78.784587 412.083833 83.710702 
+C 415.662865 88.636817 418.025557 94.34086 418.978088 100.354907 
+C 419.93062 106.368955 419.446213 112.523933 417.564604 118.314929 
+z
+" style="fill: #2e4a7d; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 360.993903 167.55395 
+C 377.209071 172.822578 394.871882 171.432484 410.06322 163.692111 
+C 425.254558 155.951738 436.761106 142.4793 442.029734 126.264132 
+L 417.564604 118.314929 
+C 414.403428 128.04403 407.499498 136.127493 398.384695 140.771717 
+C 389.269893 145.415941 378.672206 146.249997 368.943105 143.08882 
+z
+" style="fill: #1f6f78; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 316.556509 106.391125 
+C 316.556509 119.970038 320.857218 133.206259 328.838703 144.19183 
+C 336.820187 155.177401 348.079589 163.357835 360.993903 167.55395 
+L 368.943105 143.08882 
+C 361.194517 140.571151 354.438876 135.662891 349.649985 129.071548 
+C 344.861094 122.480205 342.280669 114.538473 342.280669 106.391125 
+z
+" style="fill: #8fbcc1; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 343.066204 54.362918 
+C 334.856012 60.327972 328.17318 68.152563 323.565923 77.194814 
+C 318.958666 86.237065 316.556509 96.242769 316.556509 106.391125 
+L 342.280669 106.391125 
+C 342.280669 100.302112 343.721963 94.298689 346.486318 88.873339 
+C 349.250672 83.447988 353.260371 78.753233 358.186486 75.174201 
+z
+" style="fill: #c8811a; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 380.866909 42.080725 
+C 374.118523 42.080725 367.412 43.142934 360.993903 45.2283 
+C 354.575806 47.313666 348.525764 50.396316 343.066204 54.362918 
+L 358.186486 75.174201 
+C 361.462222 72.79424 365.092247 70.94465 368.943105 69.69343 
+C 372.793963 68.44221 376.817877 67.804885 380.866909 67.804885 
+z
+" style="fill: #7b7d2a; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="300.478909" y="20.003125" transform="rotate(-0 300.478909 20.003125)">'Adaptasi' di buku Vol. 1</text>
+   </g>
+   <g id="legend_2">
+    <g id="patch_17">
+     <path d="M 298.621534 197.018605 
+L 313.021534 197.018605 
+L 313.021534 191.978605 
+L 298.621534 191.978605 
+z
+" style="fill: #2e4a7d; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 7.2px; font-family: 'Inter'; text-anchor: start" x="318.781534" y="197.018605" transform="rotate(-0 318.781534 197.018605)">Saham IDR 30%</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 298.621534 209.330324 
+L 313.021534 209.330324 
+L 313.021534 204.290324 
+L 298.621534 204.290324 
+z
+" style="fill: #1f6f78; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 7.2px; font-family: 'Inter'; text-anchor: start" x="318.781534" y="209.330324" transform="rotate(-0 318.781534 209.330324)">SBN 25%</text>
+    </g>
+    <g id="patch_19">
+     <path d="M 298.621534 221.642043 
+L 313.021534 221.642043 
+L 313.021534 216.602043 
+L 298.621534 216.602043 
+z
+" style="fill: #8fbcc1; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 7.2px; font-family: 'Inter'; text-anchor: start" x="318.781534" y="221.642043" transform="rotate(-0 318.781534 221.642043)">Emas 20%</text>
+    </g>
+    <g id="patch_20">
+     <path d="M 388.324534 197.018605 
+L 402.724534 197.018605 
+L 402.724534 191.978605 
+L 388.324534 191.978605 
+z
+" style="fill: #c8811a; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 7.2px; font-family: 'Inter'; text-anchor: start" x="408.484534" y="197.018605" transform="rotate(-0 408.484534 197.018605)">USD/global 15%</text>
+    </g>
+    <g id="patch_21">
+     <path d="M 388.324534 209.330324 
+L 402.724534 209.330324 
+L 402.724534 204.290324 
+L 388.324534 204.290324 
+z
+" style="fill: #7b7d2a; stroke: #ffffff; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 7.2px; font-family: 'Inter'; text-anchor: start" x="408.484534" y="209.330324" transform="rotate(-0 408.484534 209.330324)">Komoditas 10%</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_13">
+   <text style="font-size: 7.5px; font-family: 'Inter'; text-anchor: start; fill: #5b6878" x="10.8" y="251.507125" transform="rotate(-0 10.8 251.507125)">Sumber: All Weather versi Tony Robbins, 'Money: Master the Game' (2014), berbasis risk parity; buku Vol. 1 hlm. 36</text>
+  </g>
+ </g>
+</svg>

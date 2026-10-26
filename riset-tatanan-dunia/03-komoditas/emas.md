@@ -5,7 +5,7 @@
 
 ## Ringkasan
 
-Kalau ada **satu tempat di mana "smart money" negara-negara paling jelas terlihat**, itu adalah **emas**. Sejak Rusia dibekukan cadangannya (2022), bank sentral dunia membeli emas **>1.000 ton per tahun** (2022, 2023, 2024; 2025 ±1.100–1.237 ton), kira-kira **dua kali rata-rata dekade sebelumnya**. Pada 2025, nilai emas di cadangan bank sentral asing dilaporkan **melampaui nilai kepemilikan US Treasury mereka** untuk pertama kalinya sejak 1996, dan emas melampaui euro sebagai aset cadangan terbesar kedua (data ECB untuk 2024).
+Kalau ada **satu tempat di mana "smart money" negara-negara paling jelas terlihat**, itu adalah **emas**. Sejak Rusia dibekukan cadangannya (2022), bank sentral dunia membeli emas **>1.000 ton per tahun selama tiga tahun berturut-turut** (2022: 1.082 t; 2023: 1.037 t; 2024: ±1.045 t), lalu **863 ton pada 2025** (WGC, *Gold Demand Trends FY2025*). Angka 2025 melambat karena harga sangat tinggi, tetapi masih **hampir dua kali rata-rata 2010–2021 (±473 t/tahun)**. *(Dikoreksi 26 Okt 2026: versi sebelumnya menulis 2025 ±1.100–1.237 t dari sumber sekunder yang lemah.)* Pada 2025, nilai emas di cadangan bank sentral asing dilaporkan **melampaui nilai kepemilikan US Treasury mereka** untuk pertama kalinya sejak 1996, dan emas melampaui euro sebagai aset cadangan terbesar kedua (data ECB untuk 2024).
 
 **Perjalanan harga yang luar biasa:**
 - ±$1.800 (akhir 2022), ±$2.600 (akhir 2024), ±$4.300 (akhir 2025)
@@ -99,6 +99,7 @@ Dalio adalah salah satu pendukung emas paling vokal: "*If you don't own gold, yo
 - [MarketMinute – The Warsh shock: historic silver and gold collapse](https://business.minstercommunitypost.com/minstercommunitypost/article/marketminute-2026-2-17-the-warsh-shock-historic-silver-and-gold-collapse-signals-a-new-era-for-federal-reserve-independence)
 - [Hvylya – The Warsh effect: gold and crypto crash](https://en.hvylya.net/news/415-the-warsh-effect-gold-and-crypto-crash-as-trump-taps-hawk-for-fed)
 - [MetalsMine – Gold's volatile quarter: from record highs (rekor, fix LBMA, titik terendah Juni)](https://www.metalsmine.com/news/1400998-golds-volatile-quarter-from-record-highs-to-structural)
+- [WGC – Gold Demand Trends Full Year 2025 (bank sentral 863 t)](https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-full-year-2025)
 - [SunSirs – Gold prices continued to surge on January 29th](https://www.sunsirs.com/uk/detail_news-30214.html)
 - [Kontan – Inflasi September 2026 3,28%, harga pangan dan emas pendorong](https://insight.kontan.co.id/news/inflasi-september-2026-naik-jadi-328-harga-pangan-dan-emas-jadi-pendorong)
 - Ray Dalio, *Principles for Dealing with the Changing World Order*; *How Countries Go Broke* (2025)

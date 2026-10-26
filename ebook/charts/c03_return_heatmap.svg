@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="553.310156pt" height="234.537352pt" viewBox="0 0 553.310156 234.537352" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T08:29:58.851378</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 234.537352 
+L 553.310156 234.537352 
+L 553.310156 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 77.4 188.23225 
+L 490.32 188.23225 
+L 490.32 27.45625 
+L 77.4 27.45625 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#pe1603c5212)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAj0AAADgCAYAAADortfZAAAFaUlEQVR4nO3YT2pYVRyGYZOaBtNUjIqggyLoRBzqQISC4AJcQDtyIoirELeg7kCH4kwFcdCxOFApFTtQodQ/Ra0kJkETV2BHh/4g7/Os4Ltc7uU9Z+ODy6+cPnCGfHHlhekJS13/8fr0BO7hzWsH0xOWeu/yzvQEYnxD3E+b0wMAAO4H0QMAJIgeACBB9AAACaIHAEgQPQBAgugBABJEDwCQIHoAgATRAwAkiB4AIEH0AAAJogcASBA9AECC6AEAEkQPAJAgegCABNEDACSIHgAgQfQAAAmiBwBIED0AQILoAQASRA8AkCB6AIAE0QMAJIgeACBB9AAACaIHAEgQPQBAgugBABJEDwCQIHoAgATRAwAkiB4AIEH0AAAJogcASBA9AECC6AEAEkQPAJAgegCABNEDACSIHgAgQfQAAAkbJycnp9MjVjq+8+v0hKUOdnenJyx1cHw0PWGpJ3cuTk9Y6vs/70xPWOqbH76dnrDUa8+/PD1huc3z29MTlrr11x/TE5b65KvPpycs5aYHAEgQPQBAgugBABJEDwCQIHoAgATRAwAkiB4AIEH0AAAJogcASBA9AECC6AEAEkQPAJAgegCABNEDACSIHgAgQfQAAAmiBwBIED0AQILoAQASRA8AkCB6AIAE0QMAJIgeACBB9AAACaIHAEgQPQBAgugBABJEDwCQIHoAgATRAwAkiB4AIEH0AAAJogcASBA9AECC6AEAEkQPAJAgegCABNEDACSIHgAgQfQAAAmiBwBIED0AQILoAQASRA8AkLDx7/Hx6fSIlY5u35qesNTdvb3pCUu98e5b0xOW+vDKO9MTlvrpoe3pCdzDsw8/Oj1huf2b301PWOrw0qXpCUttbZ6bnrCUmx4AIEH0AAAJogcASBA9AECC6AEAEkQPAJAgegCABNEDACSIHgAgQfQAAAmiBwBIED0AQILoAQASRA8AkCB6AIAE0QMAJIgeACBB9AAACaIHAEgQPQBAgugBABJEDwCQIHoAgATRAwAkiB4AIEH0AAAJogcASBA9AECC6AEAEkQPAJAgegCABNEDACSIHgAgQfQAAAmiBwBIED0AQILoAQASRA8AkCB6AIAE0QMAJIgeACBB9AAACaIHAEjYuHbz69PpESu9eOGx6QlL3d7emp6w1P7x0fSEpZ7be2J6wlIn587YOejwcHrBUr+fnkxPWG73/Pb0hKX+OTlb7+jCxtn6J5ytpwEA+B+iBwBIED0AQILoAQASRA8AkCB6AIAE0QMAJIgeACBB9AAACaIHAEgQPQBAgugBABJEDwCQIHoAgATRAwAkiB4AIEH0AAAJogcASBA9AECC6AEAEkQPAJAgegCABNEDACSIHgAgQfQAAAmiBwBIED0AQILoAQASRA8AkCB6AIAE0QMAJIgeACBB9AAACaIHAEgQPQBAgugBABJEDwCQIHoAgATRAwAkiB4AIEH0AAAJogcASBA9AECC6AEAEh58+vGnpjcstbX7yPSEpbb3705PWOrnv3+bnrDU6cW96QlLvf3R+9MTlrr66tXpCUt9+uVn0xOWe/2Zl6YnLPXxLzemJyy1s70zPWEpNz0AQILoAQASRA8AkCB6AIAE0QMAJIgeACBB9AAACaIHAEgQPQBAgugBABJEDwCQIHoAgATRAwAkiB4AIEH0AAAJogcASBA9AECC6AEAEkQPAJAgegCABNEDACSIHgAgQfQAAAmiBwBIED0AQILoAQASRA8AkCB6AIAE0QMAJIgeACBB9AAACaIHAEgQPQBAgugBABJEDwCQIHoAgATRAwAkiB4AIEH0AAAJogcASBA9AECC6AEAEkQPAJAgegCAhP8AwJZTISinQJsAAAAASUVORK5CYII=" id="image91410fa4da" transform="scale(1 -1) translate(0 -161.28)" x="77.76" y="-27.177352" width="412.56" height="161.28"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="96.169091" y="199.48225" transform="rotate(-0 96.169091 199.48225)">2014</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="133.707273" y="199.48225" transform="rotate(-0 133.707273 199.48225)">2015</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="171.245455" y="199.48225" transform="rotate(-0 171.245455 199.48225)">2016</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="208.783636" y="199.48225" transform="rotate(-0 208.783636 199.48225)">2017</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="246.321818" y="199.48225" transform="rotate(-0 246.321818 199.48225)">2018</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="283.86" y="199.48225" transform="rotate(-0 283.86 199.48225)">2019</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="321.398182" y="199.48225" transform="rotate(-0 321.398182 199.48225)">2020</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="358.936364" y="199.48225" transform="rotate(-0 358.936364 199.48225)">2021</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9"/>
+     <g id="text_9">
+      <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="396.474545" y="199.48225" transform="rotate(-0 396.474545 199.48225)">2022</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10"/>
+     <g id="text_10">
+      <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="434.012727" y="199.48225" transform="rotate(-0 434.012727 199.48225)">2023</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_11"/>
+     <g id="text_11">
+      <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="471.550909" y="199.48225" transform="rotate(-0 471.550909 199.48225)">2024</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_12"/>
+     <g id="text_12">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="73.9" y="47.651037" transform="rotate(-0 73.9 47.651037)">S&amp;P 500</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_13"/>
+     <g id="text_13">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="73.9" y="79.806237" transform="rotate(-0 73.9 79.806237)">IHSG</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_14"/>
+     <g id="text_14">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="73.9" y="111.961437" transform="rotate(-0 73.9 111.961437)">MSCI EM</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_15"/>
+     <g id="text_15">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="73.9" y="144.116637" transform="rotate(-0 73.9 144.116637)">Emas</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_16"/>
+     <g id="text_16">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="73.9" y="176.271837" transform="rotate(-0 73.9 176.271837)">Bitcoin</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 452.781818 59.61145 
+L 490.32 59.61145 
+L 490.32 91.76665 
+L 452.781818 91.76665 
+L 452.781818 59.61145 
+z
+" clip-path="url(#pe1603c5212)" style="fill: none; stroke: #a63d40; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="96.169091" y="46.298498" transform="rotate(-0 96.169091 46.298498)">+13,7</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="133.707273" y="46.298498" transform="rotate(-0 133.707273 46.298498)">+1,4</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="171.245455" y="46.298498" transform="rotate(-0 171.245455 46.298498)">+12,0</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="208.783636" y="46.298498" transform="rotate(-0 208.783636 46.298498)">+21,8</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="246.321818" y="46.298498" transform="rotate(-0 246.321818 46.298498)">-4,4</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="283.86" y="46.298498" transform="rotate(-0 283.86 46.298498)">+31,5</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="321.398182" y="46.298498" transform="rotate(-0 321.398182 46.298498)">+18,4</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="358.936364" y="46.298498" transform="rotate(-0 358.936364 46.298498)">+28,7</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="396.474545" y="46.298498" transform="rotate(-0 396.474545 46.298498)">-18,1</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="434.012727" y="46.298498" transform="rotate(-0 434.012727 46.298498)">+26,3</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="471.550909" y="46.298498" transform="rotate(-0 471.550909 46.298498)">+25,0</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="96.169091" y="78.453698" transform="rotate(-0 96.169091 78.453698)">+22,3</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="133.707273" y="78.453698" transform="rotate(-0 133.707273 78.453698)">-12,1</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="171.245455" y="78.453698" transform="rotate(-0 171.245455 78.453698)">+15,3</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="208.783636" y="78.453698" transform="rotate(-0 208.783636 78.453698)">+20,0</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="246.321818" y="78.453698" transform="rotate(-0 246.321818 78.453698)">-2,5</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="283.86" y="78.453698" transform="rotate(-0 283.86 78.453698)">+1,7</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="321.398182" y="78.453698" transform="rotate(-0 321.398182 78.453698)">-5,1</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="358.936364" y="78.453698" transform="rotate(-0 358.936364 78.453698)">+10,1</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="396.474545" y="78.453698" transform="rotate(-0 396.474545 78.453698)">+4,1</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="434.012727" y="78.453698" transform="rotate(-0 434.012727 78.453698)">+6,2</text>
+   </g>
+   <g id="text_38">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #a63d40" x="471.550909" y="78.453698" transform="rotate(-0 471.550909 78.453698)">-2,6</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="96.169091" y="110.608898" transform="rotate(-0 96.169091 110.608898)">-2,2</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="133.707273" y="110.608898" transform="rotate(-0 133.707273 110.608898)">-14,9</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="171.245455" y="110.608898" transform="rotate(-0 171.245455 110.608898)">+11,2</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="208.783636" y="110.608898" transform="rotate(-0 208.783636 110.608898)">+37,3</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="246.321818" y="110.608898" transform="rotate(-0 246.321818 110.608898)">-14,6</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="283.86" y="110.608898" transform="rotate(-0 283.86 110.608898)">+18,4</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="321.398182" y="110.608898" transform="rotate(-0 321.398182 110.608898)">+18,3</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="358.936364" y="110.608898" transform="rotate(-0 358.936364 110.608898)">-2,5</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="396.474545" y="110.608898" transform="rotate(-0 396.474545 110.608898)">-20,1</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="434.012727" y="110.608898" transform="rotate(-0 434.012727 110.608898)">+9,8</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="471.550909" y="110.608898" transform="rotate(-0 471.550909 110.608898)">+7,5</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="96.169091" y="142.764098" transform="rotate(-0 96.169091 142.764098)">-0,2</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="133.707273" y="142.764098" transform="rotate(-0 133.707273 142.764098)">-10,4</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="171.245455" y="142.764098" transform="rotate(-0 171.245455 142.764098)">+8,1</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="208.783636" y="142.764098" transform="rotate(-0 208.783636 142.764098)">+13,1</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="246.321818" y="142.764098" transform="rotate(-0 246.321818 142.764098)">-1,6</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="283.86" y="142.764098" transform="rotate(-0 283.86 142.764098)">+18,3</text>
+   </g>
+   <g id="text_56">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="321.398182" y="142.764098" transform="rotate(-0 321.398182 142.764098)">+25,1</text>
+   </g>
+   <g id="text_57">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="358.936364" y="142.764098" transform="rotate(-0 358.936364 142.764098)">-3,6</text>
+   </g>
+   <g id="text_58">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="396.474545" y="142.764098" transform="rotate(-0 396.474545 142.764098)">-0,3</text>
+   </g>
+   <g id="text_59">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="434.012727" y="142.764098" transform="rotate(-0 434.012727 142.764098)">+13,1</text>
+   </g>
+   <g id="text_60">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="471.550909" y="142.764098" transform="rotate(-0 471.550909 142.764098)">+27,2</text>
+   </g>
+   <g id="text_61">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="96.169091" y="174.919298" transform="rotate(-0 96.169091 174.919298)">-57,6</text>
+   </g>
+   <g id="text_62">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="133.707273" y="174.919298" transform="rotate(-0 133.707273 174.919298)">+34,5</text>
+   </g>
+   <g id="text_63">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="171.245455" y="174.919298" transform="rotate(-0 171.245455 174.919298)">+124</text>
+   </g>
+   <g id="text_64">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="208.783636" y="174.919298" transform="rotate(-0 208.783636 174.919298)">+1369</text>
+   </g>
+   <g id="text_65">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="246.321818" y="174.919298" transform="rotate(-0 246.321818 174.919298)">-73,6</text>
+   </g>
+   <g id="text_66">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="283.86" y="174.919298" transform="rotate(-0 283.86 174.919298)">+92,2</text>
+   </g>
+   <g id="text_67">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="321.398182" y="174.919298" transform="rotate(-0 321.398182 174.919298)">+303</text>
+   </g>
+   <g id="text_68">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="358.936364" y="174.919298" transform="rotate(-0 358.936364 174.919298)">+59,7</text>
+   </g>
+   <g id="text_69">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="396.474545" y="174.919298" transform="rotate(-0 396.474545 174.919298)">-64,3</text>
+   </g>
+   <g id="text_70">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="434.012727" y="174.919298" transform="rotate(-0 434.012727 174.919298)">+155</text>
+   </g>
+   <g id="text_71">
+    <text style="font-size: 7.6px; font-family: 'Inter'; text-anchor: middle; fill: #16233a" x="471.550909" y="174.919298" transform="rotate(-0 471.550909 174.919298)">+121</text>
+   </g>
+   <g id="text_72">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="77.4" y="21.45625" transform="rotate(-0 77.4 21.45625)">Return tahunan (%): hijau = naik, merah = turun (warna dibatasi ±40%)</text>
+   </g>
+  </g>
+  <g id="text_73">
+   <text style="font-size: 7.5px; font-family: 'Inter'; fill: #5b6878" transform="translate(10.8 212.853563)">Sumber: S&amp;P 500 &amp; MSCI EM: total return (buku Vol. 1, cocok dgn data S&amp;P/MSCI); IHSG: BEI/OJK (2024 dikoreksi ke −2,65%); Emas: spot akhir tahun</text>
+   <text style="font-size: 7.5px; font-family: 'Inter'; fill: #5b6878" transform="translate(10.8 221.92827)">(LBMA/JM Bullion, ±1–2 poin antarsumber); Bitcoin: dihitung dari harga penutupan akhir tahun CoinMarketCap</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe1603c5212">
+   <rect x="77.4" y="27.45625" width="412.92" height="160.776"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="602.416719pt" height="283.786922pt" viewBox="0 0 602.416719 283.786922" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T08:30:02.559617</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 283.786922 
+L 602.416719 283.786922 
+L 602.416719 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 144.329609 215.95225 
+L 546.089609 215.95225 
+L 546.089609 27.45625 
+L 144.329609 27.45625 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 175.234225 215.95225 
+L 175.234225 27.45625 
+" clip-path="url(#pfbe030da6f)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mbdf0ffc332" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5b6878; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mbdf0ffc332" x="175.234225" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="175.234225" y="232.155375" transform="rotate(-0 175.234225 232.155375)">−10</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 237.043456 215.95225 
+L 237.043456 27.45625 
+" clip-path="url(#pfbe030da6f)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mbdf0ffc332" x="237.043456" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="237.043456" y="232.155375" transform="rotate(-0 237.043456 232.155375)">−8</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 298.852686 215.95225 
+L 298.852686 27.45625 
+" clip-path="url(#pfbe030da6f)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mbdf0ffc332" x="298.852686" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="298.852686" y="232.155375" transform="rotate(-0 298.852686 232.155375)">−6</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 360.661917 215.95225 
+L 360.661917 27.45625 
+" clip-path="url(#pfbe030da6f)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mbdf0ffc332" x="360.661917" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="360.661917" y="232.155375" transform="rotate(-0 360.661917 232.155375)">−4</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 422.471148 215.95225 
+L 422.471148 27.45625 
+" clip-path="url(#pfbe030da6f)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mbdf0ffc332" x="422.471148" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="422.471148" y="232.155375" transform="rotate(-0 422.471148 232.155375)">−2</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 484.280379 215.95225 
+L 484.280379 27.45625 
+" clip-path="url(#pfbe030da6f)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mbdf0ffc332" x="484.280379" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="484.280379" y="232.155375" transform="rotate(-0 484.280379 232.155375)">0</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 546.089609 215.95225 
+L 546.089609 27.45625 
+" clip-path="url(#pfbe030da6f)" style="fill: none; stroke: #eceff3; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mbdf0ffc332" x="546.089609" y="215.95225" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="546.089609" y="232.155375" transform="rotate(-0 546.089609 232.155375)">2</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: middle; fill: #5b6878" x="345.209609" y="247.650004" transform="rotate(-0 345.209609 247.650004)">saldo fiskal, % PDB (negatif = defisit)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_15">
+      <defs>
+       <path id="m18f7540c55" d="M 0 0 
+L -3.5 0 
+" style="stroke: #5b6878; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m18f7540c55" x="144.329609" y="201.862254" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="137.329609" y="206.463817" transform="rotate(-0 137.329609 206.463817)">Hong Kong (proyeksi 26/27)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m18f7540c55" x="144.329609" y="184.049364" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="137.329609" y="188.650927" transform="rotate(-0 137.329609 188.650927)">Indonesia (proyeksi)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m18f7540c55" x="144.329609" y="166.236475" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="137.329609" y="170.838037" transform="rotate(-0 137.329609 170.838037)">Jerman (2025)</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m18f7540c55" x="144.329609" y="148.423585" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="137.329609" y="153.025147" transform="rotate(-0 137.329609 153.025147)">Rusia (proyeksi tengah)</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m18f7540c55" x="144.329609" y="130.610695" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="137.329609" y="135.212257" transform="rotate(-0 137.329609 135.212257)">India (pusat, target FY27)</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m18f7540c55" x="144.329609" y="112.797805" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="137.329609" y="117.399368" transform="rotate(-0 137.329609 117.399368)">Inggris</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m18f7540c55" x="144.329609" y="94.984915" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="137.329609" y="99.586478" transform="rotate(-0 137.329609 99.586478)">Arab Saudi (revisi)</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m18f7540c55" x="144.329609" y="77.172025" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="137.329609" y="81.773588" transform="rotate(-0 137.329609 81.773588)">Prancis</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m18f7540c55" x="144.329609" y="59.359136" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="137.329609" y="63.960698" transform="rotate(-0 137.329609 63.960698)">AS (FY2026)</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m18f7540c55" x="144.329609" y="41.546246" style="fill: #5b6878; stroke: #5b6878; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 9.5px; font-family: 'Inter'; text-anchor: end; fill: #5b6878" x="137.329609" y="46.147808" transform="rotate(-0 137.329609 46.147808)">China (defisit luas)</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 484.280379 207.38425 
+L 502.823148 207.38425 
+L 502.823148 196.340258 
+L 484.280379 196.340258 
+z
+" clip-path="url(#pfbe030da6f)" style="fill: #3c7a4a"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 484.280379 189.57136 
+L 396.202225 189.57136 
+L 396.202225 178.527369 
+L 484.280379 178.527369 
+z
+" clip-path="url(#pfbe030da6f)" style="fill: #c8811a"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 484.280379 171.75847 
+L 391.566532 171.75847 
+L 391.566532 160.714479 
+L 484.280379 160.714479 
+z
+" clip-path="url(#pfbe030da6f)" style="fill: #c8811a"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 484.280379 153.945581 
+L 360.661917 153.945581 
+L 360.661917 142.901589 
+L 484.280379 142.901589 
+z
+" clip-path="url(#pfbe030da6f)" style="fill: #c8811a"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 484.280379 136.132691 
+L 351.390532 136.132691 
+L 351.390532 125.088699 
+L 484.280379 125.088699 
+z
+" clip-path="url(#pfbe030da6f)" style="fill: #c8811a"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 484.280379 118.319801 
+L 348.300071 118.319801 
+L 348.300071 107.275809 
+L 484.280379 107.275809 
+z
+" clip-path="url(#pfbe030da6f)" style="fill: #c8811a"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 484.280379 100.506911 
+L 332.847763 100.506911 
+L 332.847763 89.462919 
+L 484.280379 89.462919 
+z
+" clip-path="url(#pfbe030da6f)" style="fill: #c8811a"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 484.280379 82.694021 
+L 317.395456 82.694021 
+L 317.395456 71.65003 
+L 484.280379 71.65003 
+z
+" clip-path="url(#pfbe030da6f)" style="fill: #a63d40"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 484.280379 64.881131 
+L 289.581302 64.881131 
+L 289.581302 53.83714 
+L 484.280379 53.83714 
+z
+" clip-path="url(#pfbe030da6f)" style="fill: #a63d40"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 484.280379 47.068242 
+L 199.957917 47.068242 
+L 199.957917 36.02425 
+L 484.280379 36.02425 
+z
+" clip-path="url(#pfbe030da6f)" style="fill: #a63d40"/>
+   </g>
+   <g id="line2d_25">
+    <path d="M 391.566532 215.95225 
+L 391.566532 27.45625 
+" clip-path="url(#pfbe030da6f)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #5b6878; stroke-width: 0.8"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 144.329609 215.95225 
+L 144.329609 27.45625 
+" style="fill: none; stroke: #d5dbe2; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 144.329609 215.95225 
+L 546.089609 215.95225 
+" style="fill: none; stroke: #d5dbe2; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="507.45884" y="204.77241" transform="rotate(-0 507.45884 204.77241)">+0,6</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: end; fill: #16233a" x="391.566532" y="186.959521" transform="rotate(-0 391.566532 186.959521)">-2,9</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: end; fill: #16233a" x="386.93084" y="169.146631" transform="rotate(-0 386.93084 169.146631)">-3,0</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: end; fill: #16233a" x="356.026225" y="151.333741" transform="rotate(-0 356.026225 151.333741)">-4,0</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: end; fill: #16233a" x="346.75484" y="133.520851" transform="rotate(-0 346.75484 133.520851)">-4,3</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: end; fill: #16233a" x="343.664379" y="115.707961" transform="rotate(-0 343.664379 115.707961)">-4,4</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: end; fill: #16233a" x="328.212071" y="97.895072" transform="rotate(-0 328.212071 97.895072)">-4,9</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: end; fill: #16233a" x="312.759763" y="80.082182" transform="rotate(-0 312.759763 80.082182)">-5,4</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: end; fill: #16233a" x="284.945609" y="62.269292" transform="rotate(-0 284.945609 62.269292)">-6,3</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: end; fill: #16233a" x="195.322225" y="44.456402" transform="rotate(-0 195.322225 44.456402)">-9,2</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 7px; font-family: 'Inter'; text-anchor: start; fill: #5b6878" x="393.111763" y="35.311734" transform="rotate(-0 393.111763 35.311734)">batas 3% (UU Keuangan Negara RI / Maastricht)</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'Inter'; text-anchor: start; fill: #16233a" x="144.329609" y="21.45625" transform="rotate(-0 144.329609 21.45625)">Defisit fiskal 2026: negara maju lebih boros dari batas aman</text>
+   </g>
+  </g>
+  <g id="text_31">
+   <text style="font-size: 7.5px; font-family: 'Inter'; fill: #5b6878" transform="translate(79.529609 262.103133)">Sumber: CBO/Treasury; CRS (China); Kemenkeu Prancis; Kemenkeu Saudi; House of Commons Library; PRS India; Reuters (Rusia 3,5–4,4%); ifo;</text>
+   <text style="font-size: 7.5px; font-family: 'Inter'; fill: #5b6878" transform="translate(79.529609 271.17784)">Kemenkeu RI (Purbaya); Pemerintah HK</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pfbe030da6f">
+   <rect x="144.329609" y="27.45625" width="401.76" height="188.496"/>
+  </clipPath>
+ </defs>
+</svg>
