@@ -16,6 +16,11 @@ Rupiah sedang berada di **level terlemah sepanjang sejarah nominal**:
 2. **Kebijakan moneter AS ketat:** Fed menaikkan suku bunga dan yield UST 10 tahun ±5%.
 3. **Kredibilitas pasar modal:** **MSCI (15 Okt 2026) mengusulkan Indonesia diturunkan dari Emerging Market langsung ke "Standalone"** karena opasitas struktur kepemilikan dan dugaan perdagangan terkoordinasi. **IHSG anjlok 11,6% dalam sehari (16 Okt), terburuk sejak Januari 1998**, kehilangan ±$65 miliar nilai. Keputusan final sebelum 30 Juni 2027.
 
+**Pembaruan terverifikasi (26 Okt 2026):**
+- **Defisit transaksi berjalan Q2 2026: $12,5 miliar (3,3% PDB)**, rekor nominal sejak 2004, melampaui Q2 2013 (masa *taper tantrum*). Pemicunya impor minyak mahal dan surplus nonmigas yang menyempit. Neraca pembayaran total tetap defisit $0,9 miliar.
+- IHSG ±5.388 (22 Okt), ±−37% sejak awal tahun; asing jual bersih ±Rp88 triliun sejak awal 2026.
+- Inflasi 3,28% (Sep) sehingga suku bunga riil BI ±2,5%. Selisih BI-Rate vs Fed hanya ±1,75–2 poin, sempit secara historis.
+
 ## 1. Sejarah rupiah
 
 | Periode | Peristiwa |
@@ -83,3 +88,6 @@ Dalio membagi negara berdasarkan **utang dalam mata uang sendiri vs mata uang as
 - [The Diplomat – Indonesian stock exchange plunges after MSCI threat](https://thediplomat.com/2026/10/indonesian-stock-exchange-plunges-after-fresh-msci-downgrade-threat/)
 - [US News/Reuters – Indonesia gets a wake-up call (15 Okt 2026)](https://money.usnews.com/investing/news/articles/2026-10-15/indonesia-gets-a-wake-up-call-as-msci-prepares-to-expel-it-from-global-indexes)
 - [Wikipedia – 2026 Iran war fuel crisis (data Indonesia)](https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis)
+- [Bank Indonesia – Balance of Payment Q2 2026](https://www.bi.go.id/en/publikasi/laporan/Documents/Balance-of-Payment-Q2-2026.pdf)
+- [Trading Economics – Indonesia posts record current account deficit](https://tradingeconomics.com/indonesia/current-account/news/577077)
+- [RRI – IHSG ditutup 5.387,9 (22 Okt 2026)](https://rri.co.id/ekonomi/keuangan/2833817/ihsg-ditutup-menguat-5954-poin-ke-level-53879)

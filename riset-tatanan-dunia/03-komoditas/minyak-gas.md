@@ -17,7 +17,7 @@ Sebelum perang Iran, pasar minyak **diperkirakan surplus** pada 2026. OPEC+ mena
 | Akhir Jul (gencatan runtuh) | >$100 |
 | Agustus | $87–97 |
 | Sep | ±$109 |
-| **Okt** | **±$110–117** (22 Okt, setelah klaim serangan 7 tanker) |
+| **Okt** | **Settle $116,72 (Jumat 23 Okt)**, tertinggi sejak 29 April, +6% dalam sepekan; WTI $103,27. Pemicu: serangan di dalam Arab Saudi, klaim IRGC soal 7 tanker, ekspektasi serangan ulang AS. Senin 26 Okt turun ke ±$114–115 setelah mediator Qatar ke Teheran |
 
 **Gas/LNG:** serangan ke **Ras Laffan (Qatar)** memangkas ±17% kapasitas LNG Qatar dengan perbaikan 3–5 tahun. Harga LNG spot Asia +140% (Maret). TTF Eropa >€60/MWh (Maret) dan **tertinggi sejak Des 2022 pada 20 Okt 2026**.
 
@@ -58,7 +58,7 @@ Sebelum perang Iran, pasar minyak **diperkirakan surplus** pada 2026. OPEC+ mena
 ## 3. Korelasi
 
 - **Minyak dan inflasi:** CPI AS 3,7%, zona euro 3,8%, India 5,54%, sehingga bank sentral menaikkan suku bunga dan muncul stagflasi.
-- **Minyak dan mata uang importir:** yen ¥164 dan rupiah Rp18.000. Mata uang eksportir (NOK, CAD) relatif kuat.
+- **Minyak dan mata uang importir:** yen ¥164 dan rupiah Rp18.000. Mata uang eksportir (NOK, CAD) relatif kuat. Defisit transaksi berjalan Indonesia mencetak rekor $12,5 miliar (3,3% PDB) pada Q2 2026, terutama karena impor minyak.
 - **Minyak dan fiskal:** subsidi energi membengkak (Indonesia ±2×, India) dan protes muncul (Prancis, Irlandia, Kenya).
 - **Minyak dan pangan:** pupuk (urea +80% Feb–Apr 2026 ke >$850/ton) dan biaya angkut. Lihat [Pangan & Pupuk](pangan-pupuk.md).
 - **Minyak dan petrodolar:** penjualan minyak Rusia dan Iran ke China dalam yuan; Saudi menerima yuan untuk sebagian penjualan. Tetapi **minyak sebagian besar tetap dihargai dalam USD**.
@@ -93,3 +93,6 @@ Dalio memasukkan **"tindakan alam"** dan **akses ke sumber daya** sebagai kekuat
 - [FinanceFeeds – Nasdaq drop as oil hits $116](https://financefeeds.com/nasdaq-today-26008-after-a-2-6-drop-as-oil-hits-116-and-the-10-year-tests-5/)
 - [Wikipedia – 2026 French fuel protests (rilis G7 100 juta barel)](https://en.wikipedia.org/wiki/2026_French_fuel_protests)
 - [Al Jazeera – US refineries take half of Venezuela's oil](https://www.aljazeera.com/news/2026/8/19/venezuela-oil-exports-surge-with-us-refineries-taking-in-half-of-output)
+- [CNBC – Brent tops $116, a six-month high (23 Okt 2026)](https://www.cnbc.com/2026/10/23/oil-price-brent-wti-iran-war-saudi-arabia.html)
+- [FinanceFeeds – Brent settles at $116.72 after Houthi strikes on Saudi Arabia](https://financefeeds.com/wti-crude-tops-103-and-brent-settles-at-116-72-after-houthi-strikes-on-saudi-arabia-the-oil-setup-for-fed-week/)
+- [Vantage – Brent $115.16 after a 6% weekly gain (26 Okt 2026)](https://www.vantagemarkets.com/market-news/brent-crude-oil-price-today-after-6-percent-weekly-gain-october-26-2026/)

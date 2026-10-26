@@ -15,7 +15,10 @@
 | BI-Rate | 5,75% (ditahan Okt 2026) |
 | Rupiah | ±Rp18.000/USD (rekor terlemah) |
 | Cadangan devisa | $146,3 miliar (Sep 2026) |
-| IHSG | **−11,6% pada 16 Okt 2026** (MSCI) |
+| IHSG | **−11,6% pada 16 Okt 2026** (MSCI; perdagangan sempat dihentikan); **5.387,9** (22 Okt) vs puncak ±8.640 (Des 2025), sehingga **±−37% YTD** |
+| Arus asing di saham | **Jual bersih ±Rp88 triliun** sejak awal 2026 |
+| **Transaksi berjalan** | **Defisit $12,5 miliar (3,3% PDB) pada Q2 2026, rekor sejak 2004**, karena impor minyak mahal; Q1: −1,0% PDB. BI memperkirakan setahun 0,5–1,3% PDB |
+| Inflasi | **3,28%** yoy (Sep 2026), inti 2,84%; pendorong terbesar: perhiasan emas dan bensin |
 | Yield SBN 10 tahun | ±7,2% |
 
 ## 1. Dari mana pendapatan Indonesia?
@@ -32,7 +35,7 @@
 
 ## 2. Ke mana belanjanya?
 
-- **Makan Bergizi Gratis (MBG):** ±**Rp268–335 triliun** pada 2026 (sumber berbeda), naik dari ±Rp71 triliun pada 2025. Program terbesar Prabowo.
+- **Makan Bergizi Gratis (MBG):** pagu awal **Rp335 triliun** (Rp268 triliun di BGN + Rp67 triliun cadangan BA BUN), kemudian **diturunkan menjadi Rp268 triliun**. Banggar DPR memperkirakan efisiensi Rp40–80 triliun. Realisasi Rp88,15 triliun per 31 Mei 2026 untuk 63,13 juta penerima lewat 29.670 dapur. Naik dari ±Rp71 triliun pada 2025. Program terbesar Prabowo. *(diverifikasi ulang 26 Okt 2026)*
 - **Subsidi energi** (BBM, LPG, listrik) dan pupuk: **±2× lipat** pada 2026 akibat minyak >$100.
 - Bunga utang (±Rp550 triliun+), transfer ke daerah (dipotong untuk membiayai program pusat), pertahanan, Koperasi Desa Merah Putih, 3 juta rumah, food estate.
 - **APBN 2027 (disahkan 29 Sep 2026):** belanja ±Rp4.100 triliun, pendapatan ±Rp3.400 triliun, defisit 2,4% PDB, target pertumbuhan 6%.
@@ -52,6 +55,8 @@
 - Jika minyak bertahan >$97 dan rupiah ±Rp17.300, defisit bisa **3,5% PDB** (Kompas), sehingga **melanggar UU** kecuali UU diubah atau ada Perppu.
 - Jalan keluar yang mungkin: **(a)** menaikkan rasio pajak (Coretax, perluasan basis, cukai baru), **(b)** memangkas atau menyesuaikan subsidi BBM (secara politik berat; ingat protes Agustus 2025), **(c)** memangkas MBG atau transfer daerah, **(d)** mengubah batas defisit 3% (risiko kredibilitas besar), atau **(e)** *burden sharing* dengan BI (risiko inflasi dan rupiah).
 - **MSCI** adalah peringatan bahwa investor global **mempertanyakan tata kelola**: kepemilikan saham yang tidak transparan, *free float* rendah, dugaan perdagangan terkoordinasi. Batas waktu reformasi 30 April 2027; keputusan sebelum 30 Juni 2027.
+- **Defisit kembar muncul kembali.** Dengan defisit transaksi berjalan rekor (3,3% PDB pada Q2 2026) **dan** defisit APBN mendekati 3%, Indonesia kembali bergantung pada modal asing, persis kondisi "Fragile Five" 2013. Bedanya, kali ini modal asing **sedang keluar** (jual bersih saham ±Rp88 triliun). Inilah yang membuat rupiah dan IHSG jatuh ke level terburuk dalam beberapa tahun **tanpa** adanya krisis global besar.
+- **Pelajaran penting:** Indonesia **bukan** otomatis diuntungkan oleh lonjakan komoditas. Indonesia mengekspor batu bara, CPO, dan nikel, tetapi **mengimpor bersih minyak, LPG, dan gandum**. Shock 2022 (batu bara dan CPO) menguntungkan; shock 2026 (minyak, LPG, pupuk) merugikan. Lihat [tinjauan buku eksternal](../07-tinjauan-eksternal/geopolitics-for-dummies-vol1.md#d-komoditas-naik--indonesia-naik).
 
 ## 5. Posisi dalam tatanan dunia
 
@@ -102,3 +107,13 @@ Dalam kerangka Dalio, Indonesia adalah **negara berkembang dengan fondasi relati
 - [The Diplomat – Prabowo accuses MSCI of intimidation](https://thediplomat.com/2026/10/prabowo-accuses-msci-of-attempting-to-intimidate-indonesia-after-downgrade-threat/)
 - [ANTARA – MSCI report does not reflect RI's fundamentals: Minister](https://en.antaranews.com/news/437463/msci-report-does-not-reflect-ris-economic-fundamentals-minister)
 - [MSCI – Indonesia consultation document](https://www.msci.com/downloads/documents/indexes/consultations/equity/Indonesia_Consultation_Oct_26.pdf)
+- [Bank Indonesia – Balance of Payment Q2 2026](https://www.bi.go.id/en/publikasi/laporan/Documents/Balance-of-Payment-Q2-2026.pdf)
+- [Trading Economics – Indonesia posts record current account deficit](https://tradingeconomics.com/indonesia/current-account/news/577077)
+- [Jakarta Post – External debt rises, current account deficit widens (5 Sep 2026)](https://www.thejakartapost.com/opinion/2026/09/05/analysis-external-debt-rises-current-account-deficit-widens)
+- [Kontan – Inflasi September 2026 3,28%](https://insight.kontan.co.id/news/inflasi-september-2026-naik-jadi-328-harga-pangan-dan-emas-jadi-pendorong)
+- [RRI – IHSG ditutup menguat ke 5.387,9 (22 Okt 2026)](https://rri.co.id/ekonomi/keuangan/2833817/ihsg-ditutup-menguat-5954-poin-ke-level-53879)
+- [Kabarbursa – Pelemahan dinilai mulai terbatas (jual bersih asing YTD)](https://www.kabarbursa.com/market-hari-ini/pelemahan-dinilai-mulai-terbatas-simak-arah-ihsg-hari-ini)
+- [Investortrust – Pemerintah cadangkan Rp67 triliun dari anggaran MBG](https://investortrust.id/macro/76428/pemerintah-cadangkan-rp-67-triliun-dari-anggaran-mbg)
+- [Bisnis – Banggar: efisiensi anggaran MBG 2026 bisa Rp80 triliun](https://ekonomi.bisnis.com/read/20260707/10/1986334/banggar-dpr-sebut-efisiensi-anggaran-mbg-2026-bisa-mencapai-rp80-triliun)
+- [Infobank – Program MBG serap Rp88,15 triliun hingga Mei](https://infobanknews.com/program-mbg-serap-rp8815-triliun-hingga-mei-ini-jumlah-penerima-manfaatnya)
+- Tinjauan eksternal: [Geopolitics for Dummies Vol. 1](../07-tinjauan-eksternal/geopolitics-for-dummies-vol1.md)

@@ -11,11 +11,14 @@ Negara Teluk adalah **pilar petrodolar** sejak 1974 dan **pemodal besar dunia** 
 | Indikator | 2026 |
 |---|---|
 | Defisit APBN (rencana) | SAR 165 miliar (±$44 miliar) |
-| **Defisit (revisi pra-APBN 2027)** | **SAR 245 miliar (±$65 miliar)**; PDB riil diproyeksi **−3,6%** (satu sumber; IMF Juli: +1,7%) |
+| **Defisit (revisi resmi, Pernyataan Pra-APBN 2027, 30 Sep 2026)** | **SAR 245 miliar (4,9% PDB; ±$65 miliar)**, vs anggaran SAR 165 miliar (3,3%). **PDB riil 2026: −3,6%** (aktivitas minyak **−21,8%**, nonminyak +3,2%). Pendapatan 3,7% di atas anggaran, belanja 9,3% di atas *(terverifikasi: Kemenkeu Saudi via Reuters/Zawya, MEED, AGSI)* |
+| Proyeksi 2027 | Defisit SAR 191 miliar (3,6% PDB); belanja SAR 1,39 triliun, pendapatan SAR 1,20 triliun; PDB riil diproyeksi **rebound +12,8%** |
 | Defisit Q1 | SAR 125,7 miliar (belanja +20%, pendapatan minyak −3%) |
 | Harga minyak *breakeven* fiskal (IMF) | ±$86,6/barel (2026) |
 | Rencana pinjaman 2026 | SAR 217 miliar; Saudi termasuk **penerbit utang EM terbesar** |
 | Megaproyek | NEOM dan Mukaab dipangkas atau ditunda; kontrak NEOM ±$6,85 miliar dibatalkan (Mar 2026); PIF memangkas belanja ≥20% |
+
+**Perkembangan 23–26 Okt 2026:** Departemen Luar Negeri AS memerintahkan staf nonesensial meninggalkan Arab Saudi, dan Saudi Aramco dilaporkan meminta staf di kantor pusat Dhahran bekerja jarak jauh setelah serangkaian serangan. Houthi mengklaim serangan ke fasilitas di Yanbu dan Rabigh (belum dikonfirmasi Saudi). Mediator Qatar ke Teheran (26 Okt) untuk meredakan ketegangan.
 
 **Paradoks:** harga minyak tinggi, tetapi **volume ekspor terganggu** (Hormuz) dan biaya pertahanan melonjak. Bypass lewat pipa East-West ke Yanbu (Laut Merah) **diancam Houthi**. Pendapatan Saudi bergantung pada **dividen Aramco** (±$71 miliar bagian pemerintah dari ±$87,6 miliar).
 
@@ -58,3 +61,9 @@ Teluk adalah **"penentu keseimbangan" energi dan modal**. Mereka memegang kunci 
 - [CNBC – UAE economy, travel and tourism hit by war (22 Apr 2026)](https://www.cnbc.com/2026/04/22/uae-economy-travel-tourism-dubai-abu-dhabi-war.html)
 - [Al Jazeera – Iran war wipes $120bn off Dubai, Abu Dhabi markets](https://www.aljazeera.com/economy/2026/3/31/iran-war-wipes-120bn-off-dubai-abu-dhabi-stock-markets)
 - [Wikipedia – 2026 Iran war](https://en.wikipedia.org/wiki/2026_Iran_war)
+- [Zawya/Reuters – Saudi Arabia estimates fiscal deficit of 3.6% of GDP in 2027](https://www.zawya.com/en/economy/saudi-arabia-estimates-fiscal-deficit-of-3.6-of-gdp-in-2027-finance-ministry-says-1459338)
+- [MEED – Saudi pre-budget leans on borrowing](https://guest.meed.com/?p=18074)
+- [AGSI – Saudi fiscal deficit to be larger than budgeted in 2026](https://agsi.org/analysis/saudi-fiscal-deficit-to-be-larger-than-budgeted-in-2026/)
+- [Zawya – Fitch: pre-budget statement flags Iran war fiscal pressures](https://www.zawya.com/en/economy/fitch-says-saudi-arabias-2027-pre-budget-statement-flags-iran-war-fiscal-pressures-1509899)
+- [CNBC – Brent tops $116, six-month high (23 Okt 2026)](https://www.cnbc.com/2026/10/23/oil-price-brent-wti-iran-war-saudi-arabia.html)
+- [FinanceFeeds – Brent after Houthi claims on Yanbu and Rabigh](https://financefeeds.com/brent-crude-oil-price-114-60-monday-after-houthi-yanbu-claims-fed-week-bull-120-bear-108/)

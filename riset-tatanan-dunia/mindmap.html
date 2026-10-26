@@ -96,7 +96,7 @@ footer { font-size: 12.5px; color: var(--ink-soft); }
     <div>
       <div class="stamp">Atlas riset · data per 26 Okt 2026 · kerangka Ray Dalio</div>
       <h1>Peta Tatanan Dunia 2026</h1>
-      <p class="lede">Delapan tema dan 52 topik riset: mata uang, aset digital, komoditas, obligasi, negara, konflik, dan arah smart money. Klik sebuah topik untuk ringkasan dan angka kuncinya, atau klik tema untuk membuka/menutup cabangnya.</p>
+      <p class="lede">Delapan tema dan 53 topik riset: mata uang, aset digital, komoditas, obligasi, negara, konflik, dan arah smart money. Klik sebuah topik untuk ringkasan dan angka kuncinya, atau klik tema untuk membuka/menutup cabangnya.</p>
     </div>
     <div class="tools">
       <label for="q" class="stamp">Cari</label>
@@ -129,6 +129,7 @@ const CATS = [
     items: [
       { label: "Siklus Besar Dalio", file: "00-kerangka/kerangka-dalio.md", summary: "Lima kekuatan, enam tahap siklus internal, delapan ukuran kekuatan. AS, Inggris, dan Prancis berada di tahap 5: keuangan buruk, konflik intens.", figs: [["Defisit AS vs resep Dalio", "6,3% vs 3% PDB"], ["Porsi USD di cadangan", "56,7%"], ["Porsi CNY di cadangan", "2,1%"]] },
       { label: "Sintesis: siapa pengganti AS", file: "00-kerangka/sintesis-tatanan-dunia.md", summary: "Tidak ada satu pengganti dalam 5–10 tahun. Dunia menjadi multipolar dan emas menjadi jangkar kepercayaan. Skenario dasar: multipolar keruh dengan inflasi struktural 3–4%.", figs: [["Multipolar keruh", "±55%"], ["Kebangkitan teknologi", "±20%"], ["Krisis transisi", "±25%"]] },
+      { label: "Tinjauan: Geopolitics for Dummies", file: "07-tinjauan-eksternal/geopolitics-for-dummies-vol1.md", summary: "Buku BlackQoral: kerangka berpikirnya berguna, tetapi banyak kesalahan data dan sudah usang. Base case untuk Indonesia sudah jebol karena dua saluran yang tidak dimodelkan: shock minyak dan risiko tata kelola domestik.", figs: [["Kesalahan data terverifikasi", "15"], ["IHSG base case buku", "8.000–10.000"], ["IHSG realita 22 Okt", "5.387,9"], ["USD/IDR realita", "±18.000"]] },
       { label: "Rantai korelasi", file: "00-kerangka/sintesis-tatanan-dunia.md", summary: "Perang memicu shock energi, lalu inflasi, kenaikan suku bunga, lonjakan yield, krisis fiskal, dan protes. Sanksi mendorong bank sentral ke emas.", figs: [["Brent puncak 2026", "±$126"], ["UST 10 tahun puncak", "5,36%"]] }
     ] },
   { id: "fx", label: "Mata Uang", color: "--c-fx", file: "01-mata-uang/dolar-as.md",
@@ -154,7 +155,7 @@ const CATS = [
   { id: "cmd", label: "Komoditas", color: "--c-cmd", file: "03-komoditas/emas.md",
     summary: "Shock energi terbesar dalam sejarah, emas diborong bank sentral, dan mineral kritis menjadi minyak baru.",
     items: [
-      { label: "Emas", file: "03-komoditas/emas.md", summary: "Rekor ±$5.600 (29 Jan 2026), crash 10% saat Warsh dinominasikan, lalu ±$4.100 pada Oktober. Bank sentral membeli rekor.", figs: [["Pembelian bank sentral Q2", "289 ton"], ["Harga Okt", "±$4.000–4.200"]] },
+      { label: "Emas", file: "03-komoditas/emas.md", summary: "Rekor ±$5.595 (29 Jan 2026), crash 10% saat Warsh dinominasikan, titik terendah ±$3.995 (Juni), lalu ±$4.100 pada Oktober. Bank sentral membeli rekor.", figs: [["Pembelian bank sentral Q2", "289 ton"], ["Harga Okt", "±$4.000–4.200"]] },
       { label: "Perak", file: "03-komoditas/perak.md", summary: "Lonjakan ke ±$115–120 lalu crash ±30% dalam sehari (30 Jan). Defisit pasokan tahun keenam; China memberlakukan lisensi ekspor.", figs: [["Rentang 2026", "±$75–85"], ["Defisit 2026", "±46 juta oz"]] },
       { label: "Minyak & Gas", file: "03-komoditas/minyak-gas.md", summary: "IEA: gangguan pasokan terbesar dalam sejarah. LNG Qatar terpukul jangka panjang. SPR AS terendah sejak 1982.", figs: [["Brent Okt", "±$110–117"], ["Aliran Hormuz", "±82% normal"]] },
       { label: "Tembaga, nikel, rare earth", file: "03-komoditas/logam-industri-mineral-kritis.md", summary: "Tembaga rekor karena AI dan jaringan listrik. Indonesia memangkas kuota nikel. China memakai rare earth sebagai senjata dagang.", figs: [["Tembaga LME rekor", "$14.875/t"], ["Kuota RKAB nikel", "±250–270 jt t"]] },
@@ -175,7 +176,7 @@ const CATS = [
       { label: "Amerika Serikat", file: "05-negara/amerika-serikat.md", summary: "Defisit masa damai $2 triliun, bunga utang melampaui pertahanan. MA membatalkan tarif IEEPA. Taruhan pada AI.", figs: [["Defisit FY26", "$1,99 T"], ["Pengangguran", "4,2%"], ["CPI", "3,7%"]] },
       { label: "China", file: "05-negara/china.md", summary: "Ekspor melonjak, domestik lesu: properti −20,6%, investasi −7,2%. Risiko Jepangifikasi.", figs: [["PDB Q3", "4,5%"], ["Ekspor Sep", "+36,3%"], ["Defisit luas", "±9,2% PDB"]] },
       { label: "Jepang", file: "05-negara/jepang.md", summary: "Kreditur terbesar dunia dengan utang terbesar G7. Inflasi menggerus utang, yen melemah.", figs: [["BOJ", "1,25%"], ["Pajak makanan (Apr 2027)", "8% → 1%"]] },
-      { label: "Indonesia", file: "05-negara/indonesia.md", summary: "Rasio pajak ±10% vs ambisi belanja besar (MBG, subsidi). MSCI mengancam penurunan status ke Standalone.", figs: [["PDB Q2", "5,29%"], ["Defisit 2026", "±2,85% PDB"], ["IHSG 16 Okt", "−11,6%"]] },
+      { label: "Indonesia", file: "05-negara/indonesia.md", summary: "Rasio pajak ±10% vs ambisi belanja besar (MBG, subsidi). Defisit kembar kembali: transaksi berjalan rekor karena impor minyak. MSCI mengancam penurunan status ke Standalone.", figs: [["PDB Q2", "5,29%"], ["Defisit APBN 2026", "±2,85% PDB"], ["Transaksi berjalan Q2", "−3,3% PDB"], ["IHSG YTD", "±−37%"]] },
       { label: "Inggris", file: "05-negara/inggris.md", summary: "Defisit kembar, pajak menuju tertinggi sejak Perang Dunia II, Reform UK memimpin survei.", figs: [["Defisit", "±4,4% PDB"], ["Bank Rate", "3,75%"]] },
       { label: "Jerman", file: "05-negara/jerman.md", summary: "Model ekspor patah (energi Rusia, pasar China). Taruhan stimulus €500 miliar dan pertahanan 3,5% PDB.", figs: [["Pertumbuhan 2026 (ifo)", "1,4%"], ["Defisit 2028", "4,6% PDB"]] },
       { label: "Prancis", file: "05-negara/prancis.md", summary: "Pemangkasan bertemu jalanan: kerusuhan BBM 17 dan 24 Oktober. Pajak sudah ±46% PDB; Pilpres 2027 menjadi titik penentu.", figs: [["Defisit", "5,4% PDB"], ["Utang", "119,3% PDB"], ["Penghematan 2027", "€54 M"]] },
@@ -184,7 +185,7 @@ const CATS = [
       { label: "Hong Kong", file: "05-negara/hong-kong.md", summary: "Kembali menjadi jendela modal China: boom IPO, arus Southbound, hub stablecoin dan emas.", figs: [["IPO H1 2026", "HK$210 M"], ["Cadangan fiskal", "HK$678 M"]] },
       { label: "Rusia", file: "05-negara/rusia.md", summary: "Ekonomi perang kehabisan bantalan: defisit melampaui target, NWF menipis, India berhenti membeli minyak.", figs: [["Defisit Jan–Sep", "₽5,2 T"], ["Suku bunga", "14%"]] },
       { label: "India", file: "05-negara/india.md", summary: "Ekonomi besar tercepat. Kesepakatan dagang dengan AS: tarif 18% dengan imbalan berhenti membeli minyak Rusia.", figs: [["PDB Q1 FY27", "7,8%"], ["Repo RBI", "5,50%"]] },
-      { label: "Arab Saudi & UEA", file: "05-negara/arab-saudi-uea.md", summary: "Pilar petrodolar yang diserang langsung. Saudi berutang dan memangkas NEOM; Dubai menyusut.", figs: [["Breakeven Saudi", "$86,6/bbl"], ["Dubai H1 2026", "−2,3%"]] },
+      { label: "Arab Saudi & UEA", file: "05-negara/arab-saudi-uea.md", summary: "Pilar petrodolar yang diserang langsung. Saudi berutang dan memangkas NEOM; Dubai menyusut.", figs: [["Defisit Saudi 2026", "4,9% PDB"], ["PDB riil Saudi 2026", "−3,6%"], ["Dubai H1 2026", "−2,3%"]] },
       { label: "Swiss", file: "05-negara/swiss.md", summary: "Benteng kekayaan netral: farmasi, perbankan swasta, pemurnian emas. Rentan tarif farmasi AS.", figs: [["Tarif AS", "15%"], ["SNB", "0%"]] }
     ] },
   { id: "conflict", label: "Konflik", color: "--c-conflict", file: "06-konflik/iran-israel-as-hormuz.md",
@@ -208,7 +209,7 @@ const CATS = [
       { label: "Ritel EM ke stablecoin", file: "02-aset-digital/stablecoin.md", summary: "Warga negara berinflasi tinggi memegang dolar digital: dedolarisasi di tingkat negara, dolarisasi di tingkat rakyat.", figs: [["Stablecoin", "±$300 M"]] },
       { label: "Modal China ke Hong Kong", file: "05-negara/hong-kong.md", summary: "Taruhan pada AI dan teknologi China lewat saham dan IPO Hong Kong.", figs: [["Southbound Feb–Agu", "HK$214,7 M"]] },
       { label: "Orang kaya ke Swiss & Singapura", file: "05-negara/singapura.md", summary: "Mencari yurisdiksi netral dan disiplin. Dubai terpukul perang.", figs: [["Franc & SGD", "relatif kuat"]] },
-      { label: "Asing keluar dari Indonesia", file: "05-negara/indonesia.md", summary: "Ancaman MSCI soal tata kelola memicu aksi jual terburuk sejak 1998.", figs: [["IHSG 16 Okt", "−11,6%"], ["Nilai hilang", "±$65 M"]] }
+      { label: "Asing keluar dari Indonesia", file: "05-negara/indonesia.md", summary: "Ancaman MSCI soal tata kelola memicu aksi jual terburuk sejak 1998.", figs: [["IHSG 16 Okt", "−11,6%"], ["Jual bersih asing YTD", "±Rp88 T"]] }
     ] }
 ];
 
@@ -247,7 +248,7 @@ function showDetail(node) {
 function rootNode() {
   return { key: "root", label: "Tatanan Dunia 2026", kicker: "Gambaran besar", file: "README.md",
     summary: "Tatanan pimpinan AS menua; China terkekang; dunia menjadi multipolar; emas menjadi aset netral pilihan bank sentral. Mulai dari file Sintesis.",
-    figs: [["Defisit AS FY26", "$1,99 T"], ["Brent Okt", "±$110–117"], ["Emas rekor", "±$5.600"], ["Porsi USD cadangan", "56,7%"]] };
+    figs: [["Defisit AS FY26", "$1,99 T"], ["Brent (23 Okt)", "$116,72"], ["Emas rekor", "±$5.595"], ["Porsi USD cadangan", "56,7%"]] };
 }
 
 function matches(text) {

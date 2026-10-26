@@ -9,9 +9,11 @@ Kalau ada **satu tempat di mana "smart money" negara-negara paling jelas terliha
 
 **Perjalanan harga yang luar biasa:**
 - ±$1.800 (akhir 2022), ±$2.600 (akhir 2024), ±$4.300 (akhir 2025)
-- **Rekor ±$5.600/oz (29 Januari 2026)**
+- **Rekor ±$5.595/oz intraday (29 Januari 2026)**; fix LBMA AM hari itu $5.501,70 *(diverifikasi ulang 26 Okt 2026; sumber berbeda menyebut $5.589–5.602 dan sebagian menempatkannya pada 28 Januari)*
 - **30 Januari 2026: crash ±10% dalam sehari** (perak ±−30%), penurunan harian terburuk sejak 1980, setelah Trump menominasikan **Kevin Warsh** (dianggap *hawkish*) sebagai Ketua Fed. Pasar sebelumnya bertaruh pada Ketua Fed "jinak" (Hassett) dan *debasement* agresif.
+- **Titik terendah: harga LBMA ±$3.994,50 (akhir Juni 2026)**, ±27% di bawah puncak Januari.
 - Setelah itu emas berfluktuasi. Pada **Oktober 2026 di kisaran $4.000–4.200**, ditekan Fed yang menaikkan suku bunga, yield UST 10 tahun ±5%, dan dolar yang menguat. Pekan terburuk 2026 terjadi pada Oktober.
+- **Dalam rupiah**, emas tetap naik tinggi karena rupiah melemah. Perhiasan emas adalah **penyumbang inflasi tahunan terbesar Indonesia** pada September 2026 (0,44 poin persentase dari 3,28%; BPS via Kontan).
 
 **Tetapi bank sentral terus membeli:** Q2 2026 **289 ton** (+62% yoy, rekor untuk kuartal kedua), September ±63 ton (tertinggi bulanan sejak Nov 2024). Analis (dikutip FT) memperkirakan rekor harga baru dalam 2 tahun. ETF emas AS mencatat arus masuk $11,7 miliar pada Q3 2026.
 
@@ -96,4 +98,7 @@ Dalio adalah salah satu pendukung emas paling vokal: "*If you don't own gold, yo
 - [Money.org – Precious metals prices plummet after Fed chair announcement](https://readingroom.money.org/precious-metals-prices-plummet-after-fed-chair-announcement/)
 - [MarketMinute – The Warsh shock: historic silver and gold collapse](https://business.minstercommunitypost.com/minstercommunitypost/article/marketminute-2026-2-17-the-warsh-shock-historic-silver-and-gold-collapse-signals-a-new-era-for-federal-reserve-independence)
 - [Hvylya – The Warsh effect: gold and crypto crash](https://en.hvylya.net/news/415-the-warsh-effect-gold-and-crypto-crash-as-trump-taps-hawk-for-fed)
+- [MetalsMine – Gold's volatile quarter: from record highs (rekor, fix LBMA, titik terendah Juni)](https://www.metalsmine.com/news/1400998-golds-volatile-quarter-from-record-highs-to-structural)
+- [SunSirs – Gold prices continued to surge on January 29th](https://www.sunsirs.com/uk/detail_news-30214.html)
+- [Kontan – Inflasi September 2026 3,28%, harga pangan dan emas pendorong](https://insight.kontan.co.id/news/inflasi-september-2026-naik-jadi-328-harga-pangan-dan-emas-jadi-pendorong)
 - Ray Dalio, *Principles for Dealing with the Changing World Order*; *How Countries Go Broke* (2025)

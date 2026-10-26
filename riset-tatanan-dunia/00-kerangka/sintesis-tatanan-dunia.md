@@ -24,7 +24,7 @@ flowchart TD
     K --> L["Protes & populisme<br/>(kerusuhan Prancis, Reform UK, AfD)"]
     H --> M["Importir energi terpukul<br/>(yen 164, rupiah 18.000, rupee)"]
     M --> N["Subsidi membengkak → defisit EM melebar<br/>(Indonesia, India)"]
-    D --> O["Emas rekor $5.600 (Jan 2026)"]
+    D --> O["Emas rekor ±$5.595 (29 Jan 2026)"]
     I --> P["Emas & BTC terkoreksi saat Fed hawkish<br/>(crash 30 Jan 2026)"]
     F --> Q["Mineral kritis = minyak baru<br/>(tembaga rekor, nikel Indonesia)"]
     E --> R["Infrastruktur keuangan paralel<br/>(CIPS, e-CNY, mBridge)"]
@@ -92,7 +92,7 @@ flowchart TD
 | **Rusia** | Ekonomi perang menipis, menjadi mitra junior China |
 | **Eropa industri** (Jerman) | Energi mahal dan persaingan China |
 
-**Posisi Indonesia:** berpotensi **menang** (nikel, tembaga, batu bara, CPO, demografi, posisi netral) **tetapi** saat ini **dihantam** shock energi (importir minyak), tekanan fiskal (MBG, subsidi, rasio pajak 10%), dan krisis kepercayaan pasar (MSCI). Hasil akhirnya **ditentukan oleh tata kelola**: disiplin fiskal, independensi BI, dan transparansi pasar modal. Lihat [Indonesia](../05-negara/indonesia.md).
+**Posisi Indonesia:** berpotensi **menang** (nikel, tembaga, batu bara, CPO, demografi, posisi netral) **tetapi** saat ini **dihantam** shock energi (importir minyak; **defisit transaksi berjalan rekor 3,3% PDB pada Q2 2026**), tekanan fiskal (MBG, subsidi, rasio pajak 10%), dan krisis kepercayaan pasar (MSCI; IHSG ±−37% YTD; asing jual bersih ±Rp88 triliun). Hasil akhirnya **ditentukan oleh tata kelola**: disiplin fiskal, independensi BI, dan transparansi pasar modal. Lihat [Indonesia](../05-negara/indonesia.md).
 
 ## 6. Pertanyaan Anda: "pendapatan harus naik atau pengeluaran mengecil, sampai kapan?"
 
@@ -106,9 +106,9 @@ Ringkasan per negara:
 | **Jerman** | 3% menuju 4,6% | **Ekspansi** (€500 miliar, pertahanan) | Rem utang dilonggarkan; ruang fiskal masih ada | Investasi publik (butuh eksekusi) |
 | **Jepang** | Defisit primer kronis | Stimulus + BOJ normalisasi + intervensi | Yield JGB naik; yen lemah | **Inflasi menggerus utang** (sedang berjalan) |
 | **China** | ±9% (luas) | Obligasi khusus, teknologi, ekspor | Properti, deflasi, LGFV | Rebalancing ke konsumsi (sulit secara ideologis) |
-| **Indonesia** | 2,85% (batas 3%) | Pro-pertumbuhan, Danantara, efisiensi, DHE | Rasio pajak 10%; batas legal 3% | **Menaikkan rasio pajak** dan memangkas subsidi; atau melanggar 3% |
+| **Indonesia** | 2,85% (batas 3%) **+ defisit transaksi berjalan 3,3% PDB (Q2 2026, rekor)** | Pro-pertumbuhan, Danantara, efisiensi, DHE | Rasio pajak 10%; batas legal 3%; ketergantungan modal asing yang sedang keluar | **Menaikkan rasio pajak** dan memangkas subsidi; atau melanggar 3% |
 | **Rusia** | 3,5–4,4% | Pajak naik, NWF, yuan | NWF menipis | **Mengakhiri/membekukan perang** |
-| **Arab Saudi** | Revisi ±SAR 245 miliar | Berutang, memangkas megaproyek | Breakeven $86,6; volume terganggu | Utang + penyesuaian Vision 2030 |
+| **Arab Saudi** | SAR 245 miliar (4,9% PDB); PDB riil −3,6% | Berutang, memangkas megaproyek | Breakeven $86,6; volume terganggu | Utang + penyesuaian Vision 2030 |
 | **Singapura, Swiss, Hong Kong** | Surplus/seimbang | Cadangan besar | — | Tidak mendesak |
 
 **Pola umum:** negara maju yang tidak bisa menaikkan pajak lagi dan tidak bisa memangkas belanja secara politik akan **memilih inflasi**, bukan default. Ini konsisten dengan pola Dalio: bunga riil ditekan dan mata uang tergerus perlahan. **Pihak yang dirugikan adalah penabung dalam kas dan obligasi jangka panjang.** Pihak yang diuntungkan secara relatif adalah pemilik aset riil dan langka.
@@ -130,7 +130,20 @@ Ringkasan per negara:
 5. **USD/JPY dan yield JGB 30 tahun** (repatriasi Jepang)
 6. **Gencatan dagang AS–China** (10 Januari 2027) dan lisensi rare earth
 7. **Arus ETF dan kapitalisasi stablecoin** (selera risiko dan dolarisasi digital)
-8. **Indonesia:** cadangan devisa, defisit APBN vs 3%, keputusan MSCI (Juni 2027), BI-Rate
+8. **Indonesia:** cadangan devisa, **defisit transaksi berjalan**, defisit APBN vs 3%, keputusan MSCI (Juni 2027), BI-Rate, arus asing
+
+Nilai terkini semua indikator ada di [dashboard 14 indikator](../07-tinjauan-eksternal/geopolitics-for-dummies-vol1.md#dashboard-14-indikator-versi-perbaikan-dengan-nilai-terkini).
+
+### Rezim makro saat ini (*Four Quadrant*: pertumbuhan × inflasi)
+
+| Kawasan | Pertumbuhan | Inflasi | Kuadran | Aset yang secara historis diuntungkan |
+|---|---|---|---|---|
+| Zona euro, Inggris, Jepang | Lemah | Naik (3–4%) | **Quad 3: stagflasi** | Emas, komoditas, aset berdurasi pendek |
+| AS | Masih kuat (AI) | Naik (CPI 3,7%) | **Quad 2/3** | Komoditas, energi, sebagian saham |
+| China | Stabil ±4,5% | Rendah, PPI mulai naik | **Quad 1/2** | Saham teknologi, ekspor |
+| Indonesia | Melambat (5,6% → 5,3%) | Naik (3,28%) | **Mendekati Quad 3** | Emas (dalam rupiah), eksportir komoditas non-minyak |
+
+*Kerangka kuadran dari tinjauan buku eksternal; penempatan berdasarkan data Q2–Q3 2026. Lihat [tinjauan](../07-tinjauan-eksternal/geopolitics-for-dummies-vol1.md).*
 
 ## 9. Keterbatasan riset ini
 
@@ -141,6 +154,7 @@ Ringkasan per negara:
 
 ## Tautan ke semua file
 
+- Tinjauan eksternal: [Geopolitics for Dummies Vol. 1 (BlackQoral)](../07-tinjauan-eksternal/geopolitics-for-dummies-vol1.md), termasuk dashboard 14 indikator dengan nilai terkini
 - Kerangka: [Kerangka Dalio](kerangka-dalio.md)
 - Mata uang: [USD](../01-mata-uang/dolar-as.md) · [CNY](../01-mata-uang/yuan.md) · [JPY](../01-mata-uang/yen.md) · [EUR](../01-mata-uang/euro.md) · [GBP](../01-mata-uang/pound-sterling.md) · [IDR](../01-mata-uang/rupiah.md) · [CHF](../01-mata-uang/franc-swiss.md) · [SGD](../01-mata-uang/sgd-dolar-singapura.md) · [HKD](../01-mata-uang/hkd-dolar-hong-kong.md)
 - Aset digital: [Bitcoin](../02-aset-digital/bitcoin.md) · [Stablecoin](../02-aset-digital/stablecoin.md) · [CBDC](../02-aset-digital/cbdc.md)

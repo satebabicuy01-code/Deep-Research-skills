@@ -18,6 +18,7 @@ China adalah **"pabrik dunia"** dengan ±30% output manufaktur global, ditambah 
 | Obligasi khusus pemda / ultra-long | ¥4,4 triliun / ¥1,3 triliun; ¥300 miliar untuk rekapitalisasi bank BUMN |
 | Utang total pemerintah (termasuk LGFV) | ±120–140% PDB (estimasi IMF, "*augmented*") |
 | USD/CNY | ±6,67 (terkuat sejak 2022) |
+| PMI manufaktur NBS | **50,1** (Sep 2026; Agu 49,8). Harga input 60,8 (tertinggi 5 bulan); lapangan kerja 48,4 (masih kontraksi) |
 | Cadangan devisa | ±$3,3 triliun + emas ±2.300 ton |
 | 2026 | Tahun pertama **Rencana Lima Tahun ke-15** (2026–2030) |
 
@@ -86,3 +87,5 @@ Dalio adalah salah satu investor Barat paling positif terhadap China dalam jangk
 - [MERICS – China's 2026 budget prioritizes technology](https://merics.org/en/tracker/chinas-2026-budget-prioritizes-technology-reveals-stretched-public-finances)
 - [Bloomberg – China sets 2026 debt issuance in line with forecasts](https://www.bloomberg.com/news/articles/2026-03-05/china-s-steady-debt-plan-calms-bond-market-on-ample-liquidity)
 - [China Banking News – Government debt set to grow by a trillion dollars in 2026](https://www.chinabankingnews.com/p/chinas-government-debt-set-to-grow)
+- [NBS – Purchasing Managers' Index for September 2026](https://www.stats.gov.cn/english/PressRelease/202610/t20261008_1965466.html)
+- [Trading Economics – China factory activity returns to growth](https://tradingeconomics.com/china/business-confidence/news/587902)
