@@ -1,0 +1,336 @@
+<title>Peta Tatanan Dunia 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: atlas sheet — horizontal tree (root → theme → topic) on the left, a dossier panel on the right that stacks below on phones */
+:root {
+  --paper: #eef1f3;
+  --sheet: #f8f9fa;
+  --ink: #1b2733;
+  --ink-soft: #4d5b68;
+  --rule: #c9d1d8;
+  --accent: #1f5f7a;
+  --c-frame: #5b4a7a;
+  --c-fx: #1f5f7a;
+  --c-digital: #2f6f5e;
+  --c-cmd: #9a6a1c;
+  --c-bond: #6b5a3a;
+  --c-country: #3d5a8a;
+  --c-conflict: #9b3b32;
+  --c-money: #5e6b2e;
+  --font-display: "Spectral", Georgia, "Times New Roman", serif;
+  --font-body: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --link: #9aa7b2;
+  --sel: #fff6d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12181e; --sheet: #182129; --ink: #e3e9ee; --ink-soft: #a3b0bc; --rule: #2c3944;
+    --accent: #6fb3cf; --c-frame: #a996cc; --c-fx: #6fb3cf; --c-digital: #6fc0a7; --c-cmd: #d9a957;
+    --c-bond: #c2ab83; --c-country: #8eaee0; --c-conflict: #e07c70; --c-money: #b3c070;
+    --link: #3e4d5a; --sel: #3a3420; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12181e; --sheet: #182129; --ink: #e3e9ee; --ink-soft: #a3b0bc; --rule: #2c3944;
+  --accent: #6fb3cf; --c-frame: #a996cc; --c-fx: #6fb3cf; --c-digital: #6fc0a7; --c-cmd: #d9a957;
+  --c-bond: #c2ab83; --c-country: #8eaee0; --c-conflict: #e07c70; --c-money: #b3c070;
+  --link: #3e4d5a; --sel: #3a3420; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 40px;
+}
+.wrap { max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; border-bottom: 1px solid var(--rule); padding-bottom: 14px; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.15; margin: 0; text-wrap: balance; }
+.stamp { font-family: var(--font-data); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+.lede { margin: 6px 0 0; color: var(--ink-soft); max-width: 62ch; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.tools input { font: inherit; padding: 7px 10px; border: 1px solid var(--rule); border-radius: 6px; background: var(--sheet); color: var(--ink); min-width: 0; width: 220px; max-width: 100%; }
+.tools button { font: inherit; font-size: 13px; padding: 7px 11px; border: 1px solid var(--rule); border-radius: 6px; background: var(--sheet); color: var(--ink); cursor: pointer; }
+.tools button:hover { border-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--ink-soft); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.main { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 18px; align-items: start; }
+@media (max-width: 980px) { .main { grid-template-columns: minmax(0, 1fr); } }
+.mapbox { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; overflow-x: auto; min-width: 0; }
+#map { position: relative; margin: 16px; }
+#links { position: absolute; inset: 0; pointer-events: none; }
+.node { position: absolute; display: flex; align-items: center; gap: 8px; text-align: left; font: inherit; cursor: pointer; border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); border-radius: 6px; padding: 0 10px; transition: background .15s, opacity .15s; }
+.node:hover { background: var(--paper); }
+.node .sw { width: 4px; align-self: stretch; margin: 6px 0; border-radius: 2px; background: var(--c); flex: none; }
+.node.root { font-family: var(--font-display); font-weight: 700; font-size: 16px; line-height: 1.2; border-color: var(--ink); justify-content: center; text-align: center; }
+.node.cat { font-weight: 700; font-size: 14px; border-color: var(--c); }
+.node.cat .count { margin-left: auto; font-family: var(--font-data); font-size: 11px; color: var(--ink-soft); }
+.node.leaf { font-size: 13px; }
+.node.leaf .lbl, .node.cat .lbl { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.node.sel { background: var(--sel); border-color: var(--c); }
+.node.dim { opacity: .28; }
+.panel { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 18px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+@media (max-width: 980px) { .panel { position: static; } }
+.panel .kicker { font-family: var(--font-data); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--kc, var(--accent)); }
+.panel h2 { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.2; margin: 0; text-wrap: balance; }
+.panel p { margin: 0; }
+.figs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--rule); padding-top: 10px; }
+.figs li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; font-size: 13.5px; align-items: baseline; }
+.figs li b { font-family: var(--font-data); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.panel a.open { align-self: flex-start; font-weight: 600; color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+.panel .hint { font-size: 12.5px; color: var(--ink-soft); }
+.thesis { background: var(--sheet); border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 6px; padding: 14px 16px; display: grid; gap: 6px; }
+.thesis h3 { margin: 0; font-family: var(--font-display); font-size: 1.1rem; }
+.thesis p { margin: 0; max-width: 90ch; color: var(--ink); }
+footer { font-size: 12.5px; color: var(--ink-soft); }
+@media (prefers-reduced-motion: reduce) { .node { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <div class="stamp">Atlas riset · data per 26 Okt 2026 · kerangka Ray Dalio</div>
+      <h1>Peta Tatanan Dunia 2026</h1>
+      <p class="lede">Delapan tema dan 52 topik riset: mata uang, aset digital, komoditas, obligasi, negara, konflik, dan arah smart money. Klik sebuah topik untuk ringkasan dan angka kuncinya, atau klik tema untuk membuka/menutup cabangnya.</p>
+    </div>
+    <div class="tools">
+      <label for="q" class="stamp">Cari</label>
+      <input id="q" type="search" placeholder="mis. emas, Hormuz, rupiah" autocomplete="off">
+      <button id="expand" type="button">Buka semua</button>
+      <button id="collapse" type="button">Tutup semua</button>
+    </div>
+  </header>
+
+  <div class="legend" id="legend"></div>
+
+  <section class="thesis" aria-label="Tesis utama">
+    <h3>Tesis utama</h3>
+    <p>Tatanan yang dipimpin AS tidak runtuh, tetapi menua: utang dan bunga melonjak, jaminan keamanan laut terkikis (Hormuz, Laut Merah), dan dolar dipakai sebagai senjata. China unggul dalam produksi tetapi terkekang kontrol modal. Hasilnya adalah dunia multipolar, dan penerima manfaat terbesar hilangnya kepercayaan adalah aset netral, yaitu emas yang diborong bank sentral.</p>
+  </section>
+
+  <div class="main">
+    <div class="mapbox"><div id="map"><svg id="links" aria-hidden="true"></svg></div></div>
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+  </div>
+
+  <footer>Bukan saran investasi. Peluang skenario adalah penilaian subjektif. Sumber lengkap ada di setiap file markdown di folder <code>riset-tatanan-dunia/</code>.</footer>
+</div>
+
+<script>
+const BASE = "https://github.com/satebabicuy01-code/Deep-Research-skills/blob/claude/keen-goldberg-d1mzeu/riset-tatanan-dunia/";
+const CATS = [
+  { id: "frame", label: "Kerangka & Sintesis", color: "--c-frame", file: "00-kerangka/sintesis-tatanan-dunia.md",
+    summary: "Kerangka Siklus Besar Ray Dalio (utang, ketertiban internal, tatanan eksternal, alam, teknologi) dan kesimpulan: siapa pengganti AS dan ke mana smart money bergerak.",
+    items: [
+      { label: "Siklus Besar Dalio", file: "00-kerangka/kerangka-dalio.md", summary: "Lima kekuatan, enam tahap siklus internal, delapan ukuran kekuatan. AS, Inggris, dan Prancis berada di tahap 5: keuangan buruk, konflik intens.", figs: [["Defisit AS vs resep Dalio", "6,3% vs 3% PDB"], ["Porsi USD di cadangan", "56,7%"], ["Porsi CNY di cadangan", "2,1%"]] },
+      { label: "Sintesis: siapa pengganti AS", file: "00-kerangka/sintesis-tatanan-dunia.md", summary: "Tidak ada satu pengganti dalam 5–10 tahun. Dunia menjadi multipolar dan emas menjadi jangkar kepercayaan. Skenario dasar: multipolar keruh dengan inflasi struktural 3–4%.", figs: [["Multipolar keruh", "±55%"], ["Kebangkitan teknologi", "±20%"], ["Krisis transisi", "±25%"]] },
+      { label: "Rantai korelasi", file: "00-kerangka/sintesis-tatanan-dunia.md", summary: "Perang memicu shock energi, lalu inflasi, kenaikan suku bunga, lonjakan yield, krisis fiskal, dan protes. Sanksi mendorong bank sentral ke emas.", figs: [["Brent puncak 2026", "±$126"], ["UST 10 tahun puncak", "5,36%"]] }
+    ] },
+  { id: "fx", label: "Mata Uang", color: "--c-fx", file: "01-mata-uang/dolar-as.md",
+    summary: "Dolar tetap dominan tetapi tergerus perlahan. Importir energi (yen, rupiah) paling tertekan; safe haven (franc, SGD) relatif kuat.",
+    items: [
+      { label: "Dolar AS (USD)", file: "01-mata-uang/dolar-as.md", summary: "Raja yang menua. Menguat pada 2026 karena perang dan kenaikan suku bunga Fed, tetapi fiskal memburuk dan independensi Fed dipertanyakan.", figs: [["DXY", "±101,6"], ["Fed Funds", "3,75–4,00%"], ["Cadangan global", "56,7%"]] },
+      { label: "Yuan (CNY)", file: "01-mata-uang/yuan.md", summary: "Infrastruktur paralel (CIPS, e-CNY, mBridge) tumbuh, tetapi porsi cadangan hanya 2,1%. Terkuat sejak 2022 karena surplus ekspor.", figs: [["USD/CNY", "±6,67"], ["Porsi cadangan", "2,11%"]] },
+      { label: "Yen (JPY)", file: "01-mata-uang/yen.md", summary: "Terlemah sejak 1986 karena shock minyak dan stimulus Takaichi. Intervensi bersama AS–Jepang pada 31 Juli, pertama sejak 2011.", figs: [["Terlemah (23 Jul)", "¥163,99"], ["BOJ", "1,25%"], ["Intervensi Apr–Jul", "¥11,7 T"]] },
+      { label: "Euro (EUR)", file: "01-mata-uang/euro.md", summary: "Cadangan kedua dunia, terjepit shock energi dan risiko fiskal Prancis. ECB menaikkan suku bunga dua kali. Digital euro ditargetkan 2029.", figs: [["EUR/USD", "±1,12"], ["Inflasi zona euro", "3,8%"], ["Deposit ECB", "2,5%"]] },
+      { label: "Pound (GBP)", file: "01-mata-uang/pound-sterling.md", summary: "Contoh klasik Dalio tentang mata uang cadangan yang kehilangan status. Defisit kembar membuat pound bergantung pada kepercayaan asing.", figs: [["GBP/USD", "±1,34"], ["Gilt 10 tahun puncak", "5,53%"]] },
+      { label: "Rupiah (IDR)", file: "01-mata-uang/rupiah.md", summary: "Rekor terlemah karena shock minyak, Fed ketat, dan ancaman MSCI. BI menahan suku bunga dan mengandalkan intervensi.", figs: [["USD/IDR", "±Rp18.000"], ["BI-Rate", "5,75%"], ["Cadangan devisa", "$146,3 M"]] },
+      { label: "Franc Swiss (CHF)", file: "01-mata-uang/franc-swiss.md", summary: "Safe haven tertua: surplus, utang rendah, netral. SNB menahan 0% dan intervensi untuk menahan apresiasi.", figs: [["SNB", "0%"], ["Utang pemerintah", "±37–40% PDB"]] },
+      { label: "Dolar Singapura (SGD)", file: "01-mata-uang/sgd-dolar-singapura.md", summary: "Dikelola lewat kurs S$NEER. MAS mengetat Juli lalu menahan Oktober. Tempat berlindung modal Asia Tenggara.", figs: [["Slope S$NEER", "1,25%"], ["Inflasi inti 2026", "1,5–2%"]] },
+      { label: "Dolar Hong Kong (HKD)", file: "01-mata-uang/hkd-dolar-hong-kong.md", summary: "Dipatok ke USD sejak 1983. Paradoks: pintu modal China memakai mata uang yang terikat ke Fed.", figs: [["Pita patokan", "7,75–7,85"], ["Rasio dukungan", "111,8%"]] }
+    ] },
+  { id: "digital", label: "Aset Digital", color: "--c-digital", file: "02-aset-digital/bitcoin.md",
+    summary: "Bitcoin bearish pada 2026 dan belum menjadi safe haven krisis. Stablecoin memperluas dolar. CBDC menjadi arena persaingan sistem pembayaran.",
+    items: [
+      { label: "Bitcoin (BTC)", file: "02-aset-digital/bitcoin.md", summary: "Puncak ±$126.000 (Okt 2025), terendah 2026 di bawah $59.000 (Juni). Digerakkan arus ETF dan likuiditas, berkorelasi dengan Nasdaq.", figs: [["Harga akhir Okt", "±$81–84 rb"], ["BTC milik Strategy", "±840 rb"]] },
+      { label: "Stablecoin (USDT, USDC)", file: "02-aset-digital/stablecoin.md", summary: "Dolarisasi digital dunia. Aturan GENIUS final (OCC, 21 Okt 2026) berlaku 18 Jan 2027. Penerbit menjadi pembeli T-bills baru.", figs: [["Total kapitalisasi", "±$300 M"], ["USDT", "±$182 M"], ["USDC", "±$72 M"]] },
+      { label: "CBDC (e-CNY, digital euro)", file: "02-aset-digital/cbdc.md", summary: "AS menolak CBDC ritel, China memimpin e-CNY dan mBridge, digital euro menuju 2029. Digital Rupiah (Proyek Garuda) mandek.", figs: [["Pilot digital euro", "pertengahan 2027"], ["Anggota mBridge", "5 bank sentral"]] }
+    ] },
+  { id: "cmd", label: "Komoditas", color: "--c-cmd", file: "03-komoditas/emas.md",
+    summary: "Shock energi terbesar dalam sejarah, emas diborong bank sentral, dan mineral kritis menjadi minyak baru.",
+    items: [
+      { label: "Emas", file: "03-komoditas/emas.md", summary: "Rekor ±$5.600 (29 Jan 2026), crash 10% saat Warsh dinominasikan, lalu ±$4.100 pada Oktober. Bank sentral membeli rekor.", figs: [["Pembelian bank sentral Q2", "289 ton"], ["Harga Okt", "±$4.000–4.200"]] },
+      { label: "Perak", file: "03-komoditas/perak.md", summary: "Lonjakan ke ±$115–120 lalu crash ±30% dalam sehari (30 Jan). Defisit pasokan tahun keenam; China memberlakukan lisensi ekspor.", figs: [["Rentang 2026", "±$75–85"], ["Defisit 2026", "±46 juta oz"]] },
+      { label: "Minyak & Gas", file: "03-komoditas/minyak-gas.md", summary: "IEA: gangguan pasokan terbesar dalam sejarah. LNG Qatar terpukul jangka panjang. SPR AS terendah sejak 1982.", figs: [["Brent Okt", "±$110–117"], ["Aliran Hormuz", "±82% normal"]] },
+      { label: "Tembaga, nikel, rare earth", file: "03-komoditas/logam-industri-mineral-kritis.md", summary: "Tembaga rekor karena AI dan jaringan listrik. Indonesia memangkas kuota nikel. China memakai rare earth sebagai senjata dagang.", figs: [["Tembaga LME rekor", "$14.875/t"], ["Kuota RKAB nikel", "±250–270 jt t"]] },
+      { label: "Pangan & Pupuk", file: "03-komoditas/pangan-pupuk.md", summary: "Indeks FAO tertinggi sejak 2022. Teluk memasok ±1/3 urea dunia, sehingga pupuk melonjak dan panen berikutnya terancam.", figs: [["FAO (Sep)", "136,0"], ["Urea Feb–Apr", "+80%"]] }
+    ] },
+  { id: "bond", label: "Obligasi", color: "--c-bond", file: "04-obligasi/us-treasury.md",
+    summary: "Pasar obligasi negara maju tertekan: yield tertinggi dalam dua dekade di AS, Inggris, dan Prancis.",
+    items: [
+      { label: "US Treasury", file: "04-obligasi/us-treasury.md", summary: "Yield 10 tahun tertinggi sejak 2002. Pembeli tidak sensitif harga berkurang dan term premium naik.", figs: [["10 tahun puncak (7 Okt)", "5,36%"], ["Bunga bersih FY26", "$1,05 T"], ["Kepemilikan China", "$633 M"]] },
+      { label: "JGB Jepang", file: "04-obligasi/jgb-jepang.md", summary: "Akhir era suku bunga nol. Kenaikan yield JGB bisa memicu repatriasi modal Jepang.", figs: [["30 tahun (Agu)", "3,97%"], ["Utang pemerintah", "±230–250% PDB"]] },
+      { label: "Gilt Inggris", file: "04-obligasi/gilt-inggris.md", summary: "Yield tertinggi di G7. Pasar obligasi menjadi hakim fiskal sejak krisis Truss 2022.", figs: [["10 tahun puncak", "5,53%"], ["Headroom fiskal", "±£12 M"]] },
+      { label: "Bund, OAT, BTP", file: "04-obligasi/bund-oat-eropa.md", summary: "Prancis kini dinilai lebih berisiko daripada Italia. Jerman menambah pasokan Bund karena stimulus.", figs: [["OAT 10 tahun", "±4,9%"], ["Spread OAT–Bund", "±140–153 bp"]] },
+      { label: "SBN Indonesia", file: "04-obligasi/sbn-indonesia.md", summary: "Investor domestik dominan, kepemilikan asing tinggal ±13–14%. Arus asing ditentukan stabilitas rupiah.", figs: [["10 tahun", "±7,2%"], ["Kepemilikan asing", "±Rp890 T"]] }
+    ] },
+  { id: "country", label: "Negara", color: "--c-country", file: "05-negara/amerika-serikat.md",
+    summary: "Sumber pendapatan, defisit, strategi bertahan, dan batas keberlanjutan 14 negara atau blok.",
+    items: [
+      { label: "Amerika Serikat", file: "05-negara/amerika-serikat.md", summary: "Defisit masa damai $2 triliun, bunga utang melampaui pertahanan. MA membatalkan tarif IEEPA. Taruhan pada AI.", figs: [["Defisit FY26", "$1,99 T"], ["Pengangguran", "4,2%"], ["CPI", "3,7%"]] },
+      { label: "China", file: "05-negara/china.md", summary: "Ekspor melonjak, domestik lesu: properti −20,6%, investasi −7,2%. Risiko Jepangifikasi.", figs: [["PDB Q3", "4,5%"], ["Ekspor Sep", "+36,3%"], ["Defisit luas", "±9,2% PDB"]] },
+      { label: "Jepang", file: "05-negara/jepang.md", summary: "Kreditur terbesar dunia dengan utang terbesar G7. Inflasi menggerus utang, yen melemah.", figs: [["BOJ", "1,25%"], ["Pajak makanan (Apr 2027)", "8% → 1%"]] },
+      { label: "Indonesia", file: "05-negara/indonesia.md", summary: "Rasio pajak ±10% vs ambisi belanja besar (MBG, subsidi). MSCI mengancam penurunan status ke Standalone.", figs: [["PDB Q2", "5,29%"], ["Defisit 2026", "±2,85% PDB"], ["IHSG 16 Okt", "−11,6%"]] },
+      { label: "Inggris", file: "05-negara/inggris.md", summary: "Defisit kembar, pajak menuju tertinggi sejak Perang Dunia II, Reform UK memimpin survei.", figs: [["Defisit", "±4,4% PDB"], ["Bank Rate", "3,75%"]] },
+      { label: "Jerman", file: "05-negara/jerman.md", summary: "Model ekspor patah (energi Rusia, pasar China). Taruhan stimulus €500 miliar dan pertahanan 3,5% PDB.", figs: [["Pertumbuhan 2026 (ifo)", "1,4%"], ["Defisit 2028", "4,6% PDB"]] },
+      { label: "Prancis", file: "05-negara/prancis.md", summary: "Pemangkasan bertemu jalanan: kerusuhan BBM 17 dan 24 Oktober. Pajak sudah ±46% PDB; Pilpres 2027 menjadi titik penentu.", figs: [["Defisit", "5,4% PDB"], ["Utang", "119,3% PDB"], ["Penghematan 2027", "€54 M"]] },
+      { label: "Uni Eropa", file: "05-negara/uni-eropa.md", summary: "Rearmament (SAFE €150 miliar, ReArm >€800 miliar), shock energi kedua, dan populisme yang naik.", figs: [["Pinjaman Ukraina", "€90 M"], ["Aset Rusia dibekukan", "€210 M"]] },
+      { label: "Singapura", file: "05-negara/singapura.md", summary: "Netral, surplus, cadangan raksasa. Diuntungkan ketidakpastian dan siklus AI.", figs: [["Pertumbuhan 2026", "±4–4,6%"], ["GST", "9%"]] },
+      { label: "Hong Kong", file: "05-negara/hong-kong.md", summary: "Kembali menjadi jendela modal China: boom IPO, arus Southbound, hub stablecoin dan emas.", figs: [["IPO H1 2026", "HK$210 M"], ["Cadangan fiskal", "HK$678 M"]] },
+      { label: "Rusia", file: "05-negara/rusia.md", summary: "Ekonomi perang kehabisan bantalan: defisit melampaui target, NWF menipis, India berhenti membeli minyak.", figs: [["Defisit Jan–Sep", "₽5,2 T"], ["Suku bunga", "14%"]] },
+      { label: "India", file: "05-negara/india.md", summary: "Ekonomi besar tercepat. Kesepakatan dagang dengan AS: tarif 18% dengan imbalan berhenti membeli minyak Rusia.", figs: [["PDB Q1 FY27", "7,8%"], ["Repo RBI", "5,50%"]] },
+      { label: "Arab Saudi & UEA", file: "05-negara/arab-saudi-uea.md", summary: "Pilar petrodolar yang diserang langsung. Saudi berutang dan memangkas NEOM; Dubai menyusut.", figs: [["Breakeven Saudi", "$86,6/bbl"], ["Dubai H1 2026", "−2,3%"]] },
+      { label: "Swiss", file: "05-negara/swiss.md", summary: "Benteng kekayaan netral: farmasi, perbankan swasta, pemurnian emas. Rentan tarif farmasi AS.", figs: [["Tarif AS", "15%"], ["SNB", "0%"]] }
+    ] },
+  { id: "conflict", label: "Konflik", color: "--c-conflict", file: "06-konflik/iran-israel-as-hormuz.md",
+    summary: "Perang sudah menjadi hal biasa. Semua konflik terhubung lewat energi, jalur laut, dan senjata keuangan.",
+    items: [
+      { label: "Iran–AS–Israel & Hormuz", file: "06-konflik/iran-israel-as-hormuz.md", summary: "Sejak 28 Feb 2026; Khamenei terbunuh. Islamabad Memorandum (17 Jun) runtuh 8 Jul. Serangan kapal berlanjut.", figs: [["Insiden kapal s.d. 13 Okt", "103"], ["Biaya perang AS", "$43,6 M"]] },
+      { label: "Rusia–Ukraina", file: "06-konflik/rusia-ukraina.md", summary: "Garis depan nyaris beku; perundingan tiga pihak direncanakan November. Zelensky terbuka pada pembekuan.", figs: [["Rebutan Rusia 2026", "±100 km²"], ["Perundingan", "±10 Nov"]] },
+      { label: "Houthi & Laut Merah", file: "06-konflik/houthi-laut-merah.md", summary: "Embargo terhadap Saudi (Juli), merebut Pulau Mayyun (Sep). Mengancam rute bypass Yanbu.", figs: [["Transit Bab el-Mandeb", "−47%"], ["Transit Suez", "−39%"]] },
+      { label: "Taiwan & Laut China Selatan", file: "06-konflik/taiwan-laut-china-selatan.md", summary: "Tekanan abu-abu, latihan tembak langsung, bentrokan dengan Filipina. Gencatan dagang sampai 10 Jan 2027.", figs: [["Latihan PLA", "12–17 Okt"], ["Gencatan dagang", "s.d. 10 Jan 2027"]] },
+      { label: "India–Pakistan", file: "06-konflik/india-pakistan.md", summary: "Gencatan Mei 2025 bertahan, tetapi perang air: India menolak putusan Den Haag soal Perjanjian Indus.", figs: [["Perjanjian Indus", "ditangguhkan"]] },
+      { label: "Venezuela pasca-Maduro", file: "06-konflik/venezuela-amerika-latin.md", summary: "Maduro ditangkap AS (Jan 2026). ±Separuh produksi minyak mengalir ke kilang AS. Doktrin Monroe baru.", figs: [["Produksi", "±1,1–1,25 jt b/h"], ["Ke AS", ">500 rb b/h"]] },
+      { label: "Sudan & Sahel", file: "06-konflik/sudan-sahel-afrika.md", summary: "RSF menguasai El Fasher; JNIM menyerang hingga Bamako; Africa Corps Rusia mundur dari Kidal. Perebutan emas dan uranium.", figs: [["Pengungsi Sudan", ">12 juta"]] }
+    ] },
+  { id: "money", label: "Arah Smart Money", color: "--c-money", file: "00-kerangka/sintesis-tatanan-dunia.md",
+    summary: "Ke mana modal besar bergerak pada 2025–2026: dari aset janji ke aset nyata, dari global ke blok, dari yurisdiksi berisiko ke yurisdiksi netral.",
+    items: [
+      { label: "Bank sentral ke emas", file: "03-komoditas/emas.md", summary: "Sinyal paling jelas: mengurangi risiko pihak lawan dan sanksi. Repatriasi emas dari New York dan London.", figs: [["Q2 2026", "289 ton"], ["September", "±63 ton"]] },
+      { label: "China keluar dari UST", file: "04-obligasi/us-treasury.md", summary: "Kepemilikan UST China turun dari >$1,3 triliun (2013) ke ±$633 miliar, dipindah ke emas dan cadangan komoditas.", figs: [["Perubahan yoy", "−13,4%"]] },
+      { label: "Jepang pulang ke JGB", file: "01-mata-uang/yen.md", summary: "Yield JGB 30 tahun ±4% menarik asuransi dan pensiun Jepang pulang. Risiko bagi yield global.", figs: [["UST milik Jepang", "$1,12 T (−3,3%)"]] },
+      { label: "Teluk ke AI di AS", file: "05-negara/arab-saudi-uea.md", summary: "Dana kekayaan Teluk menjanjikan investasi besar di AS sebagai asuransi politik, sambil memangkas proyek domestik.", figs: [["Kontrak NEOM dibatalkan", "±$6,85 M"]] },
+      { label: "Ritel EM ke stablecoin", file: "02-aset-digital/stablecoin.md", summary: "Warga negara berinflasi tinggi memegang dolar digital: dedolarisasi di tingkat negara, dolarisasi di tingkat rakyat.", figs: [["Stablecoin", "±$300 M"]] },
+      { label: "Modal China ke Hong Kong", file: "05-negara/hong-kong.md", summary: "Taruhan pada AI dan teknologi China lewat saham dan IPO Hong Kong.", figs: [["Southbound Feb–Agu", "HK$214,7 M"]] },
+      { label: "Orang kaya ke Swiss & Singapura", file: "05-negara/singapura.md", summary: "Mencari yurisdiksi netral dan disiplin. Dubai terpukul perang.", figs: [["Franc & SGD", "relatif kuat"]] },
+      { label: "Asing keluar dari Indonesia", file: "05-negara/indonesia.md", summary: "Ancaman MSCI soal tata kelola memicu aksi jual terburuk sejak 1998.", figs: [["IHSG 16 Okt", "−11,6%"], ["Nilai hilang", "±$65 M"]] }
+    ] }
+];
+
+const map = document.getElementById("map");
+const svg = document.getElementById("links");
+const panel = document.getElementById("panel");
+const q = document.getElementById("q");
+const open = new Set(["frame", "money"]);
+let selected = null;
+
+const W = { root: 170, cat: 200, leaf: 250 };
+const X = { root: 0, cat: 210, leaf: 450 };
+const H = { root: 56, cat: 36, leaf: 30 };
+const GAP = 8;
+
+document.getElementById("legend").innerHTML = CATS.map(c =>
+  `<span><i style="background:var(${c.color})"></i>${c.label}</span>`).join("");
+
+function esc(s) { return String(s).replace(/[&<>"]/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch])); }
+
+function showDetail(node) {
+  selected = node.key;
+  const cat = node.cat;
+  const figs = (node.figs || []).map(([k, v]) => `<li><span>${esc(k)}</span><b>${esc(v)}</b></li>`).join("");
+  panel.style.setProperty("--kc", `var(${cat ? cat.color : "--accent"})`);
+  panel.innerHTML = `
+    <div class="kicker">${esc(node.kicker)}</div>
+    <h2>${esc(node.label)}</h2>
+    <p>${esc(node.summary)}</p>
+    ${figs ? `<ul class="figs">${figs}</ul>` : ""}
+    ${node.file ? `<a class="open" href="${BASE + node.file}" target="_blank" rel="noopener">Buka file riset</a>` : ""}
+    <div class="hint">File: <code>${esc(node.file || "README.md")}</code></div>`;
+  render();
+}
+
+function rootNode() {
+  return { key: "root", label: "Tatanan Dunia 2026", kicker: "Gambaran besar", file: "README.md",
+    summary: "Tatanan pimpinan AS menua; China terkekang; dunia menjadi multipolar; emas menjadi aset netral pilihan bank sentral. Mulai dari file Sintesis.",
+    figs: [["Defisit AS FY26", "$1,99 T"], ["Brent Okt", "±$110–117"], ["Emas rekor", "±$5.600"], ["Porsi USD cadangan", "56,7%"]] };
+}
+
+function matches(text) {
+  const t = q.value.trim().toLowerCase();
+  return !t || text.toLowerCase().includes(t);
+}
+
+function render() {
+  [...map.querySelectorAll(".node")].forEach(n => n.remove());
+  const nodes = [];
+  let y = 0;
+  const catPos = [];
+  CATS.forEach(cat => {
+    const isOpen = open.has(cat.id);
+    const kids = [];
+    if (isOpen) {
+      cat.items.forEach((it, i) => {
+        kids.push({ y, it, i });
+        y += H.leaf + GAP;
+      });
+      const top = kids[0].y, bot = kids[kids.length - 1].y + H.leaf;
+      catPos.push({ cat, y: (top + bot) / 2 - H.cat / 2, kids });
+      y += 10;
+    } else {
+      catPos.push({ cat, y, kids });
+      y += H.cat + GAP + 6;
+    }
+  });
+  const total = Math.max(y, 200);
+  const rootY = (catPos[0].y + catPos[catPos.length - 1].y + H.cat) / 2 - H.root / 2;
+  map.style.height = total + "px";
+  map.style.width = (X.leaf + W.leaf) + "px";
+  svg.setAttribute("width", X.leaf + W.leaf);
+  svg.setAttribute("height", total);
+  svg.setAttribute("viewBox", `0 0 ${X.leaf + W.leaf} ${total}`);
+
+  const paths = [];
+  const curve = (x1, y1, x2, y2, color, faded) => {
+    const mx = (x1 + x2) / 2;
+    paths.push(`<path d="M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}" fill="none" stroke="var(${color})" stroke-opacity="${faded ? 0.25 : 0.7}" stroke-width="1.5"/>`);
+  };
+
+  const r = rootNode();
+  nodes.push({ cls: "root", x: X.root, y: rootY, w: W.root, h: H.root, label: r.label, data: r, color: "--accent", text: r.label + " " + r.summary });
+
+  catPos.forEach(({ cat, y: cy, kids }) => {
+    const cd = { key: "c:" + cat.id, label: cat.label, kicker: "Tema · " + cat.items.length + " topik", summary: cat.summary, file: cat.file, cat,
+      figs: cat.items.slice(0, 4).map(it => [it.label, it.figs && it.figs[0] ? it.figs[0][1] : ""]) };
+    const catText = cat.label + " " + cat.summary + " " + cat.items.map(i => i.label + " " + i.summary).join(" ");
+    nodes.push({ cls: "cat", x: X.cat, y: cy, w: W.cat, h: H.cat, label: cat.label, data: cd, color: cat.color, count: cat.items.length, text: catText, toggle: cat.id });
+    curve(X.root + W.root, rootY + H.root / 2, X.cat, cy + H.cat / 2, cat.color, !matches(catText));
+    kids.forEach(({ y: ky, it, i }) => {
+      const ld = { key: "l:" + cat.id + ":" + i, label: it.label, kicker: cat.label, summary: it.summary, file: it.file, figs: it.figs, cat };
+      const lt = it.label + " " + it.summary + " " + (it.figs || []).map(f => f.join(" ")).join(" ");
+      nodes.push({ cls: "leaf", x: X.leaf, y: ky, w: W.leaf, h: H.leaf, label: it.label, data: ld, color: cat.color, text: lt });
+      curve(X.cat + W.cat, cy + H.cat / 2, X.leaf, ky + H.leaf / 2, cat.color, !matches(lt));
+    });
+  });
+  svg.innerHTML = paths.join("");
+
+  nodes.forEach(n => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "node " + n.cls + (selected === n.data.key ? " sel" : "") + (matches(n.text) ? "" : " dim");
+    b.style.cssText = `left:${n.x}px;top:${n.y}px;width:${n.w}px;height:${n.h}px;--c:var(${n.color})`;
+    b.innerHTML = (n.cls !== "root" ? `<span class="sw"></span>` : "") + `<span class="lbl">${esc(n.label)}</span>` +
+      (n.cls === "cat" ? `<span class="count">${open.has(n.toggle) ? "−" : "+"} ${n.count}</span>` : "");
+    b.title = n.label;
+    if (n.cls === "cat") b.setAttribute("aria-expanded", open.has(n.toggle) ? "true" : "false");
+    b.addEventListener("click", () => {
+      if (n.toggle) { open.has(n.toggle) ? open.delete(n.toggle) : open.add(n.toggle); }
+      showDetail(n.data);
+    });
+    map.appendChild(b);
+  });
+}
+
+q.addEventListener("input", () => {
+  if (q.value.trim()) CATS.forEach(c => open.add(c.id));
+  render();
+});
+document.getElementById("expand").addEventListener("click", () => { CATS.forEach(c => open.add(c.id)); render(); });
+document.getElementById("collapse").addEventListener("click", () => { open.clear(); render(); });
+
+showDetail(rootNode());
+</script>
