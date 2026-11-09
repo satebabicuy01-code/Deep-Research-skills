@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MR.DIY: Strategi, Format Toko &amp; Peran Flagship</title>
+<style>
+.viz-root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface-1: #fcfcfb;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
+  --band-a: #f3f2ee; --band-b: #fcfcfb; --chip: #f0efec;
+  --s1: #2a78d6; --s2: #eb6834;
+  --wash1: rgba(42,120,214,0.08);
+  --o1: #86b6ef; --o2: #5598e7; --o3: #2a78d6; --o4: #1c5cab; --o5: #104281;
+  --good: #0ca30c; --critical: #d03b3b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface-1: #1a1a19; --text-primary: #f0efec; --text-secondary: #c3c2b7;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --band-a: #222220; --band-b: #1a1a19; --chip: #2c2c2a;
+    --s1: #3987e5; --s2: #d95926; --wash1: rgba(57,135,229,0.12);
+    --o1: #184f95; --o2: #1c5cab; --o3: #256abf; --o4: #3987e5; --o5: #6da7ec;
+  }
+}
+:root[data-theme="dark"] .viz-root {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface-1: #1a1a19; --text-primary: #f0efec; --text-secondary: #c3c2b7;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+  --band-a: #222220; --band-b: #1a1a19; --chip: #2c2c2a;
+  --s1: #3987e5; --s2: #d95926; --wash1: rgba(57,135,229,0.12);
+  --o1: #184f95; --o2: #1c5cab; --o3: #256abf; --o4: #3987e5; --o5: #6da7ec;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.viz-root { background: var(--page); color: var(--text-primary); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 14px; line-height: 1.45; padding: 32px 24px 48px; }
+.wrap { max-width: 1180px; margin: 0 auto; }
+h1 { font-size: 26px; margin: 0 0 4px; font-weight: 650; }
+h2 { font-size: 18px; margin: 0 0 4px; font-weight: 650; }
+h3 { font-size: 14px; margin: 0 0 6px; font-weight: 650; }
+.sub { color: var(--text-secondary); margin: 0 0 14px; }
+.muted { color: var(--text-muted); }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; margin-top: 20px; }
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+.tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.tile .label { color: var(--text-secondary); font-size: 13px; }
+.tile .value { font-size: 20px; font-weight: 650; margin: 2px 0; }
+.tile .tnote { color: var(--text-muted); font-size: 12.5px; }
+.legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--text-secondary); margin: 6px 0 4px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.chart-wrap { position: relative; }
+svg text { font-family: inherit; }
+.tooltip { position: absolute; pointer-events: none; background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12.5px; box-shadow: 0 4px 16px rgba(0,0,0,.12); opacity: 0; transition: opacity .08s; white-space: nowrap; z-index: 5; }
+.tooltip .v { font-weight: 700; font-size: 15px; }
+.tooltip .l { color: var(--text-secondary); }
+table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+th, td { text-align: left; padding: 7px 10px 7px 0; border-bottom: 1px solid var(--grid); font-size: 12.5px; vertical-align: top; }
+th { color: var(--text-secondary); font-weight: 600; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.dims { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+.dim { border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; }
+.dim .k { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.chip { background: var(--chip); border-radius: 999px; padding: 2px 9px; font-size: 12px; white-space: nowrap; }
+.chip small { color: var(--text-muted); }
+.times { text-align: center; font-weight: 700; color: var(--text-muted); align-self: center; }
+.dimrow { display: grid; grid-template-columns: 1fr 20px 1fr 20px 1fr; gap: 6px; margin-top: 16px; }
+.dimrow .dim { margin: 0; }
+
+/* swimlane */
+.swim { display: grid; grid-template-columns: 150px repeat(5, 1fr); margin-top: 14px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.swim > div { padding: 9px 10px; border-bottom: 1px solid var(--grid); border-right: 1px solid var(--grid); font-size: 12.5px; color: var(--text-secondary); }
+.swim > div:nth-child(6n) { border-right: none; }
+.swim .ph { background: var(--surface-1); color: var(--text-primary); font-weight: 700; font-size: 13.5px; border-top: 6px solid var(--bar); padding-top: 8px; }
+.swim .ph small { display: block; font-weight: 500; color: var(--text-muted); font-size: 11.5px; }
+.swim .lane { color: var(--text-primary); font-weight: 650; font-size: 12.5px; background: var(--band-a); }
+.swim .lane small { display: block; color: var(--text-muted); font-weight: 500; }
+.swim .hl { background: var(--wash1); }
+.swim .lane.hl { background: var(--wash1); box-shadow: inset 4px 0 0 var(--s1); }
+.swim b { color: var(--text-primary); font-weight: 650; }
+.swim .none { color: var(--text-muted); font-style: italic; }
+.swim .last > div, .swim > div.lastrow { border-bottom: none; }
+.tag { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; color: var(--text-primary); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+
+/* chains */
+.chain { display: grid; grid-template-columns: 110px 1fr; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--grid); }
+.chain:last-child { border-bottom: none; }
+.chain .who { font-weight: 700; }
+.chain .who small { display: block; font-weight: 500; color: var(--text-muted); font-size: 11.5px; }
+.steps { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0; }
+.steps { flex-wrap: nowrap; }
+.step { border: 1px solid var(--border); border-radius: 8px; padding: 6px 9px; font-size: 12px; color: var(--text-secondary); background: var(--surface-1); max-width: 200px; flex: 0 1 auto; }
+.step b { color: var(--text-primary); display: block; font-size: 12.5px; }
+.step.src { box-shadow: inset 0 0 0 1.5px var(--s1); }
+.step.out { background: var(--chip); }
+.arr { display: flex; align-items: center; padding: 0 6px; color: var(--text-muted); font-weight: 700; }
+.foot { margin-top: 24px; font-size: 12px; color: var(--text-muted); }
+.foot p { margin: 4px 0; }
+details { margin-top: 10px; font-size: 13px; }
+summary { cursor: pointer; color: var(--text-secondary); }
+@media (max-width: 900px) {
+  .tiles, .dims, .dimrow { grid-template-columns: 1fr; }
+  .times { display: none; }
+  .swim { grid-template-columns: 1fr; }
+  .chain { grid-template-columns: 1fr; }
+  .steps { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+<div class="viz-root"><div class="wrap">
+
+<h1>MR.DIY: strategi ekspansi, format toko &amp; peran flagship</h1>
+<p class="sub">Bagaimana MR.DIY memilih format toko di setiap tahap ekspansi, dan di mana flagship masuk ke dalam sistem pengujiannya. Data per November 2026; bagian inferensi ditandai.</p>
+
+<div class="tiles">
+  <div class="tile"><div class="label">Di tahap PROVE</div><div class="value">Tidak ada flagship</div><div class="tnote">Toko pertama selalu format reguler di mal kota menengah: murah, risiko kecil.</div></div>
+  <div class="tile"><div class="label">Flagship biasanya muncul saat</div><div class="value">±360–1.500 toko</div><div class="tnote">Di tahap ACCELERATE/MATURE. Pengecualian: Vietnam (±18 toko, 2024).</div></div>
+  <div class="tile"><div class="label">Turunan flagship</div><div class="value">Format standar baru</div><div class="tnote">MR.DIY 2.0, Elevated Experience, MR.DIY Plus, program refresh toko lama.</div></div>
+</div>
+
+<!-- ============ 1. FORMATS ============ -->
+<div class="card">
+  <h2>1. Portofolio format toko: "grading" ala MR.DIY</h2>
+  <p class="sub">Tidak ada label A/B/C resmi. Tingkatan toko terbentuk dari tiga dimensi yang dikombinasikan sesuai kondisi area sekitar toko.</p>
+
+  <div class="dimrow">
+    <div class="dim"><div class="k">Dimensi 1 · Ukuran / merek</div><div class="chips"><span class="chip">Express</span><span class="chip">Reguler</span><span class="chip">Flagship</span><span class="chip">Plus (3-in-1)</span><span class="chip">MR.TOY</span><span class="chip">MR.DOLLAR</span></div></div>
+    <div class="times">×</div>
+    <div class="dim"><div class="k">Dimensi 2 · Tipe lokasi</div><div class="chips"><span class="chip">Mal</span><span class="chip">Ruko / standalone</span><span class="chip">Galeri hipermarket</span><span class="chip">Retail park</span><span class="chip">Gedung sendiri</span><span class="chip">Toko jalanan <small>(gagal di Spanyol)</small></span></div></div>
+    <div class="times">×</div>
+    <div class="dim"><div class="k">Dimensi 3 · Generasi desain</div><div class="chips"><span class="chip">Klasik "bazar"</span><span class="chip">MR.DIY 2.0 <small>(TH)</small></span><span class="chip">Elevated Experience <small>(PH)</small></span><span class="chip">Format baru Eropa <small>(ES)</small></span></div></div>
+  </div>
+
+  <h3 style="margin-top:20px">Rentang luas tiap format (m²)</h3>
+  <div class="legend">
+    <span><i class="sw" style="background:var(--s1)"></i>Toko volume (tulang punggung jaringan)</span>
+    <span><i class="sw" style="background:var(--s2)"></i>Toko prime (brand + laboratorium)</span>
+  </div>
+  <div class="chart-wrap" id="fmtWrap"><svg id="fmt" role="img" aria-label="Rentang luas toko per format MR.DIY dalam meter persegi"></svg><div class="tooltip" id="tip1"></div></div>
+
+  <table>
+    <thead><tr><th>Format</th><th>Luas</th><th>SKU</th><th>Lokasi tipikal</th><th>Dipakai di tahap</th><th>Peran</th></tr></thead>
+    <tbody>
+      <tr><td><span class="dot" style="background:var(--s1)"></span><b>Express</b></td><td class="num">±190–370 m²</td><td>Dipersempit</td><td>Kota kecil, pedesaan (Malaysia)</td><td>ACCELERATE, MATURE</td><td>Penetrasi wilayah yang tidak cukup untuk toko besar</td></tr>
+      <tr><td><span class="dot" style="background:var(--s1)"></span><b>Reguler</b></td><td class="num">±600–1.300 m²</td><td class="num">15.000–18.000</td><td>Mal, retail park, ruko (jika tak ada mal)</td><td>Semua tahap</td><td>Format utama; satu-satunya format di Eropa saat ini</td></tr>
+      <tr><td><span class="dot" style="background:var(--s1)"></span><b>Toko referensi</b></td><td class="num">Ukuran reguler</td><td>Sama dengan reguler</td><td>Mal</td><td>STABILISE (uji ulang)</td><td>Prototipe format standar yang akan diklon (Parque Corredor, Spanyol)</td></tr>
+      <tr><td><span class="dot" style="background:var(--s2)"></span><b>Flagship</b></td><td class="num">±800–1.600 m²</td><td>Sama dengan reguler</td><td>Mal prime, toko milestone, wilayah baru</td><td>ACCELERATE, MATURE</td><td>Brand, kredibilitas ke pemilik mal, laboratorium konsep</td></tr>
+      <tr><td><span class="dot" style="background:var(--s2)"></span><b>Plus</b></td><td class="num">±1.900–2.800 m²</td><td class="num">±20.000 (3 merek)</td><td>Mal besar di kota besar</td><td>MATURE (Malaysia)</td><td>Format besar hasil pengujian flagship; MR.DIY + MR.TOY + MR.DOLLAR</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ============ 2. SWIMLANE ============ -->
+<div class="card">
+  <h2>2. Strategi per tahap: format yang dipakai, peran flagship, dan turunannya</h2>
+  <p class="sub" style="margin-bottom:0">Baris biru = peran toko unggulan (flagship atau toko referensi) di setiap tahap.</p>
+  <div class="swim">
+    <div class="lane" style="background:var(--surface-1)"></div>
+    <div class="ph" style="--bar:var(--o1)">0 · Seleksi negara<small>Sebelum toko pertama</small></div>
+    <div class="ph" style="--bar:var(--o2)">1 · PROVE<small>Toko 1–10</small></div>
+    <div class="ph" style="--bar:var(--o3)">2 · STABILISE<small>±20–30 toko berikutnya</small></div>
+    <div class="ph" style="--bar:var(--o4)">3 · ACCELERATE<small>Target tahunan</small></div>
+    <div class="ph" style="--bar:var(--o5)">4 · MATURE<small>Pasar jenuh</small></div>
+
+    <div class="lane">Pertanyaan kunci</div>
+    <div>Layak masuk? Upah, kurs, pasokan mal masuk akal?</div>
+    <div>Apakah model kita <b>jalan</b> di sini?</div>
+    <div>Bisakah <b>diulang</b> konsisten oleh tim lokal?</div>
+    <div>Seberapa <b>cepat</b> tanpa merusak kualitas?</div>
+    <div>Bagaimana memeras <b>lebih banyak dari ruang yang sama</b>?</div>
+
+    <div class="lane">Format toko<small>yang dipakai</small></div>
+    <div class="none">Belum ada toko</div>
+    <div><b>Reguler</b> 600–1.200 m² di mal kota menengah. Sengaja bervariasi: ukuran, mal vs retail park vs jalanan.</div>
+    <div><b>Satu resep</b>: reguler dengan layout pemenang, dipadatkan di kota pemenang (klaster 2 jam).</div>
+    <div><b>Diturunkan sesuai area</b>: Plus (mal besar) · reguler (mal) · ruko (tanpa mal) · Express (kota kecil).</div>
+    <div><b>Refresh</b> ke desain baru (2.0 / Elevated) + merek tambahan (MR.TOY, MR.DOLLAR, KKV).</div>
+
+    <div class="lane hl">Toko unggulan<small>flagship / referensi</small></div>
+    <div class="hl none">—</div>
+    <div class="hl"><span class="tag">✕ Tidak ada</span><br>Toko pertama bukan flagship. Modal dan risiko dijaga kecil sampai model terbukti.</div>
+    <div class="hl"><span class="tag">◯ Toko referensi</span><br>Prototipe format standar untuk diklon. <b>Parque Corredor</b> (Spanyol, ±25 toko).<br><span class="muted">Pengecualian: flagship <b>Vietnam</b> (Jul 2024, ±18 toko) memanfaatkan mal baru Vincom Grand Park.</span></div>
+    <div class="hl"><span class="tag">● Flagship merek</span><br>Di mal prime dan momen milestone: <b>Lotte Mall #900</b> (ID), <b>Seacon #900</b> (TH), <b>Makati #1.000</b> (PH), <b>Bang Khae #1.200</b> (TH).</div>
+    <div class="hl"><span class="tag">● Flagship laboratorium</span><br>Uji retailtainment dan format besar: <b>MyTOWN</b> (2× luas), <b>Imago</b> (Malaysia Timur), <b>Plus Mid Valley</b>.</div>
+
+    <div class="lane hl">Yang diharapkan<small>dari toko unggulan</small></div>
+    <div class="hl none">—</div>
+    <div class="hl"><span class="muted">KPI toko reguler: konversi ±60%, UPT menuju 4, titik impas, tahan trafik −20%.</span></div>
+    <div class="hl">Format baru <b>lebih produktif</b> dari format lama: klaim penjualan hingga 5×, ±1.200 transaksi/hari, konversi naik.</div>
+    <div class="hl"><b>Awareness dan citra merek</b>, akses ke mal prime, data perilaku pelanggan di trafik tinggi.</div>
+    <div class="hl"><b>Penjualan/ft² naik lebih cepat dari luas</b> (MyTOWN, 5 bulan berturut-turut), dwell time, UPT, SSS toko yang di-refresh.</div>
+
+    <div class="lane lastrow">Turunan<small>output ke jaringan</small></div>
+    <div class="lastrow">Peran negara + 5 orang pertama</div>
+    <div class="lastrow"><b>Resep toko</b>: kota, lokasi, ukuran, SKU, harga, staf.</div>
+    <div class="lastrow"><b>Format standar negara/region</b>: semua toko baru Spanyol (Xanadú, La Maquinista, Gran Via 2).</div>
+    <div class="lastrow"><b>Generasi desain baru</b> untuk toko baru di mal kelas A: MR.DIY 2.0, Elevated Experience.</div>
+    <div class="lastrow"><b>Program refresh</b> toko lama, format <b>Plus</b>, SKU dan adjacency baru.</div>
+  </div>
+</div>
+
+<!-- ============ 3. WHEN ============ -->
+<div class="card">
+  <h2>3. Kapan toko unggulan dibuka? Jumlah toko di negara itu saat pembukaan</h2>
+  <p class="sub" style="margin-bottom:4px">Skala logaritmik. Pita abu-abu = tahap. Hampir semua flagship dibuka setelah negara punya ratusan toko; area PROVE kosong.</p>
+  <div class="legend">
+    <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="var(--s1)"/></svg>Flagship</span>
+    <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="var(--surface-1)" stroke="var(--s1)" stroke-width="2"/></svg>Toko referensi format baru</span>
+    <span class="muted">#900 = toko ke-900 · ± = perkiraan dari data akhir tahun</span>
+  </div>
+  <div class="chart-wrap" id="whenWrap"><svg id="when" role="img" aria-label="Jumlah toko di negara saat flagship atau toko referensi dibuka, per negara, skala logaritmik"></svg><div class="tooltip" id="tip2"></div></div>
+  <details><summary>Lihat tabel data</summary>
+    <table id="whenTable"><thead><tr><th>Negara</th><th>Toko</th><th>Waktu</th><th>Jenis</th><th>Jumlah toko di negara saat itu</th><th>Catatan</th></tr></thead><tbody></tbody></table>
+  </details>
+</div>
+
+<!-- ============ 4. CHAINS ============ -->
+<div class="card">
+  <h2>4. Dari flagship ke jaringan: rantai turunan yang terlihat</h2>
+  <p class="sub" style="margin-bottom:4px">Kotak bergaris biru = toko unggulan (sumber uji). Kotak abu = turunan yang dipakai di toko lain.</p>
+
+  <div class="chain">
+    <div class="who">Malaysia<small>Format besar</small></div>
+    <div class="steps">
+      <div class="step src"><b>Flagship Mid Valley</b>2018 · 1.393 m² · flagship pertama</div><div class="arr">›</div>
+      <div class="step src"><b>Plus Mid Valley</b>2022 · 3-in-1, ±30.000 ft²</div><div class="arr">›</div>
+      <div class="step out"><b>Plus di lokasi urban</b>Toko ≥20.000 ft² (contoh IPC 23.000 ft²)</div><div class="arr">›</div>
+      <div class="step src"><b>MyTOWN</b>2025 · luas 2×, retailtainment</div><div class="arr">›</div>
+      <div class="step out"><b>Refresh toko + MR.TOY</b>2025 · penyegaran jaringan</div>
+    </div>
+  </div>
+  <div class="chain">
+    <div class="who">Thailand<small>Desain 2.0</small></div>
+    <div class="steps">
+      <div class="step src"><b>Bangkapi</b>Des 2023 · 1.285 m², flagship pertama</div><div class="arr">›</div>
+      <div class="step src"><b>Seacon Square #900</b>2024 · format "MR.DIY 2.0"</div><div class="arr">›</div>
+      <div class="step out"><b>Store Design of the Year</b>Retail Asia Awards 2025</div><div class="arr">›</div>
+      <div class="step out"><b>2.0 untuk toko baru</b>Termasuk standalone 2 lantai Bang Khae #1.200 (2026)</div>
+    </div>
+  </div>
+  <div class="chain">
+    <div class="who">Spanyol<small>Format Eropa</small></div>
+    <div class="steps">
+      <div class="step"><b>Format bazar</b>2022–2024 · mandek ±21–27 toko</div><div class="arr">›</div>
+      <div class="step src"><b>Parque Corredor</b>Jun 2025 · toko referensi Eropa</div><div class="arr">›</div>
+      <div class="step out"><b>Semua toko baru Spanyol</b>Xanadú, La Maquinista, Gran Via 2 (2026)</div><div class="arr">›</div>
+      <div class="step out"><b>Model untuk Eropa</b><span class="muted">inferensi: Polandia, Rumania, Ceko</span></div>
+    </div>
+  </div>
+  <div class="chain">
+    <div class="who">Indonesia &amp; Filipina<small>Brand di pasar volume</small></div>
+    <div class="steps">
+      <div class="step src"><b>Lotte Mall Jakarta #900</b>Nov 2024 · rotan, seni lokal</div><div class="arr">›</div>
+      <div class="step src"><b>Summarecon Bekasi 2</b>Feb 2026 · layout dan DIY corner baru</div><div class="arr">›</div>
+      <div class="step src"><b>Makati #1.000 (PH)</b>Mei 2026 · Elevated Experience</div><div class="arr">›</div>
+      <div class="step out"><b>Elemen ke jaringan</b>Rak rendah, zonasi warna, wayfinding <span class="muted">(inferensi)</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <p><b>Catatan.</b> Istilah "toko referensi" vs "flagship" dan pemetaan ke tahap adalah interpretasi kami atas kerangka PROVE → STABILISE → ACCELERATE dari postingan Leo Gan. Jumlah toko saat pembukaan flagship sebagian diperkirakan dari data akhir tahun (ditandai ±). Luas Express berbeda antar sumber (2.000–3.000 ft² vs rata-rata ±4.000 ft²). Rentang luas reguler mencakup Malaysia (±750–930 m²) dan Eropa (596–1.280 m²).</p>
+  <p><b>Sumber.</b> Postingan LinkedIn Leo Gan; Wikipedia MR.DIY; MIDF (Des 2025); MR.DIY Annual Report 2022; Focus Malaysia; The Rakyat Post; Inside Retail Asia (flagship Malaysia 2018, Vietnam 2024); The Jakarta Post; Infobanknews; ThaiPR (Bangkapi); Nation Thailand; Newswit; MR.DIY Philippines; Revista Centros Comerciales; Retail Actual; Just Retail; Money Buzz; detikFinance.</p>
+</div>
+
+</div></div>
+
+<script>
+(function () {
+  const NS = 'http://www.w3.org/2000/svg';
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+  const fmtN = n => n.toLocaleString('id-ID');
+  function attachTip(hit, tip, wrap, cx, cy, lines) {
+    const show = () => {
+      tip.replaceChildren();
+      lines.forEach((t, i) => { const d = document.createElement('div'); d.className = i === 0 ? 'v' : 'l'; d.textContent = t; tip.appendChild(d); });
+      tip.style.opacity = 1;
+      const tw = tip.offsetWidth; let left = cx + 16; if (left + tw > wrap.clientWidth) left = cx - tw - 16;
+      tip.style.left = left + 'px'; tip.style.top = (cy - 18) + 'px';
+    };
+    const hide = () => { tip.style.opacity = 0; };
+    hit.addEventListener('pointerenter', show); hit.addEventListener('pointerleave', hide);
+    hit.addEventListener('focus', show); hit.addEventListener('blur', hide);
+  }
+
+  // ---------- 1. Format size ranges ----------
+  const formats = [
+    { name: 'Express', lo: 190, hi: 370, c: '--s1', note: '2.000–4.000 ft²; kota kecil dan pedesaan' },
+    { name: 'Reguler', lo: 600, hi: 1300, c: '--s1', note: 'Malaysia ±750–930 m²; Eropa 596–1.280 m²' },
+    { name: 'Flagship', lo: 800, hi: 1600, c: '--s2', note: 'Vietnam >800 m²; Bekasi ±1.100; Bangkapi 1.285; Mid Valley 1.393; Makati ±1.565' },
+    { name: 'Plus', lo: 1900, hi: 2800, c: '--s2', note: '20.000–30.000 ft²; MR.DIY + MR.TOY + MR.DOLLAR' },
+  ];
+  function drawFmt() {
+    const svg = document.getElementById('fmt'); svg.replaceChildren();
+    const W = svg.parentElement.clientWidth, rowH = 38, m = { l: 80, r: 24, t: 8, b: 30 };
+    const H = m.t + formats.length * rowH + m.b;
+    svg.setAttribute('width', W); svg.setAttribute('height', H); svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    const pw = W - m.l - m.r, xMax = 3000, x = v => m.l + v / xMax * pw;
+    for (let v = 0; v <= xMax; v += 500) {
+      el('line', { x1: x(v), x2: x(v), y1: m.t, y2: H - m.b, stroke: 'var(--grid)', 'stroke-width': 1 }, svg);
+      const t = el('text', { x: x(v), y: H - m.b + 16, 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--text-muted)' }, svg); t.textContent = v === 0 ? '0 m²' : fmtN(v);
+    }
+    const tip = document.getElementById('tip1'), wrap = document.getElementById('fmtWrap');
+    formats.forEach((f, i) => {
+      const cy = m.t + i * rowH + rowH / 2;
+      const lab = el('text', { x: m.l - 10, y: cy + 4, 'text-anchor': 'end', 'font-size': 12.5, 'font-weight': 600, fill: 'var(--text-primary)' }, svg); lab.textContent = f.name;
+      el('rect', { x: x(f.lo), y: cy - 9, width: x(f.hi) - x(f.lo), height: 18, rx: 4, fill: `var(${f.c})` }, svg);
+      const nearEdge = x(f.hi) + 110 > W;
+      const v = el('text', { x: nearEdge ? x(f.lo) - 8 : x(f.hi) + 8, y: cy + 4, 'text-anchor': nearEdge ? 'end' : 'start', 'font-size': 12, fill: 'var(--text-secondary)' }, svg); v.textContent = `${fmtN(f.lo)}–${fmtN(f.hi)} m²`;
+      const hit = el('rect', { x: x(f.lo) - 6, y: cy - 16, width: x(f.hi) - x(f.lo) + 12, height: 32, fill: 'transparent', tabindex: 0, role: 'img', 'aria-label': `${f.name}: ${f.lo}–${f.hi} m². ${f.note}` }, svg);
+      attachTip(hit, tip, wrap, x(f.hi), cy, [`${fmtN(f.lo)}–${fmtN(f.hi)} m²`, f.name, f.note]);
+    });
+  }
+
+  // ---------- 3. Store count at flagship opening ----------
+  const rows = ['Malaysia', 'Thailand', 'Indonesia', 'Filipina', 'Vietnam', 'Spanyol'];
+  const ev = [
+    { c: 'Malaysia', n: 360, approx: true, lab: 'Mid Valley', when: 'Feb 2018', kind: 'f', pos: 'b', note: 'Flagship pertama MR.DIY; Malaysia ±354 toko akhir 2017' },
+    { c: 'Malaysia', n: 950, approx: true, lab: 'Plus Mid Valley', when: 'Mei 2022', kind: 'f', pos: 'a', note: 'Format Plus 3-in-1 pertama' },
+    { c: 'Malaysia', n: 1500, approx: true, lab: 'MyTOWN + Imago', when: '2025', kind: 'f', pos: 'b', note: 'Retailtainment; Imago di Malaysia Timur' },
+    { c: 'Thailand', n: 750, approx: true, lab: 'Bangkapi', when: 'Des 2023', kind: 'f', pos: 'l', note: 'Flagship pertama Thailand; sumber menyebut toko ke-700 s.d. 800+' },
+    { c: 'Thailand', n: 900, approx: false, lab: 'Seacon #900', when: '2024', kind: 'f', pos: 'b', note: 'Format MR.DIY 2.0; Store Design of the Year 2025' },
+    { c: 'Thailand', n: 1200, approx: false, lab: 'Bang Khae #1.200', when: 'Mei 2026', kind: 'f', pos: 'a', note: 'Flagship standalone 2 lantai' },
+    { c: 'Indonesia', n: 900, approx: false, lab: 'Lotte Mall #900', when: 'Nov 2024', kind: 'f', pos: 'a', note: 'Flagship pertama Indonesia' },
+    { c: 'Indonesia', n: 1250, approx: true, lab: 'Bekasi 2', when: 'Feb 2026', kind: 'f', pos: 'b', note: 'Flagship ke-2; 1.278 toko per akhir Mar 2026' },
+    { c: 'Filipina', n: 1000, approx: false, lab: 'Makati #1.000', when: 'Mei 2026', kind: 'f', pos: 'b', note: 'Elevated Experience Store pertama' },
+    { c: 'Vietnam', n: 18, approx: true, lab: 'Flagship pertama', when: 'Jul 2024', kind: 'f', pos: 'b', note: 'Pengecualian: dibuka saat ±18 toko (21 toko per Sep 2024)' },
+    { c: 'Spanyol', n: 25, approx: true, lab: 'Parque Corredor', when: 'Jun 2025', kind: 'r', pos: 'b', note: 'Toko referensi format Eropa baru' },
+  ];
+  const tb = document.querySelector('#whenTable tbody');
+  ev.forEach(e => { const tr = document.createElement('tr'); [e.c, e.lab, e.when, e.kind === 'f' ? 'Flagship' : 'Toko referensi', (e.approx ? '±' : '') + fmtN(e.n), e.note].forEach(v => { const td = document.createElement('td'); td.textContent = v; tr.appendChild(td); }); tb.appendChild(tr); });
+
+  function drawWhen() {
+    const svg = document.getElementById('when'); svg.replaceChildren();
+    const W = svg.parentElement.clientWidth, rowH = 70, m = { l: 84, r: 40, t: 22, b: 34 };
+    const H = m.t + rows.length * rowH + m.b;
+    svg.setAttribute('width', W); svg.setAttribute('height', H); svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    const pw = W - m.l - m.r, lo = 5, hi = 2500;
+    const x = v => m.l + (Math.log10(v) - Math.log10(lo)) / (Math.log10(hi) - Math.log10(lo)) * pw;
+    [[lo, 10, 'PROVE', '--band-a'], [10, 35, 'STABILISE', '--band-b'], [35, hi, 'ACCELERATE / MATURE', '--band-a']].forEach(([a, b, t, f]) => {
+      el('rect', { x: x(a), y: m.t, width: x(b) - x(a), height: H - m.t - m.b, fill: `var(${f})` }, svg);
+      const tx = el('text', { x: x(a) + 6, y: 14, 'font-size': 11, 'font-weight': 600, fill: 'var(--text-muted)', 'letter-spacing': '.04em' }, svg); tx.textContent = t;
+    });
+    [10, 30, 100, 300, 1000].forEach(v => {
+      el('line', { x1: x(v), x2: x(v), y1: m.t, y2: H - m.b, stroke: 'var(--grid)', 'stroke-width': 1 }, svg);
+      const t = el('text', { x: x(v), y: H - m.b + 16, 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--text-muted)' }, svg); t.textContent = fmtN(v);
+    });
+    const xl = el('text', { x: m.l + pw / 2, y: H - 4, 'text-anchor': 'middle', 'font-size': 11.5, fill: 'var(--text-secondary)' }, svg); xl.textContent = 'Jumlah toko di negara tersebut saat toko unggulan dibuka (log)';
+    rows.forEach((r, i) => {
+      const cy = m.t + i * rowH + rowH / 2;
+      el('line', { x1: m.l, x2: m.l + pw, y1: cy, y2: cy, stroke: 'var(--axis)', 'stroke-width': 1 }, svg);
+      const t = el('text', { x: m.l - 12, y: cy + 4, 'text-anchor': 'end', 'font-size': 12.5, 'font-weight': 600, fill: 'var(--text-primary)' }, svg); t.textContent = r;
+    });
+    const tip = document.getElementById('tip2'), wrap = document.getElementById('whenWrap');
+    ev.forEach(e => {
+      const cx = x(e.n), cy = m.t + rows.indexOf(e.c) * rowH + rowH / 2;
+      if (e.kind === 'f') el('circle', { cx, cy, r: 6, fill: 'var(--s1)', stroke: 'var(--surface-1)', 'stroke-width': 2 }, svg);
+      else el('circle', { cx, cy, r: 5, fill: 'var(--surface-1)', stroke: 'var(--s1)', 'stroke-width': 2 }, svg);
+      if (e.pos === 'l') {
+        const t1 = el('text', { x: cx - 12, y: cy - 2, 'text-anchor': 'end', 'font-size': 11.5, 'font-weight': 600, fill: 'var(--text-primary)' }, svg); t1.textContent = e.lab;
+        const t2 = el('text', { x: cx - 12, y: cy + 11, 'text-anchor': 'end', 'font-size': 11, fill: 'var(--text-muted)' }, svg); t2.textContent = e.when;
+      } else {
+      const l1 = e.pos === 'a' ? cy - 24 : cy + 19, l2 = l1 + 13;
+      const t1 = el('text', { x: cx, y: l1, 'text-anchor': 'middle', 'font-size': 11.5, 'font-weight': 600, fill: 'var(--text-primary)' }, svg); t1.textContent = e.lab;
+      const t2 = el('text', { x: cx, y: l2, 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--text-muted)' }, svg); t2.textContent = e.when;
+      }
+      const hit = el('circle', { cx, cy, r: 14, fill: 'transparent', tabindex: 0, role: 'img', 'aria-label': `${e.c}, ${e.lab}, ${e.when}: ${e.approx ? 'sekitar ' : ''}${e.n} toko. ${e.note}` }, svg);
+      attachTip(hit, tip, wrap, cx, cy, [`${e.approx ? '±' : ''}${fmtN(e.n)} toko`, `${e.c} · ${e.lab} · ${e.when}`, e.note]);
+    });
+  }
+  const drawAll = () => { drawFmt(); drawWhen(); };
+  drawAll();
+  let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(drawAll, 120); });
+})();
+</script>
+</body>
+</html>
