@@ -62,7 +62,7 @@
 | Afrika Selatan | 4 (baru) | n/a | Prove |
 | **Total** | **5.535 di 14 negara** | **+24% (+1.065 toko bersih)** | |
 
-\*Pemetaan fase adalah interpretasi kami terhadap kerangka PROVE (5–10 toko) → STABILISE (20–30) → ACCELERATE dari postingan "Scale right, then faster".
+\*Pemetaan fase adalah interpretasi kami terhadap kerangka PROVE (5–10 toko) → STABILISE (20–30) → ACCELERATE dari postingan "Scale right, then faster". Pengujian pemetaan ini terhadap data historis tiap negara ada di **Bagian 5**.
 
 **Temuan kunci:** pada 2025, saat grup tumbuh 24%, **Spanyol hampir tidak bertambah (+4%)**. Spanyol lalu tercatat di sekitar 25 toko pada Agustus 2026, meskipun ada pembukaan baru pada Februari dan April 2026. Ini konsisten dengan prinsip *"Refresh or exit"* dan *"If the first 10 stores struggle, opening the next 100 is ... pressure disguised as strategy"*: toko format lama kemungkinan ditutup atau direlokasi, lalu Spanyol "dibuktikan ulang" dengan format baru. Sebaliknya, Polandia (+850%) adalah contoh pasar yang lolos gerbang PROVE dengan cepat.
 
@@ -184,9 +184,116 @@ Seri Juni (*Productivity Flywheel*) dan beberapa postingan lain menunjukkan prio
 
 ---
 
-## 5. Apakah Masih Akan Agresif? (Proyeksi 2027–2030)
+## 5. Menguji Kerangka PROVE → STABILISE → ACCELERATE dengan Data
 
-### 5.1 Target vs realisasi
+**Pertanyaan:** apakah pemetaan fase di Bagian 1.1 bisa dibuktikan, atau hanya klaim di LinkedIn?
+
+**Jawaban singkat:** **terbukti sebagian.** Lintasan jumlah toko di 15 pasar **konsisten** dengan model ekspansi bergerbang, terutama untuk pasar yang dimasuki sejak 2023 (Vietnam, Polandia, Bangladesh, Rumania). Ada juga dua pengecualian penting, Turki dan Spanyol, yang justru menjelaskan *mengapa* kerangka ini dibuat. Yang **tidak bisa** dibuktikan dari data publik adalah KPI di setiap gerbang (konversi, sales density, titik impas per negara), karena entitas di luar Malaysia, Indonesia, dan Thailand tidak menerbitkan laporan keuangan.
+
+### 5.1 Data: lintasan jumlah toko per negara
+
+| Negara | Masuk | Lintasan jumlah toko (titik data publik) | Waktu ke ±30 toko | Penambahan bersih terbaru |
+|---|---|---|---|---|
+| Thailand | Jan 2016 | 205 (2019) → 278 (2020) → 399 (2021) → 500 (Jul 2022) → 600 (Apr 2023) → 932 (2024) → 1.127 (2025) → 1.265 (Agu 2026) | n/a (data awal tidak tersedia) | +195 (2025) |
+| Indonesia | 2017 | 50 (2018) → 100 dan 150 (2019) → 200 (2020) → 300 (2021) → 478 (2022) → 698 (2023) → 961 (2024) → 1.227 (2025) → 1.416 (Sep 2026) | < 2 tahun | +220 → +263 → +266 per tahun |
+| Filipina | 2018 | 100 (Jan 2021) → 200 (Feb 2022) → 300 (Nov 2022) → 500 (Feb 2024) → ~700 (2024) → 931 (2025) → 1.000 (Mei 2026) | n/a (100 toko dalam ~2 tahun) | +231 (2025) |
+| India | 2019 | 100 (Jan 2023) → ~285 (2024) → 387 (2025) → 447 (Agu 2026) | ~2 tahun (diperlambat COVID) | +102 (2025) |
+| **Turki** | Nov 2021 | 10 (Des 2021) → 50 (Mei 2022) → 100 (Apr 2023) → ~139 (2024) → 169 (2025) → 178 (Agu 2026) | **~4 bulan** | +30 (2025); +9 dalam 8 bulan 2026 |
+| **Spanyol** | 2022 | 2 toko mal awal → 21 (Jul 2023, lewat toko jalanan/high street) → ~26 (2024) → 25 (Jun 2025) → 27 (2025) → 28 (Okt 2026) | 21 toko dalam ~1,5 tahun, lalu **mandek 3 tahun**; belum pernah mencapai 30 | +1 (2025) |
+| Vietnam | Agu 2023 | ~33 (2024; target awal 25) → 55 (2025) → 72 (Agu 2026) | ~16 bulan | +22 (2025) |
+| **Polandia** | Nov 2024 | 2 (2024) → 19 (2025) → 23 (Apr 2026) → 35 (Jul 2026) | ~20 bulan | +17 (2025); +12 dalam 3 bulan (Apr–Jul 2026) |
+| Bangladesh | 2024 | 3 (2024) → 12 (2025) → 18 (Agu 2026) | belum | +9 (2025) |
+| Rumania | Mar 2026 | 7 toko dalam 7 bulan → target ≥11 (akhir 2026) | belum | ~1 toko/bulan |
+| Afrika Selatan | 2025 | 4 (2025) → 7 (Agu 2026) | belum | +3 dalam 8 bulan |
+| Kamboja | 2019 | 5 (2024) → 7 (2025) → 7 (Agu 2026) | **tidak pernah** (7 tahun) | 0 |
+| Singapura | 2018 | 12 (2024) → 13 (2025) | tidak pernah | +1 |
+| Yunani | Entitas 2022 | **0 toko** | n/a | n/a |
+| Jerman | GmbH Jan 2026 | **0 toko** | n/a | n/a |
+
+*Angka akhir 2024 untuk beberapa negara diturunkan dari persentase pertumbuhan di peta "End 2025" Leo Gan, sehingga ada selisih pembulatan beberapa toko. Data Thailand akhir 2024 hasil turunan (931) cocok dengan angka resmi (932), yang memberi keyakinan bahwa metode ini cukup akurat.*
+
+### 5.2 Uji hipotesis
+
+| # | Hipotesis (jika kerangka benar) | Bukti | Status |
+|---|---|---|---|
+| H1 | Fase PROVE lambat: sekitar 1 toko/bulan sampai ±10 toko | Polandia 2 toko dalam 1,5 bulan pertama, sekitar 1,4 toko/bulan di 2025. Rumania 7 dalam 7 bulan. Bangladesh 3 lalu 12. Afrika Selatan 4 lalu 7 | **Konsisten** untuk pasar yang dimasuki sejak 2023. **Dilanggar** oleh Turki (10 toko dalam ~2 bulan, 50 dalam 6 bulan) dan Spanyol (21 toko dalam ~1,5 tahun) |
+| H2 | Percepatan baru terjadi setelah ±20–30 toko terbukti, dan didahului infrastruktur | Polandia: sekitar 1 toko/bulan saat < 20 toko, lalu **sekitar 4 toko/bulan** (Apr–Jul 2026) setelah ±20 toko, berbarengan dengan DC Zgierz diperluas dari 5.000 menjadi 12.000 m² dan DC Łódź. India: 4 tahun menuju 100 toko, lalu +185 dalam 2 tahun. ID/PH/TH membentuk kurva-S | **Konsisten**. Polandia adalah bukti terkuat |
+| H3 | Jika gerbang tidak lolos, toko tidak dipercepat; model dikalibrasi ulang, dijeda, atau keluar | Spanyol mandek di 21–28 toko selama 3 tahun, pindah strategi lokasi, lalu format baru. Turki melambat tajam. Yunani tidak pernah buka. Kamboja dan Singapura datar. Ekspansi Eropa "ditahan" pada 2023 | **Konsisten**. Tidak ada pasar yang dipercepat saat sedang mandek |
+| H4 | Pasar matang beralih ke optimasi produktivitas | Malaysia: SSS negatif, target pembukaan turun (180 → 155/tahun), fokus SKU, rak, flagship MyTOWN/Imago, refresh toko, MR.TOY | **Konsisten** |
+| H5 | Waktu menuju fase akselerasi makin terkendali seiring pembelajaran | Waktu ke ±30 toko: Turki ~4 bulan (2021) → Vietnam ~16 bulan (2023) → Polandia ~20 bulan (2024) | **Konsisten**. Pasar baru sengaja dibuat lebih lambat di awal |
+
+### 5.3 Dua pengecualian yang justru menjelaskan kerangka ini
+
+**Turki: contoh "terlalu cepat" (melompati PROVE dan STABILISE).**
+- Rencana awal: 40–50 toko pada akhir 2022 dan **400 toko dalam 5 tahun** dengan investasi sekitar US$40 juta per tahun.
+- Realisasi: 50 toko sudah tercapai Mei 2022 (lebih cepat dari rencana), 100 toko April 2023. Setelah itu pertumbuhan melambat: sekitar 23 toko/tahun (2023–2024), +30 (2025), +9 dalam 8 bulan 2026. Posisi Agustus 2026 di 178 toko, **sekitar 45% dari rencana 400**.
+- Konteks: inflasi Turki sangat tinggi pada 2022–2024 (tahunan sempat di atas 80% pada akhir 2022), upah minimum naik berkali-kali, dan lira melemah tajam. Ini persis pertanyaan di postingan Leo Gan: *"Is wage inflation already ahead of pricing power?"*, *"Currency too volatile?"*.
+- Bacaan: Turki kemungkinan besar adalah salah satu pasar yang dimaksud dalam *"In more than one market, we learned this firsthand: If the first 10 stores struggle, opening the next 100 is not ambition. It is pressure disguised as strategy."* Ini **inferensi**: perusahaan tidak menyebut nama negara.
+
+**Spanyol: contoh "hasil parsial" (gerbang STABILISE tidak lolos).**
+- 2022: dua toko pertama di mal (Talavera de la Reina, Getafe), yaitu fase PROVE.
+- 2022–Jul 2023: strategi berganti ke **toko jalanan (high street)** dan cepat mencapai 21 toko. Ini fase *spread*.
+- Jul 2023–2025: jumlah toko mandek (21 → 27). Pada 2024 strategi lokasi **dikembalikan ke mal dan retail park**.
+- Jun 2025: **format baru** diluncurkan di Parque Corredor (*"tres aperturas con este nuevo modelo están siendo un éxito… visitantes, conversión y ventas"*). Ini PROVE ulang.
+- 2026: sedikitnya sekitar 9 pembukaan baru tercatat (Ponferrada, Santiago, La Maquinista, Xanadú, Gran Via 2, dan lain-lain), tetapi total hanya naik ke 28. Artinya ada **penutupan atau relokasi toko lama**, kemungkinan toko jalanan format lama (inferensi). Sekarang terbentuk **klaster** Barcelona (3 toko dalam sebulan) dan Madrid.
+- Bacaan: Spanyol adalah kasus "lolos sebagian". Konsepnya diterima, tetapi tipe lokasi dan format toko salah. Perusahaan **tidak keluar dan tidak mempercepat**, melainkan menahan di fase STABILISE, mengganti lokasi dan format, menutup toko yang lemah, lalu baru sekarang mulai membangun klaster. Guidance 2027 (20–30 toko) adalah langkah awal keluar dari STABILISE.
+
+### 5.4 Apa yang dilakukan dan diharapkan di tiap tahap, serta respons bila meleset
+
+Disusun dari postingan Leo Gan (kutipan dalam tanda kutip) dan dicocokkan dengan kasus nyata. Kriteria gerbang **tidak dipublikasikan secara formal**, jadi kolom "jika meleset" adalah rekonstruksi dari pernyataan dan perilaku yang teramati.
+
+#### Tahap 0: Seleksi negara (sebelum toko pertama)
+- **Yang dilakukan:** menentukan peran negara (*"Scale market? Margin market? Learning market?"*), menilai ruang tumbuh, apakah model bisa dipindahkan (harga, assortment, disiplin biaya), dan potensi pembelajaran. Mendaftarkan entitas lokal dan merekrut 5 orang pertama (*"Your first 5 hires become your operating DNA"*).
+- **Yang diharapkan:** jawaban memuaskan atas *"Is wage inflation already ahead of pricing power? Is property supply rational — or desperate for tenants? How fragile is consumer confidence? Currency too volatile?"*
+- **Jika belum yakin:** *"Not yet"*. Entitas boleh berdiri, tetapi toko tidak dibuka. **Kasus:** Yunani (entitas 2022, nol toko), Laos (tercatat sebagai pasar MDIH, nol toko), Jerman (GmbH Jan 2026, belum ada toko), dan jeda Eropa 2023.
+
+#### Tahap 1: PROVE (toko 1–10, sekitar 6–15 bulan)
+- **Yang dilakukan:** *"Validate economics, localise assortment, lock execution."* Toko disebar ke beberapa kota dan tipe catchment untuk belajar (*"Spread to learn"*), dengan menguji mal, jalanan, dan retail park. Harga dan assortment disesuaikan dengan daya beli lokal. Toko awal tetap dalam jangkauan 2 jam dari tim inti.
+- **Yang diharapkan (gerbang):** *"Can the first 5 stores hit productivity targets without hero-level effort?"* Konversi mendekati target sekitar 60%, UPT menuju 4, timeline titik impas realistis, toko bertahan jika trafik turun 20%, dan sudah teridentifikasi kota atau tipe lokasi yang menang.
+- **Jika terpenuhi penuh:** naik ke STABILISE dan mulai memadatkan toko di kota pemenang. **Kasus:** Polandia 2025 (4 toko di Warsawa dalam setahun).
+- **Jika terpenuhi sebagian:** tutup atau relokasi toko di lokasi yang kalah, ubah tipe lokasi atau format, kalibrasi ulang harga dan assortment (*"Sometimes it's pricing. Sometimes it's assortment. Sometimes it's cost structure. And sometimes — it's the entire operating rhythm."*). Tahap PROVE diperpanjang. **Kasus:** Spanyol (dari jalanan kembali ke mal, lalu format baru). Kamboja dan Singapura bertahan kecil, kemungkinan dengan peran terbatas (*"Not every country needs to be big. But every country must have a role."*).
+- **Jika gagal:** *"What must be structurally fixed in 12 months — or we exit."* Ekspansi dibekukan. Belum ada kasus keluar total yang terkonfirmasi publik.
+
+#### Tahap 2: STABILISE (toko ~10–30, sekitar 12–24 bulan)
+- **Yang dilakukan:** *"Standardise playbook, strengthen team, improve consistency."* Fokus beralih dari menyebar ke memadatkan (*"5 stores in 1 city, not 1 store in 5 cities"*), memilih kota pemenang berdasarkan konversi, UPT, dan sales density. Membangun rantai pasok lokal (*"Expansion is constrained by supply chain"*), misalnya DC Polandia diperbesar sebelum percepatan.
+- **Yang diharapkan:** hasil bisa diulang di banyak toko tanpa usaha heroik, toko baru mencapai target lebih cepat daripada toko awal, OOS rendah, perputaran inventori sehat, dan *"trajectory is improving"*.
+- **Jika terpenuhi penuh:** naik ke ACCELERATE, menambah kecepatan dan memperluas radius. **Kasus:** Polandia 2026 (±4 toko/bulan).
+- **Jika terpenuhi sebagian:** tetap di STABILISE dengan pembukaan terbatas hanya di klaster yang terbukti. Format diperbaiki, SKU dirampingkan, rantai pasok dibereskan dulu. **Kasus:** Vietnam (stabil ±22–25 toko/tahun, belum dipercepat), Spanyol 2025–2026 (klaster Madrid dan Barcelona dengan format baru).
+- **Jika gagal:** bekukan pembukaan, lalu *"refresh or exit"* untuk toko yang lemah, dan kembali ke PROVE dengan model baru. **Kasus:** Spanyol 2023–2025.
+
+#### Tahap 3: ACCELERATE (30+ hingga ratusan toko)
+- **Yang dilakukan:** *"Increase opening speed, optimise cost, expand coverage."* Target pembukaan tahunan (Indonesia 270, Thailand 210), ekspansi ke provinsi dan kota baru, varian format (Express untuk pedesaan, Plus/flagship untuk lokasi prime), dan pendanaan lewat IPO (Indonesia 2024, Thailand 2025).
+- **Yang diharapkan:** *"Stores ramp faster, markets scale deeper, results become more consistent"*. Kanibalisasi terkendali dan margin stabil.
+- **Jika terpenuhi:** pertahankan kecepatan. **Kasus:** Indonesia (+266/tahun), Filipina (+231), Thailand (+195).
+- **Jika sebagian (toko bertambah tetapi produktivitas melemah):** perlambat laju dan geser ke alat fase matang. **Kasus:** Turki (dari ±60 toko/tahun ke ±14/tahun), Malaysia (target turun ke 155/tahun).
+- **Jika gagal:** kembali ke STABILISE dan tutup toko yang lemah. Belum ada kasus publik.
+
+#### Tahap 4: MATURE, lalu DECLINE
+- **Yang dilakukan:** *"Optimise productivity"*: rasionalisasi SKU (*"How many SKUs deserve to stay?"*), ekonomi rak, re-format dan refresh toko, flagship dan retailtainment di lokasi prime sebagai laboratorium, merek baru (MR.TOY, MR.DOLLAR, investasi 49% di KKV), serta wilayah frontier (Malaysia Timur, flagship Imago).
+- **Yang diharapkan:** SSS kembali positif, sales per kaki persegi naik, *"generate more value from the same space"*.
+- **Jika gagal (tahap DECLINE):** *"Refresh or exit"* di level toko, dengan relokasi atau penutupan. **Kasus:** Malaysia saat ini berada di tahap MATURE.
+
+### 5.5 Kesimpulan uji
+1. **Yang terbukti:** pola pertumbuhan 15 pasar cocok dengan model bergerbang. Tidak ada pasar yang dipercepat saat sedang mandek. Pasar yang mandek dikalibrasi ulang, bukan dipaksa. Polandia menunjukkan urutan yang hampir persis sama dengan teori: sekitar 20 toko, gudang diperbesar, lalu kecepatan naik sekitar 3 kali lipat.
+2. **Yang tidak terbukti:** angka ambang (5–10 dan 20–30 toko) dan KPI gerbang tidak bisa diverifikasi dari luar. Ambang ini sebaiknya dibaca sebagai *aturan praktis*, bukan aturan baku.
+3. **Catatan penting:** kerangka ini dipublikasikan pada 2026. Pasar yang dimasuki pada 2021–2022 (Turki, Spanyol) **tidak mengikutinya**. Jadi kerangka ini sebagian besar adalah **pelajaran dari kesalahan** yang kemudian dikodifikasi, bukan aturan yang berlaku sejak awal. Kesimpulannya, perilaku ekspansi **sejak 2023** paling layak diprediksi dengan kerangka ini.
+4. **Faktor pengganggu:** COVID (2020–2021), makroekonomi Turki, ketersediaan modal (dana IPO Indonesia dan Thailand), dan kapasitas DC juga memengaruhi kecepatan. Kerangka ini bukan satu-satunya penjelasan.
+
+### 5.6 Prediksi yang bisa diuji (untuk memantau apakah kerangka ini benar-benar dipakai)
+| Pasar | Prediksi jika kerangka dipakai | Tanda kerangka **tidak** dipakai |
+|---|---|---|
+| Rumania | Tetap sekitar 1 toko/bulan sampai ±10–15 toko; percepatan paling cepat pertengahan 2027, setelah ada klaster (Pitești dan Bukares) | Langsung lebih dari 3 toko/bulan di 2027 tanpa klaster |
+| Spanyol | 20–30 toko di 2027, terkonsentrasi di Madrid dan Barcelona; penutupan sisa toko format lama | Pembukaan tersebar ke banyak kota kecil |
+| Polandia | 40–60 toko/tahun setelah DC Łódź beroperasi | Kecepatan turun tanpa sebab makro |
+| Ceko, Hongaria | 3–10 toko pertama dekat jangkauan hub Polandia (Ostrava, Budapest) | Pembukaan serentak di banyak kota |
+| Jerman | Uji 5–10 toko dalam satu klaster (Berlin), atau *"Not yet"* | Peluncuran nasional berskala besar |
+| Kamboja, Singapura | Tetap kecil | Mendadak dipercepat |
+
+---
+
+## 6. Apakah Masih Akan Agresif? (Proyeksi 2027–2030)
+
+### 6.1 Target vs realisasi
 | Pasar | Target resmi | Realisasi/run-rate | Penilaian kami |
 |---|---|---|---|
 | Spanyol | 300 toko pada 2030; 20–30 toko baru di 2027 | ~25 toko sejak 2022; ~28–30 akhir 2026 | **Terlalu ambisius.** Butuh sekitar 65–70 toko/tahun, sementara guidance 2027 hanya 20–30. Estimasi realistis **110–150 toko pada 2030** |
@@ -199,7 +306,7 @@ Seri Juni (*Productivity Flywheel*) dan beberapa postingan lain menunjukkan prio
 | Thailand | 210/tahun; >1.500 toko pada 2027 | 65 di 1Q26 | On track |
 | Malaysia | 155/tahun; 2.000 pada 2028 | ~74 di 1H26 | Melambat, fokus ke Malaysia Timur |
 
-### 5.2 Skenario Eropa (estimasi analis, bukan guidance)
+### 6.2 Skenario Eropa (estimasi analis, bukan guidance)
 | Skenario | Toko Eropa akhir 2027 | Toko Eropa 2030 | Pemicu |
 |---|---|---|---|
 | **Bear** | ~320 | ~500 | Konsumen Eropa melemah, biaya logistik Laut Merah naik, Spanyol tetap lambat, Jerman ditunda |
@@ -218,7 +325,7 @@ Seri Juni (*Productivity Flywheel*) dan beberapa postingan lain menunjukkan prio
 | Ceko, Hongaria | 0–1 | Prove | 3–10 toko pertama, dilayani hub Polandia |
 | Jerman | 0 | Pra-entri | Uji 5–10 toko paling cepat 2027; *"Not yet"* juga merupakan opsi yang sah menurut kerangka ini |
 
-### 5.3 Risiko utama
+### 6.3 Risiko utama
 1. **Persaingan langsung dengan Action.** Action sudah di Polandia, Rumania, Ceko, dan Spanyol, punya skala lebih dari 13 kali lipat, dan membuka 3 DC baru (Italia, Spanyol, Prancis) pada 2026.
 2. **Rantai pasok panjang.** Asia ke Eropa rentan gangguan Laut Merah, biaya freight, dan kurs.
 3. **Regulasi EU.** General Product Safety Regulation, label CE, dan kepatuhan bahan kimia pada mainan dan perkakas memperberat SKU private label dari China.
@@ -228,9 +335,9 @@ Seri Juni (*Productivity Flywheel*) dan beberapa postingan lain menunjukkan prio
 
 ---
 
-## 6. Toko Flagship dan Berdesain Menarik: Makin Banyak atau Hanya Marketing?
+## 7. Toko Flagship dan Berdesain Menarik: Makin Banyak atau Hanya Marketing?
 
-### 6.1 Inventaris flagship dan format baru
+### 7.1 Inventaris flagship dan format baru
 | Tahun | Negara | Toko | Ciri |
 |---|---|---|---|
 | 2018 | Malaysia | Mid Valley Megamall (1.393 m²) | Flagship pertama; plafon berbentuk mur heksagonal |
@@ -246,13 +353,13 @@ Seri Juni (*Productivity Flywheel*) dan beberapa postingan lain menunjukkan prio
 | Mei 2026 | Thailand | Kanchanaphisek, Bangkok (toko ke-1.200) | *Flagship standalone* 2 lantai: EV charger, panel surya |
 | Sep 2026 | Spanyol | Xanadú Madrid (596 m²), La Maquinista Barcelona | Format baru jadi standar |
 
-### 6.2 Pola yang terlihat
+### 7.2 Pola yang terlihat
 - **Flagship dikaitkan dengan milestone** (toko ke-900, ke-1.000, ke-1.200) atau entri ke mal prestisius. Ini ciri **alat PR dan brand**.
 - **Harga dan produk tidak berbeda.** CFO MDIY, Rika Juniaty Tanzil, menegaskan produk flagship sama dengan toko reguler. Bedanya pada layout, pencahayaan, dan display. Tujuan yang disebut adalah *brand image dan awareness*.
 - **Unsur desainnya menetes ke format standar.** Rak rendah, pencahayaan lebih terang, zonasi warna, dan wayfinding muncul berulang di Thailand 2.0, Filipina, Indonesia, dan Spanyol. Ini program **re-format**, bukan sekadar toko pameran.
 - **Di Eropa, format baru = standar.** Semua toko baru di Spanyol mengikuti model Parque Corredor. Klaim "hingga 5 kali penjualan" menunjukkan desain di sana adalah **keputusan ekonomi**, bukan hanya marketing.
 
-### 6.3 Jawaban
+### 7.3 Jawaban
 | Pertanyaan | Jawaban | Alasan |
 |---|---|---|
 | Apakah flagship (toko ikon, besar, mahal) akan makin banyak? | **Bertambah selektif**, kemungkinan 1–3 per negara per tahun, hanya di lokasi prime | Leo Gan: lokasi prime adalah *"learning hubs"*, dan *"if a store doesn't create new learning, we walk away"*. Capex lebih tinggi dengan harga sama, jadi hanya dipakai di mal trafik tertinggi, wilayah baru (Imago di Malaysia Timur), atau momen milestone |
@@ -263,7 +370,7 @@ Seri Juni (*Productivity Flywheel*) dan beberapa postingan lain menunjukkan prio
 
 ---
 
-## 7. Implikasi
+## 8. Implikasi
 
 **Untuk investor emiten MR.DIY (MDIY di BEI, MRDIYT di SET, MRDIY di Bursa):**
 - Ekspansi Eropa **tidak** masuk laporan keuangan ketiga emiten ini. Investor MDIY mendapat manfaat tidak langsung (skala pengadaan, brand), tetapi tidak ikut menanggung risiko atau menikmati hasil Eropa secara langsung.
@@ -288,17 +395,24 @@ Seri Juni (*Productivity Flywheel*) dan beberapa postingan lain menunjukkan prio
 
 ---
 
-## 8. Keterbatasan Data
+## 9. Keterbatasan Data
 - Postingan LinkedIn Leo Gan diperoleh dari arsip yang diberikan pengguna (26 postingan dan gambar). Tanggal unggah persis tidak tercantum. Dari konteks (seri April–Juni, rekap 2025), postingan kemungkinan besar dari 2026.
 - Angka toko per negara diambil dari tanggal yang berbeda-beda (akhir 2025 dari peta Leo Gan; Agustus–Oktober 2026 dari Wikipedia dan media) dan sebagian dari agregator. Spanyol: 27 toko (akhir 2025) → ~25 (Agustus 2026), meskipun ada pembukaan baru di 2026. Ini mengindikasikan penutupan atau relokasi toko format lama, tetapi belum terverifikasi.
 - Klaim "hingga 5 kali penjualan" (Spanyol), konversi 80%+, dan uplift MyTOWN berasal dari manajemen, bukan audit independen.
 - Klaim media "1.200 pembukaan toko grup di 2026" kemungkinan salah kutip dari "1.200 toko ditambah pada 2025" (postingan Leo Gan). Klaim "40.000 toko global pada 2035" hanya muncul di satu sumber dan **tidak terverifikasi**.
 - Laporan inisiasi MIDF (Des 2025) tidak dapat diakses. Ekonomi per toko (payback, capex per toko di Eropa) tidak tersedia secara publik.
-- Proyeksi skenario di Bagian 5.2 adalah estimasi analis berdasarkan run-rate, bukan guidance perusahaan.
+- Proyeksi skenario di Bagian 6.2 adalah estimasi analis berdasarkan run-rate, bukan guidance perusahaan.
 
 ---
 
 ## Sumber
+- [Invest in Türkiye: Mr. DIY first store in Türkiye](https://www.invest.gov.tr/en/news/news-from-turkey/pages/malaysian-mr-diy-showcases-first-store-in-turkey.aspx); [MR.DIY Turkey about us (milestone 10/50/100 toko)](https://www.mrdiy.com/tr/en/about-us); [Expat Guide Turkey: 400 stores in 5 years](https://expatguideturkey.com/400-stores-in-5-years-from-malaysian-giant/); [TR Monitor: investasi US$45 juta](https://www.trmonitor.net/malaysian-mr-d-i-y-to-raise-its-investment-to-usd-45m/)
+- [CdeComunicación: Mr. DIY suma ya 21 tiendas en España (Jul 2023)](https://ferreteria-y-bricolaje.cdecomunicacion.es/noticias/sectoriales/165270/mr-diy-tiendas); [Just Retail: 28 establecimientos con Gran Via 2 (Okt 2026)](https://justretail.news/noticias/mr-d-i-y-alcanza-los-28-establecimientos-en-espana-con-su-nueva-tienda-en-gran-via-2-la-tercera-en-barcelona/)
+- [Rappler: 100th store Philippines](https://www.rappler.com/brandrap/announcements/home-improvement-store-mr-diy-100th-philippine-store-opening-november-2020/); [MR.DIY PH: 300th store](https://www.mrdiy.com/ph/mrdiy-revealed-its-300th-store-in-ph-more-affordable-products-and-accessible-shopping-experiences); [BusinessMirror: 500 stores (Feb 2024)](https://businessmirror.com.ph/2024/02/17/mr-diy-philippines-continues-to-blaze-the-trail-for-retail-platform-with-500-stores/)
+- [Prospektus PT Daya Intiguna Yasa Tbk (Des 2024)](https://corporate-id.mrdiy.com/prospektus-file/MRDIY-Bahasa-Prospektus-Des24.pdf)
+- [Bangkok Post: MR D.I.Y. Trading aims to keep opening 100 stores per year (Jan 2022)](https://bangkokpost.com/business/2249115/mr-d-i-y-trading-aims-to-keep-opening-100-stores-per-year); [Bangkok Post: 600th store Thailand](https://bangkokpost.com/thailand/pr/2562571/mr-d-i-y-celebrates-600th-store-opening-in-thailand)
+- [Indian Retailer: 100th store India (Jan 2023)](https://indianretailer.com/news/mrdiy-expands-offline-presence-opens-100th-store-india); [Indian Retailer: 285th store India (Jan 2025)](https://indianretailer.com/news/mrdiy-opens-285th-store-india-gurugrams-reach-3roads)
+- [DIY International: Mr. DIY Vietnam to end 2024 with 25 outlets](https://www.diyinternational.com/content/news/2024/09/26/plus/mr-diy-vietnam-to-end-2024-with-25-outlets.html)
 - **Arsip 26 postingan LinkedIn Leo Gan** (diberikan pengguna), antara lain: "Scale right, then faster", "Spread to learn. Cluster to win.", "Many retailers don't expand because they are ready", "How I evaluate a new country in 30 minutes", "The biggest mistake in expansion models", "In retail, just having a beautiful store is not enough", "When to walk away from Prime locations", "Where does CAPEX improve productivity", "Mr diy 2025", dan peta "MR D.I.Y. Global Footprint | End 2025"
 - [Wikipedia: MR.DIY (tabel jaringan per Agustus 2026, struktur korporasi)](https://en.wikipedia.org/wiki/MR.DIY)
 - [Revista Centros Comerciales: MR.DIY prevé abrir 300 tiendas en España, nuevo modelo Parque Corredor (Jun 2025)](https://revistacentroscomerciales.com/noticias/marcas/mr-diy-prev%C3%A9-abrir-300-tiendas-en-espa%C3%B1a-y-presenta-en-parque-corredor-su-nuevo-modelo/)
