@@ -1,6 +1,6 @@
 # MR.DIY: Pola Ekspansi Global, Dorongan Masuk Eropa, dan Strategi Toko Berdesain Baru
 
-*Laporan analisis strategi ritel. Data per 9 November 2026. Disusun dari sumber publik: rilis perusahaan, keterbukaan bursa, media dagang, dan media lokal di masing-masing negara.*
+*Laporan analisis strategi ritel. Data per 9 November 2026. Disusun dari sumber publik (rilis perusahaan, keterbukaan bursa, media dagang, media lokal) dan **arsip 26 postingan LinkedIn Leo Gan** (pimpinan ekspansi internasional MR.DIY), termasuk peta "MR D.I.Y. Global Footprint | End 2025". Analisis postingan ada di Bagian 4.*
 
 ---
 
@@ -9,11 +9,12 @@
 1. **Skala.** Jaringan MR.DIY sekitar **6.050 toko di 15 negara** (Agustus 2026). Ceko menjadi negara ke-16 pada musim gugur 2026. Dari total itu, **96% masih di Asia**. Eropa (Turki, Spanyol, Polandia, Rumania) baru sekitar **243 toko, atau kira-kira 4%**.
 2. **Strukturnya penting dipahami.** Ekspansi luar negeri **tidak** dijalankan oleh emiten Malaysia (MR D.I.Y. Group (M) Bhd, yang hanya mengurus Malaysia dan Brunei). Ekspansi itu lewat kendaraan privat milik pendiri, **MR D.I.Y. International Holding (MDIH)**. Pola permodalannya: pasar yang sudah matang di-IPO-kan (Indonesia/MDIY Desember 2024, Thailand/MRDIYT November 2025), lalu dana yang terkumpul dipakai untuk membuka pasar baru, sekarang Eropa.
 3. **Mengapa Eropa sekarang.** Pasar inti sudah jenuh. Same-store sales Malaysia negatif tiga tahun berturut-turut (FY23 −3,7%, FY24 −1,9%, FY25 −2%), dan laba bersih 2Q26 turun sekitar 15%. Indonesia, Thailand, dan Filipina masing-masing sudah di atas 1.000 toko. Eropa menawarkan harga jual dalam EUR/PLN dengan rantai pasok China yang sama, mal yang butuh penyewa, dan model pembanding yang sudah terbukti (Action: €16 miliar, 3.302 toko).
-4. **Desain yang menarik bukan sekadar kosmetik, terutama di Eropa.** Format awal yang bergaya "bazar" gagal berkembang. Spanyol tertahan di sekitar 25 toko selama empat tahun. Format baru (kayu natural, rak rendah, pencahayaan terang, sirkulasi lega) diklaim menaikkan penjualan **hingga 5 kali lipat** dan kini menjadi **standar semua toko baru di Eropa**. Desain dipakai untuk memperbaiki kecocokan produk dengan pasar.
-5. **Apakah tetap agresif?** **Ya, tetapi terukur dan berbasis klaster.** Eropa akan menjadi wilayah dengan pertumbuhan persentase tercepat (Polandia sekitar 40 toko/tahun, Rumania, Ceko, Hongaria, Jerman sedang disiapkan). Namun volume pembukaan absolut tetap di Asia (Indonesia 270/tahun, Thailand 210/tahun, Malaysia 155/tahun). Target resmi Spanyol (300 toko pada 2030) kami nilai **terlalu optimistis**.
-6. **Flagship: makin banyak atau hanya marketing?** Ada dua hal berbeda yang perlu dipisahkan:
-   - **Flagship sejati** (toko besar di mal ikonik, biasanya dibuka saat milestone toko ke-900, ke-1.000, atau ke-1.200) akan **tetap sedikit**, sekitar 1–3 per negara per tahun. Fungsinya untuk brand, PR, dan laboratorium format. Ini memang alat marketing.
-   - **Format standar baru** ("MR.DIY 2.0", "Elevated Experience", "nuevo modelo" Eropa) akan **makin banyak**, karena unsur desain flagship diturunkan ke semua toko baru dan toko yang direnovasi. Di Eropa, hampir semua toko baru akan terlihat seperti "flagship" jika dibandingkan dengan toko di Asia.
+4. **Desain yang menarik bukan sekadar kosmetik, terutama di Eropa.** Format awal yang bergaya "bazar" gagal berkembang. Peta Leo Gan sendiri menunjukkan Spanyol hanya tumbuh **+4% pada 2025 (27 toko)**, sementara Polandia +850% dan Turki +22%. Format baru (kayu natural, rak rendah, pencahayaan terang, sirkulasi lega) diklaim menaikkan penjualan **hingga 5 kali lipat** dan kini menjadi **standar toko baru di Eropa**. Leo Gan menyebut perbedaan ini disengaja: *"Our stores across regions do not look the same. Especially between Asia and Europe. And that is intentional."* Ini adalah **glocalisation**: inti operasi distandarkan, pengalaman pelanggan dilokalkan.
+5. **Apakah tetap agresif?** **Ya. Manajemen sendiri menyatakan fase "akselerasi"**: *"We are now moving confidently into acceleration"*. Tahun 2025 menambah **1.065 toko bersih (+24%) menjadi 5.535 toko di 14 negara**. Namun setiap negara harus melewati gerbang **PROVE (5–10 toko) → STABILISE (20–30 toko) → ACCELERATE**, dengan prinsip *"Spread to learn. Cluster to win."* dan klaster toko dalam radius 2 jam. Artinya agresif di negara yang sudah lolos gerbang (Turki, Polandia), tetapi hati-hati di negara yang belum (Spanyol, Rumania, Ceko, Hongaria). Target resmi Spanyol (300 toko pada 2030) kami nilai **terlalu optimistis**.
+6. **Flagship: makin banyak atau hanya marketing?** Menurut Leo Gan, **bukan marketing semata**. Toko prime diperlakukan sebagai *"data engines, learning hubs, competitive battlegrounds"*, dan estetika *"must justify themselves through productivity"*. Ada dua hal berbeda yang perlu dipisahkan:
+   - **Flagship sejati** (MyTOWN, Imago, Mid Valley, Lotte Mall Jakarta, Makati, dan seterusnya) akan **bertambah secara selektif, sekitar 1–3 per negara per tahun**, hanya di lokasi prime. Fungsinya sebagai **laboratorium** (retailtainment, layout, assortment) sekaligus alat brand. Bukti: MR.DIY PLUS MyTOWN, setelah ukurannya dilipatgandakan, mencatat pertumbuhan penjualan per kaki persegi yang melampaui pertambahan luas selama lima bulan berturut-turut.
+   - **Format standar baru** ("MR.DIY 2.0", "Elevated Experience", "nuevo modelo" Eropa) akan **makin banyak**, karena yang lolos uji di flagship diturunkan ke toko baru dan toko yang direnovasi (*"What works here, scales across the network"*). Di Eropa, hampir semua toko baru akan terlihat seperti "flagship" jika dibandingkan dengan toko di Asia.
+7. **Sinyal penting lain dari postingan:** fokus manajemen sedang bergeser dari *jumlah toko* ke *produktivitas per toko*. Target konversi sekitar 60% (beberapa toko di atas 80%), target UPT 4, pemangkasan SKU, dan ekonomi rak (*"improving productivity does not always require more stores"*). Ini respons langsung atas SSS Malaysia yang negatif.
 
 ---
 
@@ -40,6 +41,30 @@
 | *Pipeline* | | | Hongaria (KÖKI Terminal Budapest), Jerman (GmbH terdaftar di Berlin, Jan 2026) |
 
 \*Tabel per negara di Wikipedia yang mengutip situs global MR.DIY; data Indonesia diperbarui dari rilis Q3 2026.
+
+### 1.1 Pertumbuhan 2025 per negara (peta "Global Footprint | End 2025" dari postingan Leo Gan)
+
+| Negara | Toko akhir 2025 | Pertumbuhan 2025 | Fase (kerangka Leo Gan)* |
+|---|---|---|---|
+| Malaysia | 1.546 | +9% | Matang: optimasi produktivitas |
+| Indonesia | 1.227 | +26% | Akselerasi |
+| Thailand | 1.127 | +21% | Akselerasi |
+| Filipina | 931 | +33% | Akselerasi |
+| India | 387 | +36% | Akselerasi |
+| **Turki** | **169** | **+22%** | **Akselerasi** |
+| Vietnam | 55 | +67% | Stabilise → akselerasi |
+| **Spanyol** | **27** | **+4%** | **Tertahan di Stabilise; re-prove dengan format baru** |
+| **Polandia** | **19** | **+850%** | **Prove → Stabilise** (35 toko per Jul 2026) |
+| Singapura | 13 | +8% | Niche |
+| Bangladesh | 12 | +300% | Prove |
+| Brunei | 11 | +10% | Niche |
+| Kamboja | 7 | +40% | Prove |
+| Afrika Selatan | 4 (baru) | n/a | Prove |
+| **Total** | **5.535 di 14 negara** | **+24% (+1.065 toko bersih)** | |
+
+\*Pemetaan fase adalah interpretasi kami terhadap kerangka PROVE (5–10 toko) → STABILISE (20–30) → ACCELERATE dari postingan "Scale right, then faster".
+
+**Temuan kunci:** pada 2025, saat grup tumbuh 24%, **Spanyol hampir tidak bertambah (+4%)**. Spanyol lalu tercatat di sekitar 25 toko pada Agustus 2026, meskipun ada pembukaan baru pada Februari dan April 2026. Ini konsisten dengan prinsip *"Refresh or exit"* dan *"If the first 10 stores struggle, opening the next 100 is ... pressure disguised as strategy"*: toko format lama kemungkinan ditutup atau direlokasi, lalu Spanyol "dibuktikan ulang" dengan format baru. Sebaliknya, Polandia (+850%) adalah contoh pasar yang lolos gerbang PROVE dengan cepat.
 
 **Bobot regional:** ASEAN dan Asia Selatan sekitar 5.800 toko (96%). Eropa sekitar 243 toko (4%). Sebagai pembanding, Action (Belanda) punya 3.302 toko di 14 negara Eropa dan membuka 384 toko pada 2025. **Jaringan Eropa MR.DIY baru sekitar 7% dari Action.**
 
@@ -103,7 +128,7 @@ Mesin pertumbuhan berbasis "buka toko baru" di Asia mulai menunjukkan hasil yang
 ### 3.3 Motif strategis: narasi "brand global"
 - Ambisi "globally recognised brand" disampaikan terbuka. Direktur pengembangan bisnis Eropa, Magdalena Nazarewicz, menyebut target "menutup seluruh Eropa dan menjadi pemain utama di tiap pasar".
 - Narasi global ini **menaikkan valuasi** emiten-emiten MR.DIY (MDIY, MRDIYT, MRDIY), memudahkan rekrutmen talenta Eropa, dan memperkuat posisi tawar terhadap supplier serta pemilik mal.
-- Unggahan LinkedIn eksekutif seperti **Leo Gan (COO, sebelumnya SVP pengembangan bisnis dan operasi ritel serta gudang)** menjadi kanal komunikasi strategis ke pemilik mal, mitra, calon karyawan, dan investor. Contohnya pernyataan *"After achieving success in Poland, our next destination[s] [are] Romania, Hungary, and Czech"* (2025). Di MAPIC 2026, Gan menekankan tiga pilar: **scale, reach, reliability**, ditambah *glocalisation* dan *retailtainment*.
+- Unggahan LinkedIn eksekutif seperti **Leo Gan (COO, sebelumnya SVP pengembangan bisnis dan operasi ritel serta gudang; kini memimpin ekspansi internasional)** menjadi kanal komunikasi strategis ke pemilik mal, mitra, calon karyawan, dan investor. Ia menyatakan tujuannya berbagi soal *"global scaling from Southeast Asia"* untuk mereka yang *"serious about retail, scaling, or building across borders"*, sehingga postingan itu juga berfungsi sebagai **employer branding** untuk merekrut operator lokal (lihat Bagian 4). Contohnya pernyataan *"After achieving success in Poland, our next destination[s] [are] Romania, Hungary, and Czech"* (2025). Di MAPIC 2026, Gan menekankan tiga pilar: **scale, reach, reliability**, ditambah *glocalisation* dan *retailtainment*.
 
 ### 3.4 Mengapa desainnya dibuat menarik (khusus Eropa)
 Ini jawaban inti atas pengamatan dari postingan Leo Gan:
@@ -116,9 +141,52 @@ Ini jawaban inti atas pengamatan dari postingan Leo Gan:
 
 ---
 
-## 4. Apakah Masih Akan Agresif? (Proyeksi 2027–2030)
+## 4. Bukti dari Dalam: Analisis 26 Postingan LinkedIn Leo Gan
 
-### 4.1 Target vs realisasi
+Postingan Leo Gan disusun sebagai seri bulanan: **April** tentang *Store Economics & Execution*, **Mei** tentang *Scaling Across Borders*, **Juni** tentang *Productivity Flywheel*. Ia menyebut dirinya memimpin ekspansi internasional (*"From my experience leading international expansion across multiple markets"*) dan mengalokasikan sumber daya *"across all overseas entities"*. Karena itu postingannya adalah **jendela paling langsung ke cara MR.DIY memutuskan ekspansi**.
+
+### 4.1 Kerangka keputusan ekspansi
+| Tema | Kutipan inti | Implikasi analitis |
+|---|---|---|
+| Gerbang skala | *"PROVE (first 5–10 stores) → STABILISE (next 20–30) → ACCELERATE"* | Kecepatan pembukaan toko per negara bisa diprediksi dari jumlah tokonya. Negara di bawah sekitar 30 toko masih "diuji" |
+| Pola masuk | *"Spread to learn. Cluster to win."* … *"5 stores in 1 city, not 1 store in 5 cities"* | Toko pertama tersebar ke beberapa kota (Talavera, Zabrze, Pitești, Ostrava), lalu dipadatkan di kota pemenang (Warsawa, Madrid) |
+| Radius operasional | *"2-hour operational discipline"* | Klaster harus terjangkau supervisor dalam 2 jam. Ini menjelaskan hub Polandia dan masuknya Ceko lewat Ostrava (dekat perbatasan Polandia) |
+| Penilaian negara | Peran negara: *"Scale market? Margin market? Learning market?"* | Asia = **scale market**. Eropa Barat = **margin dan learning market**. CEE = calon scale market berikutnya |
+| Uji sebelum masuk | *"Is wage inflation already ahead of pricing power? Is property supply rational — or desperate for tenants?"* | Mal yang "butuh penyewa" adalah kriteria eksplisit, sesuai analisis real estat di Bagian 3.2 |
+| Disiplin keluar | *"What must be structurally fixed in 12 months — or we exit"*; *"In more than one market, we learned this firsthand"* | Pengakuan implisit bahwa ada pasar yang tersendat. Bukti yang cocok: Spanyol +4% (2025) dan entitas Yunani yang tidak beroperasi |
+| Kendala sebenarnya | *"Expansion is constrained by supply chain"* | Kecepatan Eropa ditentukan oleh gudang regional (Łódź), bukan oleh ketersediaan lokasi |
+| Tim awal | *"Your first 5 hires become your operating DNA"* | Rekrutmen country manager lokal (Spanyol, Polandia, Rumania) adalah indikator awal kesiapan negara |
+| Status sekarang | *"We are now moving confidently into acceleration"*; *"Speed is no longer a risk. It is an advantage."* | Konfirmasi eksplisit bahwa ekspansi akan **dipercepat**, bukan direm |
+
+### 4.2 Pandangan tentang desain dan flagship
+| Postingan | Pesan | Bacaan kami |
+|---|---|---|
+| *"In retail, just having a beautiful store is not enough"* | *"Aesthetics must justify themselves through productivity."* Contoh: MR.DIY PLUS MyTOWN dipindah ke unit 2 kali lebih besar dengan retailtainment, dan pertumbuhan penjualan per kaki persegi melampaui pertambahan luas selama 5 bulan berturut-turut | Desain diuji dengan KPI, bukan dengan likes. Flagship baru hanya akan diperbanyak jika lolos uji produktivitas |
+| *"When to walk away from Prime locations"* / *"Competing for productivity"* | Lokasi prime = *"data engines, learning hubs, competitive battlegrounds"*; *"Retailtainment starts here… What works here, scales across the network"*; *"If a store doesn't create new learning, we walk away"* | Flagship berfungsi sebagai **R&D lab**. Sewa mahal dibayar demi pembelajaran yang disebar ke ratusan toko |
+| *"Where does CAPEX improve productivity"* | *"Most teams overinvest in aesthetics, fixtures, design concepts… underinvest in flow, logic, customer journey"* | Capex desain diarahkan ke pintu masuk (konversi), alur di dalam toko (dwell time dan basket), dan back-end (velocity). Bukan untuk kemewahan |
+| *"The biggest mistake in expansion models"* + gambar *"Glocalization Drives Our Success"* | *"Our stores across regions do not look the same. Especially between Asia and Europe. And that is intentional."* | **Jawaban langsung** atas pertanyaan mengapa toko Eropa berdesain beda: lokalisasi yang disengaja |
+| *"One Brand. Many Countries. Same Promise."* | Yang distandarkan: ekonomi toko, rantai pasok, KPI, budaya. Yang dilokalkan: product mix, komunikasi, *shopping missions* | Format Eropa boleh sangat berbeda selama ekonomi toko tetap sesuai standar grup |
+| *"Mr diy 2025"* | *"Launched flagship stores in Mytown & Imago; Refreshed stores & revitalized MR. TOY"* | Flagship 2025 ada di **Kuala Lumpur (MyTOWN) dan Kota Kinabalu (Imago)**, yang terakhir di Malaysia Timur, frontier pertumbuhan domestik. Flagship dipakai untuk membuka wilayah baru |
+
+### 4.3 Pergeseran fokus: dari jumlah toko ke produktivitas
+Seri Juni (*Productivity Flywheel*) dan beberapa postingan lain menunjukkan prioritas baru:
+- **Metrik yang dipantau:** penjualan per kaki persegi, transaksi, UPT, ASP, perputaran inventori, gross margin. Semuanya *"not for reporting, but for intervention"*, dengan prinsip Lean Six Sigma.
+- **Target konversi sekitar 60%**, dengan beberapa toko konsisten di atas 80%. **Target UPT 4.**
+- **Rasionalisasi SKU:** satu kategori yang SKU-nya ditambah sekitar 15% justru membuat penjualan per kaki persegi turun. Fokus sekarang pada *"more quality SKUs"*.
+- **Ekonomi rak:** *"Improving productivity does not always require more stores… substantial opportunity to unlock from the space we already have."* Ada juga pengakuan *"we are still early in this journey"*.
+
+**Bacaan kami:** ini respons manajemen atas SSS Malaysia yang negatif tiga tahun dan basket value yang turun (2Q26 −3,5%). Strategi grup ke depan bertumpu pada **dua mesin**: (1) toko baru di pasar yang sedang akselerasi, termasuk Eropa, dan (2) produktivitas toko yang sudah ada lewat re-format, SKU, dan layout. Desain baru adalah alat untuk mesin kedua.
+
+### 4.4 Catatan membaca postingan
+- Postingan LinkedIn adalah **komunikasi korporat dan personal branding**. Angka di dalamnya (konversi 80%+, uplift MyTOWN) tidak diaudit.
+- Banyak visual dalam arsip berupa **ilustrasi/infografis bergaya, bukan foto toko aktual**, jadi tidak dipakai sebagai bukti desain toko tertentu.
+- Ada inkonsistensi kecil: postingan *"Scale right, then faster"* menyebut **1.200 toko** ditambah pada 2025, sedangkan peta akhir 2025 menyebut **+1.065 toko bersih**. Kemungkinan selisihnya adalah pembukaan bruto dikurangi penutupan atau relokasi (sekitar 135 toko), tetapi ini tidak dikonfirmasi. Angka 1.200 ini juga kemungkinan sumber klaim media "1.200 pembukaan pada 2026".
+
+---
+
+## 5. Apakah Masih Akan Agresif? (Proyeksi 2027–2030)
+
+### 5.1 Target vs realisasi
 | Pasar | Target resmi | Realisasi/run-rate | Penilaian kami |
 |---|---|---|---|
 | Spanyol | 300 toko pada 2030; 20–30 toko baru di 2027 | ~25 toko sejak 2022; ~28–30 akhir 2026 | **Terlalu ambisius.** Butuh sekitar 65–70 toko/tahun, sementara guidance 2027 hanya 20–30. Estimasi realistis **110–150 toko pada 2030** |
@@ -131,16 +199,26 @@ Ini jawaban inti atas pengamatan dari postingan Leo Gan:
 | Thailand | 210/tahun; >1.500 toko pada 2027 | 65 di 1Q26 | On track |
 | Malaysia | 155/tahun; 2.000 pada 2028 | ~74 di 1H26 | Melambat, fokus ke Malaysia Timur |
 
-### 4.2 Skenario Eropa (estimasi analis, bukan guidance)
+### 5.2 Skenario Eropa (estimasi analis, bukan guidance)
 | Skenario | Toko Eropa akhir 2027 | Toko Eropa 2030 | Pemicu |
 |---|---|---|---|
 | **Bear** | ~320 | ~500 | Konsumen Eropa melemah, biaya logistik Laut Merah naik, Spanyol tetap lambat, Jerman ditunda |
 | **Base** | ~380–420 | ~800–1.000 | Polandia ~40/tahun, Rumania naik, Spanyol 25/tahun, CEE baru jalan |
 | **Bull** | ~480 | ~1.400+ | Turki dan Polandia masing-masing >60/tahun, masuk Jerman dan Italia, ada mitra atau akuisisi |
 
-**Kesimpulan:** agresivitas akan **berlanjut**, tetapi dengan pola **klaster dan berbasis gudang**, bukan "tanam bendera di banyak negara sekaligus". Negara baru kemungkinan dibuka 1–2 per tahun, dengan pembukaan toko terkonsentrasi di sekitar hub Polandia.
+**Kesimpulan:** agresivitas akan **berlanjut dan dipercepat**, sesuai pernyataan *"moving confidently into acceleration"*. Polanya **klaster dan berbasis gudang** (*"Planting flags means nothing. Building profitable density means everything."*), bukan "tanam bendera di banyak negara sekaligus". Negara baru kemungkinan dibuka 1–2 per tahun, dengan pembukaan toko terkonsentrasi di sekitar hub Polandia.
 
-### 4.3 Risiko utama
+**Cara memprediksi kecepatan per negara (kerangka Leo Gan):**
+| Negara Eropa | Toko | Fase | Perkiraan perilaku 12–18 bulan |
+|---|---|---|---|
+| Turki | ~178 | Accelerate | Tambah 30–50 toko/tahun, pengisian kota-kota besar |
+| Polandia | 35 | Stabilise → Accelerate | Lonjakan setelah DC Łódź; 40–60 toko/tahun |
+| Spanyol | ~25–30 | Re-prove dengan format baru | 20–30 toko/tahun (sesuai guidance 2027); akan naik hanya jika format baru lolos uji |
+| Rumania | 7–11 | Prove | Klaster di Pitești, Bukares; percepatan setelah sekitar 10 toko terbukti |
+| Ceko, Hongaria | 0–1 | Prove | 3–10 toko pertama, dilayani hub Polandia |
+| Jerman | 0 | Pra-entri | Uji 5–10 toko paling cepat 2027; *"Not yet"* juga merupakan opsi yang sah menurut kerangka ini |
+
+### 5.3 Risiko utama
 1. **Persaingan langsung dengan Action.** Action sudah di Polandia, Rumania, Ceko, dan Spanyol, punya skala lebih dari 13 kali lipat, dan membuka 3 DC baru (Italia, Spanyol, Prancis) pada 2026.
 2. **Rantai pasok panjang.** Asia ke Eropa rentan gangguan Laut Merah, biaya freight, dan kurs.
 3. **Regulasi EU.** General Product Safety Regulation, label CE, dan kepatuhan bahan kimia pada mainan dan perkakas memperberat SKU private label dari China.
@@ -150,15 +228,16 @@ Ini jawaban inti atas pengamatan dari postingan Leo Gan:
 
 ---
 
-## 5. Toko Flagship dan Berdesain Menarik: Makin Banyak atau Hanya Marketing?
+## 6. Toko Flagship dan Berdesain Menarik: Makin Banyak atau Hanya Marketing?
 
-### 5.1 Inventaris flagship dan format baru
+### 6.1 Inventaris flagship dan format baru
 | Tahun | Negara | Toko | Ciri |
 |---|---|---|---|
 | 2018 | Malaysia | Mid Valley Megamall (1.393 m²) | Flagship pertama; plafon berbentuk mur heksagonal |
 | 2022 | Malaysia | MR.DIY Plus Mid Valley | 3-in-1: MR.DIY + MR.TOY + MR.DOLLAR |
 | 2023 | Thailand | The Mall Lifestore Bangkapi (1.285 m²) | Smart mirror, tema hutan |
 | 2024 | Indonesia | Lotte Mall Jakarta (toko ke-900) | Rotan, instalasi seni seniman lokal Wulang Sunu |
+| 2025 | Malaysia | MR.DIY PLUS MyTOWN (KL) dan Imago (Kota Kinabalu) | Retailtainment; MyTOWN direlokasi ke unit 2x lebih besar, penjualan per kaki persegi tumbuh melebihi pertambahan luas 5 bulan berturut-turut (klaim Leo Gan) |
 | 2025 | Thailand | Seacon Square ("MR.DIY 2.0") | *Store Design of the Year*, Retail Asia Awards 2025 |
 | 2025 | Spanyol | Parque Corredor, Madrid | *European reference store*, format baru |
 | ~2025 | Vietnam | Vincom Mega Mall Grand Park (>800 m²) | Lorong lebar ramah stroller |
@@ -167,24 +246,24 @@ Ini jawaban inti atas pengamatan dari postingan Leo Gan:
 | Mei 2026 | Thailand | Kanchanaphisek, Bangkok (toko ke-1.200) | *Flagship standalone* 2 lantai: EV charger, panel surya |
 | Sep 2026 | Spanyol | Xanadú Madrid (596 m²), La Maquinista Barcelona | Format baru jadi standar |
 
-### 5.2 Pola yang terlihat
+### 6.2 Pola yang terlihat
 - **Flagship dikaitkan dengan milestone** (toko ke-900, ke-1.000, ke-1.200) atau entri ke mal prestisius. Ini ciri **alat PR dan brand**.
 - **Harga dan produk tidak berbeda.** CFO MDIY, Rika Juniaty Tanzil, menegaskan produk flagship sama dengan toko reguler. Bedanya pada layout, pencahayaan, dan display. Tujuan yang disebut adalah *brand image dan awareness*.
 - **Unsur desainnya menetes ke format standar.** Rak rendah, pencahayaan lebih terang, zonasi warna, dan wayfinding muncul berulang di Thailand 2.0, Filipina, Indonesia, dan Spanyol. Ini program **re-format**, bukan sekadar toko pameran.
 - **Di Eropa, format baru = standar.** Semua toko baru di Spanyol mengikuti model Parque Corredor. Klaim "hingga 5 kali penjualan" menunjukkan desain di sana adalah **keputusan ekonomi**, bukan hanya marketing.
 
-### 5.3 Jawaban
+### 6.3 Jawaban
 | Pertanyaan | Jawaban | Alasan |
 |---|---|---|
-| Apakah flagship (toko ikon, besar, mahal) akan makin banyak? | **Tidak signifikan.** Kemungkinan 1–3 per negara per tahun | Capex lebih tinggi dengan harga sama, sehingga hanya layak di mal dengan trafik tertinggi dan sebagai momen milestone. Fungsinya *marketing + R&D lab* |
-| Apakah toko berdesain bagus akan makin banyak? | **Ya, akan menjadi norma**, terutama di Eropa dan di toko baru/renovasi di Asia | Terkait produktivitas (konversi, basket, dwell time), respons atas SSS negatif di Asia, standar pemilik mal di Eropa |
-| Jadi hanya marketing? | **Sebagian.** Flagship = marketing + uji coba. Format baru = strategi operasional | Model "lab, lalu rollout": flagship menguji, yang berhasil diturunkan ke ribuan toko standar |
+| Apakah flagship (toko ikon, besar, mahal) akan makin banyak? | **Bertambah selektif**, kemungkinan 1–3 per negara per tahun, hanya di lokasi prime | Leo Gan: lokasi prime adalah *"learning hubs"*, dan *"if a store doesn't create new learning, we walk away"*. Capex lebih tinggi dengan harga sama, jadi hanya dipakai di mal trafik tertinggi, wilayah baru (Imago di Malaysia Timur), atau momen milestone |
+| Apakah toko berdesain bagus akan makin banyak? | **Ya, akan menjadi norma**, terutama di Eropa dan di toko baru/renovasi di Asia | Prinsip *"what works here, scales across the network"*. Didorong produktivitas (konversi, UPT, dwell time), respons atas SSS negatif di Asia, dan standar pemilik mal di Eropa |
+| Jadi hanya marketing? | **Tidak.** Flagship = laboratorium + alat brand. Format baru = strategi operasional | Leo Gan secara eksplisit menolak desain demi gaya: *"awards don't pay rent"*, *"we are not investing for vanity"*. Desain harus lolos KPI (contoh MyTOWN). Fungsi marketing ada, tetapi bukan alasan utama |
 
 **Catatan trade-off:** rak yang lebih rendah mengurangi kepadatan SKU per m². MR.DIY mengandalkan sekitar 15.000–18.000 SKU per toko. Di Asia, kemungkinan format baru diterapkan **selektif** (mal kelas A dan kota besar), sementara toko Express dan rural tetap padat. Di Eropa, semua toko memakai format baru.
 
 ---
 
-## 6. Implikasi
+## 7. Implikasi
 
 **Untuk investor emiten MR.DIY (MDIY di BEI, MRDIYT di SET, MRDIY di Bursa):**
 - Ekspansi Eropa **tidak** masuk laporan keuangan ketiga emiten ini. Investor MDIY mendapat manfaat tidak langsung (skala pengadaan, brand), tetapi tidak ikut menanggung risiko atau menikmati hasil Eropa secara langsung.
@@ -204,20 +283,23 @@ Ini jawaban inti atas pengamatan dari postingan Leo Gan:
 4. Pengumuman DC Łódź beroperasi penuh.
 5. Jumlah toko "2.0/Elevated/flagship" di Asia per tahun dan apakah SSS toko renovasi dilaporkan.
 6. Potensi IPO atau pendanaan untuk entitas Eropa, serta divestasi lanjutan MDIH di MDIY/MRDIYT.
+7. Peta "Global Footprint" akhir 2026 dari Leo Gan (kemungkinan dirilis Januari 2027). Bandingkan pertumbuhan Spanyol, Polandia, dan Rumania dengan gerbang PROVE/STABILISE/ACCELERATE.
+8. Hasil uji flagship atau retailtainment yang diumumkan (MyTOWN, Imago, Makati, Bekasi) dan apakah elemennya muncul di toko standar.
 
 ---
 
-## 7. Keterbatasan Data
-- Unggahan LinkedIn Leo Gan tidak dapat diakses langsung. Kutipan berasal dari media dagang (DIY International) dan ringkasan MAPIC 2026.
-- Angka toko per negara diambil dari tanggal yang berbeda-beda (Agustus–Oktober 2026) dan sebagian dari agregator. Jumlah toko Spanyol tidak konsisten (25 toko pada Juni 2025 dan ~25 pada Agustus 2026, padahal ada pembukaan baru di 2026). Ini mengindikasikan kemungkinan penutupan atau relokasi toko format lama, tetapi belum terverifikasi.
-- Klaim "hingga 5 kali penjualan" berasal dari manajemen, bukan audit independen.
-- Klaim "1.200 pembukaan toko grup di 2026" dan "40.000 toko global pada 2035" masing-masing hanya muncul di satu sumber dan **tidak terverifikasi**.
+## 8. Keterbatasan Data
+- Postingan LinkedIn Leo Gan diperoleh dari arsip yang diberikan pengguna (26 postingan dan gambar). Tanggal unggah persis tidak tercantum. Dari konteks (seri April–Juni, rekap 2025), postingan kemungkinan besar dari 2026.
+- Angka toko per negara diambil dari tanggal yang berbeda-beda (akhir 2025 dari peta Leo Gan; Agustus–Oktober 2026 dari Wikipedia dan media) dan sebagian dari agregator. Spanyol: 27 toko (akhir 2025) → ~25 (Agustus 2026), meskipun ada pembukaan baru di 2026. Ini mengindikasikan penutupan atau relokasi toko format lama, tetapi belum terverifikasi.
+- Klaim "hingga 5 kali penjualan" (Spanyol), konversi 80%+, dan uplift MyTOWN berasal dari manajemen, bukan audit independen.
+- Klaim media "1.200 pembukaan toko grup di 2026" kemungkinan salah kutip dari "1.200 toko ditambah pada 2025" (postingan Leo Gan). Klaim "40.000 toko global pada 2035" hanya muncul di satu sumber dan **tidak terverifikasi**.
 - Laporan inisiasi MIDF (Des 2025) tidak dapat diakses. Ekonomi per toko (payback, capex per toko di Eropa) tidak tersedia secara publik.
-- Proyeksi skenario di Bagian 4.2 adalah estimasi analis berdasarkan run-rate, bukan guidance perusahaan.
+- Proyeksi skenario di Bagian 5.2 adalah estimasi analis berdasarkan run-rate, bukan guidance perusahaan.
 
 ---
 
 ## Sumber
+- **Arsip 26 postingan LinkedIn Leo Gan** (diberikan pengguna), antara lain: "Scale right, then faster", "Spread to learn. Cluster to win.", "Many retailers don't expand because they are ready", "How I evaluate a new country in 30 minutes", "The biggest mistake in expansion models", "In retail, just having a beautiful store is not enough", "When to walk away from Prime locations", "Where does CAPEX improve productivity", "Mr diy 2025", dan peta "MR D.I.Y. Global Footprint | End 2025"
 - [Wikipedia: MR.DIY (tabel jaringan per Agustus 2026, struktur korporasi)](https://en.wikipedia.org/wiki/MR.DIY)
 - [Revista Centros Comerciales: MR.DIY prevé abrir 300 tiendas en España, nuevo modelo Parque Corredor (Jun 2025)](https://revistacentroscomerciales.com/noticias/marcas/mr-diy-prev%C3%A9-abrir-300-tiendas-en-espa%C3%B1a-y-presenta-en-parque-corredor-su-nuevo-modelo/)
 - [Retail Actual: tienda MR.DIY Xanadú Madrid (Sep 2026)](https://www.retailactual.com/noticias/20260917/tienda-mr-diy-xanadu-madrid)
