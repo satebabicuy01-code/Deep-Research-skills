@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MR.DIY: Cara Ekspansi &amp; Pola Flagship (Ringkasan Visual)</title>
+<style>
+.viz-root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface-1: #fcfcfb;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #898781;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --band-a: #f3f2ee;
+  --band-b: #fcfcfb;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4;
+  --o1: #86b6ef; --o2: #5598e7; --o3: #2a78d6; --o4: #1c5cab; --o5: #104281;
+  --good: #0ca30c; --warning: #fab219; --critical: #d03b3b;
+  --chip: #f0efec;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface-1: #1a1a19; --text-primary: #f0efec; --text-secondary: #c3c2b7;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --band-a: #222220; --band-b: #1a1a19;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
+    --o1: #184f95; --o2: #1c5cab; --o3: #256abf; --o4: #3987e5; --o5: #6da7ec;
+    --chip: #2c2c2a;
+  }
+}
+:root[data-theme="dark"] .viz-root {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface-1: #1a1a19; --text-primary: #f0efec; --text-secondary: #c3c2b7;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+  --band-a: #222220; --band-b: #1a1a19;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181;
+  --o1: #184f95; --o2: #1c5cab; --o3: #256abf; --o4: #3987e5; --o5: #6da7ec;
+  --chip: #2c2c2a;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.viz-root {
+  background: var(--page); color: var(--text-primary);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px; line-height: 1.45; padding: 32px 24px 48px;
+}
+.wrap { max-width: 1180px; margin: 0 auto; }
+h1 { font-size: 26px; margin: 0 0 4px; font-weight: 650; }
+h2 { font-size: 18px; margin: 0 0 4px; font-weight: 650; }
+h3 { font-size: 14px; margin: 0 0 6px; font-weight: 650; }
+.sub { color: var(--text-secondary); margin: 0 0 18px; }
+.muted { color: var(--text-muted); }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; margin-top: 20px; }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+.tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.tile .label { color: var(--text-secondary); font-size: 13px; }
+.tile .value { font-size: 26px; font-weight: 650; margin-top: 2px; }
+.tile .tnote { color: var(--text-muted); font-size: 12px; }
+
+/* Workflow */
+.flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 14px; position: relative; }
+.stage { border: 1px solid var(--border); border-radius: 10px; padding: 0 12px 12px; background: var(--surface-1); position: relative; display: flex; flex-direction: column; }
+.stage::before { content: ""; display: block; height: 6px; margin: 0 -12px 10px; border-radius: 10px 10px 0 0; background: var(--bar); }
+.stage .num { font-size: 12px; color: var(--text-muted); font-weight: 600; letter-spacing: .02em; }
+.stage .name { font-size: 16px; font-weight: 700; margin-top: 1px; }
+.stage .range { font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; }
+.stage .k { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); margin-top: 8px; font-weight: 600; }
+.stage ul { margin: 3px 0 0; padding-left: 16px; font-size: 12.5px; color: var(--text-secondary); }
+.stage li { margin: 1px 0; }
+.stage .q { font-size: 12px; color: var(--text-secondary); font-style: italic; margin-top: 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.chip { background: var(--chip); border-radius: 999px; padding: 2px 8px; font-size: 12px; color: var(--text-primary); white-space: nowrap; }
+.chip b { font-weight: 650; }
+.chip small { color: var(--text-muted); }
+.spacer { flex: 1; }
+.arrow { position: absolute; top: 34px; right: -11px; width: 12px; text-align: center; color: var(--text-muted); font-weight: 700; z-index: 2; }
+
+.gates { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+.gate { border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; }
+.gate .head { display: flex; align-items: center; gap: 8px; font-weight: 650; }
+.icon { width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; color: #fff; flex: none; }
+.icon.good { background: var(--good); }
+.icon.warn { background: var(--warning); color: #0b0b0b; }
+.icon.crit { background: var(--critical); }
+.icon.neutral { background: var(--text-secondary); color: var(--surface-1); }
+.gate p { margin: 6px 0 0; font-size: 12.5px; color: var(--text-secondary); }
+.gate .ex { margin-top: 6px; font-size: 12px; color: var(--text-primary); }
+
+/* Chart */
+.chart-wrap { position: relative; margin-top: 10px; }
+svg text { font-family: inherit; }
+.legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 10px; font-size: 13px; color: var(--text-secondary); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.key { width: 16px; height: 2px; border-radius: 1px; display: inline-block; }
+.tooltip { position: absolute; pointer-events: none; background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12.5px; box-shadow: 0 4px 16px rgba(0,0,0,.12); opacity: 0; transition: opacity .08s; white-space: nowrap; z-index: 5; }
+.tooltip .v { font-weight: 700; font-size: 15px; color: var(--text-primary); }
+.tooltip .l { color: var(--text-secondary); display: flex; align-items: center; gap: 6px; }
+.notes3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+.note { border-top: 1px solid var(--grid); padding-top: 8px; font-size: 12.5px; color: var(--text-secondary); }
+.badge { display: inline-flex; width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--text-primary); color: var(--text-primary); font-size: 11px; font-weight: 700; align-items: center; justify-content: center; margin-right: 6px; }
+.note b { color: var(--text-primary); }
+details { margin-top: 12px; font-size: 13px; }
+summary { cursor: pointer; color: var(--text-secondary); }
+table { border-collapse: collapse; margin-top: 8px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 4px 12px 4px 0; border-bottom: 1px solid var(--grid); font-size: 12.5px; }
+th { color: var(--text-secondary); font-weight: 600; }
+
+/* Flagship flow */
+.lab { display: grid; grid-template-columns: 1fr 24px 1fr 24px 1fr 24px 1.2fr; align-items: stretch; margin-top: 14px; }
+.lab .box { border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; background: var(--surface-1); }
+.lab .box .n { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); font-weight: 600; }
+.lab .box .t { font-weight: 700; margin: 2px 0 4px; }
+.lab .box p { margin: 0; font-size: 12.5px; color: var(--text-secondary); }
+.lab .ar { display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-weight: 700; }
+.outcomes { display: flex; flex-direction: column; gap: 8px; }
+.outcomes .box { display: flex; gap: 8px; align-items: flex-start; }
+.loop { margin-top: 8px; font-size: 12.5px; color: var(--text-secondary); border: 1px dashed var(--axis); border-radius: 10px; padding: 6px 12px; text-align: center; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.compare .col { border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+.compare dl { display: grid; grid-template-columns: 110px 1fr; gap: 4px 10px; margin: 6px 0 0; font-size: 12.5px; }
+.compare dt { color: var(--text-muted); }
+.compare dd { margin: 0; color: var(--text-secondary); }
+.verdict { margin-top: 6px; font-size: 13px; font-weight: 650; }
+.foot { margin-top: 24px; font-size: 12px; color: var(--text-muted); }
+.foot p { margin: 4px 0; }
+@media (max-width: 900px) {
+  .flow, .gates, .tiles, .notes3, .compare { grid-template-columns: 1fr; }
+  .lab { grid-template-columns: 1fr; }
+  .lab .ar { transform: rotate(90deg); height: 24px; }
+  .arrow { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="viz-root">
+<div class="wrap">
+
+<h1>MR.DIY: cara ekspansi &amp; pola flagship</h1>
+<p class="sub">Ringkasan visual dari laporan <i>mrdiy-ekspansi-global-2026.md</i>. Sumber: postingan LinkedIn Leo Gan, peta "Global Footprint End 2025", rilis perusahaan, dan media. Data per November 2026.</p>
+
+<div class="tiles">
+  <div class="tile"><div class="label">Toko akhir 2025</div><div class="value">5.535</div><div class="tnote">14 negara · +1.065 toko bersih (+24%)</div></div>
+  <div class="tile"><div class="label">Toko Agustus 2026</div><div class="value">±6.050</div><div class="tnote">15 negara · Ceko jadi negara ke-16</div></div>
+  <div class="tile"><div class="label">Porsi Eropa</div><div class="value">±4%</div><div class="tnote">Turki, Spanyol, Polandia, Rumania ≈ 243 toko</div></div>
+  <div class="tile"><div class="label">Sikap manajemen</div><div class="value">Akselerasi</div><div class="tnote">"We are now moving confidently into acceleration"</div></div>
+</div>
+
+<!-- ============ 1. WORKFLOW ============ -->
+<div class="card">
+  <h2>1. Mesin ekspansi: lima tahap, tiap tahap punya gerbang</h2>
+  <p class="sub" style="margin-bottom:0">Satu negara baru naik tahap jika KPI tahap sebelumnya lolos. Prinsipnya: <b>"Spread to learn. Cluster to win."</b> Chip di tiap kartu menunjukkan posisi negara saat ini (jumlah toko).</p>
+
+  <div class="flow">
+    <div class="stage" style="--bar: var(--o1)">
+      <div class="num">TAHAP 0</div><div class="name">Seleksi negara</div><div class="range">Sebelum toko pertama</div>
+      <div class="k">Lakukan</div>
+      <ul><li>Tetapkan peran: pasar volume, margin, atau belajar</li><li>Rekrut 5 orang pertama ("operating DNA")</li></ul>
+      <div class="k">Lolos jika</div>
+      <ul><li>Upah, kurs, dan pasokan mal masih masuk akal</li></ul>
+      <div class="spacer"></div>
+      <div class="k">Sekarang</div>
+      <div class="chips"><span class="chip"><b>Jerman</b> 0</span><span class="chip"><b>Hongaria</b> 0 <small>(segera)</small></span><span class="chip"><b>Yunani</b> 0 <small>(jeda)</small></span></div>
+      <div class="arrow">›</div>
+    </div>
+    <div class="stage" style="--bar: var(--o2)">
+      <div class="num">TAHAP 1</div><div class="name">PROVE</div><div class="range">Toko 1–10 · ±1 toko/bulan</div>
+      <div class="k">Lakukan</div>
+      <ul><li>Sebar ke beberapa kota dan tipe lokasi</li><li>Sesuaikan produk dan harga lokal</li></ul>
+      <div class="k">Lolos jika</div>
+      <ul><li>5 toko pertama capai target "tanpa usaha heroik"</li><li>Konversi ±60%, UPT menuju 4</li></ul>
+      <div class="spacer"></div>
+      <div class="k">Sekarang</div>
+      <div class="chips"><span class="chip"><b>Rumania</b> 7</span><span class="chip"><b>Afsel</b> 7</span><span class="chip"><b>Ceko</b> 1</span><span class="chip"><b>Kamboja</b> 7 <small>(datar 7 thn)</small></span></div>
+      <div class="arrow">›</div>
+    </div>
+    <div class="stage" style="--bar: var(--o3)">
+      <div class="num">TAHAP 2</div><div class="name">STABILISE</div><div class="range">Toko 10–30</div>
+      <div class="k">Lakukan</div>
+      <ul><li>Padatkan di kota pemenang ("5 toko di 1 kota")</li><li>Bakukan playbook, bangun gudang lokal</li></ul>
+      <div class="k">Lolos jika</div>
+      <ul><li>Hasil bisa diulang, toko baru lebih cepat capai target</li><li>Stok jarang kosong</li></ul>
+      <div class="spacer"></div>
+      <div class="k">Sekarang</div>
+      <div class="chips"><span class="chip"><b>Bangladesh</b> 18</span><span class="chip"><b>Spanyol</b> 28 <small>(uji ulang)</small></span><span class="chip"><b>Vietnam</b> 72 <small>(laju stabil)</small></span></div>
+      <div class="arrow">›</div>
+    </div>
+    <div class="stage" style="--bar: var(--o4)">
+      <div class="num">TAHAP 3</div><div class="name">ACCELERATE</div><div class="range">Toko 30+ · target tahunan</div>
+      <div class="k">Lakukan</div>
+      <ul><li>Naikkan laju buka, perluas radius dan provinsi</li><li>Varian format (Express, Plus), dana IPO</li></ul>
+      <div class="k">Bertahan jika</div>
+      <ul><li>Toko baru cepat capai target, hasil konsisten</li></ul>
+      <div class="spacer"></div>
+      <div class="k">Sekarang</div>
+      <div class="chips"><span class="chip"><b>Polandia</b> 35 <small>(baru masuk)</small></span><span class="chip"><b>Turki</b> 178 <small>(melambat)</small></span><span class="chip"><b>India</b> 447</span><span class="chip"><b>Filipina</b> 1.058</span><span class="chip"><b>Thailand</b> 1.265</span><span class="chip"><b>Indonesia</b> 1.416</span></div>
+      <div class="arrow">›</div>
+    </div>
+    <div class="stage" style="--bar: var(--o5)">
+      <div class="num">TAHAP 4</div><div class="name">MATURE</div><div class="range">Pasar jenuh</div>
+      <div class="k">Lakukan</div>
+      <ul><li>Pangkas SKU, ekonomi rak</li><li>Refresh toko, flagship sebagai lab, merek baru</li></ul>
+      <div class="k">Tujuan</div>
+      <ul><li>Penjualan toko lama positif lagi; "more value from the same space"</li></ul>
+      <div class="spacer"></div>
+      <div class="k">Sekarang</div>
+      <div class="chips"><span class="chip"><b>Malaysia</b> 1.544</span><span class="chip"><b>Singapura</b> 13 <small>(kecil)</small></span><span class="chip"><b>Brunei</b> 11 <small>(kecil)</small></span></div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:18px">Di setiap gerbang: apa yang terjadi jika hasil tidak sesuai harapan</h3>
+  <div class="gates">
+    <div class="gate">
+      <div class="head"><span class="icon good" aria-hidden="true">✓</span>Lolos penuh</div>
+      <p>Naik ke tahap berikutnya. Kecepatan buka toko dinaikkan, sering didahului gudang yang diperbesar.</p>
+      <div class="ex"><b>Contoh:</b> Polandia: ±20 toko, gudang 5.000 → 12.000 m², lalu ±4 toko/bulan.</div>
+    </div>
+    <div class="gate">
+      <div class="head"><span class="icon warn" aria-hidden="true">◐</span>Lolos sebagian</div>
+      <p>Tetap di tahap yang sama. Kalibrasi ulang lokasi, format, harga, atau assortment. Tutup toko lemah. Buka hanya di klaster yang terbukti.</p>
+      <div class="ex"><b>Contoh:</b> Spanyol (jalanan → mal → format baru), Vietnam.</div>
+    </div>
+    <div class="gate">
+      <div class="head"><span class="icon crit" aria-hidden="true">✕</span>Gagal</div>
+      <p>"Not yet": bekukan. "What must be structurally fixed in 12 months — or we exit."</p>
+      <div class="ex"><b>Contoh:</b> Yunani (entitas tanpa toko), jeda Eropa 2023.</div>
+    </div>
+    <div class="gate">
+      <div class="head"><span class="icon neutral" aria-hidden="true">!</span>Gerbang dilompati</div>
+      <p>Buka terlalu cepat sebelum model terbukti, lalu pertumbuhan melambat. "Pressure disguised as strategy."</p>
+      <div class="ex"><b>Contoh:</b> Turki: 50 toko dalam 6 bulan; target 400 → baru 178.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 2. CHART ============ -->
+<div class="card">
+  <h2>2. Buktinya di data: jumlah toko sejak toko pertama dibuka</h2>
+  <p class="sub" style="margin-bottom:4px">Skala logaritmik, sehingga bentuk lintasan negara kecil dan besar bisa dibandingkan. Pita abu-abu = rentang toko tiap tahap. Arahkan kursor ke titik untuk detail.</p>
+  <div class="legend" id="legend"></div>
+  <div class="chart-wrap" id="trajWrap">
+    <svg id="traj" role="img" aria-label="Jumlah toko per negara Eropa dan Vietnam terhadap bulan sejak toko pertama, skala logaritmik"></svg>
+    <div class="tooltip" id="tip"></div>
+  </div>
+  <div class="notes3">
+    <div class="note"><span class="badge">1</span><b>Turki melompati gerbang.</b> 10 toko dalam ±1 bulan, 100 dalam 17 bulan, lalu melambat tajam (±14 toko/tahun di 2026) saat inflasi dan upah melonjak.</div>
+    <div class="note"><span class="badge">2</span><b>Spanyol tertahan di STABILISE.</b> Cepat ke 21 toko lewat toko jalanan, lalu datar 3 tahun. Kembali ke mal (2024), format baru (2025), klaster Madrid dan Barcelona (2026).</div>
+    <div class="note"><span class="badge">3</span><b>Polandia mengikuti buku teks.</b> ±1 toko/bulan sampai ±20 toko, gudang diperbesar, lalu ±4 toko/bulan (Apr–Jul 2026).</div>
+  </div>
+  <details>
+    <summary>Lihat tabel data</summary>
+    <table id="trajTable"><thead><tr><th>Negara</th><th>Periode</th><th>Bulan sejak masuk</th><th>Toko</th><th>Catatan</th></tr></thead><tbody></tbody></table>
+  </details>
+</div>
+
+<!-- ============ 3. FLAGSHIP ============ -->
+<div class="card">
+  <h2>3. Pola flagship: laboratorium → uji KPI → disebar ke jaringan</h2>
+  <p class="sub" style="margin-bottom:0">"Aesthetics must justify themselves through productivity." Flagship bukan pajangan; ia tempat menguji konsep sebelum dipakai di ratusan toko.</p>
+
+  <div class="lab">
+    <div class="box"><div class="n">Langkah 1</div><div class="t">Lokasi prime</div><p>Mal trafik tertinggi, momen milestone (toko ke-900 / 1.000 / 1.200), atau wilayah baru (Imago, Malaysia Timur).</p></div>
+    <div class="ar">›</div>
+    <div class="box"><div class="n">Langkah 2</div><div class="t">Uji konsep</div><p>Retailtainment, zonasi, rak rendah, pencahayaan, alur pelanggan. Harga dan produk <b>sama</b> dengan toko biasa.</p></div>
+    <div class="ar">›</div>
+    <div class="box"><div class="n">Langkah 3</div><div class="t">Ukur KPI</div><p>Penjualan per ft², konversi, UPT, dwell time. Contoh: MyTOWN 2× lebih luas, penjualan/ft² naik lebih cepat dari luasnya 5 bulan berturut-turut.</p></div>
+    <div class="ar">›</div>
+    <div class="outcomes">
+      <div class="box"><span class="icon good" aria-hidden="true">✓</span><div><div class="t" style="margin:0">Lolos: turunkan ke format standar</div><p>"What works here, scales across the network": MR.DIY 2.0 (TH), Elevated Experience (PH), format baru Eropa.</p></div></div>
+      <div class="box"><span class="icon crit" aria-hidden="true">✕</span><div><div class="t" style="margin:0">Tidak lolos: tinggalkan</div><p>"If a store doesn't create new learning, we walk away."</p></div></div>
+    </div>
+  </div>
+  <div class="loop">↺ Pembelajaran dari tiap flagship dipakai untuk merancang flagship berikutnya dan format toko standar.</div>
+
+  <h3 style="margin-top:20px">Linimasa flagship dan format baru, 2018–2026</h3>
+  <div class="legend" id="legend2">
+    <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="var(--s1)"/></svg>Flagship (laboratorium + brand)</span>
+    <span><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="var(--surface-1)" stroke="var(--s1)" stroke-width="2"/></svg>Format standar baru diluncurkan / disebar</span>
+    <span class="muted">#900 = toko ke-900 (milestone)</span>
+  </div>
+  <div class="chart-wrap" id="tlWrap">
+    <svg id="timeline" role="img" aria-label="Linimasa peluncuran flagship dan format baru MR.DIY per negara 2018–2026"></svg>
+    <div class="tooltip" id="tip2"></div>
+  </div>
+  <p class="muted" style="margin:6px 0 0;font-size:12.5px">Flagship per tahun: 1 (2018) · 1 (2022) · 1 (2023) · 1 (2024) · <b style="color:var(--text-primary)">3 (2025) · 3 (2026)</b>. Makin sering, tetapi tetap sekitar 1 per negara per tahun.</p>
+
+  <div class="compare">
+    <div class="col">
+      <h3>Flagship sejati</h3>
+      <dl>
+        <dt>Jumlah</dt><dd>Bertambah selektif: ±1–3 per negara per tahun</dd>
+        <dt>Lokasi</dt><dd>Mal prime, milestone, wilayah baru</dd>
+        <dt>Fungsi</dt><dd>Laboratorium konsep + brand/PR</dd>
+        <dt>Ekonomi</dt><dd>Capex dan sewa lebih tinggi, harga jual sama</dd>
+      </dl>
+      <div class="verdict">→ Alat uji dan marketing, bukan model massal</div>
+    </div>
+    <div class="col">
+      <h3>Format standar baru</h3>
+      <dl>
+        <dt>Jumlah</dt><dd>Makin banyak: semua toko baru di Eropa; toko baru dan renovasi di mal kelas A Asia</dd>
+        <dt>Asal</dt><dd>Elemen flagship yang lolos uji KPI</dd>
+        <dt>Fungsi</dt><dd>Menaikkan konversi, UPT, penjualan/ft²</dd>
+        <dt>Bukti</dt><dd>Spanyol: klaim penjualan hingga 5× format lama</dd>
+      </dl>
+      <div class="verdict">→ Strategi operasional; toko "cantik" jadi norma</div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <p><b>Catatan.</b> Pemetaan negara ke tahap adalah interpretasi kami atas kerangka PROVE → STABILISE → ACCELERATE dari postingan Leo Gan; ambang 10/30 toko adalah aturan praktis. KPI gerbang per negara tidak dipublikasikan. Angka akhir 2024 sebagian diturunkan dari persentase pertumbuhan di peta "End 2025". Bulan masuk Spanyol (awal 2022) diperkirakan Maret 2022. Spanyol: 25 toko (Agustus 2026, Wikipedia) dan 28 toko (Oktober 2026, media) berasal dari sumber berbeda.</p>
+  <p><b>Sumber utama.</b> Postingan LinkedIn Leo Gan (arsip pengguna); Wikipedia MR.DIY; situs MR.DIY Turki; Expat Guide Turkey; CdeComunicación; Just Retail; Revista Centros Comerciales; Retail Actual; Money Buzz; Daily News Hungary; DIY International; The Jakarta Post; Infobanknews; MR.DIY Philippines; Newswit; Nation Thailand. Daftar lengkap ada di laporan.</p>
+</div>
+
+</div>
+</div>
+
+<script>
+(function () {
+  const NS = 'http://www.w3.org/2000/svg';
+  const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+
+  // ---------- Trajectory data (months since first store) ----------
+  const series = [
+    { name: 'Turki', color: '--s1', badge: 1, badgeAt: 3, pts: [
+      [0, 1, 'Nov 2021', 'Toko pertama, Istanbul'], [1, 10, 'Des 2021', 'Milestone 10 toko'], [6, 50, 'Mei 2022', 'Milestone 50 toko'],
+      [17, 100, 'Apr 2023', 'Milestone 100 toko'], [37, 139, 'Des 2024', 'Turunan peta End 2025'], [49, 169, 'Des 2025', 'Peta End 2025'], [57, 178, 'Agu 2026', 'Wikipedia'] ] },
+    { name: 'Spanyol', color: '--s2', badge: 2, badgeAt: 2, pts: [
+      [0, 1, '±Mar 2022', 'Toko pertama, Talavera (bulan perkiraan)'], [16, 21, 'Jul 2023', '21 toko, mayoritas toko jalanan'], [33, 26, 'Des 2024', 'Turunan peta End 2025'],
+      [39, 25, 'Jun 2025', 'Format baru diluncurkan'], [45, 27, 'Des 2025', 'Peta End 2025'], [53, 25, 'Agu 2026', 'Wikipedia'], [55, 28, 'Okt 2026', 'Gran Via 2, toko ke-3 Barcelona'] ] },
+    { name: 'Polandia', color: '--s3', badge: 3, badgeAt: 4, pts: [
+      [0, 1, 'Nov 2024', 'Toko pertama, Zabrze'], [1, 2, 'Des 2024', 'Turunan peta End 2025'], [13, 19, 'Des 2025', 'Peta End 2025'],
+      [17, 23, 'Apr 2026', 'Retailnet.pl'], [20, 35, 'Jul 2026', 'Setelah gudang diperbesar'] ] },
+    { name: 'Vietnam', color: '--s4', pts: [
+      [0, 1, 'Agu 2023', 'Toko pertama'], [16, 33, 'Des 2024', 'Turunan peta End 2025 (target awal 25)'], [28, 55, 'Des 2025', 'Peta End 2025'], [36, 72, 'Agu 2026', 'Wikipedia'] ] },
+    { name: 'Rumania', color: '--s5', pts: [
+      [0, 1, 'Mar 2026', 'Toko pertama, Pitești'], [7, 7, '±Okt 2026', '7 toko dalam 7 bulan'] ] },
+  ];
+
+  // Legend + table
+  const legend = document.getElementById('legend');
+  series.forEach(s => {
+    const sp = document.createElement('span');
+    const k = document.createElement('i'); k.className = 'key'; k.style.background = `var(${s.color})`;
+    sp.appendChild(k); sp.appendChild(document.createTextNode(s.name)); legend.appendChild(sp);
+  });
+  const tb = document.querySelector('#trajTable tbody');
+  series.forEach(s => s.pts.forEach(p => {
+    const tr = document.createElement('tr');
+    [s.name, p[2], p[0], p[1], p[3]].forEach(v => { const td = document.createElement('td'); td.textContent = v; tr.appendChild(td); });
+    tb.appendChild(tr);
+  }));
+
+  function drawTraj() {
+    const svg = document.getElementById('traj');
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    const W = svg.parentElement.clientWidth, H = 420;
+    const m = { l: 48, r: 92, t: 14, b: 40 };
+    svg.setAttribute('width', W); svg.setAttribute('height', H); svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    const pw = W - m.l - m.r, ph = H - m.t - m.b;
+    const xMax = 60, yMin = 1, yMax = 300;
+    const x = v => m.l + (v / xMax) * pw;
+    const y = v => m.t + ph - (Math.log10(v) - Math.log10(yMin)) / (Math.log10(yMax) - Math.log10(yMin)) * ph;
+
+    // Phase bands
+    const bands = [[1, 10, 'PROVE · 1–10 toko', '--band-a'], [10, 30, 'STABILISE · 10–30', '--band-b'], [30, 300, 'ACCELERATE · 30+', '--band-a']];
+    bands.forEach(([a, b, label, fill]) => {
+      el('rect', { x: m.l, y: y(b), width: pw, height: y(a) - y(b), fill: `var(${fill})` }, svg);
+      const t = el('text', { x: m.l + 8, y: y(b) + 16, 'font-size': 11, 'font-weight': 600, fill: 'var(--text-muted)', 'letter-spacing': '.04em' }, svg);
+      t.textContent = label;
+    });
+    // Grid + y ticks
+    [1, 3, 10, 30, 100, 300].forEach(v => {
+      el('line', { x1: m.l, x2: m.l + pw, y1: y(v), y2: y(v), stroke: 'var(--grid)', 'stroke-width': 1 }, svg);
+      const t = el('text', { x: m.l - 8, y: y(v) + 4, 'text-anchor': 'end', 'font-size': 11, fill: 'var(--text-muted)' }, svg); t.textContent = v;
+    });
+    // x ticks
+    for (let v = 0; v <= 60; v += 12) {
+      const t = el('text', { x: x(v), y: m.t + ph + 18, 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--text-muted)' }, svg);
+      t.textContent = v === 0 ? 'Toko pertama' : `${v / 12} thn`;
+    }
+    const xl = el('text', { x: m.l + pw / 2, y: H - 4, 'text-anchor': 'middle', 'font-size': 11.5, fill: 'var(--text-secondary)' }, svg);
+    xl.textContent = 'Waktu sejak toko pertama di negara tersebut';
+    const yl = el('text', { x: 12, y: m.t + ph / 2, 'text-anchor': 'middle', 'font-size': 11.5, fill: 'var(--text-secondary)', transform: `rotate(-90 12 ${m.t + ph / 2})` }, svg);
+    yl.textContent = 'Jumlah toko (log)';
+    el('line', { x1: m.l, x2: m.l + pw, y1: m.t + ph, y2: m.t + ph, stroke: 'var(--axis)', 'stroke-width': 1 }, svg);
+
+    // Lines
+    series.forEach(s => {
+      const d = s.pts.map((p, i) => `${i ? 'L' : 'M'}${x(p[0]).toFixed(1)},${y(p[1]).toFixed(1)}`).join('');
+      el('path', { d, fill: 'none', stroke: `var(${s.color})`, 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, svg);
+    });
+    // Points + end labels
+    const tip = document.getElementById('tip'), wrap = document.getElementById('trajWrap');
+    series.forEach(s => {
+      s.pts.forEach((p, i) => {
+        const cx = x(p[0]), cy = y(p[1]);
+        el('circle', { cx, cy, r: 4, fill: `var(${s.color})`, stroke: 'var(--surface-1)', 'stroke-width': 2 }, svg);
+        const hit = el('circle', { cx, cy, r: 12, fill: 'transparent', tabindex: 0, role: 'img', 'aria-label': `${s.name}, ${p[2]}: ${p[1]} toko. ${p[3]}` }, svg);
+        const show = () => {
+          tip.replaceChildren();
+          const v = document.createElement('div'); v.className = 'v'; v.textContent = `${p[1].toLocaleString('id-ID')} toko`;
+          const l = document.createElement('div'); l.className = 'l';
+          const k = document.createElement('i'); k.className = 'key'; k.style.background = `var(${s.color})`;
+          l.appendChild(k); l.appendChild(document.createTextNode(`${s.name} · ${p[2]} · bulan ke-${p[0]}`));
+          const n = document.createElement('div'); n.className = 'l'; n.textContent = p[3];
+          tip.append(v, l, n);
+          tip.style.opacity = 1;
+          const tw = tip.offsetWidth;
+          let left = cx + 14; if (left + tw > wrap.clientWidth) left = cx - tw - 14;
+          tip.style.left = left + 'px'; tip.style.top = (cy - 20) + 'px';
+        };
+        const hide = () => { tip.style.opacity = 0; };
+        hit.addEventListener('pointerenter', show); hit.addEventListener('pointerleave', hide);
+        hit.addEventListener('focus', show); hit.addEventListener('blur', hide);
+      });
+      const last = s.pts[s.pts.length - 1];
+      let lx = x(last[0]) + 9, ly = y(last[1]) + 4, anchor = 'start';
+      if (s.name === 'Polandia') { // avoid Vietnam line: label below-right with leader
+        const tx = x(25), ty = y(13);
+        el('line', { x1: x(last[0]) + 3, y1: y(last[1]) + 4, x2: tx - 3, y2: ty - 10, stroke: 'var(--axis)', 'stroke-width': 1 }, svg);
+        lx = tx; ly = ty;
+      }
+      const t = el('text', { x: lx, y: ly, 'font-size': 12, 'font-weight': 600, fill: 'var(--text-primary)', 'text-anchor': anchor }, svg);
+      t.textContent = `${s.name} ${last[1]}`;
+      if (s.badge) {
+        const bp = s.pts[s.badgeAt];
+        const bx = x(bp[0]) + (s.name === 'Spanyol' ? 0 : -16), by = y(bp[1]) - (s.name === 'Spanyol' ? 18 : 16);
+        el('circle', { cx: bx, cy: by, r: 9, fill: 'var(--surface-1)', stroke: 'var(--text-primary)', 'stroke-width': 1.5 }, svg);
+        const bt = el('text', { x: bx, y: by + 4, 'text-anchor': 'middle', 'font-size': 11, 'font-weight': 700, fill: 'var(--text-primary)' }, svg);
+        bt.textContent = s.badge;
+      }
+    });
+  }
+
+  // ---------- Flagship timeline ----------
+  const rows = ['Malaysia', 'Thailand', 'Indonesia', 'Filipina', 'Spanyol'];
+  const events = [
+    { c: 'Malaysia', yr: 2018, kind: 'f', lab: 'Mid Valley', d: 'Flagship pertama, 1.393 m²' },
+    { c: 'Malaysia', yr: 2022, kind: 'f', lab: 'Plus Mid Valley', d: 'MR.DIY Plus 3-in-1 (MR.DIY + MR.TOY + MR.DOLLAR)' },
+    { c: 'Malaysia', yr: 2025, kind: 'f', lab: 'MyTOWN + Imago', d: 'Retailtainment; Imago di Kota Kinabalu (Malaysia Timur)' },
+    { c: 'Thailand', yr: 2023, kind: 'f', lab: 'Bangkapi', d: 'The Mall Lifestore Bangkapi, 1.285 m², smart mirror' },
+    { c: 'Thailand', yr: 2025, kind: 'f', lab: 'Seacon (2.0)', d: 'Format MR.DIY 2.0, Store Design of the Year 2025' },
+    { c: 'Thailand', yr: 2026, kind: 'f', lab: 'Bang Khae #1.200', d: 'Flagship standalone 2 lantai, toko ke-1.200' },
+    { c: 'Indonesia', yr: 2024, kind: 'f', lab: 'Lotte Mall #900', d: 'Flagship pertama ID, rotan + seni lokal, toko ke-900' },
+    { c: 'Indonesia', yr: 2026, kind: 'f', lab: 'Bekasi 2', d: 'Flagship ke-2, ±1.100 m², DIY corner baru' },
+    { c: 'Filipina', yr: 2026, kind: 'f', lab: 'Makati #1.000', d: 'Elevated Experience Store pertama, toko ke-1.000' },
+    { c: 'Spanyol', yr: 2025, kind: 's', lab: 'Parque Corredor', d: 'European reference store: format baru' },
+    { c: 'Spanyol', yr: 2026, kind: 's', lab: 'Madrid + Barcelona', d: 'Xanadú, La Maquinista, Gran Via 2: format baru jadi standar' },
+  ];
+  function drawTimeline() {
+    const svg = document.getElementById('timeline');
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    const W = svg.parentElement.clientWidth, rowH = 56;
+    const m = { l: 86, r: 60, t: 26, b: 8 };
+    const H = m.t + rows.length * rowH + m.b;
+    svg.setAttribute('width', W); svg.setAttribute('height', H); svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    const pw = W - m.l - m.r;
+    const x = yr => m.l + (yr - 2018) / 8 * pw;
+    for (let yr = 2018; yr <= 2026; yr++) {
+      el('line', { x1: x(yr), x2: x(yr), y1: m.t - 6, y2: H - m.b, stroke: 'var(--grid)', 'stroke-width': 1 }, svg);
+      const t = el('text', { x: x(yr), y: 14, 'text-anchor': 'middle', 'font-size': 11, fill: 'var(--text-muted)' }, svg); t.textContent = yr;
+    }
+    rows.forEach((r, i) => {
+      const cy = m.t + i * rowH + 18;
+      el('line', { x1: m.l, x2: m.l + pw, y1: cy, y2: cy, stroke: 'var(--axis)', 'stroke-width': 1 }, svg);
+      const t = el('text', { x: m.l - 12, y: cy + 4, 'text-anchor': 'end', 'font-size': 12.5, 'font-weight': 600, fill: 'var(--text-primary)' }, svg); t.textContent = r;
+    });
+    const tip = document.getElementById('tip2'), wrap = document.getElementById('tlWrap');
+    events.forEach(e => {
+      const cx = x(e.yr), cy = m.t + rows.indexOf(e.c) * rowH + 18;
+      if (e.kind === 'f') el('circle', { cx, cy, r: 6, fill: 'var(--s1)', stroke: 'var(--surface-1)', 'stroke-width': 2 }, svg);
+      else el('circle', { cx, cy, r: 5, fill: 'var(--surface-1)', stroke: 'var(--s1)', 'stroke-width': 2 }, svg);
+      const t = el('text', { x: cx, y: cy + 22, 'text-anchor': 'middle', 'font-size': 11.5, fill: 'var(--text-secondary)' }, svg); t.textContent = e.lab;
+      const hit = el('circle', { cx, cy, r: 14, fill: 'transparent', tabindex: 0, role: 'img', 'aria-label': `${e.c} ${e.yr}: ${e.lab}. ${e.d}` }, svg);
+      const show = () => {
+        tip.replaceChildren();
+        const v = document.createElement('div'); v.className = 'v'; v.textContent = `${e.lab}`;
+        const l = document.createElement('div'); l.className = 'l'; l.textContent = `${e.c} · ${e.yr} · ${e.kind === 'f' ? 'flagship' : 'format standar baru'}`;
+        const n = document.createElement('div'); n.className = 'l'; n.textContent = e.d;
+        tip.append(v, l, n); tip.style.opacity = 1;
+        const tw = tip.offsetWidth; let left = cx + 16; if (left + tw > wrap.clientWidth) left = cx - tw - 16;
+        tip.style.left = left + 'px'; tip.style.top = (cy - 18) + 'px';
+      };
+      const hide = () => { tip.style.opacity = 0; };
+      hit.addEventListener('pointerenter', show); hit.addEventListener('pointerleave', hide);
+      hit.addEventListener('focus', show); hit.addEventListener('blur', hide);
+    });
+  }
+
+  const drawAll = () => { drawTraj(); drawTimeline(); };
+  drawAll();
+  let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(drawAll, 120); });
+})();
+</script>
+</body>
+</html>
