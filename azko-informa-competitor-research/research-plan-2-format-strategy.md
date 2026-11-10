@@ -1,7 +1,7 @@
 # Rencana Riset Tahap 2: Format Toko, Model Bisnis & Konsep Desain Kompetitor
 ### Apa yang sedang mereka uji di luar negeri, mana yang mungkin dibawa ke Indonesia, dan dampaknya ke AZKO & Informa
 
-> Status: **DRAFT – menunggu review/persetujuan** sebelum dijalankan.
+> Status: **DISETUJUI & DIJALANKAN**. Hasil ada di [`report-format-strategy.md`](report-format-strategy.md).
 > Tanggal draf: 10 November 2026
 > Lanjutan dari [`report.md`](report.md) (peta kompetitor tahap 1).
 
@@ -136,3 +136,12 @@ pasti. Riset dilakukan tanpa kunjungan fisik.
 3. **Detail desain:** cukup dengan observasi visual dari foto dan liputan (estimasi), atau Anda butuh spesifikasi yang lebih presisi? Spesifikasi presisi kemungkinan besar tidak tersedia publik.
 4. **Horizon waktu prediksi:** sampai 2028 atau 2030?
 5. **Output:** Markdown lagi seperti tahap 1? Visual seperti foto atau diagram layout bisa ditambahkan di tahap konversi.
+
+---
+
+## 9. Keputusan Pengguna (final)
+1. Tier 1 disetujui, **ditambah IKEA Eropa (London) dan versi kecil Korea**.
+2. **Brand global yang belum ada di Indonesia ikut dimasukkan** sebagai bahan pelajaran.
+3. Detail desain cukup berupa **observasi visual dari foto dan liputan**.
+4. Horizon prediksi **2028–2030**.
+5. Output **Markdown**.
