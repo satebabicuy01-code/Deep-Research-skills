@@ -1,6 +1,6 @@
 # Rencana Riset: Peta Kompetitor AZKO & Informa
 
-> Status: **DRAFT – menunggu review/persetujuan** sebelum riset dijalankan.
+> Status: **DISETUJUI & DIJALANKAN**. Hasil ada di [`report.md`](report.md).
 > Tanggal draf: 10 November 2026
 
 ---
@@ -205,3 +205,15 @@ Format bisa berupa **Markdown/Word report**, **Excel** (matriks & data), dan/ata
 5. **Benchmark harga basket:** dilakukan atau tidak (paling memakan waktu, tapi paling tajam)?
 6. **Jumlah kompetitor yang diprofil mendalam:** usulan 20–30.
 7. **Format output:** Markdown/Word, Excel, PowerPoint, atau kombinasi?
+
+---
+
+## 11. Keputusan Pengguna (final)
+1. AZKO & Informa dianalisis **sama dalamnya**.
+2. B2B (Krisbow, Informa Business) **sekilas saja**.
+3. Wilayah: **nasional**.
+4. Rentang waktu: **2023–2026**.
+5. Benchmark harga: **sebagian saja, kisaran**.
+6. Profil mendalam: **20–30 kompetitor** (terealisasi 26).
+7. Output: **Markdown lengkap dulu**, konversi format menyusul.
+8. Tambahan: **analisis format & konsep toko** (misalnya alasan flagship MR.D.I.Y.).
