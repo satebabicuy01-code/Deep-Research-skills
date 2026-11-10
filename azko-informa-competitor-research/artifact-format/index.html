@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Format Toko Kompetitor 2026–2030</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Satu tema terang dengan latar putih (permintaan pengguna). Bab bernomor, ringkasan dulu, grafik selebar kolom. */
+  --bg: #ffffff;
+  --panel: #f5f7fa;
+  --ink: #0f1720;
+  --ink-2: #4a5361;
+  --muted: #7b828d;
+  --line: #e4e7ec;
+  --line-strong: #c6cbd3;
+  --accent: #1f5fa8;
+  --accent-soft: #eaf1fa;
+  --azko: #2a78d6;
+  --informa: #1baf7a;
+  --mdiy: #eb6834;
+  --other: #9aa1ab;
+  --other-strong: #6b7380;
+  --neg: #e34948;
+  --pos: #2a78d6;
+  --good: #0ca30c;
+  --warn: #fab219;
+  --crit: #d03b3b;
+  --band: rgba(42,120,214,0.08);
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #ffffff; }
+body { color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); }
+a:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(28px, 4.2vw, 42px); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(22px, 2.8vw, 28px); font-weight: 800; letter-spacing: -0.01em; }
+h3 { font-size: 17px; font-weight: 700; }
+p { margin: 0; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+header.top { padding: 44px 0 26px; border-bottom: 1px solid var(--line); }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.lede { margin-top: 12px; max-width: 70ch; color: var(--ink-2); font-size: 16px; }
+.meta { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 12.5px; color: var(--muted); }
+.meta span { border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; }
+
+nav.toc { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+nav.toc .wrap { display: flex; gap: 4px; overflow-x: auto; padding-top: 8px; padding-bottom: 8px; }
+nav.toc a { flex: none; text-decoration: none; color: var(--ink-2); font-size: 13.5px; font-weight: 600; padding: 6px 12px; border-radius: 8px; }
+nav.toc a:hover { background: var(--accent-soft); color: var(--ink); }
+nav.toc a .n { color: var(--muted); font-variant-numeric: tabular-nums; margin-right: 6px; }
+
+section.chapter { padding: 48px 0 8px; }
+.ch-head { display: grid; gap: 8px; margin-bottom: 24px; }
+.ch-head .num { font-size: 13px; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+.ch-head p { color: var(--ink-2); max-width: 72ch; }
+
+.grid { display: grid; gap: 16px; }
+.g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 860px) { .g3, .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .g2, .g3, .g4 { grid-template-columns: 1fr; } }
+
+.card { background: #ffffff; border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.card.soft { background: var(--panel); border-color: transparent; }
+.card .sub { color: var(--ink-2); font-size: 13.5px; }
+.card .src { color: var(--muted); font-size: 12px; }
+.span2 { grid-column: span 2; }
+.span3 { grid-column: 1 / -1; }
+@media (max-width: 560px) { .span2 { grid-column: auto; } }
+
+.finding { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
+.finding .k { width: 32px; height: 32px; border-radius: 9px; background: var(--accent); color: #fff; font-weight: 800; display: grid; place-items: center; }
+.finding h3 { font-size: 16px; margin-bottom: 4px; }
+.finding p { color: var(--ink-2); font-size: 14px; }
+
+.tile { border-top: 3px solid var(--accent); }
+.tile .big { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.tile .big small { font-size: 14px; font-weight: 700; color: var(--ink-2); }
+.tile .lbl { font-size: 13px; color: var(--ink-2); }
+.tile .cmp { font-size: 12.5px; color: var(--muted); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12.5px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.legend i.dot { border-radius: 50%; }
+.legend i.ring { background: #fff !important; border: 2px solid var(--accent); border-radius: 50%; }
+.legend i.dash { width: 18px; height: 0; border-top: 2px dashed var(--accent); border-radius: 0; vertical-align: 3px; }
+
+.chart { width: 100%; min-height: 40px; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { font-family: var(--font); }
+.scroll-x { overflow-x: auto; }
+
+details.tbl { font-size: 13px; }
+details.tbl summary { cursor: pointer; color: var(--accent); font-weight: 600; width: max-content; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 700; color: var(--ink-2); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; }
+table.compact th, table.compact td { padding: 8px 6px; font-size: 12.5px; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+td b { color: var(--ink); }
+
+.status { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 12.5px; white-space: nowrap; }
+.status::before { content: ""; width: 16px; height: 16px; border-radius: 50%; flex: none; background-repeat: no-repeat; background-position: center; background-size: 10px; }
+.status.k::before { background-color: var(--good); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5.2l2 2 4-4.4' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.status.n::before { background-color: var(--warn); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2.5 5h5' stroke='%230b0b0b' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.status.l::before { background-color: var(--crit); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 3l4 4M7 3l-4 4' stroke='white' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.status.q::before { background-color: #d5d9df; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Ctext x='5' y='8' font-size='8' text-anchor='middle' font-family='sans-serif' font-weight='700' fill='%234a5361'%3E%3F%3C/text%3E%3C/svg%3E"); }
+
+.hyp { display: grid; gap: 10px; }
+.hyp .top { display: flex; justify-content: space-between; gap: 10px; align-items: start; flex-wrap: wrap; }
+.hyp .id { font-weight: 800; color: var(--accent); }
+.hyp p { font-size: 13.5px; color: var(--ink-2); }
+.hyp q { font-weight: 600; color: var(--ink); quotes: none; }
+
+.dossier { display: grid; gap: 16px; }
+.dhead { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill { font-size: 12px; font-weight: 700; border-radius: 999px; padding: 3px 10px; background: var(--panel); color: var(--ink-2); }
+.pill.az { background: #e3eefb; color: #174f93; }
+.pill.inf { background: #ddf4ea; color: #0c5f41; }
+.kv { display: grid; grid-template-columns: 150px 1fr; gap: 6px 14px; font-size: 13.5px; }
+.kv dt { color: var(--muted); font-weight: 600; }
+.kv dd { margin: 0; color: var(--ink-2); }
+@media (max-width: 560px) { .kv { grid-template-columns: 1fr; } }
+
+.chip { font-size: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; color: var(--ink-2); background: #fff; }
+.trend h3 { font-size: 15px; }
+.trend .ex { display: flex; flex-wrap: wrap; gap: 6px; }
+.trend .dir { font-size: 13px; color: var(--ink-2); }
+
+.ladder { display: grid; gap: 8px; }
+.rung { display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: stretch; }
+.rung .tag { border-radius: 8px; padding: 8px 10px; font-weight: 700; font-size: 12.5px; display: grid; align-content: center; background: var(--accent-soft); color: var(--ink); }
+.rung .body { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; font-size: 13.5px; color: var(--ink-2); }
+.rung .body b { color: var(--ink); }
+.rung.new .tag { background: var(--azko); color: #fff; }
+.rung.new.inf .tag { background: var(--informa); color: #0b0b0b; }
+
+.callout { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 12px 16px; border-radius: 0 8px 8px 0; font-size: 14px; color: var(--ink); }
+.note { font-size: 12.5px; color: var(--muted); }
+
+#tip { position: fixed; z-index: 50; pointer-events: none; background: #0f1720; color: #ffffff; font-size: 12.5px; line-height: 1.45; padding: 8px 10px; border-radius: 8px; max-width: 290px; opacity: 0; transition: opacity .08s; box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+#tip.on { opacity: 1; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { #tip { transition: none; } html { scroll-behavior: auto; } }
+
+footer { margin-top: 56px; padding: 28px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; }
+.srcs { columns: 2 320px; column-gap: 32px; font-size: 13px; padding-left: 18px; }
+.srcs li { break-inside: avoid; margin-bottom: 6px; }
+.srcs li.hd { list-style: none; margin: 10px 0 6px -18px; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); break-after: avoid; }
+</style>
+</head>
+<body>
+<div id="tip" role="tooltip"></div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Riset tahap 2 · Format toko, model bisnis & konsep desain</div>
+    <h1>Format Toko Kompetitor 2026–2030</h1>
+    <p class="lede">Apa yang sedang diuji kompetitor AZKO dan Informa di luar negeri, format mana yang kemungkinan dibawa ke Indonesia, dan apa dampaknya bagi kedua bisnis.</p>
+    <div class="meta"><span>Data per 10 November 2026</span><span>Horizon 2026–2030 (titik tengah 2028)</span><span>Detail desain: observasi dari liputan & rilis</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Daftar bab">
+  <div class="wrap">
+    <a href="#ringkasan"><span class="n">01</span>Ringkasan</a>
+    <a href="#hipotesis"><span class="n">02</span>Hipotesis</a>
+    <a href="#spektrum"><span class="n">03</span>Spektrum & lini waktu</a>
+    <a href="#dossier"><span class="n">04</span>Dossier Tier 1</a>
+    <a href="#global"><span class="n">05</span>Benchmark & brand China</a>
+    <a href="#desain"><span class="n">06</span>Desain</a>
+    <a href="#prioritas"><span class="n">07</span>Peluang × dampak</a>
+    <a href="#implikasi"><span class="n">08</span>Implikasi</a>
+    <a href="#sumber"><span class="n">09</span>Sumber</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- 01 -->
+<section class="chapter" id="ringkasan">
+  <div class="ch-head">
+    <div class="num">01</div>
+    <h2>Pasar sedang bertemu di tengah</h2>
+    <p>Pemain murah naik kelas lewat flagship dan toko IP. Pemain big box mengecil dan masuk ke mal atau pusat kota. Titik temunya mal kelas menengah di kota besar dan tier 2, basis utama AZKO dan Informa.</p>
+  </div>
+  <div class="grid g4">
+    <div class="card tile"><div class="lbl">Toko kota IKEA Korea</div><div class="big">600–1.000 <small>m²</small></div><div class="cmp">Di mal & department store. ±500 barang bawa pulang + kios order</div></div>
+    <div class="card tile"><div class="lbl">MR.D.I.Y. PLUS (Malaysia)</div><div class="big">3.000 <small>m²</small></div><div class="cmp">Gabungan 4 merek grup. Belum ada di Indonesia</div></div>
+    <div class="card tile"><div class="lbl">SSSG HomePro 2025</div><div class="big">−6,4<small>%</small></div><div class="cmp">Big box melambat. Layanan HomePro justru tumbuh +9%</div></div>
+    <div class="card tile"><div class="lbl">Payback toko Erablue</div><div class="big">±16 <small>bulan</small></div><div class="cmp">Toko 180–320 m² + antar & pasang gratis 24 jam</div></div>
+  </div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card"><div class="finding"><div class="k">1</div><div><h3>IKEA beralih global ke format kecil</h3><p>Korea (4–5 toko kota 2025–26), London Oxford Street (Mei 2025), China (7 big box ditutup, 10+ toko kecil), Kuching Malaysia (Des 2026). Peluang masuk Indonesia sebelum 2028 tinggi (estimasi). Dampak terbesar ke Informa di mal.</p></div></div></div>
+    <div class="card"><div class="finding"><div class="k">2</div><div><h3>MR.D.I.Y.: desain naik kelas, harga tidak</h3><p>Rak lebih rendah, lebih terang, sirkulasi lega di Spanyol. PLUS 3.000 m² di Malaysia. Flagship Bekasi mengikuti arah serupa. Harga tetap "Always Low Prices". Konsumen kelas menengah atas mendapat pengalaman mirip AZKO dengan harga MR.D.I.Y.</p></div></div></div>
+    <div class="card"><div class="finding"><div class="k">3</div><div><h3>Ace (MAPI) kemungkinan bukan big box</h3><p>Di AS, Ace adalah toko lingkungan yang di-upgrade lewat ELEVATE³ (US$1 miliar): destinasi Paint, Power, Backyard & BBQ, demo grill. Sasarannya kategori premium bermargin tinggi AZKO.</p></div></div></div>
+    <div class="card"><div class="finding"><div class="k">4</div><div><h3>Brand China datang dengan dua model</h3><p>Toko besar berbasis IP dan tren di mal (KKV, Miniso, Pop Mart), dan mal furnitur banyak merek (Easyhome, Malaysia Apr 2026). Model kedua adalah ancaman jangka menengah bagi Informa.</p></div></div></div>
+    <div class="card span2"><div class="finding"><div class="k">5</div><div><h3>Pelajaran Thailand: layanan dan format kecil lebih tahan</h3><p>HomePro, Thai Watsadu, dan Global House mencatat SSSG negatif di 2025. Format kecil MR.D.I.Y. (1.000+ toko di Thailand) dinilai paling tangguh, dan layanan pasang/perbaikan tumbuh. Di Indonesia, Erablue membuktikan format kecil + layanan bisa balik modal ±16 bulan.</p></div></div></div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="chapter" id="hipotesis">
+  <div class="ch-head">
+    <div class="num">02</div>
+    <h2>Verifikasi hipotesis</h2>
+    <p>Enam dugaan awal diuji dengan bukti dari laporan perusahaan, rilis, dan liputan media.</p>
+  </div>
+  <div class="grid g3" id="hyp"></div>
+</section>
+
+<!-- 03 -->
+<section class="chapter" id="spektrum">
+  <div class="ch-head">
+    <div class="num">03</div>
+    <h2>Semua bergerak ke ukuran 600–3.000 m²</h2>
+    <p>Rentang ini adalah ukuran toko mal kelas menengah. Pemain murah membesar ke sana, pemain big box mengecil ke sana.</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Spektrum ukuran format toko (m², skala logaritmik)</h3>
+      <div class="legend"><span><i style="background:var(--azko)"></i>Kawan Lama</span><span><i style="background:var(--mdiy)"></i>Pemain murah yang naik kelas</span><span><i style="background:var(--other)"></i>Format lain</span><span><i style="background:var(--band);border:1px solid var(--line-strong)"></i>Zona temu</span></div>
+      <div class="chart" id="c-format"></div>
+      <div class="src">Ukuran dari rilis dan liputan 2022–2026. AZKO Alam Sutera = eks-flagship Ace. Luas NEKA tidak dipublikasikan.</div>
+    </div>
+    <div class="card">
+      <h3>Lini waktu langkah format 2021–2026</h3>
+      <div class="legend"><span><i class="dot" style="background:var(--accent)"></i>Di Indonesia</span><span><i class="ring"></i>Di luar negeri</span></div>
+      <div class="chart" id="c-timeline"></div>
+      <details class="tbl"><summary>Lihat daftar peristiwa</summary><div class="scroll-x"><table id="t-events"></table></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="chapter" id="dossier">
+  <div class="ch-head">
+    <div class="num">04</div>
+    <h2>Dossier Tier 1</h2>
+    <p>Tujuh kompetitor utama: format, desain, model bisnis, dan dampak ke AZKO atau Informa.</p>
+  </div>
+  <div class="dossier">
+
+    <div class="card">
+      <div class="dhead"><h3>MR.D.I.Y.</h3><div class="pills"><span class="pill az">Dampak AZKO: tinggi</span><span class="pill">Peluang PLUS masuk 2028: sedang–tinggi</span></div></div>
+      <div class="grid g2">
+        <div>
+          <div class="sub" style="margin-bottom:8px">Tangga format (m²)</div>
+          <div class="chart" id="c-mdiy"></div>
+        </div>
+        <div>
+          <div class="sub" style="margin-bottom:8px">Apakah desainnya naik kelas?</div>
+          <div class="scroll-x"><table id="t-mrdiy"></table></div>
+        </div>
+      </div>
+      <dl class="kv">
+        <dt>Model bisnis</dt><dd>Milik sendiri, harga nasional seragam, rantai pasok terpusat dari China. Tumbuh dari jumlah toko × kedekatan. Pendapatan Indonesia semester I 2026 Rp4,65 T (+24,5%).</dd>
+        <dt>Asal desain premium</dt><dd>PLUS lahir di Malaysia (2022) setelah MR.D.I.Y. dicap "bazaar" saat masuk Spanyol. Klaim penjualan konsep baru "hingga 5×" format lama.</dd>
+        <dt>Respons ke Ace</dt><dd>"Tidak perlu ubah strategi": tetap Hemat, Lengkap, Dekat (Agu 2026). MDIY juga investor di KKV.</dd>
+      </dl>
+    </div>
+
+    <div class="card">
+      <div class="dhead"><h3>IKEA</h3><div class="pills"><span class="pill inf">Dampak Informa: tinggi</span><span class="pill az">Dampak AZKO: sedang</span><span class="pill">Peluang format kecil sebelum 2028: tinggi</span></div></div>
+      <div class="ladder" id="ikea"></div>
+      <dl class="kv">
+        <dt>Desain format kecil</dt><dd>Room set berbasis riset rumah lokal, fokus storage dan hemat ruang, kios dan QR ke planner, studio perencanaan 25 m² (London), makanan Swedia sebagai magnet trafik.</dd>
+        <dt>Rasional</dt><dd>Pasar perumahan melemah, 52% penjualan IKEA Korea online, toko menjadi hub omnichannel. China: dari "ekspansi skala" ke "penetrasi presisi".</dd>
+        <dt>Indonesia</dt><dd>6 toko, tidak ada toko baru 2026, Shopee sejak Sep 2025. Operator DFI/HERO (bukan Ikano), tetapi HERO menyebut "format lebih variatif".</dd>
+      </dl>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <div class="dhead"><h3>Ace Hardware (MAPI)</h3><div class="pills"><span class="pill az">Dampak AZKO: tinggi bila &gt;7 toko</span></div></div>
+        <div class="sub">ELEVATE³ (AS): 4 destinasi, ±930–1.200 m², 130+ toko mengadopsi, penjualan Backyard +6%</div>
+        <div class="grid g2" id="ace4"></div>
+        <dl class="kv">
+          <dt>Indonesia</dt><dd>3 toko: Sunter Mall, AEON Tanjung Barat, AEON BSD (Okt 2026). Target awal 5–7. "Sesuai konsep AS." Ukuran belum diungkap.</dd>
+          <dt>Model</dt><dd>Lisensi merek global; kekuatan MAP di relasi mal dan loyalitas.</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <div class="dhead"><h3>Miniso</h3><div class="pills"><span class="pill az">Dampak AZKO: sedang (lifestyle, Toys Kingdom)</span></div></div>
+        <div class="scroll-x"><table id="t-miniso"></table></div>
+        <dl class="kv">
+          <dt>Model</dt><dd>Franchise asset-light, IP sebagai mesin margin (180+ pemilik IP). Target 200 "entertainment store" global akhir 2026.</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <div class="dhead"><h3>KKV</h3><div class="pills"><span class="pill az">Dampak AZKO: sedang</span><span class="pill">Peluang ekspansi besar: tinggi</span></div></div>
+        <dl class="kv">
+          <dt>Konsep</dt><dd>"100 Lifestyles": ±20.000 SKU, 8 kategori (pop toy, beauty, snack, kebutuhan harian).</dd>
+          <dt>Format</dt><dd>Toko besar imersif. Global flagship Kuala Lumpur (Jan 2024) dan Ho Chi Minh City (Jan 2026, zona "Moto Park").</dd>
+          <dt>Indonesia</dt><dd>Masuk 30 Apr 2026, 10 toko di 6 kota. MDIY investor non-pengendali. Grup: KKV, THE COLORIST, X11.</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <div class="dhead"><h3>Nitori</h3><div class="pills"><span class="pill inf">Dampak Informa: sedang</span></div></div>
+        <dl class="kv">
+          <dt>Model</dt><dd>SPA: desain, produksi, dan ritel sendiri.</dd>
+          <dt>Format urban</dt><dd>Sejak 2015 di Jepang (Ikebukuro, Ginza), Deco Home, compact Hong Kong (2026), format kecil China. Fokus barang rumah tangga, bukan furnitur besar.</dd>
+          <dt>Indonesia</dt><dd>±3 toko di mal Jakarta (Lippo Puri ±2.670 m²), pembiayaan Home Credit, target ±80 toko 2032 (belum pasti).</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="dhead"><h3>Erablue</h3><div class="pills"><span class="pill inf">Dampak Informa Electronics: tinggi</span><span class="pill">Sudah terjadi, terus membesar</span></div></div>
+      <div class="grid g2">
+        <div>
+          <div class="legend"><span><i style="background:var(--accent);height:3px;vertical-align:3px;width:18px"></i>Realisasi</span><span><i class="dash"></i>Target</span></div>
+          <div class="chart" id="c-erablue"></div>
+        </div>
+        <dl class="kv">
+          <dt>Format</dt><dd>Mini 250–320 m² dan supermini 180–220 m² di jalan permukiman, bukan mal. Lokasi dari gabungan 5–7 ruko.</dd>
+          <dt>Layanan</dt><dd>Antar & pasang gratis 24 jam, tukar 1-untuk-1.</dd>
+          <dt>Unit economics</dt><dd>Pendapatan per toko 1,5–2,6× toko setara di Vietnam. 50 toko terakhir untung sejak bulan pertama. Payback ±16 bulan. SSSG +7,9% (Agu 2026).</dd>
+          <dt>Pasar sasaran</dt><dd>Ritel elektronik modern di mal hanya melayani ±3% rumah tangga teratas. Erablue mengambil kelas menengah yang terabaikan.</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="chapter" id="global">
+  <div class="ch-head">
+    <div class="num">05</div>
+    <h2>Benchmark global & brand China</h2>
+    <p>Big box home improvement di Thailand melambat, sementara layanan dan format kecil tumbuh. Brand China masuk lewat mal premium, lalu cepat turun ke kota tier 2.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card span2">
+      <h3>Big box melambat, layanan dan format kecil tumbuh (2025)</h3>
+      <div class="legend"><span><i style="background:var(--neg)"></i>Turun</span><span><i style="background:var(--pos)"></i>Naik</span></div>
+      <div class="chart" id="c-thai"></div>
+      <div class="src">SSSG = same-store sales growth. Sumber: Inside Retail Asia (Apr 2026), Vietcap. Global House: SSSG turun satu digit menengah (angka pasti tidak dipublikasikan).</div>
+    </div>
+    <div class="card span2">
+      <h3>Pelajaran dari benchmark global</h3>
+      <div class="scroll-x"><table id="t-bench"></table></div>
+    </div>
+    <div class="card span2">
+      <h3>Brand China: enam model masuk</h3>
+      <div class="scroll-x"><table id="t-china"></table></div>
+      <div class="callout">Pola: masuk lewat Jakarta dan mal premium, lalu cepat turun ke tier 2 (Pop Mart sudah di Medan dan Makassar; Changhong mulai di Palembang). Pemain furnitur China belum masuk ritel Indonesia secara besar. Easyhome Malaysia adalah sinyal dini.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="chapter" id="desain">
+  <div class="ch-head">
+    <div class="num">06</div>
+    <h2>Perbandingan desain vs AZKO, NEKA, Informa</h2>
+    <p>Penilaian dari liputan dan rilis, bukan audit toko. Tanda tanya = belum ada data.</p>
+  </div>
+  <div class="card">
+    <div class="legend"><span class="status k">Kuat / ada</span><span class="status n">Sebagian</span><span class="status l">Tidak ada</span><span class="status q">Belum ada data</span></div>
+    <div class="scroll-x"><table id="t-design" class="compact"></table></div>
+    <div class="callout">Celah AZKO/Informa yang paling terlihat: belum ada format compact mal 600–1.500 m², demo dan destinasi merek belum sekuat ELEVATE³, F&B belum menjadi alasan berkunjung, dan Informa belum punya studio perencanaan + kios order di lokasi kecil.</div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="chapter" id="prioritas">
+  <div class="ch-head">
+    <div class="num">07</div>
+    <h2>Format mana yang masuk, dan seberapa sakit</h2>
+    <p>Sumbu horizontal: peluang format masuk atau membesar di Indonesia pada 2028. Sumbu vertikal: dampak ke AZKO atau Informa. Kanan atas adalah prioritas pantauan.</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Matriks peluang × dampak</h3>
+      <div class="legend"><span><i class="dot" style="background:var(--azko)"></i>Dampak terbesar ke AZKO</span><span><i class="dot" style="background:var(--informa)"></i>Dampak terbesar ke Informa</span></div>
+      <div class="chart" id="c-matrix"></div>
+      <div class="src">Penilaian penulis (estimasi), skala 1–5.</div>
+    </div>
+    <div class="card">
+      <h3>Delapan tren format</h3>
+      <div class="grid g4" id="trends"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="chapter" id="implikasi">
+  <div class="ch-head">
+    <div class="num">08</div>
+    <h2>Implikasi: arsitektur format AZKO & Informa</h2>
+    <p>Bahan diskusi, bukan rekomendasi final. Baris berwarna adalah format yang belum dimiliki.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card"><h3>AZKO</h3><div class="ladder" id="arch-azko"></div></div>
+    <div class="card"><h3>Informa</h3><div class="ladder" id="arch-informa"></div></div>
+    <div class="card span2">
+      <h3>Sinyal peringatan dini</h3>
+      <div class="scroll-x"><table id="t-signals"></table></div>
+    </div>
+    <div class="card soft span2">
+      <h3>Keterbatasan</h3>
+      <p class="sub">Tanpa kunjungan toko; elemen desain berasal dari liputan dan rilis. Ukuran toko Ace (MAPI) dan rencana format IKEA Indonesia belum diungkap, sehingga prediksi bersifat estimasi. Beberapa sumber berbayar tidak bisa diakses. Data unit economics per format hanya tersedia untuk Erablue dan sebagian Miniso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 09 -->
+<section class="chapter" id="sumber">
+  <div class="ch-head">
+    <div class="num">09</div>
+    <h2>Sumber</h2>
+  </div>
+  <ul class="srcs">
+    <li class="hd">MR.D.I.Y.</li>
+    <li><a href="https://www.discountretailconsulting.com/post/spain-mr-d-i-y-opens-a-new-store-model">DRC – konsep baru Spanyol</a></li>
+    <li><a href="https://www.discountretailconsulting.com/post/spain-mr-diy-is-serious-about-spain-300-stores-in-sight">DRC – 300 toko di Spanyol</a></li>
+    <li><a href="https://lexpress-franchise.com/es/ultimas-noticias/mr-diy-abre-primera-tienda-cataluna/">L'Express Franchise – Barcelona</a></li>
+    <li><a href="https://www.diyinternational.com/content/diyplus/2022/07/01/the-opposite-of-a-bazaar.html">DIY International – PLUS "opposite of a bazaar"</a></li>
+    <li><a href="https://insideretail.asia/2026/07/08/mr-diy-expands-plus-concept-with-new-store-at-the-mines/">Inside Retail – PLUS The Mines</a></li>
+    <li><a href="https://theiskandarian.com/?p=27178">The Iskandarian – PLUS "Jewel" JB</a></li>
+    <li><a href="https://www.thejakartapost.com/business/2026/03/03/mr-d-i-y-brings-modern-retail-concept-with-second-flagship-opening">Jakarta Post – flagship Bekasi</a></li>
+    <li><a href="https://market.bisnis.com/read/20260806/192/1994230/ace-hardware-buka-lagi-di-ri-mdiy-pede-tak-perlu-ubah-strategi">Bisnis – MDIY tak ubah strategi</a></li>
+    <li class="hd">IKEA</li>
+    <li><a href="https://www.interiordaily.com/article/9831156/ikea-korea-shifts-strategy-toward-urban-stores-and-services-amid-weak-housing-market/">Interior Daily – IKEA Korea toko kota</a></li>
+    <li><a href="https://www.koreaherald.com/article/10818355">Korea Herald – Songdo</a></li>
+    <li><a href="https://www.koreatimes.co.kr/business/companies/20260902/ikea-brings-swedish-design-to-daegu-this-month">Korea Times – Daegu</a></li>
+    <li><a href="https://www.asiae.co.kr/en/article/2025041113121392462">Asiae – Gangdong</a></li>
+    <li><a href="https://fortune.com/europe/2025/05/01/ikea-central-london-city-store-oxford-street">Fortune – Oxford Street</a></li>
+    <li><a href="https://www.interiordaily.com/article/9819891/ikea-tests-new-smaller-store-format-in-french-cities/">Interior Daily – format Prancis</a></li>
+    <li><a href="https://marketech-apac.com/ikea-to-close-7-physical-stores-in-china-moves-toward-small-format-expansion/">Marketech APAC – IKEA China</a></li>
+    <li><a href="https://www.malaymail.com/amp/news/malaysia/2026/08/25/ikea-picks-kuching-for-first-ever-small-store-format-in-malaysia-eyes-december-opening/232547">Malay Mail – Kuching</a></li>
+    <li><a href="https://industri.kontan.co.id/news/ikea-indonesia-bidik-pertumbuhan-berkelanjutan-dan-profitabilitas-pada-2026">Kontan – IKEA Indonesia 2026</a></li>
+    <li class="hd">Ace, Miniso, KKV, Nitori</li>
+    <li><a href="https://newsroom.acehardware.com/2025-08-14-Ace-Hardware-Marks-One-Year-Milestone-of-ELEVATE3-Ace-Experiential-Store-Format">Ace – ELEVATE³ satu tahun</a></li>
+    <li><a href="https://www.sultramedia.id/map-buka-gerai-ace-hardware-indonesia">Sultramedia – tiga gerai Ace</a></li>
+    <li><a href="https://insideretail.asia/2026/02/04/miniso-accelerates-ip-strategy-rolls-out-miniso-land-as-growth-driver/">Inside Retail – MINISO LAND</a></li>
+    <li><a href="https://insideretail.asia/2026/08/18/miniso-opens-first-miniso-friends-store-in-indonesia/">Inside Retail – Miniso Friends Bekasi</a></li>
+    <li><a href="https://kyodonewsprwire.jp/release/202611049408">Kyodo – SUPER MINISO Jakarta</a></li>
+    <li><a href="https://www.businesswire.com/news/home/20260118173275/en/KKV-Opens-Its-Second-Global-Flagship-Store-in-Ho-Chi-Minh-City">BusinessWire – KKV HCMC</a></li>
+    <li><a href="https://market.bisnis.com/read/20260501/192/1970707/mr-diy-mdiy-masuk-jadi-investor-non-pengendali-di-kkv">Bisnis – MDIY investor KKV</a></li>
+    <li><a href="https://www.retail-insight-network.com/news/nitori-small-format-stores-mainland-china/">Retail Insight – Nitori format kecil</a></li>
+    <li class="hd">Erablue, benchmark & brand China</li>
+    <li><a href="https://www.vietcap.com.vn/en/research-center/erablue-capturing-indonesia-s-underserved-ce-market-store-visit-note">Vietcap – Erablue store visit</a></li>
+    <li><a href="https://erajaya.com/news/erablue-electronics-resmi-buka-toko-ke-300-di-cempaka-putih-hadirkan-elektronik-harga-pabrik-untuk-masyarakat-jakarta">Erajaya – toko ke-300</a></li>
+    <li><a href="https://insideretail.asia/2026/04/01/why-are-thailands-diy-giants-losing-momentum/">Inside Retail – DIY Thailand</a></li>
+    <li><a href="https://lssmedia.setlink.set.or.th/2025/YE/HMPRO-YE68-ListedCompanySnapshot-EN.html">SET – HomePro 2025</a></li>
+    <li><a href="https://www.innovestx.co.th/cafeinvest/api/media/file/972086d1-3efb-466b-9f99-826dbc60481c.pdf">InnovestX – Global House (22% Depo)</a></li>
+    <li><a href="https://retail-week.com/home-and-diy/bunnings-tests-new-small-store-format-in-bicester/7027871.article">Retail Week – Bunnings format kecil</a></li>
+    <li><a href="https://insideretail.asia/2025/10/15/muji-ramps-up-global-expansion-with-major-flagships/">Inside Retail – MUJI flagship</a></li>
+    <li><a href="https://www.malaymail.com/news/money/mediaoutreach/2026/04/28/easyhome-launches-first-flagship-store-in-kuala-lumpur/462029">Malay Mail – Easyhome</a></li>
+    <li><a href="https://technode.global/?p=996091">TechNode – Changhong Palembang</a></li>
+    <li><a href="https://industri.kontan.co.id/news/pop-mart-resmikan-gerai-pertama-di-medan-perluas-ekspansi-ke-sumatera">Kontan – Pop Mart Medan</a></li>
+    <li><a href="https://indonesia.endeavor.org/outmaneuvering-giants-how-dimas-harry-priawan-dekoruma-carved-a-unique-path-in-indonesias-furniture-industry/">Endeavor – Dekoruma O2O</a></li>
+  </ul>
+</section>
+</main>
+
+<footer><div class="wrap">Riset desk per 10 November 2026. Angka bertanda estimasi adalah penilaian penulis. Laporan lengkap: report-format-strategy.md.</div></footer>
+
+<script>
+(function () {
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg";
+  var tip = document.getElementById("tip");
+  var C = {};
+  function readTokens() {
+    var cs = getComputedStyle(document.documentElement);
+    ["--ink","--ink-2","--muted","--line","--line-strong","--accent","--azko","--informa","--mdiy","--other","--other-strong","--neg","--pos","--band"].forEach(function (k) { C[k] = cs.getPropertyValue(k).trim(); });
+  }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function fmt(n, d) { return n.toLocaleString("id-ID", { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); }
+  function showTip(e, html) {
+    tip.innerHTML = html; tip.classList.add("on");
+    var x, y;
+    if (e.type.indexOf("mouse") === 0) { x = e.clientX; y = e.clientY; } else { var r = e.target.getBoundingClientRect(); x = r.left + r.width / 2; y = r.top; }
+    var tw = tip.offsetWidth, th = tip.offsetHeight;
+    tip.style.left = Math.min(window.innerWidth - tw - 8, Math.max(8, x + 14)) + "px";
+    var top = y - th - 12; if (top < 8) top = y + 18; tip.style.top = top + "px";
+  }
+  function hideTip() { tip.classList.remove("on"); }
+  function bindTip(node, html) {
+    node.setAttribute("tabindex", "0");
+    node.addEventListener("mousemove", function (e) { showTip(e, html); });
+    node.addEventListener("mouseleave", hideTip);
+    node.addEventListener("focus", function (e) { showTip(e, html); });
+    node.addEventListener("blur", hideTip);
+  }
+  function el(tag, attrs, parent) { var n = document.createElementNS(NS, tag); for (var k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; }
+  function txt(parent, x, y, s, attrs) { var t = el("text", Object.assign({ x: x, y: y, "font-size": 12, fill: C["--ink-2"] }, attrs || {}), parent); t.textContent = s; return t; }
+  function svgFor(id, w, h) { var c = document.getElementById(id); c.innerHTML = ""; var s = el("svg", { viewBox: "0 0 " + w + " " + h, width: w, height: h, role: "img" }); c.appendChild(s); return s; }
+  function wOf(id) { return Math.max(300, Math.floor(document.getElementById(id).clientWidth)); }
+  function hbarPath(x, y, w, h) { var r = Math.min(4, w / 2, h / 2); if (w <= 0) return ""; return "M" + x + "," + y + "h" + (w - r) + "a" + r + "," + r + " 0 0 1 " + r + "," + r + "v" + (h - 2 * r) + "a" + r + "," + r + " 0 0 1 " + (-r) + "," + r + "h" + (-(w - r)) + "z"; }
+  function hbarPathL(xRight, y, w, h) { var r = Math.min(4, w / 2, h / 2); if (w <= 0) return ""; var x = xRight - w; return "M" + xRight + "," + y + "h" + (-(w - r)) + "a" + r + "," + r + " 0 0 0 " + (-r) + "," + r + "v" + (h - 2 * r) + "a" + r + "," + r + " 0 0 0 " + r + "," + r + "h" + (w - r) + "z"; }
+  function statusSpan(s, label) { return '<span class="status ' + s + '">' + esc(label) + "</span>"; }
+
+  // ---------- data ----------
+  var hyps = [
+    { id: "H1", q: "Flagship MR.D.I.Y. Spanyol didesain premium (rak pendek, lampu terang, koridor lebar) dan diturunkan ke Indonesia untuk segmen atas", s: "n", v: "Sebagian", p: "Desain terbukti di Spanyol (550–740 m²) dan Malaysia (PLUS). Segmen atas tidak terbukti; harga tetap sama. Asal desain premium adalah Malaysia, bukan Spanyol." },
+    { id: "H2", q: "IKEA menguji city store/format kecil yang bisa dibawa ke Indonesia", s: "k", v: "Terbukti (global)", p: "London, Korea 600–1.000 m², Prancis, China, Kuching (Des 2026). Untuk Indonesia belum diumumkan." },
+    { id: "H3", q: "Brand China membawa toko besar instagramable berbasis IP/tren, ekspansi cepat lewat mitra", s: "k", v: "Terbukti", p: "KKV (20 ribu SKU), Miniso (franchise asset-light, 70–90% IP di LAND). Temuan baru: mal furnitur Easyhome dan brand store elektronik." },
+    { id: "H4", q: "Ace (MAPI) membawa format eksperiensial ala AS yang lebih premium dari AZKO", s: "k", v: "Kemungkinan besar", p: "MAPI: \"sesuai konsep AS\". ELEVATE³: destinasi merek dan demo. Ukuran toko belum diungkap." },
+    { id: "H5", q: "Pemain murah naik kelas, pemain premium mengecil, bertemu di mal kelas menengah", s: "k", v: "Terbukti", p: "Spektrum ukuran format menunjukkan zona temu 600–3.000 m²." },
+    { id: "H6", q: "Erablue membawa format lain dari MWG Vietnam", s: "n", v: "Sebagian", p: "Dua ukuran: mini 250–320 m², supermini 180–220 m². Format MWG lain belum ada sinyal." }
+  ];
+
+  var formats = [
+    { n: "Erablue supermini", a: 180, b: 220, g: "o", w: "Indonesia" },
+    { n: "MR.D.I.Y. Express", a: 200, b: 300, g: "m", w: "Malaysia, sejak 2021" },
+    { n: "Miniso standar", a: 300, b: 300, g: "o", w: "Global" },
+    { n: "MR.D.I.Y. konsep baru Spanyol", a: 550, b: 740, g: "m", w: "Ponferrada, Barcelona 2026" },
+    { n: "IKEA compact (Korea)", a: 600, b: 1000, g: "o", w: "Gwangju, Songdo, Daegu 2025–26" },
+    { n: "Ace ELEVATE³", a: 930, b: 1200, g: "o", w: "AS, model 10.000–13.000 sq ft" },
+    { n: "SUPER MINISO", a: 990, b: 990, g: "m", w: "PIM5 Jakarta, Okt 2026" },
+    { n: "MR.D.I.Y. flagship", a: 1100, b: 1100, g: "m", w: "Bekasi, Feb 2026" },
+    { n: "MINISO FRIENDS", a: 1500, b: 1500, g: "m", w: "Bekasi, Agu 2026" },
+    { n: "HomePro S", a: 2000, b: 2000, g: "o", w: "Thailand (menyusut 5→4 toko)" },
+    { n: "Nitori (Lippo Puri)", a: 2670, b: 2670, g: "o", w: "Jakarta" },
+    { n: "MR.D.I.Y. PLUS", a: 3000, b: 3065, g: "m", w: "Malaysia, 4 merek" },
+    { n: "HomePro", a: 3000, b: 12000, g: "o", w: "Thailand" },
+    { n: "IKEA city store", a: 7600, b: 10000, g: "o", w: "London Oxford St, Jakarta MTA" },
+    { n: "Mitra10", a: 10000, b: 10000, g: "o", w: "Indonesia, 65 ribu SKU" },
+    { n: "AZKO Alam Sutera", a: 14700, b: 15000, g: "k", w: "Eks-flagship Ace" },
+    { n: "IKEA big box", a: 25000, b: 40000, g: "o", w: "Indonesia" }
+  ];
+  var gcol = { k: "--azko", m: "--mdiy", o: "--other" };
+
+  var rows = ["IKEA", "MR.D.I.Y.", "Miniso", "KKV", "Ace Hardware", "Nitori", "Erablue", "Brand China lain"];
+  var events = [
+    ["IKEA", 2022.1, false, "Hammersmith, London: city store pertama di London"],
+    ["IKEA", 2022.28, true, "City store Mal Taman Anggrek Jakarta (±9.400–10.000 m²)"],
+    ["IKEA", 2025.29, false, "Gangdong, Seoul: toko di mal (±7.400 produk dipajang)"],
+    ["IKEA", 2025.33, false, "Oxford Street, London (3 lantai)"],
+    ["IKEA", 2025.7, true, "Official store di Shopee"],
+    ["IKEA", 2025.85, false, "Gwangju: compact di Lotte Department Store"],
+    ["IKEA", 2026.09, false, "China: 7 big box ditutup, 10+ toko kecil"],
+    ["IKEA", 2026.4, false, "Prancis: pilot format menengah (Le Mans, Limoges)"],
+    ["IKEA", 2026.55, false, "Songdo: ±600 m² di outlet mal"],
+    ["IKEA", 2026.71, false, "Daegu: ±1.000 m² di Shinsegae"],
+    ["IKEA", 2026.92, false, "Kuching: format kecil pertama di Malaysia (Ikano)"],
+    ["MR.D.I.Y.", 2021.95, false, "Masuk Spanyol"],
+    ["MR.D.I.Y.", 2022.45, false, "PLUS pertama: Midvalley KL, 3.000 m²"],
+    ["MR.D.I.Y.", 2024.5, true, "Flagship pertama Indonesia: Lotte Mall Jakarta"],
+    ["MR.D.I.Y.", 2024.88, false, "PLUS \"Jewel\" Johor Bahru"],
+    ["MR.D.I.Y.", 2026.1, false, "Konsep baru Spanyol: Ponferrada 550 m²"],
+    ["MR.D.I.Y.", 2026.16, true, "Flagship Bekasi ±1.100 m²"],
+    ["MR.D.I.Y.", 2026.36, true, "Investor non-pengendali di KKV"],
+    ["MR.D.I.Y.", 2026.52, false, "PLUS The Mines (4 merek)"],
+    ["MR.D.I.Y.", 2026.69, false, "Barcelona 740 m²"],
+    ["Miniso", 2024.5, true, "Flagship Central Park 3.000 m²"],
+    ["Miniso", 2025.84, false, "MINISO LAND pertama di luar China: Bangkok"],
+    ["Miniso", 2026.62, true, "MINISO FRIENDS Bekasi ±1.500 m²"],
+    ["Miniso", 2026.81, true, "SUPER MINISO PIM5 ±990 m²"],
+    ["KKV", 2024.04, false, "Global flagship Kuala Lumpur"],
+    ["KKV", 2026.05, false, "Global flagship Ho Chi Minh City"],
+    ["KKV", 2026.33, true, "Masuk Indonesia: 10 toko di 6 kota"],
+    ["Ace Hardware", 2024.62, false, "ELEVATE³ diluncurkan (US$1 miliar)"],
+    ["Ace Hardware", 2025.62, false, "130+ toko AS mengadopsi ELEVATE³"],
+    ["Ace Hardware", 2026.58, true, "Toko pertama MAPI: Sunter Mall"],
+    ["Ace Hardware", 2026.79, true, "3 toko (Sunter, AEON Tanjung Barat, AEON BSD)"],
+    ["Nitori", 2024.55, true, "Masuk Indonesia: Central Park"],
+    ["Nitori", 2025.65, false, "Flagship Bugis Junction Singapura"],
+    ["Nitori", 2026.71, false, "Compact Hong Kong Maritime Square"],
+    ["Erablue", 2022.95, true, "5 toko"],
+    ["Erablue", 2026.25, true, "212 toko"],
+    ["Erablue", 2026.66, true, "Toko ke-300"],
+    ["Brand China lain", 2026.32, false, "Easyhome Mall, Subang Jaya (Malaysia)"],
+    ["Brand China lain", 2026.43, true, "Pop Mart Medan & Makassar"],
+    ["Brand China lain", 2026.82, true, "Changhong brand store Palembang"]
+  ];
+
+  var mrdiyLadder = [
+    { n: "Express", a: 200, b: 300, w: "Malaysia" },
+    { n: "Konsep baru Spanyol", a: 550, b: 740, w: "Spanyol" },
+    { n: "Reguler", a: 1000, b: 1000, w: "Malaysia, ±1.000 m²" },
+    { n: "Flagship Indonesia", a: 1100, b: 1100, w: "Bekasi, 18 ribu+ produk" },
+    { n: "PLUS", a: 3000, b: 3065, w: "Malaysia, 17–20 ribu produk, 4 merek" }
+  ];
+  var mrdiyDesign = [
+    ["Rak lebih pendek", ["k", "Ya"], ["q", "Tidak disebut"], ["n", "Sebagian"]],
+    ["Lampu lebih terang", ["k", "Ya"], ["k", "Ya"], ["n", "Sebagian"]],
+    ["Koridor lebih lega", ["k", "Ya"], ["n", "Sebagian"], ["n", "Sebagian"]],
+    ["Desain premium", ["k", "Ya"], ["k", "Ya"], ["k", "Ya"]],
+    ["Menyasar segmen atas", ["l", "Tidak"], ["l", "Tidak"], ["l", "Tidak"]]
+  ];
+
+  var ikea = [
+    ["Big box", "25–40 ribu m² · seluruh range · pinggiran kota"],
+    ["City store", "7,6–10 ribu m² · ±3.500 dipajang + ±2.500 pickup · London, Jakarta"],
+    ["Compact urban", "<b>600–1.000 m²</b> di mal/department store · ±500 barang bawa pulang + kios · Korea"],
+    ["Format menengah", "Kota sekunder · Le Mans, Limoges, <b>Kuching (Des 2026)</b>"],
+    ["Plan & order", "Studio perencanaan dapur/lemari + pickup · UK"],
+    ["Pop-up", "Uji pasar · Daegu ±200 ribu pengunjung dalam 10 bulan"]
+  ];
+  var ace4 = [["Paint", "Cat & alat bantu warna"], ["Power", "DeWalt, Milwaukee"], ["Backyard & BBQ", "Weber, Traeger, demo grill"], ["Home Preservation", "Perawatan rumah"]];
+  var miniso = [
+    ["Standar", "±300 m²", "±50% IP", "300–357 toko"],
+    ["Flagship", "1.000–3.000 m²", "–", "60+ toko"],
+    ["SUPER MINISO", "±990 m²", "±50% IP", "PIM5, Okt 2026"],
+    ["MINISO FRIENDS", "±1.500 m²", "±60% eksklusif", "Bekasi, Agu 2026"],
+    ["MINISO LAND", "±1.000–2.000 m²", "70–90% IP", "Belum pasti"]
+  ];
+
+  var erablueActual = [[2022.95, 5], [2026.25, 212], [2026.66, 307]];
+  var erablueTarget = [[2026.66, 307], [2027.5, 500], [2030.5, 1000]];
+
+  var thai = [
+    { n: "HomePro SSSG", v: -6.4 },
+    { n: "Thai Watsadu SSSG (hardlines)", v: -5.0 },
+    { n: "HomePro pendapatan", v: -2.8 },
+    { n: "Global House pendapatan", v: -1.9 },
+    { n: "Erablue SSSG (Indonesia, Agu 2026)", v: 7.9 },
+    { n: "HomePro layanan (pasang, perbaikan)", v: 9.0 }
+  ];
+
+  var bench = [
+    ["HomePro (Thailand)", "HomePro 3.000–12.000 m², Mega Home 10.000–20.000 m², HomePro S ±2.000 m², Hybrid (14)", "Versi mini big box tidak otomatis berhasil (HomePro S menyusut). Gabungan konsumen rumah tangga + kontraktor lebih efisien. Layanan tumbuh"],
+    ["Thai Watsadu / Global House", "Gudang bahan bangunan", "Big box murni rentan saat daya beli lemah. Global House memegang ±22% Depo Bangunan"],
+    ["Bunnings (UK/AU)", "Format kecil ±3.400 m²; toko di pusat belanja", "Sebagian ditutup (Toombul). Format kecil di mal gagal bila range tidak dikurasi"],
+    ["B&Q (UK)", "Toko mini ±280 m² di London", "Toko mini urban butuh fokus kategori sempit (dekorasi & perbaikan)"],
+    ["MUJI", "Toko besar di Asia Tenggara (Glorietta 2.600 m²), hotel & diner di Jepang", "Gaya hidup sederhana premium sebagai kategori tersendiri"],
+    ["Daiso", "DAISO, Standard Products, THREEPPY; toko 3 merek (Osaka 2026)", "Satu grup, beberapa tingkat harga dalam satu atap"],
+    ["Dekoruma (Indonesia)", "O2O: online 2016, Experience Center 2019 (39+)", "Klaim produktivitas per m² 2× dan biaya akuisisi lebih rendah setelah showroom"]
+  ];
+  var china = [
+    ["Lifestyle variety imersif", "KKV, THE COLORIST, X11", "1.000–2.000 m² di mal, 20 ribu SKU", "Gen Z, perempuan muda", "Housewares trendy, gift, mainan"],
+    ["IP & collectibles", "Miniso, Pop Mart, TOP TOY", "300–1.500 m², 50–90% IP", "Gen Z, Gen Alpha", "Toys Kingdom, lifestyle"],
+    ["Brand store appliances", "Xiaomi, Changhong", "Showroom merek, tier 1–2", "Kelas menengah", "Informa Electronics, small appliances"],
+    ["Mal furnitur / platform", "Easyhome (Malaysia)", "Mal banyak merek + smart home + kustomisasi", "Pemilik rumah baru", "Informa (furnitur, custom)"],
+    ["Pabrik → ritel", "Jason Furniture, pemasok China Homelife", "Pabrik dulu, lalu marketplace/merek sendiri", "Massal", "SELMA, Informa menengah bawah"],
+    ["Marketplace & live commerce", "Penjual impor TikTok Shop/Shopee", "Tanpa toko", "Massal", "Semua barang komoditas"]
+  ];
+
+  var designCols = ["AZKO Experience", "AZKO standar", "NEKA", "Informa", "MR.D.I.Y. flagship/PLUS", "IKEA compact", "Ace ELEVATE³", "Miniso/KKV besar"];
+  var designRows = [
+    ["Zonasi tematik", ["k", "Ya"], ["n", "Terbatas"], ["l", "Tidak"], ["k", "5 zona"], ["n", "DIY corner"], ["k", "Room set"], ["k", "4 destinasi"], ["k", "Zona IP/foto"]],
+    ["Demo / pengalaman", ["n", "Sebagian"], ["l", "Minim"], ["l", "Tidak"], ["n", "Display ruang"], ["n", "Workshop (PLUS)"], ["n", "Perencanaan"], ["k", "Demo grill"], ["k", "Tinggi"]],
+    ["Digital", ["k", "Scan & Go"], ["q", "?"], ["q", "?"], ["n", "Aplikasi"], ["n", "Self-checkout, LED"], ["k", "Kios, QR planner"], ["q", "?"], ["n", "Media sosial"]],
+    ["Layanan", ["n", "Servis Krisbow"], ["l", "Terbatas"], ["l", "Tidak"], ["k", "Custom, instalasi"], ["l", "Tidak"], ["k", "Planning, repair"], ["k", "Inti"], ["l", "Tidak"]],
+    ["F&B sebagai magnet", ["q", "?"], ["l", "Tidak"], ["n", "Snack FMCG"], ["q", "?"], ["l", "Tidak"], ["k", "Ya"], ["l", "Tidak"], ["n", "Snack"]],
+    ["Harga", ["l", "Tinggi"], ["l", "Tinggi"], ["n", "Menengah"], ["n", "Menengah"], ["k", "Murah"], ["n", "Menengah"], ["l", "Premium"], ["k", "Murah–menengah"]]
+  ];
+
+  var matrix = [
+    { n: "IKEA compact", x: 4, y: 5, t: "informa", dx: 10, dy: 4, a: "start" },
+    { n: "MR.D.I.Y. PLUS", x: 4, y: 5, t: "azko", dx: -10, dy: 4, a: "end", jx: -0.12 },
+    { n: "Ace (MAPI) >7 toko", x: 3, y: 4, t: "azko", dx: 10, dy: 4, a: "start" },
+    { n: "Erablue 500 toko", x: 5, y: 4, t: "informa", dx: -10, dy: 4, a: "end" },
+    { n: "Easyhome (mal furnitur)", x: 2, y: 4, t: "informa", dx: 0, dy: -13, a: "middle" },
+    { n: "KKV", x: 4, y: 3, t: "azko", dx: -10, dy: 4, a: "end", jx: -0.12 },
+    { n: "Dekoruma O2O", x: 4, y: 3, t: "informa", dx: 10, dy: 4, a: "start" },
+    { n: "Miniso LAND/Friends", x: 5, y: 3, t: "azko", dx: -10, dy: -10, a: "end" },
+    { n: "Nitori compact", x: 3, y: 3, t: "informa", dx: 10, dy: 4, a: "start" },
+    { n: "MR.D.I.Y. Express", x: 3, y: 3, t: "azko", dx: -10, dy: 4, a: "end", jx: -0.12 },
+    { n: "Depo format kecil", x: 3, y: 2, t: "azko", dx: 10, dy: 4, a: "start" }
+  ];
+
+  var trends = [
+    ["Value naik kelas", "Flagship di mal kelas menengah atas", ["MR.D.I.Y. PLUS", "SUPER MINISO", "KKV"]],
+    ["Big box mengecil", "Toko 600–2.000 m² di mal + kios", ["IKEA Korea", "Nitori urban", "IKEA Kuching"]],
+    ["Toko = hub omnichannel", "Showroom, pickup, perencanaan", ["IKEA Korea 52% online", "Dekoruma O2O"]],
+    ["Layanan > luas lantai", "Pasang, perbaikan, renovasi", ["HomePro layanan +9%", "Erablue antar & pasang"]],
+    ["Experience/IP", "Zona foto, F&B, workshop", ["Miniso", "Pop Mart", "IKEA food"]],
+    ["Multi-merek satu atap", "Beberapa tingkat harga dalam satu lokasi", ["MR.D.I.Y. PLUS 4 merek", "Daiso 3 merek"]],
+    ["Format permukiman", "Dekat rumah, ruko", ["Erablue", "NEKA", "MR.D.I.Y."]],
+    ["Platform furnitur China", "Mal furnitur via REIT/developer", ["Easyhome Malaysia", "Pabrik Jason"]]
+  ];
+  var archAzko = [
+    ["Flagship / Experience", "Merek, demo, layanan. <b>Tambah destinasi merek ala ELEVATE³</b> (Power, Outdoor/BBQ, Paint) sebelum Ace membesar", false],
+    ["Standar", "Kelengkapan barang (43 ribu SKU)", false],
+    ["Compact mal", "<b>800–1.500 m²</b>: kurasi lifestyle & housewares untuk menghadapi MR.D.I.Y. PLUS, KKV, IKEA compact", true],
+    ["NEKA", "Ruko & permukiman: menghadapi MR.D.I.Y. reguler/Express. Perbaiki harga barang penentu persepsi", false],
+    ["Layanan", "<b>Beli + pasang</b>, servis Krisbow, sewa alat. Belajar dari HomePro dan Erablue", true]
+  ];
+  var archInf = [
+    ["Big box", "Furnitur lengkap, zona ruangan (5 zona)", false],
+    ["Compact urban", "<b>800–1.500 m²</b>: aksesori, storage, tekstil + kios order furnitur besar. Respons ke IKEA compact & Nitori", true],
+    ["Studio perencanaan", "Informa Custom (kitchen set, wardrobe) di lokasi kecil, ala IKEA Plan & Order", true],
+    ["Electronics dekat rumah", "Format kecil di permukiman + janji antar & pasang untuk menghadapi Erablue", true],
+    ["Pop-up", "Uji kota baru sebelum toko permanen (pelajaran IKEA Daegu)", true]
+  ];
+  var signals = [
+    ["Kabar sewa mal 600–1.500 m², lowongan store planning", "IKEA (HERO)", "Format compact segera masuk"],
+    ["Toko berlabel \"PLUS\" atau multi-merek (MR.TOY, MR.DOLLAR, EMTOP)", "MR.D.I.Y.", "PLUS masuk Indonesia"],
+    ["Toko MR.D.I.Y. 200–300 m² di ruko", "MR.D.I.Y.", "Express masuk wilayah NEKA"],
+    ["Toko Ace ke-8 dan seterusnya, loyalitas MAP + Ace", "MAPI", "Fase uji selesai, mulai ekspansi"],
+    ["KKV lebih dari 30 toko atau di kota tier 2", "KK Group / MDIY", "Ekspansi dipercepat"],
+    ["Erablue buka di kota yang ada Informa Electronics", "Erajaya", "Tekanan langsung ke Informa Electronics"],
+    ["MoU developer/REIT dengan grup furnitur China", "Easyhome dll.", "Mal furnitur China masuk"],
+    ["Nitori Deco Home atau toko < 1.000 m²", "Nitori", "Format urban Nitori masuk"],
+    ["Global House/Depo membuka format kecil", "Depo Bangunan", "Gudang Thailand dikecilkan untuk Indonesia"]
+  ];
+
+  // ---------- static HTML ----------
+  document.getElementById("hyp").innerHTML = hyps.map(function (x) {
+    return '<div class="card hyp"><div class="top"><span class="id">' + x.id + "</span>" + statusSpan(x.s, x.v) + "</div><p><q>" + esc(x.q) + "</q></p><p>" + esc(x.p) + "</p></div>";
+  }).join("");
+
+  document.getElementById("t-events").innerHTML = "<thead><tr><th>Pemain</th><th>Kapan</th><th>Lokasi</th><th>Peristiwa</th></tr></thead><tbody>" +
+    events.slice().sort(function (a, b) { return a[1] - b[1]; }).map(function (e) {
+      return "<tr><td>" + esc(e[0]) + "</td><td>" + ym(e[1]) + "</td><td>" + (e[2] ? "Indonesia" : "Luar negeri") + "</td><td>" + esc(e[3]) + "</td></tr>";
+    }).join("") + "</tbody>";
+  function ym(v) { var y = Math.floor(v), m = Math.min(12, Math.max(1, Math.round((v - y) * 12) + 1)); return ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"][m - 1] + " " + y; }
+
+  document.getElementById("t-mrdiy").innerHTML = "<thead><tr><th>Elemen</th><th>Spanyol</th><th>Malaysia PLUS</th><th>Indonesia</th></tr></thead><tbody>" +
+    mrdiyDesign.map(function (r) { return "<tr><td>" + esc(r[0]) + "</td>" + [1, 2, 3].map(function (i) { return "<td>" + statusSpan(r[i][0], r[i][1]) + "</td>"; }).join("") + "</tr>"; }).join("") + "</tbody>";
+
+  function renderLadder(id, rows, cls) {
+    document.getElementById(id).innerHTML = rows.map(function (r) {
+      var isNew = r[2] === true;
+      return '<div class="rung' + (isNew ? " new" + (cls ? " " + cls : "") : "") + '"><div class="tag">' + esc(r[0]) + '</div><div class="body">' + r[1] + (isNew ? ' <span class="chip">baru</span>' : "") + "</div></div>";
+    }).join("");
+  }
+  renderLadder("ikea", ikea);
+  renderLadder("arch-azko", archAzko);
+  renderLadder("arch-informa", archInf, "inf");
+
+  document.getElementById("ace4").innerHTML = ace4.map(function (a) { return '<div class="card soft" style="padding:12px;gap:4px"><b style="font-size:14px">' + esc(a[0]) + '</b><span class="note">' + esc(a[1]) + "</span></div>"; }).join("");
+
+  document.getElementById("t-miniso").innerHTML = "<thead><tr><th>Format</th><th>Luas</th><th>Porsi IP</th><th>Indonesia</th></tr></thead><tbody>" +
+    miniso.map(function (r) { return "<tr><td><b>" + esc(r[0]) + "</b></td><td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td><td>" + esc(r[3]) + "</td></tr>"; }).join("") + "</tbody>";
+
+  document.getElementById("t-bench").innerHTML = "<thead><tr><th>Brand</th><th>Format</th><th>Pelajaran untuk AZKO/Informa</th></tr></thead><tbody>" +
+    bench.map(function (r) { return "<tr><td><b>" + esc(r[0]) + "</b></td><td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td></tr>"; }).join("") + "</tbody>";
+
+  document.getElementById("t-china").innerHTML = "<thead><tr><th>Model</th><th>Contoh</th><th>Format</th><th>Target</th><th>Sasaran di AZKO/Informa</th></tr></thead><tbody>" +
+    china.map(function (r) { return "<tr><td><b>" + esc(r[0]) + "</b></td><td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td><td>" + esc(r[3]) + "</td><td>" + esc(r[4]) + "</td></tr>"; }).join("") + "</tbody>";
+
+  document.getElementById("t-design").innerHTML = "<thead><tr><th>Elemen</th>" + designCols.map(function (c) { return "<th>" + esc(c) + "</th>"; }).join("") + "</tr></thead><tbody>" +
+    designRows.map(function (r) { return "<tr><td><b>" + esc(r[0]) + "</b></td>" + r.slice(1).map(function (c) { return "<td>" + statusSpan(c[0], c[1]) + "</td>"; }).join("") + "</tr>"; }).join("") + "</tbody>";
+
+  document.getElementById("trends").innerHTML = trends.map(function (t, i) {
+    return '<div class="card trend"><div class="note">Tren ' + (i + 1) + "</div><h3>" + esc(t[0]) + '</h3><div class="dir">' + esc(t[1]) + '</div><div class="ex">' + t[2].map(function (c) { return '<span class="chip">' + esc(c) + "</span>"; }).join("") + "</div></div>";
+  }).join("");
+
+  document.getElementById("t-signals").innerHTML = "<thead><tr><th>Sinyal</th><th>Pemain</th><th>Artinya</th></tr></thead><tbody>" +
+    signals.map(function (s) { return "<tr><td>" + esc(s[0]) + "</td><td>" + esc(s[1]) + "</td><td>" + esc(s[2]) + "</td></tr>"; }).join("") + "</tbody>";
+
+  // ---------- charts ----------
+  function logScale(x0, x1, lo, hi) { var a = Math.log10(lo), b = Math.log10(hi); return function (v) { return x0 + ((Math.log10(v) - a) / (b - a)) * (x1 - x0); }; }
+
+  function rangeChart(id, data, colorFn, opts) {
+    var W = wOf(id), rowH = 24, top = opts.band ? 22 : 8, labW = Math.min(opts.labW || 210, W * 0.4), right = 16;
+    var H = top + data.length * rowH + 24;
+    var s = svgFor(id, W, H);
+    var sc = logScale(labW, W - right, opts.lo, opts.hi);
+    if (opts.band) {
+      el("rect", { x: sc(600), y: top - 16, width: sc(3000) - sc(600), height: H - top - 8, fill: C["--band"] }, s);
+      txt(s, (sc(600) + sc(3000)) / 2, top - 5, "Zona temu 600–3.000 m²", { "text-anchor": "middle", fill: C["--accent"], "font-size": 11, "font-weight": 700 });
+    }
+    opts.ticks.forEach(function (t) {
+      el("line", { x1: sc(t), x2: sc(t), y1: top, y2: H - 22, stroke: C["--line"] }, s);
+      txt(s, sc(t), H - 6, fmt(t), { "text-anchor": "middle", fill: C["--muted"], "font-size": 11 });
+    });
+    data.forEach(function (f, i) {
+      var y = top + i * rowH + rowH / 2, c = colorFn(f);
+      txt(s, labW - 10, y + 4, f.n, { "text-anchor": "end", fill: C["--ink"], "font-size": 12.5, "font-weight": f.g === "k" ? 700 : 400 });
+      var a = sc(f.a), b = sc(f.b), node;
+      node = (b - a < 8) ? el("circle", { cx: (a + b) / 2, cy: y, r: 6, fill: c, stroke: "#ffffff", "stroke-width": 2 }, s)
+                         : el("rect", { x: a, y: y - 6, width: b - a, height: 12, rx: 6, fill: c }, s);
+      if (opts.valueLabels) txt(s, Math.max(a, b) + 10, y + 4, (f.a === f.b ? fmt(f.a) : fmt(f.a) + "–" + fmt(f.b)) + " m²", { fill: C["--ink-2"], "font-size": 11.5 });
+      bindTip(node, "<b>" + esc(f.n) + "</b><br>" + (f.a === f.b ? fmt(f.a) : fmt(f.a) + "–" + fmt(f.b)) + " m² · " + esc(f.w));
+    });
+  }
+
+  function drawFormat() { rangeChart("c-format", formats, function (f) { return C[gcol[f.g]]; }, { lo: 150, hi: 45000, ticks: [200, 500, 1000, 3000, 10000, 30000], band: true }); }
+  function drawMdiy() { rangeChart("c-mdiy", mrdiyLadder, function () { return C["--mdiy"]; }, { lo: 150, hi: 12000, ticks: [200, 500, 1000, 3000], labW: 150, valueLabels: true }); }
+
+  function drawTimeline() {
+    var id = "c-timeline", W = wOf(id), rowH = 34, top = 10, labW = Math.min(140, W * 0.3), right = 16;
+    var H = top + rows.length * rowH + 26;
+    var s = svgFor(id, W, H);
+    var t0 = 2021.75, t1 = 2027.1, sc = function (v) { return labW + ((v - t0) / (t1 - t0)) * (W - right - labW); };
+    for (var y = 2022; y <= 2027; y++) {
+      el("line", { x1: sc(y), x2: sc(y), y1: top, y2: H - 22, stroke: C["--line"] }, s);
+      txt(s, sc(y), H - 6, String(y), { "text-anchor": "middle", fill: C["--muted"], "font-size": 11 });
+    }
+    rows.forEach(function (r, i) {
+      var cy = top + i * rowH + rowH / 2;
+      el("line", { x1: labW, x2: W - right, y1: cy, y2: cy, stroke: C["--line"], "stroke-dasharray": "2 4" }, s);
+      txt(s, labW - 10, cy + 4, r, { "text-anchor": "end", fill: C["--ink"], "font-size": 12.5, "font-weight": 600 });
+    });
+    events.forEach(function (e) {
+      var cy = top + rows.indexOf(e[0]) * rowH + rowH / 2;
+      var c = el("circle", { cx: sc(e[1]), cy: cy, r: 6, fill: e[2] ? C["--accent"] : "#ffffff", stroke: e[2] ? "#ffffff" : C["--accent"], "stroke-width": 2 }, s);
+      bindTip(c, "<b>" + esc(e[0]) + "</b> · " + ym(e[1]) + (e[2] ? " · Indonesia" : " · luar negeri") + "<br>" + esc(e[3]));
+    });
+  }
+
+  function drawErablue() {
+    var id = "c-erablue", W = wOf(id), H = 230, left = 44, right = 16, top = 16, bottom = 28;
+    var s = svgFor(id, W, H);
+    var sx = function (v) { return left + ((v - 2022.5) / (2031 - 2022.5)) * (W - left - right); };
+    var sy = function (v) { return H - bottom - (v / 1000) * (H - top - bottom); };
+    [0, 250, 500, 750, 1000].forEach(function (t) {
+      el("line", { x1: left, x2: W - right, y1: sy(t), y2: sy(t), stroke: C[t === 0 ? "--line-strong" : "--line"] }, s);
+      txt(s, left - 8, sy(t) + 4, fmt(t), { "text-anchor": "end", fill: C["--muted"], "font-size": 11 });
+    });
+    [2023, 2025, 2027, 2029, 2031].forEach(function (y) { txt(s, sx(y), H - 8, String(y), { "text-anchor": "middle", fill: C["--muted"], "font-size": 11 }); });
+    var area = "M" + sx(erablueActual[0][0]) + "," + sy(0) + erablueActual.map(function (p) { return "L" + sx(p[0]) + "," + sy(p[1]); }).join("") + "L" + sx(erablueActual[erablueActual.length - 1][0]) + "," + sy(0) + "Z";
+    el("path", { d: area, fill: C["--band"] }, s);
+    el("path", { d: "M" + erablueActual.map(function (p) { return sx(p[0]) + "," + sy(p[1]); }).join("L"), fill: "none", stroke: C["--accent"], "stroke-width": 2 }, s);
+    el("path", { d: "M" + erablueTarget.map(function (p) { return sx(p[0]) + "," + sy(p[1]); }).join("L"), fill: "none", stroke: C["--accent"], "stroke-width": 2, "stroke-dasharray": "5 4" }, s);
+    var lab = { "5": "Akhir 2022", "212": "Q1 2026", "307": "Agu 2026", "500": "Target 2027", "1000": "Target 2030" };
+    erablueActual.concat(erablueTarget.slice(1)).forEach(function (p, i) {
+      var target = i >= erablueActual.length;
+      var c = el("circle", { cx: sx(p[0]), cy: sy(p[1]), r: 5, fill: target ? "#ffffff" : C["--accent"], stroke: target ? C["--accent"] : "#ffffff", "stroke-width": 2 }, s);
+      bindTip(c, "<b>" + lab[String(p[1])] + "</b><br>" + fmt(p[1]) + " toko" + (target ? " (target)" : ""));
+    });
+    txt(s, sx(2026.66) - 8, sy(307) - 10, "307 toko", { "text-anchor": "end", fill: C["--ink"], "font-size": 12, "font-weight": 700 });
+    txt(s, sx(2030.5) - 8, sy(1000) + 4, "1.000 (2030)", { "text-anchor": "end", fill: C["--ink-2"], "font-size": 11.5 });
+    txt(s, sx(2027.5) + 8, sy(500) + 14, "500 (2027)", { fill: C["--ink-2"], "font-size": 11.5 });
+  }
+
+  function drawThai() {
+    var id = "c-thai", W = wOf(id), rowH = 28, top = 6, labW = Math.min(240, W * 0.42), right = 40;
+    var H = top + thai.length * rowH + 24;
+    var s = svgFor(id, W, H);
+    var x0 = labW + 30, x1 = W - right, sc = function (v) { return x0 + ((v + 10) / 20) * (x1 - x0); };
+    [-10, -5, 0, 5, 10].forEach(function (t) {
+      el("line", { x1: sc(t), x2: sc(t), y1: top - 2, y2: H - 22, stroke: C[t === 0 ? "--line-strong" : "--line"], "stroke-width": t === 0 ? 1.5 : 1 }, s);
+      txt(s, sc(t), H - 6, (t > 0 ? "+" : "") + t + "%", { "text-anchor": "middle", fill: C["--muted"], "font-size": 11 });
+    });
+    thai.forEach(function (r, i) {
+      var y = top + i * rowH;
+      txt(s, labW + 20, y + 18, r.n, { "text-anchor": "end", fill: C["--ink"], "font-size": 12.5 });
+      var w = Math.abs(sc(r.v) - sc(0)), p;
+      if (r.v < 0) p = el("path", { d: hbarPathL(sc(0), y + 5, w, rowH - 10), fill: C["--neg"] }, s);
+      else p = el("path", { d: hbarPath(sc(0), y + 5, w, rowH - 10), fill: C["--pos"] }, s);
+      var lx = r.v < 0 ? sc(r.v) - 6 : sc(r.v) + 6;
+      txt(s, lx, y + 18, (r.v > 0 ? "+" : "") + fmt(r.v, 1) + "%", { "text-anchor": r.v < 0 ? "end" : "start", fill: C["--ink-2"], "font-size": 12, "font-weight": 700 });
+      bindTip(p, "<b>" + esc(r.n) + "</b><br>" + (r.v > 0 ? "+" : "") + fmt(r.v, 1) + "% (2025)");
+    });
+  }
+
+  function drawMatrix() {
+    var id = "c-matrix", W = wOf(id), H = Math.min(460, Math.max(340, W * 0.55)), left = 48, right = 16, top = 16, bottom = 46;
+    var s = svgFor(id, W, H);
+    var sx = function (v) { return left + ((v - 0.5) / 5) * (W - left - right); };
+    var sy = function (v) { return H - bottom - ((v - 0.5) / 5) * (H - top - bottom); };
+    el("rect", { x: sx(3.5), y: sy(5.5), width: sx(5.5) - sx(3.5), height: sy(3.5) - sy(5.5), fill: C["--band"] }, s);
+    txt(s, sx(5.5) - 6, sy(5.5) + 14, "Prioritas pantau", { "text-anchor": "end", fill: C["--accent"], "font-size": 11, "font-weight": 700 });
+    for (var t = 1; t <= 5; t++) {
+      el("line", { x1: sx(t), x2: sx(t), y1: sy(5.5), y2: sy(0.5), stroke: C["--line"] }, s);
+      el("line", { x1: sx(0.5), x2: sx(5.5), y1: sy(t), y2: sy(t), stroke: C["--line"] }, s);
+      txt(s, sx(t), H - bottom + 16, String(t), { "text-anchor": "middle", fill: C["--muted"], "font-size": 11 });
+      txt(s, left - 10, sy(t) + 4, String(t), { "text-anchor": "end", fill: C["--muted"], "font-size": 11 });
+    }
+    txt(s, (left + W - right) / 2, H - 8, "Peluang masuk/membesar pada 2028 →", { "text-anchor": "middle", fill: C["--ink-2"], "font-size": 12, "font-weight": 600 });
+    var yl = txt(s, 0, 0, "Dampak →", { "text-anchor": "middle", fill: C["--ink-2"], "font-size": 12, "font-weight": 600 });
+    yl.setAttribute("transform", "translate(14," + ((top + H - bottom) / 2) + ") rotate(-90)");
+    var small = W < 560;
+    matrix.forEach(function (m) {
+      var cx = sx(m.x + (m.jx || 0)), cy = sy(m.y);
+      var c = el("circle", { cx: cx, cy: cy, r: 7, fill: C[m.t === "azko" ? "--azko" : "--informa"], stroke: "#ffffff", "stroke-width": 2 }, s);
+      bindTip(c, "<b>" + esc(m.n) + "</b><br>Peluang " + m.x + " · Dampak " + m.y + " · terutama ke " + (m.t === "azko" ? "AZKO" : "Informa"));
+      txt(s, cx + m.dx, cy + m.dy, m.n, { "text-anchor": m.a, fill: C["--ink"], "font-size": small ? 10.5 : 12 });
+    });
+  }
+
+  function drawAll() { readTokens(); drawFormat(); drawTimeline(); drawMdiy(); drawErablue(); drawThai(); drawMatrix(); }
+  drawAll();
+  var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(drawAll, 120); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawAll);
+})();
+</script>
+</body>
+</html>
