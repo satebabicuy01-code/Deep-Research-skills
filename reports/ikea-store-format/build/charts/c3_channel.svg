@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="205.25832pt" height="75.109688pt" viewBox="0 0 205.25832 75.109688" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T08:00:01.128784</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 75.109688 
+L 205.25832 75.109688 
+L 205.25832 0 
+L 0 0 
+L 0 75.109688 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 7.2 66.019688 
+L 138.1068 66.019688 
+L 138.1068 28.219688 
+L 7.2 28.219688 
+z
+" clip-path="url(#p7aa26c788c)" style="fill: #1f5fa8; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 138.1068 66.019688 
+L 191.2284 66.019688 
+L 191.2284 28.219688 
+L 138.1068 28.219688 
+z
+" clip-path="url(#p7aa26c788c)" style="fill: #2a9d8f; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 191.2284 66.019688 
+L 196.92 66.019688 
+L 196.92 28.219688 
+L 191.2284 28.219688 
+z
+" clip-path="url(#p7aa26c788c)" style="fill: #e3a21a; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Inter'; text-anchor: middle; fill: #ffffff" x="72.6534" y="50.211729" transform="rotate(-0 72.6534 50.211729)">Toko 69%</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Inter'; text-anchor: middle; fill: #ffffff" x="164.6676" y="50.211729" transform="rotate(-0 164.6676 50.211729)">Online 28%</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: end; fill: #1b2430" x="198.05832" y="14.95" transform="rotate(-0 198.05832 14.95)">Jasa 3%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p7aa26c788c">
+   <rect x="7.2" y="26.329688" width="189.72" height="41.58"/>
+  </clipPath>
+ </defs>
+</svg>

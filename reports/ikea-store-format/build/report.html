@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>IKEA: Business Model, Store Format &amp; Investment Strategy</title>
+<style>
+@page { size: A4; margin: 18mm 16mm 18mm 16mm; }
+@page :first { margin: 0; }
+* { box-sizing: border-box; }
+body { font-family: "Inter", sans-serif; color: #1B2430; font-size: 9.3pt; line-height: 1.5; margin: 0; }
+h1 { font-family: "Inter Display", "Inter"; font-size: 20pt; line-height: 1.15; margin: 0 0 4mm; color: #12325C; letter-spacing: -0.3px; }
+h2 { font-size: 12pt; color: #12325C; margin: 6mm 0 2mm; }
+h3 { font-size: 10pt; margin: 4mm 0 1.5mm; color: #1B2430; }
+p { margin: 0 0 2.4mm; }
+.section { page-break-before: always; }
+.kicker { font-size: 8pt; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: #B07A00; margin-bottom: 1.5mm; }
+.lead { font-size: 10.6pt; color: #33404F; margin-bottom: 4mm; }
+.muted { color: #5B6675; }
+.small { font-size: 8pt; }
+.src { font-size: 7.4pt; color: #6B7583; margin-top: 1mm; }
+sup.r { font-size: 6.5pt; color: #1F5FA8; }
+ul { margin: 0 0 2.5mm; padding-left: 5mm; }
+li { margin-bottom: 1.1mm; }
+table { width: 100%; border-collapse: collapse; font-size: 8.1pt; margin: 2mm 0 2mm; }
+tr { page-break-inside: avoid; }
+th { background: #12325C; color: #fff; text-align: left; padding: 1.8mm 2mm; font-weight: 600; vertical-align: bottom; }
+td { padding: 1.25mm 2mm; border-bottom: 0.6px solid #DDE2E8; vertical-align: top; }
+tr:nth-child(even) td { background: #F6F8FA; }
+td.num, th.num { text-align: right; white-space: nowrap; }
+.tier { display: inline-block; font-weight: 700; color: #fff; border-radius: 3px; padding: 0.2mm 1.6mm; font-size: 7.6pt; }
+.t1 { background: #1F5FA8; } .t2 { background: #B07A00; } .t3 { background: #2A9D8F; } .t4 { background: #C8475A; } .t5 { background: #7B5EA7; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 3mm 0 4mm; }
+.kpi { border: 0.8px solid #DDE2E8; border-top: 3px solid #1F5FA8; border-radius: 3px; padding: 2.6mm 3mm; }
+.kpi .v { font-size: 15pt; font-weight: 700; color: #12325C; line-height: 1.1; }
+.kpi .l { font-size: 7.6pt; color: #5B6675; margin-top: 1mm; line-height: 1.3; }
+.kpi.amber { border-top-color: #E3A21A; }
+.box { background: #F2F5F9; border-left: 3px solid #1F5FA8; padding: 3mm 4mm; margin: 3mm 0; border-radius: 2px; page-break-inside: avoid; }
+.box.amber { border-left-color: #E3A21A; background: #FDF8EC; }
+.box.red { border-left-color: #C8475A; background: #FBF1F2; }
+.box h3 { margin-top: 0; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4mm; }
+figure { margin: 2mm 0 3mm; page-break-inside: avoid; }
+figure img { width: 100%; display: block; }
+figcaption { font-size: 8.4pt; font-weight: 700; color: #1B2430; margin-bottom: 1.2mm; }
+.fignote { font-size: 7.4pt; color: #6B7583; margin-top: 0.8mm; }
+.card { border: 0.8px solid #DDE2E8; border-radius: 3px; padding: 3mm; page-break-inside: avoid; }
+.card h3 { margin-top: 0; }
+.toc td { border: none; padding: 1.2mm 0; background: none !important; font-size: 10pt; }
+.toc td.n { width: 10mm; color: #B07A00; font-weight: 700; }
+/* cover */
+.cover { height: 297mm; width: 210mm; background: #12325C; color: #fff; position: relative; padding: 30mm 22mm; overflow: hidden; }
+.cover .band { position: absolute; left: 0; right: 0; bottom: 0; height: 74mm; background: #0D2546; }
+.cover .bar { width: 26mm; height: 3mm; background: #E3A21A; margin-bottom: 10mm; }
+.cover h1 { color: #fff; font-size: 31pt; line-height: 1.1; margin-bottom: 6mm; }
+.cover .sub { font-size: 13pt; color: #C9D6E8; max-width: 150mm; line-height: 1.4; }
+.cover .meta { position: absolute; bottom: 22mm; left: 22mm; right: 22mm; font-size: 9pt; color: #C9D6E8; z-index: 2; }
+.cover .meta b { color: #fff; }
+.cover .tag { display: inline-block; border: 1px solid #E3A21A; color: #E3A21A; font-size: 8pt; letter-spacing: 1.5px; padding: 1mm 3mm; border-radius: 2px; margin-bottom: 12mm; text-transform: uppercase; font-weight: 700; }
+.cover .tiers { position: absolute; right: 22mm; top: 128mm; display: flex; align-items: flex-end; gap: 4mm; z-index: 2; }
+.cover .tiers div { width: 14mm; border-radius: 2px 2px 0 0; }
+.cover .tiers span { display: block; font-size: 7pt; color: #C9D6E8; text-align: center; margin-top: 1.5mm; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="tag">Laporan untuk Board of Directors</div>
+  <div class="bar"></div>
+  <h1>IKEA: Model Bisnis,<br>Format Toko &amp;<br>Strategi Investasi</h1>
+  <div class="sub">Analisis tiering format toko (dari toko besar sampai plan &amp; order point), contoh lokasi, perkiraan capex per toko, target market, produk, strategi marketing, dan pelajaran untuk perusahaan kita</div>
+  <div class="tiers">
+    <div><div style="height:58mm;background:#1F5FA8"></div><span>T1</span></div>
+    <div><div style="height:36mm;background:#E3A21A"></div><span>T2</span></div>
+    <div><div style="height:22mm;background:#2A9D8F"></div><span>T3</span></div>
+    <div><div style="height:12mm;background:#C8475A"></div><span>T4</span></div>
+    <div><div style="height:6mm;background:#7B5EA7"></div><span>T5</span></div>
+  </div>
+  <div class="band"></div>
+  <div class="meta">
+    <b>Business Analysis — Retail Format Strategy</b><br>
+    Edisi: 10 November 2026 &nbsp;·&nbsp; Data sampai FY26 (tahun buku IKEA: 1 Sep – 31 Agu)<br>
+    Sumber: laporan tahunan Inter IKEA &amp; Ingka Group, siaran pers IKEA, media bisnis. Angka capex per tier adalah <b>estimasi analis</b>.
+  </div>
+</div>
+
+<!-- ============ TOC ============ -->
+<div class="section" style="page-break-before: always;">
+  <div class="kicker">Daftar isi</div>
+  <h1>Isi laporan</h1>
+  <table class="toc">
+    <tr><td class="n">01</td><td>Ringkasan eksekutif</td></tr>
+    <tr><td class="n">02</td><td>Model bisnis &amp; struktur franchise IKEA</td></tr>
+    <tr><td class="n">03</td><td>Kinerja keuangan &amp; posisi pasar (FY19–FY26)</td></tr>
+    <tr><td class="n">04</td><td>Store concept: evolusi &amp; tiering format toko</td></tr>
+    <tr><td class="n">05</td><td>Jumlah toko per tier &amp; contoh lokasi</td></tr>
+    <tr><td class="n">06</td><td>Capex per toko &amp; strategi investasi</td></tr>
+    <tr><td class="n">07</td><td>Target market</td></tr>
+    <tr><td class="n">08</td><td>Barang jualan (range, food, services)</td></tr>
+    <tr><td class="n">09</td><td>Strategi marketing</td></tr>
+    <tr><td class="n">10</td><td>Studi kasus: IKEA di Indonesia</td></tr>
+    <tr><td class="n">11</td><td>SWOT &amp; risiko</td></tr>
+    <tr><td class="n">12</td><td>Implikasi &amp; rekomendasi untuk perusahaan</td></tr>
+    <tr><td class="n">A</td><td>Lampiran: metodologi, catatan data &amp; daftar sumber</td></tr>
+  </table>
+  <div class="box amber" style="margin-top:10mm">
+    <h3>Cara membaca angka di laporan ini</h3>
+    <p class="small">IKEA melaporkan lewat dua entitas yang angkanya berbeda. <b>Inter IKEA Group</b> adalah pemilik merek dan franchisor, dan melaporkan <i>total retail sales</i> seluruh sistem (13 grup franchisee, 63 pasar). <b>Ingka Group</b> adalah franchisee terbesar (31 negara, ±87–88% penjualan IKEA) dan melaporkan revenue, jumlah toko per format, serta capex. Angka per format toko yang resmi hanya tersedia dari Ingka. Untuk franchisee lain, termasuk IKEA Indonesia, kami memakai data publik dan estimasi.</p>
+    <p class="small" style="margin:0">IKEA <b>tidak mempublikasikan capex per toko</b>. Rentang capex per tier di Bab 06 adalah estimasi analis dari benchmark proyek yang dipublikasikan (AS, India, Rumania, Inggris, Prancis) dan data aset tetap Ingka. Gunakan sebagai <i>order of magnitude</i>, bukan angka anggaran.</p>
+  </div>
+</div>
+
+<!-- ============ 01 EXEC SUMMARY ============ -->
+<div class="section">
+  <div class="kicker">01 · Ringkasan eksekutif</div>
+  <h1>IKEA beralih dari "satu format besar" ke portofolio format bertingkat</h1>
+  <p class="lead">IKEA masih bertumpu pada toko besar di luar kota (blue box), tetapi pertumbuhan jaringan sekarang datang hampir seluruhnya dari format kecil: city store, small store ("IKEA Shop"), plan &amp; order point, dan pick-up point. Semuanya disatukan oleh e-commerce dan fulfilment.</p>
+  <div class="kpis">
+    <div class="kpi"><div class="v">€43,8 mlr</div><div class="l">Total retail sales IKEA FY26 (−1,8% YoY; FY25 €44,6 mlr)</div></div>
+    <div class="kpi"><div class="v">63 pasar</div><div class="l">13 grup franchisee; Ingka mengelola 31 pasar (±87–88% sales)</div></div>
+    <div class="kpi"><div class="v">620</div><div class="l">Lokasi Ingka FY25: 375 blue box, 36 city store, 209 format lain (FY24: 574)</div></div>
+    <div class="kpi amber"><div class="v">€3,4 mlr</div><div class="l">Capex Ingka FY25; plus program €5 mlr/3 tahun (2026) untuk toko baru &amp; upgrade</div></div>
+  </div>
+  <h2>Temuan utama</h2>
+  <ol style="padding-left:5mm">
+    <li><b>Ya, IKEA memakai tiering.</b> Secara internal Ingka membagi tiga kelompok: <i>blue box stores</i>, <i>city stores</i>, dan <i>other formats</i>. Dari sisi ukuran, kami memetakannya menjadi 5 tier: <span class="tier t1">T1</span> toko besar 15.000–65.000 m² (umumnya 25–40 rb m²), <span class="tier t2">T2</span> city store (medium) 4.500–18.000 m², <span class="tier t3">T3</span> small store / IKEA Shop 1.500–4.500 m², <span class="tier t4">T4</span> plan &amp; order point 200–1.400 m², dan <span class="tier t5">T5</span> pick-up point/locker &lt;500 m².</li>
+    <li><b>Jumlah blue box Ingka stagnan di 375</b> (FY24 dan FY25 sama). Pertumbuhan datang dari city store (25 → 36) dan format lain (174 → 209). Di FY26 IKEA membuka ±90 toko kecil secara global, dan CEO Inter IKEA menargetkan angka itu naik 50% di FY27.</li>
+    <li><b>Capex turun drastis di tier bawah.</b> Estimasi kami: T1 €50–150 jt per toko (termasuk lahan), T2 €15–60 jt (sewa) dan bisa &gt;€300 jt bila membeli properti prime, T3 €3–10 jt, T4 €0,5–2 jt, T5 &lt;€0,5 jt. Format kecil bisa dibuka dalam hitungan minggu, bukan tahun.</li>
+    <li><b>Strategi investasinya jangka panjang dan berbasis aset.</b> Ingka dimiliki yayasan dan tidak terdaftar di bursa. 85% laba diinvestasikan ulang, mayoritas properti dimiliki sendiri (land &amp; buildings senilai €19,3 mlr NBV), dan modal besar dialokasikan ke energi terbarukan, hutan, serta shopping center (Ingka Centres).</li>
+    <li><b>Disiplin portofolio makin ketat.</b> Di 2026 IKEA menutup 7 toko besar di China, toko besar Memphis (AS), beberapa plan &amp; order point, dan satu small store di AS. Format baru dievaluasi setelah FY26 sebelum diperluas (stage-gate).</li>
+    <li><b>Mesin marketingnya adalah harga.</b> IKEA menurunkan harga ±10% dalam dua tahun, lalu menambah price cut €1,2 mlr mulai Sep 2026 (hingga 25% untuk >1.000 produk). Dukungannya: toko sebagai media, loyalty (IKEA Family), dan aplikasi/AI planning.</li>
+  </ol>
+  <div class="box">
+    <h3>Implikasi untuk perusahaan kita (detail di Bab 12)</h3>
+    <p class="small" style="margin:0">Model <b>hub-and-spoke</b> IKEA layak direplikasi: satu toko besar sebagai hub stok, pengalaman, dan fulfilment per metro, lalu spoke kecil yang dekat konsumen dengan capex 5–20× lebih rendah. Syaratnya: (1) kriteria tier berbasis catchment dan payback, (2) e-commerce serta fulfilment yang matang sebelum ekspansi spoke, (3) stage-gate evaluasi sebelum roll-out, dan (4) kebijakan exit yang tegas untuk lokasi yang underperform.</p>
+  </div>
+</div>
+
+<!-- ============ 02 BUSINESS MODEL ============ -->
+<div class="section">
+  <div class="kicker">02 · Model bisnis</div>
+  <h1>Satu merek, banyak pemilik: sistem franchise dengan franchisor yang juga produsen</h1>
+  <p class="lead">IKEA bukan satu perusahaan. Merek, konsep, desain produk, dan supply chain dipegang <b>Inter IKEA Group</b>. Operasional ritel dijalankan oleh <b>13 grup franchisee</b> di 63 pasar. Model bisnisnya bertumpu pada <i>low cost, high volume, low price</i>.<sup class="r">[1]</sup></p>
+  <div class="cols">
+    <div>
+      <h3>Rantai nilai</h3>
+      <table>
+        <tr><th>Entitas</th><th>Peran</th></tr>
+        <tr><td><b>Inter IKEA Systems B.V.</b></td><td>Pemilik konsep IKEA dan franchisor global. Menerima <b>franchise fee 3%</b> dari penjualan franchisee.</td></tr>
+        <tr><td><b>IKEA of Sweden</b></td><td>Mendesain seluruh range produk (Democratic Design).</td></tr>
+        <tr><td><b>IKEA Supply / Industry</b></td><td>Sourcing dan distribusi. ±90% produk dibuat supplier eksternal; IKEA Industry memproduksi ±10%.</td></tr>
+        <tr><td><b>Franchisee (13 grup)</b></td><td>Mengoperasikan toko, e-commerce, dan layanan di wilayahnya. Membeli produk dari Inter IKEA.</td></tr>
+        <tr><td><b>Ingka Group</b></td><td>Franchisee terbesar (31 negara). Juga menjalankan Ingka Centres (37 mall) dan Ingka Investments.</td></tr>
+      </table>
+      <p class="src">Sumber: Inter IKEA Financial Summary FY25 [1]; Ingka Annual Report FY25 [3].</p>
+    </div>
+    <div>
+      <figure>
+        <figcaption>Jumlah pasar per grup franchisee (63 pasar)</figcaption>
+        <img src="charts/c2_franchisees.svg">
+        <div class="fignote">Indonesia dioperasikan oleh DFI Retail Group (Dairy Farm) melalui PT Hero Supermarket Tbk / PT Rumah Mebel Nusantara (DFI juga memegang Hong Kong, Taiwan, Makau). Sumber: [1].</div>
+      </figure>
+    </div>
+  </div>
+  <h2>Bagaimana uang mengalir</h2>
+  <figure>
+    <figcaption>Komposisi revenue Inter IKEA Group FY25: €26,3 mlr</figcaption>
+    <img src="charts/c11_interikea.svg">
+    <div class="fignote">Inter IKEA mendapat margin terutama dari jual produk ke franchisee (wholesale) ditambah royalti 3%. Operating income FY25 €1,7 mlr (FY24 €2,3 mlr) karena margin ditekan untuk menurunkan harga. FY26: revenue €25,9 mlr, operating income €1,5 mlr, net profit €1,4 mlr. Sumber: [1], [5].</div>
+  </figure>
+</div>
+
+<div class="section">
+  <div class="kicker">02 · Model bisnis (lanjutan)</div>
+  <h1>Ekonomi franchisee terbesar: margin tipis, neraca sangat kuat</h1>
+  <div class="cols">
+    <div class="card">
+      <h3>Ekonomi franchisee (Ingka FY25)</h3>
+      <table>
+        <tr><th>EUR juta</th><th class="num">FY25</th><th class="num">FY24</th></tr>
+        <tr><td>Revenue</td><td class="num">41.451</td><td class="num">41.846</td></tr>
+        <tr><td>Gross profit</td><td class="num">14.421</td><td class="num">13.860</td></tr>
+        <tr><td>Gross margin</td><td class="num">34,8%</td><td class="num">33,1%</td></tr>
+        <tr><td>Operating income</td><td class="num">1.464</td><td class="num">1.253</td></tr>
+        <tr><td>Operating margin</td><td class="num">3,5%</td><td class="num">3,0%</td></tr>
+        <tr><td>Net income</td><td class="num">1.411</td><td class="num">806</td></tr>
+        <tr><td>Total equity / aset</td><td class="num">48,4 / 61,5 mlr</td><td class="num">47,9 / 57,6 mlr</td></tr>
+      </table>
+      <p class="src">Sumber: Ingka Annual Summary &amp; Annual Report FY25 [3][4].</p>
+    </div>
+    <div class="card">
+      <h3>Ciri khas model bisnis</h3>
+      <ul class="small">
+        <li><b>Margin ritel tipis (3–4% EBIT)</b>, sengaja dijaga rendah demi harga. Laba juga datang dari investasi (financial income Ingka €0,6 mlr).</li>
+        <li><b>Balance sheet sangat kuat</b>: equity ratio 79%, hampir tanpa utang. Pembiayaan toko dari kas internal.</li>
+        <li><b>Integrasi vertikal</b>: desain, supply, sebagian produksi, ritel, properti mall, hingga energi.</li>
+        <li><b>Flat-pack dan self-service</b> mengalihkan biaya perakitan dan logistik ke pelanggan, sehingga harga bisa lebih murah.</li>
+        <li><b>Kepemilikan yayasan</b> (Stichting INGKA Foundation) membuat horizon investasinya "dekade, bukan kuartal".</li>
+      </ul>
+    </div>
+  </div>
+  <h2>Ingka: konsentrasi penjualan per negara &amp; region</h2>
+  <div class="cols">
+    <figure><img src="charts/c4_countries.svg"><div class="fignote">Jerman dan AS menyumbang 28% penjualan Ingka. Sumber: Ingka Annual Summary FY25 [4].</div></figure>
+    <figure><img src="charts/c5_regions.svg"><div class="fignote">Eropa tetap dominan (73,8%); Asia Pasifik baru 9%. Sumber: [4].</div></figure>
+  </div>
+</div>
+
+<!-- ============ 03 FINANCIALS ============ -->
+<div class="section">
+  <div class="kicker">03 · Kinerja &amp; posisi pasar</div>
+  <h1>Penjualan stagnan sejak puncak FY23; volume naik karena harga diturunkan</h1>
+  <figure>
+    <figcaption>Total IKEA retail sales seluruh sistem, FY19–FY26 (EUR miliar)</figcaption>
+    <img src="charts/c1_sales.svg">
+    <div class="fignote">Total retail sales mencakup produk, food, dan jasa dari ke-13 grup franchisee. FY26: −1,8% (nominal); pelemahan di China dan Timur Tengah lebih besar daripada pertumbuhan di Eropa dan Amerika Latin. Sumber: Inter IKEA [1][2][5].</div>
+  </figure>
+  <div class="cols">
+    <div>
+      <h3>Indikator operasional FY25</h3>
+      <table>
+        <tr><th>Indikator</th><th class="num">Nilai</th></tr>
+        <tr><td>Kunjungan toko (sistem)</td><td class="num">915 jt (+1,9%)</td></tr>
+        <tr><td>Volume penjualan (sistem)</td><td class="num">+2,6%</td></tr>
+        <tr><td>Lokasi baru dibuka</td><td class="num">66 (Eropa 39, AmUt 16, Asia 6, TimTeng 5)</td></tr>
+        <tr><td>Kunjungan online (Ingka)</td><td class="num">4,0 mlr (+4,6%)</td></tr>
+        <tr><td>Co-worker (sistem)</td><td class="num">222.000</td></tr>
+        <tr><td>Retail sales Ingka</td><td class="num">€39,0 mlr (−1,6%)</td></tr>
+      </table>
+      <p class="src">Sumber: [1][2][3].</p>
+    </div>
+    <div>
+      <figure>
+        <figcaption>Bauran kanal penjualan IKEA FY25</figcaption>
+        <img src="charts/c3_channel.svg">
+        <div class="fignote">Online sudah 28% dari turnover. Toko tetap menjadi mesin utama, dan semakin berperan sebagai titik pick-up dan fulfilment untuk order online. Sumber: [1].</div>
+      </figure>
+      <div class="box small" style="margin-top:2mm"><b>Pasar baru:</b> Selandia Baru (toko pertama di Auckland, Des 2025), Panama dan Kosta Rika (franchisee Sarton). Pasar yang menyusut di FY26: China (7 toko ditutup) dan Timur Tengah.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 04 STORE CONCEPT & TIERING ============ -->
+<div class="section">
+  <div class="kicker">04 · Store concept</div>
+  <h1>Tiering format toko IKEA: dari "blue box" 65.000 m² sampai locker pick-up</h1>
+  <p class="lead">Sampai 2015-an IKEA praktis hanya punya satu format: toko besar biru-kuning di pinggir kota dengan ±9.500 produk, parkir luas, restoran, dan jalur belanja satu arah. Sejak 2014–2019 (Hamburg-Altona, Madeleine Paris) IKEA membangun format urban. Prinsip yang dipegang Ingka: <i>"no single format fits all markets."</i><sup class="r">[8]</sup></p>
+  <figure>
+    <figcaption>Spektrum ukuran per tier, dengan contoh toko nyata (m², skala log)</figcaption>
+    <img src="charts/c7_spectrum.svg">
+    <div class="fignote">Pengelompokan T1–T5 adalah kerangka analis. Ingka secara resmi melaporkan 3 kelompok: blue box, city store, dan other formats. Ukuran contoh dari siaran pers dan media (lihat Bab 05).</div>
+  </figure>
+  <table>
+    <tr><th style="width:17%">Tier</th><th style="width:13%">Luas</th><th style="width:12%">Produk di toko</th><th style="width:20%">Lokasi &amp; catchment</th><th>Peran dalam jaringan</th></tr>
+    <tr><td><span class="tier t1">T1</span> <b>Large / Blue box</b></td><td>15–65 rb m²<br><span class="muted">umumnya 25–40 rb</span></td><td>±9.000–9.500 (≈4.500 take-away)</td><td>Pinggir kota/akses tol, lahan 4–13 ha, parkir 1.000–2.000 mobil; catchment 1–2 jam berkendara</td><td><b>Hub</b>: pengalaman penuh (showroom, Småland, restoran), stok, dan semakin sering jadi pusat fulfilment/pick-up untuk spoke dan online.</td></tr>
+    <tr><td><span class="tier t2">T2</span> <b>City store (medium)</b></td><td>4,5–18 rb m²<br><span class="muted">umumnya 5–12 rb</span></td><td>±2.600–4.100</td><td>Pusat kota, mal, high street; akses transportasi umum; konsumen tanpa mobil</td><td>Brand flagship urban + inspirasi + planning; barang besar dikirim. Sering di mal milik sendiri (Ingka Centres).</td></tr>
+    <tr><td><span class="tier t3">T3</span> <b>Small store / "IKEA Shop"</b></td><td>1,5–4,5 rb m²</td><td>&gt;2.000–3.000 (fokus kebutuhan sehari-hari)</td><td>Kota kecil–menengah, retail park, mal, area belanja harian</td><td>Spoke cepat buka (hitungan minggu), capex rendah; ada planning dan food terbatas; full range lewat pick-up/delivery.</td></tr>
+    <tr><td><span class="tier t4">T4</span> <b>Plan &amp; Order Point</b></td><td>200–1.400 m²</td><td>Tanpa stok (display saja)</td><td>Mal, ruko, shop-in-shop (mis. di Best Buy, AS)</td><td>Konsultasi dan perencanaan dapur, lemari, kamar tidur; order untuk diantar; sebagian dengan pick-up.</td></tr>
+    <tr><td><span class="tier t5">T5</span> <b>Pick-up point / locker</b></td><td>&lt;500 m²</td><td>-</td><td>Parkir supermarket (mis. 100+ di Tesco, UK), mitra logistik, locker 24/7</td><td>Memperluas jangkauan e-commerce dengan biaya minimal.</td></tr>
+  </table>
+  <p class="src">Sumber: Ingka AR FY25 [3]; RetailDetail/IADS (Paris) [11]; Retail Dive, Patch, BusinessWorld, Crittenden (AS &amp; Filipina) [13]; Fordaq/Invidis (IKEA Shop) [6]; IKEA UK [12].</p>
+</div>
+
+<div class="section">
+  <div class="kicker">04 · Store concept (lanjutan)</div>
+  <h1>Logika tiering: format dipilih berdasarkan kepadatan, mobilitas, dan kematangan omnichannel</h1>
+  <div class="cols">
+    <div class="card">
+      <h3>Pendorong pergeseran ke format kecil</h3>
+      <ul class="small">
+        <li><b>Urbanisasi dan konsumen tanpa mobil.</b> Banyak konsumen muda kota tidak punya mobil atau SIM, sehingga toko besar di pinggir kota kurang menarik bagi mereka (CEO Inter IKEA, Nov 2026).<sup class="r">[5]</sup></li>
+        <li><b>Online 28% dari penjualan.</b> Konsumen tidak perlu lagi membawa pulang semuanya dari toko besar. Format kecil bergantung pada fulfilment dari hub.</li>
+        <li><b>Capex dan kecepatan.</b> Format kecil bisa dibuka "dalam beberapa minggu" (Ingka AR FY25), jauh lebih cepat daripada 2–4 tahun untuk blue box (perizinan, lahan, konstruksi).</li>
+        <li><b>Saturasi blue box</b> di pasar matang: hampir semua metro besar Eropa dan AS sudah punya toko besar.</li>
+        <li><b>Frekuensi kunjungan.</b> Toko besar dikunjungi beberapa kali setahun, sedangkan toko kecil di tempat belanja harian bisa memicu kunjungan lebih sering.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Model hub-and-spoke IKEA</h3>
+      <svg viewBox="0 0 300 190" width="100%" style="display:block">
+        <g font-family="Inter" font-size="8">
+          <line x1="150" y1="95" x2="55" y2="35" stroke="#B7C0CC" stroke-width="1.5"/>
+          <line x1="150" y1="95" x2="250" y2="35" stroke="#B7C0CC" stroke-width="1.5"/>
+          <line x1="150" y1="95" x2="45" y2="150" stroke="#B7C0CC" stroke-width="1.5"/>
+          <line x1="150" y1="95" x2="255" y2="150" stroke="#B7C0CC" stroke-width="1.5"/>
+          <line x1="150" y1="95" x2="150" y2="172" stroke="#B7C0CC" stroke-width="1.5"/>
+          <line x1="150" y1="95" x2="150" y2="18" stroke="#B7C0CC" stroke-width="1.5"/>
+          <circle cx="150" cy="95" r="34" fill="#1F5FA8"/>
+          <text x="150" y="92" text-anchor="middle" fill="#fff" font-weight="700" font-size="9">T1 HUB</text>
+          <text x="150" y="104" text-anchor="middle" fill="#fff" font-size="7">stok · fulfilment</text>
+          <circle cx="55" cy="35" r="20" fill="#E3A21A"/><text x="55" y="38" text-anchor="middle" fill="#1B2430" font-weight="700">T2 City</text>
+          <circle cx="250" cy="35" r="16" fill="#2A9D8F"/><text x="250" y="38" text-anchor="middle" fill="#fff" font-weight="700">T3</text>
+          <circle cx="45" cy="150" r="16" fill="#2A9D8F"/><text x="45" y="153" text-anchor="middle" fill="#fff" font-weight="700">T3</text>
+          <circle cx="255" cy="150" r="12" fill="#C8475A"/><text x="255" y="153" text-anchor="middle" fill="#fff" font-weight="700">T4</text>
+          <circle cx="150" cy="172" r="9" fill="#7B5EA7"/><text x="168" y="175" fill="#1B2430">T5</text>
+          <circle cx="150" cy="18" r="9" fill="#7B5EA7"/><text x="168" y="21" fill="#1B2430">T5</text>
+          <rect x="196" y="78" width="98" height="34" rx="3" fill="#F2F5F9"/>
+          <text x="200" y="91" fill="#1B2430" font-size="7">Online order → kirim dari hub</text>
+          <text x="200" y="103" fill="#1B2430" font-size="7">atau ambil di spoke terdekat</text>
+        </g>
+      </svg>
+      <p class="small muted" style="margin-top:1mm">Contoh: Jakarta Raya memiliki 2 hub besar (Alam Sutera, Jakarta Garden City), 1 toko medium (Sentul), dan 1 city store di mal (Taman Anggrek).</p>
+    </div>
+  </div>
+  <h2>Inovasi di dalam format besar (T1 juga berevolusi)</h2>
+  <table>
+    <tr><th>Inisiatif</th><th>Contoh</th><th>Tujuan</th></tr>
+    <tr><td>Satu lantai khusus order online</td><td>IKEA Soroksár, Budapest</td><td>Mengubah blue box menjadi hub omnichannel.</td></tr>
+    <tr><td>Toko digital terintegrasi / mixed-use</td><td>IKEA Shanghai Linkong; Livat Shanghai (toko 21.620 m² di dalam 200.000 m² retail)</td><td>Blended online-offline; IKEA sebagai anchor mall milik sendiri.</td></tr>
+    <tr><td>Downsizing / relokasi</td><td>Borlänge (Swedia) pindah dari blue box ke format lebih kecil di mal Kupolen (2027)</td><td>Menyesuaikan kapasitas dengan demand lokal.</td></tr>
+    <tr><td>Shared retail dengan merek lain</td><td>Bersama Decathlon dekat London; pilot shop-in-shop dengan Best Buy di AS</td><td>Berbagi traffic dan biaya.</td></tr>
+    <tr><td>As-Is / second-hand area</td><td>424 toko Ingka punya area As-Is; IKEA Pre-owned (Spanyol, Norwegia, Portugal)</td><td>Circularity dan traffic tambahan.</td></tr>
+  </table>
+  <p class="src">Sumber: Ingka AR FY25 [3]; Metro Mode Nov 2026 [7]; Invidis Mar 2026 [6].</p>
+</div>
+
+<!-- ============ 05 COUNTS & EXAMPLES ============ -->
+<div class="section">
+  <div class="kicker">05 · Jumlah toko &amp; contoh lokasi</div>
+  <h1>Jumlah toko per tier: pertumbuhan hanya terjadi di format kecil</h1>
+  <figure>
+    <figcaption>Komposisi jaringan IKEA Retail (Ingka Group) per format</figcaption>
+    <img src="charts/c6_formatmix.svg">
+    <div class="fignote">Data resmi Ingka Annual Report FY25 [3]. Jumlah blue box tidak bertambah. Seluruh pertambahan bersih +46 lokasi datang dari city store (+11) dan format lain (+35).</div>
+  </figure>
+  <div class="cols">
+    <div>
+      <table>
+        <tr><th>Tier</th><th class="num">Ingka FY25</th><th>Global (semua franchisee)</th></tr>
+        <tr><td><span class="tier t1">T1</span> Large</td><td class="num">375</td><td>±480–500 toko tradisional (Statista: 494 per Okt 2025); FT: 519 toko global FY26</td></tr>
+        <tr><td><span class="tier t2">T2</span> City store</td><td class="num">36</td><td>Estimasi ±45–60 (termasuk Taman Anggrek &amp; Surabaya di Indonesia)</td></tr>
+        <tr><td><span class="tier t3">T3–T5</span> Format lain</td><td class="num">209</td><td>Tidak dipublikasikan. FY26: ±90 toko kecil dibuka secara global; target FY27 +50%</td></tr>
+        <tr><td><b>Total</b></td><td class="num"><b>620</b></td><td>Ingka &gt;640 lokasi (Mar 2026), naik dari ±375 di 2020</td></tr>
+      </table>
+      <p class="src">Sumber: [3], [5], [6], Statista. Angka global T2–T5 adalah estimasi.</p>
+    </div>
+    <div>
+      <figure><figcaption>Pertumbuhan jumlah lokasi Ingka</figcaption><img src="charts/c10_network.svg"><div class="fignote">2020 dan Mar-26 dari Invidis [6]; FY24–FY25 dari [3].</div></figure>
+    </div>
+  </div>
+  <div class="box">
+    <h3>Contoh AS: pasar yang paling agresif bereksperimen format</h3>
+    <p class="small" style="margin:0">Ingka mengumumkan investasi &gt;€2 mlr (US$2,2 mlr) untuk 3 tahun (2023–2026): 8 toko format tradisional dan 9 Plan &amp; Order Point, ditambah modernisasi dan fulfilment.<sup class="r">[10]</sup> Di FY25 IKEA AS membuka 14 lokasi baru (2 small store di Arcadia, CA dan San Marcos, TX; 9 P&amp;O point dengan pick-up), mencatat penjualan US$5,3 mlr (US$1,9 mlr e-commerce), dan memiliki 61 lokasi. Rencana 2026 berisi 10 toko, termasuk city store pertama di Culver City, LA.<sup class="r">[9]</sup> Di sisi lain, pada 2026 IKEA menutup toko besar Memphis, small store San Marcos (setahun setelah dibuka), serta P&amp;O point di South Charlotte, Austin Domain, dan Fairfax.<sup class="r">[7][19]</sup> Pola ini adalah <b>test, learn, prune</b>.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="kicker">05 · Contoh lokasi (lanjutan)</div>
+  <h1>Contoh lokasi nyata per tier</h1>
+  <table>
+    <tr><th style="width:9%">Tier</th><th style="width:25%">Lokasi</th><th style="width:9%">Buka</th><th class="num" style="width:12%">Luas</th><th>Catatan strategi</th></tr>
+    <tr><td><span class="tier t1">T1</span></td><td>Pasay City, Manila (Filipina)</td><td>2021</td><td class="num">±65.000 m²</td><td>Salah satu IKEA terbesar di dunia; anchor di area SM Mall of Asia.</td></tr>
+    <tr><td><span class="tier t1">T1</span></td><td>Hyderabad (India)</td><td>2018</td><td class="num">±37.000 m²</td><td>Toko pertama di India; lahan 13 acre; investasi ±Rs 1.000 crore.</td></tr>
+    <tr><td><span class="tier t1">T1</span></td><td>Alam Sutera, Tangerang (Indonesia)</td><td>2014</td><td class="num">±35.000 m²</td><td>Toko pertama di Indonesia; lahan 4,5 ha.</td></tr>
+    <tr><td><span class="tier t1">T1</span></td><td>Memphis, Tennessee (AS)</td><td>2016</td><td class="num">±25.200 m²</td><td>Biaya ±US$65 jt. <b>Ditutup Mei 2026</b> sebagai bagian dari restrukturisasi portofolio AS.</td></tr>
+    <tr><td><span class="tier t2">T2</span></td><td>Hamburg-Altona (Jerman)</td><td>2014</td><td class="num">±18.000 m²</td><td>City store multi-lantai pertama di pusat kota (pedestrian area).</td></tr>
+    <tr><td><span class="tier t2">T2</span></td><td>Bangkok city store (Thailand)</td><td>-</td><td class="num">12.000 m²</td><td>Format kota di dalam mal.</td></tr>
+    <tr><td><span class="tier t2">T2</span></td><td>Mal Taman Anggrek, Jakarta</td><td>Apr 2022</td><td class="num">9.400 m²</td><td>IKEA pertama di dalam mal di Indonesia; 2 lantai + area Click &amp; Collect.</td></tr>
+    <tr><td><span class="tier t2">T2</span></td><td>Ciputra World Surabaya</td><td>2023</td><td class="num">±9.000 m²</td><td>Lantai LG mal; masuk ke kota kedua terbesar Indonesia.</td></tr>
+    <tr><td><span class="tier t2">T2</span></td><td>University Park, Dallas (AS)</td><td>2026</td><td class="num">±5.850 m²</td><td>±3.200 item termasuk food.</td></tr>
+    <tr><td><span class="tier t2">T2</span></td><td>La Madeleine, Paris (Prancis)</td><td>Mei 2019</td><td class="num">5.400 m²</td><td>City store kecil pertama; 4.100 produk (1.500 take-away), sekitar seperempat toko biasa. Disusul Paris Italie Deux (2025).</td></tr>
+    <tr><td><span class="tier t2">T2</span></td><td>Oxford Street, London (Inggris)</td><td>2025</td><td class="num">±5.800 m²</td><td>Gedung eks-Topshop dibeli £378 jt dan direnovasi; IKEA memakai sebagian lantai, sisanya disewakan.</td></tr>
+    <tr><td><span class="tier t2">T2</span></td><td>Harajuku &amp; Shibuya, Tokyo (Jepang)</td><td>2020</td><td class="num">multi-lantai</td><td>City store di jantung Tokyo, format vertikal.</td></tr>
+    <tr><td><span class="tier t3">T3</span></td><td>Coimbra-Taveiro (Portugal)</td><td>2026</td><td class="num">&gt;4.000 m²</td><td>Small store pertama di Portugal.</td></tr>
+    <tr><td><span class="tier t3">T3</span></td><td>Limoges (Prancis)</td><td>2026</td><td class="num">2.000 m²</td><td>Bagian dari roll-out 20 small store di 6 negara (FR, DE, IT, ES, PT, CA).</td></tr>
+    <tr><td><span class="tier t3">T3</span></td><td>Wangfujing WellTown, Beijing (China)</td><td>2026</td><td class="num">1.500 m²</td><td>&gt;3.000 produk, planning, food; lokasi IKEA ke-5 di Beijing, menyusul small store Shenzhen.</td></tr>
+    <tr><td><span class="tier t3">T3</span></td><td>Hammersmith, London (Inggris)</td><td>2025</td><td class="num">±1.000 m²</td><td>Toko high street pertama (pilot small format UK), sekitar 1/5 toko biasa; dekat stasiun.</td></tr>
+    <tr><td><span class="tier t4">T4</span></td><td>Ayala TriNoma, Manila (Filipina)</td><td>2025</td><td class="num">500 m²</td><td>Plan &amp; order + free collection point untuk order online.</td></tr>
+    <tr><td><span class="tier t4">T4</span></td><td>Pleasanton, California (AS)</td><td>2026</td><td class="num">±195 m²</td><td>Menggantikan rencana toko besar Dublin, CA (29.000 m²) yang dibatalkan.</td></tr>
+    </table>
+  <p class="src">T5 (pick-up point) tidak dicantumkan karena berupa titik mikro, mis. 100+ titik di parkir Tesco (UK) dan locker 24/7 (Finlandia). Sumber: [6][7][8][9][11][12][13][14][15][18][20], media lokal. Ukuran dibulatkan; sumber kadang berbeda untuk lokasi yang sama.</p>
+</div>
+
+<!-- ============ 06 CAPEX & INVESTMENT ============ -->
+<div class="section">
+  <div class="kicker">06 · Capex &amp; strategi investasi</div>
+  <h1>Berapa capex satu toko IKEA?</h1>
+  <p class="lead">IKEA tidak mengungkap capex per toko. Kami menyusun rentang per tier dari (a) proyek yang nilainya dipublikasikan, (b) biaya fit-out ritel per m², dan (c) triangulasi aset tetap Ingka.</p>
+  <figure>
+    <figcaption>Estimasi capex per unit per tier (EUR juta, skala log) — estimasi analis</figcaption>
+    <img src="charts/c8_capex.svg">
+  </figure>
+  <h3>Benchmark proyek yang dipublikasikan</h3>
+  <table>
+    <tr><th>Proyek</th><th>Tier</th><th class="num">Nilai</th><th class="num">Luas</th><th>Catatan</th></tr>
+    <tr><td>Memphis, AS (2016)</td><td>T1</td><td class="num">±US$65 jt</td><td class="num">25.200 m²</td><td>±US$2.600/m²; lahan murah (suburban AS).</td></tr>
+    <tr><td>Hyderabad, India (2018)</td><td>T1</td><td class="num">Rs 1.000 cr (±US$145 jt)</td><td class="num">±37.000 m²</td><td>Termasuk lahan 13 acre; ±US$3.900/m².</td></tr>
+    <tr><td>Navi Mumbai, India (rencana)</td><td>T1</td><td class="num">Rs 1.500 cr (±US$220 jt)</td><td class="num">±37.000 m²</td><td>Lahan saja Rs 400 cr (±27%).</td></tr>
+    <tr><td>Iași, Rumania (2024)</td><td>T1 kecil</td><td class="num">€18 jt</td><td class="num">n/a</td><td>Termasuk lahan €4 jt; toko regional di pasar berbiaya rendah.</td></tr>
+    <tr><td>Oxford Street, London (2021)</td><td>T2</td><td class="num">£378 jt</td><td class="num">±5.800 m² dipakai</td><td>Harga beli gedung (aset properti), belum termasuk renovasi; sebagian disewakan.</td></tr>
+    <tr><td>Program urban Prancis (2019)</td><td>T2–T4</td><td class="num">€400 jt / 3 th</td><td class="num">-</td><td>Beberapa city store/format urban (Madeleine, dll.).</td></tr>
+    <tr><td>Program Spanyol FY23–25</td><td>T2–T4</td><td class="num">€150 jt / 3 th</td><td class="num">-</td><td>City store Madrid Torrejón + beberapa customer meeting point.</td></tr>
+    <tr><td>Program AS 2023–26</td><td>Campuran</td><td class="num">US$2,2 mlr</td><td class="num">-</td><td>8 toko + 9 P&amp;O + modernisasi + fulfilment.</td></tr>
+  </table>
+  <p class="src">Sumber: [10][11][12][14][15][16][17]. Kurs mengikuti tahun pengumuman (±Rs 69/US$ di 2018).</p>
+  <div class="box amber small">
+    <b>Dasar estimasi per tier.</b> T1: konstruksi 25–40 rb m² × €1.500–2.500/m² = €40–100 jt, ditambah lahan (€5–60 jt tergantung negara) serta fit-out dan stok awal €10–15 jt. Triangulasi: biaya perolehan bruto land &amp; buildings Ingka €31,5 mlr ÷ 411 toko ≈ €75 jt per toko (batas atas kasar, karena juga mencakup mall Ingka Centres dan aset energi). T2 (sewa): 5–12 rb m² × €2.000–3.500/m² fit-out, ditambah stok/IT. T3: 2–4 rb m² × €1.200–2.000/m² ditambah stok €1–2 jt. T4: 200–1.400 m², hampir tanpa stok, teknologi planning. T5: rak/locker dan sistem.
+  </div>
+</div>
+
+<div class="section">
+  <div class="kicker">06 · Strategi investasi (lanjutan)</div>
+  <h1>Strategi investasi: modal sabar, kepemilikan aset, dan disiplin portofolio</h1>
+  <div class="cols">
+    <figure><figcaption>Capex vs depresiasi vs arus kas operasi Ingka</figcaption><img src="charts/c9_capex_ingka.svg"><div class="fignote">Capex ±2× depresiasi, artinya Ingka masih dalam fase ekspansi dan transformasi. Capex sepenuhnya didanai arus kas operasi. Sumber: [3].</div></figure>
+    <div>
+      <h3>Pilar strategi investasi</h3>
+      <ul class="small">
+        <li><b>Reinvestasi 85% laba</b>; 15% dividen ke yayasan pemilik. Tidak ada tekanan pasar modal.</li>
+        <li><b>Own, don't rent (untuk T1)</b>: Ingka memegang kepemilikan legal semua aset tetap material. Land &amp; buildings senilai €19,3 mlr (NBV) atau 78% dari PP&amp;E. Format kecil umumnya menyewa.</li>
+        <li><b>Integrasi properti</b>: Ingka Centres (37 meeting place, 320 jt kunjungan, +18%) menjadikan IKEA anchor yang menarik traffic, lalu memonetisasi lewat sewa tenant (Livat, Lykli, Livli).</li>
+        <li><b>Investasi non-ritel</b>: €7,5 mlr energi terbarukan hingga 2030 (€4,3 mlr sudah terealisasi/komit), hutan, circular economy (€1 mlr), bank (akuisisi penuh Ikano Bank).</li>
+        <li><b>Program pertumbuhan</b>: €5 mlr / 3 tahun (diumumkan 2026) untuk lokasi baru dan upgrade toko lama di 32 pasar, termasuk 20 small store dalam 6 bulan.</li>
+        <li><b>Investasi harga</b>: €1,2 mlr price cut mulai Sep 2026 (Inter IKEA + franchisee). Harga diperlakukan sebagai investasi, bukan biaya.</li>
+      </ul>
+    </div>
+  </div>
+  <h2>Timeline keputusan investasi format</h2>
+  <table>
+    <tr><th style="width:14%">Periode</th><th>Keputusan</th></tr>
+    <tr><td>2014</td><td>City store multi-lantai pertama, Hamburg-Altona.</td></tr>
+    <tr><td>2019</td><td>Prancis €400 jt untuk format urban; Paris Madeleine dibuka.</td></tr>
+    <tr><td>2021</td><td>Pembelian gedung Oxford Street (£378 jt) oleh Ingka Investments.</td></tr>
+    <tr><td>2023</td><td>AS US$2,2 mlr (17 lokasi termasuk 9 P&amp;O); Ingka Centres membeli Italie Deux (Paris).</td></tr>
+    <tr><td>FY25</td><td>Ingka membuka 54 customer meeting point; pilot small store di UK (Hammersmith), AS, Polandia; rencana ekspansi London £1 mlr; Oxford Street dan Paris Italie Deux dibuka.</td></tr>
+    <tr><td>2026</td><td>€5 mlr / 3 tahun; 20 small store di Eropa dan Kanada; 800 posisi kantor pusat Ingka dipangkas; 7 toko besar di China dan Memphis ditutup; evaluasi small store setelah FY26.</td></tr>
+    <tr><td>FY26–27</td><td>±90 toko kecil dibuka di FY26; target FY27 +50%; price cut €1,2 mlr.</td></tr>
+  </table>
+  <div class="box red small"><b>Pelajaran penting:</b> IKEA bersedia menutup aset mahal (toko besar 10 tahun, P&amp;O baru 1–3 tahun) bila tidak sesuai demand. Lokasi diperlakukan sebagai portofolio yang terus dikelola ulang, bukan monumen.</div>
+</div>
+
+<!-- ============ 07 TARGET MARKET ============ -->
+<div class="section">
+  <div class="kicker">07 · Target market</div>
+  <h1>"The many people": mass-market, tetapi tersegmentasi per format</h1>
+  <p class="lead">Visi IKEA adalah <i>"to create a better everyday life for the many people"</i>. Target intinya adalah rumah tangga berpendapatan menengah yang sensitif harga tetapi menghargai desain. Di pasar berkembang seperti Indonesia, India, dan Filipina, posisi IKEA bergeser menjadi <b>aspirational mid-to-upper middle class</b>.</p>
+  <table>
+    <tr><th style="width:24%">Segmen</th><th>Kebutuhan</th><th style="width:28%">Format yang melayani</th></tr>
+    <tr><td><b>Young adults &amp; first movers</b> (20–35, penyewa, pindahan pertama)</td><td>Isi rumah lengkap dengan budget terbatas, rumah/apartemen kecil, solusi penyimpanan</td><td>T2 city store, T3, online; produk BTI (harga sangat rendah)</td></tr>
+    <tr><td><b>Keluarga muda</b> (dengan anak)</td><td>Kamar anak, penyimpanan, dapur; kunjungan sebagai rekreasi keluarga (Småland, restoran)</td><td>T1 blue box (destinasi akhir pekan)</td></tr>
+    <tr><td><b>Kelas menengah urban tanpa mobil</b></td><td>Akses dekat transportasi umum, delivery, perakitan</td><td>T2 city store, T4 planning, T5 pick-up</td></tr>
+    <tr><td><b>Proyek renovasi</b> (dapur, wardrobe, kamar tidur)</td><td>Konsultasi desain, perencanaan, pemasangan</td><td>T4 Plan &amp; Order, T1 dengan planning studio</td></tr>
+    <tr><td><b>B2B / UKM</b> (kafe, kantor, hotel, properti sewa)</td><td>Furnitur dalam jumlah besar, harga konsisten</td><td>IKEA for Business / Business Points (mis. Sentul)</td></tr>
+    <tr><td><b>Konsumen hijau / hemat</b></td><td>Second-hand, buy-back, refurbish</td><td>As-Is area (424 toko), IKEA Pre-owned, Buy Back</td></tr>
+  </table>
+  <div class="cols">
+    <div class="card"><h3>Insight dasar segmentasi IKEA</h3><ul class="small"><li>Riset tahunan <i>Life at Home</i> digunakan untuk memahami cara orang hidup (ruang kecil, multi-generasi, tidur, kerja dari rumah).</li><li>Fokus komersial tahunan memakai tema kebutuhan: FY25 <i>Complete Sleep</i>, FY26 <i>Kitchen &amp; Dining</i>.</li><li>Tren hunian yang mengecil dan penjualan properti yang melambat disebut Ingka sebagai faktor risiko demand.</li></ul></div>
+    <div class="card"><h3>Loyalty sebagai data segmentasi</h3><ul class="small"><li>IKEA Family / Family Rewards di AS: 25 jt anggota (+17%), menyumbang 56% penjualan AS FY25.<sup class="r">[9]</sup></li><li>Aplikasi IKEA: Shop &amp; Go, Food Mobile, Express Checkout, serta visualisasi produk berbasis AI.</li></ul></div>
+  </div>
+</div>
+
+<!-- ============ 08 PRODUCTS ============ -->
+<div class="section">
+  <div class="kicker">08 · Barang jualan</div>
+  <h1>Range: ±9.500 produk home furnishing, ditambah food dan jasa</h1>
+  <div class="cols3">
+    <div class="card"><h3>Home furnishing (inti)</h3><ul class="small"><li>Ruang tamu: sofa, rak (BILLY, KALLAX)</li><li>Kamar tidur: kasur, tempat tidur, wardrobe (PAX baru FY25)</li><li>Dapur: kabinet (KNOXHULT, METOD), peralatan</li><li>Penyimpanan &amp; organisasi</li><li>Ruang makan, kamar mandi, kamar anak, home office</li><li>Tekstil, lampu, dekorasi, tanaman, outdoor, smart home</li></ul><p class="small muted">Penjualan terkuat FY25: furnitur, terutama storage dan dapur.</p></div>
+    <div class="card"><h3>IKEA Food</h3><ul class="small"><li>Restoran Swedia, Bistro, Kafe, Swedish Food Market</li><li>Secara historis ±5–6% penjualan, tetapi menjadi traffic driver: 20–30% pengunjung datang terutama untuk makan</li><li>Lokalisasi menu (mis. ayam bakar Padang di IKEA Indonesia, Juli 2026)</li><li>Small store pun tetap membawa "selected food offer"</li></ul></div>
+    <div class="card"><h3>Services &amp; circular</h3><ul class="small"><li>Delivery, click &amp; collect, locker</li><li>Perakitan via TaskRabbit (diakuisisi 2017; 8 pasar)</li><li>Planning dapur dan wardrobe, instalasi</li><li>Pembiayaan konsumen (Ikano Bank)</li><li>Buy Back &amp; Resell, As-Is, IKEA Pre-owned</li><li>Jasa = 3% penjualan (FY25)</li></ul></div>
+  </div>
+  <h2>Prinsip produk: Democratic Design</h2>
+  <p>Setiap produk harus memenuhi lima dimensi sekaligus: <b>form, function, quality, sustainability, dan low price</b>. Harga ditetapkan dulu, lalu produk didesain agar memenuhi harga itu. Flat-pack mengurangi volume logistik dan biaya.</p>
+  <table>
+    <tr><th>Aspek</th><th>Praktik IKEA</th></tr>
+    <tr><td>Arsitektur harga</td><td>Good-better-best per kategori; produk "breathtaking item" (BTI) berharga sangat rendah sebagai magnet traffic. Strategi: produk baru diluncurkan dengan harga lebih rendah dari produk yang digantikan.</td></tr>
+    <tr><td>Pembaruan range</td><td>FY26: 2.900 produk baru/refresh dan 8 koleksi (termasuk kembalinya IKEA PS). FY25: koleksi STOCKHOLM baru.</td></tr>
+    <tr><td>Range per format</td><td>T1 ±9.500 SKU · T2 2.600–4.100 · T3 &gt;2.000–3.000 (kebutuhan harian, aksesori, take-away) · T4 display saja. Full range tersedia via online di semua format.</td></tr>
+    <tr><td>Sourcing</td><td>±90% dari supplier eksternal, ±10% dibuat IKEA Industry. Integrasi supplier lokal (mis. 29 supplier Baltik).</td></tr>
+    <tr><td>Keberlanjutan</td><td>Target net zero (emisi −50% pada 2030 vs 2016); material terbarukan/daur ulang; 100% listrik operasional dari energi terbarukan (FY26).</td></tr>
+  </table>
+  <p class="src">Sumber: [1][2][3][5]; data food historis dari laporan IKEA Food dan media.</p>
+</div>
+
+<!-- ============ 09 MARKETING ============ -->
+<div class="section">
+  <div class="kicker">09 · Strategi marketing</div>
+  <h1>Harga sebagai mesin utama, toko sebagai media, digital sebagai jembatan</h1>
+  <div class="cols">
+    <div class="card"><h3>1. Price leadership</h3><p class="small">Penurunan harga ±10% dalam dua tahun (FY24–25) berhasil menaikkan volume +2,6–3%. Mulai 1 Sep 2026 ada price cut tambahan €1,2 mlr, hingga 15–25% untuk &gt;1.000 produk (BILLY, KALLAX) di &gt;20 negara Eropa. Label "New lower price" di toko dan online.</p></div>
+    <div class="card"><h3>2. Toko sebagai media &amp; destinasi</h3><p class="small">Showroom room-set (Alam Sutera: 55+ solusi ruangan dan 3 rumah lengkap), jalur satu arah, Småland, dan restoran. Kunjungan diposisikan sebagai rekreasi keluarga. Total 915 jt kunjungan per tahun berfungsi sebagai media gratis.</p></div>
+    <div class="card"><h3>3. Dari katalog ke digital</h3><p class="small">Katalog cetak, yang dulu "buku paling banyak dicetak di dunia", dihentikan setelah edisi 2021. Penggantinya: app, AI/AR untuk desain ruangan, konten sosial, e-commerce (28% sales). Ingka mencatat 4,0 mlr kunjungan online.</p></div>
+    <div class="card"><h3>4. Loyalty &amp; CRM</h3><p class="small">IKEA Family / Family Rewards memberi harga anggota, kopi gratis, dan asuransi barang. Di AS anggotanya menyumbang 56% penjualan. Data ini dipakai untuk personalisasi dan pemilihan lokasi.</p></div>
+    <div class="card"><h3>5. Brand storytelling berbasis insight</h3><p class="small">Kampanye emosional tentang kehidupan di rumah (mis. "Wonderful Everyday" di UK, "Proudly Second Hand"). Fokus tahunan tematik: Complete Sleep (FY25), Kitchen &amp; Dining (FY26). Riset Life at Home menjadi bahan PR.</p></div>
+    <div class="card"><h3>6. Lokalisasi &amp; kemitraan</h3><p class="small">Menu lokal, area "Teras Indonesia" di toko Bandung. Kemitraan: Best Buy (AS), Decathlon (UK), pick-up di Tesco (UK). Keberlanjutan dan circularity sebagai nilai merek (Buy Back, As-Is).</p></div>
+  </div>
+  <div class="box"><h3>Marketing mix per format</h3>
+  <table>
+    <tr><th>Format</th><th>Peran marketing</th><th>KPI utama</th></tr>
+    <tr><td><span class="tier t1">T1</span></td><td>Destinasi dan inspirasi menyeluruh, food, event keluarga</td><td>Kunjungan, konversi, basket size, food attach rate</td></tr>
+    <tr><td><span class="tier t2">T2</span></td><td>Brand flagship urban, awareness, planning</td><td>Kunjungan, sales/m², order online yang dipicu toko</td></tr>
+    <tr><td><span class="tier t3">T3</span></td><td>Frekuensi dan kedekatan, impulse dan kebutuhan harian</td><td>Frekuensi, take-away sales, pick-up</td></tr>
+    <tr><td><span class="tier t4">T4</span></td><td>Konsultasi bernilai tinggi (dapur, wardrobe)</td><td>Jumlah appointment, konversi planning ke order, AOV</td></tr>
+  </table></div>
+</div>
+
+<!-- ============ 10 INDONESIA ============ -->
+<div class="section">
+  <div class="kicker">10 · Studi kasus Indonesia</div>
+  <h1>IKEA Indonesia: dari satu blue box ke 7 lokasi dengan format campuran</h1>
+  <p class="lead">IKEA Indonesia dioperasikan oleh <b>PT Rumah Mebel Nusantara</b>, anak usaha PT Hero Supermarket Tbk di bawah DFI Retail Group (Dairy Farm). Grup ini juga memegang franchise IKEA di Hong Kong, Taiwan, dan Makau. Polanya serupa dengan IKEA global: mulai dari toko besar, lalu masuk ke mal dan kota lain dengan format yang lebih kecil.</p>
+  <table>
+    <tr><th style="width:24%">Lokasi</th><th style="width:9%">Buka</th><th style="width:9%">Tier</th><th class="num" style="width:13%">Luas</th><th>Catatan</th></tr>
+    <tr><td>Alam Sutera, Tangerang</td><td>Okt 2014</td><td><span class="tier t1">T1</span></td><td class="num">±35.000 m²</td><td>Hub pertama; lahan 4,5 ha; 55+ room set, 3 rumah lengkap.</td></tr>
+    <tr><td>Sentul City, Bogor</td><td>Nov 2019</td><td><span class="tier t1">T1</span>/<span class="tier t2">T2</span></td><td class="num">15.345 m²</td><td>Konversi gedung eks-hipermarket Giant (milik grup); kira-kira setengah Alam Sutera; ada IKEA Business Point. Contoh <b>reuse aset grup</b>.</td></tr>
+    <tr><td>Kota Baru Parahyangan, Bandung Barat</td><td>Mar 2021</td><td><span class="tier t1">T1</span></td><td class="num">format besar</td><td>Ekspansi ke luar Jabodetabek; area "Teras Indonesia".</td></tr>
+    <tr><td>Jakarta Garden City, Jakarta Timur</td><td>2021</td><td><span class="tier t1">T1</span></td><td class="num">lahan 3,7 ha</td><td>Hub kedua Jabodetabek untuk sisi timur (GFA rencana termasuk parkir: 89.000 m²).</td></tr>
+    <tr><td>Bali (Kuta Central Park)</td><td>Nov 2021</td><td><span class="tier t3">T3</span>/<span class="tier t2">T2</span></td><td class="num">n/a</td><td>Diawali sebagai Customer Meeting Point; melayani pasar Bali dan hospitality.</td></tr>
+    <tr><td>Mal Taman Anggrek, Jakarta Barat</td><td>Apr 2022</td><td><span class="tier t2">T2</span></td><td class="num">9.400 m²</td><td>City store pertama di mal (Lt. 3–4) dengan Click &amp; Collect di P1.</td></tr>
+    <tr><td>Ciputra World, Surabaya</td><td>2023</td><td><span class="tier t2">T2</span></td><td class="num">±9.000 m²</td><td>Masuk Jawa Timur lewat mal, bukan blue box.</td></tr>
+  </table>
+  <p class="src">Sumber: ikea.co.id; Kompas, Liputan6, Viva, Kontan, Investor.id, Lysaght [18]. Kelompok tier adalah klasifikasi analis. Luas KBP, JGC, dan Bali tidak dipublikasikan secara konsisten.</p>
+  <div class="cols">
+    <div class="card"><h3>Pola strategi di Indonesia</h3><ul class="small"><li><b>Hub di Jabodetabek</b> (barat dan timur), lalu spoke mal di dalam kota dan city store di kota besar kedua (Surabaya).</li><li><b>Memanfaatkan aset grup Hero</b>: konversi Giant menjadi IKEA Sentul, sehingga capex dan waktu buka lebih ringan.</li><li><b>Lokalisasi kuat</b>: menu restoran lokal, Teras Indonesia, jam buka menyesuaikan mal.</li><li><b>Omnichannel</b>: app, pick-up point, dan Click &amp; Collect di mal.</li></ul></div>
+    <div class="card"><h3>Peluang yang terlihat</h3><ul class="small"><li>Kota tier-2 (Medan, Semarang, Makassar, Yogyakarta, Balikpapan) lebih cocok dengan <b>T3 small store / T4 P&amp;O + pick-up</b> daripada blue box.</li><li>Segmen B2B: hospitality Bali, kos/apartemen sewa, kantor.</li><li>Persaingan: Informa, Ace/AZKO (Kawan Lama), Mr. DIY, merek lokal di marketplace. Perang harga dan logistik antar-pulau menjadi tantangan utama.</li></ul></div>
+  </div>
+</div>
+
+<!-- ============ 11 SWOT ============ -->
+<div class="section">
+  <div class="kicker">11 · SWOT &amp; risiko</div>
+  <h1>SWOT IKEA (perspektif format &amp; ekspansi)</h1>
+  <div class="cols">
+    <div class="box"><h3>Strengths</h3><ul class="small"><li>Merek global dan skala purchasing; integrasi vertikal desain–supply–ritel</li><li>Balance sheet sangat kuat (equity 79%), modal sabar milik yayasan</li><li>Kepemilikan properti dan mall sendiri (Ingka Centres)</li><li>Toko besar sebagai destinasi; 915 jt kunjungan</li><li>Kemampuan omnichannel (28% online)</li></ul></div>
+    <div class="box red"><h3>Weaknesses</h3><ul class="small"><li>Penjualan turun 3 tahun berturut-turut (FY24–FY26)</li><li>Margin ritel tipis (EBIT Ingka 3,5%)</li><li>Toko besar mahal dan kaku; risiko aset tidak produktif (China, Memphis)</li><li>Kompleksitas organisasi (800 posisi Ingka dan 850 posisi Inter IKEA dipangkas)</li><li>Format kecil masih fase uji; beberapa sudah ditutup</li></ul></div>
+    <div class="box amber"><h3>Opportunities</h3><ul class="small"><li>Small store untuk kota menengah yang belum terlayani</li><li>Circular (second-hand, buy-back) dan jasa (assembly, planning)</li><li>Pasar baru: Selandia Baru, Amerika Tengah, India</li><li>Monetisasi traffic lewat mall milik sendiri</li><li>AI planning dan personalisasi</li></ul></div>
+    <div class="box" style="border-left-color:#7B5EA7;background:#F5F2FA"><h3>Threats</h3><ul class="small"><li>Daya beli dan kepercayaan konsumen lemah (Jerman, AS); pasar perumahan melambat</li><li>Tarif dagang dan gangguan supply chain</li><li>Kompetitor e-commerce (Amazon, Wayfair, Temu/Shein home) dan diskon (Jysk, Mr. DIY)</li><li>Geopolitik (China, Timur Tengah)</li><li>Kanibalisasi antar-format</li></ul></div>
+  </div>
+  <h2>Risiko khusus strategi multi-format</h2>
+  <table>
+    <tr><th>Risiko</th><th>Gejala</th><th>Mitigasi yang dilakukan IKEA</th></tr>
+    <tr><td>Kanibalisasi hub oleh spoke</td><td>Traffic T1 turun ketika T3 dibuka dekat hub</td><td>Spoke ditempatkan di luar catchment inti hub; KPI dihitung di level pasar/metro</td></tr>
+    <tr><td>Format kecil tidak mencapai skala</td><td>Sales per lokasi rendah; biaya sewa dan staf tinggi</td><td>Stage-gate (evaluasi setelah FY26), sewa jangka pendek, cepat ditutup (San Marcos, P&amp;O AS)</td></tr>
+    <tr><td>Fulfilment tidak siap</td><td>Lead time panjang, biaya last-mile tinggi</td><td>Investasi customer distribution centre, locker, mitra pick-up</td></tr>
+    <tr><td>Brand experience terdilusi</td><td>Toko kecil terasa "katalog saja"</td><td>Tetap ada room set, planning, dan food di T3</td></tr>
+  </table>
+</div>
+
+<!-- ============ 12 RECOMMENDATIONS ============ -->
+<div class="section">
+  <div class="kicker">12 · Implikasi &amp; rekomendasi</div>
+  <h1>Apa yang bisa diadopsi perusahaan kita</h1>
+  <p class="lead">Jika kita mengembangkan konsep toko bertingkat (misalnya di sektor home living atau ritel destinasi di Indonesia), kerangka di bawah adalah adaptasi praktik IKEA. Angka adalah titik awal untuk dikalibrasi dengan data internal.</p>
+  <table>
+    <tr><th style="width:15%">Tier (usulan)</th><th style="width:12%">Luas</th><th style="width:22%">Kriteria lokasi</th><th style="width:17%">Peran</th><th style="width:16%">Capex indikatif*</th><th>Gate keputusan</th></tr>
+    <tr><td><span class="tier t1">Hub</span></td><td>15–30 rb m²</td><td>Metro &gt;5 jt penduduk; akses tol; lahan milik/HGB jangka panjang</td><td>Stok, pengalaman, fulfilment metro</td><td>Rp 400–900 mlr (incl. lahan)</td><td>Business case 10 th; payback &lt;8–10 th</td></tr>
+    <tr><td><span class="tier t2">City/Mal</span></td><td>5–10 rb m²</td><td>Mal kelas A/B di kota &gt;2 jt; traffic mal tinggi</td><td>Flagship urban, planning</td><td>Rp 100–250 mlr (sewa)</td><td>Payback &lt;5–6 th; sewa ≤10–12% sales</td></tr>
+    <tr><td><span class="tier t3">Small</span></td><td>1,5–4 rb m²</td><td>Kota tier-2, mal/retail park, dalam radius delivery hub</td><td>Kedekatan, frekuensi, pick-up</td><td>Rp 25–70 mlr</td><td>Pilot 3–5 unit; evaluasi 12 bln; payback &lt;4 th</td></tr>
+    <tr><td><span class="tier t4">Plan &amp; Order</span></td><td>200–800 m²</td><td>Kota tanpa toko; area perkantoran/perumahan menengah atas</td><td>Penjualan proyek (dapur, wardrobe)</td><td>Rp 4–15 mlr</td><td>Konversi appointment &gt;30–40%</td></tr>
+    <tr><td><span class="tier t5">Pick-up</span></td><td>&lt;200 m² / locker</td><td>Mitra (supermarket grup, SPBU, logistik)</td><td>Jangkauan e-commerce</td><td>&lt;Rp 2 mlr</td><td>Biaya per order &lt; ongkir door-to-door</td></tr>
+  </table>
+  <p class="src">*Konversi dari estimasi EUR dengan asumsi ±Rp 17.500/€, disesuaikan dengan biaya konstruksi dan fit-out Indonesia yang lebih rendah. Asumsi payback dan sewa adalah benchmark umum ritel, bukan angka IKEA.</p>
+  <h2>Enam rekomendasi untuk BOD</h2>
+  <ol class="small" style="padding-left:5mm">
+    <li><b>Tetapkan arsitektur format resmi (3–5 tier)</b> dengan kriteria kuantitatif per tier: populasi catchment, drive-time, daya beli, target sales/m², dan envelope capex. Gunakan sebagai basis setiap proposal toko baru.</li>
+    <li><b>Bangun hub dulu, lalu spoke.</b> Spoke kecil IKEA bergantung pada stok dan fulfilment dari hub serta e-commerce. Tanpa backbone logistik, small store akan kekurangan range.</li>
+    <li><b>Asset strategy berbeda per tier:</b> miliki lahan untuk hub (nilai properti jangka panjang, seperti Ingka); sewa fleksibel 3–5 tahun dengan opsi exit untuk format kecil.</li>
+    <li><b>Stage-gate dan test-and-learn:</b> pilot 3–5 unit per format baru, evaluasi 12 bulan dengan KPI tetap, baru roll-out. IKEA sendiri menutup format yang gagal dalam 1–3 tahun.</li>
+    <li><b>Manfaatkan aset grup yang ada</b> (seperti Giant ke IKEA Sentul): konversi gedung atau ruang eksisting menekan capex dan time-to-market.</li>
+    <li><b>Ukur di level pasar/metro, bukan per toko:</b> hitung penjualan total metro (hub + spoke + online) untuk menghindari keputusan yang salah karena kanibalisasi.</li>
+  </ol>
+  <div class="box amber small"><b>Usulan langkah berikut:</b> (1) mapping white-space kota tier-1/2 dengan data populasi dan daya beli; (2) model finansial unit economics per tier memakai data biaya internal; (3) pilih 2–3 lokasi pilot small format dan 1 plan &amp; order point; (4) presentasi business case ke BOD dalam 90 hari.</div>
+</div>
+
+<!-- ============ APPENDIX ============ -->
+<div class="section">
+  <div class="kicker">Lampiran</div>
+  <h1>Metodologi, catatan data &amp; sumber</h1>
+  <h3>Metodologi</h3>
+  <ul class="small">
+    <li>Desk research atas laporan resmi (Inter IKEA Financial Summary FY25, Ingka Holding Annual Report FY25, Ingka Annual Summary FY25, Inter IKEA FY26 in review), siaran pers IKEA per negara, dan media bisnis (FT/Irish Times, Retail Dive, Kompas, dll.). Data hingga 10 November 2026.</li>
+    <li>Tahun buku IKEA: 1 September – 31 Agustus (FY25 = Sep 2024 – Agu 2025).</li>
+    <li>Tier T1–T5 adalah kerangka analis yang disusun dari klasifikasi resmi Ingka (blue box / city store / other formats) dan deskripsi format IKEA.</li>
+  </ul>
+  <h3>Catatan dan keterbatasan data</h3>
+  <ul class="small">
+    <li><b>Capex per toko tidak dipublikasikan IKEA.</b> Rentang per tier adalah estimasi analis. Benchmark proyek memakai kurs saat pengumuman dan sebagian merupakan rencana, bukan realisasi.</li>
+    <li>Jumlah toko global (semua franchisee) per format tidak dipublikasikan. Sumber pihak ketiga berbeda-beda (494 toko menurut Statista Okt 2025; 519 menurut FT untuk FY26).</li>
+    <li>Ingka Group FY26 belum merilis laporan per tanggal laporan ini; data FY26 berasal dari Inter IKEA dan media.</li>
+    <li>Ukuran beberapa toko berbeda antar-sumber (mis. Oxford Street 5.800 m² vs ±1/3 dari gedung 22.200 m²).</li>
+  </ul>
+  <h3>Daftar sumber</h3>
+  <ol class="small" style="padding-left:6mm; font-size:7.6pt">
+    <li>Inter IKEA Group, <i>Financial Summary FY25</i> (Nov 2025) — inter.ikea.com</li>
+    <li>IKEA, "IKEA retail sales figures for FY25" (16 Okt 2025) &amp; "The year in review FY25" — ikea.com/global</li>
+    <li>Ingka Holding B.V., <i>Annual Report Financial Year 2025</i> (adopted Nov 2025)</li>
+    <li>Ingka Group, <i>Annual Summary FY25</i> &amp; press release "…EUR 41.5 billion in revenue" (11 Nov 2025) — ingka.com</li>
+    <li>Inter IKEA, "FY26 in review" (Nov 2026); Irish Times/FT "Ikea sales drop as group cuts prices" (6 Nov 2026); Retail Insight Network (9 Nov 2026); Insight DIY (9 Nov 2026)</li>
+    <li>Invidis, "Ikea cuts 800 jobs, boosts store expansion" (23 Mar 2026); Fordaq, "Ingka Group to launch 20 compact stores" (Mar 2026)</li>
+    <li>Metro Mode, "IKEA closes stores around the world" (3 Nov 2026)</li>
+    <li>InteriorDaily, "IKEA expands footprint with new small-format store in Beijing" (5 Mei 2026)</li>
+    <li>IKEA U.S., "FY25 Annual Summary &amp; four new stores planned for 2026" (17 Feb 2026)</li>
+    <li>Ingka Group, "IKEA Retail announces biggest ever investment in US" (Apr 2023)</li>
+    <li>RetailDetail &amp; IADS, Paris La Madeleine (2019); Euronews, "€400 million investment in France" (2019)</li>
+    <li>Estates Gazette / 365retail / Fashion Network, Oxford Street £378m (2021); IKEA UK Annual Summary FY24; Fortune (Mei 2025)</li>
+    <li>Retail Dive (Dallas University Park); Patch &amp; Independent News (Pleasanton); BusinessWorld (TriNoma, Okt 2025); Crittenden Retail (P&amp;O sizes)</li>
+    <li>Memphis Flyer (Memphis US$65m); Vegas Inc (Las Vegas)</li>
+    <li>Scroll.in, IBTimes, Fibre2Fashion (Hyderabad &amp; Navi Mumbai investment)</li>
+    <li>Romania Insider, "Ikea plans EUR 18 mln store in Iași" (2024)</li>
+    <li>Ingka Group, "IKEA rolls out big investment plan in Spain" (Madrid city store)</li>
+    <li>ikea.co.id; Kompas (2019, 2021, 2023); Liputan6; Viva; Kontan (Surabaya); Investor.id (JGC); Lysaght (Alam Sutera); Wikipedia (Mal Taman Anggrek); Olenka (Jul 2026)</li>
+    <li>CNBC Indonesia, "IKEA mulai tutup beberapa toko" (12 Jul 2026)</li>
+    <li>Retail News Asia (Thailand store sizes); Statista (IKEA store count, Okt 2025)</li>
+  </ol>
+</div>
+
+</body>
+</html>

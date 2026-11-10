@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="382.68pt" height="55.957687pt" viewBox="0 0 382.68 55.957687" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T08:00:01.890684</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 55.957687 
+L 382.68 55.957687 
+L 382.68 0 
+L 0 0 
+L 0 55.957687 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 7.2 47.371687 
+L 353.997 47.371687 
+L 353.997 19.651687 
+L 7.2 19.651687 
+z
+" clip-path="url(#pb56ec5c241)" style="fill: #1f5fa8; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 353.997 47.371687 
+L 372.411 47.371687 
+L 372.411 19.651687 
+L 353.997 19.651687 
+z
+" clip-path="url(#pb56ec5c241)" style="fill: #e3a21a; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 372.411 47.371687 
+L 374.2245 47.371687 
+L 374.2245 19.651687 
+L 372.411 19.651687 
+z
+" clip-path="url(#pb56ec5c241)" style="fill: #b7c0cc; stroke: #ffffff; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Inter'; text-anchor: middle; fill: #ffffff" x="180.18" y="36.603729" transform="rotate(-0 180.18 36.603729)">Penjualan barang ke franchisee €24,9 mlr</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: end; fill: #1b2430" x="375.48" y="14.95" transform="rotate(-0 375.48 14.95)">Franchise fee €1,32 mlr (5%) ▼</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb56ec5c241">
+   <rect x="7.2" y="18.265687" width="368.28" height="30.492"/>
+  </clipPath>
+ </defs>
+</svg>
