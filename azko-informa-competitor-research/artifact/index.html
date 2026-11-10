@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peta Kompetitor AZKO & Informa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout: laporan strategi yang dipindai seperti dashboard. Ringkasan dulu, lalu bab bernomor, satu kolom lebar dengan grafik selebar teks. */
+  --bg: #f6f7f9;
+  --surface: #fcfcfb;
+  --ink: #0f1720;
+  --ink-2: #4a5361;
+  --muted: #858c97;
+  --line: #e2e5ea;
+  --line-strong: #c6cbd3;
+  --accent: #1f5fa8;
+  --accent-soft: #e6eef8;
+  --azko: #2a78d6;
+  --informa: #1baf7a;
+  --mdiy: #eb6834;
+  --other: #9aa1ab;
+  --other-strong: #6b7380;
+  --heat-0: #f0f2f5;
+  --heat-1: #cde2fb;
+  --heat-2: #86b6ef;
+  --heat-3: #2a78d6;
+  --heat-ink-3: #ffffff;
+  --good: #0ca30c;
+  --warn: #fab219;
+  --crit: #d03b3b;
+  --band: rgba(42,120,214,0.08);
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1116;
+    --surface: #161a20;
+    --ink: #eef1f5;
+    --ink-2: #b9c0ca;
+    --muted: #8a919c;
+    --line: #262c35;
+    --line-strong: #39414c;
+    --accent: #6ea8ec;
+    --accent-soft: #17263a;
+    --azko: #3987e5;
+    --informa: #199e70;
+    --mdiy: #d95926;
+    --other: #6b7380;
+    --other-strong: #9aa1ab;
+    --heat-0: #1c2129;
+    --heat-1: #184f95;
+    --heat-2: #2a78d6;
+    --heat-3: #86b6ef;
+    --heat-ink-3: #0b0b0b;
+    --band: rgba(57,135,229,0.12);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1116;
+  --surface: #161a20;
+  --ink: #eef1f5;
+  --ink-2: #b9c0ca;
+  --muted: #8a919c;
+  --line: #262c35;
+  --line-strong: #39414c;
+  --accent: #6ea8ec;
+  --accent-soft: #17263a;
+  --azko: #3987e5;
+  --informa: #199e70;
+  --mdiy: #d95926;
+  --other: #6b7380;
+  --other-strong: #9aa1ab;
+  --heat-0: #1c2129;
+  --heat-1: #184f95;
+  --heat-2: #2a78d6;
+  --heat-3: #86b6ef;
+  --heat-ink-3: #0b0b0b;
+  --band: rgba(57,135,229,0.12);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(28px, 4.2vw, 42px); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(22px, 2.8vw, 28px); font-weight: 800; letter-spacing: -0.01em; }
+h3 { font-size: 17px; font-weight: 700; }
+p { margin: 0; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+header.top { padding: 40px 0 24px; border-bottom: 1px solid var(--line); background: var(--surface); }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.lede { margin-top: 12px; max-width: 68ch; color: var(--ink-2); font-size: 16px; }
+.meta { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; font-size: 12.5px; color: var(--muted); }
+.meta span { border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; background: var(--bg); }
+
+nav.toc { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+nav.toc .wrap { display: flex; gap: 4px; overflow-x: auto; padding-top: 8px; padding-bottom: 8px; }
+nav.toc a { flex: none; text-decoration: none; color: var(--ink-2); font-size: 13.5px; font-weight: 600; padding: 6px 12px; border-radius: 8px; }
+nav.toc a:hover { background: var(--accent-soft); color: var(--ink); }
+nav.toc a .n { color: var(--muted); font-variant-numeric: tabular-nums; margin-right: 6px; }
+
+section.chapter { padding: 48px 0 8px; }
+.ch-head { display: grid; gap: 8px; margin-bottom: 24px; }
+.ch-head .num { font-size: 13px; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+.ch-head p { color: var(--ink-2); max-width: 70ch; }
+
+.grid { display: grid; gap: 16px; }
+.g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 860px) { .g3, .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .g2, .g3, .g4 { grid-template-columns: 1fr; } }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.card .sub { color: var(--ink-2); font-size: 13.5px; }
+.card .src { color: var(--muted); font-size: 12px; }
+.card.span2 { grid-column: span 2; }
+@media (max-width: 560px) { .card.span2 { grid-column: auto; } }
+
+.tile .big { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.tile .big small { font-size: 15px; font-weight: 700; color: var(--ink-2); }
+.tile .lbl { font-size: 13px; color: var(--ink-2); }
+.tile .cmp { font-size: 12.5px; color: var(--muted); }
+.tile { border-top: 3px solid var(--line-strong); }
+.tile.hot { border-top-color: var(--crit); }
+
+.key-list { display: grid; gap: 12px; counter-reset: k; padding: 0; margin: 0; list-style: none; }
+.key-list li { display: grid; grid-template-columns: 32px 1fr; gap: 12px; align-items: start; }
+.key-list li::before { counter-increment: k; content: counter(k); width: 28px; height: 28px; border-radius: 8px; background: var(--accent-soft); color: var(--accent); font-weight: 800; display: grid; place-items: center; font-size: 14px; }
+.key-list b { color: var(--ink); }
+.key-list span { color: var(--ink-2); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12.5px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.legend i.ring { background: transparent !important; border: 2px solid var(--other-strong); border-radius: 50%; }
+.legend i.dot { border-radius: 50%; }
+
+.chart { width: 100%; min-height: 40px; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { font-family: var(--font); }
+.scroll-x { overflow-x: auto; }
+
+details.tbl { font-size: 13px; }
+details.tbl summary { cursor: pointer; color: var(--accent); font-weight: 600; width: max-content; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 700; color: var(--ink-2); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+.status { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 12.5px; white-space: nowrap; }
+.status::before { content: ""; width: 16px; height: 16px; border-radius: 50%; flex: none; background-repeat: no-repeat; background-position: center; background-size: 10px; }
+.status.k::before { background-color: var(--good); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5.2l2 2 4-4.4' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.status.n::before { background-color: var(--warn); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2.5 5h5' stroke='%230b0b0b' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.status.l::before { background-color: var(--crit); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 3l4 4M7 3l-4 4' stroke='white' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E"); }
+
+.catgrid { display: grid; gap: 0; }
+.catrow { display: grid; grid-template-columns: minmax(0, 1.3fr) auto; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); align-items: center; }
+.catrow:last-child { border-bottom: 0; }
+.catrow .c { font-weight: 600; font-size: 14px; }
+.catrow .w { font-size: 12.5px; color: var(--muted); grid-column: 1 / -1; margin-top: -4px; }
+
+.heat td.h { text-align: center; font-weight: 700; letter-spacing: 1px; min-width: 64px; }
+.heat td.h0 { background: var(--heat-0); color: var(--muted); }
+.heat td.h1 { background: var(--heat-1); color: #0b0b0b; }
+.heat td.h2 { background: var(--heat-2); color: #0b0b0b; }
+.heat td.h3 { background: var(--heat-3); color: var(--heat-ink-3); }
+.heat th.rowh { text-transform: none; letter-spacing: 0; font-size: 13px; color: var(--ink); white-space: nowrap; }
+.heat td, .heat th { border: 2px solid var(--surface); }
+.heat thead th { font-size: 11px; text-align: center; vertical-align: bottom; }
+
+.ladder { display: grid; gap: 8px; }
+.rung { display: grid; grid-template-columns: 110px 1fr; gap: 12px; align-items: stretch; }
+.rung .tag { border-radius: 8px; padding: 8px 10px; font-weight: 700; font-size: 12.5px; display: grid; align-content: center; background: var(--accent-soft); color: var(--ink); }
+.rung .body { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; font-size: 13.5px; color: var(--ink-2); }
+.rung .body b { color: var(--ink); }
+.rung.new .tag { background: var(--azko); color: #fff; }
+.rung.new.inf .tag { background: var(--informa); color: #0b0b0b; }
+
+.hyp { display: grid; gap: 10px; }
+.hyp .top { display: flex; justify-content: space-between; gap: 10px; align-items: start; flex-wrap: wrap; }
+.hyp .id { font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+.hyp p { font-size: 13.5px; color: var(--ink-2); }
+.hyp q { font-weight: 600; color: var(--ink); quotes: none; }
+
+.trend h3 { font-size: 15px; }
+.trend .ex { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; color: var(--ink-2); background: var(--bg); }
+.trend .dir { font-size: 13px; color: var(--ink-2); }
+
+.callout { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 12px 16px; border-radius: 0 8px 8px 0; font-size: 14px; color: var(--ink); }
+.note { font-size: 12.5px; color: var(--muted); }
+
+#tip { position: fixed; z-index: 50; pointer-events: none; background: var(--ink); color: var(--surface); font-size: 12.5px; line-height: 1.45; padding: 8px 10px; border-radius: 8px; max-width: 280px; opacity: 0; transition: opacity .08s; box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+#tip b { font-weight: 700; }
+#tip.on { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { #tip { transition: none; } html { scroll-behavior: auto; } }
+html { scroll-behavior: smooth; }
+
+footer { margin-top: 56px; padding: 28px 0 48px; border-top: 1px solid var(--line); background: var(--surface); color: var(--muted); font-size: 12.5px; }
+.srcs { columns: 2 320px; column-gap: 32px; font-size: 13px; }
+.srcs li { break-inside: avoid; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div id="tip" role="tooltip"></div>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Riset kompetitor · Ritel rumah & gaya hidup Indonesia</div>
+    <h1>Peta Kompetitor AZKO & Informa</h1>
+    <p class="lede">Siapa yang bisa menggerus pasar AZKO dan Informa, di kategori apa, dengan format toko seperti apa, dan apa yang sedang diuji kompetitor di luar negeri yang mungkin dibawa ke Indonesia hingga 2030.</p>
+    <div class="meta"><span>Data per 10 November 2026</span><span>Rentang 2023–2026</span><span>Cakupan nasional</span><span>Riset desk: laporan perusahaan, riset sekuritas, media</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Daftar bab">
+  <div class="wrap">
+    <a href="#ringkasan"><span class="n">01</span>Ringkasan</a>
+    <a href="#bedah"><span class="n">02</span>AZKO & Informa</a>
+    <a href="#kompetitor"><span class="n">03</span>Kompetitor</a>
+    <a href="#harga"><span class="n">04</span>Harga</a>
+    <a href="#format"><span class="n">05</span>Format toko</a>
+    <a href="#masa-depan"><span class="n">06</span>2026–2030</a>
+    <a href="#respons"><span class="n">07</span>Implikasi</a>
+    <a href="#sumber"><span class="n">08</span>Sumber</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- 01 -->
+<section class="chapter" id="ringkasan">
+  <div class="ch-head">
+    <div class="num">01</div>
+    <h2>Ringkasan: ancaman terbesar datang dari luar kategori "home improvement"</h2>
+  </div>
+  <div class="grid g4">
+    <div class="card tile hot">
+      <div class="lbl">Pendapatan semester I 2026</div>
+      <div class="big">Rp4,65 T <small>MR.D.I.Y.</small></div>
+      <div class="cmp">vs ACES (AZKO) ±Rp4,5 T. MR.D.I.Y. tumbuh +24,5%, ACES +6,3%</div>
+    </div>
+    <div class="card tile hot">
+      <div class="lbl">Jumlah toko</div>
+      <div class="big">1.400 <small>vs 276</small></div>
+      <div class="cmp">MR.D.I.Y. (445 kab/kota) vs AZKO (±75 kota)</div>
+    </div>
+    <div class="card tile">
+      <div class="lbl">Toko Ace Hardware (MAPI)</div>
+      <div class="big">3 <small>toko</small></div>
+      <div class="cmp">Kembali Juli 2026, target awal 5–7 toko. Konsep ala AS</div>
+    </div>
+    <div class="card tile">
+      <div class="lbl">Erablue (elektronik)</div>
+      <div class="big">307 <small>toko</small></div>
+      <div class="cmp">Dari 5 toko (2022). Target 500 (2027), payback ±16 bulan</div>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card">
+      <h3>Lima hal utama</h3>
+      <ol class="key-list">
+        <li><div><b>MR.D.I.Y. sudah menyusul ACES.</b> <span>Menang di harga, kedekatan lokasi, dan kecepatan buka toko. Kategorinya bertabrakan dengan separuh "lifestyle" AZKO.</span></div></li>
+        <li><div><b>Marketplace adalah pesaing semua kategori.</b> <span>Untuk barang komoditas, Shopee 30–217% lebih murah dari NEKA.</span></div></li>
+        <li><div><b>Ace Hardware kembali, membawa merek dan konsep yang mirip AZKO.</b> <span>Sasarannya kemungkinan segmen premium: power tools bermerek, BBQ, outdoor.</span></div></li>
+        <li><div><b>Informa relatif aman dari sisi jaringan</b> <span>(120+ toko vs IKEA 6), tetapi IKEA format kecil, Dekoruma, dan Erablue mengincar celahnya.</span></div></li>
+        <li><div><b>Pasar "bertemu di tengah".</b> <span>Pemain murah naik kelas lewat flagship, pemain big box mengecil ke mal. Titik temunya mal kelas menengah, basis AZKO dan Informa.</span></div></li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3>Skor ancaman per kompetitor</h3>
+      <p class="sub">Total dari 4 faktor (overlap kategori, keunggulan harga, momentum ekspansi, kekuatan merek/finansial), masing-masing 1–5. Arahkan kursor ke batang untuk rinciannya.</p>
+      <div class="legend"><span><i style="background:var(--azko)"></i>Terutama menggerus AZKO</span><span><i style="background:var(--informa)"></i>Terutama menggerus Informa</span><span><i style="background:var(--other)"></i>Keduanya</span></div>
+      <div class="chart" id="c-threat"></div>
+      <div class="src">Skor penilaian penulis (estimasi) berdasarkan data publik. Lihat Bab 9.4 laporan tahap 1.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="chapter" id="bedah">
+  <div class="ch-head">
+    <div class="num">02</div>
+    <h2>AZKO & Informa: jualan apa, kuat di mana</h2>
+    <p>AZKO separuh home improvement, separuh gaya hidup. Karena itu kompetitornya jauh lebih luas daripada toko bangunan. Informa adalah jaringan furnitur modern terbesar, dengan Informa Electronics dan Custom Furniture sebagai sub-format.</p>
+  </div>
+
+  <div class="grid g2">
+    <div class="card span2">
+      <h3>Bauran penjualan ACES, semester I 2025 (Rp4,26 triliun)</h3>
+      <div class="chart" id="c-mix"></div>
+      <div class="src">Sumber: data perusahaan via Bisnis.com. Toys = Toys Kingdom.</div>
+    </div>
+
+    <div class="card">
+      <h3>AZKO: posisi per kategori</h3>
+      <div class="legend"><span class="status k">Kuat</span><span class="status n">Netral</span><span class="status l">Lemah</span></div>
+      <div class="catgrid" id="cat-azko"></div>
+    </div>
+    <div class="card">
+      <h3>Informa: posisi per kategori</h3>
+      <div class="legend"><span class="status k">Kuat</span><span class="status n">Netral</span><span class="status l">Lemah</span></div>
+      <div class="catgrid" id="cat-informa"></div>
+      <div class="callout" style="margin-top:8px">Informa tidak tercatat di bursa, jadi bauran penjualannya tidak tersedia. Posisi dinilai dari jaringan, harga, dan kompetisi per kategori.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="chapter" id="kompetitor">
+  <div class="ch-head">
+    <div class="num">03</div>
+    <h2>Kompetitor: skala, pertumbuhan, dan kategori yang bertabrakan</h2>
+  </div>
+  <div class="grid g2">
+    <div class="card">
+      <h3>ACES vs MR.D.I.Y. Indonesia: pendapatan</h3>
+      <div class="legend"><span><i style="background:var(--azko)"></i>ACES (AZKO, Toys Kingdom, NEKA)</span><span><i style="background:var(--mdiy)"></i>MR.D.I.Y. Indonesia</span></div>
+      <div class="chart" id="c-rev"></div>
+      <div class="src">Rp triliun. Sumber: Kontan, Stockwatch, IDX Channel, BRIDS. Pendapatan ACES semester I 2026 dibulatkan.</div>
+    </div>
+    <div class="card">
+      <h3>Jumlah toko di Indonesia</h3>
+      <div class="legend"><span><i style="background:var(--azko)"></i>Kawan Lama: AZKO, NEKA</span><span><i style="background:var(--informa)"></i>Kawan Lama: Informa</span><span><i style="background:var(--other)"></i>Kompetitor</span></div>
+      <div class="chart" id="c-stores"></div>
+      <div class="src">Angka terbaru 2025–2026 dari berbagai sumber. Miniso 300–357 (definisi berbeda). Informa "120+".</div>
+    </div>
+    <div class="card span2">
+      <h3>Overlap kategori: siapa bermain di mana</h3>
+      <p class="sub">Makin gelap, makin besar overlap dengan kategori AZKO/Informa.</p>
+      <div class="scroll-x"><table class="heat" id="t-heat"></table></div>
+      <div class="legend"><span><i style="background:var(--heat-0)"></i>Tidak ada</span><span><i style="background:var(--heat-1)"></i>Rendah (●)</span><span><i style="background:var(--heat-2)"></i>Sedang (●●)</span><span><i style="background:var(--heat-3)"></i>Tinggi (●●●)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="chapter" id="harga">
+  <div class="ch-head">
+    <div class="num">04</div>
+    <h2>Harga: di barang komoditas, AZKO berada di ujung atas</h2>
+    <p>Survei BRI Danareksa (Jan 2026) membandingkan NEKA, format murah ACES, dengan MR.D.I.Y. dan Shopee untuk barang yang setara. Harga AZKO umumnya di atas NEKA.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card span2">
+      <h3>Harga 7 barang setara: NEKA vs MR.D.I.Y. vs Shopee</h3>
+      <div class="legend"><span><i class="dot" style="background:var(--azko)"></i>NEKA (ACES)</span><span><i class="dot" style="background:var(--mdiy)"></i>MR.D.I.Y.</span><span><i class="ring"></i>Shopee</span></div>
+      <div class="chart" id="c-price"></div>
+      <details class="tbl"><summary>Lihat tabel</summary><div class="scroll-x"><table id="t-price"></table></div></details>
+      <div class="src">Sumber: BRIDS, "NEKA's Store Visit Takeaways", 30 Januari 2026.</div>
+    </div>
+    <div class="card span2">
+      <h3>Tangga harga (perkiraan)</h3>
+      <div class="chart" id="c-ladder"></div>
+      <div class="src">Posisi relatif, bukan skala harga absolut. Estimasi penulis dari benchmark harga dan positioning.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="chapter" id="format">
+  <div class="ch-head">
+    <div class="num">05</div>
+    <h2>Format toko: semua bergerak ke ukuran 600–3.000 m² di mal</h2>
+    <p>Pemain murah membesar lewat flagship (MR.D.I.Y. PLUS, SUPER MINISO). Pemain big box mengecil ke mal (IKEA city store dan compact, Nitori urban). Rentang 600–3.000 m² adalah ukuran toko mal kelas menengah, tempat AZKO dan Informa berada.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card span2">
+      <h3>Spektrum ukuran format toko (m², skala logaritmik)</h3>
+      <div class="legend"><span><i style="background:var(--azko)"></i>Kawan Lama</span><span><i style="background:var(--mdiy)"></i>Format pemain murah yang naik kelas</span><span><i style="background:var(--other)"></i>Format lain</span><span><i style="background:var(--band);border:1px solid var(--line-strong)"></i>Zona temu 600–3.000 m²</span></div>
+      <div class="chart" id="c-format"></div>
+      <div class="src">Ukuran dari rilis dan liputan 2022–2026. Toko AZKO Alam Sutera = eks-flagship Ace. NEKA tidak dipublikasikan luasnya.</div>
+    </div>
+
+    <div class="card span2">
+      <h3>Verifikasi hipotesis</h3>
+      <div class="grid g3" id="hyp"></div>
+    </div>
+
+    <div class="card">
+      <h3>MR.D.I.Y.: apakah desainnya naik kelas?</h3>
+      <div class="scroll-x"><table id="t-mrdiy"></table></div>
+      <div class="callout">Desainnya naik kelas, harganya tidak. Konsumen kelas menengah atas kini mendapat pengalaman belanja yang mendekati AZKO dengan harga MR.D.I.Y.</div>
+    </div>
+    <div class="card">
+      <h3>IKEA: playbook format kecil 2022–2026</h3>
+      <div class="ladder" id="ikea"></div>
+      <div class="callout">IKEA Indonesia dioperasikan DFI/HERO (bukan Ikano), tetapi HERO sudah menyebut "format lebih variatif" untuk 2026.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="chapter" id="masa-depan">
+  <div class="ch-head">
+    <div class="num">06</div>
+    <h2>2026–2030: format mana yang masuk, dan seberapa sakit</h2>
+    <p>Sumbu horizontal: peluang format masuk atau membesar di Indonesia pada 2028. Sumbu vertikal: dampak ke AZKO atau Informa. Kanan atas adalah prioritas pantauan.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card span2">
+      <h3>Matriks peluang × dampak</h3>
+      <div class="legend"><span><i class="dot" style="background:var(--azko)"></i>Dampak terbesar ke AZKO</span><span><i class="dot" style="background:var(--informa)"></i>Dampak terbesar ke Informa</span></div>
+      <div class="chart" id="c-matrix"></div>
+      <div class="src">Penilaian penulis (estimasi), skala 1–5.</div>
+    </div>
+    <div class="card span2">
+      <h3>Delapan tren format</h3>
+      <div class="grid g4" id="trends"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="chapter" id="respons">
+  <div class="ch-head">
+    <div class="num">07</div>
+    <h2>Implikasi: arsitektur format untuk AZKO & Informa</h2>
+    <p>Bahan diskusi, bukan rekomendasi final. Baris berwarna adalah format yang belum dimiliki.</p>
+  </div>
+  <div class="grid g2">
+    <div class="card">
+      <h3>AZKO</h3>
+      <div class="ladder" id="arch-azko"></div>
+    </div>
+    <div class="card">
+      <h3>Informa</h3>
+      <div class="ladder" id="arch-informa"></div>
+    </div>
+    <div class="card span2">
+      <h3>Sinyal yang perlu dipantau</h3>
+      <div class="scroll-x"><table id="t-signals"></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="chapter" id="sumber">
+  <div class="ch-head">
+    <div class="num">08</div>
+    <h2>Sumber utama & catatan</h2>
+    <p>Riset desk tanpa kunjungan toko. Detail desain berasal dari liputan dan rilis. Pangsa pasar dan skor adalah estimasi. Laporan lengkap (2 dokumen Markdown, termasuk 100+ tautan sumber) ada di repositori riset.</p>
+  </div>
+  <ul class="srcs">
+    <li><a href="https://www.brights.id/id/riset-dan-berita/laporan-riset/aspirasi-hidup-indonesia-acesij-rp394-buy-tp-rp550-nekas-store-visit-takeaways-promising-value-proposition-though-still-in-early-execution-stage">BRIDS – NEKA store visit (Jan 2026)</a></li>
+    <li><a href="https://market.bisnis.com/read/20250824/192/1905110/target-saham-aces-di-tengah-daya-beli-lesu-hingga-persaingan-ketat">Bisnis – segmen penjualan ACES</a></li>
+    <li><a href="https://www.idxchannel.com/market-news/azko-aces-catat-penjualan-rp45-triliun-di-semester-i-2026-tumbuh-63-persen/2">IDX Channel – ACES semester I 2026</a></li>
+    <li><a href="https://stockwatch.id/pendapatan-mdiy-rp465-triliun-laba-semester-i-2026-tembus-rp5907-miliar/amp">Stockwatch – MDIY semester I 2026</a></li>
+    <li><a href="https://industri.kontan.co.id/news/daya-intiguna-yasa-mdiy-resmi-punya-1400-toko-targetkan-buka-270-gerai-tahun-ini">Kontan – MR.D.I.Y. 1.400 toko</a></li>
+    <li><a href="https://market.bisnis.com/read/20260625/192/1983253/mapi-tantang-dominasi-kawan-lama-lewat-ace-hardware">Bisnis – MAPI & Ace Hardware</a></li>
+    <li><a href="https://www.sultramedia.id/map-buka-gerai-ace-hardware-indonesia">Sultramedia – tiga gerai Ace (Okt 2026)</a></li>
+    <li><a href="https://csahome.com/wp-content/uploads/2026/06/CSAP-Materi-Public-Expose.pdf">CSAP – public expose Juni 2026</a></li>
+    <li><a href="https://industri.kontan.co.id/news/ikea-indonesia-bidik-pertumbuhan-berkelanjutan-dan-profitabilitas-pada-2026">Kontan – IKEA Indonesia 2026</a></li>
+    <li><a href="https://erajaya.com/news/erablue-electronics-resmi-buka-toko-ke-300-di-cempaka-putih-hadirkan-elektronik-harga-pabrik-untuk-masyarakat-jakarta">Erajaya – Erablue toko ke-300</a></li>
+    <li><a href="https://www.vietcap.com.vn/en/research-center/erablue-capturing-indonesia-s-underserved-ce-market-store-visit-note">Vietcap – Erablue store visit</a></li>
+    <li><a href="https://www.discountretailconsulting.com/post/spain-mr-d-i-y-opens-a-new-store-model">DRC – konsep baru MR.D.I.Y. Spanyol</a></li>
+    <li><a href="https://www.diyinternational.com/content/diyplus/2022/07/01/the-opposite-of-a-bazaar.html">DIY International – MR.D.I.Y. PLUS</a></li>
+    <li><a href="https://www.thejakartapost.com/business/2026/03/03/mr-d-i-y-brings-modern-retail-concept-with-second-flagship-opening">Jakarta Post – flagship Bekasi</a></li>
+    <li><a href="https://www.interiordaily.com/article/9831156/ikea-korea-shifts-strategy-toward-urban-stores-and-services-amid-weak-housing-market/">Interior Daily – IKEA Korea toko kota</a></li>
+    <li><a href="https://fortune.com/europe/2025/05/01/ikea-central-london-city-store-oxford-street">Fortune – IKEA Oxford Street</a></li>
+    <li><a href="https://marketech-apac.com/ikea-to-close-7-physical-stores-in-china-moves-toward-small-format-expansion/">Marketech APAC – IKEA China</a></li>
+    <li><a href="https://www.malaymail.com/amp/news/malaysia/2026/08/25/ikea-picks-kuching-for-first-ever-small-store-format-in-malaysia-eyes-december-opening/232547">Malay Mail – IKEA Kuching</a></li>
+    <li><a href="https://newsroom.acehardware.com/2025-08-14-Ace-Hardware-Marks-One-Year-Milestone-of-ELEVATE3-Ace-Experiential-Store-Format">Ace Hardware – ELEVATE³</a></li>
+    <li><a href="https://insideretail.asia/2026/02/04/miniso-accelerates-ip-strategy-rolls-out-miniso-land-as-growth-driver/">Inside Retail – MINISO LAND</a></li>
+    <li><a href="https://insideretail.asia/2026/08/18/miniso-opens-first-miniso-friends-store-in-indonesia/">Inside Retail – Miniso Friends Indonesia</a></li>
+    <li><a href="https://www.businesswire.com/news/home/20260118173275/en/KKV-Opens-Its-Second-Global-Flagship-Store-in-Ho-Chi-Minh-City">BusinessWire – KKV flagship HCMC</a></li>
+    <li><a href="https://market.bisnis.com/read/20260501/192/1970707/mr-diy-mdiy-masuk-jadi-investor-non-pengendali-di-kkv">Bisnis – MDIY investor di KKV</a></li>
+    <li><a href="https://insideretail.asia/2026/04/01/why-are-thailands-diy-giants-losing-momentum/">Inside Retail – DIY Thailand melambat</a></li>
+    <li><a href="https://www.malaymail.com/news/money/mediaoutreach/2026/04/28/easyhome-launches-first-flagship-store-in-kuala-lumpur/462029">Malay Mail – Easyhome Malaysia</a></li>
+    <li><a href="https://teknologi.bisnis.com/read/20260516/84/1974139/pangsa-pasar-e-commerce-2025-shopee-tiktok-gerus-bukalapak-blibli-dan-lazada">Bisnis – pangsa e-commerce 2025</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Riset desk per 10 November 2026. Angka bertanda estimasi adalah penilaian penulis. Beberapa jumlah toko berasal dari sumber yang lebih lama atau saling bertentangan, jadi perlakukan sebagai indikasi.</div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg";
+  var tip = document.getElementById("tip");
+
+  function tok(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function fmt(n, d) { return n.toLocaleString("id-ID", { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); }
+
+  function showTip(e, html) {
+    tip.innerHTML = html; tip.classList.add("on");
+    var x, y;
+    if (e.clientX !== undefined && e.type.indexOf("mouse") === 0) { x = e.clientX; y = e.clientY; }
+    else { var r = e.target.getBoundingClientRect(); x = r.left + r.width / 2; y = r.top; }
+    var tw = tip.offsetWidth, th = tip.offsetHeight;
+    var left = Math.min(window.innerWidth - tw - 8, Math.max(8, x + 14));
+    var top = y - th - 12; if (top < 8) top = y + 18;
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  }
+  function hideTip() { tip.classList.remove("on"); }
+  function bindTip(node, html) {
+    node.setAttribute("tabindex", "0");
+    node.style.cursor = "default";
+    node.addEventListener("mousemove", function (e) { showTip(e, html); });
+    node.addEventListener("mouseleave", hideTip);
+    node.addEventListener("focus", function (e) { showTip(e, html); });
+    node.addEventListener("blur", hideTip);
+  }
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function txt(parent, x, y, s, attrs) {
+    var a = Object.assign({ x: x, y: y, "font-size": 12, fill: tok("--ink-2") }, attrs || {});
+    var t = el("text", a, parent); t.textContent = s; return t;
+  }
+  function svgFor(container, w, h) {
+    container.innerHTML = "";
+    var s = el("svg", { viewBox: "0 0 " + w + " " + h, width: w, height: h, role: "img" });
+    container.appendChild(s); return s;
+  }
+  // bar with rounded data-end (right), square at baseline
+  function hbarPath(x, y, w, h) {
+    var r = Math.min(4, w / 2, h / 2);
+    if (w <= 0) return "";
+    return "M" + x + "," + y + "h" + (w - r) + "a" + r + "," + r + " 0 0 1 " + r + "," + r + "v" + (h - 2 * r) + "a" + r + "," + r + " 0 0 1 " + (-r) + "," + r + "h" + (-(w - r)) + "z";
+  }
+  function vbarPath(x, yTop, w, h) {
+    var r = Math.min(4, w / 2, h / 2);
+    if (h <= 0) return "";
+    return "M" + x + "," + (yTop + h) + "v" + (-(h - r)) + "a" + r + "," + r + " 0 0 1 " + r + "," + (-r) + "h" + (w - 2 * r) + "a" + r + "," + r + " 0 0 1 " + r + "," + r + "v" + (h - r) + "z";
+  }
+
+  // ---------- data ----------
+  var threat = [
+    { n: "Shopee / TikTok Shop", t: "both", o: 5, h: 5, m: 4, k: 5 },
+    { n: "MR.D.I.Y.", t: "azko", o: 4, h: 5, m: 5, k: 4 },
+    { n: "Erablue", t: "informa", o: 3, h: 4, m: 5, k: 3 },
+    { n: "Miniso + KKV", t: "azko", o: 3, h: 3, m: 4, k: 4 },
+    { n: "IKEA", t: "informa", o: 4, h: 3, m: 2, k: 5 },
+    { n: "Ace Hardware (MAPI)", t: "azko", o: 5, h: 2, m: 2, k: 4 },
+    { n: "Dekoruma", t: "informa", o: 4, h: 3, m: 3, k: 3 },
+    { n: "Mitra10 / Atria", t: "both", o: 3, h: 3, m: 3, k: 4 },
+    { n: "Depo Bangunan", t: "azko", o: 2, h: 3, m: 3, k: 3 },
+    { n: "Mebel lokal / interior", t: "informa", o: 3, h: 4, m: 2, k: 1 },
+    { n: "Brand kasur", t: "informa", o: 3, h: 2, m: 2, k: 3 },
+    { n: "Nitori / JYSK", t: "informa", o: 3, h: 2, m: 2, k: 3 },
+    { n: "Electronic City / Xiaomi", t: "informa", o: 2, h: 3, m: 2, k: 3 }
+  ];
+  var tcol = { azko: "--azko", informa: "--informa", both: "--other" };
+  var tname = { azko: "AZKO", informa: "Informa", both: "AZKO & Informa" };
+
+  var stores = [
+    { n: "MR.D.I.Y.", v: 1400, c: "--other", note: "Agustus 2026; 445 dari 514 kab/kota" },
+    { n: "Miniso", v: 357, c: "--other", note: "Nov 2026; sumber lain menyebut 300+" },
+    { n: "Erablue", v: 307, c: "--other", note: "Agustus 2026; target 500 di 2027" },
+    { n: "AZKO", v: 276, c: "--azko", note: "Pertengahan 2026" },
+    { n: "Informa", v: 120, c: "--informa", note: "\"120+ toko di 60+ kota\"" },
+    { n: "Mitra10", v: 57, c: "--other", note: "Juni 2026; target 100 di 2030" },
+    { n: "Dekoruma", v: 39, c: "--other", note: "Nov 2025; Experience Center" },
+    { n: "Atria", v: 31, c: "--other", note: "Juni 2026; shop-in-shop Mitra10" },
+    { n: "Depo Bangunan", v: 17, c: "--other", note: "Nov 2025; target 20 di 2026" },
+    { n: "NEKA", v: 12, c: "--azko", note: "Maret 2026; target 40–50 di 2026" },
+    { n: "KKV", v: 10, c: "--other", note: "Masuk April 2026 (tahap awal)" },
+    { n: "IKEA", v: 6, c: "--other", note: "Tidak ada toko baru di 2026" },
+    { n: "Ace Hardware (MAPI)", v: 3, c: "--other", note: "Okt 2026; target awal 5–7" },
+    { n: "Nitori", v: 3, c: "--other", note: "Feb 2025" }
+  ];
+
+  var rev = [
+    { p: "2025 (setahun)", a: 8.7, ag: "+1,9%", m: 7.9, mg: "+16,7%" },
+    { p: "Semester I 2026", a: 4.5, ag: "+6,3%", m: 4.65, mg: "+24,5%" }
+  ];
+
+  var mix = [
+    { n: "Home Improvement", v: 2.19, p: 51 },
+    { n: "Lifestyle", v: 1.88, p: 44 },
+    { n: "Toys", v: 0.19, p: 5 }
+  ];
+
+  var catAzko = [
+    ["Perkakas tangan & listrik", "k", "Krisbow + 32 service center"],
+    ["Pengalaman toko & kelengkapan", "k", "43 ribu SKU, experience store"],
+    ["Merek", "k", "Kini diuji kembalinya Ace Hardware"],
+    ["Listrik, lampu & plumbing", "n", "MR.D.I.Y. lebih murah, Mitra10 lebih dalam"],
+    ["Kipas, air purifier & small appliances", "n", "Tekanan harga: Erablue, marketplace"],
+    ["Housewares, storage & kebersihan", "n", "Unggul kualitas, kalah harga"],
+    ["Furnitur ringan & bed/bath", "n", "Pelengkap; IKEA, Nitori"],
+    ["Mainan (Toys Kingdom)", "n", "Miniso, KKV, marketplace"],
+    ["Travel, gift & lifestyle", "l", "Konsumen muda pindah ke toko IP"],
+    ["Jangkauan kota kecil", "l", "±75 kota vs MR.D.I.Y. 445"],
+    ["Bahan bangunan berat", "l", "Tidak bermain; Mitra10, Depo menguasai"]
+  ];
+  var catInf = [
+    ["Furnitur kelas menengah", "k", "Jaringan terbesar, harga bersaing dengan IKEA"],
+    ["Custom furniture & kitchen set", "k", "Satu-satunya jaringan nasional; garansi 3 tahun"],
+    ["Kasur", "n", "Showroom brand & kasur online"],
+    ["Dekorasi, dapur & tekstil", "n", "IKEA, Miniso, JYSK, Nitori"],
+    ["Furnitur hemat (SELMA)", "n", "Olympic, marketplace, mebel lokal"],
+    ["B2B / komersial", "n", "Chitose, Vivere, kontraktor"],
+    ["Elektronik & appliances", "l", "Erablue 307 toko + layanan pasang"]
+  ];
+
+  var heatCols = ["MR.D.I.Y.", "Ace (MAPI)", "Mitra10/Depo", "IKEA", "Miniso/KKV", "Erablue/EC", "Dekoruma/Atria", "Marketplace"];
+  var heatRows = [
+    ["Perkakas", 2, 3, 3, 1, 0, 0, 0, 3],
+    ["Listrik & lampu", 3, 3, 3, 2, 1, 0, 1, 3],
+    ["Plumbing & kamar mandi", 1, 3, 3, 1, 0, 0, 0, 2],
+    ["Small appliances", 2, 2, 2, 1, 2, 3, 2, 3],
+    ["Housewares & storage", 3, 3, 2, 3, 2, 0, 1, 3],
+    ["Lifestyle/gift/travel", 2, 2, 0, 2, 3, 0, 1, 3],
+    ["Mainan", 2, 1, 0, 1, 3, 0, 0, 3],
+    ["Furnitur", 1, 1, 2, 3, 0, 0, 3, 3],
+    ["Kasur", 0, 0, 2, 2, 0, 0, 2, 3],
+    ["Elektronik besar", 0, 0, 2, 0, 0, 3, 1, 3],
+    ["Custom furniture/interior", 0, 0, 1, 1, 0, 0, 2, 1]
+  ];
+
+  var price = [
+    { p: "Kipas meja 8\"", k: "Listrik", neka: 299900, mdiy: 140000, sh: 214500 },
+    { p: "Stop kontak 3 lubang", k: "Listrik", neka: 89900, mdiy: 52000, sh: 28372 },
+    { p: "Container 50L", k: "Storage", neka: 100000, mdiy: 80000, sh: 63000 },
+    { p: "Tempat sampah pedal 10L", k: "Storage", neka: 75000, mdiy: 80000, sh: 46989 },
+    { p: "Rak sepatu 10 susun", k: "Storage", neka: 80000, mdiy: 75000, sh: 61740 },
+    { p: "Meja laptop", k: "Furnitur", neka: 80000, mdiy: 100000, sh: 45999 },
+    { p: "Spin mop set", k: "Kebersihan", neka: 160000, mdiy: 230000, sh: 71700 }
+  ];
+
+  var ladderH = ["Marketplace (impor China)", "MR.D.I.Y. ≈ NEKA", "Miniso / KKV", "Mitra10 / Depo", "AZKO ≈ Ace (MAPI)"];
+  var ladderF = ["Marketplace / mebel lokal", "Olympic (knock-down)", "SELMA", "IKEA ≈ Informa ≈ Atria", "Nitori / JYSK", "Vivere / premium"];
+
+  var formats = [
+    { n: "Erablue supermini", a: 180, b: 220, g: "o", w: "Indonesia" },
+    { n: "MR.D.I.Y. Express", a: 200, b: 300, g: "m", w: "Malaysia" },
+    { n: "Miniso standar", a: 300, b: 300, g: "o", w: "Global" },
+    { n: "MR.D.I.Y. konsep baru Spanyol", a: 550, b: 740, g: "m", w: "Spanyol 2026" },
+    { n: "IKEA compact (Korea)", a: 600, b: 1000, g: "o", w: "Korea 2025–26" },
+    { n: "Ace ELEVATE³", a: 930, b: 1200, g: "o", w: "AS" },
+    { n: "SUPER MINISO", a: 990, b: 990, g: "m", w: "Jakarta, Okt 2026" },
+    { n: "MR.D.I.Y. flagship", a: 1100, b: 1100, g: "m", w: "Bekasi, Feb 2026" },
+    { n: "MINISO FRIENDS", a: 1500, b: 1500, g: "m", w: "Bekasi, Agu 2026" },
+    { n: "HomePro S", a: 2000, b: 2000, g: "o", w: "Thailand" },
+    { n: "Nitori (Lippo Puri)", a: 2670, b: 2670, g: "o", w: "Jakarta" },
+    { n: "MR.D.I.Y. PLUS", a: 3000, b: 3065, g: "m", w: "Malaysia" },
+    { n: "HomePro", a: 3000, b: 12000, g: "o", w: "Thailand" },
+    { n: "IKEA city store", a: 7600, b: 10000, g: "o", w: "London, Jakarta (MTA)" },
+    { n: "Mitra10", a: 10000, b: 10000, g: "o", w: "Indonesia" },
+    { n: "AZKO Alam Sutera", a: 14700, b: 15000, g: "k", w: "Eks-flagship Ace" },
+    { n: "IKEA big box", a: 25000, b: 40000, g: "o", w: "Indonesia" }
+  ];
+  var gcol = { k: "--azko", m: "--mdiy", o: "--other" };
+
+  var hyps = [
+    { id: "H1", q: "Flagship MR.D.I.Y. Spanyol didesain premium dan diturunkan ke Indonesia untuk segmen atas", s: "n", v: "Sebagian", p: "Desain terbukti: rak lebih rendah, lebih terang, sirkulasi lega. Segmen atas dan transfer dari Spanyol tidak terbukti; harga tetap sama." },
+    { id: "H2", q: "IKEA menguji format kecil yang bisa dibawa ke Indonesia", s: "k", v: "Terbukti (global)", p: "London, Korea 600–1.000 m², China, Prancis, Kuching (Des 2026). Indonesia belum diumumkan." },
+    { id: "H3", q: "Brand China datang dengan toko besar berbasis IP/tren", s: "k", v: "Terbukti", p: "KKV, Miniso, Pop Mart. Temuan baru: mal furnitur (Easyhome) dan brand store elektronik." },
+    { id: "H4", q: "Ace (MAPI) membawa format eksperiensial ala AS", s: "k", v: "Kemungkinan besar", p: "MAPI: \"sesuai konsep AS\" (ELEVATE³: destinasi merek dan demo). Ukuran toko belum diungkap." },
+    { id: "H5", q: "Pemain murah naik kelas, big box mengecil, bertemu di mal", s: "k", v: "Terbukti", p: "Lihat spektrum ukuran format: zona 600–3.000 m²." },
+    { id: "H6", q: "Erablue membawa format lain dari MWG Vietnam", s: "n", v: "Sebagian", p: "Dua ukuran (mini & supermini). Format lain belum ada sinyal." }
+  ];
+
+  var mrdiy = [
+    ["Rak lebih pendek", "k", "–", "n"],
+    ["Lampu lebih terang", "k", "k", "n"],
+    ["Koridor lebih lega", "k", "n", "n"],
+    ["Desain premium", "k", "k", "k"],
+    ["Menyasar segmen atas", "l", "l", "l"]
+  ];
+
+  var ikea = [
+    ["Big box", "25–40 ribu m² · seluruh range · pinggiran kota (5 toko di Indonesia)"],
+    ["City store", "7,6–10 ribu m² · London Oxford Street (Mei 2025), Jakarta MTA · ±3.500 dipajang + pickup"],
+    ["Compact urban", "600–1.000 m² di mal/department store · Korea 2025–26 · ±500 barang bawa pulang + kios order + perencanaan + makanan"],
+    ["Format menengah", "Kota sekunder · Prancis (Le Mans, Limoges), Malaysia Kuching (Des 2026)"],
+    ["Plan & order", "Studio perencanaan dapur/lemari + pickup · UK"],
+    ["Pop-up", "Uji pasar · Daegu: ±200 ribu pengunjung dalam 10 bulan"]
+  ];
+
+  var matrix = [
+    { n: "IKEA compact", x: 4, y: 5, t: "informa", dx: 10, dy: 4, a: "start" },
+    { n: "MR.D.I.Y. PLUS", x: 4, y: 5, t: "azko", dx: -10, dy: 4, a: "end", jx: -0.12 },
+    { n: "Ace (MAPI) >7 toko", x: 3, y: 4, t: "azko", dx: 10, dy: 4, a: "start" },
+    { n: "Erablue 500 toko", x: 5, y: 4, t: "informa", dx: -10, dy: 4, a: "end" },
+    { n: "Easyhome (mal furnitur)", x: 2, y: 4, t: "informa", dx: 0, dy: -13, a: "middle" },
+    { n: "KKV", x: 4, y: 3, t: "azko", dx: -10, dy: 4, a: "end", jx: -0.12 },
+    { n: "Dekoruma O2O", x: 4, y: 3, t: "informa", dx: 10, dy: 4, a: "start" },
+    { n: "Miniso LAND/Friends", x: 5, y: 3, t: "azko", dx: -10, dy: -8, a: "end" },
+    { n: "Nitori compact", x: 3, y: 3, t: "informa", dx: 10, dy: 4, a: "start" },
+    { n: "MR.D.I.Y. Express", x: 3, y: 3, t: "azko", dx: -10, dy: 4, a: "end", jx: -0.12 },
+    { n: "Depo format kecil", x: 3, y: 2, t: "azko", dx: 10, dy: 4, a: "start" }
+  ];
+
+  var trends = [
+    ["Value naik kelas", "Flagship di mal kelas menengah atas", ["MR.D.I.Y. PLUS", "SUPER MINISO", "KKV"]],
+    ["Big box mengecil", "Toko 600–2.000 m² di mal + kios", ["IKEA Korea", "Nitori urban", "IKEA Kuching"]],
+    ["Toko = hub omnichannel", "Showroom, pickup, perencanaan", ["IKEA Korea 52% online", "Dekoruma O2O"]],
+    ["Layanan > luas lantai", "Pasang, perbaikan, renovasi", ["HomePro layanan +9%", "Erablue antar & pasang"]],
+    ["Experience/IP", "Zona foto, F&B, workshop", ["Miniso", "Pop Mart", "IKEA food"]],
+    ["Multi-merek satu atap", "Beberapa tingkat harga dalam satu lokasi", ["MR.D.I.Y. PLUS 4 merek", "Daiso 3 merek"]],
+    ["Format permukiman", "Dekat rumah, ruko", ["Erablue", "NEKA", "MR.D.I.Y."]],
+    ["Platform furnitur China", "Mal furnitur via REIT/developer", ["Easyhome Malaysia", "Pabrik Jason"]]
+  ];
+
+  var archAzko = [
+    ["Flagship / Experience", "Merek, demo, layanan. <b>Tambah destinasi merek ala ELEVATE³</b> (Power, Outdoor/BBQ, Paint) sebelum Ace membesar", false],
+    ["Standar", "Kelengkapan barang (43 ribu SKU)", false],
+    ["Compact mal", "<b>800–1.500 m²</b>: kurasi lifestyle & housewares untuk menghadapi MR.D.I.Y. PLUS, KKV, IKEA compact", true],
+    ["NEKA", "Ruko & permukiman: menghadapi MR.D.I.Y. reguler/Express. Perbaiki harga barang penentu persepsi", false],
+    ["Layanan", "<b>Beli + pasang</b>, servis Krisbow, sewa alat. Belajar dari HomePro dan Erablue", true]
+  ];
+  var archInf = [
+    ["Big box", "Furnitur lengkap, zona ruangan (5 zona)", false],
+    ["Compact urban", "<b>800–1.500 m²</b>: aksesori, storage, tekstil + kios order furnitur besar. Respons ke IKEA compact & Nitori", true],
+    ["Studio perencanaan", "Informa Custom (kitchen set, wardrobe) di lokasi kecil, ala IKEA Plan & Order", true],
+    ["Electronics dekat rumah", "Format kecil di permukiman + janji antar & pasang untuk menghadapi Erablue", true],
+    ["Pop-up", "Uji kota baru sebelum toko permanen (pelajaran IKEA Daegu)", true]
+  ];
+
+  var signals = [
+    ["Kabar sewa mal 600–1.500 m², lowongan store planning", "IKEA (HERO)", "Format compact segera masuk"],
+    ["Toko berlabel \"PLUS\" atau multi-merek (MR.TOY, MR.DOLLAR, EMTOP)", "MR.D.I.Y.", "PLUS masuk Indonesia"],
+    ["Toko MR.D.I.Y. 200–300 m² di ruko", "MR.D.I.Y.", "Express masuk wilayah NEKA"],
+    ["Toko Ace ke-8 dan seterusnya, loyalitas MAP + Ace", "MAPI", "Fase uji selesai, mulai ekspansi"],
+    ["KKV lebih dari 30 toko atau di kota tier 2", "KK Group / MDIY", "Ekspansi dipercepat"],
+    ["Erablue buka di kota yang ada Informa Electronics", "Erajaya", "Tekanan langsung ke Informa Electronics"],
+    ["MoU developer/REIT dengan grup furnitur China", "Easyhome dll.", "Mal furnitur China masuk"],
+    ["Nitori Deco Home atau toko < 1.000 m²", "Nitori", "Format urban Nitori masuk"]
+  ];
+
+  // ---------- static (HTML) renders ----------
+  function statusSpan(s, label) {
+    var lab = label || { k: "Kuat", n: "Netral", l: "Lemah" }[s];
+    return '<span class="status ' + s + '">' + esc(lab) + "</span>";
+  }
+  function renderCats(id, rows) {
+    var h = "";
+    rows.forEach(function (r) {
+      h += '<div class="catrow"><div class="c">' + esc(r[0]) + "</div>" + statusSpan(r[1]) + '<div class="w">' + esc(r[2]) + "</div></div>";
+    });
+    document.getElementById(id).innerHTML = h;
+  }
+  renderCats("cat-azko", catAzko);
+  renderCats("cat-informa", catInf);
+
+  (function () {
+    var dots = ["–", "●", "●●", "●●●"];
+    var lab = ["Tidak ada", "Rendah", "Sedang", "Tinggi"];
+    var h = "<thead><tr><th>Kategori</th>";
+    heatCols.forEach(function (c) { h += "<th>" + esc(c) + "</th>"; });
+    h += "</tr></thead><tbody>";
+    heatRows.forEach(function (r) {
+      h += '<tr><th class="rowh" scope="row">' + esc(r[0]) + "</th>";
+      for (var i = 1; i < r.length; i++) {
+        h += '<td class="h h' + r[i] + '" title="' + esc(r[0] + " × " + heatCols[i - 1] + ": " + lab[r[i]]) + '">' + dots[r[i]] + "</td>";
+      }
+      h += "</tr>";
+    });
+    document.getElementById("t-heat").innerHTML = h + "</tbody>";
+  })();
+
+  (function () {
+    var h = '<thead><tr><th>Barang</th><th>Kategori</th><th class="num">NEKA</th><th class="num">MR.D.I.Y.</th><th class="num">Shopee</th><th class="num">NEKA vs MR.D.I.Y.</th></tr></thead><tbody>';
+    price.forEach(function (r) {
+      var d = Math.round((r.neka / r.mdiy - 1) * 100);
+      h += "<tr><td>" + esc(r.p) + "</td><td>" + esc(r.k) + '</td><td class="num">Rp' + fmt(r.neka) + '</td><td class="num">Rp' + fmt(r.mdiy) + '</td><td class="num">Rp' + fmt(r.sh) + '</td><td class="num">' + (d > 0 ? "+" : "") + d + "%</td></tr>";
+    });
+    document.getElementById("t-price").innerHTML = h + "</tbody>";
+  })();
+
+  (function () {
+    var h = "";
+    hyps.forEach(function (x) {
+      h += '<div class="card hyp"><div class="top"><span class="id">' + x.id + "</span>" + statusSpan(x.s, x.v) + "</div><p><q>" + esc(x.q) + "</q></p><p>" + esc(x.p) + "</p></div>";
+    });
+    document.getElementById("hyp").innerHTML = h;
+  })();
+
+  (function () {
+    var lab = { k: "Ya", n: "Sebagian", l: "Tidak" };
+    var h = "<thead><tr><th>Elemen</th><th>Spanyol</th><th>Malaysia (PLUS)</th><th>Indonesia</th></tr></thead><tbody>";
+    mrdiy.forEach(function (r) {
+      h += "<tr><td>" + esc(r[0]) + "</td>";
+      for (var i = 1; i < 4; i++) h += "<td>" + (r[i] === "–" ? '<span class="note">Tidak disebut</span>' : statusSpan(r[i], lab[r[i]])) + "</td>";
+      h += "</tr>";
+    });
+    document.getElementById("t-mrdiy").innerHTML = h + "</tbody>";
+  })();
+
+  function renderLadder(id, rows, cls) {
+    var h = "";
+    rows.forEach(function (r) {
+      var isNew = r[2] === true;
+      h += '<div class="rung' + (isNew ? " new" + (cls ? " " + cls : "") : "") + '"><div class="tag">' + esc(r[0]) + '</div><div class="body">' + (r[2] === undefined ? esc(r[1]) : r[1]) + (isNew ? ' <span class="chip">baru</span>' : "") + "</div></div>";
+    });
+    document.getElementById(id).innerHTML = h;
+  }
+  renderLadder("ikea", ikea);
+  renderLadder("arch-azko", archAzko);
+  renderLadder("arch-informa", archInf, "inf");
+
+  (function () {
+    var h = "";
+    trends.forEach(function (t, i) {
+      h += '<div class="card trend"><div class="note">Tren ' + (i + 1) + "</div><h3>" + esc(t[0]) + '</h3><div class="dir">' + esc(t[1]) + '</div><div class="ex">' + t[2].map(function (c) { return '<span class="chip">' + esc(c) + "</span>"; }).join("") + "</div></div>";
+    });
+    document.getElementById("trends").innerHTML = h;
+  })();
+
+  (function () {
+    var h = "<thead><tr><th>Sinyal</th><th>Pemain</th><th>Artinya</th></tr></thead><tbody>";
+    signals.forEach(function (s) { h += "<tr><td>" + esc(s[0]) + "</td><td>" + esc(s[1]) + "</td><td>" + esc(s[2]) + "</td></tr>"; });
+    document.getElementById("t-signals").innerHTML = h + "</tbody>";
+  })();
+
+  // ---------- SVG charts ----------
+  function wOf(id) { return Math.max(300, Math.floor(document.getElementById(id).clientWidth)); }
+
+  function drawThreat() {
+    var id = "c-threat", W = wOf(id), rowH = 26, top = 8, labW = Math.min(170, W * 0.42), right = 36;
+    var H = top + threat.length * rowH + 22;
+    var s = svgFor(document.getElementById(id), W, H);
+    var x0 = labW, x1 = W - right, sc = function (v) { return x0 + (v / 20) * (x1 - x0); };
+    [0, 5, 10, 15, 20].forEach(function (t) {
+      el("line", { x1: sc(t), x2: sc(t), y1: top - 4, y2: H - 20, stroke: tok(t === 0 ? "--line-strong" : "--line"), "stroke-width": 1 }, s);
+      txt(s, sc(t), H - 6, String(t), { "text-anchor": "middle", fill: tok("--muted"), "font-size": 11 });
+    });
+    threat.forEach(function (r, i) {
+      var tot = r.o + r.h + r.m + r.k, y = top + i * rowH;
+      txt(s, labW - 10, y + 15, r.n, { "text-anchor": "end", fill: tok("--ink"), "font-size": 12.5 });
+      var p = el("path", { d: hbarPath(sc(0), y + 3, sc(tot) - sc(0), rowH - 8), fill: tok(tcol[r.t]) }, s);
+      txt(s, sc(tot) + 6, y + 15, String(tot), { fill: tok("--ink-2"), "font-size": 12, "font-weight": 600 });
+      bindTip(p, "<b>" + esc(r.n) + "</b> · total " + tot + "/20<br>Overlap " + r.o + " · Harga " + r.h + " · Momentum " + r.m + " · Kekuatan " + r.k + "<br>Sasaran utama: " + tname[r.t]);
+    });
+  }
+
+  function drawStores() {
+    var id = "c-stores", W = wOf(id), rowH = 24, top = 6, labW = Math.min(150, W * 0.38), right = 50;
+    var H = top + stores.length * rowH + 22;
+    var s = svgFor(document.getElementById(id), W, H);
+    var max = 1400, x0 = labW, x1 = W - right, sc = function (v) { return x0 + (v / max) * (x1 - x0); };
+    [0, 350, 700, 1050, 1400].forEach(function (t) {
+      el("line", { x1: sc(t), x2: sc(t), y1: top - 2, y2: H - 20, stroke: tok(t === 0 ? "--line-strong" : "--line") }, s);
+      txt(s, sc(t), H - 6, fmt(t), { "text-anchor": "middle", fill: tok("--muted"), "font-size": 11 });
+    });
+    stores.forEach(function (r, i) {
+      var y = top + i * rowH, kl = r.c !== "--other";
+      txt(s, labW - 10, y + 14, r.n, { "text-anchor": "end", fill: tok("--ink"), "font-size": 12.5, "font-weight": kl ? 700 : 400 });
+      var w = Math.max(3, sc(r.v) - sc(0));
+      var p = el("path", { d: hbarPath(sc(0), y + 3, w, rowH - 8), fill: tok(r.c) }, s);
+      txt(s, sc(0) + w + 6, y + 14, fmt(r.v) + (r.n === "Informa" ? "+" : ""), { fill: tok("--ink-2"), "font-size": 12, "font-weight": 600 });
+      bindTip(p, "<b>" + esc(r.n) + "</b>: " + fmt(r.v) + " toko<br>" + esc(r.note));
+    });
+  }
+
+  function drawRev() {
+    var id = "c-rev", W = wOf(id), H = 260, top = 24, bottom = 36, left = 34, right = 8;
+    var s = svgFor(document.getElementById(id), W, H);
+    var y0 = H - bottom, sc = function (v) { return y0 - (v / 10) * (y0 - top); };
+    [0, 2, 4, 6, 8, 10].forEach(function (t) {
+      el("line", { x1: left, x2: W - right, y1: sc(t), y2: sc(t), stroke: tok(t === 0 ? "--line-strong" : "--line") }, s);
+      txt(s, left - 6, sc(t) + 4, String(t), { "text-anchor": "end", fill: tok("--muted"), "font-size": 11 });
+    });
+    var gw = (W - left - right) / rev.length, bw = Math.min(64, gw * 0.3), gap = 2;
+    rev.forEach(function (g, i) {
+      var cx = left + gw * i + gw / 2;
+      [["a", "ag", "--azko", "ACES"], ["m", "mg", "--mdiy", "MR.D.I.Y."]].forEach(function (k, j) {
+        var x = j === 0 ? cx - bw - gap / 2 : cx + gap / 2, v = g[k[0]];
+        var p = el("path", { d: vbarPath(x, sc(v), bw, y0 - sc(v)), fill: tok(k[2]) }, s);
+        txt(s, x + bw / 2, sc(v) - 6, "Rp" + fmt(v, v % 1 ? (String(v).split(".")[1].length) : 0) + " T", { "text-anchor": "middle", fill: tok("--ink"), "font-size": 12, "font-weight": 700 });
+        bindTip(p, "<b>" + k[3] + "</b> · " + esc(g.p) + "<br>Rp" + fmt(v, 2) + " triliun · pertumbuhan " + g[k[1]] + " YoY");
+      });
+      txt(s, cx, y0 + 18, g.p, { "text-anchor": "middle", fill: tok("--ink-2"), "font-size": 12.5, "font-weight": 600 });
+      txt(s, cx, y0 + 32, "YoY: ACES " + g.ag + " · MR.D.I.Y. " + g.mg, { "text-anchor": "middle", fill: tok("--muted"), "font-size": 11 });
+    });
+  }
+
+  function drawMix() {
+    var id = "c-mix", W = wOf(id), H = 74;
+    var s = svgFor(document.getElementById(id), W, H);
+    var shades = ["#1c5cab", "#3987e5", "#9ec5f4"], ink = ["#ffffff", "#ffffff", "#0b0b0b"];
+    var x = 0, gap = 2, total = mix.reduce(function (a, b) { return a + b.v; }, 0);
+    mix.forEach(function (m, i) {
+      var w = (m.v / total) * W - (i < mix.length - 1 ? gap : 0);
+      var r = el("rect", { x: x, y: 4, width: Math.max(0, w), height: 36, fill: shades[i], rx: i === 0 || i === mix.length - 1 ? 4 : 0 }, s);
+      if (w > 120) {
+        txt(s, x + 10, 27, m.n + " · " + m.p + "%", { fill: ink[i], "font-size": 13, "font-weight": 700 });
+      }
+      txt(s, x + (w > 60 ? 0 : 0), 60, w > 120 ? "Rp" + fmt(m.v, 2) + " T" : m.n + " " + m.p + "% · Rp" + fmt(m.v, 2) + " T", { fill: tok("--ink-2"), "font-size": 12, "text-anchor": i === mix.length - 1 && w <= 120 ? "end" : "start", x: i === mix.length - 1 && w <= 120 ? W : x });
+      bindTip(r, "<b>" + m.n + "</b><br>Rp" + fmt(m.v, 2) + " triliun · " + m.p + "% penjualan semester I 2025");
+      x += w + gap;
+    });
+  }
+
+  function drawPrice() {
+    var id = "c-price", W = wOf(id), rowH = 34, top = 8, labW = Math.min(180, W * 0.36), right = 24;
+    var H = top + price.length * rowH + 24;
+    var s = svgFor(document.getElementById(id), W, H);
+    var max = 320000, x0 = labW, x1 = W - right, sc = function (v) { return x0 + (v / max) * (x1 - x0); };
+    [0, 80000, 160000, 240000, 320000].forEach(function (t) {
+      el("line", { x1: sc(t), x2: sc(t), y1: top - 4, y2: H - 22, stroke: tok(t === 0 ? "--line-strong" : "--line") }, s);
+      txt(s, sc(t), H - 6, t === 0 ? "0" : "Rp" + fmt(t / 1000) + "rb", { "text-anchor": "middle", fill: tok("--muted"), "font-size": 11 });
+    });
+    price.forEach(function (r, i) {
+      var y = top + i * rowH + rowH / 2;
+      txt(s, labW - 12, y + 4, r.p, { "text-anchor": "end", fill: tok("--ink"), "font-size": 12.5 });
+      var lo = Math.min(r.neka, r.mdiy, r.sh), hi = Math.max(r.neka, r.mdiy, r.sh);
+      el("line", { x1: sc(lo), x2: sc(hi), y1: y, y2: y, stroke: tok("--line-strong"), "stroke-width": 2 }, s);
+      var c1 = el("circle", { cx: sc(r.sh), cy: y, r: 6, fill: tok("--surface"), stroke: tok("--other-strong"), "stroke-width": 2 }, s);
+      var c2 = el("circle", { cx: sc(r.mdiy), cy: y, r: 6.5, fill: tok("--mdiy"), stroke: tok("--surface"), "stroke-width": 2 }, s);
+      var c3 = el("circle", { cx: sc(r.neka), cy: y, r: 6.5, fill: tok("--azko"), stroke: tok("--surface"), "stroke-width": 2 }, s);
+      var d = Math.round((r.neka / r.mdiy - 1) * 100), ds = Math.round((r.neka / r.sh - 1) * 100);
+      var html = "<b>" + esc(r.p) + "</b><br>NEKA Rp" + fmt(r.neka) + "<br>MR.D.I.Y. Rp" + fmt(r.mdiy) + "<br>Shopee Rp" + fmt(r.sh) + "<br>NEKA vs MR.D.I.Y. " + (d > 0 ? "+" : "") + d + "% · vs Shopee +" + ds + "%";
+      [c1, c2, c3].forEach(function (c) { bindTip(c, html); });
+      if (i === 0) {
+        txt(s, sc(r.neka) + 10, y + 4, "NEKA", { fill: tok("--ink-2"), "font-size": 11, "font-weight": 600 });
+        txt(s, sc(r.mdiy) - 10, y + 4, "MR.D.I.Y.", { fill: tok("--ink-2"), "font-size": 11, "font-weight": 600, "text-anchor": "end" });
+        txt(s, sc(r.sh), y - 11, "Shopee", { fill: tok("--ink-2"), "font-size": 11, "font-weight": 600, "text-anchor": "middle" });
+      }
+    });
+  }
+
+  function drawLadder() {
+    var id = "c-ladder", W = wOf(id), H = 150;
+    var s = svgFor(document.getElementById(id), W, H);
+    var left = Math.min(140, W * 0.26), x0 = left, x1 = W - 12;
+    function row(y, label, items, hiIdx, hiCol) {
+      txt(s, 0, y + 5, label, { fill: tok("--ink"), "font-size": 12.5, "font-weight": 700 });
+      el("line", { x1: x0, x2: x1, y1: y, y2: y, stroke: tok("--line-strong"), "stroke-width": 2 }, s);
+      var step = (x1 - x0) / (items.length - 1);
+      items.forEach(function (it, i) {
+        var x = x0 + step * i, hi = hiIdx.indexOf(i) >= 0;
+        el("circle", { cx: x, cy: y, r: hi ? 7 : 5, fill: hi ? tok(hiCol) : tok("--surface"), stroke: hi ? tok("--surface") : tok("--other-strong"), "stroke-width": 2 }, s);
+        var anchor = i === 0 ? "start" : (i === items.length - 1 ? "end" : "middle");
+        var parts = it.split(" ≈ ");
+        var lines = parts.length > 2 || it.length > 22 ? [parts.slice(0, Math.ceil(parts.length / 2)).join(" ≈ "), parts.slice(Math.ceil(parts.length / 2)).join(" ≈ ")].filter(Boolean) : [it];
+        if (it.indexOf(" (") > 0 && lines.length === 1 && it.length > 18) lines = [it.split(" (")[0], "(" + it.split(" (")[1]];
+        if (it.indexOf(" / ") > 0 && lines.length === 1 && it.length > 22) { var q = it.split(" / "); lines = [q[0] + " /", q.slice(1).join(" / ")]; }
+        lines.forEach(function (ln, k) {
+          txt(s, x, y + 22 + k * 14, ln, { "text-anchor": anchor, fill: tok(hi ? "--ink" : "--ink-2"), "font-size": 11.5, "font-weight": hi ? 700 : 400 });
+        });
+      });
+    }
+    txt(s, x0, 12, "← Lebih murah", { fill: tok("--muted"), "font-size": 11 });
+    txt(s, x1, 12, "Lebih mahal →", { fill: tok("--muted"), "font-size": 11, "text-anchor": "end" });
+    row(36, "Home & housewares", ladderH, [4], "--azko");
+    row(100, "Furnitur", ladderF, [3], "--informa");
+  }
+
+  function drawFormat() {
+    var id = "c-format", W = wOf(id), rowH = 24, top = 22, labW = Math.min(210, W * 0.4), right = 16;
+    var H = top + formats.length * rowH + 24;
+    var s = svgFor(document.getElementById(id), W, H);
+    var lmin = Math.log10(150), lmax = Math.log10(45000), x0 = labW, x1 = W - right;
+    var sc = function (v) { return x0 + ((Math.log10(v) - lmin) / (lmax - lmin)) * (x1 - x0); };
+    el("rect", { x: sc(600), y: top - 16, width: sc(3000) - sc(600), height: H - top - 8, fill: tok("--band") }, s);
+    txt(s, (sc(600) + sc(3000)) / 2, top - 5, "Zona temu 600–3.000 m²", { "text-anchor": "middle", fill: tok("--accent"), "font-size": 11, "font-weight": 700 });
+    [200, 500, 1000, 3000, 10000, 30000].forEach(function (t) {
+      el("line", { x1: sc(t), x2: sc(t), y1: top, y2: H - 22, stroke: tok("--line") }, s);
+      txt(s, sc(t), H - 6, fmt(t), { "text-anchor": "middle", fill: tok("--muted"), "font-size": 11 });
+    });
+    formats.forEach(function (f, i) {
+      var y = top + i * rowH + rowH / 2, c = tok(gcol[f.g]);
+      txt(s, labW - 10, y + 4, f.n, { "text-anchor": "end", fill: tok("--ink"), "font-size": 12.5, "font-weight": f.g === "k" ? 700 : 400 });
+      var a = sc(f.a), b = sc(f.b), node;
+      if (b - a < 8) {
+        node = el("circle", { cx: (a + b) / 2, cy: y, r: 6, fill: c, stroke: tok("--surface"), "stroke-width": 2 }, s);
+      } else {
+        node = el("rect", { x: a, y: y - 6, width: b - a, height: 12, rx: 6, fill: c }, s);
+      }
+      bindTip(node, "<b>" + esc(f.n) + "</b><br>" + (f.a === f.b ? fmt(f.a) : fmt(f.a) + "–" + fmt(f.b)) + " m² · " + esc(f.w));
+    });
+  }
+
+  function drawMatrix() {
+    var id = "c-matrix", W = wOf(id), H = Math.min(460, Math.max(340, W * 0.55)), left = 48, right = 16, top = 16, bottom = 46;
+    var s = svgFor(document.getElementById(id), W, H);
+    var sx = function (v) { return left + ((v - 0.5) / 5) * (W - left - right); };
+    var sy = function (v) { return H - bottom - ((v - 0.5) / 5) * (H - top - bottom); };
+    el("rect", { x: sx(3.5), y: sy(5.5), width: sx(5.5) - sx(3.5), height: sy(3.5) - sy(5.5), fill: tok("--band") }, s);
+    txt(s, sx(5.5) - 6, sy(5.5) + 14, "Prioritas pantau", { "text-anchor": "end", fill: tok("--accent"), "font-size": 11, "font-weight": 700 });
+    for (var t = 1; t <= 5; t++) {
+      el("line", { x1: sx(t), x2: sx(t), y1: sy(5.5), y2: sy(0.5), stroke: tok("--line") }, s);
+      el("line", { x1: sx(0.5), x2: sx(5.5), y1: sy(t), y2: sy(t), stroke: tok("--line") }, s);
+      txt(s, sx(t), H - bottom + 16, String(t), { "text-anchor": "middle", fill: tok("--muted"), "font-size": 11 });
+      txt(s, left - 10, sy(t) + 4, String(t), { "text-anchor": "end", fill: tok("--muted"), "font-size": 11 });
+    }
+    txt(s, (left + W - right) / 2, H - 8, "Peluang masuk/membesar pada 2028 →", { "text-anchor": "middle", fill: tok("--ink-2"), "font-size": 12, "font-weight": 600 });
+    var yl = txt(s, 0, 0, "Dampak →", { "text-anchor": "middle", fill: tok("--ink-2"), "font-size": 12, "font-weight": 600 });
+    yl.setAttribute("transform", "translate(14," + ((top + H - bottom) / 2) + ") rotate(-90)");
+    var small = W < 560;
+    matrix.forEach(function (m) {
+      var cx = sx(m.x + (m.jx || 0)), cy = sy(m.y);
+      var c = el("circle", { cx: cx, cy: cy, r: 7, fill: tok(m.t === "azko" ? "--azko" : "--informa"), stroke: tok("--surface"), "stroke-width": 2 }, s);
+      bindTip(c, "<b>" + esc(m.n) + "</b><br>Peluang " + m.x + " · Dampak " + m.y + " · terutama ke " + (m.t === "azko" ? "AZKO" : "Informa"));
+      txt(s, cx + m.dx, cy + m.dy, m.n, { "text-anchor": m.a, fill: tok("--ink"), "font-size": small ? 10.5 : 12 });
+    });
+  }
+
+  function drawAll() {
+    drawThreat(); drawStores(); drawRev(); drawMix(); drawPrice(); drawLadder(); drawFormat(); drawMatrix();
+  }
+  drawAll();
+  var rt;
+  window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(drawAll, 120); });
+  try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawAll); } catch (e) {}
+  new MutationObserver(drawAll).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawAll);
+})();
+</script>
+</body>
+</html>
