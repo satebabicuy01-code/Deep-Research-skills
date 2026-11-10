@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>MR.D.I.Y. Indonesia — Analisis Model Bisnis, Strategi & Konsep Toko</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+  :root {
+    --ink: #0b0b0b; --ink2: #52514e; --muted: #898781; --grid: #e1e0d9; --base: #c3c2b7;
+    --blue: #2a78d6; --blue-d: #184f95; --blue-l: #cde2fb; --blue-xl: #eef5fd;
+    --orange: #eb6834; --aqua: #1baf7a; --plane: #f6f6f3;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Inter, system-ui, sans-serif; color: var(--ink); font-size: 8.9pt; line-height: 1.45; }
+  h1, h2, h3, h4 { font-weight: 650; margin: 0; letter-spacing: -0.01em; }
+  h2 { font-size: 15.5pt; margin-bottom: 2mm; color: var(--ink); }
+  h3 { font-size: 11.5pt; margin: 5mm 0 2mm; color: var(--blue-d); }
+  h4 { font-size: 10pt; margin: 3mm 0 1mm; }
+  p { margin: 0 0 2.4mm; }
+  .section { page-break-before: always; }
+  .kicker { font-size: 8pt; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); margin-bottom: 1mm; }
+  .lead { font-size: 9.6pt; color: var(--ink2); margin-bottom: 4mm; }
+  .muted { color: var(--muted); }
+  .small { font-size: 8pt; color: var(--ink2); }
+  .src { font-size: 7.4pt; color: var(--muted); margin-top: 1mm; }
+  ul { margin: 0 0 2.5mm; padding-left: 4.5mm; }
+  li { margin-bottom: 1mm; }
+  .tabular { font-variant-numeric: tabular-nums; }
+  strong { font-weight: 650; }
+
+  /* cover */
+  .cover { height: 263mm; display: flex; flex-direction: column; justify-content: space-between; }
+  .cover-top { border-top: 3mm solid var(--blue); padding-top: 10mm; }
+  .cover h1 { font-size: 30pt; line-height: 1.12; margin: 6mm 0 5mm; }
+  .cover .sub { font-size: 13pt; color: var(--ink2); max-width: 150mm; }
+  .cover-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; border-top: 1px solid var(--grid); padding-top: 5mm; font-size: 9pt; }
+  .cover-meta div span { display: block; color: var(--muted); font-size: 7.5pt; text-transform: uppercase; letter-spacing: .08em; }
+  .cover-hero { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 8mm 0; }
+
+  /* tiles */
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 3mm 0 4mm; }
+  .tiles.t3 { grid-template-columns: repeat(3, 1fr); }
+  .tile { background: var(--plane); border-radius: 2mm; padding: 3mm 3.5mm; }
+  .tile .v { font-size: 17pt; font-weight: 650; letter-spacing: -0.02em; line-height: 1.1; }
+  .tile .l { font-size: 7.8pt; color: var(--ink2); margin-top: 1mm; line-height: 1.3; }
+  .tile .d { font-size: 7.6pt; color: #006300; font-weight: 600; margin-top: .6mm; }
+  .tile .d.neg { color: #b4441f; }
+
+  /* callouts */
+  .callout { border-left: 1.2mm solid var(--blue); background: var(--blue-xl); padding: 3mm 4mm; border-radius: 0 2mm 2mm 0; margin: 3mm 0 4mm; }
+  .callout.orange { border-left-color: var(--orange); background: #fdf0ea; }
+  .callout h4 { margin-top: 0; }
+  .answer { border: 1px solid var(--grid); border-radius: 2mm; padding: 3mm 4mm; margin: 2mm 0; break-inside: avoid; }
+  .answer .q { font-weight: 650; color: var(--blue-d); font-size: 9.4pt; }
+
+  /* layout */
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+  .two.w60 { grid-template-columns: 1.35fr 1fr; }
+  .card { border: 1px solid var(--grid); border-radius: 2mm; padding: 3mm 3.5mm; break-inside: avoid; }
+  .card h4 { margin-top: 0; color: var(--blue-d); }
+  figure { margin: 2mm 0 3mm; break-inside: avoid; }
+  figure img { width: 100%; display: block; }
+  figure.s img { width: 88%; margin: 0 auto; }
+  figcaption { font-size: 8.6pt; font-weight: 650; margin-bottom: 1.5mm; }
+  figcaption span { font-weight: 400; color: var(--ink2); }
+
+  /* tables */
+  table { width: 100%; border-collapse: collapse; font-size: 7.9pt; margin: 2mm 0 2mm; break-inside: avoid; }
+  th { text-align: left; font-weight: 650; color: var(--ink2); border-bottom: 1px solid var(--base); padding: 1.6mm 2mm; font-size: 7.8pt; background: var(--plane); }
+  td { border-bottom: 1px solid var(--grid); padding: 1.2mm 2mm; vertical-align: top; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr.hl td { background: var(--blue-xl); font-weight: 600; }
+  .tag { display: inline-block; font-size: 7pt; font-weight: 600; padding: .3mm 1.6mm; border-radius: 1mm; background: var(--blue-l); color: var(--blue-d); }
+  .tag.est { background: #fdf0ea; color: #9a3b14; }
+  .tag.act { background: #e3f4ec; color: #0b6b47; }
+
+  /* canvas */
+  .canvas { display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: auto auto; gap: 2mm; font-size: 8pt; }
+  .canvas .c { border: 1px solid var(--grid); border-radius: 2mm; padding: 2.5mm; }
+  .canvas .c h5 { margin: 0 0 1mm; font-size: 8pt; color: var(--blue-d); text-transform: uppercase; letter-spacing: .05em; }
+  .canvas .c ul { padding-left: 3.5mm; margin: 0; }
+  .canvas .vp { grid-row: span 1; background: var(--blue-xl); border-color: var(--blue-l); }
+  .canvas .wide2 { grid-column: span 2; }
+  .canvas .wide3 { grid-column: span 3; }
+
+  /* timeline */
+  .timeline { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1.5mm; margin: 2mm 0 3mm; }
+  .timeline div { border-top: 1mm solid var(--blue); padding-top: 1.5mm; font-size: 7.6pt; color: var(--ink2); }
+  .timeline b { display: block; color: var(--ink); font-size: 9pt; }
+
+  .pill-row { display: flex; gap: 2mm; flex-wrap: wrap; margin: 1mm 0 3mm; }
+  .pill { border: 1px solid var(--grid); border-radius: 10mm; padding: .8mm 3mm; font-size: 8pt; }
+  .swot { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+  .swot .card h4 { font-size: 9.5pt; }
+  .sources li { font-size: 7.8pt; margin-bottom: .8mm; word-break: break-all; }
+  .nb { break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<!-- ========================================================= COVER -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="kicker">Laporan Riset Kompetitor · Untuk Board of Directors</div>
+    <h1>MR.D.I.Y. Indonesia<br>Model Bisnis, Strategi &amp; Konsep Toko</h1>
+    <div class="sub">Analisis menyeluruh atas PT Daya Intiguna Yasa Tbk (IDX: MDIY): target pasar, produk, strategi pemasaran, tiering ukuran toko, capex per toko, unit economics, dan strategi investasi, ditutup dengan implikasinya bagi perusahaan.</div>
+    <div class="cover-hero">
+      <div class="tile"><div class="v">1.416</div><div class="l">toko per 30 Sep 2026, di 37 dari 38 provinsi</div></div>
+      <div class="tile"><div class="v">Rp7,9 T</div><div class="l">pendapatan FY2025 (+16,7% YoY)</div></div>
+      <div class="tile"><div class="v">±Rp2–2,7 M</div><div class="l">capex per toko baru (fit-out s/d all-in)</div></div>
+      <div class="tile"><div class="v">&lt; 3 tahun</div><div class="l">target payback/ROI toko baru (manajemen)</div></div>
+    </div>
+  </div>
+  <div class="cover-meta">
+    <div><span>Tanggal</span>10 November 2026</div>
+    <div><span>Disusun oleh</span>Business Analyst, Strategy &amp; Corporate Development</div>
+    <div><span>Klasifikasi</span>Internal · Rahasia</div>
+  </div>
+</div>
+
+<!-- ========================================================= EXEC SUMMARY -->
+<div class="section">
+  <div class="kicker">01 · Ringkasan Eksekutif</div>
+  <h2>Mesin ekspansi toko kecil yang berdisiplin biaya</h2>
+  <p class="lead">MR.D.I.Y. Indonesia adalah peritel perlengkapan rumah tangga terbesar di Indonesia menurut jumlah toko. Modelnya sederhana: harga murah dan satu harga nasional, 18.000+ SKU, dan toko yang dekat rumah. Semua toko disewa dan dioperasikan sendiri. Belanja barang dikonsolidasikan oleh grup regional. Dalam 9 tahun jaringannya tumbuh dari 1 toko (2017, Bekasi) menjadi 1.416 toko.</p>
+
+  <div class="tiles">
+    <div class="tile"><div class="v">Rp7.188 M</div><div class="l">Pendapatan 9M2026</div><div class="d">▲ 24,5% YoY</div></div>
+    <div class="tile"><div class="v">Rp894 M</div><div class="l">Laba bersih 9M2026</div><div class="d">▲ 12,9% YoY</div></div>
+    <div class="tile"><div class="v">51,3%</div><div class="l">Gross margin 9M2026 (vs 55,5% 9M2025)</div><div class="d neg">▼ 4,2 pp</div></div>
+    <div class="tile"><div class="v">0,3x</div><div class="l">Gearing per Sep 2026 (2021: 2,6x)</div><div class="d">deleveraging</div></div>
+  </div>
+
+  <h3>Jawaban atas pertanyaan BOD</h3>
+  <div class="answer"><div class="q">1. Apakah MR.DIY memakai tiering toko berdasarkan ukuran?</div>
+    Ya, tetapi tidak dijadikan merek format terpisah seperti di Malaysia (Express/Standard/PLUS). Di Indonesia toko dibagi dua menurut <strong>lokasi</strong> (stand-alone shopfront/ruko vs mall-based), dan perusahaan melaporkan tiga <strong>pita ukuran</strong>: <strong>&lt;500 m² (Small)</strong>, <strong>500–900 m² (Medium)</strong>, dan <strong>&gt;900 m² (Large/Flagship)</strong>. Desainnya memakai template modular yang menyesuaikan ukuran toko. Sejak 2025 ada lapisan <em>Flagship 2.0</em> (±1.100 m² di mal premium), dan pada 2026 mulai dipasang <em>Format 2.0</em> untuk semua toko stand-alone baru.</div>
+  <div class="answer"><div class="q">2. Berapa luas dan berapa jumlah toko tiap tier?</div>
+    Data resmi terakhir (30 Jun 2024, 824 toko): Small <strong>377 toko (46%)</strong>, Medium <strong>384 toko (47%)</strong>, Large <strong>63 toko (8%)</strong>. Toko Small 89% berupa ruko stand-alone. Toko Large 83% berada di mal. Estimasi kami untuk Sep 2026 (1.416 toko, 80% stand-alone): Small ±685, Medium ±645, Large ±85.</div>
+  <div class="answer"><div class="q">3. Berapa capex untuk satu toko?</div>
+    Perusahaan tidak mengungkap capex per toko. Dari laporan keuangan, belanja aset tetap dibagi jumlah toko baru menghasilkan <strong>Rp2,6–3,0 miliar per toko (all-in)</strong> pada 2024 sampai 9M2026, sudah termasuk DC, IT, dan refresh. Capex fit-out murni per toko kami perkirakan <strong>±Rp2,0 miliar</strong>, setara ±Rp3,5–4 juta/m². Kisarannya <strong>Rp1,2–1,6 M (Small)</strong>, <strong>Rp2,0–2,8 M (Medium)</strong>, dan <strong>Rp3,5–5 M (Large/Flagship)</strong>. Jika ditambah stok awal dan uang muka sewa, total kas awal toko standar ±<strong>Rp3,5 miliar</strong>, dengan payback ±2,6 tahun.</div>
+  <div class="answer"><div class="q">4. Seperti apa strategi investasinya?</div>
+    Asset-light: semua lokasi disewa, dan pemilik properti yang membangun gedung sesuai spesifikasi MR.DIY. Ekspansi dibiayai arus kas operasi (Rp1,3 T pada 2025; Rp1,59 T pada 9M2026). Laju pembukaan dijaga ≥270 toko/tahun (20+ per bulan) dan semakin diarahkan ke luar Jawa serta kota tier 2–3. Utang turun ke gearing 0,3x dan dividen ≥40% laba mulai dibagikan pada 2026. Investasi baru: saham minoritas Rp108 miliar di PT KKV Trading Indonesia (KK Group) untuk masuk ke ritel gaya hidup segmen muda.</div>
+
+  <div class="callout orange nb"><h4>Yang perlu dicermati</h4>
+    Pertumbuhan kini terutama datang dari toko baru. SSSG turun dari +30% (2023) ke <strong>−7,6% (2025)</strong> dan baru pulih ke +1,5% pada 3Q26. Gross margin tertekan ±4 pp akibat program harga ("Hemat Mantul", "Harga Tetap Sama"). Persediaan tinggi (±200–224 hari). Saham diperdagangkan jauh di bawah harga IPO (±Rp945 pada Sep 2026 vs Rp1.650), sehingga pasar mulai mempertanyakan kualitas pertumbuhan dari ekspansi.</div>
+</div>
+
+<!-- ========================================================= PROFILE -->
+<div class="section">
+  <div class="kicker">02 · Profil Perusahaan</div>
+  <h2>Dari satu toko di Bekasi ke 1.416 toko nasional</h2>
+  <p class="lead">PT Daya Intiguna Yasa Tbk memegang hak merek MR.D.I.Y. di Indonesia. Perusahaan ini bagian dari jaringan internasional MR.D.I.Y. (lebih dari 5.500 toko di 13+ negara) yang dikendalikan pendiri asal Malaysia, Tan Yu Yeh. Secara hukum perusahaan ini terpisah dari MR D.I.Y. Group (M) Berhad yang tercatat di Bursa Malaysia, tetapi memakai sistem, merek, dan pengadaan grup.</p>
+
+  <div class="timeline">
+    <div><b>2017</b>Toko pertama, Bekasi</div>
+    <div><b>2018</b>73 toko</div>
+    <div><b>2022</b>Toko ke-400, rekor MURI</div>
+    <div><b>Mei 2024</b>Akuisisi MIY (99%), konsolidasi entitas toko</div>
+    <div><b>Des 2024</b>IPO di BEI @Rp1.650, toko ke-900 (flagship pertama)</div>
+    <div><b>Des 2025</b>Toko ke-1.200 (Sumbawa)</div>
+    <div><b>Sep 2026</b>Toko ke-1.400 (Tebet, Format 2.0)</div>
+  </div>
+
+  <figure>
+    <figcaption>Jumlah toko akhir periode <span>· pertumbuhan bersih ±220–270 toko/tahun sejak 2023</span></figcaption>
+    <img src="charts/c01_store_growth.svg">
+    <div class="src">Sumber: Prospektus IPO (2024), Public Expose 2025 &amp; 2026, Paparan Kinerja 3Q26. Angka 2021–2023 proforma termasuk MIY.</div>
+  </figure>
+
+  <div class="two">
+    <div class="card"><h4>Struktur kepemilikan (31 Des 2025)</h4>
+      <table class="tabular">
+        <tr><th>Pemegang saham</th><th class="n">%</th></tr>
+        <tr><td>MDIH (Singapore) Pte. Ltd. (grup pendiri)</td><td class="n">35,41</td></tr>
+        <tr><td>Suncoast Financial Investments Ltd.</td><td class="n">23,16</td></tr>
+        <tr><td>Tan Yu Yeh (langsung)</td><td class="n">14,07</td></tr>
+        <tr><td>Publik / free float &amp; lainnya</td><td class="n">±27</td></tr>
+      </table>
+      <div class="small">Pengendali akhir adalah Tan Yu Yeh, pendiri MR.D.I.Y. IPO Des 2024 melepas 2,52 miliar saham (10%): 1% saham baru (±Rp416 M dana segar) dan 9% divestasi pemegang saham lama (±Rp3,74 T).</div>
+    </div>
+    <div class="card"><h4>Fakta operasional kunci</h4>
+      <ul>
+        <li><strong>100% toko milik sendiri, disewa.</strong> Tidak ada waralaba maupun keagenan.</li>
+        <li>Rata-rata <strong>10 karyawan/toko</strong> (1 supervisor + 2 asisten). Total karyawan grup <strong>11.464</strong> (2025).</li>
+        <li>Toko buka <strong>12 jam × 7 hari</strong>.</li>
+        <li><strong>1 DC sentral</strong> di Marunda, Bekasi (±36.000 m²) melayani seluruh Indonesia, didukung 3PL.</li>
+        <li>Sistem ritel <strong>Qube</strong> (POS + replenishment terpusat) yang sama dengan jaringan grup.</li>
+        <li><strong>Tidak memiliki kanal penjualan online</strong> (Laporan Tahunan 2025).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================= BUSINESS MODEL -->
+<div class="section">
+  <div class="kicker">03 · Model Bisnis</div>
+  <h2>"Hemat, Lengkap, Dekat": value retail berbasis skala</h2>
+  <p class="lead">Misi grup: <em>"To offer everyone everything, everyday, at always low prices."</em> Keunggulan biaya datang dari skala pengadaan grup. Biaya itu dipakai untuk menahan harga rendah, harga rendah mendatangkan trafik, dan trafik membiayai ekspansi toko berikutnya.</p>
+
+  <div class="canvas">
+    <div class="c"><h5>Mitra kunci</h5><ul><li>MDGM (procurement global grup, Malaysia)</li><li>Pemasok China, Thailand, India, Malaysia + lokal/UMKM</li><li>Pemilik ruko &amp; mal (membangun sesuai spek)</li><li>3PL &amp; trading house impor</li><li>Bank CIMB Niaga</li></ul></div>
+    <div class="c"><h5>Aktivitas kunci</h5><ul><li>Site selection berbasis data/GIS</li><li>Pembukaan 20+ toko/bulan (4–6 bln dari sewa ke buka)</li><li>Kurasi &amp; grading SKU</li><li>Distribusi sentral</li><li>Kampanye nilai nasional</li></ul></div>
+    <div class="c vp"><h5>Proposisi nilai</h5><ul><li><strong>Hemat:</strong> termurah vs pesaing (survei F&amp;S), satu harga nasional, "Harga Tetap Sama"</li><li><strong>Lengkap:</strong> 18.000+ SKU, 10 kategori, one-stop</li><li><strong>Dekat:</strong> 1.416 toko, 445/514 kab/kota</li></ul></div>
+    <div class="c"><h5>Hubungan pelanggan</h5><ul><li>Self-service, toko terang &amp; rapi</li><li>Promo bulanan &amp; musiman</li><li>Undian berhadiah</li><li>Sosial media sebagai kanal layanan</li></ul></div>
+    <div class="c"><h5>Segmen pelanggan</h5><ul><li>Kelas menengah &amp; menengah-bawah, sensitif harga</li><li>Keluarga/ibu rumah tangga</li><li>Pelajar (stationery)</li><li>UMKM (bahan usaha)</li></ul></div>
+    <div class="c wide2"><h5>Sumber daya kunci</h5><ul><li>Merek MR.D.I.Y. dan skala grup (5.500+ toko) untuk daya tawar pembelian</li><li>Jaringan toko terbesar di kategorinya, DC sentral, sistem Qube</li><li>Playbook pembukaan toko modular</li></ul></div>
+    <div class="c"><h5>Kanal</h5><ul><li>Toko fisik saja (ruko 80%, mal 20%)</li><li>Tanpa e-commerce</li></ul></div>
+    <div class="c wide2"><h5>Struktur biaya &amp; pendapatan</h5><ul><li>Pendapatan: penjualan ritel tunai (ATV ±Rp87.500; 100 jt transaksi 2025)</li><li>COGS ±45–49% penjualan; harga <em>cost-plus</em> dengan target margin</li><li>Opex utama: karyawan ±12%, sewa+depresiasi ROU ±8%, utilitas ±6%</li></ul></div>
+  </div>
+
+  <h3>Flywheel bisnis</h3>
+  <div class="two">
+    <div>
+      <ol style="padding-left:5mm; margin:0">
+        <li><strong>Pengadaan terkonsolidasi grup.</strong> PO digabung lintas 13+ negara, dikirim dalam full-container load.</li>
+        <li><strong>Harga terendah dan konsisten.</strong> Satu harga nasional sejak 2017, dari Jabodetabek sampai Papua.</li>
+        <li><strong>Trafik tinggi.</strong> ±250 transaksi per toko per hari.</li>
+        <li><strong>Toko kecil berbiaya rendah.</strong> Ruko stand-alone, gedung dibangun landlord, ROI &lt;3 tahun.</li>
+        <li><strong>Ekspansi cepat.</strong> Skala bertambah, daya tawar ke pemasok naik, dan siklus kembali ke langkah 1.</li>
+      </ol>
+    </div>
+    <div class="callout" style="margin:0"><h4>Insight analis</h4>Model ini <strong>bukan home improvement klasik</strong> seperti ACE atau Mitra10 yang menjual barang bernilai tinggi. MR.DIY lebih dekat ke <strong>"variety/value store"</strong>: barang kecil berharga rendah yang dibeli berulang. Karena itu toko bisa berukuran 300–600 m² dan masuk ke kota kecil yang tidak cukup besar untuk mal.</div>
+  </div>
+</div>
+
+<!-- ========================================================= TARGET MARKET -->
+<div class="section">
+  <div class="kicker">04 · Target Pasar</div>
+  <h2>Mass-market kelas menengah, sampai ke kota tier 3</h2>
+  <div class="two w60">
+    <div>
+      <p>Dalam prospektus, pelanggan didefinisikan sebagai <strong>"walk-in local retail consumers... fast-growing middle-class, younger to middle-aged individuals of all genders"</strong> yang mencari kebutuhan rumah tangga dengan rasio harga dan kualitas yang menarik. Komunikasi merek kini berfokus pada <strong>keluarga Indonesia, terutama ibu</strong> (brand ambassador Donna Agnesia, lalu Teuku Wisnu &amp; Shireen Sungkar), serta <strong>pelaku UMKM</strong>.</p>
+      <table>
+        <tr><th>Dimensi</th><th>Profil target</th></tr>
+        <tr><td>Sosio-ekonomi</td><td>Kelas menengah dan menengah-bawah yang sensitif harga. Menurut F&amp;S, rumah tangga kelas menengah naik dari 32,6% (2023) ke 35,1% (2028F), atau 90 jt menjadi 102 jt orang.</td></tr>
+        <tr><td>Demografi</td><td>Usia muda sampai paruh baya, pria &amp; wanita. Pembuat keputusan utama adalah ibu rumah tangga, ditambah pelajar dan anak (stationery, mainan).</td></tr>
+        <tr><td>Geografi</td><td>Nasional. 59% toko berada di luar Jawa+Jabodetabek. Fokus ekspansi 2026: Kalimantan, Sulawesi, Papua, termasuk kabupaten tier 3 seperti Sorong Selatan, Buton Tengah, dan Tana Tidung.</td></tr>
+        <tr><td>Okasi belanja</td><td>Kebutuhan rutin rumah, Ramadan &amp; Lebaran (hampers, toples, dekorasi), kembali ke sekolah, akhir tahun.</td></tr>
+        <tr><td>B2B mikro</td><td>UMKM yang membeli perlengkapan dan bahan usaha. Program "UMKM Tumbuh Bersama" dan pelatihan digitalisasi UMKM (rekor MURI).</td></tr>
+      </table>
+    </div>
+    <div>
+      <figure><figcaption>Trafik &amp; keranjang belanja</figcaption><img src="charts/c12_traffic.svg">
+      <div class="src">2023 proforma. Sumber: Public Expose 2025, Laporan Tahunan 2025.</div></figure>
+      <div class="tiles t3" style="grid-template-columns:1fr 1fr">
+        <div class="tile"><div class="v">±250</div><div class="l">transaksi/toko/hari (2025)</div></div>
+        <div class="tile"><div class="v">Rp7,2 M</div><div class="l">penjualan/toko/tahun (2025)</div></div>
+      </div>
+    </div>
+  </div>
+  <h3>Ukuran peluang pasar</h3>
+  <div class="tiles">
+    <div class="tile"><div class="v">US$18,4 M</div><div class="l">TAM non-grocery relevan (2023, F&amp;S)</div></div>
+    <div class="tile"><div class="v">25,2%</div><div class="l">pangsa MR.DIY di home improvement retail (US$1,4 M)</div></div>
+    <div class="tile"><div class="v">1,9%</div><div class="l">pangsa di TAM yang lebih luas, sehingga ruang tumbuh masih besar</div></div>
+    <div class="tile"><div class="v">37 vs 167</div><div class="l">toko home goods per juta penduduk: Indonesia vs rata-rata ASEAN</div></div>
+  </div>
+  <p class="src">Sumber: Prospektus IPO, riset pasar Frost &amp; Sullivan (2024). Industri home improvement diproyeksi tumbuh CAGR 10,1% (2023–2028).</p>
+</div>
+
+<!-- ========================================================= PRODUCTS -->
+<div class="section">
+  <div class="kicker">05 · Barang Jualan &amp; Merchandising</div>
+  <h2>18.000+ SKU, 10 kategori, harga eceran ±Rp8 ribu–Rp100 ribuan</h2>
+  <div class="two">
+    <figure><figcaption>Bauran penjualan per kategori, FY2025</figcaption><img src="charts/c07_category.svg">
+      <div class="src">Sumber: Laporan Tahunan 2025. *Sisa ±5% tidak dirinci (antara lain F&amp;B), dihitung analis.</div></figure>
+    <div>
+      <table>
+        <tr><th>Kategori</th><th>Contoh produk</th></tr>
+        <tr><td>Household &amp; Furnishing</td><td>Penyimpanan, perlengkapan dapur &amp; kamar mandi, piring/gelas, keranjang laundry, gorden, bantal</td></tr>
+        <tr><td>Hardware</td><td>Lem, kunci, cat, plumbing, alat taman, perkakas tangan &amp; listrik</td></tr>
+        <tr><td>Stationery &amp; Sports</td><td>Alat tulis &amp; kantor, raket, perlengkapan renang, matras (kolaborasi Kiky)</td></tr>
+        <tr><td>Jewellery &amp; Cosmetics</td><td>Aksesoris, kalung, anting, kotak kosmetik</td></tr>
+        <tr><td>Toys</td><td>Boneka, mainan, art &amp; craft, termasuk merchandise berlisensi Disney</td></tr>
+        <tr><td>Lainnya</td><td>Aksesoris mobil, elektrikal sederhana, kado (amplop, kertas kado), aksesoris HP, F&amp;B</td></tr>
+      </table>
+    </div>
+  </div>
+  <h3>Prinsip merchandising &amp; harga</h3>
+  <div class="two">
+    <ul>
+      <li><strong>Assortment seragam ±80% dan lokal ±20%.</strong> Mix awal toko baru diambil dari toko lain dengan demografi serupa, lalu disesuaikan dengan data penjualan.</li>
+      <li><strong>Grading SKU.</strong> Penilaian berdasarkan volume, nilai, turnover, dan margin. SKU kuat mendapat ruang rak lebih besar. SKU lemah tidak di-restock dan dihentikan saat stoknya habis.</li>
+      <li><strong>Produk musiman:</strong> Ramadan/Lebaran, kembali ke sekolah, Tahun Baru.</li>
+      <li>Banyak varian ukuran dan warna untuk produk yang sama, untuk memperkuat persepsi "lengkap".</li>
+    </ul>
+    <ul>
+      <li><strong>Harga cost-plus</strong> dari database Qube dengan target margin. Penghematan biaya diteruskan ke pelanggan. Kenaikan biaya diserap selama target margin masih aman.</li>
+      <li><strong>Satu harga nasional</strong> sejak 2017 tanpa penyesuaian ongkos logistik ke Papua/Maluku. Sejak Mei 2026 dipertegas lewat komitmen <strong>"Harga Tetap Sama"</strong> (tidak ada kenaikan harga umum).</li>
+      <li><strong>Price-point entry:</strong> 5.000+ produk di bawah Rp8.000 ("Hemat-mat-mat").</li>
+      <li>Impor dibayar dalam USD lewat trading house, sehingga ada <strong>eksposur kurs</strong>.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========================================================= MARKETING -->
+<div class="section">
+  <div class="kicker">06 · Strategi Marketing</div>
+  <h2>Kampanye nilai yang selalu aktif, dijalankan in-house</h2>
+  <p class="lead">Positioning: <strong>"toko yang praktis, lengkap, dan value-for-money"</strong>. Kampanye direncanakan 1–3 tahun ke depan dan dieksekusi dalam siklus 6 bulan. Sejak 2025 aktivitas digital dan kreatif dikelola <strong>in-house</strong> agar lebih gesit.</p>
+  <table>
+    <tr><th style="width:17%">Periode</th><th style="width:25%">Kampanye</th><th>Mekanik &amp; tujuan</th></tr>
+    <tr><td>Okt 2024</td><td>"Ada Aja Idenya"</td><td>Platform merek: solusi hemat untuk keluarga, Festival Ada Aja Idenya, literasi keuangan, pemberdayaan perempuan. Brand ambassador Donna Agnesia.</td></tr>
+    <tr><td>2025</td><td>"Hemat-mat-mat"</td><td>5.000+ SKU di bawah Rp8.000 untuk memperkuat citra termurah.</td></tr>
+    <tr><td>Jun 2025</td><td>"Inspirasi buat yang Ada Aja Idenya"</td><td>Konten DIY/kreasi UMKM, Bazaar Inspirasi di Bekasi, Bandung, Semarang, Surabaya.</td></tr>
+    <tr><td>Q4 2025</td><td>Undian berhadiah</td><td>Voucher sampai motor &amp; mobil, untuk menaikkan basket size (ATV naik 3,7% di 2025).</td></tr>
+    <tr><td>Q4 2025–2026</td><td>"Hemat Mantul" → "Hemat Mantul 2.0"</td><td>Diskon terarah di ribuan produk. Kick-off flash mob CFD Bundaran HI dan konten TikTok dari setiap toko.</td></tr>
+    <tr><td>2026</td><td>"Super Bombastis", "Worth It Abis"</td><td>Harga spesial produk kunci, didukung sourcing kolaboratif grup.</td></tr>
+    <tr><td>Mar 2026</td><td>Ramadan "Berkah Baik Iftar"</td><td>Teuku Wisnu &amp; Shireen Sungkar, 650+ anak panti asuhan, rilis "Ramadan Insight".</td></tr>
+    <tr><td>Mei 2026</td><td>"Harga Tetap Sama"</td><td>Komitmen tidak menaikkan harga umum di tengah inflasi. Diluncurkan bersamaan toko ke-1.300.</td></tr>
+    <tr><td>Jul–Nov 2026</td><td>Back-to-School, Proudly Local, Disney Run</td><td>Kolaborasi pemasok lokal, pelatihan UMKM bersama Kemenperin dan bank, kolaborasi lisensi.</td></tr>
+  </table>
+  <div class="two">
+    <div class="card"><h4>Bauran kanal</h4>
+      <ul>
+        <li><strong>Digital (in-house):</strong> Google Ads, Performance Max, Meta Ads, TikTok Ads, programmatic. Fokus pada keyword targeting dan search visibility.</li>
+        <li><strong>Sosial:</strong> Instagram, TikTok, YouTube, Facebook. Konten UGC dan konten dari tiap toko. Juga dipakai untuk menangani komplain.</li>
+        <li><strong>Tradisional:</strong> billboard/OOH, TV lift, transportasi umum, branding kendaraan, radio, cetak, sponsorship.</li>
+        <li><strong>Toko:</strong> grand opening, papan penunjuk arah, promo bulanan &amp; musiman yang diatur pusat, leaflet.</li>
+      </ul></div>
+    <div class="card"><h4>Brand building &amp; CSR</h4>
+      <ul>
+        <li>"MR.D.I.Y. Untuk Indonesia": pelatihan UMKM (316 UMKM di 5 kota bersama Yayasan BEDO), bank sampah, waste station.</li>
+        <li>Art Competition (hadiah Rp280 jt; tuan rumah regional 2026), program STEM, Hari Guru.</li>
+        <li>Penghargaan: World Branding Awards 8x berturut-turut, Digital Popular Brand 2024, Retail Asia Awards 2025, Marketeers Video Ads Heroes.</li>
+      </ul>
+      <div class="callout" style="margin:2mm 0 0"><strong>Hasil:</strong> transaksi 9M2026 naik 23,3%, lebih cepat dari pertumbuhan jumlah toko. Biayanya adalah GPM yang turun 4,2 pp, sehingga promosi kini menjadi trade-off margin.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================= STORE CONCEPT -->
+<div class="section">
+  <div class="kicker">07 · Store Concept &amp; Tiering</div>
+  <h2>Dua format lokasi × tiga pita ukuran</h2>
+  <p class="lead">MR.DIY Indonesia tidak memakai sub-merek format seperti grup di Malaysia (MR.DIY Express/Standard/PLUS). Toko diklasifikasikan menurut <strong>lokasi</strong> (stand-alone shopfront vs mall-based) dan <strong>ukuran</strong> (tiga pita). Tata letak memakai <strong>template modular</strong> (pencahayaan, signage, layout) yang di-scale sesuai luas toko, dengan kedalaman assortment dan jumlah staf mengikuti luas display dan penjualan.</p>
+
+  <figure><figcaption>Jumlah toko per pita ukuran &amp; format <span>· data resmi 30 Juni 2024 (824 toko)</span></figcaption>
+    <img src="charts/c05_tiers.svg">
+    <div class="src">Sumber: Prospektus IPO PT Daya Intiguna Yasa Tbk, Bab VIII §3.2. Ini disclosure ukuran toko terakhir yang dipublikasikan.</div></figure>
+
+  <table>
+    <tr><th>Tier</th><th>Luas</th><th class="n">Jun-24 <span class="tag act">aktual</span></th><th class="n">% jaringan</th><th class="n">Sep-26 <span class="tag est">estimasi</span></th><th>Format dominan</th><th>Lokasi khas</th></tr>
+    <tr><td><strong>Small</strong></td><td>&lt; 500 m² (umumnya 250–450 m², 1–2 unit ruko)</td><td class="n">377</td><td class="n">46%</td><td class="n">±685</td><td>89% stand-alone</td><td>Jalan utama kota kecil/kabupaten, permukiman, pasar</td></tr>
+    <tr><td><strong>Medium</strong></td><td>500–900 m² (2–3 unit ruko atau unit mal)</td><td class="n">384</td><td class="n">47%</td><td class="n">±645</td><td>66% stand-alone, 34% mal</td><td>Kota tier 1–2, community mall, sebelah hypermarket (Hypermart, Superindo)</td></tr>
+    <tr><td><strong>Large / Flagship</strong></td><td>&gt; 900 m² (flagship ±1.100 m²)</td><td class="n">63</td><td class="n">8%</td><td class="n">±85</td><td>83% mal</td><td>Mal regional &amp; premium (Lotte Mall Jakarta, Summarecon Mall Bekasi)</td></tr>
+    <tr class="hl"><td>Total</td><td>rata-rata tertimbang ±550 m²</td><td class="n">824</td><td class="n">100%</td><td class="n">1.416</td><td>80% stand-alone</td><td>445 dari 514 kab/kota</td></tr>
+  </table>
+  <p class="src">Metodologi estimasi Sep-26: bauran ukuran per format (Jun-24) diterapkan ke komposisi format terbaru (80% stand-alone / 20% mal, siaran pers 3 Sep 2026). Rata-rata luas memakai titik tengah: 350 / 650 / 1.050 m².</p>
+
+  <div class="two">
+    <div class="card"><h4>Stand-alone shopfront (ruko), ±80% jaringan</h4>
+      <ul>
+        <li>Biaya sewa dan operasi lebih rendah, jam buka fleksibel, sewa lebih panjang (lokasi terkunci).</li>
+        <li>Bisa masuk ke daerah yang terlalu kecil untuk mal, dengan persaingan lebih rendah.</li>
+        <li>Porsinya naik dari 73% (Jun-24) ke 79% (Des-25) dan 80% (Sep-26). Mayoritas toko baru berformat ini.</li>
+      </ul></div>
+    <div class="card"><h4>Mall-based, ±20% jaringan</h4>
+      <ul>
+        <li>Memanfaatkan trafik mal dan hypermarket. Juga menjadi etalase merek.</li>
+        <li>Ukuran lebih besar dan biaya lebih tinggi. Penutupan toko juga lebih sering terjadi di format ini (3 toko mal tutup pada 1H24).</li>
+        <li>Menjadi lokasi <strong>Flagship</strong>: toko ke-900 di Jakarta (2024) dan Flagship 2.0 di Summarecon Mall Bekasi (±1.100 m², 2025/26).</li>
+      </ul></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="kicker">07 · Store Concept (lanjutan)</div>
+  <h2>Evolusi konsep: Format 2.0 &amp; benchmark grup</h2>
+  <div class="two">
+    <div>
+      <h3 style="margin-top:0">Inisiatif konsep toko 2025–2026</h3>
+      <ul>
+        <li><strong>Flagship 2.0</strong>: toko premium ±1.100 m² di mal kelas atas (Summarecon Mall Bekasi, ±21 jt pengunjung/tahun). Fungsinya sebagai brand statement di kota kelahiran merek ini di Indonesia.</li>
+        <li><strong>Format 2.0</strong> (pilot di toko ke-1.400, Tebet, Sep 2026): toko lebih terang, rapi, dan nyaman. Ulasan pelanggan di Google Maps positif. Manajemen memutuskan <strong>format ini dipakai untuk semua toko stand-alone baru</strong>.</li>
+        <li><strong>Store refresh</strong> toko lama: renovasi dilakukan saat sewa diperpanjang atau toko diperluas.</li>
+        <li><strong>Relokasi:</strong> toko ditutup dan dibuka ulang di titik yang lebih menjanjikan di area yang sama.</li>
+        <li>Site selection memakai <strong>GIS</strong> untuk menghindari kanibalisasi. Proses tiga tahap: identifikasi, kunjungan fisik, implementasi.</li>
+      </ul>
+      <h3>Standar operasional toko</h3>
+      <table>
+        <tr><th>Parameter</th><th>Standar</th></tr>
+        <tr><td>Waktu dari tanda tangan sewa ke buka</td><td>4–6 bulan</td></tr>
+        <tr><td>Konstruksi bangunan</td><td>Ditanggung landlord sesuai spek MR.DIY</td></tr>
+        <tr><td>Staf per toko</td><td>±10 (1 supervisor + 2 asisten), insentif kinerja &amp; anti-shrinkage</td></tr>
+        <tr><td>SKU per toko</td><td>&gt;18.000 (rata-rata)</td></tr>
+        <tr><td>KPI bulanan</td><td>SSSG, ATV, transaksi/hari, penjualan/m²/hari</td></tr>
+        <tr><td>Stok</td><td>Level diatur pusat lewat Qube. Stock-take tahunan.</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3 style="margin-top:0">Benchmark: tiering eksplisit grup di Malaysia</h3>
+      <table>
+        <tr><th>Format (MY)</th><th>Luas</th><th>Peran</th></tr>
+        <tr><td>MR.DIY Express</td><td>2.000–4.000 sq ft<br>(±185–370 m²)</td><td>Kios kecil di permukiman, capex rendah, isi produk ringkas</td></tr>
+        <tr><td>MR.DIY Standard</td><td>±9.000–10.000 sq ft<br>(±835–930 m²)</td><td>Format inti</td></tr>
+        <tr><td>MR.DIY PLUS</td><td>20.000–30.000 sq ft<br>(±1.850–2.800 m²)</td><td>Mega store, 20.000+ produk, di mal urban</td></tr>
+      </table>
+      <p class="small">Capex rata-rata grup Malaysia: <strong>RM552 rb/toko (FY23)</strong> dan <strong>RM540 rb/toko (FY24)</strong>, setara ±Rp2,0 miliar. Angka ini sejalan dengan estimasi fit-out Indonesia.</p>
+      <div class="callout"><h4>Perbandingan</h4>Toko Indonesia secara rata-rata <strong>lebih kecil</strong> (±550 m²) dibanding Standard Malaysia (±850+ m²). Tier "Small" Indonesia pada dasarnya berfungsi seperti Express, tetapi tetap memakai merek utama dan assortment hampir penuh. Belum ada format mega "PLUS" di Indonesia. Flagship 2.0 (±1.100 m²) adalah yang terbesar.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================= CAPEX -->
+<div class="section">
+  <div class="kicker">08 · Capex &amp; Unit Economics</div>
+  <h2>±Rp2 miliar fit-out per toko, payback &lt; 3 tahun</h2>
+  <figure><figcaption>Belanja modal &amp; capex per toko baru</figcaption><img src="charts/c08_capex.svg">
+    <div class="src">Sumber: Laporan Arus Kas (akuisisi aset tetap) FY2024, FY2025, 9M2026, dibagi jumlah pembukaan toko baru. "All-in" mencakup toko baru, refresh toko lama, DC, IT, dan kantor.</div></figure>
+
+  <div class="two">
+    <div>
+      <h4>Komposisi capex (FY2023, Rp358 miliar)</h4>
+      <img src="charts/c09_capex_mix.svg" style="width:100%">
+      <p class="src">Sumber: Prospektus IPO, Bab V §6. Renovasi dan fixtures mencakup ±72% capex.</p>
+      <h4>Estimasi capex per tier <span class="tag est">estimasi analis</span></h4>
+      <table>
+        <tr><th>Tier</th><th class="n">Luas acuan</th><th class="n">Capex fit-out</th><th class="n">Penjualan/th</th></tr>
+        <tr><td>Small</td><td class="n">±350 m²</td><td class="n">Rp1,2–1,6 M</td><td class="n">Rp4–6 M</td></tr>
+        <tr><td>Medium</td><td class="n">±650 m²</td><td class="n">Rp2,0–2,8 M</td><td class="n">Rp7–10 M</td></tr>
+        <tr><td>Large/Flagship</td><td class="n">±1.050 m²</td><td class="n">Rp3,5–5,0 M</td><td class="n">Rp10–14 M</td></tr>
+        <tr class="hl"><td>Rata-rata jaringan</td><td class="n">±550 m²</td><td class="n">±Rp2,0 M</td><td class="n">Rp7,2 M</td></tr>
+      </table>
+      <p class="src">Asumsi: capex ±Rp3,5–4 jt/m² (fit-out ±75–80% dari capex all-in Rp2,6–2,7 M per toko; cross-check dengan grup Malaysia RM540 rb). Penjualan dari densitas rata-rata ±Rp13 jt/m²/tahun. Flagship premium bisa di atas kisaran ini.</p>
+    </div>
+    <div>
+      <h4>Total kas awal toko standar (±550–650 m²) <span class="tag est">estimasi</span></h4>
+      <table>
+        <tr><th>Komponen</th><th class="n">Rp miliar</th></tr>
+        <tr><td>Capex fit-out: renovasi interior, rak, signage, POS/IT, AC/equipment</td><td class="n">2,0–2,4</td></tr>
+        <tr><td>Stok awal tingkat toko (18.000 SKU; payables pemasok sangat kecil)</td><td class="n">0,8–1,2</td></tr>
+        <tr><td>Uang muka sewa &amp; deposit (sewa ±Rp0,66 M/tahun per toko)</td><td class="n">0,3–0,7</td></tr>
+        <tr><td>Pra-pembukaan: rekrutmen, pelatihan, grand opening</td><td class="n">0,1–0,2</td></tr>
+        <tr class="hl"><td>Total (base case Rp3,5 M)</td><td class="n">3,2–4,5</td></tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="kicker">08 · Capex &amp; Unit Economics (lanjutan)</div>
+  <h2>Kurva payback toko standar</h2>
+  <figure><figcaption>Kumulatif arus kas toko baru <span>· investasi Rp3,5 M; kontribusi kas tahun 1–5: Rp1,12 / 1,41 / 1,6 / 1,6 / 1,6 M (ramp-up ±70% → 88% → 100%)</span></figcaption>
+    <img src="charts/c10_payback.svg">
+    <div class="src">Model ilustratif analis, sebelum pajak. Manajemen menyatakan toko baru mencapai "return on investment within three years" (Prospektus IPO). Beberapa toko baru 2026 disebut "jauh di atas target di bulan pertama".</div></figure>
+
+  <div class="tiles">
+    <div class="tile"><div class="v">±2,6 th</div><div class="l">payback base case</div></div>
+    <div class="tile"><div class="v">±45%</div><div class="l">ROI kas tahunan toko matang (1,6 / 3,5)</div></div>
+    <div class="tile"><div class="v">Rp1,32 M</div><div class="l">aset hak guna (sewa) per toko, FY2025</div></div>
+    <div class="tile"><div class="v">Rp2,1 M</div><div class="l">persediaan per toko termasuk DC, FY2025</div></div>
+  </div>
+
+<div class="two"><div>      <h3 style="margin-top:2mm">P&amp;L tahunan toko matang (ilustratif)</h3>
+      <table class="tabular">
+        <tr><th>Rp miliar</th><th class="n">Nilai</th><th class="n">% penj.</th></tr>
+        <tr><td>Penjualan</td><td class="n">7,2</td><td class="n">100%</td></tr>
+        <tr><td>Laba kotor</td><td class="n">3,9</td><td class="n">±54%</td></tr>
+        <tr><td>Staf (±10–11 orang)</td><td class="n">(0,65)</td><td class="n">9%</td></tr>
+        <tr><td>Sewa (kas)</td><td class="n">(0,66)</td><td class="n">9%</td></tr>
+        <tr><td>Utilitas &amp; lain-lain toko</td><td class="n">(0,60)</td><td class="n">8%</td></tr>
+        <tr><td>4-wall EBITDA (setelah sewa)</td><td class="n">±2,0</td><td class="n">±28%</td></tr>
+        <tr><td>Alokasi DC/HQ (±4–5%)</td><td class="n">(0,35)</td><td class="n">5%</td></tr>
+        <tr class="hl"><td>Kontribusi kas toko</td><td class="n">±1,6</td><td class="n">±23%</td></tr>
+      </table>
+      <p class="src">Kalibrasi: EBITDA perusahaan FY2025 32,7% (PSAK 116), dikurangi pembayaran sewa 9,1%, menjadi ±23,6% "EBITDA pra-PSAK 116".</p></div><div>  <h3 style="margin-top:2mm">Sensitivitas payback (tahun)</h3>
+  <table class="tabular">
+    <tr><th>Kontribusi kas matang ↓ / Investasi →</th><th class="n">Rp3,0 M</th><th class="n">Rp3,5 M</th><th class="n">Rp4,0 M</th><th class="n">Rp4,5 M</th></tr>
+    <tr><td>Rp1,2 M/th (toko lemah, SSSG negatif)</td><td class="n">2,9</td><td class="n">3,3</td><td class="n">3,8</td><td class="n">4,2</td></tr>
+    <tr class="hl"><td>Rp1,6 M/th (base)</td><td class="n">2,3</td><td class="n">2,6</td><td class="n">2,9</td><td class="n">3,2</td></tr>
+    <tr><td>Rp2,0 M/th (toko kuat)</td><td class="n">1,9</td><td class="n">2,2</td><td class="n">2,4</td><td class="n">2,7</td></tr>
+  </table>
+  <p class="src">Dengan pola ramp-up yang sama (tahun 1 ±70%, tahun 2 ±88% dari kontribusi matang).</p>
+
+  </div></div>
+  <div class="callout orange"><h4>Catatan kehati-hatian</h4>Capex per toko all-in naik dari ±Rp2,6 M (2024) ke ±Rp3,0 M (9M2026). Kenaikan ini mencerminkan Format 2.0, flagship, dan investasi infrastruktur. Di sisi lain penjualan per toko datar di ±Rp7,2 M/tahun dan SSSG lemah. Jika toko baru di kota tier 3 menghasilkan penjualan di bawah rata-rata, payback bisa mundur ke 3–4 tahun.</div>
+</div>
+
+<!-- ========================================================= INVESTMENT STRATEGY -->
+<div class="section">
+  <div class="kicker">09 · Strategi Investasi &amp; Ekspansi</div>
+  <h2>Ekspansi organik dibiayai internal, keluar dari Jawa</h2>
+  <figure><figcaption>Toko per wilayah <span>· Des 2024 vs Sep 2026 (pertumbuhan dalam kurung)</span></figcaption>
+    <img src="charts/c06_region.svg">
+    <div class="src">Sumber: Public Expose 2025; Paparan Kinerja 3Q26. Pertumbuhan tercepat di Kalimantan (+94%), Sulawesi (+70%), dan Jabodetabek (+66%).</div></figure>
+
+  <div class="two">
+    <div class="card"><h4>Pilar alokasi modal</h4>
+      <ol style="padding-left:4.5mm;margin:0">
+        <li><strong>Toko baru (prioritas #1):</strong> ≥270 toko/tahun, capex ±Rp700 M+/tahun.</li>
+        <li><strong>Asset-light:</strong> 100% sewa, landlord membangun, sewa awal hingga 5 tahun + opsi perpanjangan. 90–95% aset tetap dan ROU terkait toko.</li>
+        <li><strong>Infrastruktur:</strong> DC Marunda (21.000 m² operasional + 15.000 m² outbound), sistem impor, HRIS, GIS, keamanan siber.</li>
+        <li><strong>Deleveraging:</strong> pinjaman bank CIMB dilunasi sebagian dari dana IPO. Gearing turun 2,6x → 0,3x.</li>
+        <li><strong>Imbal hasil pemegang saham:</strong> dividen ≥40% laba FY2025 (±Rp444 M dibayar 2026), MESOP.</li>
+        <li><strong>Opsi pertumbuhan baru:</strong> investasi minoritas Rp108 M di <strong>PT KKV Trading Indonesia</strong> (KK Group: KKV, X11, The Colorist, Apr 2026), menyasar konsumen muda dan ritel gaya hidup.</li>
+      </ol></div>
+    <div class="card"><h4>Sumber pendanaan</h4>
+      <table class="tabular">
+        <tr><th>Rp miliar</th><th class="n">FY2024</th><th class="n">FY2025</th><th class="n">9M2026</th></tr>
+        <tr><td>Kas operasi bersih</td><td class="n">767</td><td class="n">1.306</td><td class="n">1.586</td></tr>
+        <tr><td>Akuisisi aset tetap</td><td class="n">(707)</td><td class="n">(726)</td><td class="n">(616)</td></tr>
+        <tr><td>Pembayaran sewa</td><td class="n">(652)</td><td class="n">(721)</td><td class="n">(566)</td></tr>
+        <tr><td>Dividen</td><td class="n">–</td><td class="n">–</td><td class="n">(444)</td></tr>
+        <tr><td>Investasi asosiasi (KKV)</td><td class="n">–</td><td class="n">–</td><td class="n">(108)</td></tr>
+        <tr><td>Pinjaman bank neto</td><td class="n">+1.315</td><td class="n">+83</td><td class="n">(33)</td></tr>
+      </table>
+      <p class="small"><strong>Penggunaan dana IPO</strong> (±Rp416 M primer): 60% bayar pokok kredit CIMB, 30% pembukaan toko baru 2025–2026 (deposit &amp; uang muka sewa, renovasi, fixtures), 10% modal kerja.</p>
+      <p class="small">Sejak 2025 capex sepenuhnya didanai kas internal. Komitmen pembelian aset tetap per akhir 2025: Rp79,9 M.</p>
+    </div>
+  </div>
+  <div class="callout"><h4>Logika strategi</h4>Penetrasi toko home goods di Indonesia baru 37 toko per juta penduduk, sementara rata-rata ASEAN 167. Manajemen memprioritaskan <strong>merebut lokasi lebih dulu</strong> (first-mover di kabupaten) dibanding mengoptimalkan SSSG. Cakupan kota naik dari 357 (Jun-24) ke 426 (Des-25) dan 445 (Agu-26) dari 514 kab/kota. Mesin pembukaan 20+ toko per bulan dijaga meski SSSG negatif.</div>
+</div>
+
+<!-- ========================================================= FINANCIALS -->
+<div class="section">
+  <div class="kicker">10 · Kinerja Keuangan</div>
+  <h2>Tumbuh cepat, margin mulai dikorbankan untuk trafik</h2>
+  <figure><figcaption>Pendapatan &amp; laba bersih</figcaption><img src="charts/c02_rev_pat.svg">
+    <div class="src">FY2021–FY2023 laporan entitas (sebelum konsolidasi penuh MIY). Proforma FY2023: pendapatan Rp4.864 M, laba Rp662 M.</div></figure>
+  <div class="two">
+    <figure><figcaption>Margin</figcaption><img src="charts/c03_margins.svg"></figure>
+    <figure><figcaption>Same-Store Sales Growth (SSSG)</figcaption><img src="charts/c04_sssg.svg">
+      <div class="src">2Q26 negatif karena Ramadan/Lebaran bergeser ke 1Q. 9M26: −0,2%.</div></figure>
+  </div>
+  <table class="tabular">
+    <tr><th>Indikator</th><th class="n">FY2023 (pf)</th><th class="n">FY2024</th><th class="n">FY2025</th><th class="n">9M2026</th></tr>
+    <tr><td>Pendapatan (Rp M)</td><td class="n">4.864</td><td class="n">6.790</td><td class="n">7.922</td><td class="n">7.188</td></tr>
+    <tr><td>EBITDA (Rp M)</td><td class="n">1.362</td><td class="n">2.236</td><td class="n">2.589</td><td class="n">2.131</td></tr>
+    <tr><td>Laba bersih (Rp M)</td><td class="n">662</td><td class="n">1.078</td><td class="n">1.131</td><td class="n">894</td></tr>
+    <tr><td>Toko akhir periode</td><td class="n">698</td><td class="n">961</td><td class="n">1.226</td><td class="n">1.416</td></tr>
+    <tr><td>Transaksi (juta)</td><td class="n">64,5</td><td class="n">88,8</td><td class="n">100,3</td><td class="n">90,0</td></tr>
+    <tr><td>Persediaan (hari)</td><td class="n">–</td><td class="n">±200</td><td class="n">224</td><td class="n">±203</td></tr>
+    <tr><td>ROE</td><td class="n">41,0%</td><td class="n">34,9%</td><td class="n">26,8%</td><td class="n">26,1% (TTM)</td></tr>
+    <tr><td>Gearing</td><td class="n">1,7x</td><td class="n">0,5x</td><td class="n">0,4x</td><td class="n">0,3x</td></tr>
+  </table>
+  <p class="src">Sumber: Public Expose 2025 &amp; 2026, Laporan Tahunan 2025, Paparan Kinerja 1Q/2Q/3Q26. FY2024 EBITDA sesuai penyajian ulang 2026.</p>
+</div>
+
+<!-- ========================================================= COMPETITION -->
+<div class="section">
+  <div class="kicker">11 · Lanskap Kompetisi</div>
+  <h2>Pemimpin jumlah toko, dikepung pemain lifestyle &amp; online</h2>
+  <div class="two w60">
+    <figure><figcaption>Jumlah toko peritel non-grocery utama</figcaption><img src="charts/c11_competitors.svg">
+      <div class="src">Sumber: Prospektus IPO (data F&amp;S, Jun 2024); Miniso 2026 dari rilis peresmian SUPER MINISO.</div></figure>
+    <div>
+      <table>
+        <tr><th>Pemain</th><th>Posisi vs MR.DIY</th></tr>
+        <tr><td>Miniso, Niceso, Oh!Some, KKV</td><td>Lifestyle/design value, segmen muda, berbasis mal, IP/lisensi. Harga lebih tinggi.</td></tr>
+        <tr><td>ACE/AZKO, Mitra10, Informa</td><td>Home improvement big-box. Tiket lebih besar, toko lebih luas, jumlah toko lebih sedikit.</td></tr>
+        <tr><td>Hypermarket &amp; minimarket</td><td>Overlap di household basic. MR.DIY justru menempel di Hypermart dan Superindo untuk trafik.</td></tr>
+        <tr><td>Toko kelontong &amp; grosir lokal</td><td>Fragmentasi tinggi. MR.DIY menang di harga impor langsung dan kelengkapan.</td></tr>
+        <tr><td>Shopee, TikTok Shop</td><td>Ancaman harga dan kenyamanan. MR.DIY tidak punya kanal online.</td></tr>
+      </table>
+      <div class="callout" style="margin-top:2mm">Dengan masuk ke KK Group (KKV, X11, The Colorist), MR.DIY <strong>melindungi sisi lifestyle</strong> tanpa mengubah merek intinya. Pola ini meniru langkah grup di Malaysia dan Thailand.</div>
+    </div>
+  </div>
+
+  <h3>SWOT</h3>
+  <div class="swot">
+    <div class="card"><h4 style="color:#0b6b47">Strengths</h4><ul>
+      <li>Skala pengadaan grup dan harga termurah, dengan satu harga nasional</li>
+      <li>Playbook ekspansi tercepat di ritel Indonesia (20+ toko/bulan)</li>
+      <li>Model asset-light, ROI &lt;3 tahun, neraca kuat (gearing 0,3x)</li>
+      <li>Cakupan 37 provinsi dan 445 kab/kota</li></ul></div>
+    <div class="card"><h4 style="color:#9a3b14">Weaknesses</h4><ul>
+      <li>SSSG negatif/datar 2025–2026 (risiko kanibalisasi dan kejenuhan)</li>
+      <li>GPM turun ±4 pp akibat promosi</li>
+      <li>Persediaan ±200+ hari, modal kerja berat</li>
+      <li>Satu DC sentral untuk seluruh nusantara</li>
+      <li>Tanpa kanal online. Ketergantungan pada pihak terafiliasi (MDGM)</li></ul></div>
+    <div class="card"><h4 style="color:#184f95">Opportunities</h4><ul>
+      <li>Penetrasi 37 toko/juta vs ASEAN 167, artinya ruang ribuan toko</li>
+      <li>Kabupaten tier 3 dan Indonesia Timur</li>
+      <li>Format 2.0 untuk menaikkan produktivitas per m²</li>
+      <li>Lifestyle via KKV/X11. Kategori baru dari sourcing grup</li>
+      <li>DC regional untuk menekan biaya logistik luar Jawa</li></ul></div>
+    <div class="card"><h4 style="color:#d03b3b">Threats</h4><ul>
+      <li>Daya beli melemah, konsumen lebih selektif</li>
+      <li>Pelemahan rupiah (impor dalam USD)</li>
+      <li>Kenaikan UMR dan sewa</li>
+      <li>Regulasi impor/SNI dan pembatasan barang impor</li>
+      <li>Social commerce dan peniru lokal berharga murah</li></ul></div>
+  </div>
+</div>
+
+<!-- ========================================================= IMPLICATIONS -->
+<div class="section">
+  <div class="kicker">12 · Implikasi &amp; Rekomendasi</div>
+  <h2>Pelajaran untuk konsep toko kita</h2>
+  <p class="lead">Rekomendasi berikut kami turunkan dari model MR.DIY untuk pertimbangan BOD. Penerapannya perlu disesuaikan dengan kategori, margin, dan peta lokasi perusahaan.</p>
+  <table>
+    <tr><th style="width:4%">#</th><th style="width:28%">Rekomendasi</th><th>Rasional dari studi MR.DIY</th><th style="width:16%">Prioritas</th></tr>
+    <tr><td>1</td><td><strong>Tetapkan tiering 3 ukuran</strong> (S ±300–450 m², M ±500–800 m², L/Flagship ≥900 m²) dengan template modular</td><td>93% toko MR.DIY ada di tier S/M. Toko besar dipakai secara selektif sebagai etalase di mal. Template modular memungkinkan buka 20+ toko/bulan dengan pengalaman yang konsisten.</td><td><span class="tag">Tinggi</span></td></tr>
+    <tr><td>2</td><td><strong>Prioritaskan ruko stand-alone</strong> untuk kota tier 2–3. Mal hanya untuk flagship dan brand presence.</td><td>Ruko menekan sewa dan opex, sewanya lebih panjang, persaingannya lebih rendah. Porsi ruko MR.DIY naik dari 73% ke 80%.</td><td><span class="tag">Tinggi</span></td></tr>
+    <tr><td>3</td><td><strong>Patok capex ±Rp3,5–4 jt/m²</strong> dan payback ≤3 tahun sebagai hurdle investasi toko</td><td>Benchmark MR.DIY ID dan MY ±Rp2 M per toko ±550 m². Negosiasikan agar landlord menanggung pekerjaan sipil.</td><td><span class="tag">Tinggi</span></td></tr>
+    <tr><td>4</td><td><strong>Pilot sebelum roll-out</strong> untuk setiap generasi format (seperti Format 2.0)</td><td>MR.DIY menguji Format 2.0 di satu toko, mengukur respons pelanggan, lalu memakainya untuk semua toko baru.</td><td><span class="tag">Sedang</span></td></tr>
+    <tr><td>5</td><td><strong>Pantau SSSG dan kanibalisasi</strong> sejak dini dengan GIS dan catchment analysis</td><td>Ekspansi agresif MR.DIY menurunkan SSSG ke −7,6%. Kecepatan buka toko perlu diimbangi kesehatan toko lama.</td><td><span class="tag">Tinggi</span></td></tr>
+    <tr><td>6</td><td><strong>Pertimbangkan kebijakan harga sederhana</strong> (satu harga nasional / price-lock) jika rantai pasok memungkinkan</td><td>"Harga Tetap Sama" dan satu harga nasional membangun kepercayaan di daerah, tetapi menekan margin di wilayah dengan logistik mahal.</td><td><span class="tag">Sedang</span></td></tr>
+    <tr><td>7</td><td><strong>Siapkan respons kompetitif</strong> di lokasi yang bertumpuk dengan MR.DIY</td><td>MR.DIY menargetkan ≥270 toko/tahun ke Kalimantan, Sulawesi, dan Papua. Diferensiasi bisa lewat kategori, layanan, atau kanal online yang tidak dimiliki MR.DIY.</td><td><span class="tag">Sedang</span></td></tr>
+  </table>
+
+  <h3>Usulan langkah lanjut</h3>
+  <ul>
+    <li><strong>Store visit audit</strong> ke 6 toko MR.DIY (2 per tier: ruko kabupaten, ruko kota, flagship mal) untuk memvalidasi luas, layout, jumlah staf, dan estimasi trafik.</li>
+    <li>Menyusun <strong>model unit economics internal</strong> per tier memakai parameter sewa, UMR, dan margin kita, lalu membandingkannya dengan hurdle MR.DIY.</li>
+    <li><strong>Pemetaan overlap lokasi</strong> jaringan kita dengan 1.416 toko MR.DIY untuk mengidentifikasi area yang paling terpapar.</li>
+  </ul>
+</div>
+
+<!-- ========================================================= APPENDIX -->
+<div class="section">
+  <div class="kicker">Lampiran</div>
+  <h2>Metodologi, batasan &amp; sumber</h2>
+  <h3>Metodologi &amp; batasan</h3>
+  <ul>
+    <li>Data <span class="tag act">aktual</span> berasal dari dokumen resmi perusahaan: prospektus, laporan tahunan, laporan keuangan, paparan kinerja, dan siaran pers. Data <span class="tag est">estimasi</span> adalah perhitungan analis dan perlu divalidasi lapangan.</li>
+    <li><strong>Tiering ukuran toko</strong> hanya diungkap sekali (Prospektus IPO, per 30 Jun 2024). Distribusi Sep 2026 adalah ekstrapolasi.</li>
+    <li><strong>Capex per toko</strong> tidak diungkap perusahaan. Angka all-in = akuisisi aset tetap dibagi toko baru. Angka fit-out dan per tier adalah estimasi yang di-cross-check dengan data grup Malaysia (kurs ±Rp3.700/RM).</li>
+    <li>Angka 2021–2023 ada yang proforma (termasuk MIY) dan ada yang entitas, sehingga tidak sepenuhnya sebanding.</li>
+    <li>Data pesaing sebagian besar per Jun 2024 (F&amp;S). Hasil 9M2026 belum diaudit.</li>
+  </ul>
+  <h3>Glosarium</h3>
+  <p class="small"><strong>SSSG</strong>: pertumbuhan penjualan toko yang sudah beroperasi ≥24 bulan. <strong>ATV/basket size</strong>: rata-rata nilai per transaksi. <strong>Gearing</strong>: utang/ekuitas. <strong>4-wall EBITDA</strong>: laba toko sebelum alokasi biaya pusat. <strong>ROU</strong>: aset hak guna (sewa) menurut PSAK 116. <strong>MIY</strong>: PT Mitra Indoguna Yasa (entitas toko yang diakuisisi 2024). <strong>MDGM</strong>: tim pengadaan global grup MR.D.I.Y. di Malaysia.</p>
+  <h3>Sumber utama</h3>
+  <ol class="sources">
+    <li>Prospektus IPO PT Daya Intiguna Yasa Tbk (Des 2024): corporate-id.mrdiy.com/uploads/informasi-investor/doc/prospektus-2024-en-1748419874.pdf</li>
+    <li>Annual Public Expose 2025 (FY2024): corporate-id.mrdiy.com/uploads/informasi-investor/doc/public-expose-tahunan-2025-1748418926.pdf</li>
+    <li>Annual Public Expose 2026 (FY2025): corporate-id.mrdiy.com/uploads/informasi-investor/doc/public-expose-tahunan-2026-en-1773309609.pdf</li>
+    <li>Laporan Tahunan 2025: corporate-id.mrdiy.com/uploads/informasi-investor/doc/laporan-tahunan-2025-en-1777395224.pdf</li>
+    <li>Paparan Kinerja 1Q26, 2Q26, 3Q26 dan Laporan Keuangan 30 Sep 2026: corporate-id.mrdiy.com (Informasi Investor)</li>
+    <li>Siaran pers MR.DIY Indonesia: FY2025 (12 Mar 2026), Q1 2026, KK Group (30 Apr 2026), 1.300 toko &amp; "Harga Tetap Sama" (7 Mei 2026), H1 2026, 1.400 toko (3 Sep 2026), 9M 2026 (29 Okt 2026), kampanye "Ada Aja Idenya" (2024/2025), Ramadan 2026: corporate-id.mrdiy.com/media/siaran-pers</li>
+    <li>MR D.I.Y. Group (M) Berhad Annual Report 2023 (format Express/PLUS, capex per toko): corporate.mrdiy.com/newsroom/MR_D.I.Y._Annual_Report_2023_20240425.pdf</li>
+    <li>MIDF Research, "From Value Retailer to Multi-Brand Powerhouse" (Des 2025): midf.com.my</li>
+    <li>World of Buzz (2021), MR.DIY PLUS 30.000 sq ft: worldofbuzz.com</li>
+    <li>Kontan, Bisnis.com, CNBC Indonesia, Investortrust (2025–2026): kinerja saham MDIY &amp; target harga analis</li>
+    <li>MINISO / Branding in Asia (2026): jumlah toko Miniso Indonesia</li>
+  </ol>
+</div>
+
+</body>
+</html>

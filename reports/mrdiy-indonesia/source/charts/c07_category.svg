@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="502.168281pt" height="198.595982pt" viewBox="0 0 502.168281 198.595982" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T06:31:59.979782</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 198.595982 
+L 502.168281 198.595982 
+L 502.168281 0 
+L -0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 131.411172 180.606334 
+L 488.531172 180.606334 
+L 488.531172 8.742334 
+L 131.411172 8.742334 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 131.411172 180.606334 
+L 131.411172 8.742334 
+" clip-path="url(#p3f1b5b1ba0)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 9px; font-family: 'Inter'; text-anchor: middle; fill: #898781" x="131.411172" y="192.825084" transform="rotate(-0 131.411172 192.825084)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 250.451172 180.606334 
+L 250.451172 8.742334 
+" clip-path="url(#p3f1b5b1ba0)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 9px; font-family: 'Inter'; text-anchor: middle; fill: #898781" x="250.451172" y="192.825084" transform="rotate(-0 250.451172 192.825084)">10%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 369.491172 180.606334 
+L 369.491172 8.742334 
+" clip-path="url(#p3f1b5b1ba0)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 9px; font-family: 'Inter'; text-anchor: middle; fill: #898781" x="369.491172" y="192.825084" transform="rotate(-0 369.491172 192.825084)">20%</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 488.531172 180.606334 
+L 488.531172 8.742334 
+" clip-path="url(#p3f1b5b1ba0)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 9px; font-family: 'Inter'; text-anchor: middle; fill: #898781" x="488.531172" y="192.825084" transform="rotate(-0 488.531172 192.825084)">30%</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9"/>
+     <g id="text_5">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #52514e" x="127.911172" y="12.859521" transform="rotate(-0 127.911172 12.859521)">Household (alat rumah tangga)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_10"/>
+     <g id="text_6">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #52514e" x="127.911172" y="30.045921" transform="rotate(-0 127.911172 30.045921)">Furnishing (perabot)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11"/>
+     <g id="text_7">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #52514e" x="127.911172" y="47.232321" transform="rotate(-0 127.911172 47.232321)">Stationery &amp; Sports</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12"/>
+     <g id="text_8">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #52514e" x="127.911172" y="64.418721" transform="rotate(-0 127.911172 64.418721)">Toys (mainan)</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_13"/>
+     <g id="text_9">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #52514e" x="127.911172" y="81.605121" transform="rotate(-0 127.911172 81.605121)">Jewellery &amp; Cosmetics</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_14"/>
+     <g id="text_10">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #52514e" x="127.911172" y="98.791521" transform="rotate(-0 127.911172 98.791521)">Hardware (perkakas)</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_15"/>
+     <g id="text_11">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #52514e" x="127.911172" y="115.977921" transform="rotate(-0 127.911172 115.977921)">Gifts (hadiah)</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_16"/>
+     <g id="text_12">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #52514e" x="127.911172" y="133.164321" transform="rotate(-0 127.911172 133.164321)">Electrical</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_17"/>
+     <g id="text_13">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #52514e" x="127.911172" y="150.350721" transform="rotate(-0 127.911172 150.350721)">Car accessories</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_18"/>
+     <g id="text_14">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #52514e" x="127.911172" y="167.537121" transform="rotate(-0 127.911172 167.537121)">Computer &amp; HP acc.</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_19"/>
+     <g id="text_15">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #52514e" x="127.911172" y="184.723521" transform="rotate(-0 127.911172 184.723521)">Lainnya / F&amp;B*</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 131.411172 13.468594 
+L 434.963172 13.468594 
+Q 440.915172 13.468594 440.915172 11.76714 
+L 440.915172 5.717528 
+Q 440.915172 4.016074 434.963172 4.016074 
+L 131.411172 4.016074 
+z
+" clip-path="url(#p3f1b5b1ba0)" style="fill: #2a78d6"/>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: start; fill: #0b0b0b" x="445.676772" y="11.834375" transform="rotate(-0 445.676772 11.834375)">26%</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 131.411172 30.654994 
+L 280.211172 30.654994 
+Q 286.163172 30.654994 286.163172 28.95354 
+L 286.163172 22.903928 
+Q 286.163172 21.202474 280.211172 21.202474 
+L 131.411172 21.202474 
+z
+" clip-path="url(#p3f1b5b1ba0)" style="fill: #2a78d6"/>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: start; fill: #0b0b0b" x="290.924772" y="29.020775" transform="rotate(-0 290.924772 29.020775)">13%</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 131.411172 47.841394 
+L 256.403172 47.841394 
+Q 262.355172 47.841394 262.355172 46.13994 
+L 262.355172 40.090328 
+Q 262.355172 38.388874 256.403172 38.388874 
+L 131.411172 38.388874 
+z
+" clip-path="url(#p3f1b5b1ba0)" style="fill: #2a78d6"/>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: start; fill: #0b0b0b" x="267.116772" y="46.207175" transform="rotate(-0 267.116772 46.207175)">11%</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 131.411172 65.027794 
+L 256.403172 65.027794 
+Q 262.355172 65.027794 262.355172 63.32634 
+L 262.355172 57.276728 
+Q 262.355172 55.575274 256.403172 55.575274 
+L 131.411172 55.575274 
+z
+" clip-path="url(#p3f1b5b1ba0)" style="fill: #2a78d6"/>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: start; fill: #0b0b0b" x="267.116772" y="63.393575" transform="rotate(-0 267.116772 63.393575)">11%</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 131.411172 82.214194 
+L 244.499172 82.214194 
+Q 250.451172 82.214194 250.451172 80.51274 
+L 250.451172 74.463128 
+Q 250.451172 72.761674 244.499172 72.761674 
+L 131.411172 72.761674 
+z
+" clip-path="url(#p3f1b5b1ba0)" style="fill: #2a78d6"/>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: start; fill: #0b0b0b" x="255.212772" y="80.579975" transform="rotate(-0 255.212772 80.579975)">10%</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 131.411172 99.400594 
+L 232.595172 99.400594 
+Q 238.547172 99.400594 238.547172 97.69914 
+L 238.547172 91.649528 
+Q 238.547172 89.948074 232.595172 89.948074 
+L 131.411172 89.948074 
+z
+" clip-path="url(#p3f1b5b1ba0)" style="fill: #2a78d6"/>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: start; fill: #0b0b0b" x="243.308772" y="97.766375" transform="rotate(-0 243.308772 97.766375)">9%</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 131.411172 116.586994 
+L 184.979172 116.586994 
+Q 190.931172 116.586994 190.931172 114.88554 
+L 190.931172 108.835928 
+Q 190.931172 107.134474 184.979172 107.134474 
+L 131.411172 107.134474 
+z
+" clip-path="url(#p3f1b5b1ba0)" style="fill: #2a78d6"/>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: start; fill: #0b0b0b" x="195.692772" y="114.952775" transform="rotate(-0 195.692772 114.952775)">5%</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 131.411172 133.773394 
+L 173.075172 133.773394 
+Q 179.027172 133.773394 179.027172 132.07194 
+L 179.027172 126.022328 
+Q 179.027172 124.320874 173.075172 124.320874 
+L 131.411172 124.320874 
+z
+" clip-path="url(#p3f1b5b1ba0)" style="fill: #2a78d6"/>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: start; fill: #0b0b0b" x="183.788772" y="132.139175" transform="rotate(-0 183.788772 132.139175)">4%</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 131.411172 150.959794 
+L 161.171172 150.959794 
+Q 167.123172 150.959794 167.123172 149.25834 
+L 167.123172 143.208728 
+Q 167.123172 141.507274 161.171172 141.507274 
+L 131.411172 141.507274 
+z
+" clip-path="url(#p3f1b5b1ba0)" style="fill: #2a78d6"/>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: start; fill: #0b0b0b" x="171.884772" y="149.325575" transform="rotate(-0 171.884772 149.325575)">3%</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 131.411172 168.146194 
+L 161.171172 168.146194 
+Q 167.123172 168.146194 167.123172 166.44474 
+L 167.123172 160.395128 
+Q 167.123172 158.693674 161.171172 158.693674 
+L 131.411172 158.693674 
+z
+" clip-path="url(#p3f1b5b1ba0)" style="fill: #2a78d6"/>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: start; fill: #0b0b0b" x="171.884772" y="166.511975" transform="rotate(-0 171.884772 166.511975)">3%</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 131.411172 185.332594 
+L 184.979172 185.332594 
+Q 190.931172 185.332594 190.931172 183.63114 
+L 190.931172 177.581528 
+Q 190.931172 175.880074 184.979172 175.880074 
+L 131.411172 175.880074 
+z
+" clip-path="url(#p3f1b5b1ba0)" style="fill: #86b6ef"/>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: start; fill: #0b0b0b" x="195.692772" y="183.698375" transform="rotate(-0 195.692772 183.698375)">5%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3f1b5b1ba0">
+   <rect x="131.411172" y="8.742334" width="357.12" height="171.864"/>
+  </clipPath>
+ </defs>
+</svg>

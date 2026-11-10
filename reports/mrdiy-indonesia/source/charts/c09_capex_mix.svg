@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="364.32pt" height="94.150814pt" viewBox="0 0 364.32 94.150814" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-10T06:32:00.146129</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 94.150814 
+L 364.32 94.150814 
+L 364.32 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 3.6 56.268 
+L 360.72 56.268 
+L 360.72 3.6 
+L 3.6 3.6 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_3">
+    <path d="M 3.6 53.874 
+L 197.580565 53.874 
+L 197.580565 5.994 
+L 3.6 5.994 
+z
+" clip-path="url(#p8cf20711d7)" style="fill: #2a78d6"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #ffffff" x="101.304523" y="32.844156" transform="rotate(-0 101.304523 32.844156)">55%</text>
+   </g>
+   <g id="patch_4">
+    <path d="M 199.009045 53.874 
+L 260.490314 53.874 
+L 260.490314 5.994 
+L 199.009045 5.994 
+z
+" clip-path="url(#p8cf20711d7)" style="fill: #eb6834"/>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #ffffff" x="230.46392" y="32.844156" transform="rotate(-0 230.46392 32.844156)">18%</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 261.918794 53.874 
+L 295.484485 53.874 
+L 295.484485 5.994 
+L 261.918794 5.994 
+z
+" clip-path="url(#p8cf20711d7)" style="fill: #1baf7a"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #ffffff" x="279.415879" y="32.844156" transform="rotate(-0 279.415879 32.844156)">10%</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 296.912965 53.874 
+L 325.59343 53.874 
+L 325.59343 5.994 
+L 296.912965 5.994 
+z
+" clip-path="url(#p8cf20711d7)" style="fill: #eda100"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8px; font-family: 'Inter'; text-anchor: middle; fill: #0b0b0b" x="311.967437" y="32.844156" transform="rotate(-0 311.967437 32.844156)">8%</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 327.02191 53.874 
+L 350.418354 53.874 
+L 350.418354 5.994 
+L 327.02191 5.994 
+z
+" clip-path="url(#p8cf20711d7)" style="fill: #e87ba4"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 351.846834 53.874 
+L 359.29152 53.874 
+L 359.29152 5.994 
+L 351.846834 5.994 
+z
+" clip-path="url(#p8cf20711d7)" style="fill: #6250d6"/>
+   </g>
+   <g id="legend_1">
+    <g id="patch_9">
+     <path d="M 19.601016 72.917025 
+L 34.601016 72.917025 
+L 34.601016 67.667025 
+L 19.601016 67.667025 
+z
+" style="fill: #2a78d6; stroke: #2a78d6; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 7.5px; font-family: 'Inter'; text-anchor: start; fill: #52514e" x="40.601016" y="72.917025" transform="rotate(-0 40.601016 72.917025)">Renovasi 55%</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 19.601016 85.741732 
+L 34.601016 85.741732 
+L 34.601016 80.491732 
+L 19.601016 80.491732 
+z
+" style="fill: #eb6834; stroke: #eb6834; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 7.5px; font-family: 'Inter'; text-anchor: start; fill: #52514e" x="40.601016" y="85.741732" transform="rotate(-0 40.601016 85.741732)">Fixtures (rak/display) 18%</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 147.693984 72.917025 
+L 162.693984 72.917025 
+L 162.693984 67.667025 
+L 147.693984 67.667025 
+z
+" style="fill: #1baf7a; stroke: #1baf7a; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 7.5px; font-family: 'Inter'; text-anchor: start; fill: #52514e" x="168.693984" y="72.917025" transform="rotate(-0 168.693984 72.917025)">Signboard 10%</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 147.693984 85.741732 
+L 162.693984 85.741732 
+L 162.693984 80.491732 
+L 147.693984 80.491732 
+z
+" style="fill: #eda100; stroke: #eda100; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 7.5px; font-family: 'Inter'; text-anchor: start; fill: #52514e" x="168.693984" y="85.741732" transform="rotate(-0 168.693984 85.741732)">Komputer &amp; software 8%</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 272.230313 72.917025 
+L 287.230313 72.917025 
+L 287.230313 67.667025 
+L 272.230313 67.667025 
+z
+" style="fill: #e87ba4; stroke: #e87ba4; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 7.5px; font-family: 'Inter'; text-anchor: start; fill: #52514e" x="293.230313" y="72.917025" transform="rotate(-0 293.230313 72.917025)">Equipment 7%</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 272.230313 85.741732 
+L 287.230313 85.741732 
+L 287.230313 80.491732 
+L 272.230313 80.491732 
+z
+" style="fill: #6250d6; stroke: #6250d6; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 7.5px; font-family: 'Inter'; text-anchor: start; fill: #52514e" x="293.230313" y="85.741732" transform="rotate(-0 293.230313 85.741732)">Furniture 2%</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8cf20711d7">
+   <rect x="3.6" y="3.6" width="357.12" height="52.668"/>
+  </clipPath>
+ </defs>
+</svg>
