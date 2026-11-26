@@ -1,5 +1,7 @@
 # Riset: Model Bisnis Blibli di Kategori Elektronik
 
+> **Catatan:** Laporan ini membahas Blibli di tingkat grup. Untuk jaringan toko offline **Blibli Elektronik**, lihat `blibli-elektronik-offline-model-bisnis.md`.
+
 *Per 26 November 2026. Sumber: laporan keuangan BELI yang dikutip media (FY2025, Q1–Q3 2026), siaran pers Blibli, dan liputan industri. Angka segmen tidak memisahkan elektronik dari kategori lain, jadi porsi elektronik di bawah ini adalah inferensi, bukan angka resmi.*
 
 ## 1. Ringkasan
