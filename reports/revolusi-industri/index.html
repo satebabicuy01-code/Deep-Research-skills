@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revolusi Industri sampai AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE everyday learning: a long, calm explainer with a newspaper-graphics standard for its charts
+   IDEA a Jacquard pattern book: indigo-dyed cotton, punched-card rows, one thread running from the loom to AI
+   PICTURE the GDP-per-person "hockey stick" drawn as coloured threads on an indigo plate; the timeline is a punched card
+   COLOUR cotton white ground, indigo plates and bands (#13205a), soga brown support, madder red accent; night indigo #0b1026
+   TYPE Zilla Slab (Victorian factory lettering) + IBM Plex Sans (the punched-card company's own face)
+   LAYOUT title across the top of an indigo band, chart full width beneath, figure strip under it; phone stacks title, chart, controls */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0b1026);--ink:light-dark(#14172b,#e9ebf5);--mut:light-dark(#4b5072,#a9afcc);--line:light-dark(#e2e4ef,#232a5c);--panel:light-dark(#f3f4fa,#121a3c);--soga:light-dark(#8a5a2b,#d8a56c);--red:light-dark(#c8263a,#ff7480);--ind:#13205a;--pink:#dfe3f7;--pmut:#aab3dd}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.62 "IBM Plex Sans",system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Zilla Slab",Georgia,serif;line-height:1.08;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,5.4vw,56px);font-weight:700}
+h2{font-size:clamp(28px,3.6vw,40px);font-weight:700;margin-bottom:14px}
+h3{font-size:22px;font-weight:600;margin:0 0 6px}
+p{margin:0 0 14px}
+a{color:inherit;text-decoration-color:var(--red);text-underline-offset:3px}
+.band{padding-block:clamp(32px,5vw,72px);padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1240px;margin:0 auto}
+.read{max-width:760px}
+.lede{font-size:19px;color:var(--mut);max-width:780px}
+.alt{background:var(--panel)}
+.indigo{background:var(--ind);color:var(--pink)}
+.indigo .lede,.indigo .mut{color:var(--pmut)}
+.mut{color:var(--mut)}
+.small{font-size:14px}
+.nav{position:relative;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav .scroll{display:flex;gap:4px;padding:8px max(5vw,16px);max-width:1340px;margin:0 auto}
+.nav a{flex:none;text-decoration:none;font-size:14px;font-weight:500;padding:10px 12px;border-radius:8px;color:var(--mut);min-height:44px;display:flex;align-items:center}
+.nav a:hover,.nav a:focus-visible{background:var(--panel);color:var(--ink)}
+@media(min-width:900px){.nav{position:sticky;top:0}}
+.scroll{overflow-x:auto}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,44px)}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media(max-width:860px){.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.grid2,.grid3{grid-template-columns:minmax(0,1fr)}}
+.plate{background:var(--ind);color:var(--pink);border-radius:14px;padding:18px 18px 10px}
+.plate h3{color:#fff}
+.plate .cap{color:var(--pmut);font-size:14px;margin:6px 0 4px}
+.fig{position:relative;min-height:340px}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.fig.tall{min-height:clamp(340px,46vw,470px)}
+.fig.mini{min-height:190px}
+.fig svg text{font:13px "IBM Plex Sans",sans-serif;fill:var(--pmut);paint-order:stroke;stroke:var(--ind);stroke-width:4px}
+.fig svg text.lab{fill:#fff;font-weight:500}
+.fig svg text.note{fill:#fff}
+.tip{position:absolute;pointer-events:none;background:#fff;color:#14172b;border-radius:8px;padding:8px 10px;font-size:13px;line-height:1.4;box-shadow:0 4px 18px rgba(0,0,0,.25);opacity:0;transition:opacity .12s;min-width:150px;z-index:3}
+.tip b{display:block;margin-bottom:2px}.tip em{font-style:normal}
+.tip i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;font-style:normal}
+.tip span{display:flex;justify-content:space-between;gap:12px;white-space:nowrap}
+.ctrl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 6px}
+.chip{font:500 14px "IBM Plex Sans",sans-serif;min-height:44px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:transparent;color:var(--pink);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.chip[aria-pressed=false]{opacity:.5}
+.chip[aria-pressed=false] i{background:transparent!important;border:1.5px solid currentColor}
+.chip:focus-visible,.btn:focus-visible,.tab:focus-visible,.hole:focus-visible{outline:3px solid #ffd166;outline-offset:2px}
+.seg{margin-left:auto;display:inline-flex;border:1px solid rgba(255,255,255,.28);border-radius:999px;overflow:hidden}
+.seg button{font:500 14px "IBM Plex Sans",sans-serif;min-height:44px;padding:8px 14px;background:transparent;color:var(--pink);border:0;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--pink);color:var(--ind)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(13em,1fr));gap:2px;margin-top:22px;background:rgba(255,255,255,.14);border-radius:12px;overflow:hidden}
+.stat{background:var(--ind);padding:16px 18px}
+.stat b{display:block;font:700 clamp(26px,3vw,34px)/1.1 "Zilla Slab",serif;color:#fff;white-space:nowrap}
+.stat span{font-size:14px;color:var(--pmut)}
+.hero-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px 48px;align-items:end;margin-bottom:8px}
+.hero-head h1{color:#fff}
+@media(max-width:760px){.hero-head{grid-template-columns:minmax(0,1fr)}}
+.sum{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 44px;margin-top:20px}
+@media(max-width:700px){.sum{grid-template-columns:minmax(0,1fr)}}
+.sum p{padding:14px 0;border-top:1px solid var(--line);margin:0}
+.sum p b{font-family:"Zilla Slab",serif;font-size:20px;display:block;line-height:1.2;margin-bottom:4px}
+.card{border-top:3px solid var(--ink);padding-top:12px}
+.card .who{font-size:14px;color:var(--soga);font-weight:600}
+.card .crit{font-size:15px;color:var(--mut);border-left:2px solid var(--line);padding-left:10px}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 10px;border-bottom:1px solid var(--line)}
+thead th{font-family:"Zilla Slab",serif;font-size:17px;border-bottom:2px solid var(--ink)}
+tbody th{font-weight:600;width:16%}
+.dots{color:var(--red);letter-spacing:2px;white-space:nowrap;display:block;font-size:13px}
+tr.hl{background:color-mix(in srgb,var(--red) 10%,transparent)}
+tr.dim{opacity:.38}
+.theories{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.btn{font:500 15px "IBM Plex Sans",sans-serif;min-height:44px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.btn[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.quote{font:500 clamp(22px,2.6vw,28px)/1.3 "Zilla Slab",serif;border-left:4px solid var(--red);padding:4px 0 4px 18px;margin:22px 0}
+.quote small{display:block;font:14px "IBM Plex Sans",sans-serif;color:var(--mut);margin-top:8px}
+.race{display:grid;gap:12px;margin-top:18px}
+.race .r{display:grid;grid-template-columns:5.5em minmax(0,1.5fr) minmax(0,1fr);gap:10px 18px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.race .yr{font:700 22px "Zilla Slab",serif;white-space:nowrap}
+.race .what b{display:block}
+.race .what span{font-size:15px;color:var(--mut)}
+.bar{display:grid;grid-template-columns:4.6em minmax(0,1fr);align-items:center;gap:8px;font-size:13px;color:var(--mut);margin:3px 0}
+.bar i{display:block;height:12px;border-radius:0 4px 4px 0}
+.bar .sp{background:var(--soga)}
+.bar .wv{background:var(--red)}
+@media(max-width:640px){.race .r{grid-template-columns:4.2em minmax(0,1fr)}.race .bars{grid-column:1/-1}}
+.tl{position:relative;min-width:1400px;padding:34px 0 8px}
+.lane{position:relative;height:66px;border-top:1px dashed rgba(255,255,255,.18)}
+.lane>em{position:absolute;left:0;top:6px;font-style:normal;font-size:13px;color:var(--pmut);white-space:nowrap}
+.hole{position:absolute;top:28px;width:9px;height:26px;margin-left:-4.5px;border-radius:5px;border:0;background:var(--pink);cursor:pointer;padding:0}
+.hole.n{background:#e07a32}
+.hole.s{background:#4593db}
+.hole[aria-pressed=true]{background:#ffd166;box-shadow:0 0 0 3px rgba(255,209,102,.35)}
+.era{position:absolute;top:0;bottom:30px;background:rgba(255,255,255,.06);border-left:1px solid rgba(255,255,255,.22);border-right:1px solid rgba(255,255,255,.22)}
+.era b{position:absolute;top:6px;left:8px;font-size:13px;font-weight:600;color:#fff;white-space:nowrap}
+.axis{position:relative;height:28px;border-top:1px solid rgba(255,255,255,.35)}
+.axis span{position:absolute;top:6px;transform:translateX(-50%);font-size:13px;color:var(--pmut)}.axis span:first-child{transform:none}.axis span:last-child{transform:translateX(-100%)}
+.detail{display:grid;grid-template-columns:6em minmax(0,1fr);gap:4px 18px;padding:16px 4px 8px;border-top:1px solid rgba(255,255,255,.2);margin-top:6px;min-height:118px}
+.detail .y{font:700 30px "Zilla Slab",serif;color:#ffd166;white-space:nowrap}
+.detail h3{color:#fff;font-size:20px}
+.detail p{color:var(--pink);margin:0;font-size:16px}
+.key{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--pmut);margin-top:6px}
+.key i{display:inline-block;width:10px;height:18px;border-radius:5px;vertical-align:-4px;margin-right:6px}
+.para td:first-child{white-space:nowrap;font-weight:600}
+.callout{background:var(--panel);border-radius:12px;padding:18px 20px;margin:18px 0}
+.indigo .callout{background:rgba(255,255,255,.07)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 22px}
+.tab{font:500 15px "IBM Plex Sans",sans-serif;min-height:44px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.tab[aria-selected=true]{background:var(--red);color:#fff;border-color:var(--red)}
+.route{list-style:none;margin:0;padding:0;position:relative}
+.route::before{content:"";position:absolute;left:calc(7.4em - 1px);top:10px;bottom:10px;width:3px;background:var(--red);border-radius:2px}
+.route li{display:grid;grid-template-columns:6.4em 2em minmax(0,1fr);gap:0 0;align-items:start;padding:8px 0}
+.route .yy{font:700 19px "Zilla Slab",serif;white-space:nowrap;text-align:right;padding-right:10px}
+.route .dot{width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--red);margin:5px 0 0 calc(1em - 7px)}
+.route li.big .dot{background:var(--red)}
+.route b{display:block;font-size:17px}
+.route span{color:var(--mut);font-size:15px}
+.eras{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;background:var(--line);border-radius:12px;overflow:hidden;margin-top:16px}
+.eras>div{background:var(--bg);padding:16px}
+.eras b{font:700 26px "Zilla Slab",serif;display:block;color:var(--red)}
+.eras .when{font-size:14px;font-weight:600;color:var(--soga);white-space:nowrap}
+.eras p{font-size:15px;margin:6px 0 0}
+@media(max-width:900px){.eras{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.eras{grid-template-columns:minmax(0,1fr)}}
+.wl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--line);border-radius:12px;overflow:hidden}
+.wl>div{background:var(--bg);padding:18px 20px}
+.wl h3{font-size:20px}
+.wl ul{margin:6px 0 0;padding-left:18px}
+.wl li{margin:6px 0}
+@media(max-width:640px){.wl{grid-template-columns:minmax(0,1fr)}}
+.check{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:start}
+@media(max-width:820px){.check{grid-template-columns:minmax(0,1fr)}}
+.qs label{display:flex;gap:12px;align-items:flex-start;padding:11px 12px;border-radius:10px;cursor:pointer;border:1px solid var(--line);margin-bottom:8px;font-size:16px;background:var(--bg)}
+.qs label:hover{border-color:var(--mut)}
+.qs input{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--red)}
+.qs h3{font-size:18px;margin:16px 0 8px}
+.res{position:sticky;top:84px;background:var(--ind);color:var(--pink);border-radius:14px;padding:20px}
+.res h3{color:#fff;font-size:24px}
+.meter{position:relative;height:16px;border-radius:8px;background:linear-gradient(90deg,#e07a32,#c18d1a 50%,#21a594);margin:16px 0 6px}
+.meter i{position:absolute;top:-6px;width:6px;height:28px;border-radius:3px;background:#fff;box-shadow:0 0 0 2px var(--ind);transition:left .3s}
+.mlab{display:flex;justify-content:space-between;font-size:13px;color:var(--pmut)}
+.res ul{padding-left:18px;margin:10px 0 0}
+.res li{margin:6px 0}
+.lessons{counter-reset:l;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px;margin-top:10px}
+@media(max-width:700px){.lessons{grid-template-columns:minmax(0,1fr)}}
+.lessons div{border-top:1px solid var(--line);padding-top:12px}
+.lessons b{font-family:"Zilla Slab",serif;font-size:20px;display:block;line-height:1.2;margin-bottom:4px}
+.src{columns:2 320px;column-gap:40px;font-size:14px;padding-left:18px}
+.src li{margin:0 0 8px;break-inside:avoid}
+.books li{margin:8px 0}
+footer{font-size:14px;color:var(--mut)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.meter i,.tip{transition:none}}
+@media(max-width:600px){body{font-size:16px}table{font-size:13px}th,td{padding:6px 4px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td,.stack th{display:flex;justify-content:space-between;gap:12px;border:0;padding:4px 0;width:auto}.stack td::before{content:attr(data-l);font-weight:600;flex:none;max-width:40%}.stack td>div{text-align:right}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan||1;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Bagian halaman"><div class="scroll">
+<a href="#ringkasan">Ringkasan</a><a href="#sebelum">Dunia sebelum mesin</a><a href="#kenapa-inggris">Kenapa Inggris</a><a href="#mesin">Mesin-mesinnya</a><a href="#nusantara">Nusantara</a><a href="#dampak">Dampak</a><a href="#untung-rugi">Untung &amp; buntung</a><a href="#silsilah">Silsilah teknologi</a><a href="#ai">Era AI</a><a href="#sumber">Sumber</a>
+</div></nav>
+
+<header class="band indigo" id="top">
+<div class="wrap">
+<div class="hero-head">
+<h1>Revolusi Industri: dari alat tenun sampai AI</h1>
+<p class="lede" style="margin:0">Selama ribuan tahun, pendapatan rata-rata manusia hampir tidak bergerak. Sekitar tahun 1800 Inggris lepas landas, lalu dunia menyusul. Kekayaan memang melonjak, tetapi pembagiannya tidak pernah adil. Pelajaran itu kembali penting di era AI.</p>
+</div>
+<div class="ctrl" id="gdpCtrl" role="group" aria-label="Pilih negara"></div>
+<div class="fig tall" id="gdpFig"><svg role="img" aria-label="Grafik PDB per kapita 1600 sampai 2022: Inggris naik tajam sejak sekitar 1800, China dan India datar sampai abad ke-20"></svg><div class="tip"></div></div>
+<p class="cap small mut" style="margin-top:8px">PDB per orang, dolar internasional 2011 (sudah disesuaikan dengan inflasi dan daya beli). Sumber: Maddison Project Database 2023 lewat Our World in Data. Data India tahun 1800 dan Indonesia sebelum 1820 tidak tersedia. Arahkan kursor atau sentuh grafik untuk melihat angka.</p>
+<div class="stats">
+<div class="stat"><b>11×</b><span>kenaikan pendapatan per orang di Inggris, dari $3.343 (1800) menjadi $38.407 (2022)</span></div>
+<div class="stat"><b>79% → 9%</b><span>porsi penduduk dunia yang hidup dalam kemiskinan ekstrem, 1820 dibanding 2018</span></div>
+<div class="stat"><b>28 → 73 th</b><span>harapan hidup rata-rata dunia, 1800 dibanding 2023</span></div>
+<div class="stat"><b>1 → 8 miliar</b><span>penduduk dunia, 1800 dibanding 2023</span></div>
+</div>
+</div>
+</header>
+
+<section class="band" id="ringkasan">
+<div class="wrap">
+<h2>Ringkasan: enam hal yang perlu Anda ingat</h2>
+<p class="lede">Kalau Anda hanya punya lima menit, bacalah bagian ini. Setiap poin diuraikan lebih dalam di bagian-bagian berikutnya.</p>
+<div class="sum">
+<p><b>Apa itu Revolusi Industri?</b>Peralihan dari tenaga otot, air, dan angin ke mesin berbahan bakar batubara, dan dari bengkel rumahan ke pabrik. Prosesnya dimulai sekitar tahun 1760 di Inggris dan berlangsung selama beberapa generasi.</p>
+<p><b>Kenapa terjadi di Inggris?</b>Tidak ada satu penyebab tunggal. Inggris punya motif (upah mahal, batubara murah), kemampuan (banyak tukang terampil dan budaya ilmiah), kesempatan (pasar global, koloni, dan institusi yang melindungi investor), serta keberuntungan geologis.</p>
+<p><b>Kenapa bukan China atau India?</b>Keduanya pernah menjadi raksasa manufaktur. Pada 1750 mereka menghasilkan lebih dari separuh barang manufaktur dunia. Masalahnya, tenaga kerja di sana murah, batubara China jauh dari pusat ekonomi, dan India kemudian dijajah. Mesin tidak menguntungkan di tempat yang tenaga manusianya murah.</p>
+<p><b>Siapa yang untung dan siapa yang rugi?</b>Antara 1780 dan 1840, hasil kerja per buruh di Inggris naik sekitar 46%, sedangkan upah riil hanya naik 12%. Penenun terampil jatuh miskin dan anak-anak dipekerjakan di pabrik. Keuntungan baru dinikmati luas setelah buruh berorganisasi dan undang-undang berubah.</p>
+<p><b>Bagaimana dengan Nusantara?</b>Nusantara tidak mengalami industrialisasi. Wilayah ini justru dijadikan pemasok bahan mentah. Di puncaknya pada 1850-an, Tanam Paksa (1830–1870) menyumbang lebih dari separuh pendapatan negara Belanda, sementara Jawa dilanda kelaparan.</p>
+<p><b>Satu penemuan melahirkan banyak "versi upgrade".</b>Mesin uap berkembang menjadi turbin uap yang sampai sekarang menghasilkan sebagian besar listrik dunia. Kartu berlubang alat tenun tahun 1804 adalah leluhur langsung komputer, dan karena itu juga leluhur AI.</p>
+</div>
+</div>
+</section>
+
+<section class="band alt" id="sebelum">
+<div class="wrap">
+<h2>Dunia sebelum mesin: semua orang terjebak di batas yang sama</h2>
+<div class="grid2">
+<div class="read">
+<p>Coba bayangkan dunia tahun 1700. Sekitar delapan dari sepuluh orang adalah petani. Hampir semua energi berasal dari otot manusia dan hewan, kayu bakar, kincir air, dan kincir angin. Kalau panen bagus, jumlah penduduk bertambah. Tetapi lahan tidak ikut bertambah, sehingga makanan per orang kembali turun. Ekonom menyebut pola ini <b>jebakan Malthus</b>: setiap kemajuan habis "dimakan" oleh pertambahan penduduk.</p>
+<p>Karena itu, kehidupan rata-rata orang di tahun 1700 tidak jauh berbeda dengan kehidupan nenek moyang mereka beberapa abad sebelumnya. Sekitar tahun 1800, kira-kira 43% bayi di dunia meninggal sebelum berusia lima tahun. Harapan hidup rata-rata dunia sekitar 28 tahun. Angka ini rendah terutama karena banyaknya kematian anak, bukan karena orang dewasa cepat tua.</p>
+<p>Ada satu hal yang sering dilupakan: pada masa itu, pusat ekonomi dunia ada di Asia, bukan di Eropa. Menurut perkiraan sejarawan ekonomi Paul Bairoch, pada 1750 China menghasilkan sekitar 33% barang manufaktur dunia dan India sekitar 25%. Inggris hanya sekitar 2%. Kain katun India dan porselen China adalah barang mewah yang diburu orang Eropa.</p>
+</div>
+<div>
+<div class="plate">
+<h3>Pergeseran pusat manufaktur dunia</h3>
+<p class="cap">Porsi produksi manufaktur dunia (%), 1750–1900. China dan India merosot, Inggris naik.</p>
+<div class="fig" id="shareFig"><svg role="img" aria-label="Porsi manufaktur dunia: China turun dari 32,8% ke 6,2%, India dari 24,5% ke 1,7%, Inggris naik dari 1,9% ke 18,5% antara 1750 dan 1900"></svg><div class="tip"></div></div>
+<p class="cap">Sumber: perkiraan Paul Bairoch (1982). Angka zaman ini adalah rekonstruksi kasar, jadi lihat polanya, bukan desimalnya.</p>
+</div>
+</div>
+</div>
+
+<h3 style="margin-top:34px">Syarat-syarat yang menumpuk di Inggris sebelum 1760</h3>
+<p class="read">Revolusi Industri tidak muncul tiba-tiba dari satu penemuan. Ia seperti api yang butuh bahan bakar, udara, dan panas sekaligus. Di Inggris abad ke-18, banyak syarat muncul bersamaan:</p>
+<div class="grid3" style="margin-top:12px">
+<div class="card"><h3>Revolusi pertanian</h3><p>Lahan dipagari (<i>enclosure</i>), rotasi tanaman diperbaiki (lobak dan semanggi menyuburkan tanah), dan hasil panen naik. Lebih sedikit petani bisa memberi makan lebih banyak orang, sehingga tenaga kerja bisa pindah ke kota dan bengkel. Tetapi banyak petani kecil kehilangan tanah garapan bersama.</p></div>
+<div class="card"><h3>Kota dan upah</h3><p>London menjadi kota terbesar di Eropa dengan hampir satu juta penduduk pada 1801. Perdagangan laut menaikkan permintaan tenaga kerja, sehingga upah di Inggris termasuk yang tertinggi di dunia.</p></div>
+<div class="card"><h3>Krisis kayu, berkah batubara</h3><p>Hutan menipis dan kayu bakar menjadi mahal. Inggris kebetulan duduk di atas lapisan batubara yang dangkal, dekat laut dan sungai, sehingga murah diangkut.</p></div>
+<div class="card"><h3>Perdagangan global dan perbudakan</h3><p>Gula, tembakau, dan kemudian kapas dari perkebunan budak di Amerika dan Karibia mengalir ke pelabuhan Inggris. Keuntungannya ikut membiayai bank, kapal, dan pabrik.</p></div>
+<div class="card"><h3>Uang dan hukum</h3><p>Ada undang-undang paten (1624), Revolusi 1688 yang membatasi kekuasaan raja, Bank of England (1694), dan pasar obligasi. Pemilik modal merasa hartanya relatif aman dari perampasan oleh penguasa.</p></div>
+<div class="card"><h3>Ilmu yang turun ke bengkel</h3><p>Royal Society (1660) dan klub seperti Lunar Society mempertemukan ilmuwan, pengusaha, dan tukang. Ada banyak pembuat jam dan instrumen presisi, yaitu orang-orang yang kemudian bisa membuat mesin.</p></div>
+</div>
+</div>
+</section>
+
+<section class="band" id="kenapa-inggris">
+<div class="wrap">
+<h2>Kenapa Inggris, bukan China, India, Prancis, atau Belanda?</h2>
+<div class="read">
+<p>Pertanyaan ini adalah salah satu perdebatan terbesar dalam ilmu sejarah. Para ahli menyebutnya <b>"Great Divergence"</b> atau Perbedaan Besar: saat Eropa Barat, terutama Inggris, mulai meninggalkan bagian dunia lain dalam hal kekayaan. Belum ada jawaban yang disepakati semua ahli. Yang ada adalah beberapa teori besar yang saling melengkapi sekaligus saling mengkritik. Pilih salah satu teori di bawah untuk melihat faktor mana yang ditekankannya di tabel perbandingan.</p>
+</div>
+
+<div class="grid3" style="margin-top:18px">
+<div class="card"><div class="who">Robert C. Allen · ekonom Oxford</div><h3>Upah mahal, energi murah</h3><p>Di Inggris, buruh mahal sedangkan batubara murah. Karena itu, mengganti tenaga manusia dengan mesin bertenaga batubara menguntungkan secara bisnis. Di China dan India, tenaga manusia jauh lebih murah, sehingga mesin yang sama akan merugi. Penemuan terjadi di tempat yang memberi untung pada penemuan itu.</p><p class="crit">Kritik: Jane Humphries meragukan data "upah tinggi". Studi Kelly, Mokyr &amp; Ó Gráda (2015) menemukan bahwa industri di Inggris justru tumbuh di daerah berupah rendah, dan bahwa keterampilan pekerja lebih menentukan.</p></div>
+<div class="card"><div class="who">Kenneth Pomeranz · sejarawan</div><h3>Batubara dan koloni</h3><p>Sampai sekitar 1750, Delta Sungai Yangtze di China sama makmurnya dengan Inggris. Perbedaannya, Inggris "beruntung": batubaranya dekat, sedangkan batubara China ada di barat laut, jauh dari pusat tekstil. Inggris juga punya koloni Amerika yang memasok kapas, kayu, dan gula. Tanpa itu, Inggris akan kehabisan lahan.</p><p class="crit">Kritik: Philip Huang dan lainnya menilai Delta Yangtze sudah tertinggal sebelum 1750. Stephen Broadberry memperkirakan kesenjangannya sudah muncul sekitar 1700.</p></div>
+<div class="card"><div class="who">Joel Mokyr · sejarawan ekonomi</div><h3>Pencerahan industri</h3><p>Yang membedakan Eropa, dan terutama Inggris, adalah budaya: pengetahuan disebarkan, diuji, dan dipakai untuk memecahkan masalah praktis. Ilmuwan, insinyur, dan tukang saling bertukar ide. Budaya ini menjelaskan kenapa penemuan terus mengalir dan tidak berhenti setelah satu-dua terobosan.</p><p class="crit">Kritik: budaya sulit diukur, dan Prancis juga punya ilmuwan kelas dunia.</p></div>
+<div class="card"><div class="who">Acemoglu &amp; Robinson · ekonom</div><h3>Institusi yang inklusif</h3><p>Setelah Revolusi 1688, parlemen membatasi kekuasaan raja, hak milik lebih terlindungi, dan pengusaha baru bisa masuk pasar. Di negara absolut, penguasa bisa merampas keuntungan atau melindungi pemain lama, sehingga orang enggan berinovasi.</p><p class="crit">Kritik: institusi Inggris saat itu masih elitis dan korup. Belanda punya institusi serupa tetapi tidak menjadi pelopor industri.</p></div>
+<div class="card"><div class="who">Deirdre McCloskey · sejarawan ekonomi</div><h3>Martabat pedagang</h3><p>Untuk pertama kalinya, masyarakat menghormati pedagang, pengusaha, dan inovator, bukan hanya bangsawan dan tentara. Perubahan cara pandang ini membuat banyak orang berani mencoba hal baru.</p><p class="crit">Kritik: lebih sulit lagi dibuktikan dengan data. Teori ini lebih cocok sebagai pelengkap.</p></div>
+<div class="card"><div class="who">Kesimpulan yang paling jujur</div><h3>Motif + kemampuan + kesempatan</h3><p>Sebagian besar sejarawan kini melihatnya sebagai kombinasi. Inggris punya <b>motif</b> untuk mengganti buruh dengan mesin, <b>kemampuan</b> untuk membuat mesinnya, dan <b>kesempatan</b> untuk menjual hasilnya ke seluruh dunia. Negara lain hanya punya sebagian dari ketiganya.</p></div>
+</div>
+
+<div class="theories" role="group" aria-label="Sorot faktor menurut teori" id="theoryBtns"></div>
+<div class="scroll">
+<table class="stack" id="cmp">
+<thead><tr><th>Faktor</th><th>Inggris</th><th>Belanda</th><th>Prancis</th><th>China (Qing)</th><th>India</th></tr></thead>
+<tbody>
+<tr data-f="upah"><th>Upah buruh dibanding harga energi</th><td><div><span class="dots">●●●</span>Upah termasuk tertinggi di dunia, energi termurah. Mesin sangat menguntungkan.</div></td><td><div><span class="dots">●●○</span>Upah sama tinggi, tetapi energi (gambut) makin mahal.</div></td><td><div><span class="dots">●○○</span>Upah lebih rendah, batubara lebih mahal.</div></td><td><div><span class="dots">●○○</span>Upah setara batas hidup minimum. Tenaga manusia murah.</div></td><td><div><span class="dots">●○○</span>Upah sangat rendah. Penenun terampil murah dan banyak.</div></td></tr>
+<tr data-f="batubara"><th>Batubara dekat pusat industri</th><td><div><span class="dots">●●●</span>Dangkal, dekat laut, kanal, dan kota.</div></td><td><div><span class="dots">○○○</span>Hampir tidak ada, hanya gambut.</div></td><td><div><span class="dots">●○○</span>Ada di utara, tetapi aksesnya sulit.</div></td><td><div><span class="dots">●○○</span>Melimpah di barat laut, tetapi jauh dari Delta Yangtze.</div></td><td><div><span class="dots">●○○</span>Ada di Bengal, belum ditambang besar-besaran.</div></td></tr>
+<tr data-f="institusi"><th>Institusi: hak milik, paten, batas kekuasaan</th><td><div><span class="dots">●●●</span>Parlemen kuat sejak 1688, ada paten sejak 1624.</div></td><td><div><span class="dots">●●●</span>Republik pedagang, keuangan paling maju di abad ke-17.</div></td><td><div><span class="dots">●○○</span>Monarki absolut, pajak tidak merata, aturan gilda ketat.</div></td><td><div><span class="dots">●●○</span>Negara stabil dan pajaknya rendah, tetapi tidak ada perlindungan formal bagi inovator.</div></td><td><div><span class="dots">●○○</span>Kekaisaran Mughal terpecah setelah 1707, lalu dikuasai Kongsi Dagang Inggris (EIC) sejak 1757.</div></td></tr>
+<tr data-f="ilmu"><th>Budaya ilmu dan tukang terampil</th><td><div><span class="dots">●●●</span>Ilmuwan, pengusaha, dan tukang saling terhubung.</div></td><td><div><span class="dots">●●●</span>Kuat, misalnya mikroskop dan teknik air.</div></td><td><div><span class="dots">●●○</span>Ilmu kelas dunia, tetapi jarak ilmuwan dan bengkel lebih jauh.</div></td><td><div><span class="dots">●○○</span>Pernah unggul di era Song. Ujian kekaisaran mengarahkan orang pintar ke kajian klasik.</div></td><td><div><span class="dots">●○○</span>Keterampilan kerajinan sangat tinggi, tetapi tidak ada lembaga ilmiah serupa.</div></td></tr>
+<tr data-f="pasar"><th>Pasar dunia dan koloni</th><td><div><span class="dots">●●●</span>Amerika, Karibia, India. Angkatan laut terkuat sejak 1763.</div></td><td><div><span class="dots">●●○</span>Punya Hindia Timur (Nusantara), tetapi kalah perang dari Inggris.</div></td><td><div><span class="dots">●○○</span>Kehilangan Kanada dan India pada 1763.</div></td><td><div><span class="dots">●○○</span>Pasar dalam negeri raksasa, tetapi perdagangan luar dibatasi (sistem Kanton, 1757).</div></td><td><div><span class="dots">●○○</span>Eksportir tekstil terbesar, lalu berubah menjadi pasar bagi kain Inggris.</div></td></tr>
+<tr data-f="stabil"><th>Damai di dalam negeri (abad ke-18)</th><td><div><span class="dots">●●●</span>Tidak ada perang di daratannya sendiri setelah 1746.</div></td><td><div><span class="dots">●○○</span>Diduduki Prancis pada 1795.</div></td><td><div><span class="dots">●○○</span>Revolusi 1789 disusul perang Napoleon sampai 1815.</div></td><td><div><span class="dots">●●○</span>Stabil sampai 1790-an, lalu dilanda pemberontakan dan Perang Candu (1839).</div></td><td><div><span class="dots">●○○</span>Perang suksesi dan perang kolonial.</div></td></tr>
+</tbody>
+</table>
+</div>
+<p class="small mut">●●● sangat mendukung industrialisasi · ●○○ lemah. Penilaian ini adalah ringkasan penulis dari literatur yang dikutip, bukan ukuran resmi.</p>
+
+<div class="grid2" style="margin-top:30px">
+<div>
+<h3>China: hampir berhasil 700 tahun lebih awal</h3>
+<p>Pada masa Dinasti Song (960–1279), China sudah membakar batubara, mencetak buku, memakai kompas dan mesiu, serta memproduksi besi dalam jumlah besar. Sejarawan Robert Hartwell memperkirakan produksi besi tahun 1078 mencapai sekitar 125.000 ton, angka yang baru disamai Eropa berabad-abad kemudian. Angka ini diperdebatkan: perkiraan lain berkisar antara 10.000 dan 70.000 ton. Tetapi semua ahli sepakat bahwa industri besi Song sangat maju.</p>
+<p>Lalu kenapa tidak berlanjut? Sejarawan Mark Elvin menyebutnya <b>"jebakan keseimbangan tingkat tinggi"</b>. Teknologi tradisional China sudah begitu efisien dan tenaga kerjanya begitu banyak dan murah, sehingga mesin penghemat tenaga tidak menguntungkan. Batubara ada, tetapi jauh dari pusat tekstil. Negara juga lebih mengutamakan stabilitas daripada perubahan, dan orang-orang paling pintar diarahkan untuk lulus ujian birokrasi tentang kitab klasik Konfusius. Pada 1793, Kaisar Qianlong menulis kepada utusan Inggris bahwa China tidak membutuhkan barang buatan Inggris. Lima puluh tahun kemudian, kapal uap Inggris memenangkan Perang Candu.</p>
+</div>
+<div>
+<h3>India: dari bengkel tekstil dunia menjadi pasar</h3>
+<p>Kain katun India (calico, muslin, chintz) begitu populer di Eropa sampai-sampai Inggris <b>melarang impornya</b> lewat Calico Acts (1700 dan 1721) untuk melindungi penenun wol dan suteranya sendiri. Proteksi inilah yang memberi ruang bagi industri katun Inggris untuk tumbuh. Setelah mesin pintal dan tenun ditemukan, kain Inggris menjadi lebih murah daripada kain India.</p>
+<p>Setelah monopoli dagang EIC atas India dihapus pada 1813, kain mesin dari Lancashire membanjiri India. Menurut perkiraan Bairoch, porsi India dalam manufaktur dunia jatuh dari sekitar 25% (1750) menjadi kurang dari 2% (1900). Ekonom Clingingsmith dan Williamson menemukan bahwa faktor lokal, seperti runtuhnya Mughal dan kekeringan, juga berperan sejak 1700. Tetapi gempuran harga dari pabrik Inggris mempercepat kejatuhan itu. Inilah sisi gelap revolusi: kemajuan di satu tempat bisa berarti kemunduran di tempat lain.</p>
+</div>
+<div>
+<h3>Prancis: pintar, tetapi sibuk berperang</h3>
+<p>Prancis punya ilmuwan terbaik Eropa, Ensiklopedia Diderot, dan penduduk sekitar tiga kali lipat Inggris. Bahkan Joseph-Marie Jacquard, penemu kartu berlubang yang akan kita temui lagi nanti, adalah orang Prancis. Masalahnya, upah di Prancis lebih rendah dan batubaranya lebih mahal, sehingga mesin kurang menguntungkan. Monarki absolut membebani rakyat dengan pajak tidak merata dan banyak pos bea di dalam negeri. Lalu datang Revolusi 1789 dan perang Napoleon sampai 1815, yang menyedot tenaga dan modal selama satu generasi. Prancis tidak gagal. Ia berindustri lebih lambat dan bertahap, sebagian dengan meniru teknik Inggris. Di daratan Eropa, Belgia yang kaya batubara justru menjadi yang pertama.</p>
+</div>
+<div>
+<h3>Belanda: paling kaya, tetapi tanpa batubara</h3>
+<p>Pada 1600, pendapatan per orang di Belanda sekitar $4.270, dua setengah kali Inggris ($1.691). Belanda punya bank, bursa saham, kapal dagang, dan upah tinggi, semua yang menurut teori diperlukan. Yang tidak dimiliki Belanda adalah batubara. Energinya berasal dari gambut dan kincir angin yang makin mahal. Belanda juga kalah dalam perang laut melawan Inggris dan diduduki Prancis pada 1795. Data Maddison menunjukkan Inggris menyalip Belanda antara 1820 dan 1850. Ironisnya, salah satu sumber kekayaan Belanda kemudian adalah Nusantara.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="band alt" id="mesin">
+<div class="wrap">
+<h2>Mesin-mesinnya: setiap penemuan menciptakan masalah baru, dan masalah baru melahirkan penemuan berikutnya</h2>
+<div>
+<div class="read">
+<p>Revolusi Industri pertama (sekitar 1760–1840) bertumpu pada tiga hal: <b>kapas</b>, <b>batubara dan besi</b>, serta <b>uap</b>. Ketiganya saling mendorong. Polanya mirip lomba estafet. Ketika satu tahap produksi dipercepat, tahap berikutnya menjadi titik macet, dan para penemu berlomba mengatasinya.</p>
+<p><b>Rantai energi.</b> Tambang batubara makin dalam dan sering kebanjiran. Thomas Newcomen membuat mesin uap pompa pada 1712. Mesin ini boros, tetapi tetap layak dipakai di mulut tambang karena batubara di sana hampir gratis. James Watt menambahkan <b>kondensor terpisah</b> (paten 1769), sehingga mesinnya jauh lebih hemat bahan bakar. Pada 1780-an, mesin Watt sudah bisa memutar roda. Sejak saat itu pabrik tidak lagi harus dibangun di tepi sungai. Pabrik bisa berdiri di mana saja, termasuk di tengah kota yang penuh calon buruh.</p>
+<p><b>Rantai besi.</b> Abraham Darby melebur besi dengan kokas (batubara yang dipanggang) pada 1709, menggantikan arang kayu yang makin langka. Henry Cort menemukan proses <i>puddling</i> pada 1784. Besi murah memungkinkan pembuatan mesin, rel, jembatan, dan kapal.</p>
+<p><b>Rantai transportasi.</b> Uap dipasang pada roda: lokomotif Trevithick (1804), lalu <i>Rocket</i> buatan Stephenson. Pada 1830 dibuka jalur kereta Liverpool–Manchester, yang menghubungkan pelabuhan kapas dengan kota pabrik. Kapal uap memendekkan jarak antarbenua.</p>
+</div>
+<div>
+<div class="callout" style="background:var(--bg)">
+<h3>Perlombaan benang dan tenun</h3>
+<p class="small mut" style="margin:0">Ilustrasi kualitatif tentang tahap mana yang menjadi titik macet. Panjang batang bukan data terukur.</p>
+<div class="race" id="race"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="band indigo" id="nusantara">
+<div class="wrap">
+<h2 style="color:#fff">Sementara itu di Nusantara: tidak ikut berindustri, tetapi ikut menanggung biayanya</h2>
+<p class="lede">Saat mesin uap mulai berderu di Inggris, Nusantara masih berupa kerajaan-kerajaan agraris dan maritim di bawah cengkeraman kongsi dagang Belanda (VOC). Revolusi Industri tidak terjadi di sini, tetapi mengubah nasib Nusantara secara mendalam. Kartu berlubang di bawah menjajarkan tiga jalur sejarah pada satu garis waktu. Pilih satu lubang untuk membaca ceritanya.</p>
+<div class="scroll" style="margin-top:12px"><div class="tl" id="tl"></div></div>
+<div class="key"><span><i style="background:#dfe3f7"></i>Teknologi (dunia)</span><span><i style="background:#4593db"></i>Masyarakat &amp; politik (dunia)</span><span><i style="background:#e07a32"></i>Nusantara</span><span class="mut">Geser ke samping di layar kecil.</span></div>
+<div class="detail" id="tlDetail" aria-live="polite"></div>
+
+<h3 style="color:#fff;margin-top:34px">Dua dunia pada waktu yang sama</h3>
+<div class="scroll">
+<table class="stack para" style="color:var(--pink)">
+<thead><tr><th style="color:#fff;border-color:#fff">Periode</th><th style="color:#fff;border-color:#fff">Di Inggris dan dunia industri</th><th style="color:#fff;border-color:#fff">Di Nusantara</th></tr></thead>
+<tbody>
+<tr><td>1750–1800</td><td>Watt memperbaiki mesin uap, Arkwright membangun pabrik pemintalan. Kapas mulai menggantikan wol.</td><td>Mataram terbelah menjadi Yogyakarta dan Surakarta (Perjanjian Giyanti 1755). VOC memaksa petani Priangan menanam kopi. Rakyat menenun dan membatik sendiri, sementara kain India menjadi barang impor utama. VOC bangkrut karena utang dan korupsi, lalu dibubarkan pada 31 Desember 1799.</td></tr>
+<tr><td>1800–1816</td><td>Para Luddite menghancurkan mesin (1811). Kain pabrik makin murah.</td><td>Daendels membangun Jalan Raya Pos Anyer–Panarukan sepanjang sekitar 1.000 km (1808–1811) dengan kerja paksa. Ribuan orang tewas, tetapi angka pastinya tidak diketahui. Inggris menduduki Jawa (1811–1816). Pada 1813, Raffles menulis tentang peluang mengekspor kain cetak Inggris ke Jawa. Gunung Tambora meletus (1815), dan Eropa mengalami "tahun tanpa musim panas".</td></tr>
+<tr><td>1825–1830</td><td>Kereta uap komersial pertama (1825, 1830).</td><td>Perang Jawa yang dipimpin Pangeran Diponegoro. Menurut perkiraan sumber Belanda, sekitar 200.000 orang Jawa tewas, sebagian besar karena kelaparan dan penyakit. Perang ini menghabiskan sekitar 20 juta gulden kas Belanda.</td></tr>
+<tr><td>1830–1870</td><td>Undang-Undang Pabrik (1833), jaringan rel, telegraf, kapal uap. Masa "Engels' pause" berakhir sekitar 1840.</td><td><b>Tanam Paksa (Cultuurstelsel)</b>. Desa wajib menyisihkan sekitar 20% lahan atau waktu kerjanya untuk tanaman ekspor: kopi, gula, nila (bahan pewarna biru untuk industri tekstil Eropa), teh, dan tembakau. Terjadi kelaparan di Cirebon (1844–1846) serta Demak dan Grobogan (1849–1850). Multatuli menerbitkan <i>Max Havelaar</i> (1860).</td></tr>
+<tr><td>1867–1900</td><td>Revolusi Industri kedua: baja, listrik, kimia, minyak. Terusan Suez dibuka (1869).</td><td>Kereta api pertama Semarang–Tanggung (10 Agustus 1867, sekitar 25 km), dibangun untuk mengangkut hasil perkebunan. Undang-Undang Agraria 1870 membuka Nusantara bagi perkebunan swasta: tembakau Deli, gula Jawa, timah Bangka-Belitung, minyak Langkat. Ribuan kuli kontrak diikat oleh Koeli Ordonnantie (1880) yang memuat hukuman pidana bagi kuli yang kabur.</td></tr>
+<tr><td>1900–1930</td><td>Ban berjalan Ford (1913), mobil massal, listrik masuk rumah.</td><td>Ledakan perkebunan karet di Sumatra untuk memasok ban mobil dan sepeda dunia. Politik Etis (1901) membuka sedikit akses sekolah. Budi Utomo (1908) lahir. Surat kabar, mesin cetak, kereta api, dan telegraf, yang semuanya produk Revolusi Industri, menjadi alat bagi kaum pergerakan untuk membangun rasa kebangsaan.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="grid2" style="margin-top:30px">
+<div>
+<h3 style="color:#fff">Uang dari Jawa untuk industri Belanda</h3>
+<p>Tanam Paksa dirancang oleh Gubernur Jenderal Johannes van den Bosch untuk mengisi kas Belanda yang kosong setelah Perang Jawa dan perpisahan dengan Belgia. Hasilnya luar biasa bagi Belanda. Menurut Britannica, penjualan hasil Tanam Paksa memberi kas Belanda rata-rata 18 juta gulden per tahun antara 1840 dan 1880, sekitar sepertiga anggaran negara. Penelitian de Zwart dan rekan-rekannya memperkirakan bahwa pada puncaknya di tahun 1850-an, keuntungan bersih yang mengalir ke Den Haag (<i>batig slot</i>) mencapai sekitar 4% PDB Belanda dan <b>lebih dari separuh pendapatan pemerintah Belanda</b>. Uang ini dipakai untuk melunasi utang dan membangun infrastruktur Belanda sendiri, termasuk jalur kereta api.</p>
+<p>Biaya kemanusiaannya besar. Studi yang sama memperkirakan bahwa kalau Tanam Paksa tidak dihapus, angka kematian di Jawa pada akhir 1870-an akan 10–30% lebih tinggi. Petani kehilangan waktu untuk sawahnya sendiri, dan kelaparan melanda beberapa karesidenan.</p>
+</div>
+<div>
+<h3 style="color:#fff">Kisah tenun dan batik: tidak semua pengrajin kalah</h3>
+<p>Seperti di India, pengrajin kain Nusantara menghadapi kain murah buatan pabrik Eropa. Pabrik di Inggris, Belanda, dan Swiss bahkan memproduksi <b>batik tiruan</b> (cetak mesin) sejak sekitar 1813–1840 untuk dijual di Jawa. Tetapi pembatik Jawa melawan dengan berinovasi. Mereka mengembangkan <b>batik cap</b>, yaitu stempel tembaga yang menggantikan canting untuk motif berulang, sehingga produksi jauh lebih cepat. Mereka juga memakai kain katun putih impor (mori) sebagai bahan dasar.</p>
+<p>Menurut sejarawan ekonomi, strategi ini berhasil membuat batik Jawa bertahan menghadapi kain impor. Pelajarannya relevan sampai sekarang: pengrajin yang memakai teknologi baru untuk memperkuat keahliannya bisa bertahan. Pengrajin yang mencoba bersaing langsung dengan mesin dalam hal harga akan kalah.</p>
+</div>
+</div>
+<div class="callout" style="margin-top:22px">
+<div class="plate" style="padding:0;background:transparent">
+<h3>Pendapatan per orang di Indonesia: naik di atas kertas, tetapi untuk siapa?</h3>
+<p>Data Maddison menunjukkan PDB per orang di wilayah Indonesia naik dari sekitar $827 (1820) menjadi $1.704 (1930), lalu jatuh ke $1.280 (1950) akibat Depresi Besar, pendudukan Jepang, dan perang kemerdekaan. Penduduk Jawa dan pulau-pulau lain naik dari sekitar 16 juta (1800) menjadi 38 juta (1900). Tetapi PDB mengukur produksi yang terjadi di suatu wilayah, bukan siapa yang menikmatinya. Sebagian besar keuntungan perkebunan dan tambang mengalir ke pemilik modal di Eropa. Baru setelah merdeka, dan terutama sejak 1970-an, pendapatan per orang di Indonesia benar-benar melonjak, sampai $12.802 pada 2022.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="band" id="dampak">
+<div class="wrap">
+<h2>Dampaknya: dunia menjadi kaya, padat, dan berumur panjang, tetapi juga panas</h2>
+<p class="lede">Empat grafik berikut merangkum perubahan terbesar dalam sejarah umat manusia. Perhatikan bahwa sebagian besar perbaikan baru terjadi pada abad ke-20, lama setelah mesin pertama dibangun.</p>
+<div class="grid2" style="margin-top:20px" id="minis"></div>
+<p class="small mut" style="margin-top:10px">Sumber: Our World in Data (Moatsos 2021 untuk kemiskinan, Riley dan PBB untuk harapan hidup, HYDE dan PBB untuk penduduk, Global Carbon Project untuk CO₂). Angka CO₂ tahun terakhir adalah perkiraan awal.</p>
+
+<div class="grid3" style="margin-top:34px">
+<div class="card"><h3>Waktu dan disiplin kerja</h3><p>Petani dan pengrajin bekerja mengikuti musim dan tugas. Pabrik memperkenalkan lonceng, jam dinding, dan denda keterlambatan. Jam kerja 12–14 jam sehari menjadi hal biasa. Sejarawan E. P. Thompson menyebutnya lahirnya "disiplin waktu industri". Konsep jam kerja, lembur, dan akhir pekan yang kita kenal sekarang berasal dari pergulatan masa ini.</p></div>
+<div class="card"><h3>Anak-anak di pabrik</h3><p>Anak-anak murah, patuh, dan tubuhnya kecil sehingga bisa menyusup di bawah mesin. Pada 1833, sekitar 10–20% pekerja pabrik tekstil berusia di bawah 13 tahun. Undang-Undang Pabrik 1833 melarang pekerja di bawah 9 tahun dan membatasi jam kerja anak, tetapi hanya ada 4 inspektur untuk sekitar 4.000 pabrik, sehingga aturan itu banyak dilanggar.</p></div>
+<div class="card"><h3>Kota yang mematikan</h3><p>Kota industri tumbuh lebih cepat daripada saluran airnya. Kolera dan tifus mewabah. Laporan Edwin Chadwick (1842) mencatat bahwa rata-rata usia saat meninggal di kalangan buruh Manchester hanya 17 tahun, dibanding 38 tahun untuk kaum profesional di kota yang sama dan 52 tahun untuk kaum terpandang di pedesaan Rutland. Angka ini terseret oleh kematian bayi dan bukan ukuran harapan hidup yang sempurna, tetapi kesenjangannya nyata.</p></div>
+<div class="card"><h3>Keluarga dan perempuan</h3><p>Dulu rumah adalah tempat kerja: seluruh keluarga memintal dan menenun bersama. Pabrik memisahkan rumah dari tempat kerja. Perempuan dan anak-anak awalnya menjadi tenaga murah di pabrik. Belakangan muncul cita-cita "ayah pencari nafkah, ibu di rumah", yang ternyata juga produk zaman industri.</p></div>
+<div class="card"><h3>Ide-ide politik baru</h3><p>Penderitaan buruh melahirkan serikat pekerja, gerakan Chartis (1838–1848) yang menuntut hak pilih, dan <i>Manifesto Komunis</i> karya Marx dan Engels (1848). Engels menulis tentang kondisi buruh Manchester pada 1845. Di sisi lain, Adam Smith (1776) dan para pendukung pasar bebas menekankan bahwa perdagangan dan spesialisasi menciptakan kekayaan. Perdebatan kapitalisme versus sosialisme yang mewarnai abad ke-20 berakar di sini.</p></div>
+<div class="card"><h3>Kekuasaan global dan penjajahan</h3><p>Kapal uap, kina (obat malaria), telegraf, dan senapan mesin membuat negara industri mampu menaklukkan Asia dan Afrika dengan biaya murah. Contohnya Perang Candu di China (1839–1842), India di bawah Mahkota Inggris (1858), Perang Aceh (1873–1904), dan perebutan Afrika (1884). Kesenjangan kaya-miskin antarnegara yang kita lihat hari ini sebagian besar terbentuk pada abad ke-19.</p></div>
+</div>
+<div class="callout" style="margin-top:24px">
+<h3>Yang jarang dibahas: konsumen biasa ikut diuntungkan</h3>
+<p style="margin:0">Sebelum mesin, pakaian sangat mahal. Banyak orang hanya punya satu atau dua setel baju seumur hidup. Kain katun pabrik membuat pakaian, seprai, dan handuk terjangkau oleh rakyat biasa. Kemudian makanan kaleng, sabun murah, kereta api untuk bepergian, dan surat kabar harian menyusul. Pada jangka panjang, inilah sumber kenaikan taraf hidup yang luar biasa. Pertanyaannya selalu sama: <b>berapa lama orang harus menunggu, dan siapa yang membayar ongkos peralihannya?</b></p>
+</div>
+</div>
+</section>
+
+<section class="band alt" id="untung-rugi">
+<div class="wrap">
+<h2>Siapa yang untung, siapa yang buntung</h2>
+<div class="grid2">
+<div class="read">
+<p>Video yang Anda tonton benar: Revolusi Industri membuat yang kaya makin kaya, sebagian dari keringat yang lemah. Ekonom Robert Allen memberi angka pada pengamatan ini dan menamainya <b>"Engels' pause"</b> (jeda Engels), dari nama Friedrich Engels yang menggambarkan kemiskinan buruh Manchester.</p>
+<p>Antara 1780 dan 1840, hasil kerja per buruh di Inggris naik sekitar <b>46%</b>, tetapi upah riil buruh hanya naik sekitar <b>12%</b>. Ke mana selisihnya? Ke keuntungan pemilik pabrik, yang ditanam kembali menjadi mesin dan pabrik baru. Porsi keuntungan dalam pendapatan nasional naik, porsi upah turun. Ekonom Nicholas Crafts kemudian merevisi angka pertumbuhan hasil kerja menjadi sekitar 39%. Jaraknya sedikit lebih kecil, tetapi polanya tetap.</p>
+<p>Setelah 1840 keadaan berbalik. Antara 1840 dan 1900, hasil kerja per buruh naik 90% dan upah riil naik 123%. Artinya, buruh baru menikmati hasil revolusi sekitar <b>60 tahun</b> setelah revolusi dimulai, kira-kira sepanjang satu masa hidup. Seorang penenun yang lahir pada 1780 hampir tidak pernah merasakan hasilnya.</p>
+</div>
+<div>
+<div class="plate">
+<h3>Jeda Engels: hasil kerja naik, upah tertinggal</h3>
+<p class="cap">Indeks, 1780 = 100. Hasil kerja per buruh dibanding upah riil di Inggris.</p>
+<div class="fig" id="engelsFig"><svg role="img" aria-label="Indeks hasil kerja per buruh naik ke 146 pada 1840 sementara upah riil hanya 112; pada 1900 hasil kerja 277 dan upah 250"></svg><div class="tip"></div></div>
+<p class="cap">Dihitung dari angka Allen (2009): +46% dan +12% (1780–1840), +90% dan +123% (1840–1900). Garis menghubungkan tiga titik data saja.</p>
+</div>
+</div>
+</div>
+
+<h3 style="margin-top:34px">Penenun tangan: dari pekerja terampil menjadi penjaga mesin</h3>
+<div class="grid2">
+<div class="read">
+<p>Pengamatan Anda tentang penenun sangat tepat, dan sejarawan punya istilah untuk itu: <b>deskilling</b> atau penghilangan keahlian. Keahlian yang dulu tersimpan di tangan dan kepala seorang penenun dipindahkan ke dalam mesin. Setelah itu, mesin cukup dijaga oleh perempuan atau anak-anak dengan upah jauh lebih rendah.</p>
+<p>Uniknya, penenun tangan sempat mengalami masa keemasan. Mesin pintal (jenny, water frame, mule) membuat benang melimpah dan murah, sehingga penenun tangan sangat dicari. Sekitar 1790–1805, mereka termasuk pekerja berpenghasilan terbaik. Lalu mesin tenun bertenaga uap menyebar. Menurut catatan Open University, penenun di awal 1800-an bisa memperoleh hingga 23 shilling per minggu. Pada 1826, upahnya tinggal sekitar 5–8 shilling. Di Bolton saja, pada 1826, 1.500 dari 6.000 penenun menganggur dan 1.500 lainnya hanya bekerja separuh waktu. Upah riil mereka turun lebih dari separuh antara 1806 dan 1820.</p>
+<p>Banyak penenun tidak bisa pindah profesi. Mereka sudah tua, tidak punya modal, tidak punya pelatihan, dan sering tidak mau masuk ke pabrik yang disiplinnya keras. Yang akhirnya pindah adalah <b>anak-anak mereka</b>. Penyesuaian terjadi lintas generasi.</p>
+</div>
+<div>
+<div class="callout" style="margin-top:0">
+<h3>Upah mingguan penenun tangan</h3>
+<div class="bar" style="grid-template-columns:7em minmax(0,1fr)"><span>Awal 1800-an</span><i class="wv" style="width:100%"></i></div>
+<p class="small mut" style="margin:0 0 8px 7.6em">sampai 23 shilling</p>
+<div class="bar" style="grid-template-columns:7em minmax(0,1fr)"><span>1826</span><i class="wv" style="width:28%;opacity:.55"></i></div>
+<p class="small mut" style="margin:0 0 0 7.6em">5–8 shilling (batang menunjukkan nilai tengah 6,5)</p>
+</div>
+<div class="quote">Masalahnya bukan mesin itu sendiri, melainkan siapa yang memilikinya dan bagaimana hasilnya dibagi.<small>Ringkasan tuntutan para Luddite menurut sejarawan E. P. Thompson. Mereka menolak pemotongan upah dan pemakaian mesin yang merugikan pekerja, bukan teknologi itu sendiri.</small></div>
+<p>Para <b>Luddite</b> (1811–1816) adalah pekerja terampil yang menghancurkan mesin di Nottingham, Yorkshire, dan Lancashire. Pemerintah merespons dengan menjadikan perusakan mesin kejahatan berhukuman mati pada 1812 dan mengerahkan tentara. Banyak Luddite digantung atau dibuang ke Australia. Hari ini kata "Luddite" dipakai untuk mengejek orang yang anti teknologi. Itu tidak adil. Mereka sebenarnya menuntut pembagian hasil yang adil.</p>
+</div>
+</div>
+
+<div class="wl" style="margin-top:30px">
+<div><h3>Yang diuntungkan</h3><ul>
+<li><b>Pemilik modal dan pabrik.</b> Mereka menguasai mesin, jadi mereka menguasai keuntungannya. Contohnya Richard Arkwright, yang memulai sebagai tukang cukur dan meninggal sebagai salah satu orang terkaya di Inggris.</li>
+<li><b>Profesi baru yang terampil:</b> montir mesin, insinyur, mandor, juru gambar, pegawai administrasi, pekerja rel. Mereka yang menguasai mesin, bukan dikuasai mesin.</li>
+<li><b>Pedagang dan bankir</b> yang membiayai dan menjual produk ke seluruh dunia.</li>
+<li><b>Konsumen</b> di negara industri: kain, besi, dan transportasi menjadi murah.</li>
+<li><b>Negara industri</b> secara keseluruhan, yang menjadi kekuatan dunia.</li>
+<li>Dalam jangka panjang, sekitar setelah 1850: <b>buruh pada umumnya</b>, tetapi baru setelah mereka berjuang.</li>
+</ul></div>
+<div><h3>Yang dirugikan</h3><ul>
+<li><b>Pengrajin terampil yang keahliannya dipindahkan ke mesin:</b> penenun tangan, perajut, pemotong kain (<i>croppers</i>).</li>
+<li><b>Anak-anak</b> yang dipekerjakan 12 jam sehari dan kehilangan kesempatan sekolah.</li>
+<li><b>Penduduk kota miskin</b> yang tinggal di permukiman kumuh tanpa sanitasi.</li>
+<li><b>Rakyat negeri jajahan:</b> penenun Bengal, petani Jawa di bawah Tanam Paksa, kuli kontrak di perkebunan Deli.</li>
+<li><b>Budak</b> di perkebunan kapas Amerika Serikat bagian selatan. Pada pertengahan abad ke-19, sebagian besar kapas pabrik Inggris berasal dari sana.</li>
+<li><b>Lingkungan:</b> udara kota tercemar, sungai menjadi saluran limbah, dan awal penumpukan CO₂.</li>
+</ul></div>
+</div>
+
+<div class="callout" style="margin-top:24px">
+<h3>Apa yang akhirnya mengubah nasib buruh?</h3>
+<p style="margin:0">Bukan "tangan tak terlihat" pasar saja. Sejarawan menunjuk serangkaian perjuangan dan aturan: serikat buruh dilegalkan secara bertahap (1824, 1871), Undang-Undang Pabrik (1833, 1844, 1847) yang membatasi jam kerja, undang-undang kesehatan masyarakat (1848), penghapusan pajak gandum yang membuat roti murah (1846), sekolah dasar untuk semua anak (1870), dan perluasan hak pilih (1832, 1867, 1884). Ekonom Daron Acemoglu dan Simon Johnson menyebutnya <b>"perjuangan 100 tahun"</b> agar buruh mendapat bagian dari lonjakan produktivitas. Teknologi memperbesar kue. Siapa yang mendapat potongan ditentukan oleh kekuatan tawar, hukum, dan pendidikan.</p>
+</div>
+</div>
+</section>
+
+<section class="band" id="silsilah">
+<div class="wrap">
+<h2>Silsilah teknologi: bagaimana satu penemuan beranak-pinak sampai hari ini</h2>
+<div class="grid2">
+<div class="read">
+<p>Kenapa mesin uap bisa punya begitu banyak "versi upgrade"? Ekonom menyebut teknologi seperti ini <b>teknologi serba guna</b> (<i>general purpose technology</i>). Ciri-cirinya: (1) dipakai di hampir semua sektor, (2) terus membaik dan makin murah, dan (3) memicu penemuan-penemuan turunan. Uap, listrik, komputer, dan kini AI termasuk dalam golongan ini. Setiap teknologi serba guna menjadi landasan bagi gelombang berikutnya.</p>
+<p>Pembagian Revolusi Industri menjadi "1.0, 2.0, 3.0, 4.0" sebenarnya label yang relatif baru. Istilah "Industri 4.0" lahir di pameran industri Hannover, Jerman, pada 2011, lalu dipopulerkan oleh Klaus Schwab dari Forum Ekonomi Dunia pada 2016. Banyak sejarawan melihat semua gelombang ini sebagai satu proses panjang yang terus berlanjut. Tetapi label itu berguna sebagai peta.</p>
+</div>
+<div class="callout" style="margin-top:0">
+<h3>Pola yang selalu berulang</h3>
+<p style="margin:0">Setiap gelombang biasanya mengikuti lima tahap: (1) teknologi baru muncul, mahal dan kaku; (2) pemilik modal mengadopsinya lebih dulu; (3) pekerjaan lama hilang dan pekerjaan baru muncul, tetapi tidak untuk orang yang sama; (4) ada masa transisi yang menyakitkan; (5) masyarakat membuat aturan, sekolah, dan lembaga baru, lalu kemakmuran menyebar. Prosesnya sering lambat. Pabrik-pabrik Amerika butuh sekitar 40 tahun setelah pembangkit listrik Edison (1882) untuk menata ulang pabriknya di sekitar motor listrik sebelum produktivitas melonjak pada 1920-an (Paul David, 1990). Pada 1987, ekonom Robert Solow berseloroh bahwa era komputer terlihat di mana-mana, kecuali di statistik produktivitas.</p>
+</div>
+</div>
+
+<div class="eras">
+<div><b>1.0</b><span class="when">±1760–1840</span><p><b style="font:600 16px 'IBM Plex Sans';color:var(--ink);display:inline">Uap dan mekanisasi.</b> Batubara, besi, mesin tenun, kereta api.</p></div>
+<div><b>2.0</b><span class="when">±1870–1914</span><p><b style="font:600 16px 'IBM Plex Sans';color:var(--ink);display:inline">Listrik dan produksi massal.</b> Baja, kimia, minyak, mobil, telepon, ban berjalan.</p></div>
+<div><b>3.0</b><span class="when">±1950–2000</span><p><b style="font:600 16px 'IBM Plex Sans';color:var(--ink);display:inline">Elektronik dan otomasi.</b> Transistor, komputer, robot industri, internet.</p></div>
+<div><b>4.0</b><span class="when">±2011–kini</span><p><b style="font:600 16px 'IBM Plex Sans';color:var(--ink);display:inline">Siber-fisik dan AI.</b> Sensor, cloud, big data, AI, pabrik pintar.</p></div>
+<div><b>5.0</b><span class="when">wacana</span><p><b style="font:600 16px 'IBM Plex Sans';color:var(--ink);display:inline">Manusia dan mesin berkolaborasi.</b> Uni Eropa (2021) dan Society 5.0 Jepang (2016) menekankan teknologi yang berpusat pada manusia dan berkelanjutan.</p></div>
+</div>
+
+<div class="tabs" role="tablist" aria-label="Pilih silsilah" id="linTabs"></div>
+<div class="grid2">
+<ol class="route" id="lin"></ol>
+<div class="callout" id="linNote" style="margin-top:0;align-self:start"></div>
+</div>
+</div>
+</section>
+
+<section class="band alt" id="ai">
+<div class="wrap">
+<h2>Revolusi AI: siapa yang akan untung, siapa yang akan buntung?</h2>
+<div class="grid2">
+<div class="read">
+<p>Anda mengajukan pertanyaan yang tepat. Revolusi Industri mengotomasi <b>otot dan keterampilan tangan</b>. AI generatif mengotomasi sebagian <b>pekerjaan pikiran</b>: menulis, menerjemahkan, merangkum, menggambar, menjawab pelanggan, dan menulis kode. Kalau dulu keahlian penenun dipindahkan ke alat tenun mesin, kini sebagian keahlian penulis, desainer, staf administrasi, dan programmer pemula sedang dipindahkan ke dalam model AI.</p>
+<p>Sejarah tidak berulang persis, tetapi polanya berima. Berikut perbandingannya:</p>
+</div>
+<div class="callout" style="margin-top:0">
+<h3>Bukti terbaru (sampai November 2026)</h3>
+<ul style="margin:6px 0 0;padding-left:18px">
+<li><b>ILO (2025):</b> 1 dari 4 pekerja di dunia bekerja di jenis pekerjaan yang terpapar AI generatif. 3,3% berada di kategori paparan tertinggi, dan perempuan lebih terpapar (4,7%) daripada laki-laki (2,4%). Menurut ILO, transformasi pekerjaan lebih mungkin terjadi daripada penggantian total.</li>
+<li><b>IMF (2024):</b> sekitar 40% pekerjaan di dunia terpapar AI, dan 60% di negara maju. Dalam sebagian besar skenario, AI kemungkinan memperburuk ketimpangan.</li>
+<li><b>Stanford Digital Economy Lab (Agustus 2026):</b> lapangan kerja untuk pekerja usia 22–25 tahun di pekerjaan yang paling terpapar AI sekitar 19% di bawah jalur pembandingnya. Penurunan ini terjadi terutama karena perusahaan mengurangi perekrutan, bukan karena PHK. Pekerjaan yang memakai AI sebagai <i>pembantu</i> justru stabil atau tumbuh. Para peneliti menekankan bahwa ini sinyal dini, belum bukti sebab-akibat.</li>
+<li><b>Goldman Sachs (Agustus 2026):</b> secara keseluruhan, AI baru mengurangi pertumbuhan jumlah pekerja sekitar 0,1 poin persen, tetapi tekanannya paling kuat di posisi pemula.</li>
+<li><b>Indonesia (ILO, kajian ASEAN):</b> hanya 3–4% pekerjaan berada di kategori paparan tertinggi. Tetapi 67,5% pekerja administrasi (<i>clerical</i>) ada di kelompok itu, dan pekerja muda sedikit lebih terpapar daripada pekerja dewasa.</li>
+</ul>
+</div>
+</div>
+
+<div class="scroll" style="margin-top:24px">
+<table class="stack">
+<thead><tr><th>Aspek</th><th>Revolusi Industri (1760–1900)</th><th>Revolusi AI (2022–…)</th></tr></thead>
+<tbody>
+<tr><th>Yang diotomasi</th><td>Tenaga otot dan keterampilan tangan: memintal, menenun, menempa</td><td>Tugas pikiran yang berpola: menulis draf, merangkum, menerjemahkan, membuat gambar, menulis kode, layanan pelanggan</td></tr>
+<tr><th>Korban pertama</th><td>Pengrajin terampil (penenun tangan), bukan buruh kasar</td><td>Pekerja pemula di pekerjaan kantoran dan kreatif, staf administrasi. Sekali lagi, banyak di antaranya pekerjaan "terampil".</td></tr>
+<tr><th>Kecepatan menyebar</th><td>Puluhan tahun: power loom ditemukan 1785, mendominasi 1830–1840-an</td><td>Beberapa tahun. ChatGPT diperkirakan mencapai 100 juta pengguna sekitar dua bulan setelah diluncurkan.</td></tr>
+<tr><th>Pemilik "mesin"</th><td>Ribuan pemilik pabrik lokal</td><td>Segelintir perusahaan global pemilik model, chip, pusat data, dan data</td></tr>
+<tr><th>Yang dibutuhkan untuk ikut untung</th><td>Modal besar untuk membangun pabrik</td><td>Modal kecil. Siapa pun bisa memakai AI dengan biaya murah, dan ini peluang yang tidak dimiliki penenun 1820.</td></tr>
+<tr><th>Masa penyesuaian</th><td>Lintas generasi: anak-anak penenunlah yang pindah profesi</td><td>Dalam satu masa hidup: kita sendiri yang harus pindah, mungkin lebih dari sekali</td></tr>
+<tr><th>Peredam guncangan</th><td>Hampir tidak ada di awal. Serikat buruh dan undang-undang datang puluhan tahun kemudian.</td><td>Sedang diperdebatkan: perlindungan sosial, pelatihan ulang, aturan AI, hak atas data</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="wl" style="margin-top:28px">
+<div><h3>Yang berpotensi diuntungkan</h3><ul>
+<li><b>Pemilik "mesin" baru:</b> perusahaan model AI, chip, pusat data, dan pemegang sahamnya. Mereka adalah "pemilik pabrik" abad ini.</li>
+<li><b>Orang yang memakai AI untuk memperbesar keahliannya:</b> ahli di bidangnya yang menjadi 2–5 kali lebih produktif. Mereka seperti montir mesin di era uap.</li>
+<li><b>Pengusaha kecil dan kreator</b> yang memakai AI sebagai "pabrik murah" untuk membuat produk, konten, atau layanan sendiri.</li>
+<li><b>Pekerjaan yang bertumpu pada kepercayaan, tubuh, dan tanggung jawab:</b> perawat, teknisi lapangan, guru yang membimbing, tukang terampil, pemimpin yang mengambil keputusan.</li>
+<li><b>Konsumen:</b> layanan menjadi lebih murah dan cepat, sama seperti kain murah di abad ke-19.</li>
+</ul></div>
+<div><h3>Yang berpotensi dirugikan</h3><ul>
+<li><b>Pekerja pemula di pekerjaan kantoran</b> yang tugasnya mudah dipecah dan diulang. Tangga karier di anak tangga pertama mulai hilang.</li>
+<li><b>Pekerjaan administrasi dan entri data</b>, termasuk sektor layanan pelanggan dan alih daya (BPO) yang besar di Asia Tenggara.</li>
+<li><b>Pekerja lepas konten generik:</b> penulis artikel standar, penerjemah dokumen rutin, ilustrator stok.</li>
+<li><b>Orang yang menolak beradaptasi</b> dan bersaing langsung dengan mesin dalam harga, seperti penenun tangan yang menurunkan tarif terus-menerus.</li>
+<li><b>Negara dan daerah</b> yang tertinggal dalam internet, listrik, dan pendidikan, sama seperti negeri jajahan yang dulu hanya menjadi pemasok bahan mentah. Kali ini bahan mentahnya data dan tenaga kerja murah untuk melabeli data.</li>
+</ul></div>
+</div>
+
+<h3 style="margin-top:34px;font-size:26px">Delapan pelajaran dari sejarah agar Anda tidak berada di posisi penenun tangan</h3>
+<div class="lessons">
+<div><b>1. Jangan bersaing dengan mesin di tugas yang ia kuasai.</b>Penenun yang menurunkan tarif untuk menyaingi mesin tetap kalah. Pindahlah ke tugas yang <i>melengkapi</i> AI: menentukan apa yang perlu dikerjakan, memeriksa hasilnya, menggabungkan banyak hal, dan bertanggung jawab atas keputusan.</div>
+<div><b>2. Jadilah orang yang mengendalikan mesin.</b>Pemenang di era uap adalah montir, insinyur, dan mandor, yaitu orang yang paham cara kerja mesin. Hari ini artinya memakai AI setiap hari di pekerjaan Anda, tahu kapan AI salah, dan tahu cara memberinya instruksi yang baik.</div>
+<div><b>3. Usahakan ikut memiliki "alat produksi".</b>Kekayaan Revolusi Industri mengalir ke pemilik mesin. Sekarang, untuk pertama kalinya, "mesin" itu bisa disewa siapa saja dengan biaya murah. Gunakan untuk membangun sesuatu milik Anda sendiri: usaha kecil, produk, keahlian yang bisa dijual, atau audiens. Dalam jangka panjang, pertimbangkan juga memiliki aset yang ikut tumbuh bersama ekonomi. Ini prinsip umum, bukan nasihat investasi.</div>
+<div><b>4. Gabungkan keahlian yang dalam dengan AI.</b>AI paling lemah dalam konteks lokal, pengetahuan yang tidak tertulis, hubungan kepercayaan, dan dunia fisik yang tidak teratur. Seorang ahli pajak, perawat, atau petani yang menguasai AI jauh lebih sulit digantikan daripada AI sendiri atau ahli yang menolak AI.</div>
+<div><b>5. Belajar terus, dan cepat.</b>Penenun tahun 1820 bisa berharap anaknya pindah profesi. Kita tidak punya kemewahan itu, karena perubahan terjadi dalam hitungan tahun. Sediakan waktu rutin setiap minggu untuk mempelajari alat dan keterampilan baru.</div>
+<div><b>6. Bangun bantalan.</b>Tabungan darurat, lebih dari satu sumber penghasilan, dan jejaring orang yang mengenal kemampuan Anda. Masa transisi selalu ada, dan yang paling menderita adalah orang yang tidak punya cadangan saat masa itu datang.</div>
+<div><b>7. Dukung aturan main yang adil.</b>Nasib buruh abad ke-19 baru membaik setelah ada serikat pekerja, undang-undang pabrik, sekolah gratis, dan hak pilih. Hari ini padanannya adalah perlindungan sosial, pelatihan ulang, dan aturan tentang data dan AI. Suara bersama masih menentukan siapa yang mendapat potongan kue.</div>
+<div><b>8. Siapkan anak-anak sebagai pencipta, bukan sekadar pengguna.</b>Di abad ke-19, anak-anak menjadi tenaga murah di pabrik. Hari ini, lindungi mereka dari sekadar menjadi konsumen layar. Ajari mereka membaca dengan kritis, matematika dasar, membuat sesuatu, bekerja sama, dan memakai AI sebagai alat untuk berkarya.</div>
+</div>
+
+<h3 style="margin-top:36px;font-size:26px">Cek posisi pekerjaan Anda</h3>
+<p class="read">Centang pernyataan yang sesuai dengan pekerjaan Anda saat ini. Ini <b>alat refleksi</b> yang disusun dari pola dalam riset di atas, bukan prediksi ilmiah. Tidak ada data yang dikirim ke mana pun.</p>
+<div class="check">
+<div class="qs" id="qs"></div>
+<div class="res" id="res" aria-live="polite"></div>
+</div>
+</div>
+</section>
+
+<section class="band" id="kesimpulan">
+<div class="wrap">
+<h2>Lima pelajaran dari 260 tahun revolusi</h2>
+<div class="lessons">
+<div><b>Teknologi memperbesar kue, tetapi tidak membaginya.</b>Pembagian ditentukan oleh siapa yang memiliki mesin, siapa yang punya keterampilan langka, dan aturan main yang dibuat masyarakat.</div>
+<div><b>Kemakmuran datang terlambat.</b>Buruh Inggris menunggu sekitar 60 tahun. Listrik butuh 40 tahun untuk mengubah pabrik. Transisi selalu lebih lama dan lebih menyakitkan daripada janji para penemunya.</div>
+<div><b>Korban pertama sering justru pekerja terampil.</b>Penenun tangan dulu, sebagian pekerja kantoran dan kreatif sekarang. Keterampilan yang bisa dirumuskan menjadi resep paling mudah dipindahkan ke mesin.</div>
+<div><b>Yang beradaptasi bisa bertahan.</b>Pembatik Jawa menciptakan batik cap. Anak-anak penenun menjadi montir dan juru tulis. Bertahan bukan berarti melawan mesin, melainkan memakai mesin untuk memperkuat keahlian sendiri.</div>
+<div><b>Posisi dalam sistem global menentukan nasib.</b>Inggris menjadi bengkel dunia, sedangkan India dan Jawa dijadikan pemasok bahan mentah. Di era AI, pertanyaannya sama untuk Indonesia: menjadi pembuat dan pemilik teknologi, atau sekadar pasar dan pemasok data.</div>
+</div>
+
+<div class="grid2" style="margin-top:36px">
+<div>
+<h3>Bacaan lanjutan yang disarankan</h3>
+<ul class="books">
+<li>Robert C. Allen, <i>The Industrial Revolution: A Very Short Introduction</i> (2017). Ringkas dan mudah dibaca.</li>
+<li>Kenneth Pomeranz, <i>The Great Divergence</i> (2000). Tentang Inggris dibanding China.</li>
+<li>Carl Benedikt Frey, <i>The Technology Trap</i> (2019). Membandingkan Revolusi Industri dengan otomasi masa kini, termasuk Engels' pause.</li>
+<li>Daron Acemoglu &amp; Simon Johnson, <i>Power and Progress</i> (2023). Siapa yang diuntungkan teknologi dan kenapa.</li>
+<li>Daron Acemoglu &amp; James Robinson, <i>Why Nations Fail</i> (2012). Teori institusi.</li>
+<li>Peter Carey, <i>Kuasa Ramalan: Pangeran Diponegoro dan Akhir Tatanan Lama di Jawa</i>. Tentang Perang Jawa.</li>
+<li>Pramoedya Ananta Toer, <i>Jalan Raya Pos, Jalan Daendels</i> (2005).</li>
+<li>Multatuli, <i>Max Havelaar</i> (1860). Novel yang mengguncang Tanam Paksa.</li>
+<li>E. P. Thompson, <i>The Making of the English Working Class</i> (1963). Tentang buruh dan para Luddite.</li>
+</ul>
+</div>
+<div>
+<h3>Catatan tentang ketepatan</h3>
+<p>Angka-angka sejarah sebelum tahun 1900 adalah <b>rekonstruksi para ahli</b> dari catatan pajak, upah, dan harga, bukan statistik resmi. Karena itu halaman ini memberi rentang atau menyebut sumbernya ketika para ahli tidak sepakat, misalnya produksi besi era Song atau jumlah korban kerja paksa. Teori tentang "kenapa Inggris" masih diperdebatkan dan disajikan sebagai pandangan yang bersaing. Data AI berubah cepat. Yang dikutip di sini adalah kajian terbaru yang tersedia per November 2026.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="band alt" id="sumber">
+<div class="wrap">
+<h2>Sumber</h2>
+<ol class="src">
+<li>Our World in Data, <a href="https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database">GDP per capita, Maddison Project Database 2023</a></li>
+<li>Our World in Data, <a href="https://ourworldindata.org/grapher/share-of-population-living-in-extreme-poverty">Share of population living in extreme poverty</a> dan <a href="https://ourworldindata.org/a-history-of-global-living-conditions">A history of global living conditions</a></li>
+<li>Our World in Data, <a href="https://ourworldindata.org/grapher/life-expectancy">Life expectancy</a>, <a href="https://ourworldindata.org/grapher/population">Population</a>, <a href="https://ourworldindata.org/grapher/annual-co2-emissions-per-country">Annual CO₂ emissions</a></li>
+<li>R. C. Allen, <a href="https://warwick.ac.uk/fac/soc/economics/research/centres/cage/news/podcasts/allen-industrial-revolution.pdf">The British Industrial Revolution in Global Perspective (ringkasan)</a></li>
+<li>R. C. Allen (2009), <a href="https://www.nuffield.ox.ac.uk/Users/Allen/engelspause.pdf">Engels' pause: technical change, capital accumulation, and inequality</a></li>
+<li>N. Crafts (2020), <a href="https://warwick.ac.uk/fac/soc/economics/research/workingpapers/2020/twerp_1268_-_crafts.pdf">Slow real wage growth during the Industrial Revolution</a></li>
+<li>Allen, Bassino, Ma, Moll-Murata, van Zanden, <a href="https://researchonline.lse.ac.uk/id/eprint/27871">Wages, prices, and living standards in China, 1738–1925</a></li>
+<li>K. Pomeranz, <a href="https://warwick.ac.uk/fac/soc/economics/research/centres/cage/news/podcasts/pomeranz-why-the-west.pdf">The Great Divergence (ringkasan dan perdebatan)</a></li>
+<li>Kelly, Mokyr, Ó Gráda (2015), <a href="https://warwick.ac.uk/fac/soc/economics/research/centres/cage/manage/publications/248-2015_kelly.pdf">Roots of the Industrial Revolution</a></li>
+<li>Tabel porsi manufaktur dunia (Bairoch), <a href="https://digfir-published.macmillanusa.com/strayersources3ehs/asset/snapshot/snapshot_the_industrial_revolution_and_the_global_divide.html">The Industrial Revolution and the Global Divide</a></li>
+<li>Clingingsmith &amp; Williamson, <a href="https://www.nber.org/papers/w11730">Deindustrialization in 18th and 19th century India</a></li>
+<li>Columbia University, <a href="https://afe.easia.columbia.edu/songdynasty-module/econ-rev-iron-steel.html">Song Dynasty: iron and steel</a>, dan LSE, <a href="https://www.lse.ac.uk/asset-library/information/wp178.pdf">perbandingan perkiraan produksi besi Song</a></li>
+<li>Open University, <a href="https://university.open.ac.uk/research-centres/herc/blog/alas-poor-weavers-context-april-1826-weavers-uprising-east-lancashire">"Alas Poor Weavers": the 1826 weavers uprising</a></li>
+<li>Acemoglu &amp; Johnson, <a href="https://economics.mit.edu/sites/default/files/2024-04/Learning%20from%20Ricardo%20and%20Thompson%20-%20Machinery%20and%20Labor%20in%20the%20Early%20Industrial%20Revolution%20-%20and%20in%20the%20Age%20of%20AI.pdf">Learning from Ricardo and Thompson: machinery and labor</a></li>
+<li>Wikipedia, <a href="https://en.wikipedia.org/wiki/Power-loom_riots">Power-loom riots</a> (data Bolton 1826)</li>
+<li>Britannica, <a href="https://www.britannica.com/print/article/200060">Factory Act</a>; Wikipedia, <a href="https://en.wikipedia.org/wiki/Child_labour_in_the_British_Industrial_Revolution">Child labour in the British Industrial Revolution</a></li>
+<li>Tabel Chadwick 1842 dalam <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5777825/table/tbl1">PMC</a></li>
+<li>The National Archives (UK), <a href="https://www.nationalarchives.gov.uk/education/teaching-resources/why-did-the-luddites-protest/">Why did the Luddites protest?</a></li>
+<li>Britannica, <a href="https://www.britannica.com/place/Indonesia/The-Culture-System">The Culture System</a></li>
+<li>de Zwart dkk., VoxEU, <a href="https://cepr.org/voxeu/columns/demographic-effects-colonialism-forced-labour-and-mortality-nineteenth-century-java">Forced labour and mortality in nineteenth-century Java</a></li>
+<li>Wikipedia, <a href="https://en.wikipedia.org/wiki/Cultivation_System">Cultivation System</a>, <a href="https://en.wikipedia.org/wiki/Java_War">Java War</a>, <a href="https://en.wikipedia.org/wiki/Great_Post_Road">Great Post Road</a>, <a href="https://en.wikipedia.org/wiki/History_of_rail_transport_in_Indonesia">History of rail transport in Indonesia</a></li>
+<li>Springer, <a href="https://rd.springer.com/chapter/10.1007/978-3-319-58265-8_8">Java's cloth producers and industrial imports (batik cap)</a>; JCU, <a href="https://researchonline.jcu.edu.au/48591/">European batik imitations 1813–1840</a></li>
+<li>Computer History Museum, <a href="https://www.computerhistory.org/revolution/punched-cards/2/4">Punched cards</a>; IBM, <a href="https://www.ibm.com/history/punched-card-tabulator">The punched card tabulator</a></li>
+<li>The Henry Ford, <a href="https://www.thehenryford.org/collections/explore/articles/ford-methods-and-the-ford-shops">Ford methods and the Ford shops</a></li>
+<li>U.S. EIA, <a href="https://www.eia.gov/energyexplained/electricity/how-electricity-is-generated.php">How electricity is generated</a></li>
+<li>ILO (2025), <a href="https://www.ilo.org/publications/generative-ai-and-jobs-2025-update">Generative AI and jobs: 2025 update</a>; ILO, <a href="https://www.ilo.org/resource/article/navigating-generative-ai%E2%80%99s-transformations-asean-labour-markets">GenAI in ASEAN labour markets</a></li>
+<li>IMF (2024), <a href="https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity">AI will transform the global economy</a></li>
+<li>Stanford Digital Economy Lab (Agustus 2026), <a href="https://digitaleconomy.stanford.edu/news/canariesaug26/">Canaries in the Coal Mine, pembaruan</a></li>
+<li>CNBC (Agustus 2026), <a href="https://www.cnbc.com/2026/08/19/goldman-ai-impact-employment-jobs.html">Goldman studied where AI is squeezing labor markets</a></li>
+<li>MIT Shaping Work, <a href="https://shapingwork.mit.edu/power-and-progress">Power and Progress</a></li>
+</ol>
+<p class="small mut">Tanggal penemuan yang umum diketahui (Newcomen, Watt, Arkwright, Stephenson, Edison, transistor, dan sebagainya) mengacu pada ensiklopedia standar.</p>
+</div>
+</section>
+
+<footer class="band"><div class="wrap">Disusun sebagai bahan belajar pribadi, November 2026. Grafik dibuat dari data Maddison Project dan Our World in Data. Angka sebelum 1900 adalah perkiraan para ahli.</div></footer>
+
+<script>
+{
+const C={uk:'#f24b5a',fr:'#4593db',cn:'#c18d1a',nl:'#9c7fe6',in:'#21a594',id:'#e07a32'};
+const fmt=v=>v.toLocaleString('id-ID');
+function chart(box,cfg){
+  const s=box.querySelector('svg'),tip=box.querySelector('.tip');
+  const draw=()=>{
+    const W=box.clientWidth,H=box.clientHeight;if(!W||!H)return;
+    const n=W<520;
+    const m={l:n?42:54,r:cfg.noLab?16:(n?84:104),t:cfg.top||16,b:28};
+    const lg=!!(cfg.log&&cfg.log());
+    const ser=cfg.series.filter(d=>!d.off);
+    const f=v=>lg?Math.log10(v):v;
+    const Y0=f(lg?cfg.ly[0]:cfg.y[0]),Y1=f(lg?cfg.ly[1]:cfg.y[1]);
+    const X=v=>m.l+(v-cfg.x[0])/(cfg.x[1]-cfg.x[0])*(W-m.l-m.r);
+    const Yp=v=>H-m.b-(f(v)-Y0)/(Y1-Y0)*(H-m.t-m.b);
+    let o='';
+    (lg?cfg.lyt:cfg.yt).forEach(v=>{const y=Yp(v);o+=`<line x1="${m.l}" x2="${W-m.r}" y1="${y}" y2="${y}" stroke="rgba(255,255,255,.12)"/><text x="${m.l-8}" y="${y+4}" text-anchor="end">${cfg.yf(v)}</text>`});
+    (n?cfg.xt.filter((_,i)=>i%2==0):cfg.xt).forEach(v=>{o+=`<text x="${X(v)}" y="${H-8}" text-anchor="middle">${v}</text>`});
+    o+=`<line x1="${m.l}" x2="${W-m.r}" y1="${H-m.b}" y2="${H-m.b}" stroke="rgba(255,255,255,.35)"/>`;
+    if(cfg.notes)o+=cfg.notes(X,Yp,W,H,n,m,lg);
+    ser.forEach(d=>{
+      const pth=d.p.map((q,i)=>(i?'L':'M')+X(q[0]).toFixed(1)+','+Yp(q[1]).toFixed(1)).join('');
+      if(cfg.area)o+=`<path d="${pth}L${X(d.p[d.p.length-1][0]).toFixed(1)},${H-m.b}L${X(d.p[0][0]).toFixed(1)},${H-m.b}Z" fill="${d.c}" opacity=".24"/>`;
+      o+=`<path d="${pth}" fill="none" stroke="${d.c}" stroke-width="${d.w||2.5}" stroke-linejoin="round" stroke-linecap="round"/>`;
+      if(cfg.dots)d.p.forEach(q=>{o+=`<circle cx="${X(q[0])}" cy="${Yp(q[1])}" r="4.5" fill="${d.c}" stroke="#13205a" stroke-width="2"/>`});
+    });
+    if(!cfg.noLab){
+      const labs=ser.map(d=>{const q=d.p[d.p.length-1];return{d,x:X(q[0]),y:Yp(q[1])}}).sort((a,b)=>a.y-b.y);
+      for(let i=1;i<labs.length;i++)if(labs[i].y-labs[i-1].y<18)labs[i].y=labs[i-1].y+18;
+      const over=labs.length?labs[labs.length-1].y-(H-m.b-4):0;if(over>0)labs.forEach(l=>l.y-=over);
+      labs.forEach(l=>{o+=(cfg.dots?'':`<circle cx="${l.x+12}" cy="${l.y}" r="4.5" fill="${l.d.c}"/>`)+`<text class="lab" x="${l.x+(cfg.dots?10:21)}" y="${l.y+4.5}">${l.d.n}</text>`});
+    }
+    o+=`<line class="cx" y1="${m.t}" y2="${H-m.b}" stroke="rgba(255,255,255,.55)" stroke-dasharray="3 3" opacity="0"/><g class="hd"></g><rect class="hit" x="${m.l}" y="0" width="${Math.max(0,W-m.l-m.r)}" height="${H}" fill="transparent"/>`;
+    s.innerHTML=o;
+    const xsAll=[...new Set(ser.flatMap(d=>d.p.map(q=>q[0])))].sort((a,b)=>a-b);
+    const hit=s.querySelector('.hit'),cx=s.querySelector('.cx'),hd=s.querySelector('.hd');
+    const move=e=>{
+      const r=s.getBoundingClientRect(),px=e.clientX-r.left;let best=xsAll[0],bd=1e9;
+      xsAll.forEach(x=>{const dd=Math.abs(X(x)-px);if(dd<bd){bd=dd;best=x}});
+      const xx=X(best);cx.setAttribute('x1',xx);cx.setAttribute('x2',xx);cx.setAttribute('opacity',1);
+      let h='',t=`<b>${best}</b>`;
+      ser.forEach(d=>{const q=d.p.find(q=>q[0]===best);if(q){h+=`<circle cx="${xx}" cy="${Yp(q[1])}" r="5.5" fill="${d.c}" stroke="#fff" stroke-width="2"/>`;t+=`<span><em><i style="background:${d.c}"></i>${d.n}</em><strong>${cfg.vf(q[1])}</strong></span>`}});
+      hd.innerHTML=h;tip.innerHTML=t;tip.style.opacity=1;
+      const tw=tip.offsetWidth;let lx=xx+14;if(lx+tw>W)lx=xx-14-tw;tip.style.left=Math.max(0,lx)+'px';tip.style.top=(m.t+4)+'px';
+    };
+    const out=()=>{cx.setAttribute('opacity',0);hd.innerHTML='';tip.style.opacity=0};
+    hit.addEventListener('pointermove',move);hit.addEventListener('pointerdown',move);hit.addEventListener('pointerleave',out);
+  };
+  const ro=new ResizeObserver(draw);ro.observe(box);return draw;
+}
+
+/* GDP hero */
+const G={uk:[[1600,1691],[1650,1446],[1700,2412],[1750,2702],[1800,3343],[1820,3306],[1850,4332],[1870,5829],[1890,6845],[1913,8212],[1930,8673],[1950,11061],[1960,13780],[1970,17162],[1980,20612],[1990,26189],[2000,31946],[2010,34754],[2022,38407]],cn:[[1600,1217],[1700,1543],[1750,1061],[1800,926],[1820,882],[1850,858],[1870,945],[1890,964],[1913,985],[1930,1012],[1950,799],[1960,1057],[1970,1398],[1980,1930],[1990,2982],[2000,4730],[2010,9658],[2022,19238]],in:[[1600,1264],[1650,1189],[1700,1162],[1750,1068],[1850,947],[1870,850],[1890,931],[1913,1073],[1930,1157],[1950,987],[1960,1200],[1970,1384],[1980,1495],[1990,2087],[2000,2753],[2010,4526],[2022,7766]],id:[[1820,827],[1850,724],[1870,810],[1890,1030],[1913,1361],[1930,1704],[1950,1280],[1960,1613],[1970,1882],[1980,2981],[1990,4007],[2000,5384],[2010,8386],[2022,12802]],nl:[[1600,4270],[1650,4316],[1700,3377],[1750,3777],[1800,4184],[1820,3006],[1850,3779],[1870,4422],[1890,5078],[1913,6454],[1930,8931],[1950,9558],[1960,13209],[1970,19075],[1980,23438],[1990,27515],[2000,37900],[2010,43812],[2022,49670]],fr:[[1600,1576],[1650,1559],[1700,1758],[1750,1743],[1800,1660],[1820,1809],[1850,2545],[1870,2990],[1890,3787],[1913,5555],[1930,7224],[1950,8266],[1960,11792],[1970,18187],[1980,23537],[1990,28129],[2000,33410],[2010,36087],[2022,39066]]};
+const names={uk:'Inggris',fr:'Prancis',cn:'China',nl:'Belanda',in:'India',id:'Indonesia'};
+const gser=['uk','fr','cn','nl','in','id'].map(k=>({k,n:names[k],c:C[k],p:G[k],w:k==='uk'?3.5:2.2,off:false}));
+let logScale=false;
+const usd=v=>v>=1000?'$'+(v/1000).toLocaleString('id-ID')+' rb':'$'+v;
+const gdpDraw=chart(document.getElementById('gdpFig'),{series:gser,x:[1600,2022],y:[0,52000],yt:[0,10000,20000,30000,40000,50000],ly:[500,60000],lyt:[500,1000,2000,5000,10000,20000,50000],log:()=>logScale,yf:usd,vf:v=>'$'+fmt(v),xt:[1600,1650,1700,1750,1800,1850,1900,1950,2000],
+  notes:(X,Y,W,H,n,m)=>{const x=X(1800),y=Y(3343);const ty=m.t+18;return `<line x1="${x}" x2="${x}" y1="${y-8}" y2="${ty+8}" stroke="#fff" stroke-width="1"/><text class="note" x="${x-6}" y="${ty}" text-anchor="end">${n?'±1800':'Sekitar 1800: Inggris lepas landas'}</text>`+(n?'':`<text x="${x-6}" y="${ty+18}" text-anchor="end">pendapatan per orang 3,6× China</text>`)}});
+const gc=document.getElementById('gdpCtrl');
+gc.innerHTML=gser.map(d=>`<button class="chip" type="button" aria-pressed="true" data-k="${d.k}"><i style="background:${d.c}"></i>${d.n}</button>`).join('')+`<span class="seg" role="group" aria-label="Skala sumbu"><button type="button" id="linB" aria-pressed="true">Linear</button><button type="button" id="logB" aria-pressed="false">Logaritmik</button></span>`;
+gc.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{const d=gser.find(x=>x.k===b.dataset.k);if(!d.off&&gser.filter(x=>!x.off).length===1)return;d.off=!d.off;b.setAttribute('aria-pressed',String(!d.off));gdpDraw()}));
+const setLog=v=>{logScale=v;document.getElementById('logB').setAttribute('aria-pressed',String(v));document.getElementById('linB').setAttribute('aria-pressed',String(!v));gdpDraw()};
+document.getElementById('logB').addEventListener('click',()=>setLog(true));
+document.getElementById('linB').addEventListener('click',()=>setLog(false));
+
+/* Bairoch */
+const by=[1750,1800,1830,1860,1880,1900];
+const z=a=>by.map((y,i)=>[y,a[i]]);
+chart(document.getElementById('shareFig'),{series:[{n:'China',c:C.cn,p:z([32.8,33.3,29.8,19.7,12.5,6.2])},{n:'India',c:C.in,p:z([24.5,19.7,17.6,8.6,2.8,1.7])},{n:'Inggris',c:C.uk,p:z([1.9,4.3,9.5,19.9,22.9,18.5]),w:3.2}],x:[1750,1900],y:[0,36],yt:[0,10,20,30],yf:v=>v+'%',vf:v=>v.toLocaleString('id-ID')+'%',xt:[1750,1800,1830,1860,1880,1900],dots:true});
+
+/* Engels pause */
+chart(document.getElementById('engelsFig'),{series:[{n:'Hasil kerja',c:C.cn,p:[[1780,100],[1840,146],[1900,277]]},{n:'Upah riil',c:C.in,p:[[1780,100],[1840,112],[1900,250]],w:3.2}],x:[1780,1900],y:[50,300],yt:[100,150,200,250,300],yf:v=>v,vf:v=>v,xt:[1780,1800,1820,1840,1860,1880,1900],dots:true,
+  notes:(X,Y,W,H,n)=>{const x=X(1840);return `<line x1="${x+10}" x2="${x+10}" y1="${Y(146)}" y2="${Y(112)}" stroke="#fff" stroke-width="1.5"/><line x1="${x+6}" x2="${x+14}" y1="${Y(146)}" y2="${Y(146)}" stroke="#fff"/><line x1="${x+6}" x2="${x+14}" y1="${Y(112)}" y2="${Y(112)}" stroke="#fff"/><text class="note" x="${x+18}" y="${Y(112)+24}">${n?'jarak':'jarak yang jatuh ke pemilik modal'}</text>`}});
+
+/* small multiples */
+const minis=[
+ {t:'Kemiskinan ekstrem turun dari 79% menjadi 9% penduduk dunia',u:'% penduduk dunia di bawah garis kemiskinan ekstrem',c:C.id,y:[0,100],yt:[0,25,50,75,100],yf:v=>v+'%',vf:v=>v.toLocaleString('id-ID')+'%',x:[1820,2018],xt:[1820,1860,1900,1940,1980,2018],p:[[1820,79.4],[1830,79.2],[1840,79.0],[1850,78.6],[1860,77.2],[1870,75.5],[1880,73.2],[1890,69.2],[1900,65.4],[1910,61.2],[1920,59.6],[1930,57.4],[1940,54.1],[1950,53.3],[1960,50.2],[1970,49.6],[1980,45.8],[1990,36.2],[2000,26.5],[2010,14.7],[2018,8.6]]},
+ {t:'Harapan hidup naik dari 28 ke 73 tahun, sebagian besar setelah 1900',u:'Harapan hidup saat lahir, rata-rata dunia (tahun)',c:C.in,y:[0,80],yt:[0,20,40,60,80],yf:v=>v,vf:v=>v.toLocaleString('id-ID')+' th',x:[1770,2023],xt:[1800,1850,1900,1950,2000],p:[[1770,28.5],[1800,28.5],[1820,29.0],[1850,29.3],[1870,29.7],[1900,32.0],[1950,46.4],[1960,47.8],[1970,56.3],[1980,60.5],[1990,64.0],[2000,66.4],[2010,70.1],[2020,71.9],[2023,73.2]]},
+ {t:'Penduduk dunia naik dari 0,6 menjadi 8,1 miliar',u:'Penduduk dunia (miliar jiwa)',c:C.fr,y:[0,9],yt:[0,2,4,6,8],yf:v=>v,vf:v=>v.toLocaleString('id-ID')+' miliar',x:[1700,2023],xt:[1700,1750,1800,1850,1900,1950,2000],p:[[1700,0.6],[1750,0.75],[1800,0.98],[1850,1.28],[1900,1.63],[1950,2.49],[2000,6.17],[2023,8.09]]},
+ {t:'Emisi CO₂ dari hampir nol menjadi 39 miliar ton per tahun',u:'Emisi CO₂ dari bahan bakar fosil dan industri (miliar ton per tahun)',c:C.uk,y:[0,40],yt:[0,10,20,30,40],yf:v=>v,vf:v=>v.toLocaleString('id-ID')+' miliar ton',x:[1750,2025],xt:[1750,1800,1850,1900,1950,2000],p:[[1750,0.01],[1780,0.02],[1800,0.03],[1820,0.05],[1840,0.12],[1860,0.33],[1880,0.86],[1900,1.97],[1910,3.06],[1920,3.55],[1930,3.96],[1940,4.9],[1950,5.92],[1960,9.38],[1970,14.69],[1980,19.23],[1990,22.78],[2000,25.51],[2010,33.32],[2020,35.1],[2025,39.0]]}
+];
+const mw=document.getElementById('minis');
+mw.innerHTML=minis.map((d,i)=>`<div class="plate"><h3>${d.t}</h3><p class="cap">${d.u}</p><div class="fig mini" id="mini${i}"><svg role="img" aria-label="${d.t}"></svg><div class="tip"></div></div></div>`).join('');
+minis.forEach((d,i)=>chart(document.getElementById('mini'+i),{series:[{n:d.u.split(' (')[0],c:d.c,p:d.p}],x:d.x,y:d.y,yt:d.yt,yf:d.yf,vf:d.vf,xt:d.xt,area:true,noLab:true,
+  notes:(X,Y)=>{const a=d.p[0],b=d.p[d.p.length-1];return `<text class="lab" x="${X(a[0])+4}" y="${Y(a[1])-10}">${d.vf(a[1])}</text><text class="lab" x="${X(b[0])-4}" y="${Math.max(14,Y(b[1])-10)}" text-anchor="end">${d.vf(b[1])}</text>`}}));
+
+/* theory highlight */
+const TH=[{k:'all',n:'Semua faktor',f:null},{k:'allen',n:'Allen: upah & energi',f:['upah','batubara']},{k:'pom',n:'Pomeranz: batubara & koloni',f:['batubara','pasar']},{k:'mok',n:'Mokyr: budaya ilmu',f:['ilmu']},{k:'ar',n:'Acemoglu & Robinson: institusi',f:['institusi','stabil']},{k:'mcc',n:'McCloskey: martabat pedagang',f:['ilmu','institusi']}];
+const tb=document.getElementById('theoryBtns');
+tb.innerHTML=TH.map((t,i)=>`<button type="button" class="btn" aria-pressed="${i===0}" data-i="${i}">${t.n}</button>`).join('');
+tb.querySelectorAll('.btn').forEach(b=>b.addEventListener('click',()=>{const t=TH[+b.dataset.i];tb.querySelectorAll('.btn').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelectorAll('#cmp tbody tr').forEach(r=>{const on=t.f&&t.f.includes(r.dataset.f);r.classList.toggle('hl',!!on);r.classList.toggle('dim',!!t.f&&!on)})}));
+
+/* spinning vs weaving race */
+const R=[{y:'1733',t:'Flying shuttle (John Kay)',d:'Penenun bekerja kira-kira dua kali lebih cepat. Akibatnya, benang selalu kurang.',sp:30,wv:60},{y:'±1765',t:'Spinning jenny (James Hargreaves)',d:'Satu orang bisa memutar banyak gelendong sekaligus.',sp:55,wv:60},{y:'1769',t:'Water frame (Richard Arkwright)',d:'Mesin pintal bertenaga air menghasilkan benang yang kuat. Pabrik pertama berdiri di Cromford (1771).',sp:78,wv:60},{y:'1779',t:'Spinning mule (Samuel Crompton)',d:'Benang halus dan melimpah. Penenun tangan mengalami masa keemasan (sekitar 1790–1805).',sp:100,wv:60},{y:'1785',t:'Power loom (Edmund Cartwright)',d:'Mesin tenun bertenaga uap menyebar pada 1820-an–1840-an. Penenun tangan tergusur.',sp:100,wv:100}];
+document.getElementById('race').innerHTML=R.map(r=>`<div class="r"><div class="yr">${r.y}</div><div class="what"><b>${r.t}</b><span>${r.d}</span></div><div class="bars"><div class="bar"><span>Pintal</span><i class="sp" style="width:${r.sp}%"></i></div><div class="bar"><span>Tenun</span><i class="wv" style="width:${r.wv}%"></i></div></div></div>`).join('');
+
+/* punched-card timeline */
+const T0=1700,T1=1950;
+const EV=[
+ [1709,'t','Kokas untuk melebur besi','Abraham Darby di Coalbrookdale memakai kokas (batubara yang dipanggang) sebagai pengganti arang kayu. Besi mulai bisa diproduksi murah dan dalam jumlah besar.'],
+ [1712,'t','Mesin uap Newcomen','Mesin uap praktis pertama, dipakai untuk memompa air dari tambang batubara. Boros, tetapi bekerja.'],
+ [1733,'t','Flying shuttle','John Kay mempercepat kerja penenun. Benang pun menjadi kekurangan, yang memicu perlombaan penemuan mesin pintal.'],
+ [1755,'n','Perjanjian Giyanti','Mataram dibelah menjadi Kasunanan Surakarta dan Kesultanan Yogyakarta, dengan VOC sebagai penengah yang makin berkuasa.'],
+ [1765,'t','Spinning jenny','James Hargreaves membuat alat pintal yang memutar banyak gelendong sekaligus.'],
+ [1769,'t','Watt dan Arkwright','James Watt mematenkan kondensor terpisah, sehingga mesin uap jauh lebih hemat. Richard Arkwright mematenkan water frame dan membangun pabrik Cromford (1771): awal sistem pabrik.'],
+ [1776,'s','The Wealth of Nations','Adam Smith menerbitkan buku dasar ilmu ekonomi tentang pasar dan pembagian kerja. Pada tahun yang sama, mesin Watt mulai dijual.'],
+ [1785,'t','Power loom','Edmund Cartwright mematenkan mesin tenun bertenaga. Butuh beberapa dekade sebelum mesin ini menggusur penenun tangan.'],
+ [1789,'s','Revolusi Prancis','Monarki Prancis runtuh, disusul perang di seluruh Eropa sampai 1815. Prancis kehilangan satu generasi untuk berindustri.'],
+ [1799,'n','VOC dibubarkan','Kongsi dagang terbesar dunia bangkrut karena utang dan korupsi. Wilayahnya diambil alih negara Belanda.'],
+ [1804,'t','Lokomotif dan kartu Jacquard','Richard Trevithick menjalankan lokomotif uap pertama. Di Prancis, alat tenun Jacquard dikendalikan kartu berlubang, leluhur program komputer.'],
+ [1808,'n','Jalan Raya Pos Daendels','Jalan sekitar 1.000 km dari Anyer ke Panarukan dibangun dengan kerja paksa (1808–1811). Ribuan pekerja tewas.'],
+ [1811,'s','Gerakan Luddite','Pekerja terampil menghancurkan mesin rajut dan tenun di Inggris (1811–1816). Pada 1812, perusakan mesin dijadikan kejahatan berhukuman mati.'],
+ [1813,'n','Raffles dan kain Inggris','Selama pendudukan Inggris di Jawa (1811–1816), Raffles menulis tentang peluang mengekspor kain cetak Inggris ke Jawa. Pabrik Eropa mulai membuat batik tiruan.'],
+ [1815,'n','Tambora meletus','Letusan terbesar dalam sejarah modern. Tahun berikutnya Eropa mengalami "tahun tanpa musim panas" dan gagal panen.'],
+ [1825,'n','Perang Jawa','Pangeran Diponegoro memimpin perlawanan (1825–1830). Sekitar 200.000 orang Jawa tewas, dan kas Belanda terkuras.'],
+ [1830,'n','Tanam Paksa dimulai','Van den Bosch mewajibkan desa menanam kopi, gula, nila, dan lainnya untuk ekspor. Pada puncaknya, sistem ini menyumbang lebih dari separuh pendapatan negara Belanda.'],
+ [1830,'t','Kereta Liverpool–Manchester','Jalur kereta antarkota pertama dengan lokomotif uap menghubungkan pelabuhan kapas dengan kota pabrik.'],
+ [1833,'s','Undang-Undang Pabrik','Inggris melarang pekerja pabrik tekstil di bawah usia 9 tahun dan membatasi jam kerja anak, dengan 4 inspektur untuk sekitar 4.000 pabrik.'],
+ [1839,'s','Perang Candu','Inggris memakai kapal perang uap untuk memaksa China membuka pasarnya bagi candu (1839–1842).'],
+ [1842,'s','Laporan Chadwick','Edwin Chadwick membuktikan bahwa buruh di kota industri meninggal jauh lebih muda. Laporan ini memicu reformasi kesehatan masyarakat.'],
+ [1844,'t','Telegraf Morse','Pesan dikirim seketika lewat kabel. Dunia mulai terhubung dalam hitungan menit.'],
+ [1848,'s','Manifesto Komunis','Marx dan Engels menulis tentang pertentangan pemilik modal dan buruh.'],
+ [1849,'n','Kelaparan Demak–Grobogan','Kelaparan besar (1849–1850) di wilayah Tanam Paksa menjadi argumen utama para pengkritik sistem ini di Belanda.'],
+ [1856,'t','Baja Bessemer','Baja menjadi murah dan massal: bahan untuk rel, kapal, gedung, dan mesin Revolusi Industri kedua.'],
+ [1858,'s','India di bawah Mahkota','Setelah pemberontakan 1857, India diperintah langsung oleh Kerajaan Inggris.'],
+ [1860,'n','Max Havelaar','Novel Multatuli membongkar penindasan petani Jawa dan mengguncang opini publik Belanda.'],
+ [1867,'n','Kereta api pertama di Nusantara','Jalur Semarang–Tanggung (sekitar 25 km) dibuka pada 10 Agustus 1867 untuk mengangkut hasil perkebunan.'],
+ [1869,'t','Terusan Suez','Kapal uap memangkas perjalanan Eropa–Asia dari berbulan-bulan menjadi beberapa minggu.'],
+ [1870,'n','Undang-Undang Agraria','Tanam Paksa diakhiri bertahap. Nusantara dibuka bagi perkebunan swasta: tembakau Deli, gula, kopi, lalu karet.'],
+ [1870,'s','Sekolah untuk semua anak','Undang-Undang Pendidikan Inggris mulai menyediakan sekolah dasar bagi semua anak.'],
+ [1880,'n','Koeli Ordonnantie','Aturan kuli kontrak di Sumatra Timur, lengkap dengan hukuman pidana bagi kuli yang kabur.'],
+ [1882,'t','Pembangkit listrik Edison','Pearl Street, New York: listrik pertama kali dijual ke pelanggan. Dua tahun kemudian, Parsons menciptakan turbin uap.'],
+ [1885,'n','Minyak Telaga Said','Sumur minyak komersial di Langkat, Sumatra Utara, menjadi cikal bakal Royal Dutch (1890) dan kemudian Shell.'],
+ [1886,'t','Mobil Benz','Mesin pembakaran dalam melahirkan mobil, lalu pesawat terbang (1903).'],
+ [1901,'n','Politik Etis','Belanda menjanjikan "balas budi": irigasi, emigrasi, dan edukasi. Sekolah melahirkan kaum terpelajar pribumi.'],
+ [1908,'n','Budi Utomo','Organisasi modern pertama kaum pergerakan. Mesin cetak, surat kabar, dan kereta api menyebarkan gagasan kebangsaan.'],
+ [1913,'t','Ban berjalan Ford','Waktu merakit satu mobil turun dari 12,5 jam menjadi 93 menit (1914). Permintaan karet melonjak, termasuk dari perkebunan Sumatra.'],
+ [1914,'s','Perang Dunia I','Perang industri pertama: senapan mesin, tank, gas beracun, dan produksi massal untuk perang.']
+];
+const pos=y=>((y-T0)/(T1-T0)*100).toFixed(2)+'%';
+const lanes=[['t','Teknologi'],['s','Masyarakat dan politik'],['n','Nusantara']];
+const eras=[[1760,1840,'Revolusi Industri 1.0'],[1870,1914,'Revolusi Industri 2.0']];
+let tl='';
+eras.forEach(e=>{tl+=`<div class="era" style="left:${pos(e[0])};width:${((e[1]-e[0])/(T1-T0)*100).toFixed(2)}%"><b>${e[2]}</b></div>`});
+lanes.forEach(L=>{tl+=`<div class="lane"><em>${L[1]}</em>`+EV.map((e,i)=>e[1]===L[0]?`<button type="button" class="hole ${e[1]}" style="left:${pos(e[0])}${EV.findIndex(x=>x[0]===e[0]&&x[1]===e[1])<i?';margin-left:2px':''}" aria-pressed="false" data-i="${i}" aria-label="${e[0]}: ${e[2]}" title="${e[0]}: ${e[2]}"></button>`:'').join('')+`</div>`});
+tl+=`<div class="axis">`+[1700,1725,1750,1775,1800,1825,1850,1875,1900,1925,1950].map(y=>`<span style="left:${pos(y)}">${y}</span>`).join('')+`</div>`;
+const tlEl=document.getElementById('tl');tlEl.innerHTML=tl;
+const det=document.getElementById('tlDetail');
+const showEv=i=>{const e=EV[i];tlEl.querySelectorAll('.hole').forEach(h=>h.setAttribute('aria-pressed',String(+h.dataset.i===i)));det.innerHTML=`<div class="y">${e[0]}</div><div><h3>${e[2]}</h3><p>${e[3]}</p></div>`};
+tlEl.querySelectorAll('.hole').forEach(h=>h.addEventListener('click',()=>showEv(+h.dataset.i)));
+tlEl.addEventListener('keydown',ev=>{if(ev.key!=='ArrowRight'&&ev.key!=='ArrowLeft')return;const cur=EV.findIndex((_,i)=>tlEl.querySelector(`.hole[data-i="${i}"]`).getAttribute('aria-pressed')==='true');const order=EV.map((e,i)=>i).sort((a,b)=>EV[a][0]-EV[b][0]||a-b);let k=order.indexOf(cur)+(ev.key==='ArrowRight'?1:-1);k=Math.max(0,Math.min(order.length-1,k));showEv(order[k]);tlEl.querySelector(`.hole[data-i="${order[k]}"]`).focus();ev.preventDefault()});
+showEv(EV.findIndex(e=>e[2]==='Tanam Paksa dimulai'));
+
+/* lineages */
+const LIN={
+ energi:{n:'Energi: dari pompa tambang ke listrik',note:'<h3>Mesin Watt masih bekerja hari ini</h3><p>Turbin uap Parsons (1884) mengganti piston dengan baling-baling yang diputar uap. Sampai sekarang, PLTU batubara, PLTN, dan PLTP panas bumi pada dasarnya merebus air untuk memutar turbin uap. Generator pertama Parsons berkekuatan sekitar 7,5 kW, sedangkan unit modern lebih dari 1.000 MW, atau lebih dari 100.000 kali lipat. Di Indonesia, lebih dari separuh listrik masih berasal dari PLTU batubara.</p><p style="margin:0">Panel surya adalah pemutus silsilah yang menarik: untuk pertama kalinya listrik dihasilkan dalam jumlah besar tanpa memutar apa pun.</p>',
+  s:[['1712','Pompa uap Newcomen','Mengeringkan tambang batubara.',1],['1769','Kondensor terpisah Watt','Jauh lebih hemat bahan bakar.',1],['1781','Gerak putar','Mesin memutar roda. Pabrik tidak lagi harus di tepi sungai.'],['1804–1830','Lokomotif dan kapal uap','Trevithick, Stephenson, jalur Liverpool–Manchester.'],['1831','Induksi elektromagnetik','Faraday menemukan prinsip dasar dinamo dan motor listrik.'],['1876–1886','Mesin pembakaran dalam','Otto, lalu mobil Benz. Pesawat Wright terbang pada 1903.'],['1882','Pembangkit listrik Edison','Listrik dijual ke pelanggan di New York.'],['1884','Turbin uap Parsons','Uap memutar turbin, bukan piston.',1],['Kini','PLTU, PLTN, PLTP','Turbin uap raksasa yang menghasilkan sebagian besar listrik dunia.',1],['Kini','Surya, angin, baterai','Transisi energi: listrik tanpa membakar bahan bakar.']]},
+ info:{n:'Informasi: dari kartu tenun ke AI',note:'<h3>Program pertama adalah motif kain</h3><p>Setiap kartu Jacquard berisi lubang yang menentukan benang mana yang diangkat untuk satu baris motif. Kartu-kartu dirangkai menjadi "program" pola. Ada Lovelace menulis pada 1843 bahwa Mesin Analitik Babbage "menenun pola aljabar seperti alat tenun Jacquard menenun bunga dan daun".</p><p style="margin:0">Herman Hollerith memakai kartu berlubang untuk menghitung sensus AS tahun 1890. Perusahaannya kemudian menjadi IBM, dan kartu berlubang dipakai untuk menyimpan data selama puluhan tahun. Dari alat tenun di Lyon sampai AI yang kini menulis teks, garisnya tidak pernah putus.</p>',
+  s:[['1804','Kartu berlubang Jacquard','Alat tenun yang bisa "diprogram" untuk membuat motif rumit.',1],['1837','Mesin Analitik Babbage','Rancangan komputer mekanis yang memakai kartu ala Jacquard.'],['1843','Ada Lovelace','Menulis algoritma pertama untuk mesin Babbage.'],['1890','Tabulator Hollerith','Kartu berlubang menghitung sensus AS secara elektromekanis.',1],['1924','IBM','Perusahaan Hollerith bergabung dengan perusahaan lain dan berganti nama menjadi IBM.'],['1945','ENIAC','Komputer elektronik serba guna. Datanya dimasukkan lewat kartu berlubang.'],['1947','Transistor','Bell Labs: saklar elektronik kecil yang menjadi dasar semua chip.',1],['1958–1959','Sirkuit terpadu','Kilby dan Noyce menaruh banyak transistor dalam satu keping.'],['1971','Mikroprosesor Intel 4004','Komputer lengkap dalam satu chip.'],['1989–1991','World Wide Web','Tim Berners-Lee menghubungkan informasi dunia.'],['2007','Ponsel pintar','Komputer masuk ke saku miliaran orang.'],['2022','AI generatif','ChatGPT diluncurkan (November 2022). Mesin mulai meniru tulisan dan percakapan manusia.',1]]},
+ produksi:{n:'Produksi: dari pabrik pertama ke pabrik pintar',note:'<h3>Ban berjalan: lebih cepat, tetapi tidak disukai pekerjanya</h3><p>Pada 1913–1914, ban berjalan Ford memangkas waktu merakit satu mobil dari 12,5 jam menjadi 93 menit. Pekerjaan dipecah menjadi gerakan kecil yang diulang ribuan kali. Pekerja membencinya, dan pada akhir 1913 tingkat keluar-masuk pekerja mencapai 380%. Ford lalu menaikkan upah menjadi $5 per hari (1914) agar pekerjanya bertahan.</p><p style="margin:0">Polanya sama dengan pabrik Arkwright 140 tahun sebelumnya: mesin dan organisasi kerja baru menaikkan produktivitas, sementara pekerja harus berjuang agar ikut menikmati hasilnya.</p>',
+  s:[['1771','Pabrik Cromford (Arkwright)','Mesin, giliran kerja, jam, dan buruh upahan di bawah satu atap.',1],['±1800–1850','Suku cadang yang bisa ditukar','"Sistem Amerika": komponen standar yang bisa dipasang di mesin mana pun.'],['1856','Baja Bessemer','Baja murah untuk mesin dan rel.'],['1911','Manajemen ilmiah Taylor','Pekerjaan dipecah dan diukur dengan stopwatch.'],['1913','Ban berjalan Ford','Produksi massal: 12,5 jam menjadi 93 menit per mobil.',1],['1950–1970-an','Sistem Produksi Toyota','Ramping, tepat waktu, dan pekerja boleh menghentikan lini jika ada cacat.'],['1961','Robot Unimate','Robot industri pertama bekerja di pabrik General Motors.',1],['1969','PLC','Pengendali terprogram: awal otomasi digital (Industri 3.0).'],['2011','Industri 4.0','Pabrik pintar: mesin bersensor yang saling berbagi data.'],['Kini','Robot + AI','Robot yang bisa melihat, belajar, dan bekerja di gudang otomatis.',1]]}
+};
+const tabs=document.getElementById('linTabs');
+tabs.innerHTML=Object.entries(LIN).map(([k,v],i)=>`<button type="button" role="tab" class="tab" id="tab-${k}" aria-selected="${i===0}" data-k="${k}">${v.n}</button>`).join('');
+const showLin=k=>{const v=LIN[k];document.getElementById('lin').innerHTML=v.s.map(s=>`<li class="${s[3]?'big':''}"><div class="yy">${s[0]}</div><div><div class="dot"></div></div><div><b>${s[1]}</b><span>${s[2]}</span></div></li>`).join('');document.getElementById('linNote').innerHTML=v.note;tabs.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',String(t.dataset.k===k)))};
+tabs.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>showLin(t.dataset.k)));
+showLin('energi');
+
+/* self check */
+const Q=[
+ {g:'r',t:'Sebagian besar pekerjaan saya di depan layar, dan hasilnya berupa teks, angka, gambar, atau kode.',a:'Pelajari cara memakai AI untuk mempercepat hasil kerja Anda, lalu geser peran Anda dari "pembuat draf" menjadi "penyunting dan penanggung jawab hasil".'},
+ {g:'r',t:'Tugas saya sering mengikuti pola atau prosedur yang sama berulang-ulang.',a:'Catat tugas berulang Anda dan otomasikan sendiri sebelum orang lain melakukannya. Orang yang membangun otomasi biasanya tidak tergusur olehnya.'},
+ {g:'r',t:'Hasil kerja saya mudah dinilai benar atau salah tanpa perlu memahami konteks khusus.',a:'Perdalam konteks yang hanya Anda pahami: pelanggan, aturan lokal, sejarah proyek, budaya tempat kerja. Konteks adalah kelemahan AI.'},
+ {g:'r',t:'Saya bisa menyelesaikan pekerjaan tanpa banyak berinteraksi dengan orang lain.',a:'Perbanyak peran yang melibatkan orang: memimpin rapat, membimbing rekan baru, menjadi penghubung dengan klien.'},
+ {g:'r',t:'Orang baru bisa mempelajari pekerjaan saya dalam beberapa minggu.',a:'Tambahkan satu keahlian yang langka dan butuh waktu lama untuk dikuasai, terutama gabungan dua bidang yang jarang dimiliki satu orang.'},
+ {g:'s',t:'Saya sering harus memutuskan dalam situasi yang tidak jelas dan menanggung akibatnya.',a:''},
+ {g:'s',t:'Pekerjaan saya bergantung pada kepercayaan atau hubungan jangka panjang dengan orang lain (klien, pasien, murid).',a:''},
+ {g:'s',t:'Pekerjaan saya melibatkan tangan dan tubuh di dunia fisik yang tidak teratur.',a:''},
+ {g:'s',t:'Saya sudah memakai AI secara rutin untuk mempercepat atau memperbaiki pekerjaan saya.',a:''},
+ {g:'s',t:'Saya memiliki usaha, produk, atau aset sendiri yang bisa diperbesar dengan bantuan AI.',a:''}
+];
+const qs=document.getElementById('qs');
+qs.innerHTML='<h3>Ciri yang membuat pekerjaan lebih rentan</h3>'+Q.map((q,i)=>(i===5?'<h3>Ciri yang membuat posisi lebih kuat</h3>':'')+`<label for="q${i}"><input type="checkbox" id="q${i}" data-i="${i}"><span>${q.t}</span></label>`).join('');
+const res=document.getElementById('res');
+const upd=()=>{
+  const on=Q.map((q,i)=>document.getElementById('q'+i).checked);
+  const r=Q.filter((q,i)=>q.g==='r'&&on[i]).length,s=Q.filter((q,i)=>q.g==='s'&&on[i]).length,sc=s-r;
+  const n=on.filter(Boolean).length;
+  let h,p;
+  if(!n){h='Centang pernyataan di sebelah kiri';p='Hasilnya akan muncul di sini dan berubah setiap kali Anda mencentang.'}
+  else if(sc<=-2){h='Posisi penenun tangan: waspada';p='Banyak tugas Anda mirip dengan jenis tugas yang sedang diambil alih AI. Ini bukan vonis, tetapi tanda untuk mulai bergerak sekarang, selagi Anda masih punya waktu dan penghasilan.'}
+  else if(sc<=1){h='Di persimpangan';p='Pekerjaan Anda punya campuran tugas yang rentan dan tugas yang kuat. Arah Anda ditentukan oleh pilihan beberapa tahun ke depan: apakah Anda memakai AI untuk memperkuat diri, atau menunggu.'}
+  else{h='Posisi montir mesin dan pemilik alat';p='Anda punya banyak ciri yang sulit digantikan, atau sudah memakai AI untuk keuntungan Anda. Pertahankan dengan terus belajar, dan bantu orang di sekitar Anda ikut beradaptasi.'}
+  const adv=Q.filter((q,i)=>q.g==='r'&&on[i]).map(q=>q.a);
+  if(n&&!on[8])adv.push('Mulailah memakai AI setiap hari untuk satu tugas kecil di pekerjaan Anda. Ini langkah termurah dengan dampak terbesar.');
+  if(n&&!on[9])adv.push('Pikirkan satu hal kecil milik Anda sendiri (jasa, produk, keahlian yang bisa dijual) yang bisa diperbesar dengan AI. Inilah cara menjadi "pemilik alat".');
+  const left=n?Math.round((sc+5)/10*100):50;
+  res.innerHTML=`<h3>${h}</h3><div class="meter"><i style="left:calc(${left}% - 3px)"></i></div><div class="mlab"><span>Rentan</span><span>Kuat</span></div><p style="margin:12px 0 0">${p}</p>${adv.length?'<ul>'+adv.map(a=>`<li>${a}</li>`).join('')+'</ul>':''}<p class="small" style="color:var(--pmut);margin:12px 0 0">${n?r+' ciri rentan, '+s+' ciri kuat dicentang.':''}</p>`;
+};
+qs.addEventListener('change',upd);upd();
+}
+</script>
+</body>
+</html>
