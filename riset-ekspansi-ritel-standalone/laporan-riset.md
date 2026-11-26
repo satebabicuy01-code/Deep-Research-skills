@@ -25,7 +25,7 @@
 4. **Ada sejumlah pendorong lain.**
    - **Pola yang sudah terbukti:** Mobile World Group di Vietnam dan MR DIY di Malaysia.
    - **Pesaing terfragmentasi:** pasar dikuasai toko tradisional, misalnya sekitar 7.000 toko elektronik dengan kurang dari 100 jenis barang.
-   - **Dana pasar modal:** IPO MDIY, serta Erablue yang menjadi katalis saham Erajaya.
+   - **Pasar modal:** cerita pertumbuhan toko menaikkan valuasi IPO MDIY dan saham Erajaya.
    - **Kategori yang sulit dikalahkan belanja online:** barang perlu dilihat, butuh pemasangan dan cicilan, atau dibutuhkan segera.
    - **Konsumen makin berhemat:** daya beli kelas menengah melemah, sehingga pengecer bernilai murah justru diuntungkan.
 5. **Pola serupa dijalankan banyak brand:** Alfamart/Indomaret (pola klasik), Mixue (sekitar 2.000 gerai), AZKO dengan format kecil NEKA, Mie Gacoan, Fore/Kopi Kenangan, KKV (baru masuk), Kacamatamoo, dan lainnya.
@@ -72,7 +72,7 @@
 | Format | Campuran mall dan toko berdiri sendiri. Format baru yang lebih terang dipakai untuk toko berdiri sendiri (toko ke-1.400 di Tebet). Lebih dari 18.000 jenis barang dalam 10 kategori |
 | Modal | Semester I 2025: Rp480 miliar untuk 128 toko, atau sekitar **Rp3,75 miliar per toko** **[estimasi; mungkin termasuk biaya lain]** |
 | Kinerja | 2025: pendapatan Rp7,9 triliun (+16,7%), laba sekitar Rp1,1 triliun (+3%). 9 bulan 2026: pendapatan Rp7,19 triliun (+24,5%), laba Rp894 miliar (+12,9%), **penjualan toko lama +2,4%** |
-| Pendanaan | IPO Desember 2024 dengan dana hingga Rp4,71 triliun: 60% untuk melunasi utang bank, 30% (sekitar Rp1,41 triliun) untuk toko baru 2025–2026, 10% untuk modal kerja. Dividen minimal 40% |
+| Pendanaan | IPO Desember 2024 senilai Rp4,15 triliun, tetapi **sekitar 90% (Rp3,74 triliun) adalah penjualan saham lama milik pengendali** (Azara Alpina). Hanya sekitar Rp415 miliar yang masuk ke perusahaan: sekitar 60% untuk melunasi sebagian utang bank CIMB, sekitar 30% (sekitar Rp125 miliar) untuk toko baru, 10% untuk modal kerja. Ekspansi toko lebih banyak dibiayai arus kas operasi dan utang bank. Dividen minimal 40% (dividen pertama baru dibagikan 2026 untuk tahun buku 2025). *Koreksi dari versi sebelumnya; lihat `mrdiy-ipo-exit.md`* |
 | Strategi | "Hemat, lengkap, dekat". Merek sendiri (Kintakun). Fokus tetap toko fisik, belum penjualan online (CEO Edwin Cheah) |
 
 **Catatan penting:** pada semester I 2025 laba MDIY sempat **turun 5%**. Manajemen menyebut penyebabnya biaya membuka toko di wilayah yang masih sepi pemain dan biaya membangun gudang. Ekspansi cepat punya biaya di depan.
@@ -112,7 +112,7 @@
 - **Perkakas dan barang rumah tangga** juga masih didominasi toko bangunan dan toko kelontong.
 
 ### 2.6 Pasar modal dan strategi korporat
-- **MDIY:** IPO memberi dana Rp1,41 triliun khusus untuk toko baru. Cerita pertumbuhan jumlah toko juga menopang valuasi saham.
+- **MDIY:** IPO Desember 2024 terutama menjadi ajang **pemilik menjual sebagian saham** (sekitar Rp3,74 triliun ke pengendali). Porsi untuk toko baru hanya sekitar Rp125 miliar. Cerita pertumbuhan jumlah toko menopang valuasi IPO (sekitar 39 kali laba).
 - **Erajaya:** analis menyebut ekspansi Erablue sebagai katalis. Ciptadana menaikkan target harga saham ERAA menjadi Rp850 (Oktober 2026), dan 16 dari 17 analis merekomendasikan beli. Erablue juga mengurangi ketergantungan Erajaya pada ponsel.
 - **MWG:** pasar Vietnam sudah matang. Erablue menjadi "pilar pertumbuhan kelima", dengan rencana IPO Erablue sebelum 2030.
 
@@ -253,7 +253,7 @@ Kategori yang dipilih cenderung "tahan e-commerce":
 | 4 | **Desain toko baku** yang bisa diduplikasi (ukuran, tata letak, standar renovasi) dan target waktu buka yang jelas | Biaya buka toko melonjak, kualitas toko tidak seragam, ekspansi tersendat | Erablue: 150–350 m² seragam. NEKA: kurang dari 700 m², kurang dari 10 karyawan |
 | 5 | **Model penilaian lokasi berbasis data** (kepadatan penduduk, daya beli, lalu lintas, pesaing, jarak ke toko sendiri) dan tim khusus pencari lokasi | Salah lokasi, toko memakan pelanggan toko sendiri (MR DIY Malaysia), toko harus ditutup | AZKO memakai data pelanggan untuk ekspansi. Erablue sudah memetakan seluruh Jawa |
 | 6 | **Pencetak SDM:** akademi kepala toko, cadangan calon manajer, insentif berbasis kinerja toko | Toko baru dipegang orang yang belum siap, layanan dan disiplin operasional runtuh | Erablue: sekitar 40 manajer senior dari Vietnam membina 2.000–3.000 karyawan lokal |
-| 7 | **Pendanaan dan arus kas:** ekspansi dibiayai dari kombinasi ekuitas, IPO, patungan, atau kemitraan. Termin pembayaran ke pemasok dinegosiasikan | Kas habis di tengah ekspansi, utang mahal mencekik (7-Eleven) | MDIY memakai dana IPO plus arus kas operasi, rasio utang 0,4x |
+| 7 | **Pendanaan dan arus kas:** ekspansi dibiayai dari kombinasi ekuitas, IPO, patungan, atau kemitraan. Termin pembayaran ke pemasok dinegosiasikan | Kas habis di tengah ekspansi, utang mahal mencekik (7-Eleven) | MDIY terutama memakai arus kas operasi dan utang bank (dana IPO yang masuk ke perusahaan kecil), rasio utang 0,4x |
 | 8 | **Kontrak sewa yang cerdas:** ada klausul keluar, negosiasi kolektif dengan pemilik ruko, durasi yang sesuai masa balik modal | Terkunci sewa mahal di toko gagal | Deposit Erablue 2–3 tahun termasuk dalam modal. Pastikan masa balik modal lebih pendek dari masa kontrak |
 | 9 | **Barang yang disesuaikan dengan daerah dan merek sendiri** | Margin tipis, perang harga langsung dengan marketplace | Kintakun (MR DIY). MR DIY Malaysia sedang menambah porsi barang impor bermargin tinggi |
 | 10 | **Nilai tambah yang sulit ditiru belanja online:** cicilan di tempat, antar dan pasang, purna jual, barang bisa dibawa pulang hari itu juga | Toko hanya jadi ruang pajang bagi pembeli online | Erablue: 40% cicilan, antar dan pasang 24 jam, tukar 1-for-1 |
